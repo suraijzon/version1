@@ -1,0 +1,192 @@
+.success-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.success-header {
+  text-align: left;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.success-tag {
+  display: inline-block;
+  background-color: #ff6b91;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.tag2{
+    font-family: Poppins;
+}
+
+.success-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #0f0f38;
+  font-family: Poppins;
+}
+
+.success-title .highlight {
+  background-color: #ffe400;
+  padding: 0 5px;
+  color: #00448f;
+}
+
+.success-subtitle {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  font-family: Poppins;
+  font-weight: 500;
+}
+
+.all-works-btn {
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  background-color: #0047ab;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  padding: 18px 38px;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.all-works-btn:hover {
+  background: #00448f;
+  box-shadow: 0 12px 30px rgba(13, 75, 184, 0.45);
+  transform: translateY(-3px);
+}
+
+.btn-text {
+  height: 22px;        
+  overflow: hidden;
+  line-height: 22px;
+}
+
+.btn-text span {
+  transition: transform 0.4s ease;
+}
+
+/* Slide animation */
+.all-works-btn:hover .btn-text span {
+  transform: translateY(-22px);
+}
+
+/* Arrow animation */
+.btn-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.all-works-btn:hover .btn-arrow {
+  transform: translateX(5px);
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  border: 3px solid #00bfc1;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: left;
+  background: #fff;
+  padding-bottom: 10px;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: -10px;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0px;
+  
+  color: #0f0f38;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: -5px;
+}
+/* Explore Button */
+.explore-btn {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 230px;
+  margin-bottom: 10px;
+  padding: 17px 20px;
+  border: 2px solid #000000;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #030303;
+  overflow: hidden;
+  position: relative;
+  height: 28px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Remove default button styles */
+button.explore-btn {
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Scroll text container */
+.explore-text {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.35s ease;
+  margin-top: -13px;
+}
+
+.explore-text span {
+  line-height: 28px;
+}
+
+/* Hover animation */
+.explore-btn:hover .explore-text {
+  transform: translateY(-28px);
+}
+
+.explore-btn:hover {
+  background: #0047ab;
+  color: #fff;
+  border-color: #00448f;
+}
+@media (max-width: 768px) {
+    .all-works-btn{
+        display: none;
+    }
+    .explore-btn{
+        margin-left: 150px;
+    }
+}
+

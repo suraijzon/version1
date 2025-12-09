@@ -1,0 +1,58 @@
+import React from "react";
+import "../styles/successsection.css";
+import item1 from "../assets/icons/item1.webp"; 
+
+const SuccessSection = () => {
+  const projects = [
+    { id: 1, name: "Technology Solution", desc: "Increased organic traffic by 320%", img: item1 },
+    { id: 2, name: "AI Automation Setup", desc: "Reduced workload by 70%", img: item1 },
+    { id: 3, name: "Website Redesign", desc: "Bounce rate dropped by 42%", img: item1 },
+  ];
+
+  return (
+    <section className="success-section">
+      <div className="success-header">
+        <span className="success-tag">See </span>
+        <span className="tag2"> Our Success in Action</span>
+
+        <h2 className="success-title">
+          <span className="highlight">Real Results</span>, Not Just Promises
+        </h2>
+
+        <p className="success-subtitle">
+          Our recent projects highlight our expertise in delivering tailored <br />
+          solutions that meet the unique needs and objectives of our clients.
+        </p>
+
+        <button className="all-works-btn">
+          <span className="btn-text">
+            <span>ALL WORKS ↗</span>
+            <span>ALL WORKS ↗</span>
+          </span>
+        </button>
+      </div>
+
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <div key={project.id} className="project-card">
+            <img src={project.img} alt={project.name} className="project-img" />
+
+            <div className="project-info">
+              <h3>{project.name}</h3>
+              <p>{project.desc}</p>
+            </div>
+
+            <a href="/" className="explore-btn">
+              <span className="explore-text">
+                <span>EXPLORE ↗</span>
+                <span>EXPLORE ↗</span>
+              </span>
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default SuccessSection;

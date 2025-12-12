@@ -2,7 +2,8 @@
 .gsc-page {
   width: 100%;
   overflow-x: hidden;
-  margin-top: 80px; /* Account for fixed navbar */
+  margin-top: 80px;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Hero Section */
@@ -43,6 +44,12 @@
   color: white;
 }
 
+.consoletextpart {
+  background-color: #ff7d51;
+  border-radius: 10px;
+  padding: 5px;
+}
+
 .badge-brand {
   background: linear-gradient(90deg, #e91e63, #f44336);
   padding: 6px 20px;
@@ -54,7 +61,8 @@
 
 .gsc-hero-title {
   font-size: 4rem;
-  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   color: white;
   margin-bottom: 24px;
   line-height: 1.2;
@@ -62,6 +70,7 @@
 
 .gsc-hero-subtitle {
   font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
   color: rgba(255, 255, 255, 0.9);
   margin: 0;
 }
@@ -135,11 +144,12 @@
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
+  
 }
 
 .section-title {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 24px;
   line-height: 1.3;
@@ -152,15 +162,56 @@
   margin: 0;
 }
 
-/* Benefits Section */
+/* Benefits Section with Background Image */
 .gsc-benefits {
+  position: relative;
   padding: 100px 20px;
-  background: #f8f9fa;
+  background-attachment: fixed; 
+  overflow: hidden;
 }
 
+.gsc-benefits::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 40, 100, 0.3) 100%
+  );
+  z-index: 1;
+}
+
+/* Optional: Remove or reduce blur effect to show background more clearly */
+/* .gsc-benefits::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(1px);
+  z-index: 1;
+} */
+
 .gsc-benefits-container {
+  position: relative;
+  z-index: 2;
   max-width: 1400px;
   margin: 0 auto;
+}
+
+.gsc-benefits .section-title {
+  font-size: 2.7rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .benefits-grid {
@@ -171,41 +222,71 @@
 }
 
 .benefit-card {
-  background: white;
+  background: rgba(218, 216, 216, 0.05);
+  backdrop-filter: blur(10px);
   padding: 40px 32px;
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .benefit-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-12px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  background: rgb(29, 9, 103);
 }
 
 .benefit-icon {
   font-size: 3.5rem;
   margin-bottom: 20px;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.benefit-icon:hover {
+  animation: bounce 0.6s ease;
 }
 
 .benefit-title {
   font-size: 1.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
+  font-weight: 600;
+  color: #ededed;
   margin-bottom: 16px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .benefit-description {
   font-size: 1rem;
-  color: #666;
+  color: #c2bbbb;
   line-height: 1.7;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Icon Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 /* Features Section */
 .gsc-features {
-  padding: 100px 20px;
+  padding: 50px 20px;
   background: white;
 }
 
@@ -220,17 +301,27 @@
   gap: 32px;
   margin-top: 60px;
 }
+.gsc-features .section-title{
+  text-align: center;
+}
 
 .feature-card {
   background: #f8f9fa;
   padding: 40px;
   border-radius: 16px;
-  border-left: 4px solid #1e3a8a;
+  border: 1.5px solid #1e3a8a; 
+  border-left: 5px solid #1e3a8a;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .feature-title {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 16px;
 }
@@ -381,7 +472,7 @@
 
 /* CTA Section */
 .gsc-cta {
-  padding: 100px 20px;
+  padding: 60px 20px;
   background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
   text-align: center;
 }
@@ -390,10 +481,19 @@
   max-width: 800px;
   margin: 0 auto;
 }
+.gsc-cta-title {
+  font-size: 2.7rem;
+   font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
 
 .cta-title {
   font-size: 2.5rem;
-  font-weight: 700;
+   font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   color: white;
   margin-bottom: 24px;
   line-height: 1.3;
@@ -404,6 +504,19 @@
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 40px;
   line-height: 1.6;
+}
+.gsc-cta-button{
+  padding: 18px 48px;
+  background: rgb(252, 74, 9);
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button {
@@ -423,15 +536,27 @@
   transform: translateY(-3px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
+.gsc-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  color: rgb(252, 74, 9);
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .benefits-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
+  
   .features-grid,
   .pricing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gsc-benefits .section-title {
+    font-size: 2.2rem;
   }
 }
 
@@ -439,22 +564,93 @@
   .gsc-hero {
     padding: 80px 20px 60px;
   }
+  
   .gsc-hero-title {
     font-size: 2.5rem;
   }
+  
   .gsc-hero-subtitle {
     font-size: 1.2rem;
   }
+  .gsc-about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: -30px;
+  
+}
+  
   .benefits-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
+
+  .gsc-benefits {
+    padding: 80px 20px;
+    background-attachment: scroll; /* Disable parallax on mobile */
+  }
+
+  .gsc-benefits .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .benefit-card {
+    padding: 35px 25px;
+  }
+
+  .benefit-icon {
+    font-size: 3rem;
+  }
+
+  .benefit-title {
+    font-size: 1.3rem;
+  }
+
+  .benefit-description {
+    font-size: 0.95rem;
+  }
+  .gsc-cta-title {
+  font-size: 2.5rem;
+   font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 24px;
+  line-height: 1.3;
+}
 }
 
 @media (max-width: 480px) {
   .gsc-hero-title {
     font-size: 2rem;
   }
+  
   .clients-track {
     gap: 20px;
+  }
+
+  .gsc-benefits {
+    padding: 60px 15px;
+  }
+
+  .gsc-benefits .section-title {
+    font-size: 1.8rem;
+  }
+
+  .benefit-card {
+    padding: 30px 20px;
+  }
+
+  .benefit-icon {
+    font-size: 2.5rem;
+  }
+
+  .benefit-title {
+    font-size: 1.2rem;
+  }
+
+  .benefit-description {
+    font-size: 0.9rem;
   }
 }

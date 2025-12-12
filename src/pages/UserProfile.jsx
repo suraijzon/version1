@@ -1,42 +1,120 @@
-import React from "react";
+import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { Navigate } from "react-router-dom";
-import "../styles/UserProfile.css"; // create this CSS file
+import "../styles/UserProfile.css";
 
 const UserProfile = () => {
   const { user, isAuthenticated } = useAuth();
+  const [isEditing, setIsEditing] = useState(false);
 
   // Redirect if not logged in or not a regular user
   if (!isAuthenticated) return <Navigate to="/login" />;
   if (user.role !== "user") return <Navigate to="/" />;
 
   return (
-    <div className="user-profile-container">
-      <h1 className="page-title">User Profile</h1>
+    <div className="user-profile-page">
+      {/* Header */}
+      <div className="profile-header-section">
+        <h1 className="welcome-text">Welcome, {user.name?.split(' ')[0] || 'User'}</h1>
+        <button className="search-btn">
+          <i className="fas fa-search"></i>
+        </button>
+      </div>
 
-      <div className="profile-card">
-        <div className="profile-header">
-          <img
-            src={user.avatar || "/default-avatar.png"}
-            alt="User Avatar"
-            className="profile-avatar"
-          />
-          <div>
-            <h2 className="profile-name">{user.name || user.email}</h2>
-            <p className="profile-role">{user.role.toUpperCase()}</p>
+      {/* Profile Card */}
+      <div className="profile-main-card">
+        {/* User Avatar and Basic Info */}
+        <div className="profile-top-section">
+          <div className="avatar-container">
+            <img
+              src={user.avatar || "https://via.placeholder.com/80"}
+              alt="User Avatar"
+              className="user-avatar"
+            />
+            <div className="user-basic-info">
+              <h2 className="user-name">{user.name || "User Name"}</h2>
+              <p className="user-email-small">{user.email}</p>
+            </div>
+          </div>
+          <button className="edit-profile-btn">
+            Edit
+          </button>
+        </div>
+
+        {/* Personal Information Section */}
+        <div className="info-section">
+          <h3 className="section-heading">Personal Information</h3>
+
+          <div className="info-grid">
+            {/* First Name */}
+            <div className="info-field">
+              <label className="info-label">First Name</label>
+              <div className="info-value">
+                {user.name?.split(' ')[0] || 'Not Provided'}
+              </div>
+            </div>
+
+            {/* Last Name */}
+            <div className="info-field">
+              <label className="info-label">Last Name</label>
+              <div className="info-value">
+                {user.name?.split(' ').slice(1).join(' ') || 'Not Provided'}
+              </div>
+            </div>
+
+            {/* Gender */}
+            <div className="info-field">
+              <label className="info-label">Gender</label>
+              <div className="info-value">
+                {user.gender || 'Not Specified'}
+              </div>
+            </div>
+
+            {/* Country */}
+            <div className="info-field">
+              <label className="info-label">Country</label>
+              <div className="info-value">
+                {user.country || 'Not Provided'}
+              </div>
+            </div>
+
+            {/* Language */}
+            <div className="info-field">
+              <label className="info-label">Language</label>
+              <div className="info-value">
+                {user.language || 'English'}
+              </div>
+            </div>
+
+            {/* Time Zone */}
+            <div className="info-field">
+              <label className="info-label">Time Zone</label>
+              <div className="info-value">
+                {user.timezone || 'Not Set'}
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="profile-details">
-          <h3>Account Details</h3>
-          <p><strong>Email:</strong> {user.email}</p>
-          <p><strong>Joined:</strong> {new Date(user.createdAt).toLocaleDateString()}</p>
-          {/* Add more user info here if needed */}
-        </div>
+        {/* Email Address Section */}
+        <div className="email-section">
+          <h3 className="section-heading">My email Address</h3>
+          
+          <div className="email-item">
+            <div className="email-icon-wrapper">
+              <i className="fas fa-envelope"></i>
+            </div>
+            <div className="email-details">
+              <p className="email-address">{user.email}</p>
+              <span className="email-status">
+                {user.emailVerified ? '✓ Verified' : 'Not Verified'}
+              </span>
+            </div>
+          </div>
 
-        <div className="profile-actions">
-          <button>Edit Profile</button>
-          <button>Change Password</button>
+          <button className="add-email-btn">
+            + Add Email Address
+          </button>
         </div>
       </div>
     </div>

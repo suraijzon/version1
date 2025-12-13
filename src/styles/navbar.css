@@ -11,14 +11,14 @@
 
 /* Top badge above navbar */
 .top-badge {
-   width: 100%;
+  width: 100%;
   font-family: Poppins;
   text-align: left;
   color: rgb(59, 58, 58);
   font-weight: 500;
   font-size: 14px;
   margin-top: -5px ;
-  margin-left: 45px;
+  margin-left: 145px;
   padding-bottom: 15px; 
 }
 

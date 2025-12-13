@@ -3,6 +3,9 @@ import '../styles/googleSearchConsole.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+// Import background image
+import benefitBg from '../assets/icons/benifit.jpg';
+
 // Import client SVGs
 import sitemarkLogo from '../assets/icons/sitemark.svg';
 import jettimeLogo from '../assets/icons/jettime.svg';
@@ -124,15 +127,23 @@ const GoogleSearchConsole = () => {
         {/* About Section */}
         <section className="gsc-about">
           <div className="gsc-about-container">
-            <h2 className="section-title">What is Google Search Console?</h2>
+            <h2 className="section-title">What is <span className='consoletextpart'>Google Search Console?</span></h2>
             <p className="section-description">
               Google Search Console is a free tool from Google that helps you monitor, maintain, and troubleshoot your site's presence in Google Search results. It provides valuable insights into how Google views your website and helps you optimize your visibility.
             </p>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="gsc-benefits">
+        {/* Benefits Section with Background */}
+        <section 
+          className="gsc-benefits"
+          style={{
+            backgroundImage: `url(${benefitBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
           <div className="gsc-benefits-container">
             <h2 className="section-title">Why Your Business Needs Google Search Console</h2>
             <div className="benefits-grid">
@@ -167,39 +178,14 @@ const GoogleSearchConsole = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="gsc-pricing">
-          <div className="gsc-pricing-container">
-            <h2 className="section-title">Simple, Transparent Pricing</h2>
-            <div className="pricing-grid">
-              {pricing.map((plan, index) => (
-                <div key={index} className={`pricing-card ${plan.popular ? 'popular' : ''}`}>
-                  {plan.popular && <div className="popular-badge">Most Popular</div>}
-                  <h3 className="pricing-name">{plan.name}</h3>
-                  <div className="pricing-price">
-                    <span className="price">{plan.price}</span>
-                    <span className="period">{plan.period}</span>
-                  </div>
-                  <ul className="pricing-features">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx}><span className="check">✓</span>{feature}</li>
-                    ))}
-                  </ul>
-                  <button className="pricing-button">Get Started</button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="gsc-cta">
           <div className="gsc-cta-container">
-            <h2 className="cta-title">Ready to Optimize Your Search Performance?</h2>
+            <h2 className="gsc-cta-title">Ready to Optimize Your Search Performance?</h2>
             <p className="cta-description">
               Let our experts help you unlock the full potential of Google Search Console
             </p>
-            <button className="cta-button">Schedule a Free Consultation</button>
+            <button className="gsc-cta-button">Schedule a Free Consultation</button>
           </div>
         </section>
 

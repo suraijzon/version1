@@ -130,7 +130,7 @@ const Navbar = () => {
               <div className="dropdown-column">
                 <h4>AI Services</h4>
                 <a href="/">AI & GPT Integration</a>
-                <a href="/">AI SEO Services</a>
+                <a href="/ai-seo">AI SEO Services</a>
                 <a href="/">AI Digital Marketing Services</a>
                 <a href="/">AI Chatbot Development</a>
                 <a href="/">Predictive Analytics</a>

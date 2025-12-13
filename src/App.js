@@ -15,11 +15,12 @@ import Footer from "./components/Footer";
 
 // Import pages
 import GoogleSearchConsole from './pages/GoogleSearchConsole';
+import AiSeoServices from './pages/AiSeoServices';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import UserProfile from './pages/UserProfile';
 import AdminDashboard from './pages/AdminDashboard';
-import ContactUs from './pages/ContactUs'; // ✅ New contact page
+import ContactUs from './pages/ContactUs';
 
 // Home Page Component
 const HomePage = () => {
@@ -52,9 +53,10 @@ function App() {
           
           {/* Service Pages */}
           <Route path="/services/seo/google-search-console" element={<GoogleSearchConsole />} />
+          <Route path="/ai-seo" element={<AiSeoServices />} />
           
           {/* Contact Page */}
-          <Route path="/contact-us" element={<ContactUs />} />  {/* ✅ Added */}
+          <Route path="/contact-us" element={<ContactUs />} />
 
           {/* User & Admin Pages */}
           <Route path="/user-profile" element={<UserProfile />} />

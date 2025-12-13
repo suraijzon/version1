@@ -249,8 +249,8 @@
 
 /* Footer Bottom */
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 32px 20px;
+  padding: 15px 20px;
+  margin-top: -10px;
 }
 
 .footer-bottom-container {
@@ -477,5 +477,8 @@
     flex-direction: column;
     gap: 20px;
     text-align: center;
+  }
+  .copyright{
+    margin-left: 4px;
   }
 }

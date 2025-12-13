@@ -9,34 +9,49 @@
   border-bottom: 1px solid #eaeaea;
 }
 
-/* Top badge above navbar */
+/* Top badge above navbar - RESPONSIVE */
 .top-badge {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   font-family: Poppins;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: rgb(59, 58, 58);
   font-weight: 500;
   font-size: 14px;
-  margin-top: -5px ;
-  margin-left: 145px;
-  padding-bottom: 15px; 
+  padding: 0 20px 15px;
+}
+
+.top-badge-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .top-badge .highlight {
   color: #00448f;
   font-size: 19px;
   font-weight: 600;
-  margin-left: 5px;
+}
+
+.top-badge-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .top-badge .email-link {
-  color: #1d3752; 
-  text-align: right;       
-  text-decoration: none;  
+  color: #1d3752;
+  text-decoration: none;
   font-weight: 500;
-  font-family: Poppins; 
-  font-size: 15px;     
-  transition: color 0.3s; 
+  font-family: Poppins;
+  font-size: 15px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .top-badge .email-link:hover {
@@ -44,14 +59,15 @@
 }
 
 .top-badge .client-login {
-  color: #205289;      
-  text-decoration: none;  
+  color: #205289;
+  text-decoration: none;
   font-weight: 500;
-  font-family: Poppins; 
-  font-size: 16px;     
-  transition: color 0.3s; 
-  margin-right: 80px;
-  margin-left: 610px;
+  font-family: Poppins;
+  font-size: 16px;
+  transition: color 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .top-badge .client-login:hover {
@@ -59,11 +75,11 @@
 }
 
 .top-badge .contact-proposal {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
-/*badge change*/
+
 .top-badge .contact-proposal img {
   width: 18px;
   height: 18px;
@@ -79,11 +95,17 @@
 }
 
 /* LOGO */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
 .nav-logo img {
   height: 48px;
   cursor: pointer;
 }
-.logo-mobile{
+
+.logo-mobile {
   display: none;
 }
 
@@ -97,7 +119,6 @@
   font-weight: 700;
   margin-left: 20px;
 }
-
 
 /* LINKS */
 .nav-links {
@@ -140,18 +161,12 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   animation: slideDown 0.3s ease;
-}
-
-/* CENTERED CONTAINER */
-.dropdown-content {
-  display: none;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   max-width: 2400px;
   margin: 0 auto;
   gap: 20px;
-  padding: 10px;
 }
 
 /* WHITE CARD COLUMNS */
@@ -186,7 +201,7 @@
   font-size: 15px;
   transition: all 0.2s;
   font-weight: 400;
-  line-height: 1.;
+  line-height: 1;
 }
 
 .dropdown-column a:hover {
@@ -197,7 +212,7 @@
 /* LAST COLUMN - BLUE SHOWCASE BOX */
 .dropdown-column-last {
   background: linear-gradient(180deg, #c8e6f5 0%, #7dc9ed 100%);
-  padding: 0px 30px;
+  padding: 30px;
   border-radius: 10px;
   text-align: center;
   width: 230px;
@@ -209,63 +224,60 @@
   min-height: 470px;
 }
 
-.dropdown-column-last .last-column {
-  font-size: 50px;
-  font-weight: 700;
-  color: #00325a;
-  line-height: 0.9;
-  display: block;
-  margin-bottom: 5px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
-.dropdown-column-last .last-column2 {
-  font-size: 40px;
-  font-weight: 700;
-  color: #00325a;
-  line-height: 0.9;
-  display: block;
-  margin-top: 0px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
-.dropdown-column-last .last-column3 {
-  font-size: 25px;
-  font-weight: 700;
-  color: #00325a;
-  line-height: 0.9;
-  display: block;
-  margin-top: 10px;
-  text-align: start;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
+.dropdown-column-last .last-column,
+.dropdown-column-last .last-column2,
+.dropdown-column-last .last-column3,
 .dropdown-column-last .last-column4 {
-  font-size: 40px;
   font-weight: 700;
   color: #00325a;
-  line-height: 0.9;
   display: block;
-  margin-top: -50px;
-  padding-bottom: 100px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-.dropdown-column-last .last-column-text {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.0;
-  color: #1a1a1a;
-  display: block;
-  margin-bottom: 30px;
-  padding-top: 30px;
+.dropdown-column-last .last-column {
+  font-size: 50px;
+  line-height: 0.9;
+  margin-bottom: 5px;
 }
+
+.dropdown-column-last .last-column2 {
+  font-size: 40px;
+  line-height: 0.9;
+}
+
+.dropdown-column-last .last-column3 {
+  font-size: 25px;
+  line-height: 0.9;
+  margin-top: 10px;
+  text-align: start;
+}
+
+.dropdown-column-last .last-column4 {
+  font-size: 40px;
+  line-height: 0.9;
+  margin-top: -50px;
+  padding-bottom: 100px;
+}
+
+.dropdown-column-last .last-column-text,
 .dropdown-column-last .last-column-text2 {
   font-size: 20px;
   font-weight: 700;
-  line-height: 1.0;
+  line-height: 1;
   color: #1a1a1a;
   display: block;
-  margin-bottom: 25px;
-  margin-top: 10px;
+  margin-bottom: 30px;
 }
+
+.dropdown-column-last .last-column-text {
+  padding-top: 30px;
+}
+
+.dropdown-column-last .last-column-text2 {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
 .dropdown-column-last .last-column-text3 {
   display: block;
   padding: 7px 0;
@@ -275,9 +287,8 @@
   transition: all 0.2s;
   font-weight: 400;
   text-align: start;
-  line-height: 1.;
+  line-height: 1;
 }
-
 
 .dropdown-column-last .last-column-button {
   font-size: 15px;
@@ -305,7 +316,7 @@
 }
 
 .dropdown.active .dropdown-content {
-  display: flex ;
+  display: flex;
 }
 
 /* CONTACT BUTTON */
@@ -354,7 +365,8 @@
 .hide {
   opacity: 0;
 }
-.mobile-client-login-inside{
+
+.mobile-client-login-inside {
   display: none;
 }
 
@@ -369,88 +381,92 @@
   }
 }
 
-/* MOBILE NAVIGATION FIX
-   Only affects screen < 900px*/
+/* RESPONSIVE BREAKPOINTS */
 
-
+/* Tablets and Small Laptops (1024px and below) */
 @media (max-width: 1024px) {
-
   .navbar {
-    padding: 10px 15px;  
-    width: 350px;        
+    padding: 10px 0;
+    width: 100%; /* FIXED: was 450px */
   }
 
   .nav-container {
-    width: 100%;
-    padding: 0 10px;          
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 95%;
+    padding: 0 10px;
   }
 
-  .logo-desktop {
+  /* Hide desktop elements */
+  .logo-desktop,
+  .nav-tagline {
     display: none;
   }
+
+  /* Show mobile logo */
   .logo-mobile {
     display: block;
-    height: 26px;
-    margin-left: 0;             
+    height: 32px;
   }
 
- /*HAMBURGER FIX — PERFECT ALIGNMENT*/
-  
+  /* Top badge responsive */
+  .top-badge {
+    padding: 5px 15px 10px;
+    font-size: 12px;
+  }
+
+  .top-badge-left span:not(.highlight) {
+    display: none;
+  }
+
+  .top-badge .highlight {
+    font-size: 16px;
+  }
+
+  /* Hide email on tablet */
+  .top-badge .contact-proposal {
+    display: none;
+  }
+
+  /* Hamburger */
   .hamburger {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    margin-right: 25px;           
-    padding: 5px;                
+    margin-right: 10px;
   }
 
   .bar {
-    width: 36px;
-    height: 3px;
-    background: #222;
-    transition: 0.3s ease;
+    width: 30px;
   }
 
-  /*MOBILE NAV PANEL (Slide-in Menu)*/
-  
+  /* Mobile menu */
   .nav-links {
-  position: fixed;
-  top: 80px;
-  left: -100%;
-  width: 75%;
-  height: calc(100vh - 80px);
-  background: #ffffff;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  transition: left 0.35s ease;
-  border-right: 1px solid #e5e5e5;
-  overflow-y: auto;
-  z-index: 999;
-}
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 280px;
+    height: calc(100vh - 70px);
+    background: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: left 0.35s ease;
+    border-right: 1px solid #e5e5e5;
+    overflow-y: auto;
+    z-index: 999;
+  }
 
-.nav-links.open {
-  left: 0;
-  width: 250px;
-}
+  .nav-links.open {
+    left: 0;
+  }
 
-
-   /*MOBILE DROPDOWN FIX*/
-  
+  /* Disable hover dropdown on mobile */
   .dropdown:hover .dropdown-content {
-    display: none ;    
+    display: none;
   }
 
   .dropdown {
     width: 100%;
     border-bottom: 1px solid #eee;
     padding-bottom: 12px;
-    
   }
 
   .drop-btn {
@@ -458,8 +474,6 @@
     text-align: left;
     font-size: 16px;
     font-weight: 600;
-    background: none;
-    border: none;
     padding: 10px 5px;
     display: flex;
     justify-content: space-between;
@@ -467,7 +481,7 @@
   }
 
   .dropdown.open .dropdown-content {
-    display: flex ;
+    display: flex;
     position: static;
     flex-direction: column;
     background: #f3f3f3;
@@ -475,93 +489,110 @@
     border-radius: 10px;
     gap: 10px;
     box-shadow: none;
-    width: 210px;
-    
+    width: 100%;
   }
 
   .dropdown-column {
     width: 100%;
-    background: white;
     padding: 15px;
-    width: 210px;
-    height: 370px;
-    border-radius: 8px;
-    margin-left: -6px;
+    height: auto;
+    min-height: 300px;
   }
-  .dropdown-column a{
+
+  .dropdown-column a {
     font-size: 14px;
   }
 
   .dropdown-column-last {
     width: 100%;
-    background: linear-gradient(#cbe8ff, #8dcff8);
-    padding: 18px;
-    width: 210px;
-    height: 300px;
-    border-radius: 10px;
-    text-align: center;
-    margin-left: -7px;
+    padding: 20px;
+    height: auto;
+    min-height: 250px;
   }
-  .last-column2{
+
+  .last-column2 {
     font-size: 30px !important;
   }
-  .last-column-text2{
+
+  .last-column-text2 {
     font-size: 16px !important;
   }
-  .last-column-text3{
+
+  .last-column-text3 {
     font-size: 14px;
-    margin-left: 4px;
   }
 
   .contact-btn {
     width: 100%;
     text-align: center;
     padding: 12px 0;
-    margin-top: 10px;
-    font-size: 15px;
+    margin: 10px 0 0 0;
   }
 
-
-  .nav-tagline {
-    display: none;
-  }
-
-  .top-badge {
-    margin-left: 10px ;
-    margin-top: 5px;
-    font-size: 12px;
-  }
-
-  .top-badge span:not(.client-login-wrapper) {
-    display: none ;
-  }
-
-  .client-login {
-    display: flex ;
-    
-  }
-  /* Show only on mobile menu */
-  @media (max-width: 768px) {
   .mobile-client-login-inside {
-    width: 90%;
-    padding: 10px 10px;
-    border-radius: 10px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
     background: #111;
     color: #fff;
     font-weight: 600;
     font-size: 15px;
     display: block;
     text-align: center;
-    margin-top: -5px;
-    margin-left: 10px;
+    border: none;
+    cursor: pointer;
   }
 
   .mobile-client-login-inside:hover {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 
+/* Mobile (768px and below) */
+@media (max-width: 768px) {
+  .top-badge {
+    font-size: 11px;
+    padding: 5px 10px 8px;
+  }
+
+  .top-badge .highlight {
+    font-size: 14px;
+  }
+
+  .nav-links {
+    width: 260px;
+  }
+
+  .logo-mobile {
+    height: 28px;
+  }
 }
 
+/* Small Mobile (480px and below) */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 0;
+  }
 
+  .nav-container {
+    width: 98%;
+    padding: 0 5px;
+  }
 
+  .top-badge {
+    font-size: 10px;
+    padding: 3px 8px 6px;
+  }
+
+  .top-badge .highlight {
+    font-size: 13px;
+  }
+
+  .logo-mobile {
+    height: 24px;
+  }
+
+  .nav-links {
+    width: 240px;
+  }
+}

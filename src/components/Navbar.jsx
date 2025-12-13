@@ -76,40 +76,40 @@ const Navbar = () => {
   return (
     <header className="navbar">
       {/* Top badge */}
-      <div className="top-badge">
-        <span>PROJECTS COMPLETED </span>
-        <span className="highlight">150+</span>
-
-        <span className="contact-proposal" style={{ marginLeft: "20px" }}>
-          <button
-            onClick={handleClientLogin}
-            className="client-login"
-            style={{ background: "none", border: "none", cursor: "pointer", color: "inherit" }}
-          >
-            Client Login
-          </button>
-        </span>
-
-        <span className="contact-proposal" style={{ marginLeft: "14px" }}>
-          <img src={phoneIcon} alt="phone" />
-          <a href="mailto:info@zonzoctech.com" className="email-link">
-            info@zonzoctech.com
-          </a>
-        </span>
-      </div>
+<div className="top-badge">
+  <div className="top-badge-left">
+    <span>PROJECTS COMPLETED</span>
+    <span className="highlight">150+</span>
+  </div>
+  
+  <div className="top-badge-right">
+    <button onClick={handleClientLogin} className="client-login">
+      Client Login
+    </button>
+    
+    <div className="contact-proposal">
+      <img src={phoneIcon} alt="phone" />
+      <a href="mailto:info@zonzoctech.com" className="email-link">
+        info@zonzoctech.com
+      </a>
+    </div>
+  </div>
+</div>
 
       <div className="nav-container" ref={navRef}>
-        {/* Logo */}
-        <div className="nav-logo">
-          <img src={logo} alt="Zonzoctech Logo" className="logo-desktop" />
-          <img src={siteLogo} alt="Zonzoctech Logo" className="logo-mobile" />
-        </div>
+  {/* Logo and tagline */}
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    <div className="nav-logo">
+      <img src={logo} alt="Zonzoctech Logo" className="logo-desktop" />
+      <img src={siteLogo} alt="Zonzoctech Logo" className="logo-mobile" />
+    </div>
 
-        <div className="nav-tagline">
-          <div>Web Intelligences</div>
-          <div>That Drives</div>
-          <div>Revenue®</div>
-        </div>
+    <div className="nav-tagline">
+      <div>Web Intelligences</div>
+      <div>That Drives</div>
+      <div>Revenue®</div>
+    </div>
+  </div>
 
         {/* Nav links */}
         <nav className={`nav-links ${open ? "open" : ""}`}>

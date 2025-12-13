@@ -12,22 +12,26 @@
 /* Top badge above navbar - RESPONSIVE */
 .top-badge {
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
   font-family: Poppins;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   color: rgb(59, 58, 58);
   font-weight: 500;
   font-size: 14px;
   padding: 0 20px 15px;
+  gap: 40px;
 }
 
 .top-badge-left {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items: baseline;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.top-badge-left span:first-child {
+  font-size: 14px;
 }
 
 .top-badge .highlight {

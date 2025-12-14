@@ -263,9 +263,7 @@
     max-width: 90%;
     padding: 14px 20px;
     font-size: 0.85rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
   }
   
   .benefits-list {

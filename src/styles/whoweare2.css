@@ -62,7 +62,6 @@
   object-fit: cover;
   display: block;
   border-radius: 20px;
- 
 }
 
 /* Right Side - Benefits */
@@ -81,7 +80,6 @@
   line-height: 1.8;
   margin-bottom: 0px;
   margin-top: -50px;
-
 }
 
 .benefits-heading {
@@ -90,7 +88,6 @@
   color: #1e3a8a;
   margin-bottom: 15px;
   line-height: 1.2;
- 
 }
 
 /* Benefits List */
@@ -180,26 +177,15 @@
   transform: translateY(-100%);
 }
 
-/* Responsive Design */
+/* ========================= */
+/* MOBILE FIX (ONLY CHANGE) */
+/* ========================= */
 @media (max-width: 768px) {
-  .banner-title {
-    font-size: 2.2rem;
-  }
 
   .whoweare-split-section {
     grid-template-columns: 1fr;
   }
 
-  .split-right {
-    padding: 40px;
-  }
-
-  .image-wrapper {
-    min-height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
   .banner-title {
     font-size: 1.8rem;
     text-align: center;
@@ -211,26 +197,16 @@
     text-align: center;
     margin-bottom: -45px;
   }
-  @media (max-width: 768px) {
-  .split-right {
-    margin-left: 0 !important;   /* ✅ THIS IS THE KEY */
-  }
-}
-  
+
   .section-image {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    display: block;
-    border-radius: 20px;
-    margin-top: 30px;
-    margin-left: 0px;
+    margin: 30px 0 0 0;
   }
 
   .split-right {
     padding: 32px 20px;
-    display: flex;
-    flex-direction: column;
+    margin-left: 0 !important;
     align-items: center;
   }
 
@@ -238,53 +214,41 @@
     font-size: 1.4rem;
     text-align: center;
   }
-  
+
   .benefit-item {
     font-size: 14px;
     font-weight: 500;
-    padding-left: 5px;
-  }
-  
-  .benefit-dot {
-    margin-left: 25px;
-    font-size: 14px;
-    line-height: 22px;
-    margin-right: -5px;
   }
 
   .mission-text {
     text-align: center;
     font-size: 14px;
     font-weight: 500;
-    margin-left: 22px;
-    margin-top: 0px;
-    padding-bottom: 10px;
+    margin: 0 0 10px 0;
   }
-  
-  /* Make button visible and centered on mobile */
+
   .split-right .all-works-btn {
-    margin: 16px auto 0 auto;   /* ✅ center horizontally */
-    align-self: center;         /* ✅ override desktop rule */
-    min-width: unset;           /* ✅ remove desktop constraint */
-    width: 90%;                 /* ✅ responsive width */
+    margin: 16px auto 0 auto !important;
+    margin-left: 0 !important;
+    align-self: center !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 90%;
     max-width: 320px;
-    padding: 14px 20px;
-    font-size: 0.85rem;
+    min-width: unset;
+
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
-  
-  .benefits-list {
-    margin-bottom: 0;
-  }
-  
+
   .split-right .btn-text {
     height: 20px;
   }
-  
+
   .split-right .btn-text span {
-    line-height: 20px;
     font-size: 0.85rem;
+    line-height: 20px;
   }
 }

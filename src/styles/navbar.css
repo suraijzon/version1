@@ -27,7 +27,7 @@
 /* For large screens - keep content compact and left-aligned like first image */
 @media (min-width: 1400px) {
   .top-badge {
-    padding: 0 8% 15px 8%;
+    padding: 0 1% 15px 1%;
     gap: 40px;
   }
 }

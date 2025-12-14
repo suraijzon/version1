@@ -82,14 +82,22 @@ const Footer = () => {
               <button className="cta-button">Send me a Proposal!</button>
             </div>
           </div>
-          
 
         </div>
-        <div className='linetop'><span className='linestart'>_____</span>_________________________________________________________________________________________________________________________________________________________________________________</div>
+        
+        {/* Full-width line */}
+        <div className='linetop'>
+          <hr style={{
+            border: 'none',
+            borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+            margin: '20px 0',
+            width: '100%'
+          }} />
+        </div>
       </div>
       
 
-      {/* ========== MAIN FOOTER CONTENT ========== */}
+      {/* MAIN FOOTER CONTENT  */}
       <div className="footer-main">
 
         <div className="footer-container">
@@ -155,8 +163,17 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Full-width line before footer bottom */}
+      <div className='line'>
+        <hr style={{
+          border: 'none',
+          borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+          margin: '20px 0',
+          width: '100%'
+        }} />
+      </div>
+      
       {/* Footer Bottom */}
-      <div className='line'><span className='linestart'>______</span>____________________________________________________________________________________________________________________________________________________________________________________</div>
       <div className="footer-bottom">
         <div className="footer-bottom-container">
           <p className="copyright">Zonzoctech© 2010-2025</p>

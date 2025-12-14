@@ -306,6 +306,7 @@
 @media (max-width: 1024px) {
   .contact-container {
     grid-template-columns: 1fr;
+    width: 250px;
   }
 
   .contact-left {
@@ -343,7 +344,7 @@
     
   }
   .email-text{
-    margin-left: 0px;
+    margin-left: -10px;
   }
   .contact-left {
     padding: 18px 15px;

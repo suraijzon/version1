@@ -269,11 +269,12 @@
   font-size: 50px;
   line-height: 0.9;
   margin-bottom: 5px;
+  margin-top: 0px !important;
 }
 
 .dropdown-column-last .last-column2 {
   font-size: 40px;
-  margin-top: -30px !important;
+  margin-top: 0px !important;
   line-height: 0.9;
 }
 
@@ -552,6 +553,10 @@
   .last-column2 {
     font-size: 30px !important;
   }
+  .dropdown-column-last .last-column2 {
+    margin-top: 10px !important;
+    line-height: 0.9;
+}
 
   .last-column-text2 {
     font-size: 16px !important;

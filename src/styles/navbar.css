@@ -24,6 +24,14 @@
   padding: 0 4% 15px 4%;
 }
 
+/* For large screens - keep content compact and left-aligned like first image */
+@media (min-width: 1400px) {
+  .top-badge {
+    padding: 0 8% 15px 8%;
+    gap: 40px;
+  }
+}
+
 .top-badge-left {
   display: flex;
   align-items: baseline;
@@ -97,6 +105,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* For large screens - keep nav content compact */
+@media (min-width: 1400px) {
+  .nav-container {
+    width: 84%;
+    padding: 0 0 0 0;
+  }
 }
 
 /* LOGO */

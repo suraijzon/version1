@@ -263,7 +263,12 @@
     max-width: 90%;
     padding: 14px 20px;
     font-size: 0.85rem;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .split-right .all-works-btn{
+    margin-left: 80px !important;
   }
   
   .benefits-list {

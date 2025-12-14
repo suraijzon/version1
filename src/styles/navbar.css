@@ -414,7 +414,7 @@
 /* Tablets and Small Laptops (1024px and below) */
 @media (max-width: 1024px) {
   .navbar {
-    padding: 10px 0;
+    padding: 14px 0;
     width: 100%; 
   }
 

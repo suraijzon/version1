@@ -15,21 +15,19 @@ const Navbar = () => {
   const { logout } = useAuth();
   const navigate = useNavigate();
 
-  // Desktop: open dropdown on hover (but do NOT auto-close on leave)
+  // Desktop: open dropdown on hover 
   const handleMouseEnter = (id) => {
     if (window.innerWidth > 1024) {
       setActiveDropdown(id);
     }
   };
 
-  // Mobile: toggle dropdown by id
   const toggleMobileDropdown = (id) => {
     if (window.innerWidth <= 1024) {
       setMobileDropdown((prev) => (prev === id ? null : id));
     }
   };
 
-  // Click on a dropdown button
   // Desktop: open (do NOT toggle close)
   // Mobile: toggle
   const handleDropdownButtonClick = (id) => {
@@ -41,9 +39,14 @@ const Navbar = () => {
   };
 
   const handleClientLogin = () => {
-    // optionally ensure logout before login page
     logout();
     navigate("/login");
+  };
+
+  // Navigate to home page when logo is clicked
+  const handleLogoClick = () => {
+    navigate("/");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Close desktop dropdown when clicking outside navbar
@@ -99,7 +102,7 @@ const Navbar = () => {
       <div className="nav-container" ref={navRef}>
   {/* Logo and tagline */}
   <div style={{ display: 'flex', alignItems: 'center' }}>
-    <div className="nav-logo">
+    <div className="nav-logo" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
       <img src={logo} alt="Zonzoctech Logo" className="logo-desktop" />
       <img src={logo} alt="Zonzoctech Logo" className="logo-mobile" />
     </div>

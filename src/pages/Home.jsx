@@ -1,4 +1,3 @@
-// frontend/src/pages/Home.jsx
 import Hero from '../components/Hero';
 
 const Home = () => {

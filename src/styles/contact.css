@@ -99,6 +99,7 @@
   justify-content: center;
   color: white;
   font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 .email-text {
@@ -165,7 +166,6 @@
   width: 710px;
   font-family: Poppins;
   margin-left: -90px;
-  margin-bottom: -4px;
 }
 
 
@@ -347,18 +347,29 @@
   }
   
   .contact-email{
-    size: 10px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
     margin-left: 0px;
-    height: 50%;
+    margin-bottom: 40px;
   }
+  
+  .email-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
   .email-icon i {
-    width: 100%;
-    padding: 15px;
-    
-    
+    font-size: 1.2rem;
   }
+  
   .email-text{
-    margin-left: -10px;
+    margin-left: 0;
+    font-size: 1rem;
   }
   .contact-left {
     padding: 18px 15px;
@@ -436,8 +447,8 @@
 
 .contact-right .form-group.full-width i {
   position: absolute;
-  top: 16px; /* vertical alignment of icon */
-  left: 12px; /* same as inputs */
+  top: 16px; 
+  left: 12px; 
   color: #999;
   font-size: 1.1rem;
   pointer-events: none;

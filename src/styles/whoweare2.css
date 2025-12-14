@@ -258,9 +258,11 @@
   
   /* Make button visible and centered on mobile */
   .split-right .all-works-btn {
-    margin: 10px 0px 0px 0px;
-    min-width: 280px;
-    max-width: 90%;
+    margin: 16px auto 0 auto;   /* ✅ center horizontally */
+    align-self: center;         /* ✅ override desktop rule */
+    min-width: unset;           /* ✅ remove desktop constraint */
+    width: 90%;                 /* ✅ responsive width */
+    max-width: 320px;
     padding: 14px 20px;
     font-size: 0.85rem;
     display: flex;

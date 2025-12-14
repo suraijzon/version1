@@ -9,18 +9,19 @@
   border-bottom: 1px solid #eaeaea;
 }
 
-/* Top badge above navbar - RESPONSIVE */
+/* Top badge above navbar - LEFT ALIGNED */
 .top-badge {
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   font-family: Poppins;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   color: rgb(59, 58, 58);
   font-weight: 500;
   font-size: 14px;
-  padding: 0 20px 15px;
-  gap: 40px;
+  padding: 0 4% 15px 4%;
 }
 
 .top-badge-left {
@@ -391,7 +392,7 @@
 @media (max-width: 1024px) {
   .navbar {
     padding: 10px 0;
-    width: 100%; /* FIXED: was 450px */
+    width: 100%; 
   }
 
   .nav-container {

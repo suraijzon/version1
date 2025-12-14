@@ -230,7 +230,7 @@ const Navbar = () => {
               </div>
 
               <div className="dropdown-column-last">
-                <span className="last-column2">The Zonzo<br />ctech</span>
+                <span className="last-column2">Zonzo<br />ctech</span>
                 <span className="last-column-text2"><br></br>View out all the the live clients designs which we have completed recently.</span>
                 <button className="last-column-button"> View Design Portfolio</button>
               </div>

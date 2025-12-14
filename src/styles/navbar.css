@@ -27,9 +27,20 @@
 /* For large screens - keep content compact and left-aligned like first image */
 @media (min-width: 1400px) {
   .top-badge {
-    padding: 0 1% 15px 1%;
+    padding: 0 0% 15px 0%;
     gap: 40px;
   }
+  .drop-btn {
+  border: none;
+  background: none;
+  font-size: 17px;
+  cursor: pointer;
+  color: #4a5568;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: color 0.3s;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
 }
 
 .top-badge-left {

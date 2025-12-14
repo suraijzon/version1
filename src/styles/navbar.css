@@ -443,7 +443,14 @@
     padding: 5px 15px 10px;
     font-size: 12px;
   }
+   .top-badge-left{
+    display: none;
+  }
+  .top-badge-right{
+    display: none;
+  }
 
+ 
   .top-badge-left span:not(.highlight) {
     display: none;
   }
@@ -585,6 +592,13 @@
     font-size: 11px;
     padding: 5px 10px 8px;
   }
+   .top-badge-left{
+    display: none;
+  }
+  .top-badge-right{
+    display: none;
+  }
+
 
   .top-badge .highlight {
     font-size: 14px;

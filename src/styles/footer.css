@@ -334,6 +334,7 @@
 }
 .line{
   color: white;
+  width: 2px;
   padding-top: -30px;
   margin-top: -50px;
   margin-bottom: 20px;

@@ -223,7 +223,7 @@
   }
 
   .split-right {
-    padding: 32px auto;
+    padding: 32px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -256,8 +256,9 @@
     padding-bottom: 10px;
   }
   
+  /* Make button visible and centered on mobile */
   .split-right .all-works-btn {
-    margin-top: 10px;
+    margin: 10px 0 0 0;
     min-width: 280px;
     max-width: 90%;
     padding: 14px 20px;
@@ -265,11 +266,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    align-self: center;
   }
-  .split-right .all-works-btn{
-    margin-left: 120px !important;
-  }
+  
   .benefits-list {
     margin-bottom: 0;
   }

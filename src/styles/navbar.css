@@ -273,6 +273,7 @@
 
 .dropdown-column-last .last-column2 {
   font-size: 40px;
+  margin-top: -30px !important;
   line-height: 0.9;
 }
 
@@ -293,7 +294,7 @@
 .dropdown-column-last .last-column-text,
 .dropdown-column-last .last-column-text2 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
   color: #1a1a1a;
   display: block;
@@ -555,13 +556,25 @@
   .last-column-text2 {
     font-size: 16px !important;
   }
+  .dropdown-column-last .last-column3{
+    font-size: 20px;
+    margin-top: 20px !important;
+    text-align: start;
+  }
 
   .last-column-text3 {
-    font-size: 14px;
+    font-size: 12px;
+    display: block;
+    padding: 4px 0;
+    color: #5a5a5a;
+    text-decoration: none;
+    transition: all 0.2s;
+    text-align: start;
+    line-height: 0.7;
   }
   .dropdown-column-last .last-column4{
-    margin-top: 50px;
-    font-size: 20px !important;
+    margin-top: 40px;
+    font-size: 25px !important;
   }
 
   .contact-btn {

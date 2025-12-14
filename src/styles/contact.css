@@ -331,7 +331,20 @@
 @media (max-width: 768px) {
   .contact-section {
     padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
+  .contact-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+  }
+  
   .contact-email{
     size: 10px;
     margin-left: 0px;
@@ -348,8 +361,10 @@
   }
   .contact-left {
     padding: 18px 15px;
-    width: 275px;
-    margin-left: -30px;
+    width: 100%;
+    max-width: 300px;
+    margin-left: 0;
+    margin: 0 auto;
   }
   .here-text{
     margin-left: 10px;
@@ -368,13 +383,16 @@
 
   .contact-right {
     padding: 18px 15px;
-    width: 275px;
-    margin-left: -30px;
+    width: 100%;
+    max-width: 300px;
+    margin-left: 0;
+    margin: 0 auto;
+    margin-top: 20px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
-    width: 200px;
+    width: 100%;
     gap: 20px;
     
   }
@@ -396,8 +414,10 @@
   }
 
   .form-group{
-     width: 190px;
-     margin-left: 30px;
+     width: 100%;
+     max-width: 270px;
+     margin-left: 0;
+     margin: 0 auto;
   }
   
   .form-group textarea{
@@ -424,9 +444,9 @@
 
 /* Placeholder text alignment */
 .contact-right .form-group.full-width textarea::placeholder {
-  padding-left: 17px; /* same space as icon */
+  padding-left: 17px; 
   color: #999;
-  opacity: 1; /* ensure visible */
+  opacity: 1; 
 }
 
 /* Optional: focus effect */
@@ -441,7 +461,8 @@
   .submit-btn{
     padding: 10px 15px;
     font-size: 14px;
-    margin-left: 35px;
-    margin-top: -8px;
+    margin-left: 0;
+    margin: 0 auto;
+    margin-top: 10px;
   }
 }

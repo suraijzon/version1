@@ -40,7 +40,7 @@ const Footer = () => {
   return (
     <footer className="footer">
 
-      {/* ========== TOP SECTION ========== */}
+      {/* TOP SECTION */}
       <div className="footer-top">
         <div className="footer-top-container">
 
@@ -164,7 +164,7 @@ const Footer = () => {
       </div>
 
       {/* Full-width line before footer bottom */}
-      <div className='line'>
+      <div className='linetop'>
         <hr style={{
           border: 'none',
           borderTop: '1px solid rgba(255, 255, 255, 1)',

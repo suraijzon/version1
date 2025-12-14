@@ -310,9 +310,16 @@
   }
 
   .contact-left {
-    width: 200px;
     margin-left: -40px;
     align-items: center;
+  }
+  .contact-left{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .contact-right{
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .contact-title {
@@ -337,7 +344,7 @@
     
   }
   .email-text{
-    margin-left: -10px;
+    margin-left: 0px;
   }
   .contact-left {
     padding: 18px 15px;

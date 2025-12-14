@@ -258,7 +258,6 @@
   
   .split-right .all-works-btn {
     margin-top: 10px;
-    margin-left: 30px !important;
     min-width: 280px;
     max-width: 90%;
     padding: 14px 20px;
@@ -268,7 +267,9 @@
     justify-content: center;
     align-self: center;
   }
-  
+  .split-right .all-works-btn{
+    margin-left: 120px !important;
+  }
   .benefits-list {
     margin-bottom: 0;
   }

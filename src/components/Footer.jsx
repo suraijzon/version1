@@ -89,7 +89,7 @@ const Footer = () => {
         <div className='linetop'>
           <hr style={{
             border: 'none',
-            borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+            borderTop: '1px solid rgba(255, 255, 255, 1)',
             margin: '20px 0',
             width: '100%'
           }} />
@@ -167,7 +167,7 @@ const Footer = () => {
       <div className='line'>
         <hr style={{
           border: 'none',
-          borderTop: '2px solid rgba(255, 255, 255,)',
+          borderTop: '1px solid rgba(255, 255, 255, 1)',
           margin: '20px 0',
           width: '100%'
         }} />

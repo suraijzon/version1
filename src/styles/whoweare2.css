@@ -257,12 +257,11 @@
   }
   
   .split-right .all-works-btn {
-    margin: 10px auto 0 auto;
+    margin-top: 10px;
     min-width: 280px;
     max-width: 90%;
     padding: 14px 20px;
     font-size: 0.85rem;
-    margin-left: 20px;
     display: flex;
     align-items: center;
     justify-content: center;

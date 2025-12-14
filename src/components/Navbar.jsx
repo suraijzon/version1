@@ -101,7 +101,7 @@ const Navbar = () => {
   <div style={{ display: 'flex', alignItems: 'center' }}>
     <div className="nav-logo">
       <img src={logo} alt="Zonzoctech Logo" className="logo-desktop" />
-      <img src={siteLogo} alt="Zonzoctech Logo" className="logo-mobile" />
+      <img src={logo} alt="Zonzoctech Logo" className="logo-mobile" />
     </div>
 
     <div className="nav-tagline">

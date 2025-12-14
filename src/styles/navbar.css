@@ -422,6 +422,9 @@
     width: 95%;
     padding: 0 10px;
   }
+  .top-badge{
+    display: none;
+  }
 
   /* Hide desktop elements */
   .logo-desktop,

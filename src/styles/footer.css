@@ -374,6 +374,18 @@
     grid-column: 1 / -1;
     max-width: 600px;
   }
+  .footer-logo{
+    align-items: center;
+  }
+  .footer-tagline{
+    text-align: center;
+  }
+  .footer-contact-box{
+    text-align: center;
+  }
+  .phone-button{
+    align-items: center;
+  }
   .footer-column{
     text-align: center;
   }

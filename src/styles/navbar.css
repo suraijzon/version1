@@ -1,4 +1,4 @@
-/* MAIN NAVBAR */
+
 .navbar {
   width: 100%;
   padding: 20px 0;
@@ -9,7 +9,6 @@
   border-bottom: 1px solid #eaeaea;
 }
 
-/* Top badge above navbar - LEFT ALIGNED */
 .top-badge {
   width: 100%;
   max-width: 1400px;
@@ -24,14 +23,13 @@
   padding: 0 4% 15px 4%;
 }
 
-/* For large screens - keep content compact and left-aligned like first image */
+/* For large screens */
 @media (min-width: 1400px) {
   .top-badge {
     padding: 0 0% 15px 0%;
     gap: 40px;
   }
   
-  /* Increase dropdown button font size and gap for large screens */
   .drop-btn {
     font-size: 17px;
     padding: 10px 20px;
@@ -286,7 +284,6 @@
 .dropdown-column-last .last-column4 {
   font-size: 40px;
   line-height: 0.9;
-  margin-top: -50px;
   padding-bottom: 100px;
 }
 

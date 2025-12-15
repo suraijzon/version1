@@ -164,7 +164,7 @@ const Footer = () => {
       </div>
 
       {/* Full-width line before footer bottom */}
-      <div className='linetop'>
+      <div className='line'>
         <hr style={{
           border: 'none',
           borderTop: '1px solid rgba(255, 255, 255, 1)',

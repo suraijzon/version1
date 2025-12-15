@@ -62,6 +62,7 @@
   object-fit: cover;
   display: block;
   border-radius: 20px;
+ 
 }
 
 /* Right Side - Benefits */
@@ -80,6 +81,7 @@
   line-height: 1.8;
   margin-bottom: 0px;
   margin-top: -50px;
+
 }
 
 .benefits-heading {
@@ -88,6 +90,7 @@
   color: #1e3a8a;
   margin-bottom: 15px;
   line-height: 1.2;
+ 
 }
 
 /* Benefits List */
@@ -177,15 +180,26 @@
   transform: translateY(-100%);
 }
 
-/* ========================= */
-/* MOBILE FIX (ONLY CHANGE) */
-/* ========================= */
+/* Responsive Design */
 @media (max-width: 768px) {
+  .banner-title {
+    font-size: 2.2rem;
+  }
 
   .whoweare-split-section {
     grid-template-columns: 1fr;
   }
 
+  .split-right {
+    padding: 40px;
+  }
+
+  .image-wrapper {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
   .banner-title {
     font-size: 1.8rem;
     text-align: center;
@@ -197,16 +211,21 @@
     text-align: center;
     margin-bottom: -45px;
   }
-
+  
   .section-image {
     width: 100%;
     height: auto;
-    margin: 30px 0 0 0;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 0px;
   }
 
   .split-right {
     padding: 32px 20px;
-    margin-left: 0 !important;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 
@@ -214,41 +233,48 @@
     font-size: 1.4rem;
     text-align: center;
   }
-
+  
   .benefit-item {
     font-size: 14px;
     font-weight: 500;
+    padding-left: 5px;
+  }
+  
+  .benefit-dot {
+    margin-left: 25px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-right: -5px;
   }
 
   .mission-text {
     text-align: center;
     font-size: 14px;
     font-weight: 500;
-    margin: 0 0 10px 0;
+    margin-left: 22px;
+    margin-top: 0px;
+    padding-bottom: 10px;
   }
-
+  
   .split-right .all-works-btn {
-    margin-top: 16px !important;
-    margin-left: auto !important;  
-    margin-right: auto !important;  
-
-    align-self: center !important;
-
-    width: 90%;
-    max-width: 320px;
-    min-width: unset;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+    margin: 10px auto 0 auto !important;
+    padding: 14px 20px;
+    font-size: 0.85rem;
+    display: block !important;
+    width: 280px;
+    text-align: center;
+  }
+  
+  .benefits-list {
+    margin-bottom: 0;
+  }
+  
   .split-right .btn-text {
     height: 20px;
   }
-
+  
   .split-right .btn-text span {
-    font-size: 0.85rem;
     line-height: 20px;
+    font-size: 0.85rem;
   }
 }

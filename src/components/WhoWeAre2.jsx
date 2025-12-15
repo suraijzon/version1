@@ -58,12 +58,15 @@ const WhoWeAreSection = () => {
               ))}
             </ul>
 
-            <button className="all-works-btn">
-              <span className="btn-text">
-                <span>START YOUR PROJECT TODAY ↗</span>
-                <span>START YOUR PROJECT TODAY ↗</span>
-              </span>
-            </button>
+            {/* Wrapper div for centering */}
+            <div className="button-wrapper">
+              <button className="all-works-btn">
+                <span className="btn-text">
+                  <span>START YOUR PROJECT TODAY ↗</span>
+                  <span>START YOUR PROJECT TODAY ↗</span>
+                </span>
+              </button>
+            </div>
           </div>
         </div>
 

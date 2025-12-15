@@ -183,24 +183,6 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .banner-title {
-    font-size: 2.2rem;
-  }
-
-  .whoweare-split-section {
-    grid-template-columns: 1fr;
-  }
-
-  .split-right {
-    padding: 40px;
-  }
-
-  .image-wrapper {
-    min-height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .banner-title {
     font-size: 1.8rem;
     text-align: center;
   }
@@ -210,6 +192,10 @@
     font-weight: 500;
     text-align: center;
     margin-bottom: -45px;
+  }
+  
+  .whoweare-split-section {
+    grid-template-columns: 1fr;
   }
   
   .section-image {
@@ -223,11 +209,11 @@
   }
 
   .split-right {
-    padding: 32px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
+    padding: 32px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-left: 0 !important;
   }
 
   .benefits-heading {
@@ -257,19 +243,23 @@
     padding-bottom: 10px;
   }
   
-  /* Make button visible and centered on mobile */
-  .split-right .all-works-btn {
-    margin: 10px 0 0 0;
-    padding: 14px 20px;
-    font-size: 0.85rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 280px;
-  }
-  
   .benefits-list {
     margin-bottom: 0;
+  }
+  
+  /* Make button visible and centered on mobile */
+  .split-right .all-works-btn {
+    margin: 10px 0 0 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 14px 20px !important;
+    font-size: 0.85rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 280px !important;
+    min-width: 280px !important;
+    align-self: center !important;
   }
   
   .split-right .btn-text {

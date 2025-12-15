@@ -51,28 +51,6 @@ const GoogleSearchConsole = () => {
     }
   ];
 
-  const pricing = [
-    {
-      name: 'Setup & Configuration',
-      price: '$299',
-      period: 'One-time',
-      features: ['Complete GSC setup', 'Property verification', 'Sitemap submission', 'Initial audit report', 'Team training session']
-    },
-    {
-      name: 'Monthly Monitoring',
-      price: '$499',
-      period: '/month',
-      popular: true,
-      features: ['Daily performance tracking', 'Weekly reports', 'Issue monitoring & alerts', 'Monthly strategy calls', 'Priority support']
-    },
-    {
-      name: 'Enterprise Package',
-      price: 'Custom',
-      period: 'Contact us',
-      features: ['Multi-domain management', 'Custom reporting', 'Dedicated account manager', 'API integration', '24/7 support']
-    }
-  ];
-
   const clients = [
     { name: 'Sitemark', logo: sitemarkLogo },
     { name: 'Jettime', logo: jettimeLogo },
@@ -104,19 +82,24 @@ const GoogleSearchConsole = () => {
           </div>
         </section>
 
-        {/* Client Logos with Scroll Animation */}
+        {/* Client Logos with Infinite Scroll Animation */}
         <section className="gsc-clients-section">
           <div className="gsc-clients-container">
+            {/* First row - scrolling left */}
             <div className="clients-track">
-              {clients.map((client, index) => (
-                <div key={index} className="client-card">
+              {/* Repeat clients array 3 times for seamless infinite scroll */}
+              {[...clients, ...clients, ...clients].map((client, index) => (
+                <div key={`row1-${index}`} className="client-card">
                   <img src={client.logo} alt={client.name} className="client-icon" />
                 </div>
               ))}
             </div>
+            
+            {/* Second row - scrolling right */}
             <div className="clients-track">
-              {clients.map((client, index) => (
-                <div key={index} className="client-card">
+              {/* Repeat clients array 3 times for seamless infinite scroll */}
+              {[...clients, ...clients, ...clients].map((client, index) => (
+                <div key={`row2-${index}`} className="client-card">
                   <img src={client.logo} alt={client.name} className="client-icon" />
                 </div>
               ))}

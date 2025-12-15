@@ -228,7 +228,10 @@
   }
 
   .split-right .all-works-btn {
-    margin: 16px auto 0 auto !important; /* true center */
+    margin-top: 16px !important;
+    margin-left: auto !important;  
+    margin-right: auto !important;  
+
     align-self: center !important;
 
     width: 90%;
@@ -238,7 +241,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 
   .split-right .btn-text {
     height: 20px;

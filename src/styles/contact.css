@@ -12,7 +12,22 @@
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 50px;
-  align-items: start;
+  align-items: stretch;
+}
+
+/* For large screens - decrease gap and match heights */
+@media (min-width: 1400px) {
+  .contact-container {
+    gap: 30px;
+    align-items: stretch;
+  }
+  
+  .contact-left,
+  .contact-right {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Left Side */
@@ -22,9 +37,9 @@
   margin-left: 10px;
   padding-left: 50px;
   padding-top: 20px;
+  padding-bottom: 40px;
   border-radius: 20px;
   width: 420px;
-  
 }
 
 .you-are-here {
@@ -39,7 +54,6 @@
   font-weight: 700;
   color: #1e3a8a;
   letter-spacing: 1px;
-
 }
 
 .here-line {
@@ -78,7 +92,6 @@
   color: #020202;
   margin-bottom: 30px;
   line-height: 1.6;
-
 }
 
 /* Email Display */
@@ -111,6 +124,7 @@
 /* Steps */
 .contact-steps {
   position: relative;
+  flex: 1;
 }
 
 .step-item {
@@ -168,7 +182,6 @@
   margin-left: -90px;
 }
 
-
 .form-header {
   display: flex;
   align-items: center;
@@ -200,6 +213,7 @@
   display: flex;
   flex-direction: column;
   gap: 35px;
+  flex: 1;
 }
 
 .form-row {
@@ -207,10 +221,11 @@
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-.form-row i{
-    padding-top: 0px;
-    margin-left: 20px;
-  }
+
+.form-row i {
+  padding-top: 0px;
+  margin-left: 20px;
+}
 
 .form-group {
   position: relative;
@@ -225,6 +240,7 @@
   font-size: 1.1rem;
   pointer-events: none;
 }
+
 .contact-right .form-group input::placeholder,
 .contact-right .form-group textarea::placeholder {
   padding-left: 50px; 
@@ -255,12 +271,12 @@
   resize: none;
   padding-top: 16px;
   padding-bottom: 36px;
-  
 }
 
 .form-group.full-width {
   grid-column: 1 / -1;
 }
+
 .contact-right .form-group.full-width i {
   position: absolute;
   top: 18px; 
@@ -314,11 +330,13 @@
     margin-left: -40px;
     align-items: center;
   }
-  .contact-left{
+  
+  .contact-left {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .contact-right{
+  
+  .contact-right {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -326,7 +344,6 @@
   .contact-title {
     font-size: 2.5rem;
   }
- 
 }
 
 @media (max-width: 768px) {
@@ -346,7 +363,7 @@
     max-width: 320px;
   }
   
-  .contact-email{
+  .contact-email {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -367,10 +384,11 @@
     font-size: 1.2rem;
   }
   
-  .email-text{
+  .email-text {
     margin-left: 0;
     font-size: 1rem;
   }
+  
   .contact-left {
     padding: 18px 15px;
     width: 100%;
@@ -378,20 +396,23 @@
     margin-left: 0;
     margin: 0 auto;
   }
-  .here-text{
+  
+  .here-text {
     margin-left: 10px;
-  }
-  .contact-title{
-    margin-left: 10px;
-  }
-  .contact-subtitle{
-    margin-left: 10px;
-  }
-  .step-text{
-    font-size: 13px;
   }
   
-
+  .contact-title {
+    margin-left: 10px;
+    font-size: 2rem;
+  }
+  
+  .contact-subtitle {
+    margin-left: 10px;
+  }
+  
+  .step-text {
+    font-size: 13px;
+  }
 
   .contact-right {
     padding: 18px 15px;
@@ -406,71 +427,65 @@
     grid-template-columns: 1fr;
     width: 100%;
     gap: 20px;
-    
   }
-  .form-row i{
+  
+  .form-row i {
     padding-top: 0px;
     margin-left: 0px;
   }
 
   .contact-right .form-group input[name="phone"]::placeholder {
-     padding-left: 20px; 
-     color: #999; 
+    padding-left: 20px; 
+    color: #999; 
   }
+  
   .contact-right .form-group input::placeholder,
   .contact-right .form-group textarea::placeholder {
-     padding-left: 20px; 
-     color: #999; 
-     opacity: 1;
-     font-size: 13px; 
+    padding-left: 20px; 
+    color: #999; 
+    opacity: 1;
+    font-size: 13px; 
   }
 
-  .form-group{
-     width: 100%;
-     max-width: 270px;
-     margin-left: 0;
-     margin: 0 auto;
+  .form-group {
+    width: 100%;
+    max-width: 270px;
+    margin-left: 0;
+    margin: 0 auto;
   }
   
-  .form-group textarea{
+  .form-group textarea {
     padding-top: 15px;
-    
   }
 
-  .contact-title {
-    font-size: 2rem;
+  .contact-right .form-group.full-width {
+    position: relative;
   }
-  
-.contact-right .form-group.full-width {
-  position: relative;
-}
 
-.contact-right .form-group.full-width i {
-  position: absolute;
-  top: 16px; 
-  left: 12px; 
-  color: #999;
-  font-size: 1.1rem;
-  pointer-events: none;
-}
+  .contact-right .form-group.full-width i {
+    position: absolute;
+    top: 16px; 
+    left: 12px; 
+    color: #999;
+    font-size: 1.1rem;
+    pointer-events: none;
+  }
 
-/* Placeholder text alignment */
-.contact-right .form-group.full-width textarea::placeholder {
-  padding-left: 17px; 
-  color: #999;
-  opacity: 1; 
-}
+  .contact-right .form-group.full-width textarea::placeholder {
+    padding-left: 17px; 
+    color: #999;
+    opacity: 1; 
+  }
 
-/* Optional: focus effect */
-.contact-right .form-group.full-width textarea:focus::placeholder {
-  color: #999;
-}
-
+  .contact-right .form-group.full-width textarea:focus::placeholder {
+    color: #999;
+  }
 
   .form-title {
     font-size: 1.5rem;
   }
-  .submit-btn{
+  
+  .submit-btn {
     padding: 10px 15px;
     font-size: 14px;
     margin-left: 0;

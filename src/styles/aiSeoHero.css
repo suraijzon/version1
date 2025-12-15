@@ -233,6 +233,7 @@
   color: #ffffff;
   font-weight: 600;
 }
+
 .rotating-badge {
   height: 22px;
   overflow: hidden;
@@ -249,6 +250,7 @@
   color: #fff;
   font-size: 14px;
   line-height: 32px;
+  white-space: nowrap;
 }
 
 /* Smooth continuous scroll — NO JUMP */
@@ -256,8 +258,6 @@
   100% { transform: translateY(0); }
   0% { transform: translateY(-66px); } /* 3 lines × 22px = 66px */
 }
-
-
 
 /* Animations */
 @keyframes fadeInUp {
@@ -302,10 +302,10 @@
   .ai-hero-subtitle {
     font-size: 16px;
   }
+  
   .ai-seo-hero {
     padding-top: 15px !important;
   }
-  
 }
 
 @media (max-width: 768px) {
@@ -320,15 +320,6 @@
   .ai-hero-subtitle {
     font-size: 15px;
   }
-  
-.badge-text-wrapper{
-    width: 200px;
-
-}
-.badge-text{
-    font-size: 10px;
-    padding: 0px -10px;
-}
 
   .ai-hero-subtitle br {
     display: none;
@@ -346,6 +337,30 @@
   .logo-text {
     font-size: 16px;
   }
+  
+  /* Mobile badge fix - keep text in one line */
+  .ai-badge {
+    padding: 10px 16px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: auto;
+    max-width: 90%;
+  }
+  
+  .rotating-badge {
+    height: 20px;
+  }
+  
+  .badge-text {
+    font-size: 10px;
+    line-height: 20px;
+    white-space: nowrap;
+  }
+  
+  @keyframes smoothScroll {
+    100% { transform: translateY(0); }
+    0% { transform: translateY(-60px); } /* 3 lines × 20px = 60px */
+  }
 }
 
 @media (max-width: 480px) {
@@ -354,8 +369,8 @@
   }
 
   .ai-badge {
-    font-size: 12px;
-    padding: 8px 18px;
+    font-size: 10px;
+    padding: 8px 12px;
   }
 
   .ai-hero-subtitle {
@@ -370,5 +385,10 @@
   .trustpilot {
     flex-direction: column;
     gap: 8px;
+  }
+  
+  /* Extra small screens */
+  .badge-text {
+    font-size: 9px;
   }
 }

@@ -138,7 +138,7 @@
 .drop-btn {
   border: none;
   background: none;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
   color: #4a5568;
   font-weight: 500;
@@ -382,9 +382,9 @@
   }
 }
 
-/* ========== RESPONSIVE BREAKPOINTS ========== */
+/*  RESPONSIVE BREAKPOINTS */
 
-/* Large Desktop Optimization (1400px and above) - Premium Look */
+/* Large Desktop Optimization (1400px and above) */
 @media (min-width: 1400px) {
   .top-badge {
     padding: 0 0% 15px 0%;
@@ -411,7 +411,7 @@
   }
   
   .dropdown-column {
-    width: 250px;
+    width: 255px;
     padding: 30px 25px;
     height: 420px;
   }
@@ -428,7 +428,7 @@
   }
   
   .dropdown-column-last {
-    width: 250px;
+    width: 255px;
     padding: 30px 25px;
     min-height: 420px;
   }

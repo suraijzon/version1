@@ -131,52 +131,49 @@ const Navbar = () => {
 
             <div className="dropdown-content">
               <div className="dropdown-column">
-                <h4>AI Services</h4>
-                <a href="/">AI & GPT Integration</a>
-                <a href="/ai-seo">AI SEO Services</a>
-                <a href="/">AI Digital Marketing Services</a>
-                <a href="/">AI Chatbot Development</a>
-                <a href="/">Predictive Analytics</a>
-                <a href="/">AI Consulting</a>
+                <h4>AI Strategy & Core Services</h4>
+                <a href="/">AI Readiness Assessment</a>
+                <a href="/ai-seo">AI Strategy & Consulting</a>
+                <a href="/">AI Proof of Concept (PoC) Development</a>
+                <a href="/">Custom AI & GPT Integration</a>
+                <a href="/">Secure & Scalable AI Deployment</a>
               </div>
 
               <div className="dropdown-column">
-                <h4>AI Web Design & Development</h4>
-                <a href="/">AI-Powered Website Design</a>
-                <a href="/">AI-Based User Personalization</a>
-                <a href="/">AI Landing Page Generators</a>
-                <a href="/">GPT-Integrated Forms & Live Chat</a>
-                <a href="/">Smart Content Recommendations</a>
-                <a href="/">AI-Based UX Testing & Optimization</a>
+                <h4>AI for Marketing, Sales & Growth</h4>
+                <a href="/">AI SEO & AI Search Optimization</a>
+                <a href="/">AI Sales Funnel Optimization</a>
+                <a href="/">AI Lead Generation & Nurturing Automation</a>
+                <a href="/">AI Chat Sales Agents & Virtual Assistants</a>
+                <a href="/">AI Content & Campaign Automation</a>
               </div>
 
               <div className="dropdown-column">
-                <h4>AI Integrations & Automation</h4>
-                <a href="/">Custom GPT-4 App Development</a>
-                <a href="/">AI Workflow Automation</a>
-                <a href="/">AI CRM Integrations</a>
-                <a href="/">Email Marketing Automation with AI</a>
-                <a href="/">Voice & Image Recognition Features</a>
-                <a href="/">AI-Powered Scheduling Tools</a>
+                <h4>AI Web Experience & Conversion</h4>
+                <a href="/">Conversion-Focused AI Website Design</a>
+                <a href="/">AI Personalization & Dynamic Content</a>
+                <a href="/">AI Landing Page Systems		</a>
+                <a href="/">GPT-Powered Forms, Chat & Lead Capture</a>
+                <a href="/">AI UX Testing & Conversion Rate Optimization (CRO)</a>
               </div>
 
               <div className="dropdown-column">
-                <h4>AI Data & Analytics</h4>
-                <a href="/">Closed Loop Analytics</a>
-                <a href="/">Real-Time AI Reporting Dashboards</a>
-                <a href="/">Customer Behavior Prediction</a>
-                <a href="/">Data-Driven Marketing Automation</a>
-                <a href="/">AI Lead Scoring Models</a>
+                <h4>AI Automation & Integrations</h4>
+                <a href="/">AI Workflow & Business Process Automation</a>
+                <a href="/">AI CRM, ERP & Tool Integrations</a>
+                <a href="/">AI Email, WhatsApp & Messaging Automation</a>
+                <a href="/">Voice, Image & Document AI Solutions</a>
+                <a href="/">AI Scheduling, Booking & Support Automation</a>
               </div>
 
               <div className="dropdown-column-last">
-                <span className="last-column3">Learn & <br />Resources</span>
+                <span className="last-column3">Insights &<br />Resources</span>
                 <span className="last-column-text3"> _______________</span>
-                <span className="last-column-text3">What is AI Marketing?</span>
-                <span className="last-column-text3">How to Write AI Prompts</span>
-                <span className="last-column-text3">How to Track AI Search Visibility</span>
-                <span className="last-column-text3">What is GPT Integration?</span>
-                <span className="last-column-text3">AI vs Traditional Development: What's Better?</span>
+                <span className="last-column-text3">AI vs Traditional Development: Cost & ROI</span>
+                <span className="last-column-text3">What Is GPT Integration & When You Need It</span>
+                <span className="last-column-text3">What Is AI Marketing</span>
+                <span className="last-column-text3">How to Identify High-ROI AI Use Cases</span>
+                <span className="last-column-text3">AI SEO vs Traditional SEO</span>
               </div>
             </div>
           </div>

@@ -167,7 +167,7 @@ const Navbar = () => {
               </div>
 
               <div className="dropdown-column-last">
-                <span className="last-column3">Insights &<br />Resources</span>
+                <span className="last-column3">Insights & Resources</span>
                 <span className="last-column-text3">AI vs Traditional Development: Cost & ROI</span>
                 <span className="last-column-text3">What Is GPT Integration & When You Need It</span>
                 <span className="last-column-text3">What Is AI Marketing</span>

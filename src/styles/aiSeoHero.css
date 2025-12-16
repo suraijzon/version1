@@ -256,7 +256,7 @@
 /* Smooth continuous scroll — NO JUMP */
 @keyframes smoothScroll {
   100% { transform: translateY(0); }
-  0% { transform: translateY(-66px); } /* 3 lines × 22px = 66px */
+  0% { transform: translateY(-66px); } 
 }
 
 /* Animations */
@@ -359,7 +359,7 @@
   
   @keyframes smoothScroll {
     100% { transform: translateY(0); }
-    0% { transform: translateY(-60px); } /* 3 lines × 20px = 60px */
+    0% { transform: translateY(-60px); }
   }
 }
 

@@ -1,4 +1,3 @@
-
 .navbar {
   width: 100%;
   padding: 20px 0;
@@ -21,23 +20,6 @@
   font-weight: 500;
   font-size: 14px;
   padding: 0 4% 15px 4%;
-}
-
-/* For large screens */
-@media (min-width: 1400px) {
-  .top-badge {
-    padding: 0 0% 15px 0%;
-    gap: 40px;
-  }
-  
-  .drop-btn {
-    font-size: 17px;
-    padding: 10px 20px;
-  }
-  
-  .nav-links {
-    gap: 25px;
-  }
 }
 
 .top-badge-left {
@@ -115,14 +97,6 @@
   align-items: center;
 }
 
-/* For large screens - keep nav content compact */
-@media (min-width: 1400px) {
-  .nav-container {
-    width: 84%;
-    padding: 0 0 0 0;
-  }
-}
-
 /* LOGO */
 .nav-logo {
   display: flex;
@@ -198,59 +172,15 @@
   gap: 20px;
 }
 
-/* WHITE CARD COLUMNS */
+/* WHITE CARD COLUMNS - Default for smaller screens */
 .dropdown-column {
   background: #ffffff;
-  padding: 30px 25px;
+  padding: 25px 20px;
   border-radius: 10px;
-  width: 230px;
+  width: 210px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
-  height: 420px;
-}
-@media (min-width: 1024px) {
-  .dropdown-column {
-  background: #ffffff;
-  padding: 30px 25px;
-  border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  height: 420px;
-}
-  .drop-btn {
-  border: none;
-  background: none;
-  font-size: 18px;
-  cursor: pointer;
-  color: #4a5568;
-  font-weight: 500;
-  padding: 10px 15px;
-  transition: color 0.3s;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-}
-.dropdown-column a {
-  display: block;
-  padding: 7px 0;
-  color: #5a5a5a;
-  text-decoration: none;
-  font-size: 16px;
-  transition: all 0.2s;
-  font-weight: 400;
-  line-height: 1;
-}
-.dropdown-column-last {
-  background: linear-gradient(180deg, #c8e6f5 0%, #7dc9ed 100%);
-  padding: 30px;
-  border-radius: 10px;
-  text-align: start;
-  width: 250px;
-  box-shadow: 0 4px 20px rgba(0, 82, 204, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 420px;
-}
+  height: 380px;
 }
 
 .dropdown-column:hover {
@@ -259,8 +189,8 @@
 }
 
 .dropdown-column h4 {
-  margin: 0 0 20px 0;
-  font-size: 17px;
+  margin: 0 0 15px 0;
+  font-size: 15px;
   font-weight: 700;
   color: #1a1a1a;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -268,13 +198,13 @@
 
 .dropdown-column a {
   display: block;
-  padding: 7px 0;
+  padding: 6px 0;
   color: #5a5a5a;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.2s;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.3;
 }
 
 .dropdown-column a:hover {
@@ -285,90 +215,90 @@
 /* LAST COLUMN - BLUE SHOWCASE BOX */
 .dropdown-column-last {
   background: linear-gradient(180deg, #c8e6f5 0%, #7dc9ed 100%);
-  padding: 30px;
+  padding: 25px 20px;
   border-radius: 10px;
   text-align: start;
-  width: 230px;
+  width: 210px;
   box-shadow: 0 4px 20px rgba(0, 82, 204, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  min-height: 420px;
+  min-height: 380px;
 }
 
 .dropdown-column-last .last-column,
 .dropdown-column-last .last-column2,
 .dropdown-column-last .last-column3,
 .dropdown-column-last .last-column4 {
-  margin: 0 0 20px 0;
-  font-size: 17px;
+  margin: 0 0 15px 0;
+  font-size: 15px;
   font-weight: 700;
   color: #1a1a1a;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .dropdown-column-last .last-column {
-  font-size: 50px;
+  font-size: 40px;
   line-height: 0.9;
   margin-bottom: 5px;
 }
 
 .dropdown-column-last .last-column2 {
-  font-size: 40px;
+  font-size: 32px;
   line-height: 0.9;
 }
 
 .dropdown-column-last .last-column3 {
-  font-size: 20px;
-  line-height: 0.9;
-  margin-top: 7px;
+  font-size: 17px;
+  line-height: 1.1;
+  margin-top: 5px;
   text-align: start;
 }
 
 .dropdown-column-last .last-column4 {
-  font-size: 40px;
+  font-size: 32px;
   line-height: 0.9;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
 }
 
 .dropdown-column-last .last-column-text,
 .dropdown-column-last .last-column-text2 {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.1;
   color: #1a1a1a;
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .dropdown-column-last .last-column-text {
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .dropdown-column-last .last-column-text2 {
-  margin-top: 10px;
-  margin-bottom: 25px;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 .dropdown-column-last .last-column-text3 {
   display: block;
-  padding: 7px 0;
+  padding: 6px 0;
   color: #5a5a5a;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.2s;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.3;
 }
 
 .dropdown-column-last .last-column-button {
-  font-size: 15px;
+  font-size: 14px;
   background-color: #003d82;
   border: none;
   border-radius: 6px;
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  padding: 14px 30px;
+  padding: 12px 24px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s;
@@ -394,14 +324,14 @@
 .contact-btn {
   background: #00448f;
   color: #fff;
-  padding: 12px 25px;
+  padding: 10px 20px;
   border: none;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.3s;
   font-weight: 600;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .contact-btn:hover {
@@ -452,7 +382,106 @@
   }
 }
 
-/* RESPONSIVE BREAKPOINTS */
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Large Desktop Optimization (1400px and above) - Premium Look */
+@media (min-width: 1400px) {
+  .top-badge {
+    padding: 0 0% 15px 0%;
+    gap: 40px;
+  }
+  
+  .nav-container {
+    width: 84%;
+    padding: 0;
+  }
+  
+  .nav-links {
+    gap: 25px;
+  }
+  
+  .drop-btn {
+    font-size: 17px;
+    padding: 10px 20px;
+  }
+  
+  .dropdown-content {
+    padding: 45px 0;
+    gap: 22px;
+  }
+  
+  .dropdown-column {
+    width: 250px;
+    padding: 30px 25px;
+    height: 420px;
+  }
+  
+  .dropdown-column h4 {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+  
+  .dropdown-column a {
+    font-size: 15px;
+    padding: 7px 0;
+    line-height: 1.4;
+  }
+  
+  .dropdown-column-last {
+    width: 250px;
+    padding: 30px 25px;
+    min-height: 420px;
+  }
+  
+  .dropdown-column-last .last-column {
+    font-size: 50px;
+  }
+  
+  .dropdown-column-last .last-column2 {
+    font-size: 40px;
+  }
+  
+  .dropdown-column-last .last-column3 {
+    font-size: 20px;
+    margin-top: 7px;
+  }
+  
+  .dropdown-column-last .last-column4 {
+    font-size: 40px;
+    padding-bottom: 100px;
+  }
+  
+  .dropdown-column-last .last-column-text,
+  .dropdown-column-last .last-column-text2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .dropdown-column-last .last-column-text {
+    padding-top: 30px;
+  }
+  
+  .dropdown-column-last .last-column-text2 {
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .dropdown-column-last .last-column-text3 {
+    font-size: 14px;
+    padding: 7px 0;
+  }
+  
+  .dropdown-column-last .last-column-button {
+    font-size: 15px;
+    padding: 14px 30px;
+  }
+  
+  .contact-btn {
+    padding: 12px 25px;
+    font-size: 15px;
+    margin-left: 15px;
+  }
+}
 
 /* Tablets and Small Laptops (1024px and below) */
 @media (max-width: 1024px) {
@@ -465,7 +494,8 @@
     width: 95%;
     padding: 0 10px;
   }
-  .top-badge{
+  
+  .top-badge {
     display: none;
   }
 
@@ -479,25 +509,6 @@
   .logo-mobile {
     display: block;
     height: 34px;
-  }
-
-  /* Top badge responsive */
-  .top-badge {
-    padding: 5px 15px 10px;
-    font-size: 12px;
-  }
-
-  .top-badge-left span:not(.highlight) {
-    display: none;
-  }
-
-  .top-badge .highlight {
-    font-size: 16px;
-  }
-
-  /* Hide email on tablet */
-  .top-badge .contact-proposal {
-    display: none;
   }
 
   /* Hamburger */
@@ -624,15 +635,6 @@
 
 /* Mobile (768px and below) */
 @media (max-width: 768px) {
-  .top-badge {
-    font-size: 11px;
-    padding: 5px 10px 8px;
-  }
-
-  .top-badge .highlight {
-    font-size: 14px;
-  }
-
   .nav-links {
     width: 260px;
   }
@@ -651,15 +653,6 @@
   .nav-container {
     width: 98%;
     padding: 0 5px;
-  }
-
-  .top-badge {
-    font-size: 10px;
-    padding: 3px 8px 6px;
-  }
-
-  .top-badge .highlight {
-    font-size: 13px;
   }
 
   .logo-mobile {

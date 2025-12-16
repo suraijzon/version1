@@ -168,7 +168,6 @@ const Navbar = () => {
 
               <div className="dropdown-column-last">
                 <span className="last-column3">Insights &<br />Resources</span>
-                <span className="last-column-text3"> _______________</span>
                 <span className="last-column-text3">AI vs Traditional Development: Cost & ROI</span>
                 <span className="last-column-text3">What Is GPT Integration & When You Need It</span>
                 <span className="last-column-text3">What Is AI Marketing</span>
@@ -193,46 +192,48 @@ const Navbar = () => {
 
             <div className="dropdown-content">
               <div className="dropdown-column">
-                <h4>Design</h4>
-                <a href="/">Website Design</a>
-                <a href="/">Rapid Web Design</a>
-                <a href="/">Ecommerce Website Design</a>
-                <a href="/">Custom Website Design</a>
-                <a href="/">Business Website Design</a>
+                <h4>Website Strategy & Conversion</h4>
+                <a href="/">Free Website Growth Audit</a>
+                <a href="/">Conversion Strategy & UX Planning</a>
+                <a href="/">Rapid Website Launch (MVP / Go-Live Fast)</a>
+                <a href="/">AI-Driven Personalization Strategy</a>
+                <a href="/">Analytics, Tracking & Attribution Setup</a>
               </div>
 
               <div className="dropdown-column">
-                <h4>Development</h4>
-                <a href="/">WordPress Website Development</a>
-                <a href="/">Shopify Website Development</a>
-                <a href="/">WooCommerce Website Development</a>
-                <a href="/">MERN Stack Website Development</a>
-                <a href="/">Custom Web App Development</a>
+                <h4>Design for Revenue</h4>
+                <a href="/">Conversion-Focused Website Design</a>
+                <a href="/">E-commerce UX & Store Optimization</a>
+                <a href="/">Brand-Led Custom Design Systems</a>
+                <a href="/">Landing Pages & Funnel Design</a>
+                <a href="/">Ongoing Website Growth & Optimization</a>
+              </div>
+
+              <div className="dropdown-column">
+                <h4>Development & AI Engineering</h4>
+                <a href="/">Custom Web Application Development</a>
+                <a href="/">WordPress & Headless CMS Development</a>
+                <a href="/">Shopify & E-commerce Development</a>
                 <a href="/">AI & GPT Integration</a>
+                <a href="/">Workflow & Business Automation</a>
               </div>
 
               <div className="dropdown-column">
-                <h4>Hosting & Security</h4>
-                <a href="/">Web Hosting</a>
-                <a href="/">Website Migration</a>
-                <a href="/">Website Security</a>
-                <a href="/">Performance Optimization</a>
-                <a href="/">SSL & Backup Solutions</a>
-              </div>
-
-              <div className="dropdown-column">
-                <h4>Challenges We Solve</h4>
-                <a href="/">My Website Doesn't Drive Leads</a>
-                <a href="/">My Website Traffic Is Going Down</a>
-                <a href="/">My Website Isn't Driving ROI</a>
-                <a href="/">My Website Isn't Showing Up on Google</a>
-                <a href="/">My Agency Isn't Driving Results</a>
+                <h4>Performance, Security & Reliability</h4>
+                <a href="/">Managed Cloud Hosting & DevOps</a>
+                <a href="/">Performance & Core Web Vitals Optimization</a>
+                <a href="/">Security, Backups & Disaster Recovery</a>
+                <a href="/">Website Migration & Re-platforming</a>
+                <a href="/">Conversion Rate Optimization (CRO)</a>
               </div>
 
               <div className="dropdown-column-last">
-                <span className="last-column2">Zonzo<br />ctech</span>
-                <span className="last-column-text2"><br></br>View out all the the live clients designs which we have completed recently.</span>
-                <button className="last-column-button"> View Design Portfolio</button>
+                <span className="last-column3">Problems We Solve</span>
+                <span className="last-column-text3">My Website Isn’t Generating Leads or Sales</span>
+                <span className="last-column-text3">My Traffic or Rankings Are Declining</span>
+                <span className="last-column-text3">My Website Looks Good but Doesn’t Convert</span>
+                <span className="last-column-text3">My Business Isn’t Visible on Google or AI Search</span>
+                <span className="last-column-text3">My Marketing or Agency Isn’t Delivering ROI</span>
               </div>
             </div>
           </div>
@@ -252,46 +253,48 @@ const Navbar = () => {
 
             <div className="dropdown-content">
               <div className="dropdown-column">
-                <h4>SEO Services</h4>
-                <a href="/">SEO Audit</a>
-                <a href="/">Enterprice SEO Services</a>
-                <a href="/">Local SEO Services</a>
-                <a href="/">Keyword Research</a>
-                <a href="/">Competitor Analysis</a>
-                <a href="/">SEO Audits</a>
+                <h4>SEO Strategy & Core Services</h4>
+                <a href="/">SEO Growth Audit & Opportunity Analysis</a>
+                <a href="/">SEO Strategy & Roadmap</a>
+                <a href="/">Enterprise SEO & Large Website SEO</a>
+                <a href="/">Local SEO & Maps Optimization</a>
+                <a href="/">AI SEO & Search Experience Optimization</a>
               </div>
 
               <div className="dropdown-column">
-                <h4>SEO Tools</h4>
-                <a href="/services/seo/google-search-console">Google Search Console</a>
-                <a href="/">Google Merchant Center</a>
-                <a href="/">Google Analytics</a>
-                <a href="/">Google Ads</a>
-                <a href="/">Rank Tracking Tools</a>
+                <h4>SEO Research & Intelligence</h4>
+                <a href="/services/seo/google-search-console">High-Intent Keyword & Topic Research</a>
+                <a href="/">Competitor & Market Gap Analysis</a>
+                <a href="/">Search Intent & Funnel Mapping</a>
+                <a href="/">Content & SERP Opportunity Analysis</a>
+                <a href="/">SEO Performance Tracking & KPIs</a>
               </div>
 
               <div className="dropdown-column">
-                <h4>Ecommerce SEO</h4>
-                <a href="/">Ecommerce SEO Services</a>
-                <a href="/">Ecommerce PPC Services</a>
-                <a href="/">Shopping Feed Automation</a>
-                <a href="/">Product Feed Optimization</a>
-                <a href="/">Conversion Rate Optimization</a>
+                <h4>Technical SEO & Performance</h4>
+                <a href="/">Technical SEO Audits & Fixes</a>
+                <a href="/">Core Web Vitals & Page Speed Optimization</a>
+                <a href="/">Indexing, Crawl Budget & Log File Optimization</a>
+                <a href="/">Structured Data & Rich Results Optimization</a>
+                <a href="/">Internal Linking & Authority Sculpting</a>
               </div>
 
               <div className="dropdown-column">
-                <h4>Discover</h4>
-                <a href="/">Our SEO Results</a>
-                <a href="/">SEO Case Studies</a>
-                <a href="/">SEO Performance Tracking</a>
-                <a href="/">SEO Reporting Dashboards</a>
-                <a href="/">Client Success Stories</a>
+                <h4>E-commerce SEO & Revenue Growth</h4>
+                <a href="/">E-commerce SEO Strategy & Optimization</a>
+                <a href="/">Shopping Feed Optimization & Automation</a>
+                <a href="/">Product Page SEO & Conversion Optimization</a>
+                <a href="/">SEO-Driven CRO for E-commerce</a>
+                <a href="/">SEO Conversion Rate Optimization (CRO)</a>
               </div>
 
-              <div className="dropdown-column-last">
-                <span className="last-column">198%</span>
-                <span className="last-column-text">Increase in <br />organic <br />transaction</span>
-                <button className="last-column-button"> Read Our Case Study</button>
+               <div className="dropdown-column-last">
+                <span className="last-column3">Proof & Insights</span>
+                <span className="last-column-text3">SEO Case Studies & Results</span>
+                <span className="last-column-text3">Client Success Stories</span>
+                <span className="last-column-text3">SEO Growth Experiments & Learnings</span>
+                <span className="last-column-text3">AI SEO vs Traditional SEO</span>
+                <span className="last-column-text3">GEO</span>
               </div>
             </div>
           </div>

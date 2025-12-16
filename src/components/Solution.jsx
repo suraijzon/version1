@@ -22,104 +22,97 @@ const SolutionSection = () => {
   const services = {
     seo: [
       {
-        title: 'Organic Search',
+        title: 'Organic Search & SEO Strategy',
         items: [
-          'SEO Services',
-          'Enterprise SEO Services',
-          'Local SEO Services',
-          'Keyword Research',
-          'Competitor Analysis',
-          'SEO Audits'
+          'SEO Strategy & Consulting',
+          'Keyword Research & Mapping',
+          'Competitor & Market Analysis',
+          'On-Page & Content Optimization',
+          'Enterprise SEO Solutions',
         ]
       },
       {
-        title: 'SEO Tools',
+        title: 'SEO Analytics & Platforms',
         items: [
-          'Google Search Console',
-          'Google Merchant Center',
-          'Google Analytics',
-          'Google Ads',
-          'Rank Tracking Tools'
+          'Google Search Console Setup & Insights',
+          'Google Analytics & GA4 Tracking',
+          'Rank Tracking & Performance Monitoring',
+          'Google Merchant Center Management',
+          'Google Ads & Search Campaign Support'
         ]
       },
       {
-        title: 'Ecommerce SEO',
+        title: 'Ecommerce SEO & Growth',
         items: [
-          'Ecommerce SEO Services',
-          'Ecommerce PPC Services',
+          'Ecommerce SEO Strategy',
+          'Product & Shopping Feed Optimization',
           'Shopping Feed Automation',
-          'Product Feed Optimization',
-          'Conversion Rate Optimization'
+          'Ecommerce PPC Management',
+          'Conversion Rate Optimization (CRO)'
         ]
       }
     ],
     ux: [
       {
-        title: 'UI/UX Design',
+        title: 'UI/UX Strategy & Design',
         items: [
-          'User Interface Design',
-          'User Experience Design',
+          'User Interface (UI) Design',
+          'User Experience (UX) Design',
           'Wireframing & Prototyping',
-          'Design Systems',
-          'Usability Testing',
-          'Interaction Design'
+          'Design Systems & Style Guides',
+          'Usability & User Testing',
         ]
       },
       {
-        title: 'Web Development',
+        title: 'Web Development Services',
         items: [
           'Frontend Development',
           'Backend Development',
           'Full Stack Development',
-          'CMS Development',
-          'Web Applications',
-          'API Integration'
+          'Web Application Development',
+          'API & Third-Party Integration',
         ]
       },
       {
-        title: 'Interactive Design',
+        title: 'Interactive & Experience Design',
         items: [
-          'Animation & Motion',
-          'Microinteractions',
-          'Responsive Design',
-          'Mobile-First Design',
-          'Progressive Web Apps',
-          'Accessibility Standards'
+          'Animation & Motion Design',
+          'Micro-Interactions',
+          'Responsive & Mobile-First Design',
+          'Accessibility & WCAG Compliance',
+          'Performance-Focused UX',
         ]
       }
     ],
     ai: [
       {
-        title: 'AI Services',
+        title: 'AI Development Services',
         items: [
-          'Machine Learning',
-          'Natural Language Processing',
+          'Machine Learning Solutions',
+          'Custom AI Model Development',
+          'Natural Language Processing (NLP)',
           'Computer Vision',
-          'Predictive Analytics',
-          'AI Consulting',
-          'AI Strategy'
+          'Predictive & Smart Analytics',
         ]
       },
       {
-        title: 'AI Integration',
+        title: 'AI Integration & Systems',
         items: [
-          'Chatbot Development',
+          'LLM & AI API Integration',
+          'AI Agents & Autonomous Systems',
+          'Chatbot & Virtual Assistant Development',
           'AI-Powered Search',
           'Recommendation Systems',
-          'Automated Workflows',
-          'Smart Analytics',
-          'AI API Integration'
         ]
       },
       {
-        title: 'Automation',
+        title: 'Automation Solutions',
         items: [
-          'Process Automation',
+          'Business Process Automation',
           'Marketing Automation',
-          'Data Processing',
+          'Data Processing Automation',
           'Workflow Optimization',
-          'Smart Scheduling',
-          'Intelligent Reporting'
+          'Smart Scheduling & Reporting',
         ]
       }
     ]

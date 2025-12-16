@@ -126,7 +126,7 @@ const Navbar = () => {
               onClick={() => handleDropdownButtonClick(3)}
               aria-expanded={activeDropdown === 3 || mobileDropdown === 3}
             >
-              AI & Technology ▾
+              AI & TECHNOLOGY ▾
             </button>
 
             <div className="dropdown-content">
@@ -187,7 +187,7 @@ const Navbar = () => {
               onClick={() => handleDropdownButtonClick(2)}
               aria-expanded={activeDropdown === 2 || mobileDropdown === 2}
             >
-              UX & Interactive ▾
+              UX & INTERACTIVE ▾
             </button>
 
             <div className="dropdown-content">
@@ -248,7 +248,7 @@ const Navbar = () => {
               onClick={() => handleDropdownButtonClick(1)}
               aria-expanded={activeDropdown === 1 || mobileDropdown === 1}
             >
-              SEO & Lead Generation ▾
+              SEO & LEAD GENARETION ▾
             </button>
 
             <div className="dropdown-content">
@@ -309,7 +309,7 @@ const Navbar = () => {
               onClick={() => handleDropdownButtonClick(4)}
               aria-expanded={activeDropdown === 4 || mobileDropdown === 4}
             >
-              Who We Are ▾
+              WHO WE ARE ▾
             </button>
 
             <div className="dropdown-content">

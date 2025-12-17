@@ -91,19 +91,21 @@
   transform: translateX(5px);
 }
 /* SLIDER WRAPPER */
+/* SLIDER WRAPPER */
 .projects-slider {
   overflow: hidden;
   width: 100%;
 }
 
-/* SLIDER TRACK */
+/* TRACK */
 .projects-track {
   display: flex;
   gap: 30px;
-  animation: slideLeft 18s linear infinite;
+  width: max-content;
+  animation: slideLeft 22s linear infinite;
 }
 
-/* CARD WIDTH = 4 IN A ROW */
+/* CARD WIDTH */
 .project-card {
   flex: 0 0 calc(25% - 22px);
 }
@@ -150,27 +152,6 @@
   }
 }
 
-/* Explore Button */
-.explore-btn {
-  display: inline-block;
-  margin-top: 10px;
-  margin-left: 230px;
-  margin-bottom: 10px;
-  padding: 17px 20px;
-  border: 2px solid #000000;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  color: #030303;
-  overflow: hidden;
-  position: relative;
-  height: 28px;
-  background: transparent;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
 /* Remove default button styles */
 button.explore-btn {
   outline: none;
@@ -207,14 +188,14 @@ button.explore-btn {
     .explore-btn{
         margin-left: 150px;
     }
-    .projects-track {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
     .project-card {
-        flex: 0 0 85%;
+        flex: 0 0 80%;
+    }
+    .projects-track {
+        animation-duration: 28s; 
     }
 }
+
 
 
 

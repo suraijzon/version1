@@ -8,9 +8,10 @@ import item4 from "../assets/icons/lvita.jpg";
 const SuccessSection = () => {
   const projects = [
     { id: 1, name: "Technology Solution", desc: "Increased organic traffic by 320%", img: item1 },
-    { id: 2, name: "AI Automation Setup", desc: "Reduced workload by 70%", img: item2 },
-    { id: 3, name: "Website Redesign", desc: "Bounce rate dropped by 42%", img: item3 },
-    { id: 4, name: "Website Redesign", desc: "Bounce rate dropped by 42%", img: item4 },
+    { id: 2, name: "Aviation Management System", desc: "Comprehensive aviation management platform with real-time flight tracking, task management, and crew scheduling.", img: item2 },
+    { id: 3, name: "Fleet Management System", desc: "Comprehensive platform for real-time fleet tracking, rider management, and performance analytics.", img: item3 },
+    { id: 4, name: "E-Commerce System", desc: "Developed the admin portal, vendor portal, user mobile app, and vendor mobile app to manage the system.", img: item4 },
+    
   ];
 
   return (

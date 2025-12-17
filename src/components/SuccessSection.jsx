@@ -1,12 +1,14 @@
 import React from "react";
 import "../styles/successsection.css";
-import item1 from "../assets/icons/item1.webp"; 
+import item1 from "../assets/icons/healthyfit.png";
+import item2 from "../assets/icons/aviation.png"; 
+import item3 from "../assets/icons/fleet-management.png";  
 
 const SuccessSection = () => {
   const projects = [
     { id: 1, name: "Technology Solution", desc: "Increased organic traffic by 320%", img: item1 },
-    { id: 2, name: "AI Automation Setup", desc: "Reduced workload by 70%", img: item1 },
-    { id: 3, name: "Website Redesign", desc: "Bounce rate dropped by 42%", img: item1 },
+    { id: 2, name: "AI Automation Setup", desc: "Reduced workload by 70%", img: item2 },
+    { id: 3, name: "Website Redesign", desc: "Bounce rate dropped by 42%", img: item3 },
   ];
 
   return (
@@ -24,12 +26,12 @@ const SuccessSection = () => {
           solutions that meet the unique needs and objectives of our clients.
         </p>
 
-        <button className="all-works-btn">
+        {/*<button className="all-works-btn">
           <span className="btn-text">
             <span>ALL WORKS ↗</span>
             <span>ALL WORKS ↗</span>
           </span>
-        </button>
+        </button>*/}
       </div>
 
       <div className="projects-grid">

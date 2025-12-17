@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/ExpertPopup.css";
 
 const ExpertPopup = ({ open, onClose }) => {
+  const [budget, setBudget] = useState(30000); // Track slider value
+
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -12,12 +14,14 @@ const ExpertPopup = ({ open, onClose }) => {
 
   if (!open) return null;
 
+  // Calculate slider background fill
+  const sliderBackground = `linear-gradient(to right, #000 0%, #000 ${
+    ((budget - 30000) / (65000 - 30000)) * 100
+  }%, #ddd ${((budget - 30000) / (65000 - 30000)) * 100}%, #ddd 100%)`;
+
   return (
     <div className="popup-overlay" onClick={onClose}>
-      <div
-        className="popup-container"
-        onClick={(e) => e.stopPropagation()}
-      >
+      <div className="popup-container" onClick={(e) => e.stopPropagation()}>
         {/* Close icon */}
         <button className="popup-close" onClick={onClose}>
           ×
@@ -37,13 +41,17 @@ const ExpertPopup = ({ open, onClose }) => {
           </div>
 
           <div className="contactmedia">
-            <i class="fa-brands fa-linkedin"></i>
-            <i class="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-twitter"></i>
           </div>
 
           <div className="popup-contact">
-            <span><i class="fa-solid fa-envelope"></i> ahamsuraij@gmail.com</span>
-            <span><i class="fa-brands fa-whatsapp"></i> +94 74 030 9534</span>
+            <span>
+              <i className="fa-solid fa-envelope"></i> ahamsuraij@gmail.com
+            </span>
+            <span>
+              <i className="fa-brands fa-whatsapp"></i> +94 74 030 9534
+            </span>
           </div>
         </div>
 
@@ -71,8 +79,17 @@ const ExpertPopup = ({ open, onClose }) => {
               <option>UI/UX Design</option>
             </select>
 
-            <label className="budget-label">Estimated Budget (AED)</label>
-            <input type="range" min="30000" max="65000" />
+            <label className="budget-label">
+              Estimated Budget (AED): {budget}
+            </label>
+            <input
+              type="range"
+              min="30000"
+              max="65000"
+              value={budget}
+              onChange={(e) => setBudget(e.target.value)}
+              style={{ background: sliderBackground }}
+            />
 
             <textarea placeholder="Tell us about the project"></textarea>
 

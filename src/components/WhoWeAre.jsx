@@ -121,6 +121,7 @@ const WhoWeAreSection = () => {
             boosting visibility through smart SEO, and integrating cutting-edge AI technologies 
             to future-proof your business.
           </p>
+          <h3>Our Technology Stack</h3>
         </div>
 
         {/* Row 1: CMS Platforms | Programming Languages | Hosting Providers */}

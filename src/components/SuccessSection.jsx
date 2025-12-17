@@ -4,40 +4,41 @@ import item1 from "../assets/icons/healthyfit.png";
 import item2 from "../assets/icons/aviation.png"; 
 import item3 from "../assets/icons/fleet-management.png"; 
 import item4 from "../assets/icons/lvita.jpg";  
+import { TbBackground } from "react-icons/tb";
 
 const SuccessSection = () => {
   const projects = [
     { id: 1, name: "E-Commerce Website", desc: "Shopify-based platform for healthy products with seamless API integration.",
        extra: [
-        { text: "Shopify", color: "#0047ab" },
-        { text: "Shopify APIs", color: "#ff6b91" },
-        { text: "Laravel", color: "#00bfc1" },
-        { text: "Boostrap", color: "#ffe400" },
+        { text: "Shopify", Background: "#0047ab" },
+        { text: "Shopify APIs", Background: "#ff6b91" },
+        { text: "Laravel", Background: "#00bfc1" },
+        { text: "Boostrap", Background: "#ffe400" },
       ], img: item1 },
     { id: 2, name: "Aviation Management System", desc: "Comprehensive aviation management platform with real-time flight tracking, task management, and crew scheduling.",
        extra: [
-        { text: "Angular", color: "#0047ab" },
-        { text: "Firebase", color: "#ff6b91" },
-        { text: "MongoDB", color: "#00bfc1" },
-        { text: "Node.js", color: "#ffe400" },
-        { text: "Flightaware APIs", color: "#1e8449" }
+        { text: "Angular", Background: "#0047ab" },
+        { text: "Firebase", Background: "#ff6b91" },
+        { text: "MongoDB", Background: "#00bfc1" },
+        { text: "Node.js", Background: "#ffe400" },
+        { text: "Flightaware APIs", Background: "#1e8449" }
       ], img: item2 },
     { id: 3, name: "Fleet Management System", desc: "Comprehensive platform for real-time fleet tracking, rider management, and performance analytics.",
        extra: [
-        { text: "React", color: "#0047ab" },
-        { text: "Java", color: "#ff6b91" },
-        { text: "Spring Boot", color: "#00bfc1" },
-        { text: "Next.js", color: "#ffe400" },
-        { text: "Google Maps APIs", color: "#1e8449" }
+        { text: "React", Background: "#0047ab" },
+        { text: "Java", Background: "#ff6b91" },
+        { text: "Spring Boot", Background: "#00bfc1" },
+        { text: "Next.js", Background: "#ffe400" },
+        { text: "Google Maps APIs", Background: "#1e8449" }
       ], img: item3 },
     { id: 4, name: "E-Commerce System", desc: "Developed the admin portal, vendor portal, user mobile app, and vendor mobile app to manage the system.",
        extra: [
-        { text: "Angular", color: "#0047ab" },
-        { text: "Swift", color: "#ff6b91" },
-        { text: "Node.js", color: "#00bfc1" },
-        { text: "Java(Android Studio)", color: "#ffe400" },
-        { text: "MongoDB", color: "#1e8449" },
-        { text: "Firebase", color: "#1e8449" }
+        { text: "Angular", Background: "#0047ab" },
+        { text: "Swift", Background: "#ff6b91" },
+        { text: "Node.js", Background: "#00bfc1" },
+        { text: "Java(Android Studio)", Background: "#ffe400" },
+        { text: "MongoDB", Background: "#1e8449" },
+        { text: "Firebase", Background: "#1e8449" }
       ], img: item4 },
   ];
 

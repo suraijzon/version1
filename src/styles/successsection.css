@@ -1,12 +1,19 @@
+/* SECTION WRAPPER */
 .success-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 80px 0;
 }
 
+/* FIXED CONTENT WIDTH (ALIGNS WITH SITE EDGES) */
+.success-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
 .success-header {
   text-align: left;
-  position: relative;
   margin-bottom: 50px;
 }
 
@@ -19,23 +26,24 @@
   font-weight: 500;
   padding: 4px 10px;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-right: 6px;
 }
-.tag2{
-    font-family: Poppins;
+
+.tag2 {
+  font-family: Poppins;
 }
 
 .success-title {
   font-size: 2.5rem;
   font-weight: 600;
-  margin: 10px 0;
+  margin: 12px 0;
   color: #0f0f38;
   font-family: Poppins;
 }
 
 .success-title .highlight {
   background-color: #ffe400;
-  padding: 0 5px;
+  padding: 0 6px;
   color: #00448f;
 }
 
@@ -47,57 +55,12 @@
   font-weight: 500;
 }
 
-.all-works-btn {
-  position: absolute;
-  right: 50px;
-  top: 20px;
-  background-color: #0047ab;
-  color: #fff;
-  border: none;
-  font-size: 14px;
-  padding: 18px 38px;
-  font-weight: 600;
-  border-radius: 40px;
-  cursor: pointer;
-}
-.all-works-btn:hover {
-  background: #00448f;
-  box-shadow: 0 12px 30px rgba(13, 75, 184, 0.45);
-  transform: translateY(-3px);
-}
-
-.btn-text {
-  height: 22px;        
-  overflow: hidden;
-  line-height: 22px;
-}
-
-.btn-text span {
-  transition: transform 0.4s ease;
-}
-
-/* Slide animation */
-.all-works-btn:hover .btn-text span {
-  transform: translateY(-22px);
-}
-
-/* Arrow animation */
-.btn-arrow {
-  font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-.all-works-btn:hover .btn-arrow {
-  transform: translateX(5px);
-}
-/* SLIDER WRAPPER */
-/* SLIDER WRAPPER */
+/* SLIDER */
 .projects-slider {
-  overflow: hidden;
   width: 100%;
+  overflow: hidden;
 }
 
-/* TRACK */
 .projects-track {
   display: flex;
   gap: 30px;
@@ -105,26 +68,29 @@
   animation: slideLeft 22s linear infinite;
 }
 
-/* CARD WIDTH */
-.project-card {
-  flex: 0 0 280px;   /* keeps original card width */
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
+/* CARD */
 .project-card {
+  flex: 0 0 280px;
   border: 3px solid #00bfc1;
   border-radius: 20px;
   overflow: hidden;
-  text-align: left;
   background: #fff;
-  padding-bottom: 10px;
 }
 
 .project-img {
   width: 100%;
-  height: 180px;       /* smaller height */
+  height: 180px;
   object-fit: cover;
 }
-
 
 .project-info {
   padding: 20px;
@@ -134,7 +100,7 @@
   font-size: 14px;
   font-family: Poppins;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #0f0f38;
 }
 
@@ -142,73 +108,43 @@
   font-size: 11px;
   color: #555;
   font-family: Poppins;
-  margin-bottom: -5px;
+  margin-bottom: 10px;
 }
+
+/* TECH TAGS */
 .project-extra {
-  margin-top: 15px;
-  color: white;      
-  font-size: 7px;    
-  font-weight: 400;
-  line-height: 1.4;
-  font-family: Poppins, sans-serif;
-  display: flex;          
-  flex-wrap: wrap;       
-}
-
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Remove default button styles */
-button.explore-btn {
-  outline: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-/* Scroll text container */
-.explore-text {
   display: flex;
-  flex-direction: column;
-  transition: transform 0.35s ease;
-  margin-top: -13px;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.explore-text span {
-  line-height: 28px;
-}
-
-/* Hover animation */
-.explore-btn:hover .explore-text {
-  transform: translateY(-28px);
-}
-
-.explore-btn:hover {
-  background: #0047ab;
+.tech-tag {
+  font-size: 9px;
+  padding: 4px 8px;
+  border-radius: 12px;
   color: #fff;
-  border-color: #00448f;
+  font-family: Poppins, sans-serif;
+  white-space: nowrap;
 }
+
+/* LARGE DESKTOP FIX */
+@media (min-width: 1400px) {
+  .success-container {
+    max-width: 1400px;
+  }
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
-    .all-works-btn{
-        display: none;
-    }
-    .explore-btn{
-        margin-left: 150px;
-    }
-    .project-card {
-        flex: 0 0 260px; 
-    }
-    .projects-track {
-        animation-duration: 28s; 
-    }
+  .success-section {
+    padding: 60px 0;
+  }
+
+  .project-card {
+    flex: 0 0 260px;
+  }
+
+  .projects-track {
+    animation-duration: 28s;
+  }
 }
-
-
-
-

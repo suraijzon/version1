@@ -161,13 +161,13 @@ const SolutionSection = () => {
         ))}
       </div>
 
-      <button className="service-btn">
+      {/*<button className="service-btn">
         <span className="btn-text">
           <span>NEED TO GET THE SERVICE?</span>
           <span>NEED TO GET THE SERVICE?</span>
         </span>
         <span className="btn-arrow">↗</span>
-      </button>
+      </button>*/}
     </section>
   );
 };

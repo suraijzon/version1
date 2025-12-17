@@ -7,18 +7,23 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false); // mobile nav open
-  const [mobileDropdown, setMobileDropdown] = useState(null); // which dropdown is open on mobile
-  const [activeDropdown, setActiveDropdown] = useState(null); // which dropdown is active on desktop (opened by hover/click)
+  const [open, setOpen] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const navRef = useRef(null);
 
   const { logout } = useAuth();
   const navigate = useNavigate();
 
-  // Desktop: open dropdown on hover 
   const handleMouseEnter = (id) => {
     if (window.innerWidth > 1024) {
       setActiveDropdown(id);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (window.innerWidth > 1024) {
+      setActiveDropdown(null);
     }
   };
 
@@ -28,8 +33,6 @@ const Navbar = () => {
     }
   };
 
-  // Desktop: open (do NOT toggle close)
-  // Mobile: toggle
   const handleDropdownButtonClick = (id) => {
     if (window.innerWidth > 1024) {
       setActiveDropdown(id);
@@ -43,13 +46,11 @@ const Navbar = () => {
     navigate("/login");
   };
 
-  // Navigate to home page when logo is clicked
   const handleLogoClick = () => {
     navigate("/");
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Close desktop dropdown when clicking outside navbar
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (window.innerWidth > 1024) {
@@ -60,7 +61,6 @@ const Navbar = () => {
     };
 
     const handleResize = () => {
-      // Reset states on resize to avoid stuck states
       if (window.innerWidth > 1024) {
         setMobileDropdown(null);
       } else {
@@ -78,55 +78,47 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      {/* Top badge */}
-<div className="top-badge">
-  <div className="top-badge-left">
-    <span>PROJECTS COMPLETED</span>
-    <span className="highlight">150+</span>
-  </div>
-  
-  <div className="top-badge-right">
-    <button onClick={handleClientLogin} className="client-login">
-      Client Login
-    </button>
-    
-    <div className="contact-proposal">
-      <img src={phoneIcon} alt="phone" />
-      <a href="mailto:info@zonzoctech.com" className="email-link">
-        info@zonzoctech.com
-      </a>
-    </div>
-  </div>
-</div>
+      <div className="top-badge">
+        <div className="top-badge-left">
+          <span>PROJECTS COMPLETED</span>
+          <span className="highlight">150+</span>
+        </div>
+        
+        <div className="top-badge-right">
+          <button onClick={handleClientLogin} className="client-login">
+            Client Login
+          </button>
+          
+          <div className="contact-proposal">
+            <img src={phoneIcon} alt="phone" />
+            <a href="mailto:info@zonzoctech.com" className="email-link">
+              info@zonzoctech.com
+            </a>
+          </div>
+        </div>
+      </div>
 
       <div className="nav-container" ref={navRef}>
-  {/* Logo and tagline */}
-  <div style={{ display: 'flex', alignItems: 'center' }}>
-    <div className="nav-logo" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
-      <img src={logo} alt="Zonzoctech Logo" className="logo-desktop" />
-      <img src={logo} alt="Zonzoctech Logo" className="logo-mobile" />
-    </div>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <div className="nav-logo" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
+            <img src={logo} alt="Zonzoctech Logo" className="logo-desktop" />
+            <img src={logo} alt="Zonzoctech Logo" className="logo-mobile" />
+          </div>
 
-    <div className="nav-tagline">
-      <div>Web Intelligences</div>
-      <div>That Drives</div>
-      <div>Revenue®</div>
-    </div>
-  </div>
+          <div className="nav-tagline">
+            <div>Web Intelligences</div>
+            <div>That Drives</div>
+            <div>Revenue®</div>
+          </div>
+        </div>
 
-        {/* Nav links */}
         <nav className={`nav-links ${open ? "open" : ""}`}>
           {/* Dropdown: AI & Technology (id: 3) */}
           <div
-  className={`dropdown ${mobileDropdown === 3 ? "open" : ""} ${activeDropdown === 3 ? "active" : ""}`}
-  onMouseEnter={() => handleMouseEnter(3)}
-  onMouseLeave={() => {
-    if (window.innerWidth > 1024) {
-      setActiveDropdown(null);
-    }
-  }}
->
-
+            className={`dropdown ${mobileDropdown === 3 ? "open" : ""} ${activeDropdown === 3 ? "active" : ""}`}
+            onMouseEnter={() => handleMouseEnter(3)}
+            onMouseLeave={handleMouseLeave}
+          >
             <button
               className="drop-btn"
               onClick={() => handleDropdownButtonClick(3)}
@@ -158,7 +150,7 @@ const Navbar = () => {
                 <h4>AI Web Experience & Conversion</h4>
                 <a href="/">Conversion-Focused AI Website Design</a>
                 <a href="/">AI Personalization & Dynamic Content</a>
-                <a href="/">AI Landing Page Systems		</a>
+                <a href="/">AI Landing Page Systems</a>
                 <a href="/">GPT-Powered Forms, Chat & Lead Capture</a>
                 <a href="/">AI UX Testing & Conversion Rate Optimization (CRO)</a>
               </div>
@@ -184,16 +176,11 @@ const Navbar = () => {
           </div>
 
           {/* Dropdown: UX & Interactive (id: 2) */}
-         <div
-  className={`dropdown ${mobileDropdown === 2 ? "open" : ""} ${activeDropdown === 2 ? "active" : ""}`}
-  onMouseEnter={() => handleMouseEnter(3)}
-  onMouseLeave={() => {
-    if (window.innerWidth > 1024) {
-      setActiveDropdown(null);
-    }
-  }}
->
-
+          <div
+            className={`dropdown ${mobileDropdown === 2 ? "open" : ""} ${activeDropdown === 2 ? "active" : ""}`}
+            onMouseEnter={() => handleMouseEnter(2)}
+            onMouseLeave={handleMouseLeave}
+          >
             <button
               className="drop-btn"
               onClick={() => handleDropdownButtonClick(2)}
@@ -241,32 +228,27 @@ const Navbar = () => {
 
               <div className="dropdown-column-last">
                 <span className="last-column3">Problems We Solve</span>
-                <span className="last-column-text3">My Website Isn’t Generating Leads or Sales</span>
+                <span className="last-column-text3">My Website Isn't Generating Leads or Sales</span>
                 <span className="last-column-text3">My Traffic or Rankings Are Declining</span>
-                <span className="last-column-text3">My Website Looks Good but Doesn’t Convert</span>
-                <span className="last-column-text3">My Business Isn’t Visible on Google or AI Search</span>
-                <span className="last-column-text3">My Marketing or Agency Isn’t Delivering ROI</span>
+                <span className="last-column-text3">My Website Looks Good but Doesn't Convert</span>
+                <span className="last-column-text3">My Business Isn't Visible on Google or AI Search</span>
+                <span className="last-column-text3">My Marketing or Agency Isn't Delivering ROI</span>
               </div>
             </div>
           </div>
 
           {/* Dropdown: SEO & Lead Generation (id: 1) */}
           <div
-  className={`dropdown ${mobileDropdown === 1 ? "open" : ""} ${activeDropdown === 1 ? "active" : ""}`}
-  onMouseEnter={() => handleMouseEnter(3)}
-  onMouseLeave={() => {
-    if (window.innerWidth > 1024) {
-      setActiveDropdown(null);
-    }
-  }}
->
-
+            className={`dropdown ${mobileDropdown === 1 ? "open" : ""} ${activeDropdown === 1 ? "active" : ""}`}
+            onMouseEnter={() => handleMouseEnter(1)}
+            onMouseLeave={handleMouseLeave}
+          >
             <button
               className="drop-btn"
               onClick={() => handleDropdownButtonClick(1)}
               aria-expanded={activeDropdown === 1 || mobileDropdown === 1}
             >
-              SEO & LEAD GENARETION ▾
+              SEO & LEAD GENERATION ▾
             </button>
 
             <div className="dropdown-content">
@@ -306,7 +288,7 @@ const Navbar = () => {
                 <a href="/">SEO Conversion Rate Optimization (CRO)</a>
               </div>
 
-               <div className="dropdown-column-last">
+              <div className="dropdown-column-last">
                 <span className="last-column3">Proof & Insights</span>
                 <span className="last-column-text3">SEO Case Studies & Results</span>
                 <span className="last-column-text3">Client Success Stories</span>
@@ -319,15 +301,10 @@ const Navbar = () => {
 
           {/* Dropdown: Who We Are (id: 4) */}
           <div
-  className={`dropdown ${mobileDropdown === 4 ? "open" : ""} ${activeDropdown === 4 ? "active" : ""}`}
-  onMouseEnter={() => handleMouseEnter(3)}
-  onMouseLeave={() => {
-    if (window.innerWidth > 1024) {
-      setActiveDropdown(null);
-    }
-  }}
->
-
+            className={`dropdown ${mobileDropdown === 4 ? "open" : ""} ${activeDropdown === 4 ? "active" : ""}`}
+            onMouseEnter={() => handleMouseEnter(4)}
+            onMouseLeave={handleMouseLeave}
+          >
             <button
               className="drop-btn"
               onClick={() => handleDropdownButtonClick(4)}
@@ -379,12 +356,11 @@ const Navbar = () => {
 
               <div className="dropdown-column-last">
                 <span className="last-column4">#1 Best Place to Work</span>
-                <button className="last-column-button"> View Careers</button>
+                <button className="last-column-button">View Careers</button>
               </div>
             </div>
           </div>
 
-          {/* Contact button */}
           <button className="contact-btn">Get a Proposal</button>
 
           {open && (
@@ -394,7 +370,6 @@ const Navbar = () => {
           )}
         </nav>
 
-        {/* Mobile Hamburger */}
         <div className="hamburger" onClick={() => setOpen((s) => !s)}>
           <span className={open ? "bar rotate1" : "bar"}></span>
           <span className={open ? "bar hide" : "bar"}></span>

@@ -2,13 +2,15 @@ import React from "react";
 import "../styles/successsection.css";
 import item1 from "../assets/icons/healthyfit.png";
 import item2 from "../assets/icons/aviation.png"; 
-import item3 from "../assets/icons/fleet-management.png";  
+import item3 from "../assets/icons/fleet-management.png"; 
+import item4 from "../assets/icons/lvita.jpg";  
 
 const SuccessSection = () => {
   const projects = [
     { id: 1, name: "Technology Solution", desc: "Increased organic traffic by 320%", img: item1 },
     { id: 2, name: "AI Automation Setup", desc: "Reduced workload by 70%", img: item2 },
     { id: 3, name: "Website Redesign", desc: "Bounce rate dropped by 42%", img: item3 },
+    { id: 4, name: "Website Redesign", desc: "Bounce rate dropped by 42%", img: item4 },
   ];
 
   return (
@@ -43,13 +45,6 @@ const SuccessSection = () => {
               <h3>{project.name}</h3>
               <p>{project.desc}</p>
             </div>
-
-            <a href="/" className="explore-btn">
-              <span className="explore-text">
-                <span>EXPLORE ↗</span>
-                <span>EXPLORE ↗</span>
-              </span>
-            </a>
           </div>
         ))}
       </div>

@@ -131,18 +131,20 @@
 }
 
 .project-info h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: Poppins;
+  font-weight: 500;
   margin-bottom: 0px;
-  
   color: #0f0f38;
 }
 
 .project-info p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #555;
+  font-family: Poppins;
   margin-bottom: -5px;
 }
+
 @keyframes slideLeft {
   0% {
     transform: translateX(0);

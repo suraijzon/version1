@@ -177,8 +177,8 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* SHARED BUTTON BASE */
-.cancel-btn,
-.submit-btn {
+.popup-container.cancel-btn,
+.popup-container.submit-btn {
   min-width: 120px;         
   height: 42px;             
   font-size: 13px;
@@ -198,29 +198,29 @@ input[type="range"]::-moz-range-thumb {
 }
 
 /* Cancel */
-.cancel-btn {
+.popup-container.cancel-btn {
   background: #f2f2f2;
   color: #111;
   border: 1.5px solid #d0d0d0;
 }
 
-.cancel-btn:hover {
+.popup-container.cancel-btn:hover {
   background: #e8e8e8;
 }
 
 /* Submit */
-.submit-btn {
+.popup-container.submit-btn {
   background: linear-gradient(135deg, #000, #222);
   color: white;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
 }
 
-.submit-btn:hover {
+.popup-container.submit-btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
-.submit-btn:active {
+.popup-container.submit-btn:active {
   transform: translateY(0);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }

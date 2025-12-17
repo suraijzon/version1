@@ -107,7 +107,7 @@
 
 /* CARD WIDTH */
 .project-card {
-  flex: 0 0 280px;   /* keeps original card width */
+  flex: 0 0 280px;   
 }
 
 .project-card {
@@ -117,6 +117,13 @@
   text-align: left;
   background: #fff;
   padding-bottom: 10px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  will-change: transform;
+}
+.project-card:hover {
+  transform: scale(1.05);              
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  z-index: 2;                       
 }
 
 .project-img {

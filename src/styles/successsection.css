@@ -208,7 +208,6 @@ button.explore-btn {
         margin-left: 150px;
     }
     .projects-track {
-        animation: none;
         flex-wrap: nowrap;
         overflow-x: auto;
     }

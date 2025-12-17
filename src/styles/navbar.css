@@ -204,7 +204,7 @@
   padding: 4px 0;
   color: #5a5a5a;
   text-decoration: none;
-  font-size: clamp(11px, 0.88vw, 12.5px);
+  font-size: clamp(12px, 0.88vw, 12.5px);
   transition: all 0.2s;
   font-weight: 400;
   line-height: 1.4;
@@ -288,7 +288,7 @@
   padding: 4px 0;
   color: #5a5a5a;
   text-decoration: none;
-  font-size: clamp(11px, 0.88vw, 12.5px);
+  font-size: clamp(12px, 0.88vw, 12.5px);
   transition: all 0.2s;
   font-weight: 400;
   line-height: 1.4;
@@ -387,7 +387,7 @@
   }
 }
 
-/* ========== RESPONSIVE BREAKPOINTS ========== */
+/*RESPONSIVE BREAKPOINTS*/
 
 /* Small-Medium Desktop (1025px - 1199px) - Compact Professional View */
 @media (min-width: 1025px) and (max-width: 1199px) {

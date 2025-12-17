@@ -181,6 +181,7 @@ input[type="range"]::-moz-range-thumb {
   background: transparent;
   border: 1.5px solid #d0d0d0;
   color: #333;
+  font-family: Poppins;
   font-size: 13px;
   font-weight: 500;
   padding: 10px 22px;
@@ -199,8 +200,9 @@ input[type="range"]::-moz-range-thumb {
   background: linear-gradient(135deg, #000, #222);
   color: white;
   font-size: 13px;
-  font-weight: 600;
-  padding: 11px 26px;
+  font-family: Poppins;
+  font-weight: 500;
+  padding: 10px 22px;
   border-radius: 999px;
   border: none;
   cursor: pointer;

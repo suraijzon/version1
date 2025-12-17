@@ -146,13 +146,13 @@
 }
 .project-extra {
   margin-top: 8px;
-  color: white;       /* space from description */
-  font-size: 7px;    /* slightly smaller than title */
+  color: white;      
+  font-size: 7px;    
   font-weight: 400;
   line-height: 1.4;
   font-family: Poppins, sans-serif;
-  display: flex;          /* to align words nicely */
-  flex-wrap: wrap;        /* wrap if too long */
+  display: flex;          
+  flex-wrap: wrap;       
 }
 
 

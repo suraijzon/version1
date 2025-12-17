@@ -227,7 +227,7 @@ input[type="range"]::-moz-range-thumb {
   text-align: center;
 }
 .popup-actions .cancel-btn{
-   padding: 13px 28px; 
+   padding: 13px 28px !important; 
 }
 
 /* Submit button styles */

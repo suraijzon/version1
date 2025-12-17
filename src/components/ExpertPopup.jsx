@@ -29,22 +29,25 @@ const ExpertPopup = ({ open, onClose }) => {
 
         {/* LEFT PANEL */}
         <div className="popup-left">
-          <h3>Speak to Our Experts</h3>
-          <p>Let’s create your vision together.</p>
+          <div className="popup-left-top">
+            <h3>Speak to Our Experts</h3>
+            <p>Let's create your vision together.</p>
 
-          <div className="popup-review">
-            <strong>zonzoc</strong>
-            <p>
-              “Excellent IT resource outsourcing service. They provided highly
-              skilled developers who integrated seamlessly with our team.”
-            </p>
+            <div className="popup-review">
+              <strong>zonzoc</strong>
+              <p>
+                "Excellent IT resource outsourcing service. They provided highly
+                skilled developers who integrated seamlessly with our team."
+              </p>
+            </div>
+
+            <div className="contactmedia">
+              <i className="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-twitter"></i>
+            </div>
           </div>
 
-          <div className="contactmedia">
-            <i className="fa-brands fa-linkedin"></i>
-            <i className="fa-brands fa-twitter"></i>
-          </div>
-
+          {/* Contact info moved to bottom */}
           <div className="popup-contact">
             <span>
               <i className="fa-solid fa-envelope"></i> ahamsuraij@gmail.com
@@ -57,7 +60,7 @@ const ExpertPopup = ({ open, onClose }) => {
 
         {/* RIGHT PANEL */}
         <div className="popup-right">
-          <h2>Let’s Build Something Incredible Together</h2>
+          <h2>Let's Build Something Incredible Together</h2>
           <p className="popup-subtext">
             Tell us what you're looking for and our experts will get back to you
             with tailored solutions to meet your needs.

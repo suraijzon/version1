@@ -13,32 +13,33 @@ const SuccessSection = () => {
         { text: "Shopify", Background: "#0047ab" },
         { text: "Shopify APIs", Background: "#ff6b91" },
         { text: "Laravel", Background: "#00bfc1" },
-        { text: "Boostrap", Background: "#ffe400" },
+        { text: "Boostrap", Background: "#ff7300ff" },
       ], img: item1 },
     { id: 2, name: "Aviation Management System", desc: "Comprehensive aviation management platform with real-time flight tracking, task management, and crew scheduling.",
        extra: [
         { text: "Angular", Background: "#0047ab" },
         { text: "Firebase", Background: "#ff6b91" },
+        { text: "Flightaware APIs", Background: "#1e8449" },
         { text: "MongoDB", Background: "#00bfc1" },
-        { text: "Node.js", Background: "#ffe400" },
-        { text: "Flightaware APIs", Background: "#1e8449" }
+        { text: "Node.js", Background: "#ff7300ff" },
+        
       ], img: item2 },
     { id: 3, name: "Fleet Management System", desc: "Comprehensive platform for real-time fleet tracking, rider management, and performance analytics.",
        extra: [
         { text: "React", Background: "#0047ab" },
         { text: "Java", Background: "#ff6b91" },
         { text: "Spring Boot", Background: "#00bfc1" },
-        { text: "Next.js", Background: "#ffe400" },
+        { text: "Next.js", Background: "#ff7300ff" },
         { text: "Google Maps APIs", Background: "#1e8449" }
       ], img: item3 },
     { id: 4, name: "E-Commerce System", desc: "Developed the admin portal, vendor portal, user mobile app, and vendor mobile app to manage the system.",
        extra: [
         { text: "Angular", Background: "#0047ab" },
+        { text: "Java(Android Studio)", Background: "#ff7300ff" },
         { text: "Swift", Background: "#ff6b91" },
         { text: "Node.js", Background: "#00bfc1" },
-        { text: "Java(Android Studio)", Background: "#ffe400" },
         { text: "MongoDB", Background: "#1e8449" },
-        { text: "Firebase", Background: "#1e8449" }
+        { text: "Firebase", Background: "#d90e0eff" }
       ], img: item4 },
   ];
 

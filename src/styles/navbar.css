@@ -396,7 +396,7 @@
   }
   .top-badge {
   width: 100%;
-  max-width: 1300px;
+  max-width: 1000px;
   margin: 0 auto;
   font-family: Poppins;
   display: flex;
@@ -481,6 +481,20 @@
   .nav-links {
     gap: 15px;
   }
+ 
+  .top-badge {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family: Poppins;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(59, 58, 58);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0 4% 15px 4%;
+}
   
   .drop-btn {
     font-size: 14px;

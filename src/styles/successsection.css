@@ -3,13 +3,6 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-@media (max-width: 1600px){
-.success-section {
-  padding: 60px 0px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-}
 
 .success-header {
   text-align: left;

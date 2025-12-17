@@ -226,6 +226,9 @@ input[type="range"]::-moz-range-thumb {
   min-width: 120px;
   text-align: center;
 }
+.popup-actions .cancel-btn{
+   padding: 13px 28px; 
+}
 
 /* Submit button styles */
 .popup-actions .submit-btn {
@@ -244,7 +247,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .popup-actions .cancel-btn:hover {
-  background-color: #e60077;
+  background-color: #f9f1f5;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 107, 145, 0.3);
 }

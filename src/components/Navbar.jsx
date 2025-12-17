@@ -5,11 +5,14 @@ import siteLogo from "../assets/icons/site_logo_2.svg";
 import phoneIcon from "../assets/icons/phone-call-icon.svg";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import ExpertPopup from "./ExpertPopup";
+
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState(null);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const navRef = useRef(null);
 
   const { logout } = useAuth();
@@ -361,7 +364,10 @@ const Navbar = () => {
             </div>
           </div>
 
-          <button className="contact-btn">Get a Proposal</button>
+          <button className="contact-btn" onClick={() => setIsPopupOpen(true)}>
+             Get a Proposal
+          </button>
+
 
           {open && (
             <button className="mobile-client-login-inside" onClick={handleClientLogin}>
@@ -369,6 +375,9 @@ const Navbar = () => {
             </button>
           )}
         </nav>
+        
+        <ExpertPopup 
+        open={isPopupOpen} onClose={() => setIsPopupOpen(false)}/>
 
         <div className="hamburger" onClick={() => setOpen((s) => !s)}>
           <span className={open ? "bar rotate1" : "bar"}></span>

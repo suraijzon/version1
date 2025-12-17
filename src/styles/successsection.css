@@ -146,15 +146,23 @@
 }
 .project-extra {
   margin-top: 15px;
-  margin-right: 3px;
-  color: white;      
-  font-size: 7px;    
+  color: white;
+  font-size: 7px;
   font-weight: 400;
   line-height: 1.4;
   font-family: Poppins, sans-serif;
-  display: flex;          
-  flex-wrap: wrap;       
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px 8px;  
 }
+.project-extra span {
+  padding: 3px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
 
 
 @keyframes slideLeft {

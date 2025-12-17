@@ -70,19 +70,21 @@
   border-radius: 10px;
   font-size: 13px;
 }
+.contactmedia i{
+    margin-right: 8px;
+    margin-bottom: 8px;
+    
+}
 
 .popup-contact span {
   display: block;
   font-size: 13px;
   margin-bottom: 10px;
 }
-.popup-contact i{
+.popup-contact span i{
     padding-right: 2px;
 } 
-.contactmedia{
-    padding-right: 8px;
-    padding-bottom: 5px;
-}
+
 
 /* RIGHT */
 .popup-right {

@@ -34,6 +34,12 @@
   color: #000000;
   line-height: 1.8;
 }
+.technologystack{
+  font-size: 20px;
+  color: darkblue;
+  font-family: Poppins;
+  padding-top: 15px;
+}
 
 /* Technology Categories Grid */
 .tech-categories-grid {

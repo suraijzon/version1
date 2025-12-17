@@ -42,7 +42,7 @@ const ExpertPopup = ({ open, onClose }) => {
           </div>
 
           <div className="popup-contact">
-            <span><i class="fa-solid fa-envelope"></i>ahamsuraij@gmail.com</span>
+            <span><i class="fa-solid fa-envelope"></i> ahamsuraij@gmail.com</span>
             <span><i class="fa-brands fa-whatsapp"></i> +94 74 030 9534</span>
           </div>
         </div>

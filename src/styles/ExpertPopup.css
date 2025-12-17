@@ -1,0 +1,161 @@
+/* Overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.popup-container {
+  width: 100%;
+  max-width: 980px;
+  background: white;
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  position: relative;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  animation: popupFade 0.35s ease;
+}
+
+@keyframes popupFade {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Close */
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #777;
+}
+
+/* LEFT */
+.popup-left {
+  background: linear-gradient(135deg, #020024, #090979, #020024);
+  color: white;
+  padding: 36px;
+}
+
+.popup-left h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.popup-left p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.popup-review {
+  margin: 28px 0;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.popup-contact span {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/* RIGHT */
+.popup-right {
+  padding: 36px;
+}
+
+.popup-right h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.popup-subtext {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 22px;
+}
+
+/* Form */
+.popup-form input,
+.popup-form select,
+.popup-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.popup-form textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.budget-label {
+  font-size: 13px;
+  margin: 10px 0 6px;
+  display: block;
+}
+
+/* Actions */
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cancel-btn {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px 22px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .popup-container {
+    grid-template-columns: 1fr;
+    max-width: 92%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

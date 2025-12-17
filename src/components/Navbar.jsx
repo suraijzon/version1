@@ -118,9 +118,15 @@ const Navbar = () => {
         <nav className={`nav-links ${open ? "open" : ""}`}>
           {/* Dropdown: AI & Technology (id: 3) */}
           <div
-            className={`dropdown ${mobileDropdown === 3 ? "open" : ""} ${activeDropdown === 3 ? "active" : ""}`}
-            onMouseEnter={() => handleMouseEnter(3)}
-          >
+  className={`dropdown ${mobileDropdown === 3 ? "open" : ""} ${activeDropdown === 3 ? "active" : ""}`}
+  onMouseEnter={() => handleMouseEnter(3)}
+  onMouseLeave={() => {
+    if (window.innerWidth > 1024) {
+      setActiveDropdown(null);
+    }
+  }}
+>
+
             <button
               className="drop-btn"
               onClick={() => handleDropdownButtonClick(3)}
@@ -178,10 +184,16 @@ const Navbar = () => {
           </div>
 
           {/* Dropdown: UX & Interactive (id: 2) */}
-          <div
-            className={`dropdown ${mobileDropdown === 2 ? "open" : ""} ${activeDropdown === 2 ? "active" : ""}`}
-            onMouseEnter={() => handleMouseEnter(2)}
-          >
+         <div
+  className={`dropdown ${mobileDropdown === 2 ? "open" : ""} ${activeDropdown === 2 ? "active" : ""}`}
+  onMouseEnter={() => handleMouseEnter(3)}
+  onMouseLeave={() => {
+    if (window.innerWidth > 1024) {
+      setActiveDropdown(null);
+    }
+  }}
+>
+
             <button
               className="drop-btn"
               onClick={() => handleDropdownButtonClick(2)}
@@ -240,9 +252,15 @@ const Navbar = () => {
 
           {/* Dropdown: SEO & Lead Generation (id: 1) */}
           <div
-            className={`dropdown ${mobileDropdown === 1 ? "open" : ""} ${activeDropdown === 1 ? "active" : ""}`}
-            onMouseEnter={() => handleMouseEnter(1)}
-          >
+  className={`dropdown ${mobileDropdown === 1 ? "open" : ""} ${activeDropdown === 1 ? "active" : ""}`}
+  onMouseEnter={() => handleMouseEnter(3)}
+  onMouseLeave={() => {
+    if (window.innerWidth > 1024) {
+      setActiveDropdown(null);
+    }
+  }}
+>
+
             <button
               className="drop-btn"
               onClick={() => handleDropdownButtonClick(1)}
@@ -301,9 +319,15 @@ const Navbar = () => {
 
           {/* Dropdown: Who We Are (id: 4) */}
           <div
-            className={`dropdown ${mobileDropdown === 4 ? "open" : ""} ${activeDropdown === 4 ? "active" : ""}`}
-            onMouseEnter={() => handleMouseEnter(4)}
-          >
+  className={`dropdown ${mobileDropdown === 4 ? "open" : ""} ${activeDropdown === 4 ? "active" : ""}`}
+  onMouseEnter={() => handleMouseEnter(3)}
+  onMouseLeave={() => {
+    if (window.innerWidth > 1024) {
+      setActiveDropdown(null);
+    }
+  }}
+>
+
             <button
               className="drop-btn"
               onClick={() => handleDropdownButtonClick(4)}

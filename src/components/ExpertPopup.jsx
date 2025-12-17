@@ -36,10 +36,14 @@ const ExpertPopup = ({ open, onClose }) => {
             </p>
           </div>
 
+          <div className="contactmedia">
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+
           <div className="popup-contact">
-            <span>📧 contact@sleekits.co.uk</span>
-            <span>📞 +44 7405 015594</span>
-            <span>📍 Swansea, United Kingdom</span>
+            <span>📧 ahamsuraij@gmail.com</span>
+            <span><i class="fa-brands fa-whatsapp"></i> +94 74 030 9534</span>
           </div>
         </div>
 

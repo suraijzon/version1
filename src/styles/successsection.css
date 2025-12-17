@@ -95,6 +95,8 @@
 .projects-slider {
   overflow: hidden;
   width: 100%;
+  overflow-y: visible;
+  padding: 20px 0; 
 }
 
 /* TRACK */

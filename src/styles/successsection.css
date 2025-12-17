@@ -189,7 +189,7 @@ button.explore-btn {
         margin-left: 150px;
     }
     .project-card {
-        flex: 0 0 80%;
+        flex: 0 0 260px; 
     }
     .projects-track {
         animation-duration: 28s; 

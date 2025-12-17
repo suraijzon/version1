@@ -36,9 +36,10 @@ const SuccessSection = () => {
         </button>*/}
       </div>
 
-      <div className="projects-grid">
-        {projects.map((project) => (
-          <div key={project.id} className="project-card">
+      <div className="projects-slider">
+         <div className="projects-track">
+          {projects.map((project) => (<div key={project.id} className="project-card">
+
             <img src={project.img} alt={project.name} className="project-img" />
 
             <div className="project-info">
@@ -47,6 +48,7 @@ const SuccessSection = () => {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

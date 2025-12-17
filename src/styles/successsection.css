@@ -90,12 +90,22 @@
 .all-works-btn:hover .btn-arrow {
   transform: translateX(5px);
 }
+/* SLIDER WRAPPER */
+.projects-slider {
+  overflow: hidden;
+  width: 100%;
+}
 
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* SLIDER TRACK */
+.projects-track {
+  display: flex;
   gap: 30px;
+  animation: slideLeft 18s linear infinite;
+}
+
+/* CARD WIDTH = 4 IN A ROW */
+.project-card {
+  flex: 0 0 calc(25% - 22px);
 }
 
 .project-card {
@@ -109,10 +119,10 @@
 
 .project-img {
   width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: -10px;
+  height: 180px;       /* smaller height */
+  object-fit: cover;
 }
+
 
 .project-info {
   padding: 20px;
@@ -131,6 +141,15 @@
   color: #555;
   margin-bottom: -5px;
 }
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Explore Button */
 .explore-btn {
   display: inline-block;
@@ -188,5 +207,15 @@ button.explore-btn {
     .explore-btn{
         margin-left: 150px;
     }
+    .projects-track {
+        animation: none;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .project-card {
+        flex: 0 0 85%;
+    }
 }
+
+
 

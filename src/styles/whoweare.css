@@ -53,12 +53,16 @@
 
 /* Category Row - Horizontal Layout */
 .tech-category-row {
+  flex: 0 0 30%; /* 30% of container width ~ 3 cards per row */
+  box-sizing: border-box;
+  /* keep existing styles */
   background: white;
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
 }
+
 
 .tech-category-row:hover {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
@@ -170,6 +174,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* Scrollable container for multiple category cards per row */
+.categories-scroll-wrapper {
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.categories-scroll {
+  display: flex;
+  gap: 20px; /* space between category cards */
+  min-width: max-content; /* ensures horizontal scroll */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

@@ -106,7 +106,6 @@ const WhoWeAreSection = () => {
         { name: 'Bluehost', icon: 'bluehost' },
         { name: 'GoDaddy', icon: 'godaddy' },
         { name: 'Hostinger', icon: 'hostinger' },
-        { name: 'SiteGround', icon: 'siteground' },
         { name: 'HostGator', icon: 'hostgator' },
         { name: 'AWS', icon: 'aws' },
         { name: 'Google Cloud', icon: 'googlecloud' },

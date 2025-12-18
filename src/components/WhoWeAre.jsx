@@ -7,7 +7,7 @@ const WhoWeAreSection = () => {
     { name: 'Joomla', svg: require('../assets/icons/joomla.svg') },
     { name: 'Drupal', svg: require('../assets/icons/drupal.svg') },
     { name: 'Strapi', svg: require('../assets/icons/strapi.svg') },
-    { name: 'Typo3', svg: require('../assets/icons/typo3.svg') },
+    { name: 'Typo3', svg: require('../assets/icons/magento.svg') },
     { name: 'Magento', svg: require('../assets/icons/magento.svg') },
     { name: 'Grav', svg: require('../assets/icons/grav.svg') },
     { name: 'Ghost', svg: require('../assets/icons/ghost.svg') },
@@ -64,9 +64,9 @@ const WhoWeAreSection = () => {
   ];
 
   const webServers = [
-    { name: 'LiteSpeed', svg: require('../assets/icons/litespeed.svg') },
+    { name: 'LiteSpeed', svg: require('../assets/icons/lightning.svg') },
     { name: 'Tomcat', svg: require('../assets/icons/tomcat.svg') },
-    { name: 'Caddy', svg: require('../assets/icons/caddy.svg') },
+    { name: 'Caddy', svg: require('../assets/icons/ruby.svg') },
     { name: 'Go', svg: require('../assets/icons/go.svg') }
   ];
 
@@ -87,12 +87,12 @@ const WhoWeAreSection = () => {
   const hostingProviders = [
     { name: 'Bluehost', svg: require('../assets/icons/bluehost.svg') },
     { name: 'GoDaddy', svg: require('../assets/icons/godaddy.svg') },
-    { name: 'Hostinger', svg: require('../assets/icons/hostinger.svg') },
-    { name: 'SiteGround', svg: require('../assets/icons/siteground.svg') },
+    { name: 'Hostinger', svg: require('../assets/icons/ruby.svg') },
+    { name: 'SiteGround', svg: require('../assets/icons/ruby.svg') },
     { name: 'HostGator', svg: require('../assets/icons/hostgator.svg') },
     { name: 'AWS', svg: require('../assets/icons/aws.svg') },
-    { name: 'Google Cloud', svg: require('../assets/icons/googlecloud.svg') },
-    { name: 'Microsoft Azure', svg: require('../assets/icons/azure.svg') },
+    { name: 'Google Cloud', svg: require('../assets/icons/google-cloud.svg') },
+    { name: 'Microsoft Azure', svg: require('../assets/icons/microsoft-azure.svg') },
     { name: 'DigitalOcean', svg: require('../assets/icons/digitalocean.svg') },
     { name: 'Linode', svg: require('../assets/icons/linode.svg') }
   ];

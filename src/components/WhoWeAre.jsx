@@ -160,29 +160,34 @@ const WhoWeAreSection = () => {
           <h3 className='technologystack'>OUR TECHNOLOGY STACK</h3>
         </div>
 
-        {/* Technology Categories - 3 Column Grid Layout */}
+        {/* Technology Categories - 3 Column Grid with Auto-scroll */}
         <div className="tech-categories-grid">
-          {categories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="tech-category-card">
-              <h3 className="category-title">{category.title}</h3>
-              <div className="tech-scroll-wrapper">
-                <div className="tech-items-scroll">
-                  {category.items.map((tech, index) => (
-                    <div key={index} className="tech-item">
-                      <div className="tech-icon-circle">
-                        <img 
-                          src={importIcon(tech.icon)} 
-                          alt={tech.name} 
-                          className="tech-svg-icon"
-                        />
+          {categories.map((category, categoryIndex) => {
+            // Duplicate items for seamless infinite scroll
+            const duplicatedItems = [...category.items, ...category.items];
+            
+            return (
+              <div key={categoryIndex} className="tech-category-card">
+                <h3 className="category-title">{category.title}</h3>
+                <div className="tech-scroll-wrapper">
+                  <div className="tech-items-scroll">
+                    {duplicatedItems.map((tech, index) => (
+                      <div key={index} className="tech-item">
+                        <div className="tech-icon-circle">
+                          <img 
+                            src={importIcon(tech.icon)} 
+                            alt={tech.name} 
+                            className="tech-svg-icon"
+                          />
+                        </div>
+                        <p className="tech-label">{tech.name}</p>
                       </div>
-                      <p className="tech-label">{tech.name}</p>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

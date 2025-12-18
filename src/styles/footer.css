@@ -50,78 +50,10 @@
   max-width: 200px;
 }
 
-/* CTA Box */
-.cta-box {
-  background: linear-gradient(135deg, #1e5ca8 0%, #2d7bc7 100%);
-  border-radius: 24px;
-  padding: 30px;
-  padding-top: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  flex: 1;
-  max-width: 700px;
-  height: 290px;
-}
-
-.cta-title {
-  font-size: 0.9rem;
-  font-family: Poppins;
-  font-weight: 550;
-  text-align: center;
-  color: white;
-  margin-top: 20px;
-  margin-bottom: 32px;
-  line-height: 1.4;
-}
-
-.cta-form {
-  display: flex;
-  gap: 16px;
-  background: white;
-  border-radius: 12px;
-  overflow: visible; /* allow children to overflow */
-  align-items: flex-start; /* align to top instead of center */
-  margin-top: 50px;
-}
-
-.cta-input {
-  flex: 1;
-  padding: 18px 24px;
-  border-radius: 12px;
-  font-size: 1rem;
-  border: none;
-}
-
-.cta-input::placeholder {
-  color: #aaa;
-}
-
-.cta-button {
-  height: 80px;                 /* taller than input */
-  padding: 0 35px;
-  font-size: 1.4rem;
-  border-radius: 16px;          /* smooth round corners */
-  align-self: flex-start;       /* align to top of container */
-  margin-top: -18px;            /* move above form top */
-  margin-bottom: -20px;         /* extend below form bottom */
-  z-index: 2;                   /* ensure it sits above form background */
-}
-.cta-button {
-  border-radius: 18px !important;
-  padding: 20px 28px !important; /* force override */
-}
-.cta-button {
-  font-size: 1.35rem !important;
-}
-
-
-.cta-button:hover {
-  background: #152d6e;
-  color: white;
-}
 
 /* Main Footer */
 .footer-main {
-  padding: 80px 20px 60px;
+  padding: 40px 20px 60px;
   margin-top: -150px;
 }
 .line{
@@ -136,7 +68,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
-  gap: 48px;
+  gap: 28px;
 }
 
 /* Footer Brand Column */
@@ -181,7 +113,7 @@
 }
 
 .contact-heading {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   font-family: Poppins;
   font-weight: 600;
   color: white;
@@ -213,7 +145,7 @@
 
 /* Footer Columns */
 .footer-column-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: white;
   margin-bottom: 24px;
@@ -237,7 +169,8 @@
 .footer-links a {
   color: white;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-weight: 350;
+  font-size: 0.88rem;
   transition: all 0.3s ease;
   display: inline-block;
 }
@@ -344,6 +277,16 @@
 
 
 /* Responsive */
+@media (min-width: 1400px){
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr;
+  gap: 35px;
+}
+
+}
 @media (max-width: 768px) {
   .stats-section {
     flex-direction: column;

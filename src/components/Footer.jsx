@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/footer.css';
-import siteLogo from '../assets/icons/site_logo_2.svg';
+import siteLogo from '../assets/icons/logo.png';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -12,29 +12,32 @@ const Footer = () => {
   };
 
   const servicesLinks = [
-    'Digital Marketing Services',
-    'SEO Services',
-    'PPC Services',
-    'Content Marketing Services',
-    'Social Media Services',
-    'Web Design Services',
-    'Digital Advertising Services'
+    'AI Web Application Development',
+    'AI Software Development',
+    'Full-Stack Web Development',
+    'AI-Powered Website Design',
+    'AI Automation & GPT Integration',
+    'SEO & AI Search Optimization',
+    'E-commerce Development'
   ];
 
   const knowledgebaseLinks = [
-    'Digital Marketing', 'SEO', 'PPC', 'Content Marketing',
-    'Social Media', 'Web Design', 'Amazon'
+    'Websites That Generate Leads', 'AI Chatbots & Virtual Assistants', 'Business Process Automation',
+     'E-commerce Growth Optimization',
+     'Search Visibility & Traffic Growth',
+     'Website Speed & Performance Fixes',
   ];
 
   const companyLinks = [
-    'About Us','Careers','Community Impact',
-    'Contact Us','Industries We Serve','Locations','Phishing Scam Alert'
+    'Website Growth Guides','AI for Business',
+    'Technical SEO Knowledgebase','Case Studies & Results',
+    'AI SEO & Answer Engine Optimization'
   ];
 
   const exploreLinks = [
-    'Digital Marketing Trends','Generative Engine Optimization',
-    'HTTP Status Codes','SEO in Digital Marketing',
-    'SEO vs. SEM','Return on Ad Spend','Revenue Marketing Playbook'
+    'About ZonzocTech','How We Work',
+    'Careers','Contact Us',
+    'Privacy Policy','Terms of Service'
   ];
 
   return (
@@ -45,55 +48,16 @@ const Footer = () => {
         <div className="footer-top-container">
 
           {/* LEFT SIDE — STATS + BUTTON */}
-          <div className="stats-column">
-
-            <div className="stats-section">
-              <div className="stat-item">
-                <h3 className="stat-number">150+</h3>
-                <p className="stat-label">COMPLETED PROJECTS</p>
-              </div>
-
-              <div className="stat-item">
-                <h3 className="stat-number">12</h3>
-                <p className="stat-label">YEARS OF EXPERIENCE</p>
-              </div>
-            </div>
+         
 
             {/* BUTTON UNDER BOTH */}
-            <div className="contact-btn-wrapper">
-              <button onClick={handleContactUsClick} className="footer-contact-btn">
-                <i className="fa-solid fa-envelope"></i>
-                Contact Us
-              </button>
-            </div>
-
-          </div>
+            
 
           {/* RIGHT SIDE — CTA BOX */}
-          <div className="cta-box">
-            <h3 className="cta-title">Discover how we can help your business grow</h3>
-
-            <div className="cta-form">
-              <input 
-                type="url" 
-                placeholder="Enter your website" 
-                className="cta-input"
-              />
-              <button className="cta-button">Send me a Proposal!</button>
-            </div>
-          </div>
-
-        </div>
+         </div>
         
         {/* Full-width line */}
-        <div className='linetop'>
-          <hr style={{
-            border: 'none',
-            borderTop: '1px solid rgba(255, 255, 255, 1)',
-            margin: '20px 0',
-            width: '100%'
-          }} />
-        </div>
+        
       </div>
       
 
@@ -108,10 +72,6 @@ const Footer = () => {
               <img src={siteLogo} alt="techco" className="logo-text-img" />
             </div>
 
-            <p className="footer-tagline">
-              Celebrating 25+ Years of Digital Marketing Excellence
-            </p>
-
             <div className="footer-contact-box">
               <h4 className="contact-heading">
                 Ready to speak with a marketing expert? Give us a ring
@@ -125,7 +85,7 @@ const Footer = () => {
 
           {/* Columns */}
           <div className="footer-column">
-            <h4 className="footer-column-title">Services</h4>
+            <h4 className="footer-column-title">Core Services</h4>
             <ul className="footer-links">
               {servicesLinks.map((link, index) => (
                 <li key={index}><a href="#">{link}</a></li>
@@ -134,7 +94,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h4 className="footer-column-title">Knowledgebase</h4>
+            <h4 className="footer-column-title">Solutions by Need</h4>
             <ul className="footer-links">
               {knowledgebaseLinks.map((link, index) => (
                 <li key={index}><a href="#">{link}</a></li>
@@ -143,7 +103,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h4 className="footer-column-title">Company</h4>
+            <h4 className="footer-column-title">Insights & Resources</h4>
             <ul className="footer-links">
               {companyLinks.map((link, index) => (
                 <li key={index}><a href="#">{link}</a></li>
@@ -152,7 +112,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h4 className="footer-column-title">Explore</h4>
+            <h4 className="footer-column-title">Company</h4>
             <ul className="footer-links">
               {exploreLinks.map((link, index) => (
                 <li key={index}><a href="#">{link}</a></li>
@@ -176,11 +136,10 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p className="copyright">Zonzoctech© 2010-2025</p>
+          <p className="copyright">Zonzoctech© 2020-2025</p>
           <div className="social-icons">
-            <a href="#" className="social-icon"><i className="fa-brands fa-facebook-f"></i></a>
             <a href="#" className="social-icon"><i className="fa-brands fa-twitter"></i></a>
-            <a href="#" className="social-icon"><i className="fa-brands fa-youtube"></i></a>
+            <a href="#" className="social-icon"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
       </div>

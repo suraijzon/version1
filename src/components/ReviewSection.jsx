@@ -1,4 +1,5 @@
 import React from 'react';
+import CountUp from 'react-countup';
 import '../styles/Review.css';
 
 const ReviewsSection = () => {
@@ -42,8 +43,15 @@ const ReviewsSection = () => {
           </div>
           
           <div className="reviews-count-badge">
-            <span className="reviews-count">1,453+</span>
-            <span className="reviews-label">Reviews</span>
+            <span className="reviews-count">
+              <CountUp 
+                start={0} 
+                end={2158} 
+                duration={2} 
+                separator="," 
+              /> + <span className="reviews-label"> Reviews</span>
+            </span>
+            
           </div>
         </div>
 

@@ -29,11 +29,11 @@
 }
 
 .rating-number {
-  font-size: 15rem;
+  font-size: 13rem;
   font-weight: 800;
   color: #0066ff;
   line-height: 1;
-  margin: 0;
+  margin: 0 10px;
   font-family: 'Poppins', sans-serif;
   letter-spacing: -0.05em;
 }
@@ -41,7 +41,7 @@
 .rating-stars-large {
   display: flex;
   gap: 8px;
-  margin-left: 8px;
+  margin-left: 10px;
 }
 
 .star-icon {
@@ -50,14 +50,16 @@
 
 /* Reviews Count Badge */
 .reviews-count-badge {
-  background: white;
-  border-radius: 16px;
+  background: rgb(225, 243, 253);
+  border-radius: 0px 16px 16px 16px;
+  border: 1px solid#b8d4ff;
   padding: 20px 32px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   display: inline-flex;
   flex-direction: column;
   gap: 4px;
   width: fit-content;
+  margin-left: 100px;
 }
 
 .reviews-count {
@@ -68,10 +70,12 @@
 }
 
 .reviews-label {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #718096;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
+  padding-left: 10px;
+  
 }
 
 /* Right Side - Header and Cards */
@@ -93,8 +97,8 @@
 /* Review Cards Grid */
 .review-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
   margin-left: -60px;
 }
 
@@ -168,6 +172,23 @@
 }
 
 /* Responsive Design */
+@media (min-width: 1400px){
+.review-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  margin-left: -60px;
+}
+.rating-number {
+  font-size: 15rem;
+  font-weight: 800;
+  color: #0066ff;
+  line-height: 1;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.05em;
+}  
+}
 @media (max-width: 1200px) {
   .reviews-container {
     gap: 60px;

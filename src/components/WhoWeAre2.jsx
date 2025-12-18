@@ -1,13 +1,12 @@
 import React from "react";
 import "../styles/Whoweare2.css";
 
-// Replace these with your actual image paths
-import consultation from "../assets/icons/Empowering the Future with AI.png";
+import consultation from "../assets/icons/empowering-future-ai.png";
 import fastDelivery from "../assets/icons/fast-delivery.png";
 import affordable from "../assets/icons/total_earnings_line.png";
 import noHidden from "../assets/icons/no-hidden.png";
 
-const Whoweare2 = () => {
+const WhoWeAre2 = () => {
   const features = [
     {
       id: 1,
@@ -49,11 +48,7 @@ const Whoweare2 = () => {
         <div className="why-cards">
           {features.map((item) => (
             <div className="why-card" key={item.id}>
-              <img
-                src={item.image}
-                alt={item.title}
-                className="why-icon"
-              />
+              <img src={item.image} alt={item.title} className="why-icon" />
               <h3>{item.title}</h3>
               <p>{item.description}</p>
             </div>
@@ -64,4 +59,4 @@ const Whoweare2 = () => {
   );
 };
 
-export default Whoweare2;
+export default WhoWeAre2;

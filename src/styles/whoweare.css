@@ -48,8 +48,15 @@
   text-transform: uppercase;
 }
 
-/* Scrolling Container - Cards move here */
-.tech-scroll-container {
+/* Rows Container */
+.tech-rows-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Individual Scroll Row */
+.tech-scroll-row {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -61,12 +68,28 @@
 .tech-cards-track {
   display: flex;
   gap: 24px;
-  animation: scroll-cards 40s linear infinite;
   width: max-content;
 }
 
+/* Different animation speeds for each row */
+.tech-cards-track-1 {
+  animation: scroll-cards 40s linear infinite;
+}
+
+.tech-cards-track-2 {
+  animation: scroll-cards 45s linear infinite;
+}
+
+.tech-cards-track-3 {
+  animation: scroll-cards 50s linear infinite;
+}
+
+.tech-cards-track-4 {
+  animation: scroll-cards 42s linear infinite;
+}
+
 /* Pause animation on hover */
-.tech-scroll-container:hover .tech-cards-track {
+.tech-scroll-row:hover .tech-cards-track {
   animation-play-state: paused;
 }
 
@@ -195,6 +218,10 @@
     font-size: 2rem;
   }
 
+  .tech-rows-container {
+    gap: 16px;
+  }
+
   .tech-cards-track {
     gap: 16px;
   }
@@ -235,6 +262,10 @@
 
   .technologystack {
     font-size: 1.75rem;
+  }
+
+  .tech-rows-container {
+    gap: 12px;
   }
 
   .tech-cards-track {

@@ -101,13 +101,13 @@ const WhyChooseSection = () => {
 
           {/* Main Hero Card - Black Background */}
           {/* Right Content */}
-<div className="why-choose-right">
-  <img 
-    src={blackHandImage} 
-    alt="Future Empower" 
-    className="hero-main-image"
-  />
-</div>
+            <div className="why-choose-right">
+             <img 
+             src={blackHandImage} 
+             alt="Future Empower" 
+             className="hero-main-image"
+             />
+            </div>
 
 
         </div>

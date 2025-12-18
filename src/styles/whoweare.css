@@ -107,7 +107,7 @@
 .tech-category-card {
   background: white;
   border-radius: 16px;
-  border-color: 2px solid rgb(0, 170, 255);
+  border: 2px solid rgb(0, 170, 255);
   padding: 28px 24px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;

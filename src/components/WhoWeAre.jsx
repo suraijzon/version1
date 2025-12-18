@@ -46,7 +46,7 @@ const WhoWeAreSection = () => {
           { name: 'Joomla', icon: 'joomla' },
           { name: 'Drupal', icon: 'drupal' },
           { name: 'Strapi', icon: 'strapi' },
-          { name: 'Typo3', icon: 'magento' },
+          { name: 'Typo3', icon: 'typo3' },
           { name: 'Magento', icon: 'magento' },
           { name: 'Grav', icon: 'grav' },
           { name: 'Ghost', icon: 'ghost' }

@@ -322,9 +322,9 @@
 /* Responsive Design */
 @media (min-width: 1400px) {
   .contact-right {
-    width: 840px;        /* wider form */
+    width: 850px;        /* wider form */
     padding: 56px;      /* optional: more breathing space */
-    margin-left: -20px; /* reduce negative pull if needed */
+    margin-left: -10px; /* reduce negative pull if needed */
   }
   .contact-container {
     gap: 0px;              /* reduce space between grid columns */

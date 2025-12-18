@@ -11,9 +11,8 @@
 .hero-section{
   width:100%;
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,252,255,1) 100%);
-  padding: calc(80px + 20px) 4% 80px 4%; 
+  padding: calc(40px + 10px) 4% 80px 4%; 
   box-sizing: border-box;
-  margin-top: 0;
 }
 
 .hero-inner{

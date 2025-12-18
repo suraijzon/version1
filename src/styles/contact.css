@@ -320,6 +320,14 @@
 }
 
 /* Responsive Design */
+@media (min-width: 1400px) {
+  .contact-right {
+    width: 820px;        /* wider form */
+    padding: 56px;      /* optional: more breathing space */
+    margin-left: -60px; /* reduce negative pull if needed */
+  }
+}
+
 @media (max-width: 1024px) {
   .contact-container {
     grid-template-columns: 1fr;

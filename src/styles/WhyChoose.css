@@ -447,6 +447,8 @@
 @media (max-width: 768px) {
   .why-choose-section{
     margin-bottom: 50px;
+    align-items: center;
+    text-align: center;
   }
   .section-title {
     font-size: 2.5rem;

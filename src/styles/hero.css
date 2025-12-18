@@ -190,6 +190,11 @@
     gap: 12px;
     box-shadow: none;
   }
+  .hero-title{
+    margin-top: -20px;
+    padding-top: 0;
+  }
+
 
   .hero-search-input {
     border: 2px solid #e0e0e0;

@@ -1,110 +1,185 @@
 import React from 'react';
 import '../styles/whoweare.css';
 
+import wordpressIcon from '../assets/icons/wordpress.svg';
+import joomlaIcon from '../assets/icons/joomla.svg';
+import drupalIcon from '../assets/icons/drupal.svg';
+import strapiIcon from '../assets/icons/strapi.svg';
+import magentoIcon from '../assets/icons/magento.svg';
+import gravIcon from '../assets/icons/grav.svg';
+import ghostIcon from '../assets/icons/ghost.svg';
+import umbracoIcon from '../assets/icons/umbraco.svg';
+import squarespaceIcon from '../assets/icons/squarespace.svg';
+import webflowIcon from '../assets/icons/webflow.svg';
+
+import phpIcon from '../assets/icons/php.svg';
+import javaIcon from '../assets/icons/java.svg';
+import javascriptIcon from '../assets/icons/javascript.svg';
+import typescriptIcon from '../assets/icons/typescript.svg';
+import pythonIcon from '../assets/icons/python.svg';
+import csharpIcon from '../assets/icons/csharp.svg';
+import cppIcon from '../assets/icons/cpp.svg';
+import kotlinIcon from '../assets/icons/kotlin.svg';
+import swiftIcon from '../assets/icons/swift.svg';
+import goIcon from '../assets/icons/go.svg';
+import rubyIcon from '../assets/icons/ruby.svg';
+
+import dockerIcon from '../assets/icons/docker.svg';
+import kubernetesIcon from '../assets/icons/kubernetes.svg';
+import awsIcon from '../assets/icons/aws.svg';
+
+import jenkinsIcon from '../assets/icons/jenkins.svg';
+import githubIcon from '../assets/icons/github.svg';
+import gitlabIcon from '../assets/icons/gitlab.svg';
+import circleciIcon from '../assets/icons/circleci.svg';
+
+import shopifyIcon from '../assets/icons/shopify.svg';
+import woocommerceIcon from '../assets/icons/woocommerce.svg';
+import opencartIcon from '../assets/icons/opencart.svg';
+
+import laravelIcon from '../assets/icons/laravel.svg';
+import symfonyIcon from '../assets/icons/symfony.svg';
+import springbootIcon from '../assets/icons/springboot.svg';
+import expressIcon from '../assets/icons/express.svg';
+import vueIcon from '../assets/icons/vue.svg';
+import reactIcon from '../assets/icons/react.svg';
+import nextIcon from '../assets/icons/next.svg';
+import nuxtIcon from '../assets/icons/nuxt.svg';
+import nodeIcon from '../assets/icons/node.svg';
+import bootstrapIcon from '../assets/icons/bootstrap.svg';
+
+import lightningIcon from '../assets/icons/lightning.svg';
+import tomcatIcon from '../assets/icons/tomcat.svg';
+
+import grafanaIcon from '../assets/icons/grafana.svg';
+import prometheusIcon from '../assets/icons/prometheus.svg';
+import kibanaIcon from '../assets/icons/kibana.svg';
+import sqlIcon from '../assets/icons/sql.svg';
+
+import cloudflareIcon from '../assets/icons/cloudflare.svg';
+import sslIcon from '../assets/icons/ssl.svg';
+import seoIcon from '../assets/icons/seo.svg';
+
+import bluehostIcon from '../assets/icons/bluehost.svg';
+import godaddyIcon from '../assets/icons/godaddy.svg';
+import hostgatorIcon from '../assets/icons/hostgator.svg';
+import googleCloudIcon from '../assets/icons/google-cloud.svg';
+import azureIcon from '../assets/icons/microsoft-azure.svg';
+import digitaloceanIcon from '../assets/icons/digitalocean.svg';
+import linodeIcon from '../assets/icons/linode.svg';
+
+import mysqlIcon from '../assets/icons/mysql.svg';
+import postgresqlIcon from '../assets/icons/postgresql.svg';
+import mongodbIcon from '../assets/icons/mongodb.svg';
+import sqliteIcon from '../assets/icons/sqlite.svg';
+import redisIcon from '../assets/icons/redis.svg';
+import elasticsearchIcon from '../assets/icons/elasticsearch.svg';
+import firebaseIcon from '../assets/icons/firebase.svg';
+
 const WhoWeAreSection = () => {
   const cmsplatforms = [
-    { name: 'WordPress', svg: require('../assets/icons/wordpress.svg') },
-    { name: 'Joomla', svg: require('../assets/icons/joomla.svg') },
-    { name: 'Drupal', svg: require('../assets/icons/drupal.svg') },
-    { name: 'Strapi', svg: require('../assets/icons/strapi.svg') },
-    { name: 'Typo3', svg: require('../assets/icons/magento.svg') },
-    { name: 'Magento', svg: require('../assets/icons/magento.svg') },
-    { name: 'Grav', svg: require('../assets/icons/grav.svg') },
-    { name: 'Ghost', svg: require('../assets/icons/ghost.svg') },
-    { name: 'Umbraco', svg: require('../assets/icons/umbraco.svg') },
-    { name: 'Squarespace', svg: require('../assets/icons/squarespace.svg') },
-    { name: 'Webflow', svg: require('../assets/icons/webflow.svg') }
+    { name: 'WordPress', svg: wordpressIcon },
+    { name: 'Joomla', svg: joomlaIcon },
+    { name: 'Drupal', svg: drupalIcon },
+    { name: 'Strapi', svg: strapiIcon },
+    { name: 'Typo3', svg: magentoIcon },
+    { name: 'Magento', svg: magentoIcon },
+    { name: 'Grav', svg: gravIcon },
+    { name: 'Ghost', svg: ghostIcon },
+    { name: 'Umbraco', svg: umbracoIcon },
+    { name: 'Squarespace', svg: squarespaceIcon },
+    { name: 'Webflow', svg: webflowIcon }
   ];
 
   const programmingLanguages = [
-    { name: 'PHP', svg: require('../assets/icons/php.svg') },
-    { name: 'Java', svg: require('../assets/icons/java.svg') },
-    { name: 'JavaScript', svg: require('../assets/icons/javascript.svg') },
-    { name: 'TypeScript', svg: require('../assets/icons/typescript.svg') },
-    { name: 'Python', svg: require('../assets/icons/python.svg') },
-    { name: 'C#', svg: require('../assets/icons/csharp.svg') },
-    { name: 'C++', svg: require('../assets/icons/cpp.svg') },
-    { name: 'Kotlin', svg: require('../assets/icons/kotlin.svg') },
-    { name: 'Swift', svg: require('../assets/icons/swift.svg') },
-    { name: 'Go', svg: require('../assets/icons/go.svg') },
-    { name: 'Ruby', svg: require('../assets/icons/ruby.svg') }
+    { name: 'PHP', svg: phpIcon },
+    { name: 'Java', svg: javaIcon },
+    { name: 'JavaScript', svg: javascriptIcon },
+    { name: 'TypeScript', svg: typescriptIcon },
+    { name: 'Python', svg: pythonIcon },
+    { name: 'C#', svg: csharpIcon },
+    { name: 'C++', svg: cppIcon },
+    { name: 'Kotlin', svg: kotlinIcon },
+    { name: 'Swift', svg: swiftIcon },
+    { name: 'Go', svg: goIcon },
+    { name: 'Ruby', svg: rubyIcon }
   ];
 
   const containerization = [
-    { name: 'Docker', svg: require('../assets/icons/docker.svg') },
-    { name: 'Kubernetes', svg: require('../assets/icons/kubernetes.svg') },
-    { name: 'AWS ECS', svg: require('../assets/icons/aws.svg') }
+    { name: 'Docker', svg: dockerIcon },
+    { name: 'Kubernetes', svg: kubernetesIcon },
+    { name: 'AWS ECS', svg: awsIcon }
   ];
 
   const cicd = [
-    { name: 'Jenkins', svg: require('../assets/icons/jenkins.svg') },
-    { name: 'GitHub Actions', svg: require('../assets/icons/github.svg') },
-    { name: 'GitLab CI/CD', svg: require('../assets/icons/gitlab.svg') },
-    { name: 'CircleCI', svg: require('../assets/icons/circleci.svg') }
+    { name: 'Jenkins', svg: jenkinsIcon },
+    { name: 'GitHub Actions', svg: githubIcon },
+    { name: 'GitLab CI/CD', svg: gitlabIcon },
+    { name: 'CircleCI', svg: circleciIcon }
   ];
 
   const ecommerce = [
-    { name: 'Shopify', svg: require('../assets/icons/shopify.svg') },
-    { name: 'WooCommerce', svg: require('../assets/icons/woocommerce.svg') },
-    { name: 'Magento', svg: require('../assets/icons/magento.svg') },
-    { name: 'OpenCart', svg: require('../assets/icons/opencart.svg') }
+    { name: 'Shopify', svg: shopifyIcon },
+    { name: 'WooCommerce', svg: woocommerceIcon },
+    { name: 'Magento', svg: magentoIcon },
+    { name: 'OpenCart', svg: opencartIcon }
   ];
 
   const frameworks = [
-    { name: 'Laravel', svg: require('../assets/icons/laravel.svg') },
-    { name: 'Symfony', svg: require('../assets/icons/symfony.svg') },
-    { name: 'Spring Boot', svg: require('../assets/icons/springboot.svg') },
-    { name: 'Express.js', svg: require('../assets/icons/express.svg') },
-    { name: 'Vue.js', svg: require('../assets/icons/vue.svg') },
-    { name: 'React.js', svg: require('../assets/icons/react.svg') },
-    { name: 'Next.js', svg: require('../assets/icons/next.svg') },
-    { name: 'Nuxt.js', svg: require('../assets/icons/nuxt.svg') },
-    { name: 'Node.js', svg: require('../assets/icons/node.svg') },
-    { name: 'Bootstrap', svg: require('../assets/icons/bootstrap.svg') }
+    { name: 'Laravel', svg: laravelIcon },
+    { name: 'Symfony', svg: symfonyIcon },
+    { name: 'Spring Boot', svg: springbootIcon },
+    { name: 'Express.js', svg: expressIcon },
+    { name: 'Vue.js', svg: vueIcon },
+    { name: 'React.js', svg: reactIcon },
+    { name: 'Next.js', svg: nextIcon },
+    { name: 'Nuxt.js', svg: nuxtIcon },
+    { name: 'Node.js', svg: nodeIcon },
+    { name: 'Bootstrap', svg: bootstrapIcon }
   ];
 
   const webServers = [
-    { name: 'LiteSpeed', svg: require('../assets/icons/lightning.svg') },
-    { name: 'Tomcat', svg: require('../assets/icons/tomcat.svg') },
-    { name: 'Caddy', svg: require('../assets/icons/ruby.svg') },
-    { name: 'Go', svg: require('../assets/icons/go.svg') }
+    { name: 'LiteSpeed', svg: lightningIcon },
+    { name: 'Tomcat', svg: tomcatIcon },
+    { name: 'Caddy', svg: rubyIcon },
+    { name: 'Go', svg: goIcon }
   ];
 
   const monitoring = [
-    { name: 'Grafana', svg: require('../assets/icons/grafana.svg') },
-    { name: 'Prometheus', svg: require('../assets/icons/prometheus.svg') },
-    { name: 'Kibana', svg: require('../assets/icons/kibana.svg') },
-    { name: 'SQL', svg: require('../assets/icons/sql.svg') }
+    { name: 'Grafana', svg: grafanaIcon },
+    { name: 'Prometheus', svg: prometheusIcon },
+    { name: 'Kibana', svg: kibanaIcon },
+    { name: 'SQL', svg: sqlIcon }
   ];
 
   const cloudSecurity = [
-    { name: 'Cloudflare', svg: require('../assets/icons/cloudflare.svg') },
-    { name: 'SSL Certificates', svg: require('../assets/icons/ssl.svg') },
-    { name: 'SEO & Speed Optimization', svg: require('../assets/icons/seo.svg') },
-    { name: 'Java', svg: require('../assets/java.svg') }
+    { name: 'Cloudflare', svg: cloudflareIcon },
+    { name: 'SSL Certificates', svg: sslIcon },
+    { name: 'SEO & Speed Optimization', svg: seoIcon },
+    { name: 'Java', svg: javaIcon }
   ];
 
   const hostingProviders = [
-    { name: 'Bluehost', svg: require('../assets/icons/bluehost.svg') },
-    { name: 'GoDaddy', svg: require('../assets/icons/godaddy.svg') },
-    { name: 'Hostinger', svg: require('../assets/icons/ruby.svg') },
-    { name: 'SiteGround', svg: require('../assets/icons/ruby.svg') },
-    { name: 'HostGator', svg: require('../assets/icons/hostgator.svg') },
-    { name: 'AWS', svg: require('../assets/icons/aws.svg') },
-    { name: 'Google Cloud', svg: require('../assets/icons/google-cloud.svg') },
-    { name: 'Microsoft Azure', svg: require('../assets/icons/microsoft-azure.svg') },
-    { name: 'DigitalOcean', svg: require('../assets/icons/digitalocean.svg') },
-    { name: 'Linode', svg: require('../assets/icons/linode.svg') }
+    { name: 'Bluehost', svg: bluehostIcon },
+    { name: 'GoDaddy', svg: godaddyIcon },
+    { name: 'Hostinger', svg: rubyIcon },
+    { name: 'SiteGround', svg: rubyIcon },
+    { name: 'HostGator', svg: hostgatorIcon },
+    { name: 'AWS', svg: awsIcon },
+    { name: 'Google Cloud', svg: googleCloudIcon },
+    { name: 'Microsoft Azure', svg: azureIcon },
+    { name: 'DigitalOcean', svg: digitaloceanIcon },
+    { name: 'Linode', svg: linodeIcon }
   ];
 
   const databases = [
-    { name: 'MySQL', svg: require('../assets/icons/mysql.svg') },
-    { name: 'PostgreSQL', svg: require('../assets/icons/postgresql.svg') },
-    { name: 'MongoDB', svg: require('../assets/icons/mongodb.svg') },
-    { name: 'SQLite', svg: require('../assets/icons/sqlite.svg') },
-    { name: 'Redis', svg: require('../assets/icons/redis.svg') },
-    { name: 'Elasticsearch', svg: require('../assets/icons/elasticsearch.svg') },
-    { name: 'Firebase', svg: require('../assets/icons/firebase.svg') }
+    { name: 'MySQL', svg: mysqlIcon },
+    { name: 'PostgreSQL', svg: postgresqlIcon },
+    { name: 'MongoDB', svg: mongodbIcon },
+    { name: 'SQLite', svg: sqliteIcon },
+    { name: 'Redis', svg: redisIcon },
+    { name: 'Elasticsearch', svg: elasticsearchIcon },
+    { name: 'Firebase', svg: firebaseIcon }
   ];
 
   return (

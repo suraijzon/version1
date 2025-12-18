@@ -69,7 +69,6 @@
   transition: all 0.3s ease;
 }
 
-
 .tech-category-row:hover {
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
 }
@@ -85,39 +84,35 @@
 
 /* Horizontal Scroll Container */
 .tech-scroll-container {
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: #cbd5e1 #f1f5f9;
+  overflow: hidden; /* hide scrollbar */
+  position: relative;
 }
 
-.tech-scroll-container::-webkit-scrollbar {
-  height: 8px;
-}
-
-.tech-scroll-container::-webkit-scrollbar-track {
-  background: #f1f5f9;
-  border-radius: 10px;
-}
-
-.tech-scroll-container::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 10px;
-}
-
-.tech-scroll-container::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
-
-/* Horizontal Items Container */
+/* Horizontal Items Container - Auto Scroll */
 .tech-items-horizontal {
-  display: flex;
+  display: inline-flex; /* allows width to grow with content */
   gap: 12px;
   padding: 10px 5px;
-  min-width: min-content;
+  animation: scroll-left 20s linear infinite;
+  min-width: min-content; /* ensures items fit content */
 }
 
-/* Individual Tech Item - Horizontal */
+/* Auto-scroll keyframes */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Pause scroll on hover */
+.tech-scroll-container:hover .tech-items-horizontal {
+  animation-play-state: paused;
+}
+
+/* Individual Tech Item */
 .tech-item-horizontal {
   display: flex;
   flex-direction: column;
@@ -132,7 +127,7 @@
   transform: translateY(-5px);
 }
 
-/* Icon Circle - Horizontal */
+/* Icon Circle */
 .tech-icon-circle-horizontal {
   width: 48px;
   height: 48px;
@@ -154,9 +149,9 @@
   transform: scale(1.05);
 }
 
-/* SVG Icon - Horizontal */
+/* SVG Icon */
 .tech-svg-icon-horizontal {
-  width: 24pc;
+  width: 24px; /* fixed px instead of pc */
   height: 24px;
   object-fit: contain;
   transition: all 0.3s ease;
@@ -167,7 +162,7 @@
   filter: brightness(1.02);
 }
 
-/* Tech Label - Horizontal */
+/* Tech Label */
 .tech-label-horizontal {
   font-size: 12px;
   font-family: Poppins, sans-serif;
@@ -180,6 +175,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 /* Scrollable container for multiple category cards per row */
 .categories-scroll-wrapper {
   overflow-x: auto;
@@ -191,7 +187,6 @@
   gap: 20px; /* space between category cards */
   min-width: max-content; /* ensures horizontal scroll */
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {

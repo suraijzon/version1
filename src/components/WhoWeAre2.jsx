@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Wh0weare2.css";
+import "../styles/Whoweare2.css";
 
 // Replace these with your actual image paths
 import consultation from "../assets/icons/Empowering the Future with AI.png";
@@ -7,7 +7,7 @@ import fastDelivery from "../assets/icons/fast-delivery.png";
 import affordable from "../assets/icons/total_earnings_line.png";
 import noHidden from "../assets/icons/no-hidden.png";
 
-const WhyChooseSleekIT = () => {
+const Whoweare2 = () => {
   const features = [
     {
       id: 1,
@@ -64,4 +64,4 @@ const WhyChooseSleekIT = () => {
   );
 };
 
-export default WhyChooseSleekIT;
+export default Whoweare2;

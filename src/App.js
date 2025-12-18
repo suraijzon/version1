@@ -9,6 +9,7 @@ import Solution from "./components/Solution";
 import SuccessSection from "./components/SuccessSection";
 import ProcessSection from "./components/ProcessSection";
 import WhoWeAre from "./components/WhoWeAre";
+import WhyChooseSleekIT from "./components/WhyChooseSleekIT";
 import WhoWeAre2 from "./components/WhoWeAre2";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -32,6 +33,7 @@ const HomePage = () => {
       <SuccessSection />
       <ProcessSection />
       <WhoWeAre />
+      <WhyChooseSleekIT />
       <WhoWeAre2 />
       <ContactSection />
       <Footer />

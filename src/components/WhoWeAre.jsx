@@ -66,11 +66,11 @@ const WhoWeAreSection = () => {
         { name: 'Nuxt.js', icon: 'nuxt' },
         { name: 'Node.js', icon: 'node' },
         { name: 'Bootstrap', icon: 'bootstrap' },
-        { name: 'Angular', icon: 'ruby' },
-        { name: 'Tailwind CSS', icon: 'ruby' },
-        { name: 'jQuery', icon: 'ruby' },
-        { name: 'Django', icon: 'ruby' },
-        { name: 'Ruby on Rails', icon: 'ruby' }
+        { name: 'Angular', icon: 'angular' },
+        { name: 'Tailwind CSS', icon: 'tailwind' },
+        { name: 'jQuery', icon: 'jquery' },
+        { name: 'Django', icon: 'django' },
+        { name: 'Ruby on Rails', icon: 'rails' }
       ]
     },
     {
@@ -105,8 +105,8 @@ const WhoWeAreSection = () => {
       items: [
         { name: 'Bluehost', icon: 'bluehost' },
         { name: 'GoDaddy', icon: 'godaddy' },
-        { name: 'Hostinger', icon: 'ruby' },
-        { name: 'SiteGround', icon: 'ruby' },
+        { name: 'Hostinger', icon: 'hostinger' },
+        { name: 'SiteGround', icon: 'siteground' },
         { name: 'HostGator', icon: 'hostgator' },
         { name: 'AWS', icon: 'aws' },
         { name: 'Google Cloud', icon: 'googlecloud' },

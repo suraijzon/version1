@@ -324,10 +324,10 @@
   .contact-right {
     width: 820px;        /* wider form */
     padding: 56px;      /* optional: more breathing space */
-    margin-left: -60px; /* reduce negative pull if needed */
+    margin-left: -30px; /* reduce negative pull if needed */
   }
   .contact-container {
-    gap: 20px;              /* reduce space between grid columns */
+    gap: 10px;              /* reduce space between grid columns */
   }
 }
 

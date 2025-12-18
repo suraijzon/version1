@@ -85,15 +85,6 @@ const WhoWeAreSection = () => {
     // Row 3
     [
       {
-        title: 'Servers & Web Servers',
-        items: [
-          { name: 'Nginx', icon: 'nginx' },
-          { name: 'LiteSpeed', icon: 'lightning' },
-          { name: 'Tomcat', icon: 'tomcat' },
-          { name: 'Apache', icon: 'apache' }
-        ]
-      },
-      {
         title: 'Monitoring & Analytics',
         items: [
           { name: 'Grafana', icon: 'grafana' },

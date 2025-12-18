@@ -124,9 +124,9 @@
   font-size: 1.15rem;
   font-weight: 600;
   font-family: Poppins, sans-serif;
-  color: #1e3a8a;
+  color: #1965bc;
   margin-bottom: 20px;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
 }
 
@@ -155,8 +155,8 @@
 
 /* Icon Circle */
 .tech-icon-circle {
-  width: 72px;
-  height: 72px;
+  width: 56px;
+  height: 56px;
   background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%);
   border-radius: 50%;
   display: flex;
@@ -164,7 +164,7 @@
   justify-content: center;
   transition: all 0.3s ease;
   border: 2px solid #e0e8ff;
-  padding: 14px;
+  padding: 10px;
   box-shadow: 0 2px 8px rgba(30, 58, 138, 0.08);
 }
 
@@ -177,20 +177,20 @@
 
 /* SVG Icon */
 .tech-svg-icon {
-  width: 100%;
-  height: 100%;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
 .tech-item:hover .tech-svg-icon {
   transform: scale(1.1);
-  filter: brightness(1.05);
+  filter: brightness(1.03);
 }
 
 /* Tech Label */
 .tech-label {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-family: Poppins, sans-serif;
   font-weight: 500;
   color: #1e293b;

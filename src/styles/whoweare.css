@@ -1,123 +1,23 @@
-/* Who We Are Section */
-.whoweare-section {
-  background: #f8f9fa;
-  padding: 50px 20px;
-  position: relative;
-  margin-bottom: 75px;
-  margin-top: -20px;
-}
+/* Add this to your existing whoweare.css file */
 
-.whoweare-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-/* Header */
-.whoweare-header {
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto 80px;
-}
-
-.whoweare-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 24px;
-  line-height: 1.3;
-}
-
-.whoweare-description {
-  font-size: 1.1rem;
-  font-family: Poppins;
-  font-weight: 500;
-  color: #000000;
-  line-height: 1.8;
-}
-.technologystack{
-  font-size: 40px;
-  color: darkblue;
-  font-family: Poppins;
-  padding-top: 25px;
-  font-weight: 600;
-}
-
-/* Technology Categories Grid */
-.tech-categories-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-/* Two column layout for last row */
-.tech-categories-grid.two-columns {
-  grid-template-columns: 1.3fr 1fr;
-}
-
-/* Hosting grid - more items per row */
-.hosting-grid {
-  grid-template-columns: repeat(5, 1fr);
-  column-gap: 8px;
-  row-gap: 12px;
-}
-
-/* Databases grid */
-.databases-grid {
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
-/* Category Card */
-.tech-category-card {
-  background: white;
-  border-color: rgb(210, 210, 210);
-  border-radius: 24px;
-  padding: 20px 28px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+/* SVG Icon Styling */
+.tech-svg-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
   transition: all 0.3s ease;
 }
 
-.tech-category-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+/* Hover effect for SVG icons */
+.tech-item:hover .tech-svg-icon {
+  transform: scale(1.15);
+  filter: brightness(1.1);
 }
 
-.category-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family: Poppins;
-  color: #1e3a8a;
-  margin-bottom: 24px;
-  text-align: left;
-}
-
-/* Tech Icons Wrapper */
-.tech-icons-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-
-.languages-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/* Tech Item */
-.tech-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-}
-
-.tech-item:hover {
-  transform: translateY(-4px);
-}
-
-/* Tech Icon Circle */
+/* Ensure the icon circle accommodates SVGs properly */
 .tech-icon-circle {
-  width: 30px;
-  height: 30px;
+  width: 70px;
+  height: 70px;
   background: #f0f4ff;
   border-radius: 50%;
   display: flex;
@@ -125,303 +25,38 @@
   justify-content: center;
   transition: all 0.3s ease;
   border: 2px solid #e0e8ff;
+  padding: 10px;
 }
 
-/* Default Icon Color */
-.tech-icon-circle i {
-  font-size: 1.3rem;
-  transition: all 0.3s ease;
-}
-
-/* Colorful Icons for Each Technology */
-/* WordPress */
-.fa-wordpress {
-  color: #21759b;
-}
-
-/* Joomla */
-.fa-joomla {
-  color: #5091cd;
-}
-
-/* Drupal */
-.fa-drupal {
-  color: #0678be;
-}
-
-/* PHP */
-.fa-php {
-  color: #777bb4;
-}
-
-/* Java */
-.fa-java {
-  color: #007396;
-}
-
-/* JavaScript */
-.fa-js {
-  color: #f7df1e;
-}
-
-/* Python */
-.fa-python {
-  color: #3776ab;
-}
-
-/* Swift */
-.fa-swift {
-  color: #fa7343;
-}
-
-/* Golang */
-.fa-golang {
-  color: #00add8;
-}
-
-/* Ruby */
-.fa-gem {
-  color: #cc342d;
-}
-
-/* Docker */
-.fa-docker {
-  color: #2496ed;
-}
-
-/* Kubernetes */
-.fa-dharmachakra {
-  color: #326ce5;
-}
-
-/* AWS */
-.fa-aws {
-  color: #ff9900;
-}
-
-/* Generic Code Icon */
-.fa-code {
-  color: #6c757d;
-}
-/* Add to the existing color section */
-
-/* Jenkins */
-.fa-jenkins {
-  color: #d24939;
-}
-
-/* GitHub */
-.fa-github {
-  color: #181717;
-}
-
-/* GitLab */
-.fa-gitlab {
-  color: #fc6d26;
-}
-
-/* Circle/CircleCI */
-.fa-circle {
-  color: #343434;
-}
-
-/* Shopify */
-.fa-shopify {
-  color: #96bf48;
-}
-
-/* Magento */
-.fa-magento {
-  color: #ee672f;
-}
-
-/* Cart Shopping */
-.fa-cart-shopping {
-  color: #96588a;
-}
-
-/* Laravel */
-.fa-laravel {
-  color: #ff2d20;
-}
-
-/* Symfony */
-.fa-symfony {
-  color: #000000;
-}
-
-/* Leaf (Spring Boot) */
-.fa-leaf {
-  color: #6db33f;
-}
-
-/* Node.js */
-.fa-node-js {
-  color: #339933;
-}
-
-/* Vue.js */
-.fa-vuejs {
-  color: #4fc08d;
-}
-
-/* React */
-.fa-react {
-  color: #61dafb;
-}
-
-/* N (Next.js) */
-.fa-n {
-  color: #000000;
-}
-.fa-server {
-  color: #0066cc;
-}
-
-.fa-cat {
-  color: #f8981d;
-}
-
-.fa-chart-line, .fa-chart-bar {
-  color: #f46800;
-}
-
-.fa-fire {
-  color: #e6522c;
-}
-
-.fa-cloudflare {
-  color: #f38020;
-}
-
-.fa-lock {
-  color: #28a745;
-}
-
-.fa-globe, .fa-h, .fa-cloud {
-  color: #0066cc;
-}
-
-.fa-microsoft {
-  color: #00a4ef;
-}
-
-.fa-digital-ocean {
-  color: #0080ff;
-}
-
-.fa-database {
-  color: #336791;
-}
-
-.fa-magnifying-glass {
-  color: #005571;
-}
-
-
-
-
-/* Add spacing between rows */
-.tech-categories-grid + .tech-categories-grid {
-  margin-top: 32px;
-}
-
-/* Frameworks grid - 5 columns, 2 rows */
-.frameworks-grid {
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-}
-
-/* Hover Effect - Keep colors but add brightness */
 .tech-item:hover .tech-icon-circle {
   background: white;
-  border-color: currentColor;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
 
-.tech-item:hover .tech-icon-circle i {
-  transform: scale(1.15);
-  filter: brightness(1.1);
-}
-
-/* Tech Label */
-.tech-label {
-  font-size: 0.7rem;
-  font-family: Poppins;
-  font-weight: 500;
-  color: #333;
-  text-align: center;
-  margin: 0;
-}
-
-/* Responsive Design */
+/* Responsive SVG sizes */
 @media (max-width: 768px) {
-  .tech-categories-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .tech-icons-wrapper {
-    grid-template-columns: repeat(4, 1fr);
+  .tech-svg-icon {
+    width: 35px;
+    height: 35px;
   }
   
-}
-
-@media (max-width: 768px) {
-  .whoweare-section {
-    padding: 60px 20px;
-  }
-
-  .whoweare-title {
-    font-size: 2rem;
-  }
-
-  .whoweare-description {
-    font-size: 1rem;
-  }
-
-  .tech-category-card {
-    padding: 32px 24px;
-  }
-
-  .category-title {
-    font-size: 1.3rem;
-  }
-
-  .tech-icons-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-
-  .languages-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .tech-icon-circle {
+    width: 60px;
+    height: 60px;
+    padding: 8px;
   }
 }
 
 @media (max-width: 480px) {
-  .whoweare-title {
-    font-size: 1.75rem;
+  .tech-svg-icon {
+    width: 30px;
+    height: 30px;
   }
-
-  .tech-icons-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .languages-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  
   .tech-icon-circle {
     width: 50px;
     height: 50px;
-  }
-
-  .tech-icon-circle i {
-    font-size: 1.4rem;
-  }
-}
-@media (max-width: 1200px) {
-  .tech-categories-grid.two-columns {
-    grid-template-columns: 1fr;
+    padding: 6px;
   }
 }

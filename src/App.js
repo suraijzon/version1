@@ -11,6 +11,7 @@ import ProcessSection from "./components/ProcessSection";
 import WhoWeAre from "./components/WhoWeAre";
 import WhyChooseSleekIT from "./components/WhyChooseSleekIT";
 import ContactSection from "./components/ContactSection";
+import ReviewSection from "./components/ReviewSection";
 import Footer from "./components/Footer";
 
 // Import pages
@@ -32,8 +33,9 @@ const HomePage = () => {
       <SuccessSection />
       <ProcessSection />
       <WhoWeAre />
-      <WhyChooseSleekIT />
+      <WhyChooseSleekIT /> 
       <ContactSection />
+      <ReviewSection />
       <Footer />
     </>
   );

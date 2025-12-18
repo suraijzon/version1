@@ -102,7 +102,7 @@
 /* Horizontal Items Container */
 .tech-items-horizontal {
   display: flex;
-  gap: 32px;
+  gap: 16px;
   padding: 10px 5px;
   min-width: min-content;
 }

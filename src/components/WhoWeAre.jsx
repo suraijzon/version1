@@ -1,12 +1,10 @@
 import React from 'react';
 import '../styles/whoweare.css';
 
-// Import all SVG icons with .default for proper webpack handling
 const importIcon = (iconName) => {
   try {
-    return require(`../assets/icons/${iconName}.svg`).default || require(`../assets/icons/${iconName}.svg`);
-  } catch (e) {
-    console.error(`Failed to load icon: ${iconName}`);
+    return require(`../assets/icons/${iconName}.svg`).default;
+  } catch {
     return null;
   }
 };
@@ -35,22 +33,6 @@ const WhoWeAreSection = () => {
         { name: 'Docker', icon: 'docker' },
         { name: 'Kubernetes', icon: 'kubernetes' },
         { name: 'AWS ECS', icon: 'aws' }
-      ]
-    },
-    {
-      title: 'CMS Platforms',
-      items: [
-        { name: 'WordPress', icon: 'wordpress' },
-        { name: 'Joomla', icon: 'joomla' },
-        { name: 'Drupal', icon: 'drupal' },
-        { name: 'Strapi', icon: 'strapi' },
-        { name: 'Typo3', icon: 'magento' },
-        { name: 'Magento', icon: 'magento' },
-        { name: 'Grav', icon: 'grav' },
-        { name: 'Ghost', icon: 'ghost' },
-        { name: 'Umbraco', icon: 'umbraco' },
-        { name: 'Squarespace', icon: 'squarespace' },
-        { name: 'Webflow', icon: 'webflow' }
       ]
     },
     {
@@ -101,39 +83,6 @@ const WhoWeAreSection = () => {
       ]
     },
     {
-      title: 'Hosting Providers',
-      items: [
-        { name: 'Bluehost', icon: 'bluehost' },
-        { name: 'GoDaddy', icon: 'godaddy' },
-        { name: 'Hostinger', icon: 'ruby' },
-        { name: 'SiteGround', icon: 'ruby' },
-        { name: 'HostGator', icon: 'hostgator' },
-        { name: 'AWS', icon: 'aws' },
-        { name: 'Google Cloud', icon: 'googlecloud' },
-        { name: 'Azure', icon: 'microsoft-azure' },
-        { name: 'DigitalOcean', icon: 'digitalocean' },
-        { name: 'Linode', icon: 'linode' }
-      ]
-    },
-    {
-      title: 'E-Commerce Platforms',
-      items: [
-        { name: 'Shopify', icon: 'shopify' },
-        { name: 'WooCommerce', icon: 'woocommerce' },
-        { name: 'Magento', icon: 'magento' },
-        { name: 'OpenCart', icon: 'opencart' }
-      ]
-    },
-    {
-      title: 'Web Servers',
-      items: [
-        { name: 'LiteSpeed', icon: 'lightning' },
-        { name: 'Tomcat', icon: 'tomcat' },
-        { name: 'Caddy', icon: 'ruby' },
-        { name: 'Go', icon: 'go' }
-      ]
-    },
-    {
       title: 'Databases',
       items: [
         { name: 'MySQL', icon: 'mysql' },
@@ -149,46 +98,25 @@ const WhoWeAreSection = () => {
 
   return (
     <section className="whoweare-section">
-      <div className="whoweare-container">
-        {/* Header Text */}
-        <div className="whoweare-header">
-          <h2 className="whoweare-title">
-            Who We Are & Why Choose <span className="highlight">Zonzoctech</span>
-          </h2>
-          <p className="whoweare-description">
-            At Zonzoctech, we're more than just a digital agency—we're your growth partner. 
-            With over a decade of experience, we specialize in building modern websites, 
-            boosting visibility through smart SEO, and integrating cutting-edge AI technologies 
-            to future-proof your business.
-          </p>
-          <h3 className='technologystack'>OUR TECHNOLOGY STACK</h3>
-        </div>
+      <h2 className="stack-title">OUR TECHNOLOGY STACK</h2>
 
-        {/* Technology Categories - Horizontal Scroll Layout */}
-        <div className="tech-categories-wrapper">
-          {categories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="tech-category-row">
-              <h3 className="category-title-horizontal">{category.title}</h3>
-              <div className="tech-scroll-container">
-                <div className="tech-items-horizontal">
-                  {category.items.map((tech, index) => (
-                    <div key={index} className="tech-item-horizontal">
-                      <div className="tech-icon-circle-horizontal">
-                        <img 
-                          src={importIcon(tech.icon)} 
-                          alt={tech.name} 
-                          className="tech-svg-icon-horizontal"
-                        />
-                      </div>
-                      <p className="tech-label-horizontal">{tech.name}</p>
-                    </div>
-                  ))}
+      <div className="stack-grid">
+        {categories.map((cat, i) => (
+          <div className="stack-card" key={i}>
+            <h3>{cat.title}</h3>
+
+            <div className="stack-items">
+              {cat.items.map((item, idx) => (
+                <div className="stack-item" key={idx}>
+                  <div className="icon-circle">
+                    <img src={importIcon(item.icon)} alt={item.name} />
+                  </div>
+                  <span>{item.name}</span>
                 </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-
+          </div>
+        ))}
       </div>
     </section>
   );

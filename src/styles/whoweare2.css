@@ -1,278 +1,87 @@
-/* Banner Section */
-.whoweare-banner {
-  background: white;
-  padding: 60px 0 40px;
-  margin-bottom: 0px;
-  margin-top: -100px;
+/* Section */
+.why-section {
+  padding: 80px 20px;
+  background: #ffffff;
 }
 
-.banner-content {
-  max-width: 1400px;
+.why-container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
-.banner-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #1e3a8a;
-  margin-top: -30px;
-  margin-bottom: 22px;
-  line-height: 1.2;
-  text-align: left;
-}
-
-.banner-title .highlight {
-  color: #1e3a8a;
-}
-
-.banner-description {
-  font-size: 1.2rem;
-  color: #333;
-  line-height: 1.8;
-  margin-bottom: 0;
-  text-align: left;
-}
-
-/* Two Column Split Section */
-.whoweare-split-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  background: white;
-  margin-bottom: 60px;
-}
-
-/* Left Side - Image */
-.split-left {
-  position: relative;
-}
-
-.image-wrapper {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.section-image {
-  width: 80%;
-  height: 65%;
-  margin-left: 70px;
-  margin-top: 30px;
-  object-fit: cover;
-  display: block;
-  border-radius: 20px;
- 
-}
-
-/* Right Side - Benefits */
-.split-right {
-  padding: 20px 80px 60px 60px;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: -30px;
-}
-
-.mission-text {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 0px;
-  margin-top: -50px;
-
-}
-
-.benefits-heading {
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: #1e3a8a;
-  margin-bottom: 15px;
-  line-height: 1.2;
- 
-}
-
-/* Benefits List */
-.benefits-list {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 10px;
-}
-
-.benefit-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 10px;
-  font-size: 1.15rem;
-  color: #333;
-  line-height: 1.5;
-}
-
-.benefit-dot {
-  color: #1e3a8a;
-  font-size: 1.5rem;
-  line-height: 1;
-  flex-shrink: 0;
-  margin-top: -2px;
-}
-
-.benefit-text {
-  flex: 1;
-}
-
-/* Button styling */
-.split-right .all-works-btn {
-  margin-top: -10px;
-  margin-left: 50px;
-  padding: 16px 40px;
-  background: #00448f;
-  color: white;
-  border: none;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  align-self: flex-start;
-  min-width: 300px;
-}
-
-.split-right .all-works-btn:hover {
-  background: #152d6e;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.3);
-}
-
-.split-right .btn-text {
-  display: block;
-  position: relative;
-  height: 24px;
-  overflow: hidden;
-}
-
-.split-right .btn-text span {
-  display: block;
-  transition: transform 0.3s ease;
+/* Header */
+.why-header {
   text-align: center;
-  line-height: 24px;
+  margin-bottom: 50px;
 }
 
-.split-right .btn-text span:first-child {
-  position: relative;
+.why-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 12px;
 }
 
-.split-right .btn-text span:last-child {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
+.why-header p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
-.split-right .all-works-btn:hover .btn-text span:first-child {
-  transform: translateY(-100%);
+/* Cards Grid */
+.why-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
 }
 
-.split-right .all-works-btn:hover .btn-text span:last-child {
-  transform: translateY(-100%);
+/* Card */
+.why-card {
+  background: #f9fafb;
+  border: 2px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 30px 24px;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-/* Responsive Design */
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  border-color: #2563eb;
+}
+
+/* Icon */
+.why-icon {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+/* Text */
+.why-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1965bc;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .banner-title {
-    font-size: 1.8rem;
-    text-align: center;
+  .why-header h2 {
+    font-size: 2rem;
   }
 
-  .banner-description {
-    font-size: 14.5px;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: -45px;
-  }
-  
-  .whoweare-split-section {
-    grid-template-columns: 1fr;
-  }
-  
-  .section-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    border-radius: 20px;
-    margin-top: 30px;
-    margin-left: 0px;
-  }
-
-  .split-right {
-    padding: 32px 20px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    margin-left: 0 !important;
-  }
-
-  .benefits-heading {
-    font-size: 1.4rem;
-    text-align: center;
-  }
-  
-  .benefit-item {
-    font-size: 14px;
-    font-weight: 500;
-    padding-left: 5px;
-  }
-  
-  .benefit-dot {
-    margin-left: 25px;
-    font-size: 14px;
-    line-height: 22px;
-    margin-right: -5px;
-  }
-
-  .mission-text {
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    margin-left: 22px;
-    margin-top: 0px;
-    padding-bottom: 10px;
-  }
-  
-  .benefits-list {
-    margin-bottom: 0;
-  }
-  
-  /* Button wrapper for perfect centering on mobile */
-  .button-wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-  
-  /* Make button visible and centered on mobile */
-  .split-right .all-works-btn {
-    margin: 0 !important;
-    padding: 14px 20px !important;
-    font-size: 0.85rem !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 280px !important;
-    min-width: 280px !important;
-  }
-  
-  .split-right .btn-text {
-    height: 20px;
-  }
-  
-  .split-right .btn-text span {
-    line-height: 20px;
-    font-size: 0.85rem;
+  .why-header p {
+    font-size: 1rem;
   }
 }

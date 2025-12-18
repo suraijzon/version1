@@ -161,29 +161,32 @@ const WhoWeAreSection = () => {
             to future-proof your business.
           </p>
           <h3 className='technologystack'>OUR TECHNOLOGY STACK</h3>
-        </div></div>
+        </div>
+        </div>
 
         {/* Technology Categories - Horizontal Scroll Layout */}
-        <div className="categories-scroll-wrapper">
-  <div className="categories-scroll">
-    {categories.map((category, index) => (
-      <div key={index} className="tech-category-row">
-        <h3 className="category-title-horizontal">{category.title}</h3>
-        <div className="tech-scroll-container">
-          <div className="tech-items-horizontal">
-            {category.items.map((tech, i) => (
-              <div key={i} className="tech-item-horizontal">
-                <div className="tech-icon-circle-horizontal">
-                  <img src={importIcon(tech.icon)} alt={tech.name} className="tech-svg-icon-horizontal" />
-                </div>
-                <p className="tech-label-horizontal">{tech.name}</p>
+        <div className="categories-grid">
+  {categories.slice(0, 12).map((category, index) => (  // limit to max 12 for 4 rows
+    <div key={index} className="tech-category-row">
+      <h3 className="category-title-horizontal">{category.title}</h3>
+      <div className="tech-scroll-container">
+        <div className="tech-items-horizontal">
+          {category.items.map((tech, i) => (
+            <div key={i} className="tech-item-horizontal">
+              <div className="tech-icon-circle-horizontal">
+                <img 
+                  src={importIcon(tech.icon)} 
+                  alt={tech.name} 
+                  className="tech-svg-icon-horizontal"
+                />
               </div>
-            ))}
-          </div>
+              <p className="tech-label-horizontal">{tech.name}</p>
+            </div>
+          ))}
         </div>
       </div>
-    ))}
-  </div>
+    </div>
+  ))}
 </div>
 
     </section>

@@ -16,7 +16,6 @@ const WhoWeAreSection = () => {
     {
       title: 'Programming Languages',
       items: [
-        { name: 'PHP', icon: 'php' },
         { name: 'Java', icon: 'java' },
         { name: 'JavaScript', icon: 'javascript' },
         { name: 'TypeScript', icon: 'typescript' },
@@ -56,7 +55,6 @@ const WhoWeAreSection = () => {
     {
       title: 'Frameworks & Libraries',
       items: [
-        { name: 'Laravel', icon: 'laravel' },
         { name: 'Symfony', icon: 'symfony' },
         { name: 'Spring Boot', icon: 'springboot' },
         { name: 'Express.js', icon: 'express' },
@@ -64,9 +62,8 @@ const WhoWeAreSection = () => {
         { name: 'React.js', icon: 'react' },
         { name: 'Next.js', icon: 'next' },
         { name: 'Nuxt.js', icon: 'nuxt' },
-        { name: 'Node.js', icon: 'node' },
-        { name: 'Bootstrap', icon: 'bootstrap' },
         { name: 'Angular', icon: 'angular' },
+        { name: 'Bootstrap', icon: 'bootstrap' },
         { name: 'Tailwind CSS', icon: 'tailwind' },
         { name: 'jQuery', icon: 'jquery' },
         { name: 'Django', icon: 'django' },
@@ -95,9 +92,18 @@ const WhoWeAreSection = () => {
       title: 'Cloud & Security',
       items: [
         { name: 'Cloudflare', icon: 'cloudflare' },
-        { name: 'SSL Certificates', icon: 'ruby' },
+        { name: 'SSL', icon: 'ruby' },
         { name: 'SEO & Speed', icon: 'seo' },
         { name: 'AWS', icon: 'aws' }
+      ]
+    },
+    {
+      title: 'Servers & Web Servers',
+      items: [
+        { name: 'Nginx', icon: 'nginx' },
+        { name: 'LiteSpeed', icon: 'lightning' },
+        { name: 'Tomcat', icon: 'tomcat' },
+        { name: 'Apache', icon: 'apache' }
       ]
     },
     {
@@ -121,15 +127,6 @@ const WhoWeAreSection = () => {
         { name: 'WooCommerce', icon: 'woocommerce' },
         { name: 'Magento', icon: 'magento' },
         { name: 'OpenCart', icon: 'opencart' }
-      ]
-    },
-    {
-      title: 'Web Servers',
-      items: [
-        { name: 'LiteSpeed', icon: 'lightning' },
-        { name: 'Tomcat', icon: 'tomcat' },
-        { name: 'Caddy', icon: 'ruby' },
-        { name: 'Go', icon: 'go' }
       ]
     },
     {
@@ -162,26 +159,33 @@ const WhoWeAreSection = () => {
           </p>
           <h3 className='technologystack'>OUR TECHNOLOGY STACK</h3>
         </div>
+
+        {/* Technology Categories - 3 Column Grid Layout */}
+        <div className="tech-categories-grid">
+          {categories.map((category, categoryIndex) => (
+            <div key={categoryIndex} className="tech-category-card">
+              <h3 className="category-title">{category.title}</h3>
+              <div className="tech-scroll-wrapper">
+                <div className="tech-items-scroll">
+                  {category.items.map((tech, index) => (
+                    <div key={index} className="tech-item">
+                      <div className="tech-icon-circle">
+                        <img 
+                          src={importIcon(tech.icon)} 
+                          alt={tech.name} 
+                          className="tech-svg-icon"
+                        />
+                      </div>
+                      <p className="tech-label">{tech.name}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Technology Categories - Horizontal Scroll Layout */}
-        <div className="tech-scroll-container">
-  <div className="tech-items-horizontal">
-    {category.items.map((tech, i) => (
-      <div key={i} className="tech-item-horizontal">
-        <div className="tech-icon-circle-horizontal">
-          <img 
-            src={importIcon(tech.icon)} 
-            alt={tech.name} 
-            className="tech-svg-icon-horizontal"
-          />
-        </div>
-        <p className="tech-label-horizontal">{tech.name}</p>
       </div>
-    ))}
-  </div>
-</div>
-
     </section>
   );
 };

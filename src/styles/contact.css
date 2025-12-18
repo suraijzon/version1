@@ -326,6 +326,9 @@
     padding: 56px;      /* optional: more breathing space */
     margin-left: -60px; /* reduce negative pull if needed */
   }
+  .contact-container {
+    gap: 20px;              /* reduce space between grid columns */
+  }
 }
 
 @media (max-width: 1024px) {

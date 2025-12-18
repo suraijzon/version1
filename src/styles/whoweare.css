@@ -9,7 +9,7 @@
 }
 
 .whoweare-container {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -34,6 +34,8 @@
   font-weight: 500;
   color: #000000;
   line-height: 1.8;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .technologystack {
@@ -46,28 +48,53 @@
   text-transform: uppercase;
 }
 
-/* Grid Layout - 3 columns */
-.tech-categories-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 40px;
+/* Scrolling Container - Cards move here */
+.tech-scroll-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
 }
 
-/* Category Card - Auto width based on content */
+/* Cards Track - This moves with animation */
+.tech-cards-track {
+  display: flex;
+  gap: 24px;
+  animation: scroll-cards 40s linear infinite;
+  width: max-content;
+}
+
+/* Pause animation on hover */
+.tech-scroll-container:hover .tech-cards-track {
+  animation-play-state: paused;
+}
+
+/* Scroll Animation - Cards move left to right */
+@keyframes scroll-cards {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Category Card - Static width based on content */
 .tech-category-card {
   background: white;
   border-radius: 16px;
   padding: 28px 24px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
-  overflow: hidden;
-  position: relative;
+  flex-shrink: 0;
+  min-width: 280px;
+  max-width: fit-content;
 }
 
 .tech-category-card:hover {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 .category-title {
@@ -77,41 +104,17 @@
   color: #1e3a8a;
   margin-bottom: 20px;
   text-align: left;
+  white-space: nowrap;
 }
 
-/* Scroll Wrapper - No scrollbar, hidden overflow */
-.tech-scroll-wrapper {
-  overflow: hidden;
-  position: relative;
-  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-}
-
-/* Items Container - Auto-scroll animation */
-.tech-items-scroll {
+/* Items Wrapper - No scrolling, just flexbox */
+.tech-items-wrapper {
   display: flex;
   gap: 20px;
-  padding: 8px 0;
-  animation: scroll-horizontal 20s linear infinite;
-  width: max-content;
+  flex-wrap: nowrap;
 }
 
-/* Pause animation on hover */
-.tech-category-card:hover .tech-items-scroll {
-  animation-play-state: paused;
-}
-
-/* Scroll Animation - Left to Right */
-@keyframes scroll-horizontal {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% - 10px));
-  }
-}
-
-/* Individual Tech Item */
+/* Individual Tech Item - Static, no animation */
 .tech-item {
   display: flex;
   flex-direction: column;
@@ -171,20 +174,10 @@
   text-align: center;
   margin: 0;
   white-space: nowrap;
-  max-width: 90px;
-  overflow: hidden;
-  text-overflow: ellipsis;
   line-height: 1.2;
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .tech-categories-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
 @media (max-width: 768px) {
   .whoweare-section {
     padding: 40px 15px;
@@ -202,13 +195,13 @@
     font-size: 2rem;
   }
 
-  .tech-categories-grid {
-    grid-template-columns: 1fr;
+  .tech-cards-track {
     gap: 16px;
   }
 
   .tech-category-card {
     padding: 20px 16px;
+    min-width: 240px;
   }
 
   .category-title {
@@ -216,7 +209,7 @@
     margin-bottom: 16px;
   }
 
-  .tech-items-scroll {
+  .tech-items-wrapper {
     gap: 16px;
   }
 
@@ -232,7 +225,6 @@
 
   .tech-label {
     font-size: 0.75rem;
-    max-width: 75px;
   }
 }
 
@@ -245,15 +237,20 @@
     font-size: 1.75rem;
   }
 
+  .tech-cards-track {
+    gap: 12px;
+  }
+
   .tech-category-card {
     padding: 16px 12px;
+    min-width: 200px;
   }
 
   .category-title {
     font-size: 0.95rem;
   }
 
-  .tech-items-scroll {
+  .tech-items-wrapper {
     gap: 14px;
   }
 
@@ -269,6 +266,5 @@
 
   .tech-label {
     font-size: 0.7rem;
-    max-width: 65px;
   }
 }

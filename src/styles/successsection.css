@@ -113,7 +113,7 @@
 }
 
 .project-card {
-  border: 3px solid #00bfc1;
+  border: 3px solid #00448f;
   border-radius: 20px;
   overflow: hidden;
   text-align: left;
@@ -127,6 +127,17 @@
   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
   z-index: 2;                       
 }
+/* Pause slider when hovering a card or track */
+.projects-track:hover {
+  animation-play-state: paused;
+}
+
+/* Optional: also pause when hovering a card itself */
+.project-card:hover ~ .projects-track,
+.project-card:hover {
+  animation-play-state: paused;
+}
+
 
 .project-img {
   width: 100%;

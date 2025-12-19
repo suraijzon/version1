@@ -226,9 +226,6 @@ input[type="range"]::-moz-range-thumb {
   justify-content: center;
   transition: all 0.3s ease;
 }
-.popup-actions .cancel-btn{
-   padding: 13px 28px !important; 
-}
 
 .popup-actions .submit-btn {
   background-color: #0047ab;

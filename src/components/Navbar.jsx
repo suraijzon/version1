@@ -133,7 +133,7 @@ const Navbar = () => {
             <div className="dropdown-content">
               <div className="dropdown-column">
                 <h4>AI Strategy & Core Services</h4>
-                <a href="/">AI Readiness Assessment</a>
+                <a href="/ai-website-design">AI Readiness Assessment</a>
                 <a href="/ai-seo">AI Strategy & Consulting</a>
                 <a href="/">AI Proof of Concept (PoC) Development</a>
                 <a href="/">Custom AI & GPT Integration</a>

@@ -241,58 +241,61 @@
 }
 
 @media (max-width: 768px) {
-.rating-number {
-  font-size: 20px;  
-  font-weight: 800;
-  color: #0066ff;
-  line-height: 1;
-  margin: 0 10px;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: -0.05em;
-}
-
-
-  .reviews-section {
+ .reviews-section {
     padding: 60px 15px;
   }
 
+  /* Center Everything on Mobile */
   .reviews-left {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 24px;
+    padding-top: 0;
   }
 
   .rating-display {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 16px;
+    width: 100%;
+  }
+
+  .rating-number {
+    font-size: 7rem;
+    margin: 0;
+    text-align: center;
   }
 
   .rating-stars-large {
     flex-direction: row;
+    justify-content: center;
+    margin-left: 0;
+    gap: 6px;
   }
 
-   .reviews-heading {
-    font-size: 2.5rem;
-    line-height: 1.2;       
-    white-space: nowrap;    
-    text-align: center;     
-  }
+  .star-icon {
+    font-size: 1.8rem;
   }
 
-  .review-card {
-    min-height: auto;       
-    padding: 20px 16px;     
-    max-width: 320px;       
-    margin: 0 auto;         
+  /* Center Badge */
+  .reviews-count-badge {
+    margin-left: 0;
+    padding: 16px 28px;
+    text-align: center;
+    width: fit-content;
   }
 
-  .review-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;              
-    margin-left: 0;         
-    justify-items: center;  
+  .reviews-count {
+    font-size: 1.6rem;
+    text-align: center;
   }
+
+  .reviews-label {
+    padding-left: 0;
+    font-size: 1rem;
+  }
+}
 
 @media (max-width: 576px) {
   .rating-number {

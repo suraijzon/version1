@@ -28,6 +28,8 @@
 /* Left copy */
 .hero-copy{
   padding: 10px 10px;
+  position: relative;
+  z-index: 3;
 }
 
 .hero-title{
@@ -162,7 +164,7 @@
 /* Responsiveness */
 @media (min-width: 1400px){
   .hero-title{
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 @media (max-width: 1100px){

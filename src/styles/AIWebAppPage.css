@@ -684,6 +684,9 @@
   .aiwa__hero_title {
     font-size: 2.5rem;
   }
+  .aiwa__hero_badge {
+    margin-top: 1rem;
+  }
 
   .aiwa__heading {
     font-size: 2.2rem;

@@ -22,7 +22,11 @@ import Signup from './pages/Signup';
 import UserProfile from './pages/UserProfile';
 import AdminDashboard from './pages/AdminDashboard';
 import ContactUs from './pages/ContactUs';
-
+import AIOptimizationPage from "./pages/AIOptimizationPage";
+import AIWebAppPage from "./pages/AIWebAppPage";
+import EcommercePage from "./pages/EcommercePage";
+import AISoftwareServices from './pages/AISoftwareServices';
+import FullStackWebDev from './pages/FullStackWebDev';
 
 // Home Page Component
 const HomePage = () => {
@@ -57,10 +61,14 @@ function App() {
           {/* Service Pages */}
           <Route path="/services/seo/google-search-console" element={<GoogleSearchConsole />} />
           <Route path="/ai-seo" element={<AiSeoServices />} />
+          <Route path="/ai-software-development" element={<AISoftwareServices />} />
+          <Route path="/full-stack-web-development" element={<FullStackWebDev />} />
           
           {/* Contact Page */}
           <Route path="/contact-us" element={<ContactUs />} />
-        
+          <Route path="/ai-search-optimization" element={<AIOptimizationPage />} />
+          <Route path="/ai-web-app" element={<AIWebAppPage />} />
+          <Route path="/ecommerce" element={<EcommercePage />} />
 
           {/* User & Admin Pages */}
           <Route path="/user-profile" element={<UserProfile />} />

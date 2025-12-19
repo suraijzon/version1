@@ -8,11 +8,13 @@ const AIOptimizationPage = () => {
     <>
       <Navbar />
 
-      <main className="ai-page">
-        <section className="hero-section">
-          <div className="container">
+      <main className="aiopt-page">
+
+        {/* Hero Section */}
+        <section className="aiopt-hero">
+          <div className="aiopt-container">
             <h1>AI Search Optimization Services</h1>
-            <p className="hero-subtitle">
+            <p className="aiopt-hero-subtitle">
               AI Search Optimization That Helps Your Brand Appear in Google, AI Answers & Voice Search
             </p>
             <p>
@@ -20,21 +22,22 @@ const AIOptimizationPage = () => {
               where search is no longer limited to blue links. Our strategies optimize your website for
               Google Search, AI Overviews, generative engines, voice search, and answer-based platforms.
             </p>
-            <a href="#audit" className="btn-primary">
+            <a href="#audit" className="aiopt-btn-primary">
               👉 Get a Free AI Search Visibility Audit
             </a>
           </div>
         </section>
 
-        <section className="section">
-          <div className="container">
+        {/* What is AI Search Optimization */}
+        <section className="aiopt-section">
+          <div className="aiopt-container">
             <h2>What Is AI Search Optimization?</h2>
             <p>
               AI search optimization is the process of optimizing websites so they are understood, trusted,
               and surfaced by AI-powered search systems. This includes Google’s AI-driven results, answer
               engines, and conversational search platforms.
             </p>
-            <ul className="bullet-list">
+            <ul className="aiopt-bullet-list">
               <li>Structured understanding</li>
               <li>Clear topical authority</li>
               <li>Entity recognition</li>
@@ -43,10 +46,11 @@ const AIOptimizationPage = () => {
           </div>
         </section>
 
-        <section className="section bg-light">
-          <div className="container">
+        {/* Who Needs AI Search Optimization */}
+        <section className="aiopt-section aiopt-bg-light">
+          <div className="aiopt-container">
             <h2>Who Needs AI Search Optimization?</h2>
-            <ul className="bullet-list">
+            <ul className="aiopt-bullet-list">
               <li>Businesses experiencing declining organic visibility</li>
               <li>Brands affected by AI Overviews or zero-click searches</li>
               <li>Companies relying on organic leads</li>
@@ -57,10 +61,11 @@ const AIOptimizationPage = () => {
           </div>
         </section>
 
-        <section className="section">
-          <div className="container">
+        {/* Problems We Solve */}
+        <section className="aiopt-section">
+          <div className="aiopt-container">
             <h2>Problems We Solve with AI Search Optimization</h2>
-            <ul className="bullet-list">
+            <ul className="aiopt-bullet-list">
               <li>Reduced clicks due to AI answers</li>
               <li>Content not appearing in AI summaries</li>
               <li>Poor topical authority signals</li>
@@ -71,10 +76,11 @@ const AIOptimizationPage = () => {
           </div>
         </section>
 
-        <section className="section bg-light">
-          <div className="container">
+        {/* Our Services */}
+        <section className="aiopt-section aiopt-bg-light">
+          <div className="aiopt-container">
             <h2>Our AI Search Optimization Services</h2>
-            <ul className="bullet-list">
+            <ul className="aiopt-bullet-list">
               <li>Generative Engine Optimization (GEO)</li>
               <li>Entity-Based SEO & Knowledge Graph Optimization</li>
               <li>AI-Friendly Content Structuring</li>
@@ -87,10 +93,11 @@ const AIOptimizationPage = () => {
           </div>
         </section>
 
-        <section className="section">
-          <div className="container">
+        {/* AI vs Traditional SEO */}
+        <section className="aiopt-section">
+          <div className="aiopt-container">
             <h2>AI Search Optimization vs Traditional SEO</h2>
-            <div className="table-comparison">
+            <div className="aiopt-table-comparison">
               <table>
                 <thead>
                   <tr>
@@ -121,10 +128,11 @@ const AIOptimizationPage = () => {
           </div>
         </section>
 
-        <section className="section bg-light">
-          <div className="container">
+        {/* Process */}
+        <section className="aiopt-section aiopt-bg-light">
+          <div className="aiopt-container">
             <h2>Our AI Search Optimization Process</h2>
-            <ol className="process-list">
+            <ol className="aiopt-process-list">
               <li><strong>AI Search Audit:</strong> We analyze how your site appears in AI-generated answers and search features.</li>
               <li><strong>Content & Entity Mapping:</strong> We align your content with clear entities, topics, and search intent.</li>
               <li><strong>Technical & Schema Optimization:</strong> We implement structured data and technical fixes for AI readability.</li>
@@ -134,10 +142,11 @@ const AIOptimizationPage = () => {
           </div>
         </section>
 
-        <section className="section">
-          <div className="container">
+        {/* Tools */}
+        <section className="aiopt-section">
+          <div className="aiopt-container">
             <h2>Tools & Techniques We Use</h2>
-            <ul className="bullet-list">
+            <ul className="aiopt-bullet-list">
               <li>Structured data & schema</li>
               <li>Search intent modeling</li>
               <li>Content clustering & entity mapping</li>
@@ -148,10 +157,11 @@ const AIOptimizationPage = () => {
           </div>
         </section>
 
-        <section className="section bg-light">
-          <div className="container">
+        {/* Why Choose Us */}
+        <section className="aiopt-section aiopt-bg-light">
+          <div className="aiopt-container">
             <h2>Why Choose ZonzocTech for AI Search Optimization?</h2>
-            <ul className="bullet-list">
+            <ul className="aiopt-bullet-list">
               <li>Early-mover expertise in AI-driven search</li>
               <li>Strong foundation in technical SEO</li>
               <li>Business-focused visibility strategy</li>
@@ -161,10 +171,11 @@ const AIOptimizationPage = () => {
           </div>
         </section>
 
-        <section className="section">
-          <div className="container">
+        {/* FAQ */}
+        <section className="aiopt-section">
+          <div className="aiopt-container">
             <h2>Frequently Asked Questions</h2>
-            <ul className="faq-list">
+            <ul className="aiopt-faq-list">
               <li><strong>Is AI search optimization the same as SEO?</strong> No. AI search optimization extends SEO by optimizing for how AI systems understand, summarize, and recommend content.</li>
               <li><strong>Will AI search replace traditional SEO?</strong> Not completely — but it is changing how visibility works. Both should work together.</li>
               <li><strong>Can existing websites be optimized for AI search?</strong> Yes. We optimize existing sites with content, structure, and technical improvements.</li>
@@ -173,13 +184,15 @@ const AIOptimizationPage = () => {
           </div>
         </section>
 
-        <section className="cta-section">
-          <div className="container">
+        {/* CTA */}
+        <section className="aiopt-cta">
+          <div className="aiopt-container">
             <h2>Ready to Optimize for the Future of Search?</h2>
             <p>If your business depends on search visibility, now is the time to prepare for AI-driven discovery.</p>
-            <a href="#audit" className="btn-primary">👉 Get a Free AI Search Visibility Audit</a>
+            <a href="#audit" className="aiopt-btn-primary">👉 Get a Free AI Search Visibility Audit</a>
           </div>
         </section>
+
       </main>
 
       <Footer />

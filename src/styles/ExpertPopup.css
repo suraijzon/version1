@@ -243,7 +243,8 @@ input[type="range"]::-moz-range-thumb {
 
 /* Cancel button styles */
 .popup-actions .cancel-btn {
-  background-color: #e8dcdf; 
+  background-color: #e8dcdf;
+  color: black; 
 }
 
 .popup-actions .cancel-btn:hover {

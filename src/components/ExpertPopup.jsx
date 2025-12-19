@@ -83,11 +83,11 @@ const ExpertPopup = ({ open, onClose }) => {
             </select>
 
             <label className="budget-label">
-              Estimated Budget (AED): {budget}
+              Estimated Budget (USD): {budget}
             </label>
             <input
               type="range"
-              min="30000"
+              min="5000"
               max="65000"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}

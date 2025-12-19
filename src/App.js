@@ -22,6 +22,7 @@ import Signup from './pages/Signup';
 import UserProfile from './pages/UserProfile';
 import AdminDashboard from './pages/AdminDashboard';
 import ContactUs from './pages/ContactUs';
+import AIOptimizationPage from "./pages/AIOptimizationPage";
 
 // Home Page Component
 const HomePage = () => {
@@ -59,6 +60,7 @@ function App() {
           
           {/* Contact Page */}
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/ai-search-optimization" element={<AIOptimizationPage />} />
 
           {/* User & Admin Pages */}
           <Route path="/user-profile" element={<UserProfile />} />

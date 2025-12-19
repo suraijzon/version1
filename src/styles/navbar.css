@@ -845,6 +845,10 @@
   .logo-mobile {
     height: 28px;
   }
+  .contact-btn {
+    font-size: 15px;        /* SAME as Client Login */
+    font-weight: 600;
+  }
 }
 
 /* Small Mobile (480px and below) */

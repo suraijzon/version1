@@ -710,6 +710,7 @@
   .ecd__process_step {
     flex-direction: column;
   }
+  
 
   .ecd__process_timeline::before {
     left: 25px;
@@ -717,6 +718,10 @@
 
   .ecd__cta_title {
     font-size: 2.5rem;
+  }
+  .ecd__comparison_divider {
+    margin-top: 8rem;
+    margin-bottom: -12rem;
   }
 }
 

@@ -445,41 +445,61 @@
 }
 
 @media (max-width: 768px) {
-  .why-choose-section{
+   .why-choose-section {
     margin-bottom: 50px;
-    align-items: center;
+    padding: 60px 20px;
+  }
+
+  .why-choose-container {
+    gap: 60px;
+  }
+
+  .why-choose-left {
+    padding: 0 20px;
     text-align: center;
   }
+
+  .section-subtitle {
+    text-align: center;
+  }
+
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    text-align: center;
   }
 
-  .hero-card {
-    width: 350px;
-    height: 350px;
-    padding: 30px;
+  .section-description {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto 40px;
   }
 
-  .hero-title {
-    font-size: 1.5rem;
+  .benefits-list {
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
-  .hero-description {
-    font-size: 0.85rem;
+  .benefit-item {
+    justify-content: center;
+    text-align: left;
+    width: 100%;
   }
 
-  .hero-image {
-    width: 200px;
-    height: 200px;
+  .why-choose-right {
+    height: auto;
+  }
+
+  .hero-main-image {
+    max-width: 100%;
   }
 
   .notification-card,
-  .stats-card {
+  .stats-card,
+  .new-client-btn {
     display: none;
-    min-width: 240px;
   }
 }
-
 @media (max-width: 576px) {
   .why-choose-section {
     padding: 60px 15px;

@@ -686,6 +686,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .aiso__hero_label {
+    margin-top: 1rem;
+  }
   .aiso__hero_title {
     font-size: 2.5rem;
   }

@@ -266,8 +266,12 @@
   }
 
   .rating-stars-large {
-    justify-content: center;
-    gap: 6px;
+    display: flex;
+    flex-direction: row !important; 
+    justify-content: center;           
+    align-items: center;
+    gap: 8px;
+    margin: 0;
   }
 
   .reviews-count-badge {
@@ -281,15 +285,18 @@
   }
 
   .review-card {
+    width: 100%;
     max-width: 320px;
-    margin: 0 auto;
-    padding: 20px 16px;
+    margin: 0 auto;              
   }
 
   .review-cards-grid {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
-    justify-items: center;
+    margin-left: 0;                 
+    justify-content: center;
+    justify-items: center;          
   }
 }
 

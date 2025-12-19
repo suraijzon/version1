@@ -1,37 +1,37 @@
-/* AIOptimizationPage.css */
+/* EcommercePage.css */
 
-.aiopt-page {
+.ecom-page {
   font-family: "Inter", sans-serif;
   line-height: 1.7;
   color: #1a1a1a;
 }
 
 /* Container */
-.aiopt-container {
+.ecom-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
 /* Hero Section */
-.aiopt-hero {
-  background: #f0f8ff;
+.ecom-hero {
+  background: #f5f7ff;
   padding: 80px 20px;
   text-align: center;
 }
 
-.aiopt-hero h1 {
+.ecom-hero h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
 }
 
-.aiopt-hero-subtitle {
+.ecom-hero-subtitle {
   font-size: 1.25rem;
   margin-bottom: 20px;
 }
 
 /* Buttons */
-.aiopt-btn-primary {
+.ecom-btn-primary {
   display: inline-block;
   background: #0066ff;
   color: #fff;
@@ -42,73 +42,73 @@
   transition: all 0.3s;
 }
 
-.aiopt-btn-primary:hover {
+.ecom-btn-primary:hover {
   background: #004ecc;
 }
 
 /* Sections */
-.aiopt-section {
+.ecom-section {
   padding: 60px 0;
 }
 
-.aiopt-bg-light {
+.ecom-bg-light {
   background: #f9f9f9;
 }
 
 /* Lists */
-.aiopt-bullet-list {
+.ecom-bullet-list {
   list-style: disc inside;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 
 /* Table */
-.aiopt-table-comparison table {
+.ecom-table-comparison table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
 }
 
-.aiopt-table-comparison th,
-.aiopt-table-comparison td {
+.ecom-table-comparison th,
+.ecom-table-comparison td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
 }
 
-.aiopt-table-comparison th {
+.ecom-table-comparison th {
   background: #e6f0ff;
 }
 
 /* Process */
-.aiopt-process-list {
+.ecom-process-list {
   list-style: decimal inside;
   margin-top: 15px;
 }
 
 /* FAQ */
-.aiopt-faq-list {
+.ecom-faq-list {
   list-style: none;
   padding-left: 0;
 }
 
-.aiopt-faq-list li {
+.ecom-faq-list li {
   margin-bottom: 15px;
 }
 
 /* CTA */
-.aiopt-cta {
+.ecom-cta {
   background: #0066ff;
   color: #fff;
   text-align: center;
   padding: 60px 20px;
 }
 
-.aiopt-cta h2 {
+.ecom-cta h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
-.aiopt-cta a {
+.ecom-cta a {
   margin-top: 20px;
 }

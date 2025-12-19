@@ -151,8 +151,8 @@ const Navbar = () => {
 
               <div className="dropdown-column">
                 <h4>AI Web Experience & Conversion</h4>
-                <a href="/">Conversion-Focused AI Website Design</a>
-                <a href="/">AI Personalization & Dynamic Content</a>
+                <a href="/ai-web-app">Conversion-Focused AI Website Design</a>
+                <a href="/full-stack-web-development">AI Personalization & Dynamic Content</a>
                 <a href="/">AI Landing Page Systems</a>
                 <a href="/">GPT-Powered Forms, Chat & Lead Capture</a>
                 <a href="/">AI UX Testing & Conversion Rate Optimization (CRO)</a>
@@ -213,7 +213,7 @@ const Navbar = () => {
 
               <div className="dropdown-column">
                 <h4>Development & AI Engineering</h4>
-                <a href="/">Custom Web Application Development</a>
+                <a href="/ai-software-development">Custom Web Application Development</a>
                 <a href="/">WordPress & Headless CMS Development</a>
                 <a href="/">Shopify & E-commerce Development</a>
                 <a href="/">AI & GPT Integration</a>
@@ -284,7 +284,7 @@ const Navbar = () => {
 
               <div className="dropdown-column">
                 <h4>E-commerce SEO & Revenue Growth</h4>
-                <a href="/">E-commerce SEO Strategy & Optimization</a>
+                <a href="/ecommerce">E-commerce SEO Strategy & Optimization</a>
                 <a href="/">Shopping Feed Optimization & Automation</a>
                 <a href="/">Product Page SEO & Conversion Optimization</a>
                 <a href="/">SEO-Driven CRO for E-commerce</a>

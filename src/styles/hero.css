@@ -28,8 +28,6 @@
 /* Left copy */
 .hero-copy{
   padding: 10px 10px;
-  position: relative;
-  z-index: 3;
 }
 
 .hero-title{
@@ -39,8 +37,11 @@
   color: #00448f;
   margin: 0 0 30px 0;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 30px;
   letter-spacing: 3px;
+}
+.hero-title .h1{
+  color: #00448f;
 }
 
 .hero-sub p{
@@ -52,6 +53,7 @@
   color: #00448f;
   font-weight: 600;
   line-height: 1.4em;
+  text-align: start;
 }
 
 .hero-sub2 p{
@@ -162,11 +164,6 @@
 }
 
 /* Responsiveness */
-@media (min-width: 1400px){
-  .hero-title{
-    margin-top: 40px;
-  }
-}
 @media (max-width: 1100px){
   .hero-inner{
     grid-template-columns: 1fr 420px;

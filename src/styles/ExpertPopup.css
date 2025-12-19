@@ -206,10 +206,13 @@ input[type="range"]::-moz-range-thumb {
 /* ACTION BUTTONS*/
 .popup-actions {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   gap: 14px;
   margin-top: 22px;
+}
+.popup-actions::before {
+  content: "";
+  flex: 1;
 }
 
 /* Base button (DESKTOP) */

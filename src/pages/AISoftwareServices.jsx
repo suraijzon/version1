@@ -93,7 +93,7 @@ const AISoftwareServices = () => {
             improve decision-making, and build intelligent systems tailored to their unique workflows.
           </p>
           <a href="#contact" className="zt__cta_button">
-            👉 Get a Free AI Software Consultation
+            Get a Free AI Software Consultation
           </a>
         </div>
       </section>
@@ -265,7 +265,7 @@ const AISoftwareServices = () => {
             artificial intelligence, let's discuss your goals.
           </p>
           <a href="#" className="zt__cta_button">
-            👉 Get a Free AI Software Consultation
+             Get a Free AI Software Consultation
           </a>
         </section>
       </div>

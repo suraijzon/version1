@@ -28,6 +28,9 @@ import EcommercePage from "./pages/EcommercePage";
 import AISoftwareServices from './pages/AISoftwareServices';
 import FullStackWebDev from './pages/FullStackWebDev';
 import AIWebsiteDesign from './pages/AIWebsiteDesign';
+import AboutUs from './pages/AboutUs';
+import SEOServices from './pages/SEOServices';
+import CaseStudies from './pages/CaseStudies';
 
 // Home Page Component
 const HomePage = () => {
@@ -68,9 +71,12 @@ function App() {
           <Route path="/ai-search-optimization" element={<AIOptimizationPage />} />
           <Route path="/ai-web-app" element={<AIWebAppPage />} />
           <Route path="/ecommerce" element={<EcommercePage />} />
+          <Route path="/seo-services" element={<SEOServices />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
           
           {/* Contact Page */}
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/about" element={<AboutUs />} />
           
 
           {/* User & Admin Pages */}

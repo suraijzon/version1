@@ -31,6 +31,11 @@ import AIWebsiteDesign from './pages/AIWebsiteDesign';
 import AboutUs from './pages/AboutUs';
 import SEOServices from './pages/SEOServices';
 import CaseStudies from './pages/CaseStudies';
+import ContactPage from './pages/ContactPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
+import WebsiteMaintenance from './pages/WebsiteMaintenance';
+
 
 // Home Page Component
 const HomePage = () => {
@@ -73,10 +78,14 @@ function App() {
           <Route path="/ecommerce" element={<EcommercePage />} />
           <Route path="/seo-services" element={<SEOServices />} />
           <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="/website-maintenance" element={<WebsiteMaintenance />} />
           
           {/* Contact Page */}
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactPage />} />
           
 
           {/* User & Admin Pages */}

@@ -249,6 +249,7 @@ input[type="range"]::-moz-range-thumb {
 
 .popup-actions .cancel-btn {
   background-color: #fff;
+  margin-top: 11px;
   color: #111;
   border: 1.5px solid #111;     
 }

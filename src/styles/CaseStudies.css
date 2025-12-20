@@ -5,13 +5,14 @@
   display: flex;
   flex-direction: column;
   background: #ffffff;
+  font-family: Poppins;
 }
 
 /* Hero Section */
 .cs__hero {
   position: relative;
   background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
-  padding: 6rem 2rem;
+  padding: 10rem 2rem 3rem;
   overflow: hidden;
 }
 
@@ -93,7 +94,7 @@
 
 .cs__highlights_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   margin: 3rem 0;
 }
@@ -136,7 +137,7 @@
 
 /* Studies Section */
 .cs__studies_section {
-  padding: 6rem 0;
+  padding: 3rem 0;
   background: #ffffff;
 }
 
@@ -317,7 +318,7 @@
 
 /* CTA Section */
 .cs__cta_section {
-  padding: 6rem 2rem;
+  padding: 3rem 2rem;
   background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
   text-align: center;
   color: #ffffff;
@@ -389,10 +390,11 @@
 @media (max-width: 768px) {
   .cs__hero_title {
     font-size: 2.5rem;
+    padding-top: 1rem;
   }
 
   .cs__hero_subtitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .cs__heading {
@@ -419,6 +421,10 @@
   .cs__cta_buttons {
     flex-direction: column;
     align-items: stretch;
+  }
+  .cs__cta_btn{
+    font-size: 12px;
+    padding: auto 2px;
   }
 }
 

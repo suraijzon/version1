@@ -134,7 +134,7 @@ const SEOServices = () => {
             SEO, content optimization, and data-driven strategy to deliver long-term, sustainable results.
           </p>
           <a href="#contact" className="seos__hero_btn">
-            👉 Get a Free SEO Audit
+             Get a Free SEO Audit
           </a>
         </div>
       </section>
@@ -240,7 +240,7 @@ const SEOServices = () => {
             </div>
           </div>
           <div className="seos__comparison_cta">
-            👉 For AI-driven visibility, see our <a href="/ai-search-optimization">AI Search Optimization service</a>.
+             For AI-driven visibility, see our <a href="/ai-search-optimization">AI Search Optimization service</a>.
           </div>
         </div>
       </section>

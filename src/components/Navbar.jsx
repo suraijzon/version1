@@ -135,9 +135,9 @@ const Navbar = () => {
                 <h4>AI Strategy & Core Services</h4>
                 <a href="/ai-website-design">AI Readiness Assessment</a>
                 <a href="/ai-seo">AI Strategy & Consulting</a>
-                <a href="/">AI Proof of Concept (PoC) Development</a>
-                <a href="/">Custom AI & GPT Integration</a>
-                <a href="/">Secure & Scalable AI Deployment</a>
+                <a href="/about">AI Proof of Concept (PoC) Development</a>
+                <a href="/seo-services">Custom AI & GPT Integration</a>
+                <a href="/case-studies">Secure & Scalable AI Deployment</a>
               </div>
 
               <div className="dropdown-column">

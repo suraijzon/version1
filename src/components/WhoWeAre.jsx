@@ -110,7 +110,16 @@ const WhoWeAreSection = () => {
           { name: 'LiteSpeed', icon: 'lightning' },
           { name: 'Tomcat', icon: 'tomcat' }
         ]
-      }
+      },
+      {
+        title: 'Cloud & Security',
+        items: [
+          { name: 'Cloudflare', icon: 'cloudflare' },
+          { name: 'SSL', icon: 'ruby' },
+          { name: 'SEO & Speed', icon: 'seo' },
+          { name: 'AWS', icon: 'aws' }
+        ]
+      },
     ],
     // Row 4
     [

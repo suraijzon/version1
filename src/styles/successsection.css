@@ -223,6 +223,14 @@ button.explore-btn {
   color: #fff;
   border-color: #00448f;
 }
+
+/* responisive media's */ 
+
+@media (min-width: 1400px) {
+  .success-section {
+    max-width: 1400px;
+  }
+}
 @media (max-width: 768px) {
     .all-works-btn{
         display: none;

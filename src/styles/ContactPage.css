@@ -231,4 +231,7 @@
   .cp__hero_title { font-size: 2rem; }
   .cp__heading { font-size: 2rem; }
   .cp__cta_title { font-size: 2rem; }
+  .cp__hero {
+    margin-top: -3rem;
+  }
 }

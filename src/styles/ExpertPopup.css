@@ -288,6 +288,7 @@ input[type="range"]::-moz-range-thumb {
   }
   .popup-actions .cancel-btn{
     text-align: center !important;
+    margin-top: 0px;
   }
   .popup-actions button {
     width: 100%;

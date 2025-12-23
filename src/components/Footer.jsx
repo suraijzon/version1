@@ -77,8 +77,12 @@ const Footer = () => {
                 Ready to speak with a marketing expert? Give us a ring
               </h4>
 
-              <a href="tel:+941234567890" className="phone-button"><i class="fa-brands fa-whatsapp"></i>
-                +94 74 030 9534
+              <a href="https://wa.me/94740309534?text=Hi%20ZonzocTech%20Team,%20I%20would%20like%20to%20discuss%20a%20project."
+                 className="phone-button"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 ><i class="fa-brands fa-whatsapp"></i>
+                  +94 74 030 9534
               </a>
             </div>
           </div>

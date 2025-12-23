@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
+  font-family: Poppins;
 }
 
 .slider-container::before {
@@ -42,7 +43,7 @@
 
 .main-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
+  font-weight: 700;
   color: #ffffff;
   margin-bottom: 20px;
   text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.3);
@@ -56,7 +57,7 @@
   margin: 0 auto;
 }
 
-/* Dashboard Container */
+/* Dashboard Container ------------*/
 .dashboard-container {
   position: relative;
   display: flex;

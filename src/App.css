@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.dropdown { position: relative; }
+.navbar, .nav-container, .nav-links { overflow: visible; }
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0;
+  z-index: 9999;
+}
+
+/* optional hover bridge */
+.dropdown-content::before{
+  content:"";
+  position:absolute;
+  top:-12px; left:0; right:0;
+  height:12px;
+}

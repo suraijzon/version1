@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
 import logo from "../assets/icons/logo.png";
 import siteLogo from "../assets/icons/site_logo_2.svg";
@@ -8,37 +9,52 @@ import { useNavigate } from "react-router-dom";
 import ExpertPopup from "./ExpertPopup";
 
 
+const DESKTOP_BREAKPOINT = 1024;
+const CLOSE_DELAY_MS = 180;
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState(null);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const navRef = useRef(null);
+  const closeTimerRef = useRef(null);
 
   const { logout } = useAuth();
   const navigate = useNavigate();
 
-  const handleMouseEnter = (id) => {
-    if (window.innerWidth > 1024) {
-      setActiveDropdown(id);
+    const isDesktop = () => window.innerWidth > DESKTOP_BREAKPOINT;
+
+  const clearCloseTimer = () => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
     }
   };
 
-  const handleMouseLeave = () => {
-    if (window.innerWidth > 1024) {
+   const openDropdown = (id) => {
+    if (!isDesktop()) return;
+    clearCloseTimer();
+    setActiveDropdown(id);
+  };
+
+  const scheduleCloseDropdown = () => {
+    if (!isDesktop()) return;
+    clearCloseTimer();
+    closeTimerRef.current = setTimeout(() => {
       setActiveDropdown(null);
-    }
+    }, CLOSE_DELAY_MS);
   };
 
   const toggleMobileDropdown = (id) => {
-    if (window.innerWidth <= 1024) {
-      setMobileDropdown((prev) => (prev === id ? null : id));
-    }
+     if (isDesktop()) return;
+    setMobileDropdown((prev) => (prev === id ? null : id));
   };
 
   const handleDropdownButtonClick = (id) => {
-    if (window.innerWidth > 1024) {
-      setActiveDropdown(id);
+   if (isDesktop()) {
+      clearCloseTimer();
+      setActiveDropdown((prev) => (prev === id ? null : id));
     } else {
       toggleMobileDropdown(id);
     }
@@ -51,20 +67,19 @@ const Navbar = () => {
 
   const handleLogoClick = () => {
     navigate("/");
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (window.innerWidth > 1024) {
-        if (navRef.current && !navRef.current.contains(e.target)) {
-          setActiveDropdown(null);
-        }
+   if (!isDesktop()) return;
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setActiveDropdown(null);
       }
     };
 
     const handleResize = () => {
-      if (window.innerWidth > 1024) {
+      if (isDesktop()) {
         setMobileDropdown(null);
       } else {
         setActiveDropdown(null);
@@ -73,11 +88,25 @@ const Navbar = () => {
 
     document.addEventListener("mousedown", handleClickOutside);
     window.addEventListener("resize", handleResize);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       window.removeEventListener("resize", handleResize);
+      clearCloseTimer();
     };
   }, []);
+
+
+  const dropdownHoverProps = (id) => ({
+    onMouseEnter: () => openDropdown(id),
+    onMouseLeave: scheduleCloseDropdown,
+  });
+
+  const dropdownContentHoverProps = {
+    onMouseEnter: clearCloseTimer,
+    onMouseLeave: scheduleCloseDropdown,
+  };
+
 
   return (
     <header className="navbar">
@@ -102,8 +131,12 @@ const Navbar = () => {
       </div>
 
       <div className="nav-container" ref={navRef}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <div className="nav-logo" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
+         <div style={{ display: "flex", alignItems: "center" }}>
+          <div
+            className="nav-logo"
+            onClick={handleLogoClick}
+            style={{ cursor: "pointer" }}
+          >
             <img src={logo} alt="Zonzoctech Logo" className="logo-desktop" />
             <img src={logo} alt="Zonzoctech Logo" className="logo-mobile" />
           </div>
@@ -118,9 +151,10 @@ const Navbar = () => {
         <nav className={`nav-links ${open ? "open" : ""}`}>
           {/* Dropdown: AI & Technology (id: 3) */}
           <div
-            className={`dropdown ${mobileDropdown === 3 ? "open" : ""} ${activeDropdown === 3 ? "active" : ""}`}
-            onMouseEnter={() => handleMouseEnter(3)}
-            onMouseLeave={handleMouseLeave}
+            className={`dropdown ${mobileDropdown === 3 ? "open" : ""} ${
+              activeDropdown === 3 ? "active" : ""
+            }`}
+            {...dropdownHoverProps(3)}
           >
             <button
               className="drop-btn"
@@ -130,7 +164,7 @@ const Navbar = () => {
               AI & TECHNOLOGY ▾
             </button>
 
-            <div className="dropdown-content">
+            <div className="dropdown-content" {...dropdownContentHoverProps}>
               <div className="dropdown-column">
                 <h4>AI Strategy & Core Services</h4>
                 <a href="/ai-website-design-development">AI Readiness Assessment</a>
@@ -180,9 +214,10 @@ const Navbar = () => {
 
           {/* Dropdown: UX & Interactive (id: 2) */}
           <div
-            className={`dropdown ${mobileDropdown === 2 ? "open" : ""} ${activeDropdown === 2 ? "active" : ""}`}
-            onMouseEnter={() => handleMouseEnter(2)}
-            onMouseLeave={handleMouseLeave}
+            className={`dropdown ${mobileDropdown === 2 ? "open" : ""} ${
+              activeDropdown === 2 ? "active" : ""
+            }`}
+            {...dropdownHoverProps(2)}
           >
             <button
               className="drop-btn"
@@ -192,7 +227,7 @@ const Navbar = () => {
               UX & INTERACTIVE ▾
             </button>
 
-            <div className="dropdown-content">
+            <div className="dropdown-content" {...dropdownContentHoverProps}>
               <div className="dropdown-column">
                 <h4>Website Strategy & Conversion</h4>
                 <a href="/contact-us">Free Website Growth Audit</a>
@@ -242,9 +277,10 @@ const Navbar = () => {
 
           {/* Dropdown: SEO & Lead Generation (id: 1) */}
           <div
-            className={`dropdown ${mobileDropdown === 1 ? "open" : ""} ${activeDropdown === 1 ? "active" : ""}`}
-            onMouseEnter={() => handleMouseEnter(1)}
-            onMouseLeave={handleMouseLeave}
+             className={`dropdown ${mobileDropdown === 1 ? "open" : ""} ${
+              activeDropdown === 1 ? "active" : ""
+            }`}
+            {...dropdownHoverProps(1)}
           >
             <button
               className="drop-btn"
@@ -254,7 +290,7 @@ const Navbar = () => {
               SEO & LEAD GENERATION ▾
             </button>
 
-            <div className="dropdown-content">
+            <div className="dropdown-content" {...dropdownContentHoverProps}>
               <div className="dropdown-column">
                 <h4>SEO Strategy & Core Services</h4>
                 <a href="/seo-services">SEO Growth Audit & Opportunity Analysis</a>
@@ -304,9 +340,10 @@ const Navbar = () => {
 
           {/* Dropdown: Who We Are (id: 4) */}
           <div
-            className={`dropdown who-dropdown ${mobileDropdown === 4 ? "open" : ""} ${activeDropdown === 4 ? "active" : ""}`}
-            onMouseEnter={() => handleMouseEnter(4)}
-            onMouseLeave={handleMouseLeave}
+            className={`dropdown ${mobileDropdown === 4 ? "open" : ""} ${
+              activeDropdown === 4 ? "active" : ""
+            }`}
+            {...dropdownHoverProps(4)}
           >
             <button
               className="drop-btn"
@@ -316,7 +353,7 @@ const Navbar = () => {
               WHO WE ARE ▾
             </button>
 
-            <div className="dropdown-content">
+            <div className="dropdown-content" {...dropdownContentHoverProps}>
               <div className="dropdown-column">
                 <h4>Who We Are</h4>
                 <a href="/about">About Us</a>

@@ -68,6 +68,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           
           {/* Service Pages */}
+          <Route path="/google-search---console" element={<GoogleSearchConsole />} />
           <Route path="/ai-seo" element={<AiSeoServices />} />
           <Route path="/ai-software-development" element={<AISoftwareServices />} />
           <Route path="/full-stack-web-development" element={<FullStackWebDev />} />

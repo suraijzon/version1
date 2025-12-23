@@ -170,7 +170,7 @@ const Navbar = () => {
                 <a href="/ai-website-design-development">AI Readiness Assessment</a>
                 <a href="/ai-seo">AI Strategy & Consulting</a>
                 <a href="/ai-software-development">AI Proof of Concept (PoC) Development</a>
-                <a href="//ai-web-application-development">Custom AI & GPT Integration</a>
+                <a href="/ai-web-application-development">Custom AI & GPT Integration</a>
                 <a href="/website-maintenance-performance-security">Secure & Scalable AI Deployment</a>
               </div>
 

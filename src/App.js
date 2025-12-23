@@ -5,6 +5,7 @@ import { AuthProvider } from './context/AuthContext';
 // Import components
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import WebsiteGrowthSlider from './components/WebsiteGrowthSlider';
 import Solution from "./components/Solution";
 import SuccessSection from "./components/SuccessSection";
 import ProcessSection from "./components/ProcessSection";
@@ -43,6 +44,7 @@ const HomePage = () => {
     <>
       <Navbar />
       <Hero />
+      <WebsiteGrowthSlider />
       <Solution />
       <SuccessSection />
       <ProcessSection />

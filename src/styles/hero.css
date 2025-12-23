@@ -164,6 +164,11 @@
 }
 
 /* Responsiveness */
+@media (max-width: 1400px){
+   .hero-media img{
+     padding-top: 40px;
+   }
+}
 @media (max-width: 1100px){
   .hero-inner{
     grid-template-columns: 1fr 420px;

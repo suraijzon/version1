@@ -324,6 +324,82 @@
   display: flex;
 }
 
+/* WHO WE ARE DROPDOWN - Sleek Floating Card Style */
+.dropdown:nth-child(4) {
+  position: relative;
+}
+
+/* Override the full-width background for Who We Are only */
+.dropdown:nth-child(4) .dropdown-content {
+  width: auto;
+  max-width: 320px;
+  min-width: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Single column layout for Who We Are */
+.dropdown:nth-child(4) .dropdown-column {
+  width: 100%;
+  background: white;
+  padding: 24px;
+  box-shadow: none;
+  border-radius: 0;
+  min-height: auto;
+  max-height: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Remove hover lift for Who We Are */
+.dropdown:nth-child(4) .dropdown-column:hover {
+  transform: none;
+}
+
+/* Remove the header for Who We Are */
+.dropdown:nth-child(4) .dropdown-column h4 {
+  display: none;
+}
+
+/* Style the links as a clean list */
+.dropdown:nth-child(4) .dropdown-column a {
+  padding: 14px 20px;
+  font-size: 15px;
+  color: #4a5568;
+  border-bottom: 1px solid #f0f0f0;
+  margin: 0;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.dropdown:nth-child(4) .dropdown-column a:last-child {
+  border-bottom: none;
+}
+
+.dropdown:nth-child(4) .dropdown-column a:hover {
+  background: #f8f9fa;
+  color: #0052cc;
+  padding-left: 20px;
+}
+
+/* Hide the blue showcase column for Who We Are */
+.dropdown:nth-child(4) .dropdown-column-last {
+  display: none;
+}
+
+/* Position adjustment for better alignment */
+.dropdown:nth-child(4):hover .dropdown-content,
+.dropdown:nth-child(4).active .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
 /* WHO WE ARE – Sleekits Style   */
 
 .who-dropdown {
@@ -356,10 +432,10 @@
 
 /* Smaller white cards */
 .who-dropdown .dropdown-column {
-  width: 230px ;          /* increase width */
+  width: 230px ;          
   min-height: auto;
   max-height: none;
-  padding: 20px 22px;    /* optional for balance */
+  padding: 20px 22px;    
 }
 
 
@@ -908,6 +984,27 @@
 
   .mobile-client-login-inside:hover {
     opacity: 0.9;
+  }
+
+  /* Who We Are mobile adjustments */
+  .dropdown:nth-child(4).open .dropdown-content {
+    position: static;
+    max-width: 100%;
+    left: 0;
+    transform: none;
+    border-radius: 8px;
+    margin-top: 8px;
+    background: #f3f3f3;
+  }
+  
+  .dropdown:nth-child(4) .dropdown-column {
+    background: white;
+  }
+  
+  .dropdown:nth-child(4) .dropdown-column a {
+    font-size: 14px;
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0f0f0;
   }
 }
 

@@ -111,7 +111,7 @@
 }
 
 .service-card-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: white;
   margin-bottom: 28px;
@@ -129,7 +129,7 @@
 }
 
 .service-item {
-  font-size: 0.95rem;
+  font-size: 0.83rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 13px;
   display: flex;

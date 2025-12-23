@@ -46,7 +46,7 @@ const ReviewsSection = () => {
             <span className="reviews-count">
               <CountUp 
                 start={0} 
-                end={2158} 
+                end={875} 
                 duration={2} 
                 separator="," 
               /> + <span className="reviews-label"> Reviews</span>

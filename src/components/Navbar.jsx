@@ -133,38 +133,38 @@ const Navbar = () => {
             <div className="dropdown-content">
               <div className="dropdown-column">
                 <h4>AI Strategy & Core Services</h4>
-                <a href="/ai-website-design">AI Readiness Assessment</a>
+                <a href="/ai-website-design-development">AI Readiness Assessment</a>
                 <a href="/ai-seo">AI Strategy & Consulting</a>
-                <a href="/about">AI Proof of Concept (PoC) Development</a>
-                <a href="/seo-services">Custom AI & GPT Integration</a>
-                <a href="/case-studies">Secure & Scalable AI Deployment</a>
+                <a href="/ai-software-development">AI Proof of Concept (PoC) Development</a>
+                <a href="//ai-web-application-development">Custom AI & GPT Integration</a>
+                <a href="/website-maintenance-performance-security">Secure & Scalable AI Deployment</a>
               </div>
 
               <div className="dropdown-column">
                 <h4>AI for Marketing, Sales & Growth</h4>
-                <a href="/ai-search-optimization">AI SEO & AI Search Optimization</a>
-                <a href="/contact">AI Sales Funnel Optimization</a>
-                <a href="/privacy-policy">AI Lead Generation & Nurturing Automation</a>
-                <a href="/terms-conditions">AI Chat Sales Agents & Virtual Assistants</a>
-                <a href="/website-maintenance">AI Content & Campaign Automation</a>
+                <a href="/seo-ai-search-optimization">AI SEO & AI Search Optimization</a>
+                <a href="/seo-services">AI Sales Funnel Optimization</a>
+                <a href="/seo-services">AI Lead Generation & Nurturing Automation</a>
+                <a href="/ai-software-development">AI Chat Sales Agents & Virtual Assistants</a>
+                <a href="/seo-services">AI Content & Campaign Automation</a>
               </div>
 
               <div className="dropdown-column">
                 <h4>AI Web Experience & Conversion</h4>
-                <a href="/ai-web-app">Conversion-Focused AI Website Design</a>
+                <a href="/ai-website-design-development">Conversion-Focused AI Website Design</a>
                 <a href="/full-stack-web-development">AI Personalization & Dynamic Content</a>
-                <a href="/">AI Landing Page Systems</a>
-                <a href="/">GPT-Powered Forms, Chat & Lead Capture</a>
-                <a href="/">AI UX Testing & Conversion Rate Optimization (CRO)</a>
+                <a href="/full-stack-web-development">AI Landing Page Systems</a>
+                <a href="/ai-web-application-development">GPT-Powered Forms, Chat & Lead Capture</a>
+                <a href="/seo-services">AI UX Testing & Conversion Rate Optimization (CRO)</a>
               </div>
 
               <div className="dropdown-column">
                 <h4>AI Automation & Integrations</h4>
-                <a href="/">AI Workflow & Business Process Automation</a>
-                <a href="/">AI CRM, ERP & Tool Integrations</a>
-                <a href="/">AI Email, WhatsApp & Messaging Automation</a>
-                <a href="/">Voice, Image & Document AI Solutions</a>
-                <a href="/">AI Scheduling, Booking & Support Automation</a>
+                <a href="/ai-software-development">AI Workflow & Business Process Automation</a>
+                <a href="/ai-software-development">AI CRM, ERP & Tool Integrations</a>
+                <a href="/ai-software-development">AI Email, WhatsApp & Messaging Automation</a>
+                <a href="/ai-software-development">Voice, Image & Document AI Solutions</a>
+                <a href="/ai-web-application-development">AI Scheduling, Booking & Support Automation</a>
               </div>
 
               <div className="dropdown-column-last">
@@ -195,38 +195,38 @@ const Navbar = () => {
             <div className="dropdown-content">
               <div className="dropdown-column">
                 <h4>Website Strategy & Conversion</h4>
-                <a href="/">Free Website Growth Audit</a>
-                <a href="/">Conversion Strategy & UX Planning</a>
-                <a href="/">Rapid Website Launch (MVP / Go-Live Fast)</a>
-                <a href="/">AI-Driven Personalization Strategy</a>
-                <a href="/">Analytics, Tracking & Attribution Setup</a>
+                <a href="/contact-us">Free Website Growth Audit</a>
+                <a href="/full-stack-web-development">Conversion Strategy & UX Planning</a>
+                <a href="/full-stack-web-development">Rapid Website Launch (MVP / Go-Live Fast)</a>
+                <a href="/ai-web-application-development">AI-Driven Personalization Strategy</a>
+                <a href="/seo-services">Analytics, Tracking & Attribution Setup</a>
               </div>
 
               <div className="dropdown-column">
                 <h4>Design for Revenue</h4>
-                <a href="/">Conversion-Focused Website Design</a>
-                <a href="/">E-commerce UX & Store Optimization</a>
-                <a href="/">Brand-Led Custom Design Systems</a>
-                <a href="/">Landing Pages & Funnel Design</a>
-                <a href="/">Ongoing Website Growth & Optimization</a>
+                <a href="/ai-website-design-development">Conversion-Focused Website Design</a>
+                <a href="/ecommerce-development-optimization">E-commerce UX & Store Optimization</a>
+                <a href="/full-stack-web-development">Brand-Led Custom Design Systems</a>
+                <a href="/seo-services">Landing Pages & Funnel Design</a>
+                <a href="/website-maintenance-performance-security">Ongoing Website Growth & Optimization</a>
               </div>
 
               <div className="dropdown-column">
                 <h4>Development & AI Engineering</h4>
-                <a href="/ai-software-development">Custom Web Application Development</a>
-                <a href="/">WordPress & Headless CMS Development</a>
-                <a href="/">Shopify & E-commerce Development</a>
-                <a href="/">AI & GPT Integration</a>
-                <a href="/">Workflow & Business Automation</a>
+                <a href="/ai-web-application-development">Custom Web Application Development</a>
+                <a href="/full-stack-web-development">WordPress & Headless CMS Development</a>
+                <a href="/ecommerce-development-optimization">Shopify & E-commerce Development</a>
+                <a href="/ai-software-development">AI & GPT Integration</a>
+                <a href="/ai-software-development">Workflow & Business Automation</a>
               </div>
 
               <div className="dropdown-column">
                 <h4>Performance, Security & Reliability</h4>
-                <a href="/">Managed Cloud Hosting & DevOps</a>
-                <a href="/">Performance & Core Web Vitals Optimization</a>
-                <a href="/">Security, Backups & Disaster Recovery</a>
-                <a href="/">Website Migration & Re-platforming</a>
-                <a href="/">Conversion Rate Optimization (CRO)</a>
+                <a href="/website-maintenance-performance-security">Managed Cloud Hosting & DevOps</a>
+                <a href="/seo-services">Performance & Core Web Vitals Optimization</a>
+                <a href="/website-maintenance-performance-security">Security, Backups & Disaster Recovery</a>
+                <a href="/full-stack-web-development">Website Migration & Re-platforming</a>
+                <a href="/seo-services">Conversion Rate Optimization (CRO)</a>
               </div>
 
               <div className="dropdown-column-last">
@@ -257,38 +257,38 @@ const Navbar = () => {
             <div className="dropdown-content">
               <div className="dropdown-column">
                 <h4>SEO Strategy & Core Services</h4>
-                <a href="/">SEO Growth Audit & Opportunity Analysis</a>
-                <a href="/">SEO Strategy & Roadmap</a>
-                <a href="/">Enterprise SEO & Large Website SEO</a>
-                <a href="/">Local SEO & Maps Optimization</a>
-                <a href="/">AI SEO & Search Experience Optimization</a>
+                <a href="/seo-services">SEO Growth Audit & Opportunity Analysis</a>
+                <a href="/seo-services">SEO Strategy & Roadmap</a>
+                <a href="/seo-services">Enterprise SEO & Large Website SEO</a>
+                <a href="/seo-services">Local SEO & Maps Optimization</a>
+                <a href="/seo-ai-search-optimization">AI SEO & Search Experience Optimization</a>
               </div>
 
               <div className="dropdown-column">
                 <h4>SEO Research & Intelligence</h4>
-                <a href="/services/seo/google-search-console">High-Intent Keyword & Topic Research</a>
-                <a href="/">Competitor & Market Gap Analysis</a>
-                <a href="/">Search Intent & Funnel Mapping</a>
-                <a href="/">Content & SERP Opportunity Analysis</a>
-                <a href="/">SEO Performance Tracking & KPIs</a>
+                <a href="/seo-services">High-Intent Keyword & Topic Research</a>
+                <a href="/seo-services">Competitor & Market Gap Analysis</a>
+                <a href="/seo-services">Search Intent & Funnel Mapping</a>
+                <a href="/seo-services">Content & SERP Opportunity Analysis</a>
+                <a href="/seo-services">SEO Performance Tracking & KPIs</a>
               </div>
 
               <div className="dropdown-column">
                 <h4>Technical SEO & Performance</h4>
-                <a href="/">Technical SEO Audits & Fixes</a>
-                <a href="/">Core Web Vitals & Page Speed Optimization</a>
-                <a href="/">Indexing, Crawl Budget & Log File Optimization</a>
-                <a href="/">Structured Data & Rich Results Optimization</a>
-                <a href="/">Internal Linking & Authority Sculpting</a>
+                <a href="/seo-services">Technical SEO Audits & Fixes</a>
+                <a href="/website-maintenance-performance-security">Core Web Vitals & Page Speed Optimization</a>
+                <a href="/seo-services">Indexing, Crawl Budget & Log File Optimization</a>
+                <a href="/seo-services">Structured Data & Rich Results Optimization</a>
+                <a href="/seo-services">Internal Linking & Authority Sculpting</a>
               </div>
 
               <div className="dropdown-column">
                 <h4>E-commerce SEO & Revenue Growth</h4>
-                <a href="/ecommerce">E-commerce SEO Strategy & Optimization</a>
-                <a href="/">Shopping Feed Optimization & Automation</a>
-                <a href="/">Product Page SEO & Conversion Optimization</a>
-                <a href="/">SEO-Driven CRO for E-commerce</a>
-                <a href="/">SEO Conversion Rate Optimization (CRO)</a>
+                <a href="/ecommerce-development-optimization">E-commerce SEO Strategy & Optimization</a>
+                <a href="/ecommerce-development-optimization">Shopping Feed Optimization & Automation</a>
+                <a href="/ecommerce-development-optimization">Product Page SEO & Conversion Optimization</a>
+                <a href="/seo-services">SEO-Driven CRO for E-commerce</a>
+                <a href="/seo-services">SEO Conversion Rate Optimization (CRO)</a>
               </div>
 
               <div className="dropdown-column-last">
@@ -304,7 +304,7 @@ const Navbar = () => {
 
           {/* Dropdown: Who We Are (id: 4) */}
           <div
-            className={`dropdown ${mobileDropdown === 4 ? "open" : ""} ${activeDropdown === 4 ? "active" : ""}`}
+            className={`dropdown who-dropdown ${mobileDropdown === 4 ? "open" : ""} ${activeDropdown === 4 ? "active" : ""}`}
             onMouseEnter={() => handleMouseEnter(4)}
             onMouseLeave={handleMouseLeave}
           >
@@ -319,48 +319,14 @@ const Navbar = () => {
             <div className="dropdown-content">
               <div className="dropdown-column">
                 <h4>Who We Are</h4>
-                <a href="/">Our Approach</a>
-                <a href="/">About Us</a>
-                <a href="/">Careers (We Are Hiring!)</a>
-                <a href="/">Contact Info</a>
-                <a href="/">Zonzoctech Reviews</a>
-                <a href="/">Our Portfolio</a>
+                <a href="/about">About Us</a>
+                <a href="/terms-conditions">Terms & Conditions</a>
+                <a href="/contact-us">Careers (We Are Hiring!)</a>
+                <a href="/contact">Contact Info</a>
+                <a href="/case-studies">Zonzoctech Reviews</a>
+                <a href="/privacy-policy">Privacy Policy</a>
               </div>
 
-              <div className="dropdown-column">
-                <h4>What Drives Us</h4>
-                <a href="/">Our Mission & Vision</a>
-                <a href="/">Company Values</a>
-                <a href="/">Innovation Culture</a>
-                <a href="/">Client-First Philosophy</a>
-                <a href="/">Team Zonzoctech</a>
-              </div>
-
-              <div className="dropdown-column">
-                <h4>Zonzoctech</h4>
-                <a href="/">Pricing Guides</a>
-                <a href="/">How Much Should a Website Cost?</a>
-                <a href="/">How Much Does PPC Cost?</a>
-                <a href="/">Email Marketing Pricing</a>
-                <a href="/">Social Media Pricing</a>
-                <a href="/">How Much Does SEO Cost?</a>
-                <a href="/">Local SEO Pricing</a>
-              </div>
-
-              <div className="dropdown-column">
-                <h4>Content Library</h4>
-                <a href="/">Our Blog</a>
-                <a href="/">SEO Checker Report</a>
-                <a href="/">Free Keyword Suggestion Tool</a>
-                <a href="/">Fix Your Funnel</a>
-                <a href="/">FAQFox</a>
-                <a href="/">View All Tools</a>
-              </div>
-
-              <div className="dropdown-column-last">
-                <span className="last-column4">#1 Best Place to Work</span>
-                <button className="last-column-button">View Careers</button>
-              </div>
             </div>
           </div>
 

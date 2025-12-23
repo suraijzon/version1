@@ -23,7 +23,7 @@
 }
 
 .section-subtitle {
-  color: #ff6b35;
+  color: #004480;
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 12px;
@@ -40,14 +40,15 @@
 }
 
 .highlight-text {
-  color: #0066ff;
+  color: #004480;
+  font-weight: 800;
 }
 
 .section-description {
   font-size: 1.05rem;
   color: #4a5568;
   line-height: 1.8;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -55,34 +56,43 @@
 .benefits-list {
   list-style: none;
   padding: 0;
-  margin-bottom: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px; /* Reduced gap for tighter spacing */
 }
 
 .benefit-item {
   display: flex;
-  align-items: center;       /* center vertically */
-  gap: 12px;
+  align-items: center;
+  gap: 10px; /* Increased gap between icon and text */
   font-size: 1.05rem;
   color: #2d3748;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 0.9;
 }
 
 .benefit-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 28px; /* Slightly larger */
+  height: 28px;
   color: #0066ff;
-  flex-shrink: 0;
-  position: relative;       /* add relative positioning */
 }
 
+.benefit-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Make sure the text aligns properly */
+.benefit-item span {
+  display: inline-block;
+  line-height: 1.4;
+}
 
 
 /* Right Content - Cards Container */

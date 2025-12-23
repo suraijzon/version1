@@ -288,13 +288,13 @@
 
 /* Submit Button */
 .submit-btn {
-  padding: 18px 48px;
+  padding: 15px 30px;
   background: #1e3a8a;
   color: white;
   border: none;
   border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   display: inline-flex;

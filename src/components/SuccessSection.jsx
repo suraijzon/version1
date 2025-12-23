@@ -4,6 +4,9 @@ import item1 from "../assets/icons/healthyfit.png";
 import item2 from "../assets/icons/aviation.png";
 import item3 from "../assets/icons/fleet-management.png";
 import item4 from "../assets/icons/lvita.jpg";
+import item5 from "../assets/icons/searchengine.jpeg";
+import item6 from "../assets/icons/websitemaintence.jpeg";
+import item7 from "../assets/icons/webdevelopment.jpeg";
 
 const SuccessSection = () => {
   const projects = [
@@ -58,6 +61,43 @@ const SuccessSection = () => {
         { text: "Firebase", Background: "#d90e0eff" },
       ],
       img: item4,
+    },
+     {
+      id: 5,
+      name: "Search Engine Optimization",
+      desc: "Through comprehensive on-page, technical, and content SEO, we enhanced CookerAndLooker’s search presence and authority, driving sustainable organic growth.",
+      extra: [
+        { text: "React", Background: "#0047ab" },
+        { text: "Java", Background: "#ff6b91" },
+        { text: "Spring Boot", Background: "#00bfc1" },
+        { text: "Next.js", Background: "#ff7300ff" },
+        { text: "MongoDB", Background: "#1e8449" },
+      ],
+      img: item5,
+    },
+     {
+      id: 6,
+      name: "Website Maintenance and Web Security",
+      desc: "We executed end-to-end website development for frau-rauchfrei.de, implementing strong security protocols, performance optimization, and ongoing protection against vulnerabilities.",
+      extra: [
+        { text: "React", Background: "#0047ab" },
+        { text: "Java", Background: "#ff6b91" },
+        { text: "Spring Boot", Background: "#00bfc1" },
+        { text: "Next.js", Background: "#ff7300ff" },
+      ],
+      img: item6,
+    },
+     {
+      id: 7,
+      name: "Website Development",
+      desc: "We completely redesigned and developed koningbamboe.nl with advanced features, enhanced functionality, and significantly improved performance—delivering a faster, smarter, and more scalable digital experience.",
+      extra: [
+        { text: "React", Background: "#0047ab" },
+        { text: "Java", Background: "#ff6b91" },
+        { text: "Spring Boot", Background: "#00bfc1" },
+        { text: "Next.js", Background: "#ff7300ff" },
+      ],
+      img: item7,
     },
   ];
 

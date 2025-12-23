@@ -72,15 +72,16 @@ function App() {
           <Route path="/ai-seo" element={<AiSeoServices />} />
           <Route path="/ai-software-development" element={<AISoftwareServices />} />
           <Route path="/full-stack-web-development" element={<FullStackWebDev />} />
-          <Route path="/ai-website-design" element={<AIWebsiteDesign />} />
-          <Route path="/ai-search-optimization" element={<AIOptimizationPage />} />
-          <Route path="/ai-web-app" element={<AIWebAppPage />} />
-          <Route path="/ecommerce" element={<EcommercePage />} />
+          <Route path="/ai-website-design-development" element={<AIWebsiteDesign />} />
+          <Route path="/seo-ai-search-optimization" element={<AIOptimizationPage />} />
+          <Route path="/ai-web-application-development" element={<AIWebAppPage />} />
+          <Route path="/ecommerce-development-optimization" element={<EcommercePage />} />
+          <Route path="/website-maintenance-performance-security" element={<WebsiteMaintenance />} />
           <Route path="/seo-services" element={<SEOServices />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
-          <Route path="/website-maintenance" element={<WebsiteMaintenance />} />
+          
           
           {/* Contact Page */}
           <Route path="/contact-us" element={<ContactUs />} />

@@ -324,6 +324,72 @@
   display: flex;
 }
 
+/* WHO WE ARE – Sleekits Style   */
+
+.who-dropdown {
+  position: relative;
+}
+
+/* Compact floating card */
+.who-dropdown .dropdown-content {
+  width: 100%;
+  max-width: 1100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  box-shadow: none;
+  padding: 20px 0px;
+  display: none;
+}
+
+/* Show on hover */
+.who-dropdown:hover .dropdown-content,
+.who-dropdown.active .dropdown-content {
+  display: flex;
+}
+
+/* Card wrapper */
+.who-dropdown .dropdown-content {
+  gap: 18px;
+  justify-content: center;
+}
+
+/* Smaller white cards */
+.who-dropdown .dropdown-column {
+  width: 230px ;          /* increase width */
+  min-height: auto;
+  max-height: none;
+  padding: 20px 22px;    /* optional for balance */
+}
+
+
+/* Remove hover lift for cleaner look */
+.who-dropdown .dropdown-column:hover {
+  transform: none;
+}
+
+/* Highlight blue card */
+.who-dropdown .dropdown-column-last {
+  width: 270px;
+  min-height: auto;
+  padding: 20px;
+  background: linear-gradient(180deg, #d7ecfb 0%, #9fd2f2 100%);
+  box-shadow: 0 20px 45px rgba(0,82,204,0.25);
+}
+
+/* Big title like Sleekits */
+.who-dropdown .last-column4 {
+  font-size: 26px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.who-dropdown .last-column-button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
 /* CONTACT BUTTON */
 .contact-btn {
   background: #00448f;
@@ -465,6 +531,15 @@
 }
 
 /* Medium Desktop (1200px - 1399px) - Balanced Professional View */
+
+@media (min-width: 1025px) {
+  .navbar .who-dropdown .dropdown-content .dropdown-column {
+    width: 300px;
+    max-width: 250px;
+    flex: 0 0 250px;
+  }
+}
+
 @media (min-width: 1200px) and (max-width: 1399px) {
   .nav-links {
     gap: 15px;

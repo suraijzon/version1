@@ -2,37 +2,45 @@ import React from "react";
 import '../styles/process.css';
 import DiscoverIcon from "../assets/icons/discover.svg";
 import StrategyIcon from "../assets/icons/strategy.svg";
-import LaunchIcon from "../assets/icons/launch.svg";
+import DevelopmentIcon from "../assets/icons/launch.svg";
+import LaunchIcon from "../assets/icons/launch4.svg";
 import SupportIcon from "../assets/icons/support.svg";
 
 const ProcessSection = () => {
   const steps = [
     {
       number: "1",
-      title: "Discover",
+      title: "Discovery",
       description:
-        "We begin by understanding your unique goals, challenges, and opportunities through in-depth discussions and research.",
+        "We listen to your goals and gather key requirements",
       icon: DiscoverIcon,
     },
     {
       number: "2",
-      title: "Strategize & Build",
+      title: "Design",
       description:
-        "We create tailored digital solutions — websites, SEO, or AI integrations — that align with your business objectives.",
+        "UI/UX designs and system architecture tailored to your needs.",
       icon: StrategyIcon,
     },
     {
       number: "3",
-      title: "Launch & Optimize",
+      title: "Development",
       description:
-        "Once tested and perfected, we launch your solution and continuously optimize it for better performance.",
-      icon: LaunchIcon,
+        "Agile development of web, mobile, and desktop solutions.",
+      icon: DevelopmentIcon,
     },
     {
       number: "4",
-      title: "Support & Grow",
+      title: "Launch",
       description:
-        "We stay with you after launch, offering ongoing support, updates, and growth strategies for long-term success.",
+        "Final testing, deployment, and go-live across platforms.",
+      icon: LaunchIcon,
+    },
+    {
+      number: "5",
+      title: "Support",
+      description:
+        "Continuous maintenance and updates to ensure success.",
       icon: SupportIcon,
     },
   ];
@@ -41,7 +49,7 @@ const ProcessSection = () => {
     <section className="process-section">
       <div className="process-container">
         <h2 className="process-title">Proven Process – How It Works</h2>
-        <p className="process-subtitle">Our 4-Step Success Blueprint</p>
+        <p className="process-subtitle">Our 5-Step Success Blueprint</p>
 
         <div className="steps-grid">
           {steps.map((step, index) => (

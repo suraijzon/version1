@@ -90,9 +90,9 @@ const SolutionSection = () => {
         items: [
           'Machine Learning Solutions',
           'Custom AI Model Development',
-          'Natural Language Processing (NLP)',
           'Computer Vision',
           'Predictive & Smart Analytics',
+          'Natural Language Processing (NLP)',
         ]
       },
       {
@@ -100,9 +100,9 @@ const SolutionSection = () => {
         items: [
           'LLM & AI API Integration',
           'AI Agents & Autonomous Systems',
-          'Chatbot & Virtual Assistant Development',
           'AI-Powered Search',
           'Recommendation Systems',
+          'Chatbot & Virtual Assistant Development',
         ]
       },
       {

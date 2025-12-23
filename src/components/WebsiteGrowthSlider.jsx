@@ -143,7 +143,6 @@ const WebsiteGrowthSlider = () => {
 
         <div className="cta-buttons">
           <button className="btn-primary">Get a Free Website Growth Audit</button>
-          <button className="btn-secondary">View Our Results →</button>
         </div>
 
         <div className="stats-container">

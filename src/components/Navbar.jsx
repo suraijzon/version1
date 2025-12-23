@@ -353,7 +353,7 @@ const Navbar = () => {
               WHO WE ARE ▾
             </button>
 
-            <div className="dropdown-content" {...dropdownContentHoverProps}>
+            <div className="dropdown-content">
               <div className="dropdown-column">
                 <h4>Who We Are</h4>
                 <a href="/about">About Us</a>

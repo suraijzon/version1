@@ -146,7 +146,7 @@ const AISoftwareServices = () => {
       {/* Who Needs Section */}
       <section className="aiss__audience_section">
         <div className="aiss__container">
-          <h2 className="aiss__heading">Who Needs AI Software Development?</h2>
+          <h2 className="aiss__heading2">Who Needs AI Software Development?</h2>
           <p className="aiss__subtitle">This service is ideal for:</p>
           <div className="aiss__audience_grid">
             {targetAudience.map((item, index) => (
@@ -166,7 +166,7 @@ const AISoftwareServices = () => {
       {/* Problems Section */}
       <section className="aiss__problems_section">
         <div className="aiss__container">
-          <h2 className="aiss__heading">Problems We Solve with AI Software</h2>
+          <h2 className="aiss__heading3">Problems We Solve with AI Software</h2>
           <div className="aiss__problems_grid">
             {problems.map((problem, index) => (
               <div key={index} className="aiss__problem_item">

@@ -148,7 +148,7 @@ const EcommerceDev = () => {
       {/* Target Audience */}
       <section className="ecd__audience_section">
         <div className="ecd__container">
-          <h2 className="ecd__heading">Who Is This Service For?</h2>
+          <h2 className="ecd__heading2">Who Is This Service For?</h2>
           <p className="ecd__subtitle">This service is ideal for:</p>
           <div className="ecd__audience_list">
             {targetAudience.map((item, index) => (
@@ -185,7 +185,7 @@ const EcommerceDev = () => {
       {/* Services Section */}
       <section className="ecd__services_section">
         <div className="ecd__container">
-          <h2 className="ecd__heading">Our E-commerce Development & Optimization Services</h2>
+          <h2 className="ecd__heading2">Our E-commerce Development & Optimization Services</h2>
           <p className="ecd__subtitle">
             We deliver end-to-end e-commerce development and optimization solutions, including:
           </p>
@@ -287,7 +287,7 @@ const EcommerceDev = () => {
       {/* FAQ Section */}
       <section className="ecd__faq_section">
         <div className="ecd__container">
-          <h2 className="ecd__heading">Frequently Asked Questions</h2>
+          <h2 className="ecd__heading2">Frequently Asked Questions</h2>
           <div className="ecd__faq_container">
             {faqs.map((faq, index) => (
               <div key={index} className="ecd__faq_card">

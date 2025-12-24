@@ -11,7 +11,7 @@
 /* Hero Section - Pattern Background */
 .ecd__hero {
   position: relative;
-  background: linear-gradient(135deg, #e91e63 0%, #c2185b 50%, #ad1457 100%);
+  background: linear-gradient(135deg, #1e4de9 0%, #1e0e57 50%, #070352 100%);
   padding: 7rem 2rem;
   overflow: hidden;
   min-height: 700px;
@@ -136,7 +136,7 @@
 }
 
 .ecd__impact_box {
-  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+  background: linear-gradient(135deg, #30099e 0%, #c2185b 100%);
   color: #ffffff;
   padding: 2rem;
   border-radius: 15px;
@@ -153,6 +153,13 @@
   padding: 3rem 0;
   background: #ffffff;
 }
+.ecd__heading2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #004880;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
 
 .ecd__audience_list {
   max-width: 800px;
@@ -165,9 +172,9 @@
   gap: 1.5rem;
   padding: 1.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #fff0f5 0%, #fce4ec 100%);
-  border-left: 5px solid #e91e63 !important;
-  border: 1px solid #e91e63;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e5e4fc 100%);
+  border-left: 5px solid #1e2fe9 !important;
+  border: 1px solid #1e25e9;
   border-radius: 10px;
   transition: all 0.3s;
 }
@@ -179,7 +186,7 @@
 
 .ecd__audience_bullet {
   font-size: 2rem;
-  color: #e91e63;
+  color: #1e21e9;
   font-weight: 700;
 }
 
@@ -190,7 +197,7 @@
 }
 
 .ecd__audience_note {
-  background: #2c3e50;
+  background: #004880;
   color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
@@ -203,7 +210,7 @@
 /* Problems Section */
 .ecd__problems_section {
   padding: 3rem 0;
-  background: linear-gradient(180deg, #fce4ec 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #e6e4fc 0%, #ffffff 100%);
 }
 
 .ecd__problems_grid {
@@ -215,7 +222,7 @@
 
 .ecd__problem_card {
   background: #ffffff;
-  border: 3px solid #f8bbd0;
+  border: 1px solid #17084b;
   border-radius: 15px;
   padding: 2.5rem;
   text-align: center;
@@ -253,7 +260,7 @@
 .ecd__problems_footer {
   text-align: center;
   font-size: 1.4rem;
-  color: #e91e63;
+  color: #004880;
   font-weight: 700;
   margin-top: 3rem;
 }
@@ -396,7 +403,7 @@
 /* Comparison Section */
 .ecd__comparison_section {
   padding: 6rem 0;
-  background: linear-gradient(180deg, #fce4ec 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #e4e4fc 0%, #ffffff 100%);
 }
 
 .ecd__comparison_wrapper {
@@ -418,6 +425,7 @@
   background: #ecf0f1;
   padding: 2.5rem;
   border-radius: 15px;
+  border: 2px solid green;
 }
 
 .ecd__col_basic h3 {
@@ -510,11 +518,11 @@
 
 .ecd__step_content {
   flex: 1;
-  background: linear-gradient(135deg, #fff0f5 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #f0f0ff 0%, #ffffff 100%);
   padding: 2rem;
   border-radius: 12px;
-  border-left: 5px solid #e91e63 !important;
-  border: 1px solid #e91e63;
+  border-left: 5px solid #004880 !important;
+  border: 1px solid #004880;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -549,7 +557,7 @@
   padding: 2rem;
   margin-bottom: 1.5rem;
   background: #ffffff;
-  border: 2px solid #f8bbd0;
+  border: 2px solid #004880;
   border-radius: 12px;
   transition: all 0.3s;
 }
@@ -563,7 +571,7 @@
 .ecd__why_icon {
   width: 45px;
   height: 45px;
-  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+  background: linear-gradient(135deg, #251ee9 0%, #6f71f9 100%);
   color: #ffffff;
   border-radius: 50%;
   display: flex;
@@ -581,7 +589,7 @@
 }
 
 .ecd__why_statement {
-  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+  background: linear-gradient(135deg, #251ee9 0%, #0e0668 100%);
   color: #ffffff;
   padding: 2.5rem;
   border-radius: 15px;
@@ -636,7 +644,7 @@
 /* Final CTA */
 .ecd__cta_section {
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+  background: linear-gradient(135deg, #2c1ee9 0%, #c2185b 100%);
 }
 
 .ecd__cta_box {

@@ -11,7 +11,7 @@
 /* Hero Section */
 .cs__hero {
   position: relative;
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+  background: linear-gradient(135deg, #08027f 0%, #7c3aed 50%, #040864 100%);
   padding: 10rem 2rem 3rem;
   overflow: hidden;
 }
@@ -74,7 +74,7 @@
 .cs__heading {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #4f46e5;
+  color: #004480;
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -101,7 +101,7 @@
 
 .cs__highlight_card {
   background: #ffffff;
-  border: 2px solid #e9d5ff;
+  border: 2px solid #d5dcff;
   border-radius: 15px;
   padding: 2.5rem;
   text-align: center;
@@ -109,7 +109,7 @@
 }
 
 .cs__highlight_card:hover {
-  border-color: #a855f7;
+  border-color: #5563f7;
   transform: translateY(-8px);
   box-shadow: 0 15px 40px rgba(168, 85, 247, 0.2);
 }
@@ -130,8 +130,8 @@
 .cs__highlights_footer {
   text-align: center;
   font-size: 1.3rem;
-  color: #7c3aed;
-  font-weight: 700;
+  color: black;
+  font-weight: 600;
   margin-top: 3rem;
 }
 
@@ -319,7 +319,7 @@
 /* CTA Section */
 .cs__cta_section {
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #4f46e5 0%, #14134a 100%);
   text-align: center;
   color: #ffffff;
 }
@@ -359,7 +359,7 @@
 
 .cs__cta_primary {
   background: #ffffff;
-  color: #4f46e5;
+  color: #2921c0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 

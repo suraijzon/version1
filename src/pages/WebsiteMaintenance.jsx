@@ -139,7 +139,7 @@ const WebsiteMaintenance = () => {
       {/* Why It Matters */}
       <section className="wm__why_section">
         <div className="wm__container">
-          <h2 className="wm__heading">Why Website Performance, Security & Maintenance Matter</h2>
+          <h2 className="wm__heading2">Why Website Performance, Security & Maintenance Matter</h2>
           <p className="wm__intro">A slow, outdated, or vulnerable website can:</p>
           <div className="wm__why_grid">
             {whyMatters.map((item, index) => (
@@ -158,7 +158,7 @@ const WebsiteMaintenance = () => {
       {/* Who Needs */}
       <section className="wm__audience_section">
         <div className="wm__container">
-          <h2 className="wm__heading">Who Needs Website Maintenance & Security?</h2>
+          <h2 className="wm__heading2">Who Needs Website Maintenance & Security?</h2>
           <p className="wm__subtitle">This service is ideal for:</p>
           <div className="wm__audience_list">
             {whoNeeds.map((item, index) => (
@@ -177,7 +177,7 @@ const WebsiteMaintenance = () => {
       {/* Problems */}
       <section className="wm__problems_section">
         <div className="wm__container">
-          <h2 className="wm__heading">Problems We Prevent & Fix</h2>
+          <h2 className="wm__heading3">Problems We Prevent & Fix</h2>
           <div className="wm__problems_grid">
             {problems.map((problem, index) => (
               <div key={index} className="wm__problem_card">
@@ -195,7 +195,7 @@ const WebsiteMaintenance = () => {
       {/* Services */}
       <section className="wm__services_section">
         <div className="wm__container">
-          <h2 className="wm__heading">Our Website Performance, Security & Maintenance Services</h2>
+          <h2 className="wm__heading2">Our Website Performance, Security & Maintenance Services</h2>
           <p className="wm__subtitle">
             We offer comprehensive website performance, security, and maintenance solutions, including:
           </p>
@@ -241,7 +241,7 @@ const WebsiteMaintenance = () => {
       {/* Process */}
       <section className="wm__process_section">
         <div className="wm__container">
-          <h2 className="wm__heading">Our Maintenance Process</h2>
+          <h2 className="wm__heading2">Our Maintenance Process</h2>
           <div className="wm__process_grid">
             {processSteps.map((step, index) => (
               <div key={index} className="wm__process_card">
@@ -257,7 +257,7 @@ const WebsiteMaintenance = () => {
       {/* Tools */}
       <section className="wm__tools_section">
         <div className="wm__container">
-          <h2 className="wm__heading">Technologies & Tools We Use</h2>
+          <h2 className="wm__heading2">Technologies & Tools We Use</h2>
           <div className="wm__tools_grid">
             {tools.map((tool, index) => (
               <div key={index} className="wm__tool_card">{tool}</div>
@@ -272,7 +272,7 @@ const WebsiteMaintenance = () => {
       {/* Why Choose */}
       <section className="wm__why_choose_section">
         <div className="wm__container">
-          <h2 className="wm__heading">Why Choose ZonzocTech for Website Maintenance?</h2>
+          <h2 className="wm__heading2">Why Choose ZonzocTech for Website Maintenance?</h2>
           <div className="wm__choose_list">
             {whyChoose.map((reason, index) => (
               <div key={index} className="wm__choose_item">
@@ -290,7 +290,7 @@ const WebsiteMaintenance = () => {
       {/* FAQ */}
       <section className="wm__faq_section">
         <div className="wm__container">
-          <h2 className="wm__heading">Frequently Asked Questions</h2>
+          <h2 className="wm__heading2">Frequently Asked Questions</h2>
           <div className="wm__faq_list">
             {faqs.map((faq, index) => (
               <div key={index} className="wm__faq_item">

@@ -1,6 +1,11 @@
 /* AI Search Optimization Page Styles */
 
 .aiso__wrapper {
+  --primary: #004480;        
+  --primary-light: #163a6b;
+  --secondary: #f39c12;      
+  --secondary-dark: #d35400;
+  --white: #ffffff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,7 +16,7 @@
 /* Hero Section - Gradient with Floating Circles */
 .aiso__hero {
   position: relative;
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  background: linear-gradient(135deg, #004480 0%, #4438ef 100%);
   padding: 10rem 2rem 5rem;
   overflow: hidden;
   min-height: 650px;
@@ -103,7 +108,7 @@
 .aiso__hero_cta {
   display: inline-block;
   background: #ffffff;
-  color: #11998e;
+  color: #004480;
   padding: 1.3rem 3rem;
   border-radius: 50px;
   text-decoration: none;
@@ -157,7 +162,7 @@
 }
 
 .aiso__focus_wrapper {
-  max-width: 800px;
+  max-width: 1400px;
   margin: 3rem auto 0;
   background: #ffffff;
   border-radius: 15px;
@@ -167,7 +172,7 @@
 
 .aiso__focus_intro {
   font-size: 1.2rem;
-  color: #2d3436;
+  color: #025dae;
   font-weight: 600;
   margin-bottom: 2rem;
   text-align: center;
@@ -175,7 +180,7 @@
 
 .aiso__focus_grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
 }
 
@@ -184,10 +189,10 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: #f0fdf4;
+  background: #f0f8fd;
   border-radius: 10px;
-  border-left: 4px solid #11998e !important;
-  border: 1px solid #11998e;
+  border-left: 4px solid #004480 !important;
+  border: 1px solid #004480;
 }
 
 .aiso__focus_dot {
@@ -209,6 +214,13 @@
   padding: 3rem 0;
   background: #ffffff;
 }
+.aiso__heading2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #004480;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
 
 .aiso__audience_list {
   max-width: 900px;
@@ -221,10 +233,10 @@
   gap: 1.5rem;
   padding: 1.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  background: linear-gradient(135deg, #f0f9fd 0%, #dce3fc 100%);
   border-radius: 12px;
-  border-left: 5px solid #11998e !important;
-  border: 1px solid #11998e;
+  border-left: 5px solid #004480 !important;
+  border: 1px solid #004480;
   transition: all 0.3s;
 }
 
@@ -236,7 +248,7 @@
 .aiso__audience_check {
   width: 30px;
   height: 30px;
-  background: #11998e;
+  background: #131199;
   color: #ffffff;
   border-radius: 50%;
   display: flex;
@@ -255,7 +267,7 @@
 .aiso__audience_callout {
   max-width: 800px;
   margin: 0 auto;
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  background: linear-gradient(135deg, #112199 0%, #38d0ef 100%);
   color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
@@ -273,14 +285,14 @@
 
 .aiso__problems_wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
   margin: 3rem 0;
 }
 
 .aiso__problem_card {
   background: #ffffff;
-  border: 2px solid #fee2e2;
+  border: 2px solid #e3e2fe;
   border-radius: 15px;
   padding: 2rem;
   text-align: center;
@@ -308,7 +320,7 @@
 .aiso__problems_solution {
   text-align: center;
   font-size: 1.2rem;
-  color: #11998e;
+  color: #004480;
   font-weight: 600;
   margin-top: 3rem;
   max-width: 700px;
@@ -319,9 +331,21 @@
 /* Services Section */
 .aiso__services_section {
   padding: 2rem 0 2rem 0;
-  background: #ffffff;
+  background: rgb(39, 76, 197);
 }
-
+.aiso__heading3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.aiso__subtitle2 {
+  font-size: 1.15rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+}
 .aiso__services_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -330,7 +354,7 @@
 }
 
 .aiso__service_box {
-  background: linear-gradient(135deg, #f3fdf3 0%, #f0fdf4 100%);
+  background: linear-gradient(135deg, #a2c6fd 0%, #f0fdf4 100%);
   border: 2px solid #d1fae5;
   border-radius: 15px;
   padding: 1.0rem 2rem;
@@ -339,7 +363,7 @@
 }
 
 .aiso__service_box:hover {
-  border-color: #11998e;
+  border-color: #004480;
   box-shadow: 0 10px 30px rgba(17, 153, 142, 0.15);
   transform: translateY(-8px);
 }
@@ -359,7 +383,7 @@
 .aiso__services_footer {
   text-align: center;
   font-size: 1.15rem;
-  color: #636e72;
+  color: white;
   margin-top: 3rem;
   font-style: italic;
 }
@@ -456,7 +480,7 @@
 .aiso__process_icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  background: linear-gradient(135deg, #0262b7 0%, #026ecc 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -472,14 +496,14 @@
   width: 35px;
   height: 35px;
   background: #ffffff;
-  color: #11998e;
+  color: #004480;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.9rem;
   font-weight: 700;
-  border: 3px solid #11998e;
+  border: 3px solid #0187fc;
 }
 
 .aiso__process_content {
@@ -487,7 +511,8 @@
   background: #ffffff;
   padding: 2rem;
   border-radius: 12px;
-  border-left: 5px solid #11998e;
+  border-left: 5px solid #004480 !important;
+  border: 1px solid #004480 ;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -495,7 +520,7 @@
   font-size: 1.5rem;
   color: #2d3436;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .aiso__process_desc {
@@ -518,8 +543,8 @@
 }
 
 .aiso__tool_card {
-  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-  border: 2px solid #11998e;
+  background: linear-gradient(135deg, #f0f3fd 0%, #dce6fc 100%);
+  border: 2px solid #004480;
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
@@ -530,7 +555,7 @@
 }
 
 .aiso__tool_card:hover {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  background: linear-gradient(135deg, #117c99 0%, #38daef 100%);
   color: #ffffff;
   transform: scale(1.05);
   box-shadow: 0 10px 30px rgba(17, 153, 142, 0.3);
@@ -563,12 +588,12 @@
   margin-bottom: 1.5rem;
   background: #ffffff;
   border-radius: 12px;
-  border: 2px solid #d1fae5;
+  border: 2px solid #d1e0fa;
   transition: all 0.3s;
 }
 
 .aiso__why_card:hover {
-  border-color: #11998e;
+  border-color: #4b03e6;
   box-shadow: 0 5px 20px rgba(17, 153, 142, 0.15);
   transform: translateX(10px);
 }
@@ -576,7 +601,7 @@
 .aiso__why_marker {
   width: 15px;
   height: 15px;
-  background: #11998e;
+  background: #2e1199;
   border-radius: 50%;
   flex-shrink: 0;
 }
@@ -588,7 +613,7 @@
 }
 
 .aiso__why_statement {
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  background: linear-gradient(135deg, #281199 0%, #38ef7d 100%);
   color: #ffffff;
   padding: 2.5rem;
   border-radius: 12px;
@@ -612,9 +637,9 @@
 
 .aiso__faq_box {
   background: #ffffff;
-  border-left: 5px solid #11998e !important;
-  border-right: 5px solid #11998e !important;
-  border: 1px solid #11998e;
+  border-left: 5px solid #004480 !important;
+  border-right: 5px solid #004480 !important;
+  border: 1px solid #004480;
   border-radius: 10px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -643,7 +668,7 @@
 /* Final CTA */
 .aiso__cta_section {
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  background: linear-gradient(135deg, #2e90ff 0%, #5338ef 100%);
 }
 
 .aiso__cta_box {
@@ -669,9 +694,10 @@
 .aiso__cta_btn {
   display: inline-block;
   background: #ffffff;
-  color: #11998e;
+  color: #004480;
   padding: 1.3rem 3rem;
   border-radius: 50px;
+  border:  1px solid #004480;
   text-decoration: none;
   font-weight: 700;
   font-size: 1.15rem;

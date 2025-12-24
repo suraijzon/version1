@@ -190,7 +190,7 @@ const AISearchOptimization = () => {
       {/* Who Needs Section */}
       <section className="aiso__audience_section">
         <div className="aiso__container">
-          <h2 className="aiso__heading">Who Needs AI Search Optimization?</h2>
+          <h2 className="aiso__heading2">Who Needs AI Search Optimization?</h2>
           <p className="aiso__subtitle">This service is ideal for:</p>
           <div className="aiso__audience_list">
             {targetAudience.map((item, index) => (
@@ -209,7 +209,7 @@ const AISearchOptimization = () => {
       {/* Problems Section */}
       <section className="aiso__problems_section">
         <div className="aiso__container">
-          <h2 className="aiso__heading">Problems We Solve with AI Search Optimization</h2>
+          <h2 className="aiso__heading2">Problems We Solve with AI Search Optimization</h2>
           <div className="aiso__problems_wrapper">
             {problems.map((problem, index) => (
               <div key={index} className="aiso__problem_card">
@@ -227,8 +227,8 @@ const AISearchOptimization = () => {
       {/* Services Section */}
       <section className="aiso__services_section">
         <div className="aiso__container">
-          <h2 className="aiso__heading">Our AI Search Optimization Services</h2>
-          <p className="aiso__subtitle">
+          <h2 className="aiso__heading3">Our AI Search Optimization Services</h2>
+          <p className="aiso__subtitle2">
             We deliver end-to-end AI search optimization solutions, including:
           </p>
           <div className="aiso__services_grid">
@@ -270,7 +270,7 @@ const AISearchOptimization = () => {
       {/* Process Section */}
       <section className="aiso__process_section">
         <div className="aiso__container">
-          <h2 className="aiso__heading">Our AI Search Optimization Process</h2>
+          <h2 className="aiso__heading2">Our AI Search Optimization Process</h2>
           <div className="aiso__process_flow">
             {processSteps.map((step, index) => (
               <div key={index} className="aiso__process_item">
@@ -306,7 +306,7 @@ const AISearchOptimization = () => {
       {/* Why Choose Section */}
       <section className="aiso__why_section">
         <div className="aiso__container">
-          <h2 className="aiso__heading">Why Choose ZonzocTech for AI Search Optimization?</h2>
+          <h2 className="aiso__heading2">Why Choose ZonzocTech for AI Search Optimization?</h2>
           <div className="aiso__why_container">
             {whyChoose.map((reason, index) => (
               <div key={index} className="aiso__why_card">

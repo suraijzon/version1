@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/contact.css';
 
 const ContactSection = () => {
@@ -7,9 +8,11 @@ const ContactSection = () => {
     email: '',
     phone: '',
     company: '',
-   
     message: '',
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(''); // 'success' or 'error'
 
   const handleChange = (e) => {
     setFormData({
@@ -20,8 +23,55 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    // EmailJS configuration
+    const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
+    const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+    const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+
+    // Prepare template parameters
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      phone: formData.phone,
+      company: formData.company,
+      message: formData.message,
+      to_email: 'info@zonzoctech.com',
+    };
+
+    // Send email using EmailJS
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setSubmitStatus('success');
+        setIsSubmitting(false);
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: '',
+        });
+
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus('');
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error('FAILED...', error);
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+
+        // Clear error message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus('');
+        }, 5000);
+      });
   };
 
   const steps = [
@@ -74,6 +124,19 @@ const ContactSection = () => {
             Send us a message, and we'll promptly discuss your project with you.
           </h3>
 
+          {/* Success/Error Messages */}
+          {submitStatus === 'success' && (
+            <div className="alert alert-success">
+              ✓ Thank you! Your message has been sent successfully. We'll get back to you soon!
+            </div>
+          )}
+
+          {submitStatus === 'error' && (
+            <div className="alert alert-error">
+              ✗ Oops! Something went wrong. Please try again or email us directly at info@zonzoctech.com
+            </div>
+          )}
+
           <form onSubmit={handleSubmit} className="contact-form">
             <div className="form-row">
               <div className="form-group">
@@ -85,6 +148,7 @@ const ContactSection = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -97,6 +161,7 @@ const ContactSection = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  disabled={isSubmitting}
                 />
               </div>
             </div>
@@ -111,6 +176,7 @@ const ContactSection = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -122,6 +188,7 @@ const ContactSection = () => {
                   placeholder="Your Company Name"
                   value={formData.company}
                   onChange={handleChange}
+                  disabled={isSubmitting}
                 />
               </div>
             </div>
@@ -135,11 +202,13 @@ const ContactSection = () => {
                 onChange={handleChange}
                 rows="4"
                 required
+                disabled={isSubmitting}
               ></textarea>
             </div>
 
-            <button type="submit" className="submit-btn">
-              SEND REQUEST <i className="fa-solid fa-arrow-right"></i>
+            <button type="submit" className="submit-btn" disabled={isSubmitting}>
+              {isSubmitting ? 'SENDING...' : 'SEND REQUEST'} 
+              <i className="fa-solid fa-arrow-right"></i>
             </button>
           </form>
         </div>

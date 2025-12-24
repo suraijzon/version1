@@ -174,7 +174,7 @@ const AIWebAppDev = () => {
       {/* Problems Section */}
       <section className="aiwa__problems_section">
         <div className="aiwa__container">
-          <h2 className="aiwa__heading">Problems We Solve with AI Web Applications</h2>
+          <h2 className="aiwa__heading2">Problems We Solve with AI Web Applications</h2>
           <div className="aiwa__problems_grid">
             {problems.map((problem, index) => (
               <div key={index} className="aiwa__problem_box">
@@ -192,7 +192,7 @@ const AIWebAppDev = () => {
       {/* Solutions Section */}
       <section className="aiwa__solutions_section">
         <div className="aiwa__container">
-          <h2 className="aiwa__heading">Custom AI Web Application Development Solutions</h2>
+          <h2 className="aiwa__heading3">Custom AI Web Application Development Solutions</h2>
           <p className="aiwa__subtitle">
             We develop AI-powered web applications tailored to your business goals, including:
           </p>
@@ -230,7 +230,7 @@ const AIWebAppDev = () => {
       {/* Process Section */}
       <section className="aiwa__process_section">
         <div className="aiwa__container">
-          <h2 className="aiwa__heading">Our Development Process</h2>
+          <h2 className="aiwa__heading3">Our Development Process</h2>
           <div className="aiwa__process_container">
             {processSteps.map((item, index) => (
               <div key={index} className="aiwa__process_card">
@@ -248,7 +248,7 @@ const AIWebAppDev = () => {
       {/* Technologies Section */}
       <section className="aiwa__tech_section">
         <div className="aiwa__container">
-          <h2 className="aiwa__heading">Technologies We Use (Flexible & Scalable)</h2>
+          <h2 className="aiwa__heading3">Technologies We Use (Flexible & Scalable)</h2>
           <div className="aiwa__tech_list">
             {technologies.map((tech, index) => (
               <div key={index} className="aiwa__tech_item">
@@ -266,7 +266,7 @@ const AIWebAppDev = () => {
       {/* Why Choose Section */}
       <section className="aiwa__why_section">
         <div className="aiwa__container">
-          <h2 className="aiwa__heading">Why Choose ZonzocTech for AI Web App Development</h2>
+          <h2 className="aiwa__heading3">Why Choose ZonzocTech for AI Web App Development</h2>
           <div className="aiwa__why_boxes">
             {whyChoose.map((reason, index) => (
               <div key={index} className="aiwa__why_box">
@@ -284,7 +284,7 @@ const AIWebAppDev = () => {
       {/* FAQ Section */}
       <section className="aiwa__faq_section">
         <div className="aiwa__container">
-          <h2 className="aiwa__heading">Frequently Asked Questions</h2>
+          <h2 className="aiwa__heading3">Frequently Asked Questions</h2>
           <div className="aiwa__faq_accordion">
             {faqs.map((faq, index) => (
               <div key={index} className="aiwa__faq_item">

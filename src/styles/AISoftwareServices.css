@@ -1,6 +1,11 @@
 /* AI Software Services Page Styles - Redesigned */
 
 .aiss__wrapper {
+  --primary: #004480;        /* Dark Blue */
+  --primary-light: #163a6b;
+  --secondary: #f39c12;      /* Orange */
+  --secondary-dark: #d35400;
+  --white: #ffffff;  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,7 +16,11 @@
 /* Hero Section - Gradient Waves */
 .aiss__hero {
   position: relative;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+   background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--primary-light) 100%
+  );
   padding: 10rem 2rem 5rem;
   overflow: hidden;
   min-height: 700px;

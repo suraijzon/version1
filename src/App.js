@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 
@@ -14,6 +14,7 @@ import WhyChooseSleekIT from "./components/WhyChooseSleekIT";
 import ContactSection from "./components/ContactSection";
 import ReviewSection from "./components/ReviewSection";
 import Footer from "./components/Footer";
+import ExpertPopup from "./components/ExpertPopup";
 
 // Import pages
 import GoogleSearchConsole from './pages/GoogleSearchConsole';
@@ -38,13 +39,28 @@ import TermsConditions from './pages/TermsConditions';
 import WebsiteMaintenance from './pages/WebsiteMaintenance';
 
 
-// Home Page Component
+// Home Page Component with Popup Management
 const HomePage = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [preSelectedService, setPreSelectedService] = useState("");
+
+  // Function to open popup from slider
+  const handleOpenPopupFromSlider = () => {
+    setPreSelectedService("Get a Free Website Growth Audit");
+    setIsPopupOpen(true);
+  };
+
+  // Function to close popup
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+    setPreSelectedService("");
+  };
+
   return (
     <>
       <Navbar />
       <Hero />
-      <WebsiteGrowthSlider />
+      <WebsiteGrowthSlider onOpenPopup={handleOpenPopupFromSlider} />
       <Solution />
       <SuccessSection />
       <ProcessSection />
@@ -53,6 +69,13 @@ const HomePage = () => {
       <ContactSection />
       <ReviewSection />
       <Footer />
+      
+      {/* Expert Popup */}
+      <ExpertPopup 
+        open={isPopupOpen} 
+        onClose={handleClosePopup}
+        preSelectedService={preSelectedService}
+      />
     </>
   );
 };
@@ -84,12 +107,10 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           
-          
           {/* Contact Page */}
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactPage />} />
-          
 
           {/* User & Admin Pages */}
           <Route path="/user-profile" element={<UserProfile />} />

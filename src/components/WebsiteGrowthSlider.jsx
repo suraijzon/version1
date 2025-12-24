@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/WebsiteGrowthSlider.css';
 
-const WebsiteGrowthSlider = () => {
+const WebsiteGrowthSlider = ({ onOpenPopup }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -58,6 +58,12 @@ const WebsiteGrowthSlider = () => {
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
+  };
+
+  const handleAuditClick = () => {
+    if (onOpenPopup) {
+      onOpenPopup();
+    }
   };
 
   const currentSlideData = slides[currentSlide];
@@ -142,7 +148,9 @@ const WebsiteGrowthSlider = () => {
         </div>
 
         <div className="cta-buttons">
-          <button className="btn-primary">Get a Free Website Growth Audit</button>
+          <button className="btn-primary" onClick={handleAuditClick}>
+            Get a Free Website Growth Audit
+          </button>
         </div>
 
         <div className="stats-container">

@@ -149,7 +149,7 @@ const AIWebsiteDesign = () => {
       {/* Target Audience */}
       <section className="aiwd__audience_section">
         <div className="aiwd__container">
-          <h2 className="aiwd__title">Who Is This Service For?</h2>
+          <h2 className="aiwd__title2">Who Is This Service For?</h2>
           <p className="aiwd__subtitle">This service is ideal for:</p>
           <div className="aiwd__audience_grid">
             {targetAudience.map((item, index) => (
@@ -186,7 +186,7 @@ const AIWebsiteDesign = () => {
       {/* Services Section */}
       <section className="aiwd__services_section">
         <div className="aiwd__container">
-          <h2 className="aiwd__title">Our AI Website Design & Development Services</h2>
+          <h2 className="aiwd__title2">Our AI Website Design & Development Services</h2>
           <p className="aiwd__subtitle">
             We offer end-to-end AI website design and development solutions, including:
           </p>
@@ -207,7 +207,7 @@ const AIWebsiteDesign = () => {
       {/* Comparison Section */}
       <section className="aiwd__comparison_section">
         <div className="aiwd__container">
-          <h2 className="aiwd__title">AI Websites vs Traditional Websites</h2>
+          <h2 className="aiwd__title2">AI Websites vs Traditional Websites</h2>
           <div className="aiwd__comparison_grid">
             <div className="aiwd__comparison_column aiwd__comparison_traditional">
               <h3>Traditional Websites</h3>
@@ -236,7 +236,7 @@ const AIWebsiteDesign = () => {
       {/* Process Section */}
       <section className="aiwd__process_section">
         <div className="aiwd__container">
-          <h2 className="aiwd__title">Our AI Website Development Process</h2>
+          <h2 className="aiwd__title2">Our AI Website Development Process</h2>
           <div className="aiwd__process_grid">
             {processSteps.map((item, index) => (
               <div key={index} className="aiwd__process_card">
@@ -252,7 +252,7 @@ const AIWebsiteDesign = () => {
       {/* Technologies Section */}
       <section className="aiwd__tech_section">
         <div className="aiwd__container">
-          <h2 className="aiwd__title">Technologies & Tools We Use</h2>
+          <h2 className="aiwd__title2">Technologies & Tools We Use</h2>
           <div className="aiwd__tech_list">
             {technologies.map((tech, index) => (
               <div key={index} className="aiwd__tech_item">

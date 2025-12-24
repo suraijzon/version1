@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from "react";
 import "../styles/ExpertPopup.css";
 
-const ExpertPopup = ({ open, onClose }) => {
-  const [budget, setBudget] = useState(30000); // Track slider value
+const ExpertPopup = ({ open, onClose, preSelectedService }) => {
+  const [budget, setBudget] = useState(5000); // Changed from 30000 to 5000
+  const [selectedService, setSelectedService] = useState("");
 
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
+      // Pre-select service if provided
+      if (preSelectedService) {
+        setSelectedService(preSelectedService);
+      }
     } else {
       document.body.style.overflow = "auto";
     }
-  }, [open]);
+  }, [open, preSelectedService]);
 
   if (!open) return null;
 
-  // Calculate slider background fill
-  const sliderBackground = `linear-gradient(to right, #000 0%, #000 ${
-    ((budget - 30000) / (65000 - 30000)) * 100
-  }%, #ddd ${((budget - 30000) / (65000 - 30000)) * 100}%, #ddd 100%)`;
+  // Calculate slider background fill - FIXED FORMULA
+  const percentage = ((budget - 5000) / (65000 - 5000)) * 100;
+  const sliderBackground = `linear-gradient(to right, #000 0%, #000 ${percentage}%, #ddd ${percentage}%, #ddd 100%)`;
 
   return (
     <div className="popup-overlay" onClick={onClose}>
@@ -74,16 +78,20 @@ const ExpertPopup = ({ open, onClose }) => {
               <input type="email" placeholder="Email*" />
             </div>
 
-            <select>
-              <option>You are interested in</option>
-              <option>Website Development</option>
-              <option>SEO</option>
-              <option>AI Solutions</option>
-              <option>UI/UX Design</option>
+            <select 
+              value={selectedService}
+              onChange={(e) => setSelectedService(e.target.value)}
+            >
+              <option value="">You are interested in</option>
+              <option value="Website Development">Website Development</option>
+              <option value="SEO">SEO</option>
+              <option value="Get a Free Website Growth Audit">Get a Free Website Growth Audit</option>
+              <option value="AI Solutions">AI Solutions</option>
+              <option value="UI/UX Design">UI/UX Design</option>
             </select>
 
             <label className="budget-label">
-              Estimated Budget (USD): {budget}
+              Estimated Budget (USD): ${budget.toLocaleString()}
             </label>
             <input
               type="range"

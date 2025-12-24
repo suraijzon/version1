@@ -239,25 +239,28 @@
   color: #999;
   font-size: 1.1rem;
   pointer-events: none;
+  z-index: 1;
 }
 
-.contact-right .form-group input::placeholder,
-.contact-right .form-group textarea::placeholder {
-  padding-left: 50px; 
-  color: #999; 
-  opacity: 1; 
-}
-
+/* FIXED: Input and textarea text starts after icon */
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 18px 20px 18px 20px;
+  padding: 18px 20px 18px 65px; /* Added left padding of 55px for proper spacing */
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   font-size: 1rem;
   font-family: inherit;
   transition: all 0.3s ease;
   background: #f8f9fa;
+}
+
+/* Remove any placeholder padding */
+.contact-right .form-group input::placeholder,
+.contact-right .form-group textarea::placeholder {
+  padding-left: 0 !important;
+  color: #999; 
+  opacity: 1; 
 }
 
 .form-group input:focus,
@@ -280,10 +283,51 @@
 .contact-right .form-group.full-width i {
   position: absolute;
   top: 18px; 
-  left: 25px; 
+  left: 20px; 
   color: #999;
   font-size: 1.1rem;
   pointer-events: none;
+  z-index: 1;
+}
+
+/* Alert Messages for Contact Form */
+.alert {
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  animation: slideIn 0.3s ease;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Disabled state for form inputs */
+.contact-form input:disabled,
+.contact-form textarea:disabled,
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 /* Submit Button */
@@ -322,12 +366,12 @@
 /* Responsive Design */
 @media (min-width: 1400px) {
   .contact-right {
-    width: 900px;        /* wider form */
-    padding: 56px;      /* optional: more breathing space */
-    margin-left: 0px; /* reduce negative pull if needed */
+    width: 900px;
+    padding: 56px;
+    margin-left: 0px;
   }
   .contact-container {
-    gap: 0px;              /* reduce space between grid columns */
+    gap: 0px;
   }
 }
 
@@ -446,16 +490,19 @@
     margin-left: 0px;
   }
 
-  .contact-right .form-group input[name="phone"]::placeholder {
-    padding-left: 20px; 
-    color: #999; 
+  /* Mobile: Keep proper padding for text after icon */
+  .form-group input,
+  .form-group textarea {
+    padding-left: 50px !important; /* Proper spacing for mobile */
   }
-  
+
+  .form-group i {
+    left: 18px; /* Position icon properly on mobile */
+  }
+
   .contact-right .form-group input::placeholder,
   .contact-right .form-group textarea::placeholder {
-    padding-left: 20px; 
-    color: #999; 
-    opacity: 1;
+    padding-left: 0 !important;
     font-size: 13px; 
   }
 
@@ -477,20 +524,10 @@
   .contact-right .form-group.full-width i {
     position: absolute;
     top: 16px; 
-    left: 12px; 
+    left: 15px; 
     color: #999;
     font-size: 1.1rem;
     pointer-events: none;
-  }
-
-  .contact-right .form-group.full-width textarea::placeholder {
-    padding-left: 17px; 
-    color: #999;
-    opacity: 1; 
-  }
-
-  .contact-right .form-group.full-width textarea:focus::placeholder {
-    color: #999;
   }
 
   .form-title {

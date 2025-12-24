@@ -37,22 +37,12 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
 import WebsiteMaintenance from './pages/WebsiteMaintenance';
 
-
-// Home Page Component with Popup Management
+// ================= HOME PAGE =================
 const HomePage = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [preSelectedService, setPreSelectedService] = useState("");
 
-  // Function to open popup from slider
-  const handleOpenPopupFromSlider = () => {
-    setPreSelectedService("Get a Free Website Growth Audit");
-    setIsPopupOpen(true);
-  };
-
-  // Function to close popup
   const handleClosePopup = () => {
     setIsPopupOpen(false);
-    setPreSelectedService("");
   };
 
   return (
@@ -63,34 +53,33 @@ const HomePage = () => {
       <SuccessSection />
       <ProcessSection />
       <WhoWeAre />
-      <WhyChooseSleekIT /> 
+      <WhyChooseSleekIT />
       <ContactSection />
       <ReviewSection />
       <Footer />
-      
-      {/* Expert Popup */}
-      <ExpertPopup 
-        open={isPopupOpen} 
+
+      {/* Expert Popup (standalone, no slider dependency) */}
+      <ExpertPopup
+        open={isPopupOpen}
         onClose={handleClosePopup}
-        preSelectedService={preSelectedService}
       />
     </>
   );
 };
 
+// ================= APP ROUTER =================
 function App() {
   return (
     <AuthProvider>
       <Router>
         <Routes>
-          {/* Home Page */}
           <Route path="/" element={<HomePage />} />
-          
-          {/* Auth Pages */}
+
+          {/* Auth */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          
-          {/* Service Pages */}
+
+          {/* Services */}
           <Route path="/google-search---console" element={<GoogleSearchConsole />} />
           <Route path="/ai-seo" element={<AiSeoServices />} />
           <Route path="/ai-software-development" element={<AISoftwareServices />} />
@@ -102,15 +91,15 @@ function App() {
           <Route path="/website-maintenance-performance-security" element={<WebsiteMaintenance />} />
           <Route path="/seo-services" element={<SEOServices />} />
           <Route path="/case-studies" element={<CaseStudies />} />
+
+          {/* Pages */}
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
-          
-          {/* Contact Page */}
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/contact" element={<ContactPage />} />
 
-          {/* User & Admin Pages */}
+          {/* User/Admin */}
           <Route path="/user-profile" element={<UserProfile />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
         </Routes>

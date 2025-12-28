@@ -332,10 +332,9 @@
 /* Override the full-width background for Who We Are only */
 .dropdown:nth-child(4) .dropdown-content {
   width: auto;
-  max-width: 320px;
-  min-width: 320px;
-  left: 50%;
-  transform: translateX(-50%);
+  max-width: 230px;
+  min-width: 230px;
+  left: 10%;
   background: white;
   padding: 0;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);

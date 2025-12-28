@@ -39,8 +39,8 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
     setIsSubmitting(true);
     setSubmitStatus('');
 
-    // EmailJS configuration - REPLACE THESE WITH YOUR ACTUAL VALUES
-    const serviceID = 'service_6u3xgr9';        // ✅ Your Service ID
+    // EmailJS configuration 
+    const serviceID = 'service_nq9sanx';        // ✅ Your Service ID
     const templateID = 'template_ae2jgo2'; // 📝 PASTE YOUR TEMPLATE ID HERE
     const publicKey = 'r3l8L0Rdu85cn7oZc';   // 📝 PASTE YOUR PUBLIC KEY HERE
 

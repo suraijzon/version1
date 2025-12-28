@@ -19,7 +19,7 @@ const WebsiteGrowthSlider = ({ onOpenPopup }) => {
           </div>
           
           <h1 className="growth-title">
-            Build a Website That <span className="highlight">Drives Growth</span>
+            Build a Website That <span className="highlightgrowth">Drives Growth</span>
           </h1>
           
           <p className="growth-description">
@@ -119,12 +119,12 @@ const WebsiteGrowthSlider = ({ onOpenPopup }) => {
 
               <div className="chart-area">
                 <div className="chart-bars">
-                  <div className="bar" style={{height: '45%'}}></div>
-                  <div className="bar" style={{height: '60%'}}></div>
-                  <div className="bar" style={{height: '50%'}}></div>
-                  <div className="bar" style={{height: '75%'}}></div>
-                  <div className="bar" style={{height: '85%'}}></div>
-                  <div className="bar active" style={{height: '95%'}}></div>
+                  <div className="gbar" style={{height: '45%'}}></div>
+                  <div className="gbar" style={{height: '60%'}}></div>
+                  <div className="gbar" style={{height: '50%'}}></div>
+                  <div className="gbar" style={{height: '75%'}}></div>
+                  <div className="gbar" style={{height: '85%'}}></div>
+                  <div className="gbar active" style={{height: '95%'}}></div>
                 </div>
               </div>
             </div>

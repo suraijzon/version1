@@ -67,7 +67,7 @@
   text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.highlight {
+.highlightgrowth {
   background: linear-gradient(120deg, #ffd89b 0%, #bcdff7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -378,7 +378,7 @@
   align-items: flex-end;
 }
 
-.bar {
+.gbar {
   flex: 1;
   background: linear-gradient(to top, #667eea, #764ba2);
   border-radius: 6px 6px 0 0;
@@ -386,7 +386,7 @@
   animation: bar-grow 1s ease-out;
 }
 
-.bar.active {
+.gbar.active {
   background: linear-gradient(to top, #ff6b6b, #ee5a52);
 }
 

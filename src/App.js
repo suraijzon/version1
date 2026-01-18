@@ -36,6 +36,7 @@ import ContactPage from './pages/ContactPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
 import WebsiteMaintenance from './pages/WebsiteMaintenance';
+import WebsiteGrowthSlider from './components/WebsiteGrowthSlider';
 
 // ================= HOME PAGE =================
 const HomePage = () => {
@@ -49,6 +50,7 @@ const HomePage = () => {
     <>
       <Navbar />
       <Hero />
+      <WebsiteGrowthSlider />
       <Solution />
       <SuccessSection />
       <ProcessSection />

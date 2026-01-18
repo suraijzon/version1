@@ -6,6 +6,7 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
   const [budget, setBudget] = useState(5000);
   const [selectedService, setSelectedService] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [submitStatus, setSubmitStatus] = useState('');
   
   const [formData, setFormData] = useState({
@@ -14,6 +15,7 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
     phone: '',
     email: '',
     project: ''
+
   });
 
   useEffect(() => {
@@ -33,6 +35,7 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
       [e.target.name]: e.target.value
     });
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -99,9 +102,11 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
   return (
     <div className="popup-overlay" onClick={onClose}>
       <div className="popup-container" onClick={(e) => e.stopPropagation()}>
+
         <button className="popup-close" onClick={onClose}>
           ×
         </button>
+
 
         {/* LEFT PANEL */}
         <div className="popup-left">
@@ -137,9 +142,9 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
         <div className="popup-right">
           <h2>Let's Build Something Incredible Together</h2>
           <p className="popup-subtext">
-            Tell us what you're looking for and our experts will get back to you
-            with tailored solutions to meet your needs.
+            Tell us what you're looking for and our experts will get back to you.
           </p>
+
 
           {/* Success/Error Messages */}
           {submitStatus === 'success' && (
@@ -190,14 +195,18 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
                 onChange={handleInputChange}
                 required
                 disabled={isSubmitting}
+
               />
             </div>
 
-            <select 
+            <select
+              name="Interested Service"
               value={selectedService}
               onChange={(e) => setSelectedService(e.target.value)}
               required
+
               disabled={isSubmitting}
+
             >
               <option value="">You are interested in</option>
               <option value="Website Development">Website Development</option>
@@ -220,6 +229,7 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
               disabled={isSubmitting}
             />
 
+
             <textarea 
               name="project"
               placeholder="Tell us about the project" 
@@ -227,6 +237,7 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
               onChange={handleInputChange}
               required
               disabled={isSubmitting}
+
             />
 
             <div className="popup-actions">
@@ -238,12 +249,14 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
               >
                 Cancel
               </button>
+
               <button 
                 type="submit" 
                 className="submit-btn"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? 'SENDING...' : 'Submit'}
+
               </button>
             </div>
           </form>

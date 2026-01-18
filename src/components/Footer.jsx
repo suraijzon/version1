@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/footer.css';
-import siteLogo from '../assets/icons/logo.png';
+import siteLogo from '../assets/icons/zonzoclogo3-bg.png';
 
 const Footer = () => {
   const navigate = useNavigate();

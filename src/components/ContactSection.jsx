@@ -27,9 +27,9 @@ const ContactSection = () => {
     setSubmitStatus('');
 
     // EmailJS configuration
-    const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
-    const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
-    const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+    const serviceID = 'service_6u3xgr9'; // Replace with your EmailJS service ID
+    const templateID = 'template_aj95hns'; // Replace with your EmailJS template ID
+    const publicKey = 'r3l8L0Rdu85cn7oZc'; // Replace with your EmailJS public key
 
     // Prepare template parameters
     const templateParams = {

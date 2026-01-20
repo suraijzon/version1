@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import '../styles/AuthFigma.css';
-import loginBg from '../assets/icons/login-bg.png';
+import loginBg from '../assets/icons/signup-bg.jpg';
 import GoogleIcon from '../assets/icons/google-icon-logo.svg';
 import AppleIcon from '../assets/icons/apple-logo.svg';
 

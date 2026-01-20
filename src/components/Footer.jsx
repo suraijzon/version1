@@ -1,7 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../styles/footer.css';
-import siteLogo from '../assets/icons/logo.png';
+import siteLogo from '../assets/icons/zonzoclogo3-bg.png';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -12,32 +12,39 @@ const Footer = () => {
   };
 
   const servicesLinks = [
-    'AI Web Application Development',
-    'AI Software Development',
-    'Full-Stack Web Development',
-    'AI-Powered Website Design',
-    'AI Automation & GPT Integration',
-    'SEO & AI Search Optimization',
-    'E-commerce Development'
+    { label: 'AI Web Application Development', path: '/ai-web-application-development' },
+    { label: 'AI Software Development', path: '/ai-software-development' },
+    { label: 'Full-Stack Web Development', path: '/full-stack-web-development' },
+    { label: 'AI-Powered Website Design', path: '/ai-website-design-development' },
+    { label: 'AI Automation & GPT Integration', path: '/ai-software-development' },
+    { label: 'SEO & AI Search Optimization', path: '/seo-ai-search-optimization' },
+    { label: 'E-commerce Development', path: '/ecommerce-development-optimization' }
   ];
 
   const knowledgebaseLinks = [
-    'Websites That Generate Leads', 'AI Chatbots & Virtual Assistants', 'Business Process Automation',
-     'E-commerce Growth Optimization',
-     'Search Visibility & Traffic Growth',
-     'Website Speed & Performance Fixes',
+    { label: 'Websites That Generate Leads', path: '/ai-web-application-development' },
+    { label: 'AI Chatbots & Virtual Assistants', path: '/ai-software-development' },
+    { label: 'Business Process Automation', path: '/ai-software-development' },
+    { label: 'E-commerce Growth Optimization', path: '/ecommerce-development-optimization' },
+    { label: 'Search Visibility & Traffic Growth', path: '/seo-services' },
+    { label: 'Website Speed & Performance Fixes', path: '/website-maintenance-performance-security' }
   ];
 
   const companyLinks = [
-    'Website Growth Guides','AI for Business',
-    'Technical SEO Knowledgebase','Case Studies & Results',
-    'AI SEO & Answer Engine Optimization'
+    { label: 'Website Growth Guides', path: '/google-search---console' },
+    { label: 'AI for Business', path: '/ai-seo' },
+    { label: 'Technical SEO Knowledgebase', path: '/seo-services' },
+    { label: 'Case Studies & Results', path: '/case-studies' },
+    { label: 'AI SEO & Answer Engine Optimization', path: '/ai-seo' }
   ];
 
   const exploreLinks = [
-    'About ZonzocTech','How We Work',
-    'Careers','Contact Us',
-    'Privacy Policy','Terms of Service'
+    { label: 'About ZonzocTech', path: '/about' },
+    { label: 'How We Work', path: '/about' },
+    { label: 'Careers', path: '/contact-us' },
+    { label: 'Contact Us', path: '/contact-us' },
+    { label: 'Privacy Policy', path: '/privacy-policy' },
+    { label: 'Terms of Service', path: '/terms-conditions' }
   ];
 
   return (
@@ -59,11 +66,9 @@ const Footer = () => {
         {/* Full-width line */}
         
       </div>
-      
 
-      {/* MAIN FOOTER CONTENT  */}
+      {/* MAIN FOOTER CONTENT */}
       <div className="footer-main">
-
         <div className="footer-container">
 
           {/* Branding */}
@@ -77,12 +82,14 @@ const Footer = () => {
                 Ready to speak with a marketing expert? Give us a ring
               </h4>
 
-              <a href="https://wa.me/94740309534?text=Hi%20ZonzocTech%20Team,%20I%20would%20like%20to%20discuss%20a%20project."
-                 className="phone-button"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 ><i class="fa-brands fa-whatsapp"></i>
-                  +94 74 030 9534
+              <a
+                href="https://wa.me/94740309534?text=Hi%20ZonzocTech%20Team,%20I%20would%20like%20to%20discuss%20a%20project."
+                className="phone-button"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-brands fa-whatsapp"></i>
+                +94 74 030 9534
               </a>
             </div>
           </div>
@@ -92,7 +99,9 @@ const Footer = () => {
             <h4 className="footer-column-title">Core Services</h4>
             <ul className="footer-links">
               {servicesLinks.map((link, index) => (
-                <li key={index}><a href="#">{link}</a></li>
+                <li key={index}>
+                  <Link to={link.path}>{link.label}</Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -101,7 +110,9 @@ const Footer = () => {
             <h4 className="footer-column-title">Solutions by Need</h4>
             <ul className="footer-links">
               {knowledgebaseLinks.map((link, index) => (
-                <li key={index}><a href="#">{link}</a></li>
+                <li key={index}>
+                  <Link to={link.path}>{link.label}</Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -110,7 +121,9 @@ const Footer = () => {
             <h4 className="footer-column-title">Insights & Resources</h4>
             <ul className="footer-links">
               {companyLinks.map((link, index) => (
-                <li key={index}><a href="#">{link}</a></li>
+                <li key={index}>
+                  <Link to={link.path}>{link.label}</Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -119,7 +132,9 @@ const Footer = () => {
             <h4 className="footer-column-title">Company</h4>
             <ul className="footer-links">
               {exploreLinks.map((link, index) => (
-                <li key={index}><a href="#">{link}</a></li>
+                <li key={index}>
+                  <Link to={link.path}>{link.label}</Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -128,7 +143,7 @@ const Footer = () => {
       </div>
 
       {/* Full-width line before footer bottom */}
-      <div className='line'>
+      <div className="line">
         <hr style={{
           border: 'none',
           borderTop: '1px solid rgba(255, 255, 255, 1)',
@@ -136,14 +151,20 @@ const Footer = () => {
           width: '100%'
         }} />
       </div>
-      
+
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p className="copyright">Zonzoctech© 2020-2025</p>
+          <p className="copyright">
+            Zonzoctech© 2020-2025
+          </p>
           <div className="social-icons">
-            <a href="#" className="social-icon"><i className="fa-brands fa-twitter"></i></a>
-            <a href="#" className="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" className="social-icon">
+              <i className="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" className="social-icon">
+              <i className="fa-brands fa-linkedin"></i>
+            </a>
           </div>
         </div>
       </div>

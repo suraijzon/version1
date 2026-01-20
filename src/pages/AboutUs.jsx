@@ -137,7 +137,7 @@ const AboutUs = () => {
           <h2 className="abt__heading">Who We Are</h2>
           <div className="abt__who_content">
             <p className="abt__who_text">
-              ZonzocTech was founded with a clear mission: <strong>to help businesses grow using 
+              ZonzocTech was founded with a clear misssion: <strong>to help businesses grow using 
               modern technology, AI, and data-driven strategies — not hype or shortcuts.</strong>
             </p>
             <div className="abt__who_box">

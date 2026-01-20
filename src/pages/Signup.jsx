@@ -137,8 +137,11 @@ const Signup = () => {
             <div className="terms-checkbox">
               <input type="checkbox" id="terms" required />
               <label htmlFor="terms">
-                By creating an account, I agree to our <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a>
-              </label>
+                By logging in, I agree to our{' '}
+                <Link to="/terms" className="text-link">Terms of use</Link>{' '}
+                and{' '}
+                <Link to="/privacy-policy" className="text-link">Privacy Policy</Link>
+                </label>
             </div>
 
             <button type="submit" className="login-btn-figma" disabled={loading}>

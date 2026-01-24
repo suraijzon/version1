@@ -4,7 +4,7 @@ import heroImg from "../assets/icons/hero.png";
 
 const Hero = () => {
   return (
-    <section className="hero-section" role="region" aria-label="Hero">
+    <section className="hero-section" aria-label="Hero">
       <div className="hero-inner">
         <div className="hero-copy">
           <h1 className="hero-title">
@@ -23,13 +23,11 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Website Input Search Bar */}
           <form
             className="hero-search-form"
             onSubmit={(e) => {
               e.preventDefault();
               const website = e.target.elements.website.value;
-
               console.log("Website submitted:", website);
               alert(`Proposal request sent for: ${website}`);
             }}

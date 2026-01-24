@@ -50,7 +50,7 @@ const AboutUs = () => {
     {
       number: "1",
       title: "Understand the Business",
-      description: "We start by understanding your goals, challenges, and market."
+      description: "We start by understanding your goals, challenges, and ."
     },
     {
       number: "2",

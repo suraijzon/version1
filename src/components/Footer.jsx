@@ -6,10 +6,7 @@ import siteLogo from '../assets/icons/zonzoclogo3-bg.png';
 const Footer = () => {
   const navigate = useNavigate();
 
-  const handleContactUsClick = () => {
-    navigate('/contact-us');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+
 
   const servicesLinks = [
     { label: 'AI Web Application Development', path: '/ai-web-application-development' },
@@ -159,10 +156,10 @@ const Footer = () => {
             Zonzoctech© 2020-2025
           </p>
           <div className="social-icons">
-            <a href="#" className="social-icon">
+            <a href="https://twitter.com/yourhandle" className="social-icon">
               <i className="fa-brands fa-twitter"></i>
             </a>
-            <a href="#" className="social-icon">
+            <a href="https://twitter.com/yourhandle" className="social-icon">
               <i className="fa-brands fa-linkedin"></i>
             </a>
           </div>

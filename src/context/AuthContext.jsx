@@ -20,12 +20,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token && !user) loadUser(token);
-    else setLoading(false);
-  }, []);
-
+  // ✅ DEFINE FIRST
   const loadUser = async (token) => {
     try {
       const res = await axios.get(`${API}/api/users/profile`, {
@@ -42,6 +37,17 @@ export const AuthProvider = ({ children }) => {
       setLoading(false);
     }
   };
+
+  // ✅ USE AFTER DEFINITION
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+
+    if (token && !user) {
+      loadUser(token);
+    } else {
+      setLoading(false);
+    }
+  }, [user]);
 
   const login = async (email, password) => {
     try {

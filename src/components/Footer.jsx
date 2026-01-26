@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/footer.css';
 import siteLogo from '../assets/icons/zonzoclogo3-bg.png';
 
@@ -47,31 +47,13 @@ const Footer = () => {
   return (
     <footer className="footer">
 
-      {/* TOP SECTION */}
-      <div className="footer-top">
-        <div className="footer-top-container">
-
-          {/* LEFT SIDE — STATS + BUTTON */}
-         
-
-            {/* BUTTON UNDER BOTH */}
-            
-
-          {/* RIGHT SIDE — CTA BOX */}
-         </div>
-        
-        {/* Full-width line */}
-        
-      </div>
-
-      {/* MAIN FOOTER CONTENT */}
       <div className="footer-main">
         <div className="footer-container">
 
           {/* Branding */}
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src={siteLogo} alt="techco" className="logo-text-img" />
+              <img src={siteLogo} alt="ZonzocTech Logo" className="logo-text-img" />
             </div>
 
             <div className="footer-contact-box">
@@ -139,22 +121,16 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Full-width line before footer bottom */}
       <div className="line">
-        <hr style={{
-          border: 'none',
-          borderTop: '1px solid rgba(255, 255, 255, 1)',
-          margin: '20px 0',
-          width: '100%'
-        }} />
+        <hr />
       </div>
 
-      {/* Footer Bottom */}
       <div className="footer-bottom">
         <div className="footer-bottom-container">
           <p className="copyright">
-            Zonzoctech© 2020-2025
+            Zonzoctech © 2020–2025
           </p>
+
           <div className="social-icons">
             <a href="https://twitter.com/yourhandle" className="social-icon">
               <i className="fa-brands fa-twitter"></i>

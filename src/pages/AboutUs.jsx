@@ -34,6 +34,7 @@ const AboutUs = () => {
     { icon: "💰", text: "Conversion-focused" }
   ];
 
+  //test
   const services = [
     "AI Web Application Development",
     "AI Software Development",

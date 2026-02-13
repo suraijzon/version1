@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import '../styles/AuthFigma.css';
-import loginBg from '../assets/icons/login-bg.png';
-import GoogleIcon from '../assets/icons/google-icon-logo.svg';
-import AppleIcon from '../assets/icons/apple-logo.svg';
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import "../styles/AuthFigma.css";
+import loginBg from "../assets/icons/login-bg.png";
+import GoogleIcon from "../assets/icons/google-icon-logo.svg";
+import AppleIcon from "../assets/icons/apple-logo.svg";
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    password: ''
+    email: "",
+    password: "",
   });
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -21,13 +21,13 @@ const Login = () => {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
     setLoading(true);
 
     const result = await login(formData.email, formData.password);
@@ -35,10 +35,10 @@ const Login = () => {
 
     if (result.success) {
       const role = result.user?.role;
-      if (role === 'admin') {
-        navigate('/admin-dashboard');
+      if (role === "admin") {
+        navigate("/admin-dashboard");
       } else {
-         navigate('/user-profile');
+        navigate("/user-profile");
       }
     } else {
       setError(result.error);
@@ -48,10 +48,6 @@ const Login = () => {
   return (
     <div className="auth-figma-container">
       {/* Left Side - Background Image */}
-      <div className="auth-figma-left">
-        <div className="bg-overlay"></div>
-        <img src={loginBg} alt="Background" className="auth-bg-image" />
-      </div>
 
       {/* Right Side - Form */}
       <div className="auth-figma-right">
@@ -60,7 +56,10 @@ const Login = () => {
             <span>English (United States)</span>
           </div>
           <div className="signup-text">
-            Already have an account? <Link to="/signup" className="signup-btn">Sign up</Link>
+            Already have an account?{" "}
+            <Link to="/signup" className="signup-btn">
+              Sign up
+            </Link>
           </div>
         </div>
 
@@ -96,7 +95,7 @@ const Login = () => {
                   className="hide-show-btn"
                   onClick={() => setShowPassword(!showPassword)}
                 >
-                  {showPassword ? 'Hide' : 'Show'}
+                  {showPassword ? "Hide" : "Show"}
                 </button>
               </label>
               <input
@@ -113,12 +112,17 @@ const Login = () => {
             <div className="terms-checkbox">
               <input type="checkbox" id="terms" required />
               <label htmlFor="terms">
-                By logging in, I agree to our <a href="#">Terms of use</a> and <a href="#">Privacy Policy</a>
+                By logging in, I agree to our <a href="#">Terms of use</a> and{" "}
+                <a href="#">Privacy Policy</a>
               </label>
             </div>
 
-            <button type="submit" className="login-btn-figma" disabled={loading}>
-              {loading ? 'Logging in...' : 'Log in'}
+            <button
+              type="submit"
+              className="login-btn-figma"
+              disabled={loading}
+            >
+              {loading ? "Logging in..." : "Log in"}
             </button>
           </form>
 
@@ -126,18 +130,17 @@ const Login = () => {
             <span>OR</span>
           </div>
 
-           <div className="social-btns">
+          <div className="social-btns">
             <button type="button" className="social-btn-figma google">
-            <img src={GoogleIcon} alt="Google" className="social-logo" />
-             Continue with Google
+              <img src={GoogleIcon} alt="Google" className="social-logo" />
+              Continue with Google
             </button>
-          
+
             <button type="button" className="social-btn-figma apple">
-            <img src={AppleIcon} alt="Apple" className="social-logo" />
-            Continue with Apple
+              <img src={AppleIcon} alt="Apple" className="social-logo" />
+              Continue with Apple
             </button>
-            </div>
-          
+          </div>
         </div>
       </div>
     </div>

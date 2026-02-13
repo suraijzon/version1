@@ -186,18 +186,18 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   width: 22px;
   height: 22px;
-  border-radius: 50%;
+  border-radius: 100%;
   background: black;
   cursor: pointer;
   border: 2px solid #fff;
-  margin-top: -7px;
+  margin-top: 0px;
 }
 
 /* Firefox */
 input[type="range"]::-moz-range-thumb {
   width: 22px;
   height: 22px;
-  border-radius: 50%;
+  border-radius: 100%;
   background: black;
   cursor: pointer;
   border: 2px solid #fff;
@@ -217,9 +217,9 @@ input[type="range"]::-moz-range-thumb {
 
 /* Base button (DESKTOP) */
 .popup-actions button {
-  width: 150px;         
-  height: 48px;        
-  padding: 0;            
+  width: 150px;
+  height: 48px;
+  padding: 0;
   border-radius: 40px;
 
   font-weight: 600;
@@ -227,11 +227,11 @@ input[type="range"]::-moz-range-thumb {
   font-size: 15px;
   cursor: pointer;
 
-  display: flex;         
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  box-sizing: border-box; 
+  box-sizing: border-box;
   transition: all 0.3s ease;
 }
 
@@ -251,7 +251,7 @@ input[type="range"]::-moz-range-thumb {
   background-color: #fff;
   margin-top: 11px;
   color: #111;
-  border: 1.5px solid #111;     
+  border: 1.5px solid #111;
 }
 
 .popup-actions .cancel-btn:hover {
@@ -300,7 +300,6 @@ input[type="range"]::-moz-range-thumb {
   cursor: not-allowed;
 }
 
-
 /* MOBILE */
 @media (max-width: 768px) {
   .popup-container {
@@ -327,7 +326,7 @@ input[type="range"]::-moz-range-thumb {
     flex-direction: column-reverse;
     gap: 12px;
   }
-  .popup-actions .cancel-btn{
+  .popup-actions .cancel-btn {
     text-align: center !important;
     margin-top: 0px;
   }
@@ -335,8 +334,7 @@ input[type="range"]::-moz-range-thumb {
     width: 100%;
     min-width: unset;
     height: 50px;
-    justify-content: center; 
+    justify-content: center;
     text-align: center;
   }
-
 }

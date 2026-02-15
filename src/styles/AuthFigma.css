@@ -8,7 +8,7 @@
 /* Main Container - Fixed Split Screen */
 .auth-figma-container {
   display: grid;
-  grid-template-columns: 40% 60%;
+  /* grid-template-columns: 40% 60%; */
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -193,7 +193,7 @@
   font-size: 14px;
   background: #fff;
   transition: all 0.2s;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .input-group-figma input:focus {
@@ -341,7 +341,6 @@
   height: 18px;
   margin-right: 8px;
 }
-
 
 /* Responsive Design */
 @media (max-width: 1200px) {

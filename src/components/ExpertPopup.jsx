@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/ExpertPopup.css";
 
 const ExpertPopup = ({ open, onClose, preSelectedService }) => {
-  const [budget, setBudget] = useState(5000);
+  const [budget, setBudget] = useState(500);
   const [selectedService, setSelectedService] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -11,7 +11,7 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
     company: "",
     phone: "",
     email: "",
-    project: ""
+    project: "",
   });
 
   useEffect(() => {
@@ -28,19 +28,21 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   if (!open) return null;
 
-  const percentage = ((budget - 5000) / (65000 - 5000)) * 100;
+  const percentage = (budget / 65000) * 100;
   const sliderBackground = `linear-gradient(to right, #000 0%, #000 ${percentage}%, #ddd ${percentage}%, #ddd 100%)`;
 
   return (
     <div className="popup-overlay" onClick={onClose}>
       <div className="popup-container" onClick={(e) => e.stopPropagation()}>
-        <button className="popup-close" onClick={onClose}>×</button>
+        <button className="popup-close" onClick={onClose}>
+          ×
+        </button>
 
         {/* LEFT PANEL */}
         <div className="popup-left">
@@ -76,7 +78,8 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
         <div className="popup-right">
           <h2>Let's Build Something Incredible Together</h2>
           <p className="popup-subtext">
-            Tell us what you're looking for and our experts will get back to you.
+            Tell us what you're looking for and our experts will get back to
+            you.
           </p>
 
           <form
@@ -86,7 +89,11 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
             onSubmit={() => setIsSubmitting(true)}
           >
             {/* HIDDEN CONFIG */}
-            <input type="hidden" name="_subject" value="New Expert Consultation Request" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Expert Consultation Request"
+            />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
 
@@ -137,7 +144,9 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
               <option value="">You are interested in</option>
               <option value="Website Development">Website Development</option>
               <option value="SEO">SEO</option>
-              <option value="Get a Free Website Growth Audit">Get a Free Website Growth Audit</option>
+              <option value="Get a Free Website Growth Audit">
+                Get a Free Website Growth Audit
+              </option>
               <option value="AI Solutions">AI Solutions</option>
               <option value="UI/UX Design">UI/UX Design</option>
             </select>
@@ -147,7 +156,7 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
             </label>
             <input
               type="range"
-              min="5000"
+              min="500"
               max="65000"
               value={budget}
               onChange={(e) => setBudget(e.target.value)}

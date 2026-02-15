@@ -2,17 +2,17 @@ require('dotenv').config(); // ← MUST BE FIRST LINE
 
 const express = require('express');
 const cors = require('cors');
-const connectDB = require('./config/db');
+// const connectDB = require('./config/db');
 
 // Debug - Verify env vars are loaded
-console.log('🔍 Environment Check:');
-console.log('MONGODB_URI:', process.env.MONGODB_URI ? '✅ Loaded' : '❌ Not Found');
-console.log('JWT_SECRET:', process.env.JWT_SECRET ? '✅ Loaded' : '❌ Not Found');
+// console.log('🔍 Environment Check:');
+// console.log('MONGODB_URI:', process.env.MONGODB_URI ? '✅ Loaded' : '❌ Not Found');
+// console.log('JWT_SECRET:', process.env.JWT_SECRET ? '✅ Loaded' : '❌ Not Found');
 
 const app = express();
 
 // Connect to MongoDB
-connectDB();
+//connectDB();
 
 // Middleware
 app.use(cors());
@@ -23,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/admin', require('./routes/admin'));
+app.use('/api/public',require('./routes/public'))
 
 // Basic route
 app.get('/', (req, res) => {

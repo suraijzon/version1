@@ -1,2 +1,16 @@
 User-agent: *
+
+# Allow entire website
 Allow: /
+
+# Block backend or sensitive paths (if they exist)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /node_modules/
+
+# Allow JS & CSS for proper rendering
+Allow: /*.js$
+Allow: /*.css$
+
+# Sitemap
+Sitemap: https://www.zonzoctech.com/sitemap.xml

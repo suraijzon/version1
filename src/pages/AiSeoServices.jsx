@@ -6,7 +6,7 @@ import PublishSection from "../components/PublishSection";
 import Footer from "../components/Footer";
 import SoMuchMoreSection from "../components/SoMuchMoreSection";
 import GrowNowSection from "../components/GrowNowSection";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const AiSeoServices = () => {
   return (

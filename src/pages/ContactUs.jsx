@@ -3,7 +3,7 @@ import "../styles/ContactUs.css";
 import astronaut from "../assets/icons/astronaut.png";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 const ContactUs = () => {
   return (
     <>

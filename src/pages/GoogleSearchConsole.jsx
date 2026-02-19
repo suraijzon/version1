@@ -17,7 +17,7 @@ import worwoxLogo from "../assets/icons/worwox.svg";
 import realTralLogo from "../assets/icons/realtral.svg";
 import triplaiLogo from "../assets/icons/triplai.svg";
 import siteGPTLogo from "../assets/icons/sitegpt.svg";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const GoogleSearchConsole = () => {
   const benefits = [

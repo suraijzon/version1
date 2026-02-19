@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/AISoftwareServices.css";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const AISoftwareServices = () => {
   const targetAudience = [

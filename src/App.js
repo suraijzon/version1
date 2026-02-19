@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 
@@ -41,7 +41,9 @@ import { HelmetProvider } from "react-helmet-async";
 // ================= HOME PAGE =================
 const HomePage = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
+  useEffect(() => {
+    console.log(process.env.REACT_APP_API_URL);
+  }, []);
   const handleClosePopup = () => {
     setIsPopupOpen(false);
   };

@@ -1,10 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "../styles/ExpertPopup.css";
+import { sendEmailBanner } from "../services/api";
 
-const ExpertPopup = ({ open, onClose, preSelectedService }) => {
+const ExpertPopup = ({
+  open,
+  onClose,
+  preSelectedService,
+  website,
+  closePopup,
+}) => {
   const [budget, setBudget] = useState(500);
   const [selectedService, setSelectedService] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -12,7 +20,13 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
     phone: "",
     email: "",
     project: "",
+    website: website,
+    budget: 500,
   });
+
+  useEffect(() => {
+    setFormData({ ...formData, website: website });
+  }, [website]);
 
   useEffect(() => {
     if (open) {
@@ -30,6 +44,30 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const sendEmail = async () => {
+    try {
+      setIsSubmitting(true);
+      const result = await sendEmailBanner(formData);
+      console.log(result);
+      if (result) {
+        setFormData({
+          name: "",
+          company: "",
+          phone: "",
+          email: "",
+          project: "",
+          website: "",
+          budget: 500,
+        });
+        setIsSubmitting(false);
+        closePopup();
+      }
+    } catch (error) {
+      console.log(error);
+      setIsSubmitting(false);
+    }
   };
 
   if (!open) return null;
@@ -83,7 +121,7 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
           </p>
 
           <form
-            action="https://formsubmit.co/info@zonzoctech.com"
+            action={apiUrl + "/api/send-mail"}
             method="POST"
             className="popup-form"
             onSubmit={() => setIsSubmitting(true)}
@@ -133,23 +171,36 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
                 onChange={handleInputChange}
                 required
               />
+              <input
+                type="text"
+                name="website"
+                placeholder="Web Site*"
+                value={formData.website}
+                onChange={handleInputChange}
+                required
+              />
+              <select
+                name="service"
+                value={formData.service}
+                onChange={(e) => {
+                  setFormData({ ...formData, service: e.target.value });
+                }}
+                required
+              >
+                <option value="">You are interested in</option>
+                <option value="Free Website Audit">
+                  Get a Free Website Audit
+                </option>
+                <option value="Consulation">Consultation</option>
+                <option value="Website Development">Website Development</option>
+                <option value="SEO">SEO</option>
+                <option value="Get a Free Website Growth Audit">
+                  Get a Free Website Growth Audit
+                </option>
+                <option value="AI Solutions">AI Solutions</option>
+                <option value="UI/UX Design">UI/UX Design</option>
+              </select>
             </div>
-
-            <select
-              name="Interested Service"
-              value={selectedService}
-              onChange={(e) => setSelectedService(e.target.value)}
-              required
-            >
-              <option value="">You are interested in</option>
-              <option value="Website Development">Website Development</option>
-              <option value="SEO">SEO</option>
-              <option value="Get a Free Website Growth Audit">
-                Get a Free Website Growth Audit
-              </option>
-              <option value="AI Solutions">AI Solutions</option>
-              <option value="UI/UX Design">UI/UX Design</option>
-            </select>
 
             <label className="budget-label">
               Estimated Budget (USD): ${budget.toLocaleString()}
@@ -158,8 +209,10 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
               type="range"
               min="500"
               max="65000"
-              value={budget}
-              onChange={(e) => setBudget(e.target.value)}
+              value={formData.budget}
+              onChange={(e) => {
+                setFormData({ ...formData, budget: e.target.value });
+              }}
               style={{ background: sliderBackground }}
             />
 
@@ -175,7 +228,13 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
               <button type="button" className="cancel-btn" onClick={onClose}>
                 Cancel
               </button>
-              <button type="submit" className="submit-btn">
+              <button
+                type="button"
+                className="submit-btn"
+                onClick={(e) => {
+                  sendEmail(formData);
+                }}
+              >
                 {isSubmitting ? "SENDING..." : "Submit"}
               </button>
             </div>

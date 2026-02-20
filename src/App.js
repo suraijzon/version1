@@ -41,17 +41,32 @@ import { HelmetProvider } from "react-helmet-async";
 // ================= HOME PAGE =================
 const HomePage = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  useEffect(() => {
-    console.log(process.env.REACT_APP_API_URL);
-  }, []);
+  const [website, setWebsite] = useState("");
   const handleClosePopup = () => {
     setIsPopupOpen(false);
   };
 
+  const openPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const setWebsiteValue = (val) => {
+    console.log(val);
+    setWebsite(val);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+    setWebsite("");
+  };
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero
+        setOpenPopup={openPopup}
+        setWebsiteValue={setWebsiteValue}
+        website={website}
+      />
       <Solution />
       <SuccessSection />
       <ProcessSection />
@@ -62,7 +77,13 @@ const HomePage = () => {
       <Footer />
 
       {/* Expert Popup (standalone, no slider dependency) */}
-      <ExpertPopup open={isPopupOpen} onClose={handleClosePopup} />
+      <ExpertPopup
+        open={isPopupOpen}
+        onClose={handleClosePopup}
+        website={website}
+        isOpen
+        closePopup={closePopup}
+      />
     </>
   );
 };

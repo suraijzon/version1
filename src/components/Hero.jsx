@@ -3,19 +3,11 @@ import "../styles/hero.css";
 import { sendEmailBanner } from "../services/api";
 import heroImg from "../assets/icons/hero.png";
 
-const Hero = () => {
+const Hero = ({ setOpenPopup, setWebsiteValue }) => {
   const [website, setWebsite] = useState("");
   const [email, setEmail] = useState("");
   const [type, setType] = useState(0);
 
-  const sendEmail = async () => {
-    try {
-      const result = await sendEmailBanner(website, email);
-      console.log(result);
-    } catch (error) {
-      console.log(error);
-    }
-  };
   return (
     <section className="hero-section" role="region" aria-label="Hero">
       <div className="hero-inner">
@@ -59,13 +51,14 @@ const Hero = () => {
                 value={website}
                 onChange={(e) => {
                   setWebsite(e.target.value);
+                  setWebsiteValue(e.target.value);
                 }}
                 className="hero-search-input"
                 placeholder="Enter your website"
                 required
               />
             )}
-            {((website != "" && email != "") || type >= 1) && (
+            {/* {((website != "" && email != "") || type >= 1) && (
               <input
                 type="email"
                 name="email"
@@ -77,17 +70,13 @@ const Hero = () => {
                 placeholder="Enter your Email Address"
                 required
               />
-            )}
+            )} */}
             <button
               type="button"
               className="hero-search-btn"
               onClick={(e) => {
-                if (type == 0 && website != "") {
-                  setType(1);
-                } else if (type == 1 && email != "") {
-                  setType(2);
-                } else if (type == 2 && email != "" && website != "") {
-                  sendEmail();
+                if (website != "") {
+                  setOpenPopup();
                 }
               }}
             >

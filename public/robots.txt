@@ -12,5 +12,5 @@ Disallow: /node_modules/
 Allow: /*.js$
 Allow: /*.css$
 
-# Sitemapforzonzoctech
+# Sitemap
 Sitemap: https://www.zonzoctech.com/sitemap.xml

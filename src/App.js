@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { AuthProvider } from "./context/AuthContext";
 
-// Import components
+// Components
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Solution from "./components/Solution";
@@ -14,7 +16,7 @@ import ReviewSection from "./components/ReviewSection";
 import Footer from "./components/Footer";
 import ExpertPopup from "./components/ExpertPopup";
 
-// Import pages
+// Pages
 import GoogleSearchConsole from "./pages/GoogleSearchConsole";
 import AiSeoServices from "./pages/AiSeoServices";
 import Login from "./pages/Login";
@@ -35,7 +37,6 @@ import ContactPage from "./pages/ContactPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import WebsiteMaintenance from "./pages/WebsiteMaintenance";
-import { HelmetProvider } from "react-helmet-async";
 
 // ================= HOME PAGE =================
 const HomePage = () => {
@@ -63,67 +64,45 @@ const HomePage = () => {
   );
 };
 
-// ================= APP ROUTER =================
+// ================= APP =================
 function App() {
   return (
     <HelmetProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
+      <AuthProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
 
-          {/* Auth */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+            {/* Auth */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
 
-          {/* Services */}
-          <Route
-            path="/google-search---console"
-            element={<GoogleSearchConsole />}
-          />
-          <Route path="/ai-seo" element={<AiSeoServices />} />
-          <Route
-            path="/ai-software-development"
-            element={<AISoftwareServices />}
-          />
-          <Route
-            path="/full-stack-web-development"
-            element={<FullStackWebDev />}
-          />
-          <Route
-            path="/ai-website-design-development"
-            element={<AIWebsiteDesign />}
-          />
-          <Route
-            path="/seo-ai-search-optimization"
-            element={<AIOptimizationPage />}
-          />
-          <Route
-            path="/ai-web-application-development"
-            element={<AIWebAppPage />}
-          />
-          <Route
-            path="/ecommerce-development-optimization"
-            element={<EcommercePage />}
-          />
-          <Route
-            path="/website-maintenance-performance-security"
-            element={<WebsiteMaintenance />}
-          />
-          <Route path="/seo-services" element={<SEOServices />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
+            {/* Services */}
+            <Route path="/google-search---console" element={<GoogleSearchConsole />} />
+            <Route path="/ai-seo" element={<AiSeoServices />} />
+            <Route path="/ai-software-development" element={<AISoftwareServices />} />
+            <Route path="/full-stack-web-development" element={<FullStackWebDev />} />
+            <Route path="/ai-website-design-development" element={<AIWebsiteDesign />} />
+            <Route path="/seo-ai-search-optimization" element={<AIOptimizationPage />} />
+            <Route path="/ai-web-application-development" element={<AIWebAppPage />} />
+            <Route path="/ecommerce-development-optimization" element={<EcommercePage />} />
+            <Route path="/website-maintenance-performance-security" element={<WebsiteMaintenance />} />
+            <Route path="/seo-services" element={<SEOServices />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
 
-          {/* Pages */}
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-conditions" element={<TermsConditions />} />
+            {/* Pages */}
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-conditions" element={<TermsConditions />} />
 
-          {/* User/Admin */}
-          <Route path="/user-profile" element={<UserProfile />} />
-          <Route path="/admin-dashboard" element={<AdminDashboard />} />
-        </Routes>
-      </Router>
+            {/* User/Admin */}
+            <Route path="/user-profile" element={<UserProfile />} />
+            <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          </Routes>
+        </Router>
+      </AuthProvider>
     </HelmetProvider>
   );
 }

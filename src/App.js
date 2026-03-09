@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 
 // Import components
@@ -37,6 +37,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import WebsiteMaintenance from "./pages/WebsiteMaintenance";
 import { HelmetProvider } from "react-helmet-async";
+
 // ================= HOME PAGE =================
 const HomePage = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -58,7 +59,6 @@ const HomePage = () => {
       <ReviewSection />
       <Footer />
 
-      {/* Expert Popup (standalone, no slider dependency) */}
       <ExpertPopup open={isPopupOpen} onClose={handleClosePopup} />
     </>
   );

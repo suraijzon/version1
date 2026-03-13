@@ -13,4 +13,4 @@ Allow: /*.js$
 Allow: /*.css$
 
 # Sitemap
-Sitemap: https://www.zonzoctech.com/sitemap.xmlgfdgdfgd
+Sitemap: https://www.zonzoctech.com/sitemap.xml

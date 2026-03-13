@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
   padding: 20px 0;
-  position: relative;
+  position: sticky;
   top: 0;
   background: #ffffff;
   z-index: 999;
@@ -171,6 +171,7 @@
   max-width: 2400px;
   margin: 0 auto;
   gap: 11px;
+  font-family: poppins;
 }
 
 /* WHITE CARD COLUMNS - Default optimized for all screens */

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/CaseStudies.css";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const CaseStudies = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -141,13 +142,10 @@ const CaseStudies = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Case Studies | Proven SEO & AI Results</title>
-        <meta
-          name="description"
-          content="Explore real-world success stories showcasing measurable growth through AI-driven SEO and advanced web strategies."
-        />
-      </Helmet>
+      <SEO
+        title="Case Studies | Proven SEO & AI Results"
+        description="Explore real-world success stories showcasing measurable growth through AI-driven SEO and advanced web strategies."
+      />
       <div className="cs__wrapper">
         <Navbar />
 

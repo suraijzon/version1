@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/AISoftwareServices.css";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const AISoftwareServices = () => {
   const targetAudience = [
@@ -113,13 +114,10 @@ const AISoftwareServices = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Software Development Solutions | Smart Systems</title>
-        <meta
-          name="description"
-          content="Build intelligent AI software solutions for automation, predictive analytics, and scalable digital transformation."
-        />
-      </Helmet>
+       <SEO
+        title="AI Software Development Solutions | Smart Systems"
+        description="Build intelligent AI software solutions for automation, predictive analytics, and scalable digital transformation."
+      />
       <div className="aiss__wrapper">
         <Navbar />
 

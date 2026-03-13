@@ -4,16 +4,15 @@ import astronaut from "../assets/icons/astronaut.png";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
+
 const ContactUs = () => {
   return (
     <>
-      <Helmet>
-        <title>Contact Zonzoctech | AI-Driven Web & SEO Experts</title>
-        <meta
-          name="description"
-          content="Get in touch with Zonzoctech for AI-powered web development, SEO, and digital growth strategies. Let’s build scalable, search-optimized solutions."
-        />
-      </Helmet>
+      <SEO
+  title="Contact Zonzoctech | AI-Driven Web & SEO Experts"
+  description="Get in touch with Zonzoctech for AI-powered web development, SEO, and digital growth strategies. Let’s build scalable, search-optimized solutions."
+/>
       <div className="contact__wrapper">
         <Navbar />
         <div className="contactus-page">

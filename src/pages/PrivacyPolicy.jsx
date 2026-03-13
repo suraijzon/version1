@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/PrivacyPolicy.css";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const PrivacyPolicy = () => {
   const lastUpdated = "December 20, 2025";
@@ -117,13 +118,10 @@ const PrivacyPolicy = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy | Zonzoctech Data Protection Standards</title>
-        <meta
-          name="description"
-          content="Learn how Zonzoctech collects, protects, and manages user data in compliance with global privacy standards and secure web practices."
-        />
-      </Helmet>
+      <SEO
+        title="Privacy Policy | Zonzoctech Data Protection Standards"
+        description="Learn how Zonzoctech collects, protects, and manages user data in compliance with global privacy standards and secure web practices."						
+      />
       <div className="pp__wrapper">
         <Navbar />
 

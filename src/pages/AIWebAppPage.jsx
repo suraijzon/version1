@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/AIWebAppPage.css";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const AIWebAppDev = () => {
   const targetAudience = [
@@ -135,13 +136,10 @@ const AIWebAppDev = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Web Application Development Company | Zonzoctech</title>
-        <meta
-          name="description"
-          content="Custom AI web applications built for automation, scalability, and intelligent user experiences. Future-ready development powered by data and innovation."
-        />
-      </Helmet>
+      <SEO
+        title="AI Web Application Development Company | Zonzoctech"
+        description="Custom AI web applications built for automation, scalability, and intelligent user experiences. Future-ready development powered by data and innovation."						
+      />
       <div className="aiwa__wrapper">
         <Navbar />
 

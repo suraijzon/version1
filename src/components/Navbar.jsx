@@ -2,10 +2,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
 import logo from "../assets/icons/logo.png";
-import siteLogo from "../assets/icons/site_logo_2.svg";
 import phoneIcon from "../assets/icons/phone-call-icon.svg";
 import { useAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import ExpertPopup from "./ExpertPopup";
 
 
@@ -125,7 +124,7 @@ const Navbar = () => {
             <img src={phoneIcon} alt="phone" />
             <a href="mailto:Info@zonzoctech.com?subject=New Project Inquiry&body=Hi ZonzocTech Team,%0D%0A%0D%0AI would like to discuss a project with you.%0D%0A%0D%0AThanks," className="email-link">
               info@zonzoctech.com
-            </a>
+            </a> 
           </div>
         </div>
       </div>
@@ -167,47 +166,47 @@ const Navbar = () => {
             <div className="dropdown-content" {...dropdownContentHoverProps}>
               <div className="dropdown-column">
                 <h4>AI Strategy & Core Services</h4>
-                <a href="/ai-website-design-development">AI Readiness Assessment</a>
-                <a href="/ai-seo">AI Strategy & Consulting</a>
-                <a href="/ai-software-development">AI Proof of Concept (PoC) Development</a>
-                <a href="/ai-web-application-development">Custom AI & GPT Integration</a>
-                <a href="/website-maintenance-performance-security">Secure & Scalable AI Deployment</a>
+                <Link to="/ai-software-development">AI Proof of Concept (PoC) Development</Link>
+                <Link to="/ai-web-application-development">Custom AI & GPT Integration</Link>
+                <Link to="/website-maintenance-performance-security">Secure & Scalable AI Deployment</Link>
+                <Link to="/ai-website-design-development">AI &nbsp; Readiness Assessment</Link>
+                <Link to="/ai-seo">AI Strategy & Consulting</Link>
               </div>
 
               <div className="dropdown-column">
                 <h4>AI for Marketing, Sales & Growth</h4>
-                <a href="/seo-ai-search-optimization">AI SEO & AI Search Optimization</a>
-                <a href="/seo-services">AI Sales Funnel Optimization</a>
-                <a href="/seo-services">AI Lead Generation & Nurturing Automation</a>
-                <a href="/ai-software-development">AI Chat Sales Agents & Virtual Assistants</a>
-                <a href="/seo-services">AI Content & Campaign Automation</a>
+                <Link to="/seo-ai-search-optimization">AI SEO & AI Search Optimization</Link>
+                <Link to="/seo-services">AI Sales Funnel Optimization</Link>
+                <Link to="/seo-services">AI Lead Generation & Nurturing Automation</Link>
+                <Link to="/ai-software-development">AI Chat Sales Agents & Virtual Assistants</Link>
+                <Link to="/seo-services">AI Content & Campaign Automation</Link>
               </div>
 
               <div className="dropdown-column">
                 <h4>AI Web Experience & Conversion</h4>
-                <a href="/ai-website-design-development">Conversion-Focused AI Website Design</a>
-                <a href="/full-stack-web-development">AI Personalization & Dynamic Content</a>
-                <a href="/full-stack-web-development">AI Landing Page Systems</a>
-                <a href="/ai-web-application-development">GPT-Powered Forms, Chat & Lead Capture</a>
-                <a href="/seo-services">AI UX Testing & Conversion Rate Optimization (CRO)</a>
+                <Link to="/ai-website-design-development">Conversion-Focused AI Website Design</Link>
+                <Link to="/full-stack-web-development">AI Personalization & Dynamic Content</Link> 
+                <Link to="/ai-web-application-development">GPT-Powered Forms, Chat & Lead Capture</Link>            
+                <Link to="/full-stack-web-development">AI &nbsp; Landing Page Systems</Link>
+                <Link to="/seo-services">AI UX Testing & Conversion Rate Optimization (CRO)</Link>
               </div>
 
               <div className="dropdown-column">
                 <h4>AI Automation & Integrations</h4>
-                <a href="/ai-software-development">AI Workflow & Business Process Automation</a>
-                <a href="/ai-software-development">AI CRM, ERP & Tool Integrations</a>
-                <a href="/ai-software-development">AI Email, WhatsApp & Messaging Automation</a>
-                <a href="/ai-software-development">Voice, Image & Document AI Solutions</a>
-                <a href="/ai-web-application-development">AI Scheduling, Booking & Support Automation</a>
+                <Link to="/ai-software-development">AI Workflow & Business Process Automation</Link>
+                <Link to="/ai-software-development">AI CRM, ERP & Tool Integrations</Link>
+                <Link to="/ai-software-development">AI Email, WhatsApp & Messaging Automation</Link>
+                <Link to="/ai-software-development">Voice, Image & Document AI Solutions</Link>
+                <Link to="/ai-web-application-development">AI Scheduling, Booking & Support Automation</Link>
               </div>
 
               <div className="dropdown-column-last">
-                <span className="last-column3">Insights & Resources</span>
+                <span className="last-column3">Insights & Resources</span><br />
                 <span className="last-column-text3">AI vs Traditional Development: Cost & ROI</span>
-                <span className="last-column-text3">What Is GPT Integration & When You Need It</span>
-                <span className="last-column-text3">What Is AI Marketing</span>
+                <span className="last-column-text3">What Is GPT Integration & When You Need It</span>        
                 <span className="last-column-text3">How to Identify High-ROI AI Use Cases</span>
-                <span className="last-column-text3">AI SEO vs Traditional SEO</span>
+                <span className="last-column-text3">AI SEO &nbsp; vs &nbsp;Traditional SEO</span>
+                <span className="last-column-text3">What Is AI Marketing</span>
               </div>
             </div>
           </div>
@@ -229,48 +228,49 @@ const Navbar = () => {
 
             <div className="dropdown-content" {...dropdownContentHoverProps}>
               <div className="dropdown-column">
-                <h4>Website Strategy & Conversion</h4>
-                <a href="/contact-us">Free Website Growth Audit</a>
-                <a href="/full-stack-web-development">Conversion Strategy & UX Planning</a>
-                <a href="/full-stack-web-development">Rapid Website Launch (MVP / Go-Live Fast)</a>
-                <a href="/ai-web-application-development">AI-Driven Personalization Strategy</a>
-                <a href="/seo-services">Analytics, Tracking & Attribution Setup</a>
+                <h4>Website Strategy & Conversion</h4>   
+                <Link to="/full-stack-web-development">Conversion Strategy & UX Planning</Link>  
+                <Link to="/full-stack-web-development">Rapid Website Launch (MVP / Go-Live Fast)</Link>  
+                <Link to="/ai-web-application-development">AI-Driven Personalization Strategy</Link>  
+                <Link to="/seo-services">Analytics, Tracking & Attribution Setup</Link> 
+                <Link to="/contact-us">Free Website Growth Audit</Link>   
               </div>
 
               <div className="dropdown-column">
-                <h4>Design for Revenue</h4>
-                <a href="/ai-website-design-development">Conversion-Focused Website Design</a>
-                <a href="/ecommerce-development-optimization">E-commerce UX & Store Optimization</a>
-                <a href="/full-stack-web-development">Brand-Led Custom Design Systems</a>
-                <a href="/seo-services">Landing Pages & Funnel Design</a>
-                <a href="/website-maintenance-performance-security">Ongoing Website Growth & Optimization</a>
+                <h4>Design for Revenue</h4><br />
+                <Link to="/ai-website-design-development">Conversion-Focused Website Design</Link>  
+                <Link to="/ecommerce-development-optimization">E-commerce UX & Store Optimization</Link>  
+                <Link to="/full-stack-web-development">Brand-Led Custom Design Systems</Link>  
+                <Link to="/seo-services">Landing Pages & Funnel Design</Link>  
+                <Link to="/website-maintenance-performance-security">Ongoing Website Growth & Optimization</Link>  
               </div>
 
               <div className="dropdown-column">
                 <h4>Development & AI Engineering</h4>
-                <a href="/ai-web-application-development">Custom Web Application Development</a>
-                <a href="/full-stack-web-development">WordPress & Headless CMS Development</a>
-                <a href="/ecommerce-development-optimization">Shopify & E-commerce Development</a>
-                <a href="/ai-software-development">AI & GPT Integration</a>
-                <a href="/ai-software-development">Workflow & Business Automation</a>
+                <Link to="/ai-web-application-development">Custom Web Application Development</Link>  
+                <Link to="/full-stack-web-development">WordPress & Headless CMS Development</Link>  
+                <Link to="/ecommerce-development-optimization">Shopify & E-commerce Development</Link>  
+                 
+                <Link to="/ai-software-development">Workflow & Business Automation</Link>  
+                <Link to="/ai-software-development">AI & GPT Integration</Link> 
               </div>
 
               <div className="dropdown-column">
                 <h4>Performance, Security & Reliability</h4>
-                <a href="/website-maintenance-performance-security">Managed Cloud Hosting & DevOps</a>
-                <a href="/seo-services">Performance & Core Web Vitals Optimization</a>
-                <a href="/website-maintenance-performance-security">Security, Backups & Disaster Recovery</a>
-                <a href="/full-stack-web-development">Website Migration & Re-platforming</a>
-                <a href="/seo-services">Conversion Rate Optimization (CRO)</a>
+                <Link to="/website-maintenance-performance-security">Managed Cloud Hosting & DevOps</Link>  
+                <Link to="/seo-services">Performance & Core Web Vitals Optimization</Link>  
+                <Link to="/website-maintenance-performance-security">Security, Backups & Disaster Recovery</Link>  
+                <Link to="/full-stack-web-development">Website Migration & Re-platforming</Link>  
+                <Link to="/seo-services">Conversion Rate Optimization (CRO)</Link>  
               </div>
 
               <div className="dropdown-column-last">
-                <span className="last-column3">Problems We Solve</span>
-                <span className="last-column-text3">My Website Isn't Generating Leads or Sales</span>
+                <span className="last-column3">Problems We Solve</span>&nbsp;
                 <span className="last-column-text3">My Traffic or Rankings Are Declining</span>
                 <span className="last-column-text3">My Website Looks Good but Doesn't Convert</span>
                 <span className="last-column-text3">My Business Isn't Visible on Google or AI Search</span>
                 <span className="last-column-text3">My Marketing or Agency Isn't Delivering ROI</span>
+                <span className="last-column-text3">My Website Isn't Generating Leads or Sales</span>
               </div>
             </div>
           </div>
@@ -293,46 +293,46 @@ const Navbar = () => {
             <div className="dropdown-content" {...dropdownContentHoverProps}>
               <div className="dropdown-column">
                 <h4>SEO Strategy & Core Services</h4>
-                <a href="/seo-services">SEO Growth Audit & Opportunity Analysis</a>
-                <a href="/seo-services">SEO Strategy & Roadmap</a>
-                <a href="/seo-services">Enterprise SEO & Large Website SEO</a>
-                <a href="/seo-services">Local SEO & Maps Optimization</a>
-                <a href="/seo-ai-search-optimization">AI SEO & Search Experience Optimization</a>
+                <Link to="/seo-services">SEO Growth Audit & Opportunity Analysis</Link>    
+                <Link to="/seo-services">Enterprise SEO & Large Website SEO</Link>  
+                <Link to="/seo-services">Local SEO & Maps Optimization</Link>  
+                <Link to="/seo-ai-search-optimization">AI SEO & Search Experience Optimization</Link>
+                <Link to="/seo-services">SEO Strategy & Roadmap</Link>    
               </div>
 
               <div className="dropdown-column">
                 <h4>SEO Research & Intelligence</h4>
-                <a href="/seo-services">High-Intent Keyword & Topic Research</a>
-                <a href="/seo-services">Competitor & Market Gap Analysis</a>
-                <a href="/seo-services">Search Intent & Funnel Mapping</a>
-                <a href="/seo-services">Content & SERP Opportunity Analysis</a>
-                <a href="/seo-services">SEO Performance Tracking & KPIs</a>
+                <Link to="/seo-services">High-Intent Keyword & Topic Research</Link>  
+                <Link to="/seo-services">Competitor & Market Gap Analysis</Link>  
+                <Link to="/seo-services">Search Intent & Funnel Mapping</Link>  
+                <Link to="/seo-services">Content & SERP Opportunity Analysis</Link>  
+                <Link to="/seo-services">SEO Performance Tracking & KPIs</Link>  
               </div>
 
               <div className="dropdown-column">
-                <h4>Technical SEO & Performance</h4>
-                <a href="/seo-services">Technical SEO Audits & Fixes</a>
-                <a href="/website-maintenance-performance-security">Core Web Vitals & Page Speed Optimization</a>
-                <a href="/seo-services">Indexing, Crawl Budget & Log File Optimization</a>
-                <a href="/seo-services">Structured Data & Rich Results Optimization</a>
-                <a href="/seo-services">Internal Linking & Authority Sculpting</a>
+                <h4>Technical SEO & Performance</h4>   
+                <Link to="/website-maintenance-performance-security">Core Web Vitals & Page Speed Optimization</Link>  
+                <Link to="/seo-services">Indexing, Crawl Budget & Log File Optimization</Link>  
+                <Link to="/seo-services">Structured Data & Rich Results Optimization</Link>  
+                <Link to="/seo-services">Internal Linking & Authority Sculpting</Link>
+                <Link to="/seo-services">Technical SEO Audits & Fixes</Link>   
               </div>
 
               <div className="dropdown-column">
                 <h4>E-commerce SEO & Revenue Growth</h4>
-                <a href="/ecommerce-development-optimization">E-commerce SEO Strategy & Optimization</a>
-                <a href="/ecommerce-development-optimization">Shopping Feed Optimization & Automation</a>
-                <a href="/ecommerce-development-optimization">Product Page SEO & Conversion Optimization</a>
-                <a href="/seo-services">SEO-Driven CRO for E-commerce</a>
-                <a href="/seo-services">SEO Conversion Rate Optimization (CRO)</a>
+                <Link to="/ecommerce-development-optimization">E-commerce SEO Strategy & Optimization</Link>   
+                <Link to="/ecommerce-development-optimization">Product Page SEO & Conversion Optimization</Link>  
+                <Link to="/seo-services">SEO-Driven CRO for E-commerce</Link>  
+                <Link to="/seo-services">SEO Conversion Rate Optimization (CRO)</Link> 
+                <Link to="/ecommerce-development-optimization">Shopping Feed Optimization & Automation</Link>  
               </div>
 
               <div className="dropdown-column-last">
-                <span className="last-column3">Proof & Insights</span>
-                <span className="last-column-text3">SEO Case Studies & Results</span>
-                <span className="last-column-text3">Client Success Stories</span>
+                <span className="last-column3">Proof & Insights</span><br />
+                <span className="last-column-text3">SEO Case Studies & Results</span>  
                 <span className="last-column-text3">SEO Growth Experiments & Learnings</span>
                 <span className="last-column-text3">AI SEO vs Traditional SEO</span>
+                <span className="last-column-text3">Client Success Stories</span>
                 <span className="last-column-text3">GEO</span>
               </div>
             </div>
@@ -356,12 +356,12 @@ const Navbar = () => {
             <div className="dropdown-content">
               <div className="dropdown-column">
                 <h4>Who We Are</h4>
-                <a href="/about">About Us</a>
-                <a href="/terms-conditions">Terms & Conditions</a>
-                <a href="/contact-us">Careers (We Are Hiring!)</a>
-                <a href="/contact">Contact Info</a>
-                <a href="/case-studies">Zonzoctech Reviews</a>
-                <a href="/privacy-policy">Privacy Policy</a>
+                <Link to="/about">About Us</Link>  
+                <Link to="/terms-conditions">Terms & Conditions</Link>  
+                <Link to="/contact-us">Careers (We Are Hiring!)</Link>  
+                <Link to="/contact">Contact Info</Link>  
+                <Link to="/case-studies">Zonzoctech Reviews</Link>  
+                <Link to="/privacy-policy">Privacy Policy</Link>  
               </div>
 
             </div>

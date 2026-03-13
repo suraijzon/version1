@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/AboutUs.css";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const AboutUs = () => {
   const whoWeWorkWith = [
@@ -113,13 +114,10 @@ const AboutUs = () => {
 
   return (
     <>
-      <Helmet>
-        <title>About Zonzoctech | AI & Digital Growth Experts</title>
-        <meta
-          name="description"
-          content="Discover how Zonzoctech combines AI, SEO, and web engineering to build high-performance digital ecosystems."
-        />
-      </Helmet>
+      <SEO
+        title="About Zonzoctech | AI & Digital Growth Experts"
+        description="Discover how Zonzoctech combines AI, SEO, and web engineering to build high-performance digital ecosystems."						
+      />
       <div className="abt__wrapper">
         <Navbar />
 

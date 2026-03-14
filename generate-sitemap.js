@@ -21,7 +21,7 @@ const links = [
 ];
 
 const sitemap = new SitemapStream({
-  hostname: "https://yourdomain.com"
+  hostname: "https://zonzoctech.com"
 });
 
 const writeStream = createWriteStream("./public/sitemap.xml");

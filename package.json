@@ -22,12 +22,14 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
+    "sitemap": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env CI=false react-scripts build",
-    "test": "react-scripts test"
+    "build": "node generate-sitemap.js && cross-env CI=false react-scripts build",
+    "test": "react-scripts test",
+    "generate-sitemap": "node generate-sitemap.js"
   },
   "eslintConfig": {
     "extends": [

@@ -356,11 +356,9 @@ const Navbar = () => {
             <div className="dropdown-content">
               <div className="dropdown-column">
                 <h4>Who We Are</h4>
-                <Link to="/about">About Us</Link>  
-                <Link to="/terms-conditions">Terms & Conditions</Link>  
-                <Link to="/contact-us">Careers (We Are Hiring!)</Link>  
+                <Link to="/about">About Us</Link>   
+                <Link to="/contact-us">Careers</Link>  
                 <Link to="/contact">Contact Info</Link>  
-                <Link to="/case-studies">Zonzoctech Reviews</Link>  
                 <Link to="/privacy-policy">Privacy Policy</Link>  
               </div>
 

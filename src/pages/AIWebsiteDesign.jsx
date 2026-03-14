@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/AIWebsiteDesign.css";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const AIWebsiteDesign = () => {
   const targetAudience = [
@@ -111,13 +112,10 @@ const AIWebsiteDesign = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Website Design & Development Company</title>
-        <meta
-          name="description"
-          content="Conversion-focused AI websites designed for performance, automation, and intelligent user engagement across modern search platforms."
-        />
-      </Helmet>
+      <SEO
+        title="AI Website Design & Development Company"
+        description="Conversion-focused AI websites designed for performance, automation, and intelligent user engagement across modern search platforms."
+      />
       <div className="aiwd__wrapper">
         <Navbar />
 

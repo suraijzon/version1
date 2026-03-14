@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/googleSearchConsole.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SEO from "../components/SEO";
 
 // Import background image
 import benefitBg from "../assets/icons/benifit.jpg";
@@ -121,13 +122,10 @@ const GoogleSearchConsole = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI SEO Services | Intelligent Search Optimization</title>
-        <meta
-          name="description"
-          content="Professional Google Search Console setup, indexing fixes, performance tracking, and advanced search visibility insights."
-        />
-      </Helmet>
+      <SEO
+        title="Google Search Console Optimization Services"
+        description="Professional Google Search Console setup, indexing fixes, performance tracking, and advanced search visibility insights."
+      />
 
       <Navbar />
 

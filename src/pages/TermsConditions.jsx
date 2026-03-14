@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/TermsConditions.css";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const TermsConditions = () => {
   const lastUpdated = "December 20, 2025";
@@ -132,13 +133,10 @@ const TermsConditions = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Terms & Conditions | Zonzoctech Services Agreement</title>
-        <meta
-          name="description"
-          content="Review Zonzoctech’s service terms, project policies, intellectual property rights, and legal agreements."
-        />
-      </Helmet>
+      <SEO
+        title="Terms & Conditions | Zonzoctech Services Agreement"
+        description="Review Zonzoctech’s service terms, project policies, intellectual property rights, and legal agreements."
+      />
       <div className="tc__wrapper">
         <Navbar />
 

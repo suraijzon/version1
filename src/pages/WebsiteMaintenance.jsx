@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/WebsiteMaintenance.css';
+import SEO from "../components/SEO";
 
 const WebsiteMaintenance = () => {
   const whyMatters = [
@@ -111,6 +112,11 @@ const WebsiteMaintenance = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Website Maintenance, Performance & Security Services"
+        description="Website Maintenance, Performance & Security Services"
+      />
     <div className="wm__wrapper">
       <Navbar />
 
@@ -317,6 +323,7 @@ const WebsiteMaintenance = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

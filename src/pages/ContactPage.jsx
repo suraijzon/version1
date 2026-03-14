@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/ContactPage.css";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const ContactPage = () => {
   const services = [
@@ -52,13 +53,10 @@ const ContactPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Zonzoctech | Start Your Digital Growth</title>
-        <meta
-          name="description"
-          content="Speak with our AI and SEO experts to discuss your project, strategy, and scalable digital transformation plans."
-        />
-      </Helmet>
+       <SEO
+        title="Contact Zonzoctech | Start Your Digital Growth"
+        description="Speak with our AI and SEO experts to discuss your project, strategy, and scalable digital transformation plans."						
+      />
       <div className="cp__wrapper">
         <Navbar />
 

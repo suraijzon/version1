@@ -7,17 +7,15 @@ import Footer from "../components/Footer";
 import SoMuchMoreSection from "../components/SoMuchMoreSection";
 import GrowNowSection from "../components/GrowNowSection";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const AiSeoServices = () => {
   return (
     <>
-      <Helmet>
-        <title>AI SEO Services | Intelligent Search Optimization</title>
-        <meta
-          name="description"
-          content="Leverage artificial intelligence to optimize content, technical SEO, and entity authority for next-generation search engines."
-        />
-      </Helmet>
+      <SEO
+        title="AI SEO Services | Intelligent Search Optimization"
+        description="Leverage artificial intelligence to optimize content, technical SEO, and entity authority for next-generation search engines."
+      />
       <Navbar />
       {/* Hero Section */}
       <AiSeoHero />

@@ -3,6 +3,7 @@ import Navbar from "../components//Navbar";
 import Footer from "../components/Footer";
 import "../styles/EcommercePage.css";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const EcommerceDev = () => {
   const targetAudience = [
@@ -111,13 +112,10 @@ const EcommerceDev = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Ecommerce Development & Conversion Optimization</title>
-        <meta
-          name="description"
-          content="Build and optimize ecommerce stores for speed, AI search visibility, and higher conversion rates across competitive markets."
-        />
-      </Helmet>
+      <SEO
+        title="Ecommerce Development & Conversion Optimization"
+        description="Build and optimize ecommerce stores for speed, AI search visibility, and higher conversion rates across competitive markets."
+      />
       <div className="ecd__wrapper">
         <Navbar />
 

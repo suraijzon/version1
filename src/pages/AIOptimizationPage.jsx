@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/AIOptimizationPage.css";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const AISearchOptimization = () => {
   const focusAreas = [
@@ -148,13 +149,10 @@ const AISearchOptimization = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Search Optimization Services | Future of SEO</title>
-        <meta
-          name="description"
-          content="Optimize for AI search engines, voice queries, and generative results. Advanced strategies for visibility beyond traditional rankings."
-        />
-      </Helmet>
+      <SEO
+        title="AI Search Optimization Services | Future of SEO"
+        description="Optimize for AI search engines, voice queries, and generative results. Advanced strategies for visibility beyond traditional rankings."
+      />
       <div className="aiso__wrapper">
         <Navbar />
 

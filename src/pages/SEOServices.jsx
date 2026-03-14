@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/SEOServices.css';
+import SEO from "../components/SEO";
 
 const SEOServices = () => {
   const builtFor = [
@@ -110,6 +111,11 @@ const SEOServices = () => {
   ];
 
   return (
+    <>
+     <SEO
+        title="Advanced SEO Services | AI & Search Optimization 2026"
+        description="Boost rankings with AI-driven SEO, entity optimization, technical audits, and content strategies designed for modern search engines and AI results."
+      />
     <div className="seos__wrapper">
       <Navbar />
 
@@ -322,6 +328,7 @@ const SEOServices = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 

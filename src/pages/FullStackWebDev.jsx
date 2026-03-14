@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/FullStackWebDev.css";
 import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 
 const FullStackWebDev = () => {
   const services = [
@@ -133,13 +134,10 @@ const FullStackWebDev = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Full Stack Web Development Company | Scalable Apps</title>
-        <meta
-          name="description"
-          content="Modern full-stack development using scalable architecture, API integrations, and performance-first coding standards."
-        />
-      </Helmet>
+      <SEO
+        title="Full Stack Web Development Company | Scalable Apps"
+        description="Modern full-stack development using scalable architecture, API integrations, and performance-first coding standards."
+      />
       <div className="fswd__page_wrapper">
         <Navbar />
 

@@ -26,7 +26,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node generate-sitemap.js && react-scripts start",
     "build": "node generate-sitemap.js && cross-env CI=false react-scripts build",
     "test": "react-scripts test",
     "generate-sitemap": "node generate-sitemap.js"

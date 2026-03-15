@@ -1,0 +1,169 @@
+.careers-container {
+  padding: 80px 10%;
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
+
+.careers-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.careers-hero h1 {
+  font-size: 42px;
+  color: #1a3d6d;
+  margin-bottom: 20px;
+}
+
+.careers-hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+  color: #555;
+}
+
+/* JOB GRID */
+
+.careers-jobs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* JOB CARD */
+
+.job-card {
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  padding: 30px;
+  background: white;
+  transition: 0.3s;
+}
+
+.job-card:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.job-card h2 {
+  color: #1a3d6d;
+  margin-bottom: 10px;
+}
+
+.job-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.job-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* APPLY BUTTON */
+
+.apply-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #1a3d6d;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.apply-btn:hover {
+  background: #0f2c4f;
+}
+
+/* APPLICATION FORM */
+
+.apply-form-section {
+  margin-top: 80px;
+  padding: 50px;
+  border-radius: 10px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.apply-form-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a3d6d;
+}
+
+/* FORM */
+
+.apply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* GRID */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* INPUTS */
+
+.apply-form input,
+.apply-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.apply-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* CV */
+
+.cv-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* SUBMIT */
+
+.submit-application {
+  background: #1a3d6d;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.submit-application:hover {
+  background: #0f2c4f;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

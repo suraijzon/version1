@@ -141,7 +141,7 @@ const Navbar = () => {
           </div>
 
           <div className="nav-tagline">
-            <div>Web Intelligences</div>
+            <div>Web Intelligence</div>
             <div>That Drives</div>
             <div>Revenue®</div>
           </div>
@@ -358,7 +358,7 @@ const Navbar = () => {
                 <h4>Who We Are</h4>
                 <Link to="/about">About Us</Link>   
                 <Link to="/careers">Careers</Link>  
-                <Link to="/contact">Contact Info</Link>  
+                <Link to="/contact">Contact Us</Link>  
                 <Link to="/privacy-policy">Privacy Policy</Link>  
               </div>
 
@@ -366,7 +366,7 @@ const Navbar = () => {
           </div>
 
           <button className="contact-btn" onClick={() => setIsPopupOpen(true)}>
-             Get a Proposal
+             Get a Free Proposal
           </button>
 
 

@@ -14,14 +14,12 @@ const Hero = () => {
         <div className="hero-copy">
 
           <div className="hero-sub">
-            <p>Outdated website? No online visibility? Struggling to keep up with AI trends?</p>
+            <p>AI-Powered Web Development & SEO That Drives Real Business Growth</p>
           </div>
 
           <div className="hero-sub2">
             <p>
-              In today’s digital-first world, a slow website, poor SEO, or missing automation can stall
-              your growth. Businesses are losing leads and conversions due to poor design and unoptimized
-              experiences.
+              We build high-performance websites, AI systems, and automation tools that help businesses generate more leads, improve efficiency, and scale faster.
             </p>
           </div>
 

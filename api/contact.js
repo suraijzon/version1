@@ -1,94 +1,272 @@
-import nodemailer from "nodemailer";
+import React, { useEffect, useState } from "react";
+import "../styles/ExpertPopup.css";
 
-export default async function handler(req, res) {
+const ExpertPopup = ({ open, onClose, preSelectedService }) => {
 
-if (req.method !== "POST") {
-return res.status(405).json({ error: "Method not allowed" });
+const [budget, setBudget] = useState(5000);
+const [selectedService, setSelectedService] = useState("");
+const [isSubmitting, setIsSubmitting] = useState(false);
+
+const [formData, setFormData] = useState({
+name: "",
+company: "",
+phone: "",
+email: "",
+project: ""
+});
+
+useEffect(() => {
+
+```
+if (open) {
+  document.body.style.overflow = "hidden";
+
+  if (preSelectedService) {
+    setSelectedService(preSelectedService);
+  }
+
+} else {
+  document.body.style.overflow = "auto";
 }
+```
+
+}, [open, preSelectedService]);
+
+const handleInputChange = (e) => {
+
+```
+setFormData({
+  ...formData,
+  [e.target.name]: e.target.value
+});
+```
+
+};
+
+const handleSubmit = async (e) => {
+
+```
+e.preventDefault();
+
+if (isSubmitting) return;
+
+setIsSubmitting(true);
+
+const data = {
+  ...formData,
+  service: selectedService,
+  budget: budget
+};
 
 try {
 
-```
-const {
-  name,
-  email,
-  phone,
-  company,
-  service,
-  project,
-  message,
-  budget
-} = req.body;
-
-if (!name || !email) {
-  return res.status(400).json({
-    error: "Name and Email are required"
+  const res = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
   });
-}
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "suraij@zonzoctech.com",
-    pass: process.env.EMAIL_PASS
+  const result = await res.json();
+
+  if (res.ok) {
+
+    alert("Message sent successfully!");
+
+    setFormData({
+      name: "",
+      company: "",
+      phone: "",
+      email: "",
+      project: ""
+    });
+
+    setSelectedService("");
+    setBudget(5000);
+
+    onClose();
+
+  } else {
+
+    alert(result.error || "Error sending message");
+
   }
-});
-
-const htmlBody = `
-  <h2>New Website Inquiry</h2>
-
-  <p><strong>Name:</strong> ${name}</p>
-  <p><strong>Email:</strong> ${email}</p>
-  ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ""}
-  ${company ? `<p><strong>Company:</strong> ${company}</p>` : ""}
-  ${service ? `<p><strong>Service:</strong> ${service}</p>` : ""}
-  ${budget ? `<p><strong>Budget:</strong> $${budget}</p>` : ""}
-
-  <h3>Project Details</h3>
-  <p>${project || message || "-"}</p>
-`;
-
-const textBody = `
-```
-
-New Website Inquiry
-
-Name: ${name}
-Email: ${email}
-Phone: ${phone || "-"}
-Company: ${company || "-"}
-Service: ${service || "-"}
-Budget: ${budget || "-"}
-
-Project:
-${project || message || "-"}
-`;
-
-```
-await transporter.sendMail({
-  from: `"ZonzocTech Website" <suraij@zonzoctech.com>`,
-  to: "suraij@zonzoctech.com",
-  replyTo: email,
-  subject: `New inquiry from ${name}`,
-  text: textBody,
-  html: htmlBody
-});
-
-return res.status(200).json({
-  success: true,
-  message: "Email sent successfully"
-});
-```
 
 } catch (error) {
 
-```
-console.error("EMAIL ERROR:", error);
-
-return res.status(500).json({
-  error: "Email sending failed"
-});
-```
+  alert("Server error");
 
 }
-}
+
+setIsSubmitting(false);
+```
+
+};
+
+if (!open) return null;
+
+const percentage = ((budget - 5000) / (65000 - 5000)) * 100;
+
+const sliderBackground = `linear-gradient(to right, #000 0%, #000 ${percentage}%, #ddd ${percentage}%, #ddd 100%)`;
+
+return (
+
+```
+<div className="popup-overlay" onClick={onClose}>
+
+  <div className="popup-container" onClick={(e) => e.stopPropagation()}>
+
+    <button className="popup-close" onClick={onClose}>×</button>
+
+    <div className="popup-left">
+
+      <div className="popup-left-top">
+
+        <h3>Speak to Our Experts</h3>
+
+        <p>Let's create your vision together.</p>
+
+        <div className="popup-review">
+
+          <strong>zonzoc</strong>
+
+          <p>
+            "Excellent IT resource outsourcing service. They provided highly
+            skilled developers who integrated seamlessly with our team."
+          </p>
+
+        </div>
+
+        <div className="contactmedia">
+          <i className="fa-brands fa-linkedin"></i>
+          <i className="fa-brands fa-twitter"></i>
+        </div>
+
+      </div>
+
+      <div className="popup-contact">
+
+        <span>
+          <i className="fa-solid fa-envelope"></i> info@zonzoctech.com
+        </span>
+
+        <span>
+          <i className="fa-brands fa-whatsapp"></i> +94 74 030 9534
+        </span>
+
+      </div>
+
+    </div>
+
+    <div className="popup-right">
+
+      <h2>Let's Build Something Incredible Together</h2>
+
+      <p className="popup-subtext">
+        Tell us what you're looking for and our experts will get back to you.
+      </p>
+
+      <form className="popup-form" onSubmit={handleSubmit}>
+
+        <div className="form-grid">
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name*"
+            value={formData.name}
+            onChange={handleInputChange}
+            required
+          />
+
+          <input
+            type="text"
+            name="company"
+            placeholder="Company / Organization"
+            value={formData.company}
+            onChange={handleInputChange}
+          />
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number*"
+            value={formData.phone}
+            onChange={handleInputChange}
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email*"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+          />
+
+        </div>
+
+        <select
+          value={selectedService}
+          onChange={(e) => setSelectedService(e.target.value)}
+          required
+        >
+
+          <option value="">You are interested in</option>
+          <option value="Website Development">Website Development</option>
+          <option value="SEO">SEO</option>
+          <option value="Website Growth Audit">Website Growth Audit</option>
+          <option value="AI Solutions">AI Solutions</option>
+          <option value="UI/UX Design">UI/UX Design</option>
+
+        </select>
+
+        <label className="budget-label">
+          Estimated Budget (USD): ${budget.toLocaleString()}
+        </label>
+
+        <input
+          type="range"
+          min="5000"
+          max="65000"
+          value={budget}
+          onChange={(e) => setBudget(e.target.value)}
+          style={{ background: sliderBackground }}
+        />
+
+        <textarea
+          name="project"
+          placeholder="Tell us about the project"
+          value={formData.project}
+          onChange={handleInputChange}
+          required
+        />
+
+        <div className="popup-actions">
+
+          <button type="button" className="cancel-btn" onClick={onClose}>
+            Cancel
+          </button>
+
+          <button type="submit" className="submit-btn" disabled={isSubmitting}>
+            {isSubmitting ? "SENDING..." : "Submit"}
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+);
+
+};
+
+export default ExpertPopup;

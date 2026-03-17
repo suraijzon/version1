@@ -10,9 +10,15 @@
 
 /* Header Section */
 .pp__header {
-  background: linear-gradient(135deg, #2f4b79 0%, #064398 100%);
-  padding: 10rem 2rem 4rem;
-  color: #ffffff;
+  position: relative;
+  background: linear-gradient(135deg, #2f4b79 0%, #064398 100%);;
+  color: white;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
 }
 
 .pp__container {

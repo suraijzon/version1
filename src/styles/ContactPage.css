@@ -73,6 +73,8 @@
   align-items:center;
   gap:1rem;
   transition:all .3s;
+  white-space: pre-line;
+
 }
 
 .cp__service_card:hover{
@@ -103,7 +105,8 @@
 
 .cp__step_card{
   background:#fff0f5;
-  border-left:5px solid #8e24aa;
+  border-left:5px solid #8e24aa !important;
+  border: 2px solid #8e24aa;
   border-radius:12px;
   padding:1.5rem;
   display:flex;

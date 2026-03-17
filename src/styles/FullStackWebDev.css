@@ -12,12 +12,12 @@
 .fswd__hero_section {
   position: relative;
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  min-height: 600px;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 4rem;
   overflow: hidden;
-  padding: 10rem 2rem 3rem;
 }
 
 .fswd__hero_overlay {

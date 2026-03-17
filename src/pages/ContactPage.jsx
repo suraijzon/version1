@@ -88,9 +88,9 @@ const ContactPage = () => {
     "AI Website Design & UX",
     "SEO Services",
     "AI Search Optimization (GEO)",
-    "E-commerce Development & Optimization",
+    "E-commerce Development\n& Optimization",
     "AI Automation & Integrations",
-    "Website Performance, Security & Maintenance",
+    "Website Performance,Security\n & Maintenance",,
   ];
 
   const steps = [

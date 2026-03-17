@@ -42,7 +42,7 @@
 .top-badge-right {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .top-badge .email-link {
@@ -532,6 +532,22 @@
 
 .mobile-client-login-inside {
   display: none;
+}
+/* whatsapp icon */
+.whatsapp-banner {
+  display: flex;
+  align-items: center;
+}
+
+.whatsapp-banner img{
+  height: 40px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.whatsapp-banner img:hover{
+  transform: scale(1.05);
 }
 
 @keyframes slideDown {

@@ -1,37 +1,51 @@
 const { SitemapStream, streamToPromise } = require("sitemap");
-const { createWriteStream } = require("fs");
+const { createWriteStream, readFileSync } = require("fs");
+const path = require("path");
 
-const links = [
-  { url: "/", changefreq: "weekly", priority: 1.0 },
-  { url: "/about", changefreq: "monthly", priority: 0.8 },
-  { url: "/contact-us", changefreq: "monthly", priority: 0.8 },
-  { url: "/contact", changefreq: "monthly", priority: 0.7 },
-  { url: "/seo-services", changefreq: "weekly", priority: 0.9 },
-  { url: "/ai-seo", changefreq: "monthly", priority: 0.9 },
-  { url: "/ai-software-development", changefreq: "monthly", priority: 0.9 },
-  { url: "/ai-web-application-development", changefreq: "monthly", priority: 0.9 },
-  { url: "/ai-website-design-development", changefreq: "monthly", priority: 0.9 },
-  { url: "/seo-ai-search-optimization", changefreq: "monthly", priority: 0.9 },
-  { url: "/full-stack-web-development", changefreq: "monthly", priority: 0.9 },
-  { url: "/ecommerce-development-optimization", changefreq: "monthly", priority: 0.9 },
-  { url: "/website-maintenance-performance-security", changefreq: "monthly", priority: 0.9 },
-  { url: "/case-studies", changefreq: "monthly", priority: 0.8 },
-  { url: "/privacy-policy", changefreq: "yearly", priority: 0.4 },
-  { url: "/terms-conditions", changefreq: "yearly", priority: 0.4 }
+const baseUrl = "https://zonzoctech.com";
+
+// read the React router file
+const appFile = readFileSync(path.join(__dirname, "src/App.js"), "utf8");
+
+// extract all Route paths
+const routeMatches = [...appFile.matchAll(/path="([^"]+)"/g)];
+
+let routes = routeMatches.map(match => match[1]);
+
+// remove private routes
+const excluded = [
+  "/login",
+  "/signup",
+  "/admin-dashboard",
+  "/user-profile"
 ];
 
-const sitemap = new SitemapStream({
-  hostname: "https://zonzoctech.com"
-});
+routes = routes.filter(route => !excluded.includes(route));
 
+// add homepage
+routes.push("/");
+
+// remove duplicates
+routes = [...new Set(routes)];
+
+const sitemap = new SitemapStream({ hostname: baseUrl });
 const writeStream = createWriteStream("./public/sitemap.xml");
 
 sitemap.pipe(writeStream);
 
-links.forEach(link => sitemap.write(link));
+const today = new Date().toISOString();
+
+routes.forEach(route => {
+  sitemap.write({
+    url: route,
+    changefreq: "monthly",
+    priority: route === "/" ? 1.0 : 0.8,
+    lastmod: today
+  });
+});
 
 sitemap.end();
 
 streamToPromise(sitemap).then(() => {
-  console.log("✅ Sitemap generated successfully!");
+  console.log("✅ Dynamic sitemap generated from App.js routes!");
 });

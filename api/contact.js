@@ -5,22 +5,20 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method not allowed" });
   }
 
-  // Get all possible fields from both forms
   const { name, email, phone, company, message, service, project, budget } = req.body;
 
   try {
-    // Create mail transporter
+
     const transporter = nodemailer.createTransport({
-      host: "mail.zonzoctech.com", // your cPanel mail server
+      host: "smtp.gmail.com",
       port: 465,
       secure: true,
       auth: {
-        user: "info@zonzoctech.com",
-        pass: process.env.EMAIL_PASS, // store your password securely
-      },
+        user: process.env.EMAIL_USER,   // suraij@zonzoctech.com
+        pass: process.env.EMAIL_PASS    // Google App Password
+      }
     });
 
-    // Prepare email body dynamically
     let emailBody = `
       <h3>New Message from Website</h3>
       <p><b>Name:</b> ${name}</p>
@@ -33,16 +31,16 @@ export default async function handler(req, res) {
       ${message ? `<p><b>Message:</b> ${message}</p>` : ""}
     `;
 
-    // Send email
     await transporter.sendMail({
-      from: `"Zonzoctech Website" <info@zonzoctech.com>`,
-      to: "info@zonzoctech.com",
+      from: `"Zonzoctech Website" <${process.env.EMAIL_USER}>`,
+      to: "suraij@zonzoctech.com",
+      replyTo: email,
       subject: `New message from ${name}`,
       html: emailBody,
     });
 
-    // Respond to React
     return res.status(200).json({ success: true });
+
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Email sending failed" });

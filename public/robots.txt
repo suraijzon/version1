@@ -9,5 +9,4 @@ Disallow: /node_modules/
 Allow: /*.js$
 Allow: /*.css$
 
-# Sitemap
-Sitemap: https://www.zonzoctech.com/sitemap.xml
+Sitemap: https://zonzoctech.com/sitemap.xml

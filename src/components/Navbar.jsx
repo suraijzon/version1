@@ -6,6 +6,7 @@ import phoneIcon from "../assets/icons/phone-call-icon.svg";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate,Link } from "react-router-dom";
 import ExpertPopup from "./ExpertPopup";
+import whatsappBanner from "../assets/icons/whatsapp-banner.png";
 
 
 const DESKTOP_BREAKPOINT = 1024;
@@ -116,9 +117,14 @@ const Navbar = () => {
         </div>
         
         <div className="top-badge-right">
-          <button onClick={handleClientLogin} className="client-login">
-            Client Login
-          </button>
+          <a
+              href="https://wa.me/947403095340"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="whatsapp-banner"
+          >
+          <img src={whatsappBanner} alt="Chat with us on WhatsApp" />
+          </a>
           
           <div className="contact-proposal">
             <img src={phoneIcon} alt="phone" />
@@ -169,7 +175,7 @@ const Navbar = () => {
                 <Link to="/ai-software-development">AI Proof of Concept (PoC) Development</Link>
                 <Link to="/ai-web-application-development">Custom AI & GPT Integration</Link>
                 <Link to="/website-maintenance-performance-security">Secure & Scalable AI Deployment</Link>
-                <Link to="/ai-website-design-development">AI &nbsp; Readiness Assessment</Link>
+                <Link to="/ai-website-design-development">AI Readiness Assessment</Link><br />
                 <Link to="/ai-seo">AI Strategy & Consulting</Link>
               </div>
 
@@ -187,7 +193,7 @@ const Navbar = () => {
                 <Link to="/ai-website-design-development">Conversion-Focused AI Website Design</Link>
                 <Link to="/full-stack-web-development">AI Personalization & Dynamic Content</Link> 
                 <Link to="/ai-web-application-development">GPT-Powered Forms, Chat & Lead Capture</Link>            
-                <Link to="/full-stack-web-development">AI &nbsp; Landing Page Systems</Link>
+                <Link to="/full-stack-web-development">AI Landing Page Systems</Link><br />
                 <Link to="/seo-services">AI UX Testing & Conversion Rate Optimization (CRO)</Link>
               </div>
 
@@ -200,13 +206,13 @@ const Navbar = () => {
                 <Link to="/ai-web-application-development">AI Scheduling, Booking & Support Automation</Link>
               </div>
 
-              <div className="dropdown-column-last">
-                <span className="last-column3">Insights & Resources</span><br />
-                <span className="last-column-text3">AI vs Traditional Development: Cost & ROI</span>
-                <span className="last-column-text3">What Is GPT Integration & When You Need It</span>        
-                <span className="last-column-text3">How to Identify High-ROI AI Use Cases</span>
-                <span className="last-column-text3">AI SEO &nbsp; vs &nbsp;Traditional SEO</span>
-                <span className="last-column-text3">What Is AI Marketing</span>
+              <div className="dropdown-column highlight-column">
+                <h4>Insights & Resources</h4><br />
+                <Link to="/ecommerce-development-optimization">AI vs Traditional Development: Cost & ROI</Link>   
+                <Link to="/ecommerce-development-optimization">What Is GPT Integration & When You Need It</Link>  
+                <Link to="/seo-services">How to Identify High-ROI AI Use Cases</Link>  
+                <Link to="/seo-services">AI SEO vs Traditional SEO</Link><br /> 
+                <Link to="/ecommerce-development-optimization">What Is AI Marketing ?</Link>  
               </div>
             </div>
           </div>
@@ -264,13 +270,13 @@ const Navbar = () => {
                 <Link to="/seo-services">Conversion Rate Optimization (CRO)</Link>  
               </div>
 
-              <div className="dropdown-column-last">
-                <span className="last-column3">Problems We Solve</span>&nbsp;
-                <span className="last-column-text3">My Traffic or Rankings Are Declining</span>
-                <span className="last-column-text3">My Website Looks Good but Doesn't Convert</span>
-                <span className="last-column-text3">My Business Isn't Visible on Google or AI Search</span>
-                <span className="last-column-text3">My Marketing or Agency Isn't Delivering ROI</span>
-                <span className="last-column-text3">My Website Isn't Generating Leads or Sales</span>
+               <div className="dropdown-column highlight-column">
+                <h4>Problems We Solve</h4><br />
+                <Link to="/website-maintenance-performance-security">My Traffic or Rankings Are Declining</Link>  
+                <Link to="/seo-services">My Website Looks Good but Doesn't Convert</Link>  
+                <Link to="/website-maintenance-performance-security">My Business Isn't Visible on Google or AI Search</Link>  
+                <Link to="/full-stack-web-development">My Marketing or Agency Isn't Delivering ROI</Link>  
+                <Link to="/seo-services">My Website Isn't Generating Leads or Sales</Link>  
               </div>
             </div>
           </div>
@@ -327,13 +333,13 @@ const Navbar = () => {
                 <Link to="/ecommerce-development-optimization">Shopping Feed Optimization & Automation</Link>  
               </div>
 
-              <div className="dropdown-column-last">
-                <span className="last-column3">Proof & Insights</span><br />
-                <span className="last-column-text3">SEO Case Studies & Results</span>  
-                <span className="last-column-text3">SEO Growth Experiments & Learnings</span>
-                <span className="last-column-text3">AI SEO vs Traditional SEO</span>
-                <span className="last-column-text3">Client Success Stories</span>
-                <span className="last-column-text3">GEO</span>
+              <div className="dropdown-column highlight-column">
+                <h4>Proof & Insights</h4><br />
+                <Link to="/ecommerce-development-optimization">SEO Case Studies & Results</Link>   
+                <Link to="/ecommerce-development-optimization">SEO Growth Experiments & Learnings</Link>  
+                <Link to="/seo-services">AI SEO vs Traditional SEO</Link><br />  
+                <Link to="/seo-services">Client Success Stories</Link><br /> 
+                <Link to="/ecommerce-development-optimization">GEO</Link>  
               </div>
             </div>
           </div>
@@ -357,7 +363,7 @@ const Navbar = () => {
               <div className="dropdown-column">
                 <h4>Who We Are</h4>
                 <Link to="/about">About Us</Link>   
-                <Link to="/contact-us">Careers</Link>  
+                <Link to="/careers">Careers</Link>  
                 <Link to="/contact">Contact Info</Link>  
                 <Link to="/privacy-policy">Privacy Policy</Link>  
               </div>

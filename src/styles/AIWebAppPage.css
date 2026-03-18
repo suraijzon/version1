@@ -26,12 +26,14 @@
     var(--primary) 0%,
     var(--primary-light) 100%
   );
-  padding: 10rem 2rem 3rem;
-  overflow: hidden;
-  min-height: 700px;
+  min-height: 70vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  overflow: hidden;
 }
+
 
 .aiwa__hero_bg {
   position: absolute;

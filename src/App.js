@@ -15,6 +15,7 @@ import ContactSection from "./components/ContactSection";
 import ReviewSection from "./components/ReviewSection";
 import Footer from "./components/Footer";
 import ExpertPopup from "./components/ExpertPopup";
+import WhatsappFloat from "./components/WhatsappFloat";
 
 // Pages
 import GoogleSearchConsole from "./pages/GoogleSearchConsole";
@@ -23,7 +24,8 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import UserProfile from "./pages/UserProfile";
 import AdminDashboard from "./pages/AdminDashboard";
-import ContactUs from "./pages/ContactUs";
+import Careers from "./pages/Careers";
+
 import AIOptimizationPage from "./pages/AIOptimizationPage";
 import AIWebAppPage from "./pages/AIWebAppPage";
 import EcommercePage from "./pages/EcommercePage";
@@ -89,10 +91,13 @@ function App() {
             <Route path="/website-maintenance-performance-security" element={<WebsiteMaintenance />} />
             <Route path="/seo-services" element={<SEOServices />} />
             <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/careers" element={<Careers />} />
+            
+           
+            
 
             {/* Pages */}
             <Route path="/about" element={<AboutUs />} />
-            <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-conditions" element={<TermsConditions />} />
@@ -101,6 +106,9 @@ function App() {
             <Route path="/user-profile" element={<UserProfile />} />
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
           </Routes>
+
+          {/* WHATSAPP FLOAT BUTTON */}
+          <WhatsappFloat />
         </Router>
       </AuthProvider>
     </HelmetProvider>

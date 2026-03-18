@@ -1,11 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/ContactPage.css";
-import { Helmet } from "react-helmet-async";
 import SEO from "../components/SEO";
 
 const ContactPage = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    phone: "",
+    email: "",
+    project: ""
+  });
+
+  const [budget, setBudget] = useState(5000);
+  const [selectedService, setSelectedService] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const data = {
+      ...formData,
+      service: selectedService,
+      budget
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        alert("Message sent successfully!");
+
+        setFormData({
+          name: "",
+          company: "",
+          phone: "",
+          email: "",
+          project: ""
+        });
+
+        setSelectedService("");
+        setBudget(5000);
+
+      } else {
+        alert("Error sending message");
+      }
+
+    } catch {
+      alert("Server error");
+    }
+
+    setIsSubmitting(false);
+  };
+
+  /* ===== SLIDER COLOR LOGIC ===== */
+
+  const percentage = ((budget - 5000) / (65000 - 5000)) * 100;
+
+  const sliderBackground = `linear-gradient(
+    to right,
+    #8e24aa 0%,
+    #8e24aa ${percentage}%,
+    #ddd ${percentage}%,
+    #ddd 100%
+  )`;
+
   const services = [
     "AI Web Application Development",
     "AI Software Development",
@@ -13,9 +88,9 @@ const ContactPage = () => {
     "AI Website Design & UX",
     "SEO Services",
     "AI Search Optimization (GEO)",
-    "E-commerce Development & Optimization",
+    "E-commerce Development\n& Optimization",
     "AI Automation & Integrations",
-    "Website Performance, Security & Maintenance",
+    "Website Performance,Security\n & Maintenance",,
   ];
 
   const steps = [
@@ -53,30 +128,32 @@ const ContactPage = () => {
 
   return (
     <>
-       <SEO
+      <SEO
         title="Contact Zonzoctech | Start Your Digital Growth"
-        description="Speak with our AI and SEO experts to discuss your project, strategy, and scalable digital transformation plans."						
+        description="Speak with our AI and SEO experts to discuss your project, strategy, and scalable digital transformation plans."
       />
+
       <div className="cp__wrapper">
+
         <Navbar />
 
-        {/* Hero Section */}
+        {/* HERO */}
         <section className="cp__hero">
           <div className="cp__hero_container">
             <h1 className="cp__hero_title">Contact ZonzocTech</h1>
             <p className="cp__hero_text">
-              Let’s Build Something That Grows Your Business. Have a project in
-              mind? Looking to improve your website, SEO, or AI systems? We’d
-              love to hear from you.
+              Let’s Build Something That Grows Your Business.
             </p>
           </div>
         </section>
 
-        {/* How Can We Help */}
+        {/* SERVICES */}
         <section className="cp__help_section">
           <div className="cp__container">
+
             <h2 className="cp__heading">How Can We Help You?</h2>
             <p className="cp__subtitle">You can contact us for:</p>
+
             <div className="cp__services_grid">
               {services.map((service, index) => (
                 <div key={index} className="cp__service_card">
@@ -85,17 +162,16 @@ const ContactPage = () => {
                 </div>
               ))}
             </div>
+
           </div>
         </section>
 
-        {/* Request Consultation */}
+        {/* CONSULTATION */}
         <section className="cp__consult_section">
           <div className="cp__container">
+
             <h2 className="cp__heading">Request a Free Consultation</h2>
-            <p className="cp__text">
-              Tell us about your project and goals, and we’ll review your
-              requirements and suggest the best next steps.
-            </p>
+
             <div className="cp__steps_grid">
               {steps.map((step, index) => (
                 <div key={index} className="cp__step_card">
@@ -104,73 +180,104 @@ const ContactPage = () => {
                 </div>
               ))}
             </div>
-            <p className="cp__note">👉 No obligation. No pressure.</p>
+
           </div>
         </section>
 
-        {/* Contact Details */}
-        <section className="cp__details_section">
-          <div className="cp__container">
-            <h2 className="cp__heading">Contact Details</h2>
-            <p className="cp__contact">📧 Email: hello@zonzoctech.com</p>
-            <p className="cp__contact">📞 Phone: +94 XX XXX XXXX</p>
-            <p className="cp__contact">
-              🌍 Serving clients worldwide (Remote-first team — global delivery)
-            </p>
-          </div>
-        </section>
+        {/* CONTACT FORM */}
+        <section className="cp__form_section">
 
-        {/* Why Contact */}
-        <section className="cp__why_section">
           <div className="cp__container">
-            <h2 className="cp__heading">Why Contact ZonzocTech?</h2>
-            <div className="cp__why_list">
-              {whyContact.map((item, index) => (
-                <div key={index} className="cp__why_item">
-                  <span className="cp__why_icon">★</span>
-                  <p>{item}</p>
-                </div>
-              ))}
-            </div>
-            <p className="cp__why_text">
-              We don’t just deliver projects — we build systems that work.
-            </p>
-          </div>
-        </section>
 
-        {/* FAQ Section */}
-        <section className="cp__faq_section">
-          <div className="cp__container">
-            <h2 className="cp__heading">Frequently Asked Questions</h2>
-            <div className="cp__faq_grid">
-              {faqs.map((faq, index) => (
-                <div key={index} className="cp__faq_card">
-                  <h4 className="cp__faq_q">{faq.q}</h4>
-                  <p className="cp__faq_a">{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+            <h2 className="cp__heading">Send Us a Message</h2>
 
-        {/* Final CTA */}
-        <section className="cp__cta_section">
-          <div className="cp__container">
-            <h2 className="cp__cta_title">Ready to Get Started?</h2>
-            <p className="cp__cta_text">
-              If you’re serious about improving your digital presence with AI
-              and smart development, let’s talk.
-            </p>
-            <a href="#contact" className="cp__cta_btn">
-              Contact Us Today
-            </a>
-            <a href="#audit" className="cp__cta_btn_alt">
-              Request a Free Audit
-            </a>
+            <form className="cp__form" onSubmit={handleSubmit}>
+
+              <div className="cp__form_grid">
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name*"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                />
+
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Company / Organization"
+                  value={formData.company}
+                  onChange={handleInputChange}
+                />
+
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number*"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email*"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+
+              </div>
+
+              <select
+                value={selectedService}
+                onChange={(e) => setSelectedService(e.target.value)}
+                required
+              >
+                <option value="">You are interested in</option>
+                <option value="Website Development">Website Development</option>
+                <option value="SEO">SEO</option>
+                <option value="AI Solutions">AI Solutions</option>
+                <option value="UI/UX Design">UI/UX Design</option>
+              </select>
+
+              <label className="cp__budget">
+                Estimated Budget (USD): ${budget}
+              </label>
+
+              <input
+                className="cp__slider"
+                type="range"
+                min="5000"
+                max="65000"
+                value={budget}
+                onChange={(e) => setBudget(Number(e.target.value))}
+                style={{ background: sliderBackground }}
+              />
+
+              <textarea
+                name="project"
+                placeholder="Tell us about the project"
+                value={formData.project}
+                onChange={handleInputChange}
+                required
+              />
+
+              <button type="submit" className="cp__submit_btn">
+                {isSubmitting ? "SENDING..." : "Submit"}
+              </button>
+
+            </form>
+
           </div>
+
         </section>
 
         <Footer />
+
       </div>
     </>
   );

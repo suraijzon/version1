@@ -12,11 +12,12 @@
 .ecd__hero {
   position: relative;
   background: linear-gradient(135deg, #1e4de9 0%, #1e0e57 50%, #070352 100%);
-  padding: 7rem 2rem;
-  overflow: hidden;
-  min-height: 700px;
+  min-height: 70vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  overflow: hidden;
 }
 
 .ecd__hero_pattern {
@@ -55,7 +56,6 @@
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
-  margin-top: 3rem;
   margin-bottom: 2rem;
   border: 2px solid rgba(255, 255, 255, 0.3);
 }

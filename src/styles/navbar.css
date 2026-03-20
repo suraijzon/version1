@@ -84,8 +84,8 @@
 }
 
 .top-badge .contact-proposal img {
-  width: 18px;
-  height: 18px;
+  width: 35px;
+  height: 40px;
 }
 
 .nav-container {
@@ -502,7 +502,21 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 82, 204, 0.3);
 }
+.client-login-btn {
+  background: none;
+  font-family: poppins;
+  border: none;
+  color: #1a2b4c;
+  font-size: 15px;
+  font-weight: 500;
+  margin-right: 0px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
 
+.client-login-btn:hover {
+  color: #007bff;
+}
 /* HAMBURGER ICON */
 .hamburger {
   display: none;

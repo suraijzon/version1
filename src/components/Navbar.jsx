@@ -6,7 +6,8 @@ import phoneIcon from "../assets/icons/phone-call-icon.svg";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate,Link } from "react-router-dom";
 import ExpertPopup from "./ExpertPopup";
-import whatsappBanner from "../assets/icons/whatsapp-banner.png";
+import whatsappBanner from "../assets/icons/whatsapp-nav.jpeg";
+import emailnav from "../assets/icons/navmail.png";
 
 
 const DESKTOP_BREAKPOINT = 1024;
@@ -117,17 +118,24 @@ const Navbar = () => {
         </div>
         
         <div className="top-badge-right">
+
+          <button 
+             className="client-login-btn"
+             onClick={handleClientLogin}
+          >
+             Client Login
+          </button>
           <a
               href="https://wa.me/947403095340"
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-banner"
           >
-          <img src={whatsappBanner} alt="Chat with us on WhatsApp" />
+     
           </a>
           
           <div className="contact-proposal">
-            <img src={phoneIcon} alt="phone" />
+            <img src={emailnav} alt="phone" />
             <a href="mailto:Info@zonzoctech.com?subject=New Project Inquiry&body=Hi ZonzocTech Team,%0D%0A%0D%0AI would like to discuss a project with you.%0D%0A%0D%0AThanks," className="email-link">
               info@zonzoctech.com
             </a> 

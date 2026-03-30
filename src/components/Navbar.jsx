@@ -160,6 +160,12 @@ const Navbar = () => {
             <div>Revenue®</div>
           </div>
         </div>
+          <button 
+              className="contact-btn mobile-only-btn"
+              onClick={() => setIsPopupOpen(true)}
+          >
+            Get a Proposal
+          </button>
 
         <nav className={`nav-links ${open ? "open" : ""}`}>
           {/* Dropdown: AI & Technology (id: 3) */}
@@ -379,8 +385,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          <button className="contact-btn" onClick={() => setIsPopupOpen(true)}>
-             Get a Proposal
+          <button className="contact-btn desktop-only" onClick={() => setIsPopupOpen(true)}>
+          Get a Proposal
           </button>
 
 

@@ -416,7 +416,8 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 320px;
+    max-width: 100%;
+    padding: 0 15px;
   }
   
   .contact-email {
@@ -448,7 +449,7 @@
   .contact-left {
     padding: 18px 15px;
     width: 100%;
-    max-width: 300px;
+    max-width: 100%;
     margin-left: 0;
     margin: 0 auto;
   }
@@ -473,7 +474,7 @@
   .contact-right {
     padding: 18px 15px;
     width: 100%;
-    max-width: 300px;
+    max-width: 100%;
     margin-left: 0;
     margin: 0 auto;
     margin-top: 20px;

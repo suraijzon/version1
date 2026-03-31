@@ -160,12 +160,7 @@ const Navbar = () => {
             <div>Revenue®</div>
           </div>
         </div>
-          <button 
-              className="contact-btn mobile-only-btn"
-              onClick={() => setIsPopupOpen(true)}
-          >
-            Get a Proposal
-          </button>
+          
 
         <nav className={`nav-links ${open ? "open" : ""}`}>
           {/* Dropdown: AI & Technology (id: 3) */}
@@ -399,12 +394,20 @@ const Navbar = () => {
         
         <ExpertPopup 
         open={isPopupOpen} onClose={() => setIsPopupOpen(false)}/>
+       <div className="mobile-actions">
+  <button 
+    className="contact-btn mobile-only-btn"
+    onClick={() => setIsPopupOpen(true)}
+  >
+    Get a Proposal
+  </button>
 
-        <div className="hamburger" onClick={() => setOpen((s) => !s)}>
-          <span className={open ? "bar rotate1" : "bar"}></span>
-          <span className={open ? "bar hide" : "bar"}></span>
-          <span className={open ? "bar rotate2" : "bar"}></span>
-        </div>
+  <div className="hamburger" onClick={() => setOpen((s) => !s)}>
+    <span className={open ? "bar rotate1" : "bar"}></span>
+    <span className={open ? "bar hide" : "bar"}></span>
+    <span className={open ? "bar rotate2" : "bar"}></span>
+  </div>
+</div>
       </div>
     </header>
   );

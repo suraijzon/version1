@@ -111,6 +111,11 @@
 .mobile-only-btn {
   display: none;
 }
+.mobile-actions {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
 
 /* LOGO */
 .nav-logo {
@@ -1078,6 +1083,14 @@
     border: none;
     cursor: pointer;
   }
+    .mobile-actions {
+    display: flex;
+  }
+
+  .nav-container > .hamburger {
+    display: none;
+  }
+
 
   .mobile-client-login-inside:hover {
     opacity: 0.9;

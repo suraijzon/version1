@@ -24,70 +24,71 @@ const ReviewsSection = () => {
       name: "zonzoc",
       username: "@zonzoc",
       bgColor: "#b2ebf2"
+    },
+    {
+      id: 4,
+      text: "Great experience working with the team. Delivery was fast and communication was excellent throughout the project.",
+      name: "Emily Carter",
+      username: "@emily_carter",
+      bgColor: "#f3e5f5"
     }
   ];
 
   return (
     <section className="reviews-section">
       <div className="reviews-container">
-        
-        {/* Left Side - Rating */}
-        <div className="reviews-left">
-          <div className="rating-display">
+
+        {/* TOP SECTION */}
+        <div className="reviews-top">
+
+          {/* LEFT - RATING */}
+          <div className="reviews-left">
             <h1 className="rating-number">4.9</h1>
-            <div className="rating-stars-large">
+
+            <div className="rating-stars">
               {[...Array(5)].map((_, i) => (
-                <span key={i} className="star-icon">⭐</span>
+                <span key={i}>⭐</span>
               ))}
             </div>
+
+            <div className="reviews-count">
+              <CountUp start={0} end={115} duration={2} />+ Reviews
+            </div>
           </div>
-          
-          <div className="reviews-count-badge">
-            <span className="reviews-count">
-              <CountUp 
-                start={0} 
-                end={875} 
-                duration={2} 
-                separator="," 
-              /> + <span className="reviews-label"> Reviews</span>
-            </span>
-            
+
+          {/* RIGHT - HEADING */}
+          <div className="reviews-heading-wrap">
+            <h2 className="reviews-heading">
+              Our Customers <br /> love us
+            </h2>
           </div>
+
         </div>
 
-        {/* Right Side - Header & Cards */}
-        <div className="reviews-right">
-          <h2 className="reviews-heading">
-            Our<br />
-            Customers<br />
-            love us
-          </h2>
+        {/* CARDS */}
+        <div className="review-cards-grid">
+          {reviews.map((review) => (
+            <div
+              key={review.id}
+              className="review-card"
+              style={{ backgroundColor: review.bgColor }}
+            >
+              <div className="quote">"</div>
 
-          {/* Review Cards */}
-          <div className="review-cards-grid">
-            {reviews.map((review) => (
-              <div 
-                key={review.id} 
-                className="review-card"
-                style={{ backgroundColor: review.bgColor }}
-              >
-                <div className="quote-icon">"</div>
-                
-                <div className="review-stars">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="star">⭐</span>
-                  ))}
-                </div>
-
-                <p className="review-text">{review.text}</p>
-
-                <div className="reviewer-info">
-                  <p className="reviewer-name">{review.name}</p>
-                  <p className="reviewer-username">{review.username}</p>
-                </div>
+              <div className="card-stars">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i}>⭐</span>
+                ))}
               </div>
-            ))}
-          </div>
+
+              <p className="review-text">{review.text}</p>
+
+              <div className="reviewer">
+                <p className="name">{review.name}</p>
+                <p className="username">{review.username}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
       </div>

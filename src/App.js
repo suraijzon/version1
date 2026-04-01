@@ -47,6 +47,7 @@ const HomePage = () => {
 
   return (
     <>
+      <Navbar />
       <Hero />
       <Solution />
       <SuccessSection />
@@ -55,6 +56,7 @@ const HomePage = () => {
       <WhyChooseSleekIT />
       <ContactSection />
       <ReviewSection />
+      <Footer/>
 
       <ExpertPopup open={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </>
@@ -69,7 +71,7 @@ function App() {
         <Router>
 
           {/* ✅ GLOBAL HEADER */}
-          <Navbar />
+          
 
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -107,7 +109,7 @@ function App() {
           </Routes>
 
           {/* ✅ GLOBAL FOOTER */}
-          <Footer />
+          
 
           {/* Floating */}
           <WhatsappFloat />

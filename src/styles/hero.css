@@ -11,7 +11,7 @@
 .hero-section{
   width:100%;
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(250,252,255,1) 100%);
-  padding: calc(40px + 10px) 4% 80px 4%; 
+  padding: calc(40px + 0px) 4% 50px 4%; 
   box-sizing: border-box;
 }
 
@@ -161,6 +161,35 @@
   border-radius:16px;
   box-shadow: 0 10px 30px rgba(8,18,44,0.06);
   display:none; 
+}
+.hero-contact-btn {
+  margin-top: 30px;
+  padding: 16px 45px;
+
+  background: #00448f;
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Poppins;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.hero-contact-btn:hover {
+  background: #003d7a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 82, 163, 0.3);
+}
+
+/* Click */
+.hero-contact-btn:active {
+  transform: scale(0.96);
 }
 
 /* Responsiveness */

@@ -1,6 +1,8 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/projectDetails.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import item1 from "../assets/icons/healthyfit.png";
 import item2 from "../assets/icons/aviation.png";
@@ -110,6 +112,8 @@ const ProjectDetails = () => {
   if (!project) return <h2>Project Not Found</h2>;
 
   return (
+    <>
+    <Navbar/>
     <section className="project-page">
 
   {/* BACK */}
@@ -158,6 +162,7 @@ const ProjectDetails = () => {
 </div>
 
 </section>
+<Footer/></>
   );
 };
 

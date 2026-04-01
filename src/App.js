@@ -5,6 +5,7 @@ import { AuthProvider } from "./context/AuthContext";
 
 // Components
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Solution from "./components/Solution";
 import SuccessSection from "./components/SuccessSection";
@@ -13,7 +14,6 @@ import WhoWeAre from "./components/WhoWeAre";
 import WhyChooseSleekIT from "./components/WhyChooseSleekIT";
 import ContactSection from "./components/ContactSection";
 import ReviewSection from "./components/ReviewSection";
-import Footer from "./components/Footer";
 import ExpertPopup from "./components/ExpertPopup";
 import WhatsappFloat from "./components/WhatsappFloat";
 
@@ -39,14 +39,11 @@ import ContactPage from "./pages/ContactPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import WebsiteMaintenance from "./pages/WebsiteMaintenance";
+import ProjectDetails from "./pages/ProjectDetails";
 
 // ================= HOME PAGE =================
 const HomePage = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const handleClosePopup = () => {
-    setIsPopupOpen(false);
-  };
 
   return (
     <>
@@ -59,9 +56,9 @@ const HomePage = () => {
       <WhyChooseSleekIT />
       <ContactSection />
       <ReviewSection />
-      <Footer />
+      <Footer/>
 
-      <ExpertPopup open={isPopupOpen} onClose={handleClosePopup} />
+      <ExpertPopup open={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </>
   );
 };
@@ -72,15 +69,22 @@ function App() {
     <HelmetProvider>
       <AuthProvider>
         <Router>
+
+          {/* ✅ GLOBAL HEADER */}
+          
+
           <Routes>
             <Route path="/" element={<HomePage />} />
+
+            {/* 🔥 PROJECT DETAILS ROUTE */}
+            <Route path="/project/:id" element={<ProjectDetails />} />
 
             {/* Auth */}
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
 
             {/* Services */}
-            <Route path="/google-search---console" element={<GoogleSearchConsole />} />
+            <Route path="/google-search-console" element={<GoogleSearchConsole />} />
             <Route path="/ai-seo" element={<AiSeoServices />} />
             <Route path="/ai-software-development" element={<AISoftwareServices />} />
             <Route path="/full-stack-web-development" element={<FullStackWebDev />} />
@@ -92,9 +96,6 @@ function App() {
             <Route path="/seo-services" element={<SEOServices />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/careers" element={<Careers />} />
-            
-           
-            
 
             {/* Pages */}
             <Route path="/about" element={<AboutUs />} />
@@ -107,8 +108,12 @@ function App() {
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
           </Routes>
 
-          {/* WHATSAPP FLOAT BUTTON */}
+          {/* ✅ GLOBAL FOOTER */}
+          
+
+          {/* Floating */}
           <WhatsappFloat />
+
         </Router>
       </AuthProvider>
     </HelmetProvider>

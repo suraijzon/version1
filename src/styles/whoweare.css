@@ -59,7 +59,7 @@
 /* Individual Scroll Row */
 .tech-scroll-row {
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible;
   position: relative;
   width: 100%;
 
@@ -80,6 +80,7 @@
   display: flex;
   gap: 24px;
   width: max-content;
+  margin-top: 5px;
 }
 
 /* Different animation speeds for each row */
@@ -119,7 +120,7 @@
   background: white;
   border-radius: 16px;
   border: 1px solid rgb(101, 204, 255);
-  padding: 18px 20px;
+  padding: 10px 20px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
   flex-shrink: 0;
@@ -137,7 +138,7 @@
   font-weight: 600;
   font-family: Poppins, sans-serif;
   color: #1965bc;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   text-align: center;
   white-space: nowrap;
 }
@@ -167,8 +168,8 @@
 
 /* Icon Circle */
 .tech-icon-circle {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   background: linear-gradient(135deg, #f0f4ff 0%, #e8efff 100%);
   border-radius: 50%;
   display: flex;
@@ -185,6 +186,13 @@
   border-color: #3b82f6;
   box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2);
   transform: scale(1.05);
+}
+.tech-scroll-row {
+  cursor: grab;
+}
+
+.tech-scroll-row.active {
+  cursor: grabbing;
 }
 
 /* SVG Icon */

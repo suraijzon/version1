@@ -65,6 +65,11 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
         });
         setSelectedService("");
         setBudget(5000);
+          // ✅ ADD HERE
+        setTimeout(() => {
+        onClose();
+        setSubmitStatus("");
+        }, 2500);
       } else {
         setSubmitStatus("error");
       }

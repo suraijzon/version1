@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/hero.css";
-import heroImg from "../assets/icons/hero.png";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -9,20 +8,19 @@ const Hero = () => {
   return (
     <section className="hero-section" role="region" aria-label="Hero">
       <div className="hero-inner">
-
         <div className="hero-copy">
 
-          <div className="hero-sub">
-            <p>Turn Your Website Into a Lead-Generating Machine</p>
-          </div>
+          {/* ✅ MAIN TITLE */}
+          <h1 className="hero-main-title">
+            Turn Your Website Into a Lead-Generating Machine
+          </h1>
 
-          <div className="hero-sub2">
-            <p>
-              We build high-converting websites, drive targeted traffic, and automate your business with AI to help you grow faster.
-            </p>
-          </div>
+          {/* ✅ CLEAN DESCRIPTION (FIXED — NO BREAK ISSUE) */}
+          <p className="hero-description">
+            We build high-converting websites, drive targeted traffic, and automate your business with AI to help you grow faster.
+          </p>
 
-          {/* ✅ CONTACT BUTTON */}
+          {/* ✅ BUTTON */}
           <button
             className="hero-contact-btn"
             onClick={() => navigate("/contact")}
@@ -31,11 +29,6 @@ const Hero = () => {
           </button>
 
         </div>
-
-        <div className="hero-media">
-          <img src={heroImg} alt="Digital solutions illustration" />
-        </div>
-
       </div>
     </section>
   );

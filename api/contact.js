@@ -12,15 +12,12 @@ export default async function handler(req, res) {
 
     const transporter = nodemailer.createTransport({
       host: "mail.zonzoctech.com",   // your cPanel mail server
-      port: 465,
-      secure: true,
+      port: 587,
+      secure: false,
       auth: {
         user: "info@zonzoctech.com",
         pass: process.env.EMAIL_PASS
       },
-      tls: {
-        rejectUnauthorized: false,
-      }
     });
 
     await transporter.sendMail({
@@ -42,13 +39,12 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ success: true });
 
-  } catch (error) {
-
-    console.error(error);
-
-    return res.status(500).json({
-      error: "Email sending failed"
-    });
-
   }
+  catch (error) {
+  console.error("EMAIL ERROR:", error);
+
+  return res.status(500).json({
+    error: error.message
+  });
+}
 }

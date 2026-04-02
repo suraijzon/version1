@@ -9,4 +9,6 @@ Disallow: /node_modules/
 Allow: /*.js$
 Allow: /*.css$
 
+//sitemap
+
 Sitemap: https://zonzoctech.com/sitemap.xml

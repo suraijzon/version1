@@ -15,7 +15,7 @@ const AboutUs = () => {
   ];
 
   const whatWeWant = [
-    { icon: "🎯", text: "Beetter online visibility" },
+    { icon: "🎯", text: "Better online visibility" },
     { icon: "🤖", text: "Smarter automation" },
     { icon: "⚡", text: "High-performing websites" },
     { icon: "📈", text: "Measurable ROI from digital investments" },
@@ -29,7 +29,7 @@ const AboutUs = () => {
   ];
 
   const solutions = [
-    { icon: "⚡", text: "Fast" },
+    { icon: "⚡", text: "Faster" },
     { icon: "🔒", text: "Secure" },
     { icon: "📈", text: "Scalable" },
     { icon: "🔍", text: "Search-optimized" },

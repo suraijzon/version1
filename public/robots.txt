@@ -10,8 +10,14 @@ Allow: /*.js$
 Allow: /*.css$
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sitemap1
 Sitemap: https://www.zonzoctech.com/sitemap.xml
 =======
+Sitemap: https://zonzoctech.com/sitemap.xml
+>>>>>>> devel
+=======
+//sitemap
+
 Sitemap: https://zonzoctech.com/sitemap.xml
 >>>>>>> devel

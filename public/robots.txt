@@ -17,7 +17,7 @@ Sitemap: https://www.zonzoctech.com/sitemap.xml
 Sitemap: https://zonzoctech.com/sitemap.xml
 >>>>>>> devel
 =======
-//sitemap1
+//sitemapsuraij
 
 Sitemap: https://zonzoctech.com/sitemap.xml
 >>>>>>> devel

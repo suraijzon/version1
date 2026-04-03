@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/successsection.css";
 import item1 from "../assets/icons/healthyfit.png";
 import item2 from "../assets/icons/aviation.png";
@@ -9,6 +10,7 @@ import item6 from "../assets/icons/websitemaintence.jpeg";
 import item7 from "../assets/icons/webdevelopment.jpeg";
 
 const SuccessSection = () => {
+  const navigate = useNavigate();
   const projects = [
     {
       id: 1,
@@ -121,7 +123,11 @@ const SuccessSection = () => {
       <div className="projects-slider">
         <div className="projects-track">
           {[...projects, ...projects].map((project, index) => (
-            <div key={index} className="project-card">
+            <div
+                key={index}
+                className="project-card"
+                onClick={() => navigate(`/project/${project.id}`)}
+            >
               <img
                 src={project.img}
                 alt={project.name}

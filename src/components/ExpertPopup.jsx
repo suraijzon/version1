@@ -5,7 +5,6 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
   const [budget, setBudget] = useState(5000);
   const [selectedService, setSelectedService] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState("");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -37,12 +36,11 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-  const data = {
-    ...formData,
-    message: formData.project,   // 🔥 FIX HERE
-    service: selectedService,
-    budget: budget
-  };
+    const data = {
+      ...formData,
+      service: selectedService,
+      budget: budget
+    };
 
     try {
       const res = await fetch("/api/contact", {
@@ -54,8 +52,8 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
       });
 
       if (res.ok) {
-        setSubmitStatus("success");
-      
+        alert("Message sent successfully!");
+        onClose();
         setFormData({
           name: "",
           company: "",
@@ -65,16 +63,11 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
         });
         setSelectedService("");
         setBudget(5000);
-          // ✅ ADD HERE
-        setTimeout(() => {
-        onClose();
-        setSubmitStatus("");
-        }, 2500);
       } else {
-        setSubmitStatus("error");
+        alert("Error sending message");
       }
-    }catch (error) {
-        setSubmitStatus("error");
+    } catch (error) {
+      alert("Server error");
     }
 
     setIsSubmitting(false);
@@ -124,18 +117,6 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
           <p className="popup-subtext">
             Tell us what you're looking for and our experts will get back to you.
           </p>
-
-            {/* Success / Error Messages */}
-            {submitStatus === "success" && (
-              <div className="alert alert-success">
-                ✓ Message sent successfully! We'll contact you soon.
-              </div>
-            )}
-            {submitStatus === "error" && (
-              <div className="alert alert-error">
-                ✗ Failed to send message. Please try again.
-              </div>
-            )}
 
           <form className="popup-form" onSubmit={handleSubmit}>
 

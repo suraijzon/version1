@@ -336,7 +336,7 @@
   background: #1e3a8a;
   color: white;
   border: none;
-  border-radius: 7px;
+  border-radius: 50px;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
@@ -416,8 +416,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 100%;
-    padding: 0 15px;
+    max-width: 320px;
   }
   
   .contact-email {
@@ -449,7 +448,7 @@
   .contact-left {
     padding: 18px 15px;
     width: 100%;
-    max-width: 100%;
+    max-width: 300px;
     margin-left: 0;
     margin: 0 auto;
   }
@@ -474,7 +473,7 @@
   .contact-right {
     padding: 18px 15px;
     width: 100%;
-    max-width: 100%;
+    max-width: 300px;
     margin-left: 0;
     margin: 0 auto;
     margin-top: 20px;

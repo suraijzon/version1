@@ -36,26 +36,13 @@ export default async function handler(req, res) {
       to: "suraij@zonzoctech.com",
       replyTo: email,
       subject: `New message from ${name}`,
-      html: `
-        <h3>New Website Message</h3>
-        <p><b>Name:</b> ${name}</p>
-        <p><b>Email:</b> ${email}</p>
-        ${phone ? `<p><b>Phone:</b> ${phone}</p>` : ""}
-        ${company ? `<p><b>Company:</b> ${company}</p>` : ""}
-        ${service ? `<p><b>Service:</b> ${service}</p>` : ""}
-        ${budget ? `<p><b>Budget:</b> $${budget}</p>` : ""}
-        <p><b>Message:</b></p>
-        <p>${message}</p>
-      `,
+      html: emailBody,
     });
 
     return res.status(200).json({ success: true });
 
   } catch (error) {
-    console.error("EMAIL ERROR:", error);
-
-    return res.status(500).json({
-      error: error.message || "Email sending failed",
-    });
+    console.error(error);
+    return res.status(500).json({ error: "Email sending failed" });
   }
 }

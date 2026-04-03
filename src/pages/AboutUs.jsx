@@ -29,7 +29,7 @@ const AboutUs = () => {
   ];
 
   const solutions = [
-    { icon: "⚡", text: "Faster" },
+    { icon: "⚡", text: "Fast" },
     { icon: "🔒", text: "Secure" },
     { icon: "📈", text: "Scalable" },
     { icon: "🔍", text: "Search-optimized" },

@@ -6,8 +6,7 @@ import phoneIcon from "../assets/icons/phone-call-icon.svg";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate,Link } from "react-router-dom";
 import ExpertPopup from "./ExpertPopup";
-import whatsappBanner from "../assets/icons/whatsapp-nav.jpeg";
-import emailnav from "../assets/icons/navmail.png";
+import whatsappBanner from "../assets/icons/whatsapp-banner.png";
 
 
 const DESKTOP_BREAKPOINT = 1024;
@@ -118,24 +117,17 @@ const Navbar = () => {
         </div>
         
         <div className="top-badge-right">
-
-          <button 
-             className="client-login-btn"
-             onClick={handleClientLogin}
-          >
-             Client Login
-          </button>
           <a
               href="https://wa.me/947403095340"
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-banner"
           >
-     
+          <img src={whatsappBanner} alt="Chat with us on WhatsApp" />
           </a>
           
           <div className="contact-proposal">
-            <img src={emailnav} alt="phone" />
+            <img src={phoneIcon} alt="phone" />
             <a href="mailto:Info@zonzoctech.com?subject=New Project Inquiry&body=Hi ZonzocTech Team,%0D%0A%0D%0AI would like to discuss a project with you.%0D%0A%0D%0AThanks," className="email-link">
               info@zonzoctech.com
             </a> 
@@ -160,7 +152,6 @@ const Navbar = () => {
             <div>Revenue®</div>
           </div>
         </div>
-          
 
         <nav className={`nav-links ${open ? "open" : ""}`}>
           {/* Dropdown: AI & Technology (id: 3) */}
@@ -380,8 +371,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          <button className="contact-btn desktop-only" onClick={() => setIsPopupOpen(true)}>
-          Get a Proposal
+          <button className="contact-btn" onClick={() => setIsPopupOpen(true)}>
+             Get a Proposal
           </button>
 
 
@@ -394,20 +385,12 @@ const Navbar = () => {
         
         <ExpertPopup 
         open={isPopupOpen} onClose={() => setIsPopupOpen(false)}/>
-       <div className="mobile-actions">
-  <button 
-    className="contact-btn mobile-only-btn"
-    onClick={() => setIsPopupOpen(true)}
-  >
-    Get a Proposal
-  </button>
 
-  <div className="hamburger" onClick={() => setOpen((s) => !s)}>
-    <span className={open ? "bar rotate1" : "bar"}></span>
-    <span className={open ? "bar hide" : "bar"}></span>
-    <span className={open ? "bar rotate2" : "bar"}></span>
-  </div>
-</div>
+        <div className="hamburger" onClick={() => setOpen((s) => !s)}>
+          <span className={open ? "bar rotate1" : "bar"}></span>
+          <span className={open ? "bar hide" : "bar"}></span>
+          <span className={open ? "bar rotate2" : "bar"}></span>
+        </div>
       </div>
     </header>
   );

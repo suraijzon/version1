@@ -15,7 +15,7 @@ export default async function handler(req, res) {
       port: 587,
       secure: false,
       auth: {
-        user: "info@zonzoctech.com",
+        user: "suraij@zonzoctech.com",
         pass: process.env.EMAIL_PASS
       },
     });

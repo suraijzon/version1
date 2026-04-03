@@ -6,7 +6,7 @@ import phoneIcon from "../assets/icons/phone-call-icon.svg";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate,Link } from "react-router-dom";
 import ExpertPopup from "./ExpertPopup";
-import whatsappBanner from "../assets/icons/whatsapp-banner.png";
+import whatsappBanner from "../assets/icons/whatsapp-nav.jpeg";
 
 
 const DESKTOP_BREAKPOINT = 1024;

@@ -9,15 +9,5 @@ Disallow: /node_modules/
 Allow: /*.js$
 Allow: /*.css$
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Sitemap1
-Sitemap: https://www.zonzoctech.com/sitemap.xml
-=======
-Sitemap: https://zonzoctech.com/sitemap.xml
->>>>>>> devel
-=======
-//sitemapsuraij
 
-Sitemap: https://zonzoctech.com/sitemap.xml
->>>>>>> devel
+Sitemap: https://zonzoctech.com/sitemap.xmla

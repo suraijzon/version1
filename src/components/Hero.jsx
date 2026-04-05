@@ -25,7 +25,7 @@ const Hero = () => {
             className="hero-contact-btn"
             onClick={() => navigate("/contact")}
           >
-            Contact Us
+            Get Free Growth Plan
           </button>
 
         </div>

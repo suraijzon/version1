@@ -185,8 +185,8 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
               <option value="AI Solutions">AI Solutions</option>
               <option value="Website Growth Audit"> Free Website Growth Plan</option> 
               <option value="SEO">SEO</option>
-              <option value="Website Development">Website Development</option>             
               <option value="UI/UX Design">UI/UX Design</option>
+              <option value="Website Development">Website Development</option>                          
             </select>
 
             <label className="budget-label">

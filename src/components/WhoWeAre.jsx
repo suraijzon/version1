@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import '../styles/whoweare.css';
 
-// Import all SVG icons with .default for proper webpack handling
+// Import icons safely
 const importIcon = (iconName) => {
   try {
     return require(`../assets/icons/${iconName}.svg`).default || require(`../assets/icons/${iconName}.svg`);
@@ -13,7 +13,7 @@ const importIcon = (iconName) => {
 
 const WhoWeAreSection = () => {
 
-  // ✅ FIX: moved useEffect INSIDE component
+  // Drag scroll (KEEP SAME)
   useEffect(() => {
     const sliders = document.querySelectorAll('.tech-scroll-row');
 
@@ -49,10 +49,8 @@ const WhoWeAreSection = () => {
     });
   }, []);
 
-
-  // Organize categories into rows
+  // ✅ ONLY ONE ROW WITH SELECTED CARDS
   const rows = [
-    // Row 1
     [
       {
         title: 'Programming Languages',
@@ -61,138 +59,42 @@ const WhoWeAreSection = () => {
           { name: 'JavaScript', icon: 'javascript' },
           { name: 'TypeScript', icon: 'typescript' },
           { name: 'Python', icon: 'python' },
-          { name: 'C#', icon: 'csharp' },
-          { name: 'C++', icon: 'cpp' },
-          { name: 'Kotlin', icon: 'kotlin' },
-          { name: 'Swift', icon: 'swift' },
-          { name: 'Go', icon: 'go' },
-          { name: 'Ruby', icon: 'ruby' }
+          { name: 'C#' , icon: 'cpp'},
+          { name: 'Php' , icon: 'php'},
         ]
       },
       {
-        title: 'Containerization & Deployments',
+        title: 'Frameworks & Development',
         items: [
-          { name: 'Docker', icon: 'docker' },
-          { name: 'Kubernetes', icon: 'kubernetes' },
-          { name: 'AWS ECS', icon: 'aws' }
+          { name: 'React', icon: 'react' },
+          { name: 'Next.js', icon: 'next' },
+          { name: '.Net', icon: 'vue' },
+          { name: 'Node.js', icon: 'node' },
+          { name: 'SpringBoot', icon: 'springboot' }
         ]
       },
       {
-        title: 'CMS Platforms',
+        title: 'CMS & E-commerce',
         items: [
           { name: 'WordPress', icon: 'wordpress' },
-          { name: 'Joomla', icon: 'joomla' },
-          { name: 'Drupal', icon: 'drupal' },
-          { name: 'Strapi', icon: 'strapi' },
-          { name: 'Typo3', icon: 'typo3' },
-          { name: 'Magento', icon: 'magento' },
-          { name: 'Grav', icon: 'grav' },
-          { name: 'Ghost', icon: 'ghost' }
-        ]
-      }
-    ],
-    // Row 2
-    [
-      {
-        title: 'Frameworks & Libraries',
-        items: [
-          { name: 'Symfony', icon: 'symfony' },
-          { name: 'Spring Boot', icon: 'springboot' },
-          { name: 'Express.js', icon: 'express' },
-          { name: 'Vue.js', icon: 'vue' },
-          { name: 'React.js', icon: 'react' },
-          { name: 'Next.js', icon: 'next' },
-          { name: 'Nuxt.js', icon: 'nuxt' },
-          { name: 'Angular', icon: 'angular' },
-          { name: 'Bootstrap', icon: 'bootstrap' },
-          { name: 'Tailwind CSS', icon: 'tailwind' },
-          { name: 'jQuery', icon: 'jquery' },
-          { name: 'Django', icon: 'django' }
-        ]
-      },
-      {
-        title: 'CI/CD & Automation',
-        items: [
-          { name: 'Jenkins', icon: 'jenkins' },
-          { name: 'GitHub Actions', icon: 'github' },
-          { name: 'GitLab CI/CD', icon: 'gitlab' },
-          { name: 'CircleCI', icon: 'circleci' }
-        ]
-      }
-    ],
-    // Row 3
-    [
-      {
-        title: 'Monitoring & Analytics',
-        items: [
-          { name: 'Grafana', icon: 'grafana' },
-          { name: 'Prometheus', icon: 'prometheus' },
-          { name: 'Kibana', icon: 'kibana' },
-          { name: 'SQL', icon: 'sql' }
-        ]
-      },
-      {
-        title: 'Cloud & Security',
-        items: [
-          { name: 'Cloudflare', icon: 'cloudflare' },
-          { name: 'SSL', icon: 'ruby' },
-          { name: 'SEO & Speed', icon: 'seo' },
-          { name: 'AWS', icon: 'aws' }
-        ]
-      },
-      {
-        title: 'Servers & Web Servers',
-        items: [
-          { name: 'Apache', icon: 'apache' },
-          { name: 'Nginx', icon: 'nginx' },
-          { name: 'LiteSpeed', icon: 'lightning' },
-          { name: 'Tomcat', icon: 'tomcat' }
-        ]
-      },
-      {
-        title: 'Cloud & Security',
-        items: [
-          { name: 'Cloudflare', icon: 'cloudflare' },
-          { name: 'SSL', icon: 'ruby' },
-          { name: 'SEO & Speed', icon: 'seo' },
-          { name: 'AWS', icon: 'aws' }
-        ]
-      },
-    ],
-    // Row 4
-    [
-      {
-        title: 'Hosting Providers',
-        items: [
-          { name: 'Bluehost', icon: 'bluehost' },
-          { name: 'GoDaddy', icon: 'godaddy' },
-          { name: 'Hostinger', icon: 'hostinger' },
-          { name: 'HostGator', icon: 'hostgator' },
-          { name: 'AWS', icon: 'aws' },
-          { name: 'Google Cloud', icon: 'googlecloud' },
-          { name: 'Azure', icon: 'microsoft-azure' },
-          { name: 'DigitalOcean', icon: 'digitalocean' }
-        ]
-      },
-      {
-        title: 'E-Commerce Platforms',
-        items: [
           { name: 'Shopify', icon: 'shopify' },
-          { name: 'WooCommerce', icon: 'woocommerce' },
-          { name: 'Magento', icon: 'magento' },
-          { name: 'OpenCart', icon: 'opencart' }
+          { name: 'WooCommerce', icon: 'woocommerce' }
         ]
       },
       {
-        title: 'Databases',
+        title: 'Cloud & Infrastructure',
         items: [
-          { name: 'MySQL', icon: 'mysql' },
-          { name: 'PostgreSQL', icon: 'postgresql' },
-          { name: 'MongoDB', icon: 'mongodb' },
-          { name: 'SQLite', icon: 'sqlite' },
-          { name: 'Redis', icon: 'redis' },
-          { name: 'Elasticsearch', icon: 'elasticsearch' },
-          { name: 'Firebase', icon: 'firebase' }
+          { name: 'AWS', icon: 'aws' },
+          { name: 'Docker', icon: 'docker' },
+          { name: 'Google Cloud', icon: 'googlecloud' }
+        ]
+      },
+      {
+        title: 'AI & Automation',
+        items: [
+          { name: '.NET', icon: 'NET' },
+          { name: 'Chatbots', icon: 'chatbots' },
+          { name :'OpenAI', icon:'chatgpt'}
         ]
       }
     ]
@@ -201,7 +103,8 @@ const WhoWeAreSection = () => {
   return (
     <section className="whoweare-section">
       <div className="whoweare-container">
-        {/* Header Text */}
+
+        {/* Header */}
         <div className="whoweare-header">
           <h2 className="whoweare-title">
             Who We Are & Why Choose <span className="highlight">Zonzoctech</span>
@@ -215,25 +118,25 @@ const WhoWeAreSection = () => {
           <h3 className='technologystack'>OUR TECHNOLOGY STACK</h3>
         </div>
 
-        {/* Multiple Rows of Scrolling Cards */}
+        {/* SINGLE ROW */}
         <div className="tech-rows-container">
           {rows.map((row, rowIndex) => {
-            // Duplicate cards in each row for infinite scroll
-            const duplicatedRow = Array(6).fill(row).flat();
-            
+            const duplicatedRow = Array(6).fill(row).flat(); // keep animation
+
             return (
               <div key={rowIndex} className="tech-scroll-row">
-                <div className={`tech-cards-track tech-cards-track-${rowIndex + 1}`}>
+                <div className={`tech-cards-track tech-cards-track-1`}>
                   {duplicatedRow.map((category, categoryIndex) => (
                     <div key={categoryIndex} className="tech-category-card">
                       <h3 className="category-title">{category.title}</h3>
+
                       <div className="tech-items-wrapper">
                         {category.items.map((tech, index) => (
                           <div key={index} className="tech-item">
                             <div className="tech-icon-circle">
-                              <img 
-                                src={importIcon(tech.icon)} 
-                                alt={tech.name} 
+                              <img
+                                src={importIcon(tech.icon)}
+                                alt={tech.name}
                                 className="tech-svg-icon"
                               />
                             </div>
@@ -241,6 +144,7 @@ const WhoWeAreSection = () => {
                           </div>
                         ))}
                       </div>
+
                     </div>
                   ))}
                 </div>

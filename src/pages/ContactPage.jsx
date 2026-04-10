@@ -147,7 +147,8 @@ return (
 
           <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)} required>
             <option value="">You are interested in</option>
-            <option value="AI Solutions">AI Solutions</option>  
+            <option value="AI Solutions">AI Solutions</option> 
+            <option value="Free Website Growth plan">Free Website Growth Plan</option> 
             <option value="SEO">SEO</option>          
             <option value="UI/UX Design">UI/UX Design</option>
             <option value="Website Development">Website Development</option>

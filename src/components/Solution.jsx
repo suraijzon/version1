@@ -15,8 +15,8 @@ const SolutionSection = () => {
 
   const tabs = [
     { id: 'seo', label: 'SEO Services' },
-    { id: 'ux', label: 'UX & Interactive' },
-    { id: 'ai', label: 'AI & Technology' },
+    { id: 'ux', label: ' High-Converting Websites' },
+    { id: 'ai', label: 'AI Automation Systems' },
     
     
   ];

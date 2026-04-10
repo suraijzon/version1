@@ -71,8 +71,8 @@ const Footer = () => {
   const exploreLinks = [
     { label: "About ZonzocTech", path: "/about" },
     { label: "How We Work", path: "/about" },
-    { label: "Careers", path: "/contact-us" },
-    { label: "Contact Us", path: "/contact-us" },
+    { label: "Careers", path: "/contact" },
+    { label: "Contact Us", path: "/contact" },
     { label: "Privacy Policy", path: "/privacy-policy" },
     { label: "Terms of Service", path: "/terms-conditions" },
   ];

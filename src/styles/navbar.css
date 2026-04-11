@@ -1155,3 +1155,16 @@
     width: 300px;
   }
 }
+
+@media (min-width: 1280px) and (max-width: 1450px) {
+  .dropdown-content {
+    max-width: 1120px;
+    padding: 28px 16px;
+    gap: 14px;
+  }
+
+  .dropdown-column,
+  .dropdown-column-last {
+    width: 230px;
+  }
+}

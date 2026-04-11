@@ -190,7 +190,7 @@ const Navbar = () => {
               <div className="dropdown-column">
                 <h4>Convert Traffic into Leads</h4>
                 <Link to="/seo-services">Funnel Optimization</Link> 
-                <Link to="/seo-services">Landing Page Optimization</Link>     
+                <Link to="/seo-services">Landing Page <br /> Optimization</Link>     
                 <Link to="/seo-services">CRO (Conversion Rate Optimization)</Link>  
          
               </div>

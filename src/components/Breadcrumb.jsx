@@ -3,6 +3,29 @@ import { Link, useLocation } from "react-router-dom";
 import "../styles/breadcrumb.css";
 
 const breadcrumbMap = {
+  "/ai-web-application-development": [
+    { name: "Home", link: "/" },
+    { name: "AI & Technology", link: "/ai-web-application-development" },
+    { name: "AI Web Application Development" }
+  ],
+
+  "/website-maintenance-performance-security": [
+    { name: "Home", link: "/" },
+    { name: "UX & Interactive", link: "/website-maintenance-performance-security" },
+    { name: "Website Maintenance" }
+  ],
+
+  "/ecommerce-development-optimization": [
+    { name: "Home", link: "/" },
+    { name: "UX & Interactive", link: "/ecommerce-development-optimization" },
+    { name: "Ecommerce Development" }
+  ],
+  "/ai-website-design-development": [
+    { name: "Home", link: "/" },
+    { name: "UX & Interactive", link: "/ai-website-design-development" },
+    { name: "AI Website Designing" }    
+  ],
+
   "/seo-services": [
     { name: "Home", link: "/" },
     { name: "SEO & Lead Generation", link: "#" },
@@ -38,6 +61,7 @@ const breadcrumbMap = {
     { name: "Who We Are", link: "#" },
     { name: "Contact Info" }
   ]
+  
 };
 
 const Breadcrumb = () => {

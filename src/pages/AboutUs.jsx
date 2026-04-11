@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import "../styles/AboutUs.css";
 import { Helmet } from "react-helmet-async";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const AboutUs = () => {
   const whoWeWorkWith = [
@@ -120,6 +121,7 @@ const AboutUs = () => {
       />
       <div className="abt__wrapper">
         <Navbar />
+        <Breadcrumb/>
 
         {/* Hero Section */}
         <section className="abt__hero">

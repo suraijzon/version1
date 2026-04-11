@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/ContactPage.css";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const ContactPage = () => {
 
@@ -118,6 +119,7 @@ return (
   <div className="cp__wrapper">
 
     <Navbar />
+    <Breadcrumb />
 
     <section className="cp__form_section">
       <div className="cp__container">

@@ -3,6 +3,7 @@ import "../styles/googleSearchConsole.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 // Import background image
 import benefitBg from "../assets/icons/benifit.jpg";
@@ -128,6 +129,7 @@ const GoogleSearchConsole = () => {
       />
 
       <Navbar />
+      <Breadcrumb />
 
       <div className="gsc-page">
         {/* Hero Section */}

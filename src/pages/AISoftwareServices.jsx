@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import "../styles/AISoftwareServices.css";
 import { Helmet } from "react-helmet-async";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const AISoftwareServices = () => {
   const targetAudience = [
@@ -120,6 +121,7 @@ const AISoftwareServices = () => {
       />
       <div className="aiss__wrapper">
         <Navbar />
+        <Breadcrumb />
 
         {/* Hero Section */}
         <section className="aiss__hero">

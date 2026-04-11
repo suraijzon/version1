@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/SEOServices.css";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const SEOServices = () => {
 
@@ -32,6 +33,7 @@ const SEOServices = () => {
 
       <div className="seo-page">
         <Navbar />
+        <Breadcrumb />
 
         {/* HERO */}
         <section className="seo-hero">

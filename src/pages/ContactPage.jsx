@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/ContactPage.css";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const ContactPage = () => {
 
@@ -118,6 +119,7 @@ return (
   <div className="cp__wrapper">
 
     <Navbar />
+    <Breadcrumb />
 
     <section className="cp__form_section">
       <div className="cp__container">
@@ -147,7 +149,8 @@ return (
 
           <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)} required>
             <option value="">You are interested in</option>
-            <option value="AI Solutions">AI Solutions</option>  
+            <option value="AI Solutions">AI Solutions</option> 
+            <option value="Free Website Growth plan">Free Website Growth Plan</option> 
             <option value="SEO">SEO</option>          
             <option value="UI/UX Design">UI/UX Design</option>
             <option value="Website Development">Website Development</option>

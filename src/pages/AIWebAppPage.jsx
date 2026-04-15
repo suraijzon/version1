@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import "../styles/AIWebAppPage.css";
 import { Helmet } from "react-helmet-async";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const AIWebAppDev = () => {
   const targetAudience = [
@@ -142,6 +143,7 @@ const AIWebAppDev = () => {
       />
       <div className="aiwa__wrapper">
         <Navbar />
+        <Breadcrumb />
 
         {/* Hero Section */}
         <section className="aiwa__hero">

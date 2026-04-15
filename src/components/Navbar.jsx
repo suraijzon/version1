@@ -190,7 +190,7 @@ const Navbar = () => {
               <div className="dropdown-column">
                 <h4>Convert Traffic into Leads</h4>
                 <Link to="/seo-services">Funnel Optimization</Link> 
-                <Link to="/seo-services">Landing Page Optimization</Link>     
+                <Link to="/seo-services">Landing Page <br /> Optimization</Link>     
                 <Link to="/seo-services">CRO (Conversion Rate Optimization)</Link>  
          
               </div>
@@ -264,7 +264,7 @@ const Navbar = () => {
               </div>
 
               <div className="dropdown-column">
-                <h4>Performance & Optimization</h4>
+                <h4>Optimization</h4>
                 <Link to="/website-maintenance-performance-security">Speed Optimization</Link>  
                 <Link to="/seo-services">Core Web Vitals</Link>  
                 <Link to="/website-maintenance-performance-security">Security & Maintenance</Link>  
@@ -375,7 +375,7 @@ const Navbar = () => {
 
           {open && (
             <button className="mobile-client-login-inside" onClick={handleClientLogin}>
-              Client Login
+              Contact Us
             </button>
           )}
         </nav>

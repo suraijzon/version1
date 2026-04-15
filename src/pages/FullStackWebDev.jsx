@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import "../styles/FullStackWebDev.css";
 import { Helmet } from "react-helmet-async";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const FullStackWebDev = () => {
   const services = [
@@ -140,6 +141,7 @@ const FullStackWebDev = () => {
       />
       <div className="fswd__page_wrapper">
         <Navbar />
+        <Breadcrumb />
 
         {/* Hero Section */}
         <section className="fswd__hero_section">

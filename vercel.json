@@ -1,5 +1,7 @@
 {
-  "trailingSlash": false,
+  "buildCommand": "",
+  "installCommand": "echo skip",
+  "outputDirectory": "build",
   "headers": [
     {
       "source": "/static/(.*)",
@@ -46,6 +48,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

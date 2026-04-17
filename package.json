@@ -3,33 +3,64 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.13.2",
-    "cors": "^2.8.6",
     "cross-env": "^10.1.0",
-    "dotenv": "^17.3.1",
-    "express": "^5.2.1",
     "nodemailer": "^8.0.2",
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "react-helmet-async": "^2.0.5",
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
+    "react-snap": "^1.23.0",
     "sitemap": "^9.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node generate-sitemap.js && react-scripts start",
+    "start": "react-scripts start",
     "build": "node generate-sitemap.js && cross-env CI=false react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "generate-sitemap": "node generate-sitemap.js"
+  },
+  "reactSnap": {
+    "source": "build",
+    "destination": "build",
+    "fallback": "index.html",
+    "crawl": true,
+    "include": [
+      "/",
+      "/ai-seo",
+      "/seo-services",
+      "/google-search-console",
+      "/seo-ai-search-optimization",
+      "/ai-software-development",
+      "/full-stack-web-development",
+      "/ai-website-design-development",
+      "/ai-web-application-development",
+      "/ecommerce-development-optimization",
+      "/website-maintenance-performance-security",
+      "/about",
+      "/case-studies",
+      "/contact",
+      "/privacy-policy",
+      "/terms-conditions"
+    ],
+    "skipThirdPartyRequests": true,
+    "puppeteerExecutablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    }
   },
   "eslintConfig": {
     "extends": [

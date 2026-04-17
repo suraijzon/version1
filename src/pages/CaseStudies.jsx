@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import "../styles/CaseStudies.css";
 import { Helmet } from "react-helmet-async";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const CaseStudies = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -148,6 +149,7 @@ const CaseStudies = () => {
       />
       <div className="cs__wrapper">
         <Navbar />
+        <Breadcrumb />
 
         {/* Hero Section */}
         <section className="cs__hero">

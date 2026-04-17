@@ -4,7 +4,7 @@ import '../styles/solution.css';
 import bgImage from '../assets/icons/bg.jpeg';   // ✅ Correct image path
 
 const SolutionSection = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+  const [activeTab, setActiveTab] = useState('seo');
 
   const sectionStyle = {
     backgroundImage: `linear-gradient(135deg, rgba(10, 22, 40, 0.5) 0%, rgba(26, 41, 66, 0.55) 100%), url(${bgImage})`,
@@ -14,9 +14,11 @@ const SolutionSection = () => {
   };
 
   const tabs = [
-    { id: 'ai', label: 'AI & Technology' },
-    { id: 'ux', label: 'UX & Interactive' },
-    { id: 'seo', label: 'SEO Services' }
+    { id: 'seo', label: 'SEO Services' },
+    { id: 'ux', label: ' High-Converting Websites' },
+    { id: 'ai', label: 'AI Automation Systems' },
+    
+    
   ];
 
   const services = {
@@ -118,16 +120,22 @@ const SolutionSection = () => {
     ]
   };
 
+  const tabDescriptions = {
+  seo: "We help you attract and convert high-quality leads consistently.",
+  ux: "We design and develop websites that turn visitors into customers.",
+  ai: "We automate your business processes to save time and increase efficiency."
+};
+
   return (
     <section className="solution-section" style={sectionStyle}>
       <div className="solution-hero">
         <h1 className="solution-title">
-          We're the Solution You've Been Searching For...
+          Solutions Designed to Grow Your Business
         </h1>
         <p className="solution-subtitle">
-          From SEO and AI to custom web design, we offer tailored strategies
+          From generating leads and building high-converting websites to automating workflows with AI,
           <br />
-          that help brands grow smarter, faster, and stronger in today's digital landscape.
+           our services are focused on delivering real, measurable results.
         </p>
 
         {/* Tab Navigation */}
@@ -139,9 +147,12 @@ const SolutionSection = () => {
               onClick={() => setActiveTab(tab.id)}
             >
               {tab.label}
-            </button>
+            </button>            
           ))}
         </div>
+        <p className="tab-description">
+  {tabDescriptions[activeTab]}
+</p>
       </div>
 
       {/* Service Cards */}

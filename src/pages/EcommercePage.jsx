@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import "../styles/EcommercePage.css";
 import { Helmet } from "react-helmet-async";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const EcommerceDev = () => {
   const targetAudience = [
@@ -118,6 +119,7 @@ const EcommerceDev = () => {
       />
       <div className="ecd__wrapper">
         <Navbar />
+        <Breadcrumb />
 
         {/* Hero Section */}
         <section className="ecd__hero">

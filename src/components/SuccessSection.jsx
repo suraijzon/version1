@@ -110,13 +110,13 @@ const SuccessSection = () => {
         <span className="tag2"> Our Success in Action</span>
 
         <h2 className="success-title">
-          <span className="highlight">Real Results</span>, Not Just Promises
+          <span className="highlight">Real Results</span>, That Drive Business Growth
         </h2>
 
         <p className="success-subtitle">
-          Our recent projects highlight our expertise in delivering tailored
+          See how we’ve helped businesses increase traffic, generate leads and
           <br />
-          solutions that meet the unique needs and objectives of our clients.
+          boost conversions through SEO, high-performing websites, and smart automation.
         </p>
       </div>
 

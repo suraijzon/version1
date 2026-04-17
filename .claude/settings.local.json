@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"/c/Users/AhmadhalBadhavee/Desktop/NODE/zonzoctech/version1\" status --short)",
+      "Bash(npm uninstall *)",
+      "Bash(node -e \"const p=require\\('./package.json'\\); console.log\\('react-snap:', p.dependencies['react-snap']\\); console.log\\('postbuild:', p.scripts.postbuild\\); console.log\\('reactSnap routes:', p.reactSnap.include.length\\);\")",
+      "Bash(npm run *)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Program Files \\(x86\\)/Google/Chrome/Application/**)",
+      "Bash(node *)",
+      "Bash(git *)"
+    ]
+  }
+}

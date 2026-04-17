@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/ContactPage.css";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const ContactPage = () => {
 
@@ -90,7 +91,7 @@ const sliderBackground = `linear-gradient(
     to right,     #8e24aa 0%,     #8e24aa ${percentage}%,     #ddd ${percentage}%,     #ddd 100%
   )`;
 
-const services = [
+ const services = [
 "AI Web Application Development",
 "AI Software Development",
 "Full-Stack Website Development",
@@ -118,46 +119,7 @@ return (
   <div className="cp__wrapper">
 
     <Navbar />
-
-    <section className="cp__hero">
-      <div className="cp__hero_container">
-        <h1 className="cp__hero_title">Contact ZonzocTech</h1>
-        <p className="cp__hero_text">
-          Let’s Build Something That Grows Your Business.
-        </p>
-      </div>
-    </section>
-
-    <section className="cp__help_section">
-      <div className="cp__container">
-        <h2 className="cp__heading">How Can We Help You?</h2>
-        <p className="cp__subtitle">You can contact us for:</p>
-
-        <div className="cp__services_grid">
-          {services.map((service, index) => (
-            <div key={index} className="cp__service_card">
-              <span className="cp__service_icon">✔</span>
-              <p>{service}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section className="cp__consult_section">
-      <div className="cp__container">
-        <h2 className="cp__heading">Request a Free Consultation</h2>
-
-        <div className="cp__steps_grid">
-          {steps.map((step, index) => (
-            <div key={index} className="cp__step_card">
-              <div className="cp__step_number">{index + 1}</div>
-              <p>{step}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <Breadcrumb />
 
     <section className="cp__form_section">
       <div className="cp__container">
@@ -187,10 +149,11 @@ return (
 
           <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)} required>
             <option value="">You are interested in</option>
-            <option value="Website Development">Website Development</option>
-            <option value="SEO">SEO</option>
-            <option value="AI Solutions">AI Solutions</option>
+            <option value="AI Solutions">AI Solutions</option> 
+            <option value="Free Website Growth plan">Free Website Growth Plan</option> 
+            <option value="SEO">SEO</option>          
             <option value="UI/UX Design">UI/UX Design</option>
+            <option value="Website Development">Website Development</option>
           </select>
 
           <label className="cp__budget">
@@ -215,6 +178,20 @@ return (
 
         </form>
 
+      </div>
+    </section>
+        <section className="cp__consult_section">
+      <div className="cp__container">
+        <h2 className="cp__heading">Request a Free Consultation</h2>
+
+        <div className="cp__steps_grid">
+          {steps.map((step, index) => (
+            <div key={index} className="cp__step_card">
+              <div className="cp__step_number">{index + 1}</div>
+              <p>{step}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
 

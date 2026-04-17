@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../styles/WebsiteMaintenance.css';
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const WebsiteMaintenance = () => {
   const whyMatters = [
@@ -119,6 +120,7 @@ const WebsiteMaintenance = () => {
       />
     <div className="wm__wrapper">
       <Navbar />
+      <Breadcrumb />
 
       {/* Hero Section */}
       <section className="wm__hero">

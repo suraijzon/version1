@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import "../styles/AIWebsiteDesign.css";
 import { Helmet } from "react-helmet-async";
 import SEO from "../components/SEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 const AIWebsiteDesign = () => {
   const targetAudience = [
@@ -118,6 +119,7 @@ const AIWebsiteDesign = () => {
       />
       <div className="aiwd__wrapper">
         <Navbar />
+        <Breadcrumb />
 
         {/* Hero Section */}
         <section className="aiwd__hero">

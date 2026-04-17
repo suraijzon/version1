@@ -16,6 +16,7 @@ import ContactSection from "./components/ContactSection";
 import ReviewSection from "./components/ReviewSection";
 import ExpertPopup from "./components/ExpertPopup";
 import WhatsappFloat from "./components/WhatsappFloat";
+import ScrollToTop from "./hooks/ScrollToTop";
 
 // Pages
 import GoogleSearchConsole from "./pages/GoogleSearchConsole";
@@ -24,7 +25,6 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import UserProfile from "./pages/UserProfile";
 import AdminDashboard from "./pages/AdminDashboard";
-import Careers from "./pages/Careers";
 
 import AIOptimizationPage from "./pages/AIOptimizationPage";
 import AIWebAppPage from "./pages/AIWebAppPage";
@@ -64,11 +64,16 @@ const HomePage = () => {
 };
 
 // ================= APP =================
+const ScrollHandler = () => {
+  ScrollToTop();
+  return null;
+};
 function App() {
   return (
     <HelmetProvider>
       <AuthProvider>
         <Router>
+          <ScrollHandler />
 
           {/* ✅ GLOBAL HEADER */}
           
@@ -95,7 +100,7 @@ function App() {
             <Route path="/website-maintenance-performance-security" element={<WebsiteMaintenance />} />
             <Route path="/seo-services" element={<SEOServices />} />
             <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/careers" element={<Careers />} />
+    
 
             {/* Pages */}
             <Route path="/about" element={<AboutUs />} />

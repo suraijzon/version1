@@ -12,16 +12,33 @@ export const useAuth = () => {
   return context;
 };
 
+// Safe localStorage access — guards against react-snap pre-render environment
+const safeStorage = {
+  get: (key) => {
+    try { return typeof window !== 'undefined' ? localStorage.getItem(key) : null; }
+    catch { return null; }
+  },
+  set: (key, value) => {
+    try { if (typeof window !== 'undefined') localStorage.setItem(key, value); }
+    catch { /* noop */ }
+  },
+  remove: (key) => {
+    try { if (typeof window !== 'undefined') localStorage.removeItem(key); }
+    catch { /* noop */ }
+  },
+};
+
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
-    const storedUser = localStorage.getItem('user');
-    return storedUser ? JSON.parse(storedUser) : null;
+    const storedUser = safeStorage.get('user');
+    try { return storedUser ? JSON.parse(storedUser) : null; }
+    catch { return null; }
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = safeStorage.get('token');
     if (token && !user) loadUser(token);
     else setLoading(false);
   }, []);
@@ -32,11 +49,11 @@ export const AuthProvider = ({ children }) => {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUser(res.data);
-      localStorage.setItem('user', JSON.stringify(res.data));
+      safeStorage.set('user', JSON.stringify(res.data));
     } catch (err) {
       console.error('Failed to load user:', err);
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
+      safeStorage.remove('token');
+      safeStorage.remove('user');
       setUser(null);
     } finally {
       setLoading(false);
@@ -47,11 +64,9 @@ export const AuthProvider = ({ children }) => {
     try {
       setError(null);
       const res = await axios.post(`${API}/api/auth/login`, { email, password });
-
-      localStorage.setItem('token', res.data.token);
-      localStorage.setItem('user', JSON.stringify(res.data.user));
+      safeStorage.set('token', res.data.token);
+      safeStorage.set('user', JSON.stringify(res.data.user));
       setUser(res.data.user);
-
       return { success: true, user: res.data.user };
     } catch (err) {
       const errorMsg = err.response?.data?.msg || 'Login failed';
@@ -64,11 +79,9 @@ export const AuthProvider = ({ children }) => {
     try {
       setError(null);
       const res = await axios.post(`${API}/api/auth/register`, userData);
-
-      localStorage.setItem('token', res.data.token);
-      localStorage.setItem('user', JSON.stringify(res.data.user));
+      safeStorage.set('token', res.data.token);
+      safeStorage.set('user', JSON.stringify(res.data.user));
       setUser(res.data.user);
-
       return { success: true, user: res.data.user };
     } catch (err) {
       const errorMsg = err.response?.data?.msg || 'Registration failed';
@@ -78,8 +91,8 @@ export const AuthProvider = ({ children }) => {
   };
 
   const logout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    safeStorage.remove('token');
+    safeStorage.remove('user');
     setUser(null);
   };
 

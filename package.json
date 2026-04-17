@@ -24,43 +24,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "node generate-sitemap.js && cross-env CI=false react-scripts build",
-    "postbuild": "node -e \"if(!process.env.VERCEL){require('child_process').execSync('react-snap',{stdio:'inherit'})}\"",
+    "postbuild": "node prerender.js",
     "test": "react-scripts test",
     "generate-sitemap": "node generate-sitemap.js"
-  },
-  "reactSnap": {
-    "source": "build",
-    "destination": "build",
-    "fallback": "index.html",
-    "crawl": true,
-    "include": [
-      "/",
-      "/ai-seo",
-      "/seo-services",
-      "/google-search-console",
-      "/seo-ai-search-optimization",
-      "/ai-software-development",
-      "/full-stack-web-development",
-      "/ai-website-design-development",
-      "/ai-web-application-development",
-      "/ecommerce-development-optimization",
-      "/website-maintenance-performance-security",
-      "/about",
-      "/case-studies",
-      "/contact",
-      "/privacy-policy",
-      "/terms-conditions"
-    ],
-    "skipThirdPartyRequests": true,
-    "puppeteerExecutablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-    "puppeteerArgs": [
-      "--no-sandbox",
-      "--disable-setuid-sandbox"
-    ],
-    "minifyHtml": {
-      "collapseWhitespace": false,
-      "removeComments": false
-    }
   },
   "eslintConfig": {
     "extends": [

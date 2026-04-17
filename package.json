@@ -24,7 +24,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "node generate-sitemap.js && cross-env CI=false react-scripts build",
-    "postbuild": "react-snap",
+    "postbuild": "node -e \"if(!process.env.VERCEL){require('child_process').execSync('react-snap',{stdio:'inherit'})}\"",
     "test": "react-scripts test",
     "generate-sitemap": "node generate-sitemap.js"
   },
@@ -52,7 +52,6 @@
       "/terms-conditions"
     ],
     "skipThirdPartyRequests": true,
-    "puppeteerExecutablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"

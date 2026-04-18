@@ -2,17 +2,7 @@
 import React, { useEffect } from 'react';
 import '../styles/whoweare.css';
 
-// Import icons safely
-const importIcon = (iconName) => {
-  try {
-    const mod = require(`../assets/icons/${iconName}.svg`);
-    const result = mod.default || mod;
-    return result?.src || result;
-  } catch (e) {
-    console.error(`Failed to load icon: ${iconName}`);
-    return null;
-  }
-};
+const importIcon = (iconName) => `/images/${iconName}.svg`;
 
 const WhoWeAreSection = () => {
 

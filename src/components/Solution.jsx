@@ -2,13 +2,12 @@
 import React, { useState } from 'react';
 import '../styles/solution.css';
 
-import bgImage from '../assets/icons/bg.jpeg';   // ✅ Correct image path
 
 const SolutionSection = () => {
   const [activeTab, setActiveTab] = useState('seo');
 
   const sectionStyle = {
-    backgroundImage: `linear-gradient(135deg, rgba(10, 22, 40, 0.5) 0%, rgba(26, 41, 66, 0.55) 100%), url(${bgImage?.src || bgImage})`,
+    backgroundImage: `linear-gradient(135deg, rgba(10, 22, 40, 0.5) 0%, rgba(26, 41, 66, 0.55) 100%), url(/images/bg.jpeg)`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundAttachment: 'fixed'

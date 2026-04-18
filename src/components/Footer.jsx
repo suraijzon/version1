@@ -2,7 +2,6 @@
 import React from "react";
 import Link from "next/link";
 import "../styles/footer.css";
-import siteLogo from "../assets/icons/logo.png";
 
 const Footer = () => {
 
@@ -93,7 +92,7 @@ const Footer = () => {
           {/* Branding */}
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src={siteLogo?.src || siteLogo} alt="techco" className="logo-text-img" />
+              <img src="/images/logo.png" alt="techco" className="logo-text-img" />
             </div>
 
             <div className="footer-contact-box">

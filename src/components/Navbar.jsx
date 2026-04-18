@@ -1,14 +1,10 @@
 'use client';
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
-import logo from "../assets/icons/logo.png";
-import phoneIcon from "../assets/icons/phone-call-icon.svg";
 import { useAuth } from "../context/AuthContext";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import ExpertPopup from "./ExpertPopup";
-import whatsappBanner from "../assets/icons/whatsapp-nav.jpeg";
-import emailnav from "../assets/icons/navmail.png";
 
 
 const DESKTOP_BREAKPOINT = 1024;
@@ -136,7 +132,7 @@ const Navbar = () => {
           </a>
           
           <div className="contact-proposal">
-            <img src={emailnav?.src || emailnav} alt="phone" />
+            <img src="/images/navmail.png" alt="phone" />
             <a href="mailto:Info@zonzoctech.com?subject=New Project Inquiry&body=Hi ZonzocTech Team,%0D%0A%0D%0AI would like to discuss a project with you.%0D%0A%0D%0AThanks," className="email-link">
               info@zonzoctech.com
             </a> 
@@ -151,8 +147,8 @@ const Navbar = () => {
             onClick={handleLogoClick}
             style={{ cursor: "pointer" }}
           >
-            <img src={logo?.src || logo} alt="Zonzoctech Logo" className="logo-desktop" />
-            <img src={logo?.src || logo} alt="Zonzoctech Logo" className="logo-mobile" />
+            <img src="/images/logo.png" alt="Zonzoctech Logo" className="logo-desktop" />
+            <img src="/images/logo.png" alt="Zonzoctech Logo" className="logo-mobile" />
           </div>
 
           <div className="nav-tagline">

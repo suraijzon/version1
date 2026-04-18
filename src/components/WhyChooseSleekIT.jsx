@@ -2,9 +2,6 @@
 import React from 'react';
 import '../styles/WhyChoose.css';
 
-// Import your images
-import blackHandImage from '../assets/icons/future-empower.png';
-import growthLineImage from '../assets/icons/earning-line.png';
 
 const WhyChooseSection = () => {
   return (
@@ -83,7 +80,7 @@ const WhyChooseSection = () => {
               <h3>Client Growth Stats Last Year</h3>
             </div>
             <div className="stats-chart">
-              <img src={growthLineImage?.src || growthLineImage} alt="Growth Chart" className="growth-line" />
+              <img src="/images/earning-line.png" alt="Growth Chart" className="growth-line" />
             </div>
             <div className="stats-info">
               <h2 className="stats-number">Clients Served: 120</h2>
@@ -96,7 +93,7 @@ const WhyChooseSection = () => {
 
           {/* Main Hero Image */}
           <img
-            src={blackHandImage?.src || blackHandImage}
+            src="/images/future-empower.png"
             alt="Future Empower"
             className="hero-main-image"
           />

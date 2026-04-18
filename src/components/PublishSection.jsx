@@ -1,21 +1,16 @@
 'use client';
 import React, { useEffect, useRef } from "react";
 import "../styles/publishSection.css";
-import wpIcon from "../assets/icons/wp.png";
-import webflowIcon from "../assets/icons/webflow.png";
-import notionIcon from "../assets/icons/notion.png";
-import shopifyIcon from "../assets/icons/shopify.png";
-import twitterIcon from "../assets/icons/wix.png"; // optional: you can use svg inline too
 
 const PublishSection = () => {
   const iconsRef = useRef([]);
 
   const icons = [
-    { id: 1, src: wpIcon?.src || wpIcon, alt: "WordPress" },
-    { id: 2, src: webflowIcon?.src || webflowIcon, alt: "Webflow" },
-    { id: 3, src: shopifyIcon?.src || shopifyIcon, alt: "Shopify" },
-    { id: 4, src: notionIcon?.src || notionIcon, alt: "Notion" },
-    { id: 5, src: twitterIcon?.src || twitterIcon, alt: "Twitter" },
+    { id: 1, src: "/images/wp.png", alt: "WordPress" },
+    { id: 2, src: "/images/webflow.png", alt: "Webflow" },
+    { id: 3, src: "/images/shopify.png", alt: "Shopify" },
+    { id: 4, src: "/images/notion.png", alt: "Notion" },
+    { id: 5, src: "/images/wix.png", alt: "Twitter" },
   ];
 
   useEffect(() => {

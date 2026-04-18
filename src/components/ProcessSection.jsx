@@ -1,11 +1,6 @@
 'use client';
 import React from "react";
 import '../styles/process.css';
-import DiscoverIcon from "../assets/icons/discover.svg";
-import StrategyIcon from "../assets/icons/strategy.svg";
-import DevelopmentIcon from "../assets/icons/launch.svg";
-import LaunchIcon from "../assets/icons/launch4.svg";
-import SupportIcon from "../assets/icons/support.svg";
 
 const ProcessSection = () => {
   const steps = [
@@ -14,35 +9,35 @@ const ProcessSection = () => {
       title: "Discovery",
       description:
         "We listen to your goals and gather key requirements",
-      icon: DiscoverIcon,
+      icon: "/images/discover.svg",
     },
     {
       number: "2",
       title: "Design",
       description:
         "UI/UX designs and system architecture tailored to your needs.",
-      icon: StrategyIcon,
+      icon: "/images/strategy.svg",
     },
     {
       number: "3",
       title: "Development",
       description:
         "Agile development of web, mobile, and desktop solutions.",
-      icon: DevelopmentIcon,
+      icon: "/images/launch.svg",
     },
     {
       number: "4",
       title: "Launch",
       description:
         "Final testing, deployment, and go-live across platforms.",
-      icon: LaunchIcon,
+      icon: "/images/launch4.svg",
     },
     {
       number: "5",
       title: "Support",
       description:
         "Continuous maintenance and updates to ensure success.",
-      icon: SupportIcon,
+      icon: "/images/support.svg",
     },
   ];
 
@@ -59,7 +54,7 @@ const ProcessSection = () => {
                 {/* Icon box */}
                 <div className="step-icon-wrapper">
                   <img
-                    src={step.icon?.src || step.icon}
+                    src={step.icon}
                     alt={step.title}
                     className="step-icon"
                     style={{ width: "32px", height: "32px" }}

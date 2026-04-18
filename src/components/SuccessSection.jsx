@@ -2,13 +2,6 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import "../styles/successsection.css";
-import item1 from "../assets/icons/healthyfit.png";
-import item2 from "../assets/icons/aviation.png";
-import item3 from "../assets/icons/fleet-management.png";
-import item4 from "../assets/icons/lvita.jpg";
-import item5 from "../assets/icons/searchengine.jpeg";
-import item6 from "../assets/icons/websitemaintence.jpeg";
-import item7 from "../assets/icons/webdevelopment.jpeg";
 
 const SuccessSection = () => {
   const router = useRouter();
@@ -23,7 +16,7 @@ const SuccessSection = () => {
         { text: "Laravel", Background: "#00bfc1" },
         { text: "Boostrap", Background: "#ff7300ff" },
       ],
-      img: item1,
+      img: "/images/healthyfit.png",
     },
     {
       id: 2,
@@ -36,7 +29,7 @@ const SuccessSection = () => {
         { text: "MongoDB", Background: "#00bfc1" },
         { text: "Node.js", Background: "#ff7300ff" },
       ],
-      img: item2,
+      img: "/images/aviation.png",
     },
     {
       id: 3,
@@ -49,7 +42,7 @@ const SuccessSection = () => {
         { text: "Next.js", Background: "#ff7300ff" },
         { text: "Google Maps APIs", Background: "#1e8449" },
       ],
-      img: item3,
+      img: "/images/fleet-management.png",
     },
     {
       id: 4,
@@ -63,7 +56,7 @@ const SuccessSection = () => {
         { text: "MongoDB", Background: "#1e8449" },
         { text: "Firebase", Background: "#d90e0eff" },
       ],
-      img: item4,
+      img: "/images/lvita.jpg",
     },
      {
       id: 5,
@@ -76,7 +69,7 @@ const SuccessSection = () => {
         { text: "Next.js", Background: "#ff7300ff" },
         { text: "MongoDB", Background: "#1e8449" },
       ],
-      img: item5,
+      img: "/images/searchengine.jpeg",
     },
      {
       id: 6,
@@ -88,7 +81,7 @@ const SuccessSection = () => {
         { text: "Spring Boot", Background: "#00bfc1" },
         { text: "Next.js", Background: "#ff7300ff" },
       ],
-      img: item6,
+      img: "/images/websitemaintence.jpeg",
     },
      {
       id: 7,
@@ -100,7 +93,7 @@ const SuccessSection = () => {
         { text: "Spring Boot", Background: "#00bfc1" },
         { text: "Next.js", Background: "#ff7300ff" },
       ],
-      img: item7,
+      img: "/images/webdevelopment.jpeg",
     },
   ];
 
@@ -130,7 +123,7 @@ const SuccessSection = () => {
                 onClick={() => router.push(`/project/${project.id}`)}
             >
               <img
-                src={project.img?.src || project.img}
+                src={project.img}
                 alt={project.name}
                 className="project-img"
               />

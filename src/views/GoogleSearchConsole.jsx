@@ -5,20 +5,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Breadcrumb from "../components/Breadcrumb";
 
-// Import background image
-import benefitBg from "../assets/icons/benifit.jpg";
-
-// Import client SVGs
-import sitemarkLogo from "../assets/icons/sitemark.svg";
-import jettimeLogo from "../assets/icons/jettime.svg";
-import firstQuadrantLogo from "../assets/icons/firstquadrant.svg";
-import ignitionLogo from "../assets/icons/ignition.svg";
-import madridLogo from "../assets/icons/madrid.svg";
-import verifoneLogo from "../assets/icons/verifone.svg";
-import worwoxLogo from "../assets/icons/worwox.svg";
-import realTralLogo from "../assets/icons/realtral.svg";
-import triplaiLogo from "../assets/icons/triplai.svg";
-import siteGPTLogo from "../assets/icons/sitegpt.svg";
 
 const GoogleSearchConsole = () => {
   const benefits = [
@@ -108,16 +94,16 @@ const GoogleSearchConsole = () => {
   ];
 
   const clients = [
-    { name: "Sitemark", logo: sitemarkLogo?.src || sitemarkLogo },
-    { name: "Jettime", logo: jettimeLogo?.src || jettimeLogo },
-    { name: "FirstQuadrant", logo: firstQuadrantLogo?.src || firstQuadrantLogo },
-    { name: "Ignition", logo: ignitionLogo?.src || ignitionLogo },
-    { name: "Madrid", logo: madridLogo?.src || madridLogo },
-    { name: "Verifone", logo: verifoneLogo?.src || verifoneLogo },
-    { name: "Worwox", logo: worwoxLogo?.src || worwoxLogo },
-    { name: "RealTral", logo: realTralLogo?.src || realTralLogo },
-    { name: "Triplai", logo: triplaiLogo?.src || triplaiLogo },
-    { name: "SiteGPT", logo: siteGPTLogo?.src || siteGPTLogo },
+    { name: "Sitemark", logo: "/images/sitemark.svg" },
+    { name: "Jettime", logo: "/images/jettime.svg" },
+    { name: "FirstQuadrant", logo: "/images/firstquadrant.svg" },
+    { name: "Ignition", logo: "/images/ignition.svg" },
+    { name: "Madrid", logo: "/images/madrid.svg" },
+    { name: "Verifone", logo: "/images/verifone.svg" },
+    { name: "Worwox", logo: "/images/worwox.svg" },
+    { name: "RealTral", logo: "/images/realtral.svg" },
+    { name: "Triplai", logo: "/images/triplai.svg" },
+    { name: "SiteGPT", logo: "/images/sitegpt.svg" },
   ];
 
   return (
@@ -195,7 +181,7 @@ const GoogleSearchConsole = () => {
         <section
           className="gsc-benefits"
           style={{
-            backgroundImage: `url(${benefitBg?.src || benefitBg})`,
+            backgroundImage: `url(/images/benifit.jpg)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

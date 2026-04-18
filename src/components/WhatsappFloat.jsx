@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from "react";
 import "../styles/whatsapp.css";
-import whatsappCircle from "../assets/icons/whatsapp-circle.png";
 
 const WhatsappFloat = () => {
 
@@ -36,7 +35,7 @@ const WhatsappFloat = () => {
         className="whatsapp-btn"
         onMouseEnter={() => setShowMessage(true)}
       >
-        <img src={whatsappCircle?.src || whatsappCircle} alt="WhatsApp" className="whatsapp-icon" />
+        <img src="/images/whatsapp-circle.png" alt="WhatsApp" className="whatsapp-icon" />
       </a>
 
     </div>

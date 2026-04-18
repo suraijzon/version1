@@ -36,7 +36,7 @@ const WhatsappFloat = () => {
         className="whatsapp-btn"
         onMouseEnter={() => setShowMessage(true)}
       >
-        <img src={whatsappCircle} alt="WhatsApp" className="whatsapp-icon" />
+        <img src={whatsappCircle?.src || whatsappCircle} alt="WhatsApp" className="whatsapp-icon" />
       </a>
 
     </div>

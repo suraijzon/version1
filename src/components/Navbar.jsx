@@ -136,7 +136,7 @@ const Navbar = () => {
           </a>
           
           <div className="contact-proposal">
-            <img src={emailnav} alt="phone" />
+            <img src={emailnav?.src || emailnav} alt="phone" />
             <a href="mailto:Info@zonzoctech.com?subject=New Project Inquiry&body=Hi ZonzocTech Team,%0D%0A%0D%0AI would like to discuss a project with you.%0D%0A%0D%0AThanks," className="email-link">
               info@zonzoctech.com
             </a> 
@@ -151,8 +151,8 @@ const Navbar = () => {
             onClick={handleLogoClick}
             style={{ cursor: "pointer" }}
           >
-            <img src={logo} alt="Zonzoctech Logo" className="logo-desktop" />
-            <img src={logo} alt="Zonzoctech Logo" className="logo-mobile" />
+            <img src={logo?.src || logo} alt="Zonzoctech Logo" className="logo-desktop" />
+            <img src={logo?.src || logo} alt="Zonzoctech Logo" className="logo-mobile" />
           </div>
 
           <div className="nav-tagline">

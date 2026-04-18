@@ -134,12 +134,12 @@ const Login = () => {
 
           <div className="social-btns">
             <button type="button" className="social-btn-figma google">
-              <img src={GoogleIcon} alt="Google" className="social-logo" />
+              <img src={GoogleIcon?.src || GoogleIcon} alt="Google" className="social-logo" />
               Continue with Google
             </button>
 
             <button type="button" className="social-btn-figma apple">
-              <img src={AppleIcon} alt="Apple" className="social-logo" />
+              <img src={AppleIcon?.src || AppleIcon} alt="Apple" className="social-logo" />
               Continue with Apple
             </button>
           </div>

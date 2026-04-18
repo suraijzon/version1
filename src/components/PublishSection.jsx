@@ -11,11 +11,11 @@ const PublishSection = () => {
   const iconsRef = useRef([]);
 
   const icons = [
-    { id: 1, src: wpIcon, alt: "WordPress" },
-    { id: 2, src: webflowIcon, alt: "Webflow" },
-    { id: 3, src: shopifyIcon, alt: "Shopify" },
-    { id: 4, src: notionIcon, alt: "Notion" },
-    { id: 5, src: twitterIcon, alt: "Twitter" },
+    { id: 1, src: wpIcon?.src || wpIcon, alt: "WordPress" },
+    { id: 2, src: webflowIcon?.src || webflowIcon, alt: "Webflow" },
+    { id: 3, src: shopifyIcon?.src || shopifyIcon, alt: "Shopify" },
+    { id: 4, src: notionIcon?.src || notionIcon, alt: "Notion" },
+    { id: 5, src: twitterIcon?.src || twitterIcon, alt: "Twitter" },
   ];
 
   useEffect(() => {

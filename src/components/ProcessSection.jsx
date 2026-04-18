@@ -59,7 +59,7 @@ const ProcessSection = () => {
                 {/* Icon box */}
                 <div className="step-icon-wrapper">
                   <img
-                    src={step.icon}
+                    src={step.icon?.src || step.icon}
                     alt={step.title}
                     className="step-icon"
                     style={{ width: "32px", height: "32px" }}

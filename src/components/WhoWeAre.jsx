@@ -5,7 +5,9 @@ import '../styles/whoweare.css';
 // Import icons safely
 const importIcon = (iconName) => {
   try {
-    return require(`../assets/icons/${iconName}.svg`).default || require(`../assets/icons/${iconName}.svg`);
+    const mod = require(`../assets/icons/${iconName}.svg`);
+    const result = mod.default || mod;
+    return result?.src || result;
   } catch (e) {
     console.error(`Failed to load icon: ${iconName}`);
     return null;
@@ -122,7 +124,7 @@ const WhoWeAreSection = () => {
         {/* SINGLE ROW */}
         <div className="tech-rows-container">
           {rows.map((row, rowIndex) => {
-            const duplicatedRow = Array(6).fill(row).flat(); // keep animation
+            const duplicatedRow = Array(2).fill(row).flat(); // 2x for seamless marquee loop
 
             return (
               <div key={rowIndex} className="tech-scroll-row">

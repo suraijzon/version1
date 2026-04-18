@@ -108,16 +108,16 @@ const GoogleSearchConsole = () => {
   ];
 
   const clients = [
-    { name: "Sitemark", logo: sitemarkLogo },
-    { name: "Jettime", logo: jettimeLogo },
-    { name: "FirstQuadrant", logo: firstQuadrantLogo },
-    { name: "Ignition", logo: ignitionLogo },
-    { name: "Madrid", logo: madridLogo },
-    { name: "Verifone", logo: verifoneLogo },
-    { name: "Worwox", logo: worwoxLogo },
-    { name: "RealTral", logo: realTralLogo },
-    { name: "Triplai", logo: triplaiLogo },
-    { name: "SiteGPT", logo: siteGPTLogo },
+    { name: "Sitemark", logo: sitemarkLogo?.src || sitemarkLogo },
+    { name: "Jettime", logo: jettimeLogo?.src || jettimeLogo },
+    { name: "FirstQuadrant", logo: firstQuadrantLogo?.src || firstQuadrantLogo },
+    { name: "Ignition", logo: ignitionLogo?.src || ignitionLogo },
+    { name: "Madrid", logo: madridLogo?.src || madridLogo },
+    { name: "Verifone", logo: verifoneLogo?.src || verifoneLogo },
+    { name: "Worwox", logo: worwoxLogo?.src || worwoxLogo },
+    { name: "RealTral", logo: realTralLogo?.src || realTralLogo },
+    { name: "Triplai", logo: triplaiLogo?.src || triplaiLogo },
+    { name: "SiteGPT", logo: siteGPTLogo?.src || siteGPTLogo },
   ];
 
   return (
@@ -195,7 +195,7 @@ const GoogleSearchConsole = () => {
         <section
           className="gsc-benefits"
           style={{
-            backgroundImage: `url(${benefitBg})`,
+            backgroundImage: `url(${benefitBg?.src || benefitBg})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

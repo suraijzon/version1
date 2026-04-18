@@ -83,7 +83,7 @@ const WhyChooseSection = () => {
               <h3>Client Growth Stats Last Year</h3>
             </div>
             <div className="stats-chart">
-              <img src={growthLineImage} alt="Growth Chart" className="growth-line" />
+              <img src={growthLineImage?.src || growthLineImage} alt="Growth Chart" className="growth-line" />
             </div>
             <div className="stats-info">
               <h2 className="stats-number">Clients Served: 120</h2>
@@ -95,9 +95,9 @@ const WhyChooseSection = () => {
           </div>
 
           {/* Main Hero Image */}
-          <img 
-            src={blackHandImage} 
-            alt="Future Empower" 
+          <img
+            src={blackHandImage?.src || blackHandImage}
+            alt="Future Empower"
             className="hero-main-image"
           />
         </div>

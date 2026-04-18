@@ -50,7 +50,7 @@ const Signup = () => {
     <div className="auth-figma-container">
       {/* Left Side - Background Image */}
       <div className="auth-figma-left">
-        <img src={loginBg} alt="Background" className="auth-bg-image" />
+        <img src={loginBg?.src || loginBg} alt="Background" className="auth-bg-image" />
       </div>
 
       {/* Right Side - Form */}
@@ -154,12 +154,12 @@ const Signup = () => {
 
           <div className="social-btns">
           <button type="button" className="social-btn-figma google">
-          <img src={GoogleIcon} alt="Google" className="social-logo" />
+          <img src={GoogleIcon?.src || GoogleIcon} alt="Google" className="social-logo" />
           Continue with Google
           </button>
 
           <button type="button" className="social-btn-figma apple">
-          <img src={AppleIcon} alt="Apple" className="social-logo" />
+          <img src={AppleIcon?.src || AppleIcon} alt="Apple" className="social-logo" />
           Continue with Apple
           </button>
           </div>

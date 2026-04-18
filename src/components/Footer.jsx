@@ -93,7 +93,7 @@ const Footer = () => {
           {/* Branding */}
           <div className="footer-brand">
             <div className="footer-logo">
-              <img src={siteLogo} alt="techco" className="logo-text-img" />
+              <img src={siteLogo?.src || siteLogo} alt="techco" className="logo-text-img" />
             </div>
 
             <div className="footer-contact-box">

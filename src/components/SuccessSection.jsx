@@ -130,7 +130,7 @@ const SuccessSection = () => {
                 onClick={() => router.push(`/project/${project.id}`)}
             >
               <img
-                src={project.img}
+                src={project.img?.src || project.img}
                 alt={project.name}
                 className="project-img"
               />

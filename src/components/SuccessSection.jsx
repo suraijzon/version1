@@ -1,5 +1,6 @@
+'use client';
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import "../styles/successsection.css";
 import item1 from "../assets/icons/healthyfit.png";
 import item2 from "../assets/icons/aviation.png";
@@ -10,7 +11,7 @@ import item6 from "../assets/icons/websitemaintence.jpeg";
 import item7 from "../assets/icons/webdevelopment.jpeg";
 
 const SuccessSection = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
   const projects = [
     {
       id: 1,
@@ -126,7 +127,7 @@ const SuccessSection = () => {
             <div
                 key={index}
                 className="project-card"
-                onClick={() => navigate(`/project/${project.id}`)}
+                onClick={() => router.push(`/project/${project.id}`)}
             >
               <img
                 src={project.img}

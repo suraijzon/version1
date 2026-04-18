@@ -1,5 +1,7 @@
+'use client';
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "../styles/breadcrumb.css";
 
 const breadcrumbMap = {
@@ -65,9 +67,9 @@ const breadcrumbMap = {
 };
 
 const Breadcrumb = () => {
-  const location = useLocation();
+  const pathname = usePathname();
 
-  const crumbs = breadcrumbMap[location.pathname] || [
+  const crumbs = breadcrumbMap[pathname] || [
     { name: "Home", link: "/" },
     { name: "Page" }
   ];
@@ -78,7 +80,7 @@ const Breadcrumb = () => {
         {crumbs.map((item, index) => (
           <React.Fragment key={index}>
             {item.link ? (
-              <Link to={item.link}>{item.name}</Link>
+              <Link href={item.link}>{item.name}</Link>
             ) : (
               <span className="active">{item.name}</span>
             )}

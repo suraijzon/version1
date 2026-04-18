@@ -1,15 +1,10 @@
+'use client';
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import Link from "next/link";
 import "../styles/footer.css";
 import siteLogo from "../assets/icons/logo.png";
 
 const Footer = () => {
-  const navigate = useNavigate();
-
-  const handleContactUsClick = () => {
-    navigate("/contact-us");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   const servicesLinks = [
     {
@@ -124,7 +119,7 @@ const Footer = () => {
             <ul className="footer-links">
               {servicesLinks.map((link, index) => (
                 <li key={index}>
-                  <Link to={link.path}>{link.label}</Link>
+                  <Link href={link.path}>{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -135,7 +130,7 @@ const Footer = () => {
             <ul className="footer-links">
               {knowledgebaseLinks.map((link, index) => (
                 <li key={index}>
-                  <Link to={link.path}>{link.label}</Link>
+                  <Link href={link.path}>{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -146,7 +141,7 @@ const Footer = () => {
             <ul className="footer-links">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link to={link.path}>{link.label}</Link>
+                  <Link href={link.path}>{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -157,7 +152,7 @@ const Footer = () => {
             <ul className="footer-links">
               {exploreLinks.map((link, index) => (
                 <li key={index}>
-                  <Link to={link.path}>{link.label}</Link>
+                  <Link href={link.path}>{link.label}</Link>
                 </li>
               ))}
             </ul>

@@ -1,9 +1,10 @@
+'use client';
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import "../styles/hero.css";
 
 const Hero = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <section className="hero-section" role="region" aria-label="Hero">
@@ -23,7 +24,7 @@ const Hero = () => {
           {/* ✅ BUTTON */}
           <button
             className="hero-contact-btn"
-            onClick={() => navigate("/contact")}
+            onClick={() => router.push("/contact")}
           >
             Get Free Growth Plan
           </button>

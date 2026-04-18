@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import "../styles/soMuchMore.css";
 import { FaLink, FaKey, FaBrain, FaPaperPlane, FaQuestionCircle, FaChartBar, FaUsers, FaHeadset } from "react-icons/fa";

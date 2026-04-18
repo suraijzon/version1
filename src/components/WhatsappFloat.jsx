@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from "react";
 import "../styles/whatsapp.css";
 import whatsappCircle from "../assets/icons/whatsapp-circle.png";

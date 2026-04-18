@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import '../styles/process.css';
 import DiscoverIcon from "../assets/icons/discover.svg";

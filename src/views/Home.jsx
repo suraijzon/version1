@@ -10,6 +10,7 @@ import WhoWeAre from '../components/WhoWeAre';
 import WhyChooseSleekIT from '../components/WhyChooseSleekIT';
 import ContactSection from '../components/ContactSection';
 import ReviewSection from '../components/ReviewSection';
+import TrustBar from '../components/TrustBar';
 import ExpertPopup from '../components/ExpertPopup';
 
 const HomePage = () => {
@@ -19,6 +20,7 @@ const HomePage = () => {
     <>
       <Navbar />
       <Hero />
+      <TrustBar />
       <Solution />
       <SuccessSection />
       <ProcessSection />

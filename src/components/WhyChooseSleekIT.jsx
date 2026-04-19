@@ -79,16 +79,6 @@ const WhyChooseSection = () => {
         {/* Right Content */}
         <div className="why-choose-right">
           
-          {/* Notification Card */}
-          <div className="notification-card">
-            <div className="notification-header">
-              <span className="notification-badge">Recently Project Delivered!</span>
-            </div>
-            <div className="notification-content">
-              <p className="notification-title">Web Development completed</p>
-            </div>
-          </div>
-
           {/* Stats Card */}
           <div className="stats-card">
             <div className="stats-header">

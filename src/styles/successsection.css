@@ -119,6 +119,7 @@
   text-align: left;
   background: #ffffff;
   padding-bottom: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   will-change: transform;
 }

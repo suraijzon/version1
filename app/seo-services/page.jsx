@@ -1,14 +1,14 @@
 import SEOServices from '@/src/views/SEOServices';
 
 export const metadata = {
-  title: 'SEO Services That Drive Traffic, Leads & Revenue',
+  title: 'SEO Agency for Small Business UK & USA | ZonzocTech',
   description:
-    'Professional SEO services including technical SEO, content strategy, AI SEO, and link building.',
+    'ZonzocTech is an AI SEO agency serving small businesses across the UK and USA. We deliver leads and revenue — not just rankings. Get your free SEO audit today.',
   alternates: { canonical: 'https://zonzoctech.com/seo-services' },
   openGraph: {
-    title: 'SEO Services That Drive Traffic, Leads & Revenue',
+    title: 'SEO Agency for Small Business UK & USA | ZonzocTech',
     description:
-      'Professional SEO services including technical SEO, content strategy, AI SEO, and link building.',
+      'ZonzocTech is an AI SEO agency serving small businesses across the UK and USA. We deliver leads and revenue — not just rankings. Get your free SEO audit today.',
     url: 'https://zonzoctech.com/seo-services',
   },
 };

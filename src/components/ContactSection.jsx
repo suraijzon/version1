@@ -58,10 +58,10 @@ const handleSubmit = async (e) => {
 };
 
   const steps = [
-    { number: '01', text: 'Share your requirements' },
-    { number: '02', text: 'Discuss them with our experts' },
-    { number: '03', text: 'Receive a customized proposal' },
-    { number: '04', text: 'Launch your project successfully' }
+    { number: '01', text: '01 — Share Your Requirements', desc: 'Tell us about your project, goals and timeline.' },
+    { number: '02', text: '02 — Free Strategy Call', desc: 'We\'ll schedule a call to discuss your needs in detail.' },
+    { number: '03', text: '03 — Receive a Custom Proposal', desc: 'Get a clear, itemised proposal with no hidden costs.' },
+    { number: '04', text: '04 — We Start Building', desc: 'Once approved, we hit the ground running immediately.' }
   ];
 
   return (
@@ -74,9 +74,9 @@ const handleSubmit = async (e) => {
             <div className="here-line"></div>
           </div>
 
-          <h2 className="contact-title">Let's Start</h2>
+          <h2 className="contact-title">Ready to Grow Your Business?</h2>
           <p className="contact-subtitle">
-            Initiating Your Journey to Success and Growth.
+            Tell us about your project and we'll put together a free, no-obligation growth plan within 24 hours.
           </p>
 
           <div className="contact-email">
@@ -86,11 +86,15 @@ const handleSubmit = async (e) => {
             <span className="email-text">info@zonzoctech.com</span>
           </div>
 
+          <h3 className="steps-heading">Here's What Happens Next:</h3>
           <div className="contact-steps">
             {steps.map((step, index) => (
               <div key={index} className="step-item">
                 <div className="step-number">{step.number}</div>
-                <p className="step-text">{step.text}</p>
+                <div>
+                  <p className="step-text">{step.text}</p>
+                  <p className="step-desc">{step.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -190,9 +194,9 @@ const handleSubmit = async (e) => {
             </div>
 
             <button type="submit" className="submit-btn" disabled={isSubmitting}>
-              {isSubmitting ? 'SENDING...' : 'SEND REQUEST'} 
-              <i className="fa-solid fa-arrow-right"></i>
+              {isSubmitting ? 'SENDING...' : 'Send My Free Proposal →'}
             </button>
+            <p className="submit-note">No commitment. No spam. Just results.</p>
           </form>
         </div>
       </div>

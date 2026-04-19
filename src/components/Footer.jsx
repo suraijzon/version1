@@ -55,7 +55,7 @@ const Footer = () => {
   ];
 
   const companyLinks = [
-    { label: "Website Growth Guides", path: "/google-search-console" },
+    { label: "Website Growth Guides", path: "/seo-services" },
     { label: "AI for Business", path: "/ai-seo" },
     { label: "Technical SEO Knowledgebase", path: "/seo-services" },
     { label: "Case Studies & Results", path: "/case-studies" },

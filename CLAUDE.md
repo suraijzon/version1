@@ -24,6 +24,6 @@
 - ✅ Portfolio Section (heading only)
 - ✅ Process Section
 - ✅ Why Us Section
-- ⏳ Testimonials (in progress)
-- ⬜ Contact CTA
-- ⬜ Footer
+- ✅ Testimonials
+- ✅ Contact CTA
+- ✅ Footer

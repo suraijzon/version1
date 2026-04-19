@@ -11,7 +11,8 @@
       "Bash(git *)",
       "Bash(python -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(data[0]['text']\\)\")",
       "Bash(npm install *)",
-      "Bash(vercel --version)"
+      "Bash(vercel --version)",
+      "Bash(del \"c:\\\\Users\\\\AhmadhalBadhavee\\\\Desktop\\\\NODE\\\\zonzoctech\\\\version1\\\\app\\\\google-search-console\\\\page.jsx\")"
     ]
   }
 }

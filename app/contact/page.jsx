@@ -1,14 +1,14 @@
 import ContactPage from '@/src/views/ContactPage';
 
 export const metadata = {
-  title: 'Contact Zonzoctech | Start Your Digital Growth',
+  title: 'Contact ZonzocTech — Get Your Free Growth Plan | UK & USA',
   description:
-    'Speak with our AI and SEO experts to discuss your project and start your digital growth journey today.',
+    'Contact ZonzocTech for a free website growth plan, SEO audit or development consultation. We serve businesses across the UK and USA. Response within 24 hours guaranteed.',
   alternates: { canonical: 'https://zonzoctech.com/contact' },
   openGraph: {
-    title: 'Contact Zonzoctech | Start Your Digital Growth',
+    title: 'Contact ZonzocTech — Get Your Free Growth Plan | UK & USA',
     description:
-      'Speak with our AI and SEO experts to discuss your project and start your digital growth journey today.',
+      'Contact ZonzocTech for a free website growth plan, SEO audit or development consultation. We serve businesses across the UK and USA. Response within 24 hours guaranteed.',
     url: 'https://zonzoctech.com/contact',
   },
 };

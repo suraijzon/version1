@@ -6,115 +6,72 @@ import "../styles/AISoftwareServices.css";
 import Breadcrumb from "../components/Breadcrumb";
 
 const AISoftwareServices = () => {
-  const targetAudience = [
-    "Businesses looking to automate complex processes",
-    "Companies with large data sets needing intelligent insights",
-    "Enterprises building internal AI tools",
-    "Startups developing AI-powered products",
-    "Organizations replacing manual or inefficient systems",
+  const stats = [
+    { number: "150+", label: "Projects Delivered" },
+    { number: "120+", label: "Clients Served" },
+    { number: "10+", label: "Years Experience" },
+    { number: "4.9★", label: "Client Rating" },
   ];
 
-  const problems = [
-    { icon: "⏰", text: "Manual workflows consuming time and resources" },
-    { icon: "🔌", text: "Disconnected systems and data silos" },
-    { icon: "📊", text: "Limited insights from existing data" },
-    { icon: "👥", text: "Human-dependent processes that don't scale" },
-    { icon: "📈", text: "Software that cannot adapt to growth" },
+  const businessCase = [
+    { title: "Replace Manual Repetitive Work", description: "Every hour your team spends on repetitive tasks — data entry, report generation, email responses, scheduling — is an hour not spent on high-value work. Custom AI software automates these tasks completely, freeing your team to focus on what only humans can do." },
+    { title: "Scale Without Hiring", description: "AI software handles growing workloads without growing headcount. As your business scales, your AI systems scale with it — processing more data, handling more queries and managing more tasks without additional staff costs." },
+    { title: "Faster, Smarter Decisions", description: "Custom AI tools analyse your business data in real time — surfacing insights, flagging anomalies and recommending actions faster than any manual process. Better information leads to better decisions." },
+    { title: "Competitive Advantage", description: "Businesses that automate intelligently move faster, serve customers better and operate more efficiently than competitors still relying on manual processes. Custom AI software is increasingly the difference between market leaders and those falling behind." },
   ];
 
   const services = [
-    { title: "Custom AI Software Solutions", icon: "💡" },
-    { title: "Business Process Automation with AI", icon: "⚙️" },
-    { title: "AI-Powered Data Analysis & Insights", icon: "📊" },
-    { title: "GPT & LLM-Based Software Systems", icon: "🤖" },
-    { title: "Predictive Analytics & Forecasting Tools", icon: "🔮" },
-    { title: "AI Decision-Support Systems", icon: "🎯" },
-    { title: "Integration with Existing Business Software", icon: "🔗" },
-    { title: "Secure APIs & Data Pipelines", icon: "🔐" },
-  ];
-
-  const comparison = [
-    { traditional: "Manual rules", ai: "Intelligent decision-making" },
-    { traditional: "Static workflows", ai: "Adaptive automation" },
-    { traditional: "Limited insights", ai: "Predictive analytics" },
-    { traditional: "Human-dependent", ai: "Scales with data" },
-  ];
-
-  const processSteps = [
-    {
-      number: "01",
-      title: "Business & Data Analysis",
-      description:
-        "We identify high-impact AI opportunities based on your workflows and data.",
-    },
-    {
-      number: "02",
-      title: "Solution Design",
-      description:
-        "We design software architecture, AI logic, and integrations aligned with your goals.",
-    },
-    {
-      number: "03",
-      title: "Development & Integration",
-      description:
-        "We build the AI software and integrate it with your existing systems.",
-    },
-    {
-      number: "04",
-      title: "Testing & Optimization",
-      description:
-        "We test for accuracy, performance, security, and real-world usage.",
-    },
-    {
-      number: "05",
-      title: "Deployment & Support",
-      description:
-        "We deploy, monitor, and continuously optimize your AI software.",
-    },
-  ];
-
-  const technologies = [
-    "AI & machine learning frameworks",
-    "GPT & large language model integrations",
-    "Secure backend systems",
-    "Cloud-based infrastructure",
-    "APIs & data processing pipelines",
+    { title: "AI Chatbot Development UK", description: "We build custom AI chatbots for businesses across the UK and USA — intelligent conversational assistants that handle customer enquiries, qualify leads, answer product questions, book appointments and escalate complex issues to human agents. Our chatbots are trained on your specific business data and integrated directly into your website, app or internal tools." },
+    { title: "GPT Integration & Custom GPT Tools", description: "We integrate OpenAI GPT, Claude, Gemini and other large language models into your business software — building custom GPT-powered tools for content generation, document analysis, customer support, internal knowledge bases and intelligent search. We go beyond simple API calls to build fully functional, production-ready GPT applications." },
+    { title: "Business Process Automation", description: "We build AI-powered automation systems that eliminate manual, repetitive business processes — from data collection and processing to report generation, invoice handling, inventory management and customer communication workflows. Our automation solutions integrate with your existing tools and deliver measurable time and cost savings from day one." },
+    { title: "Workflow Automation Software", description: "We design and build custom workflow automation software that connects your business tools, automates handoffs between teams and eliminates the manual coordination that slows operations down. Built specifically around how your business works — not a generic template." },
+    { title: "AI-Powered Data Analysis Tools", description: "We build custom data analysis and reporting tools that use AI to process large datasets, identify patterns, generate insights and surface the business intelligence your team needs — automatically and in real time. No more manual spreadsheets or waiting for weekly reports." },
+    { title: "CRM & System AI Integration", description: "We integrate AI capabilities into your existing CRM, ERP and business software — adding intelligent lead scoring, automated follow-up sequences, predictive analytics and smart data enrichment without requiring a full system replacement." },
+    { title: "AI Document Processing", description: "We build AI systems that automatically read, extract, classify and process information from documents — invoices, contracts, forms, reports and emails — eliminating manual data entry and accelerating document-heavy workflows." },
+    { title: "Custom AI API Development", description: "We build secure, scalable AI APIs that power your products and platforms — enabling other systems to access AI capabilities, process requests and return intelligent responses reliably at scale." },
   ];
 
   const whyChoose = [
-    "Proven AI-first development approach",
-    "Strong engineering & automation expertise",
-    "Business-focused problem solving",
-    "Secure and scalable software architecture",
-    "Transparent communication & long-term support",
+    { title: "✅ Business-First AI Development", description: "We start every project by understanding your business problem — not by recommending the latest AI technology. We only build AI solutions where they create genuine value and measurable ROI for your business." },
+    { title: "✅ Full-Stack AI Engineering", description: "We cover the complete AI development stack — from model selection and training to API development, frontend interfaces and system integrations. One team, full ownership, no gaps." },
+    { title: "✅ Seamless Integration", description: "Our AI software integrates with your existing tools and systems — CRMs, ERPs, communication platforms, databases and third-party APIs — without disrupting your current operations." },
+    { title: "✅ Affordable for UK Small Business", description: "As an offshore AI software development company we offer the technical expertise of a premium UK studio at a fraction of the cost — making custom AI software accessible to small and medium businesses across the UK and USA." },
+    { title: "✅ Ongoing Support & Improvement", description: "AI software improves with use and requires ongoing monitoring and refinement. We provide long-term support — updating models, improving accuracy and adding features as your business needs evolve." },
+  ];
+
+  const technologies = [
+    { category: "AI & Machine Learning", items: ["OpenAI GPT-4 & API", "Anthropic Claude API", "Google Gemini", "LangChain & LlamaIndex", "TensorFlow & PyTorch"] },
+    { category: "Automation & Integration", items: ["Zapier & Make integrations", "REST & GraphQL APIs", "Webhook systems", "CRM & ERP connectors", "Email & messaging APIs"] },
+    { category: "Backend & Infrastructure", items: ["Python & FastAPI", "Node.js & Express", "AWS & Google Cloud", "Docker & Kubernetes", "PostgreSQL & MongoDB"] },
+  ];
+
+  const processSteps = [
+    { number: "01", title: "Business Analysis & AI Scoping", description: "We analyse your business workflows, identify the highest-value automation opportunities and define exactly what AI software will and will not do — setting realistic expectations before any development begins." },
+    { number: "02", title: "Solution Design & Architecture", description: "We design the AI system architecture — model selection, data flows, integration points, user interfaces and security controls — creating a clear technical blueprint before writing a single line of code." },
+    { number: "03", title: "Development & Integration", description: "We build your AI software in sprints with regular demos and check-ins — integrating with your existing systems and testing real-world scenarios throughout the development process." },
+    { number: "04", title: "Testing & Accuracy Optimisation", description: "We test AI software extensively for accuracy, edge cases, security and real-world performance — refining models and logic until the system performs reliably in production." },
+    { number: "05", title: "Deployment & Ongoing Support", description: "We deploy your AI software, provide full documentation and offer ongoing monitoring, model updates and feature development as your business and data evolve." },
+  ];
+
+  const whoFor = [
+    { title: "✓ Small & Medium Businesses UK & USA", description: "Who want to automate manual processes, reduce operational costs and compete more effectively — without enterprise-level AI budgets." },
+    { title: "✓ Customer-Facing Businesses", description: "Who need AI chatbots and virtual assistants to handle customer enquiries, qualify leads and book appointments — around the clock without additional staff." },
+    { title: "✓ Data-Heavy Operations", description: "That process large volumes of documents, forms, reports or customer data manually — and need intelligent automation to handle it faster and more accurately." },
+    { title: "✓ Businesses Using Multiple Disconnected Tools", description: "Who need AI to connect their systems, automate handoffs and create a unified intelligent workflow — rather than managing everything manually." },
+    { title: "✓ Companies Building AI Products", description: "Startups and established businesses building AI-powered software products that need an experienced technical partner to design and develop the AI layer." },
   ];
 
   const faqs = [
-    {
-      question: "What types of AI software do you develop?",
-      answer:
-        "We develop custom AI software including automation systems, analytics platforms, internal tools, and AI-powered business applications.",
-    },
-    {
-      question: "Can AI software integrate with existing systems?",
-      answer:
-        "Yes. We specialize in integrating AI software with CRMs, ERPs, databases, and third-party platforms.",
-    },
-    {
-      question: "Is AI software development secure?",
-      answer:
-        "Security is built into every stage — from data handling to access control and deployment.",
-    },
-    {
-      question: "Do you provide ongoing maintenance?",
-      answer:
-        "Yes. We offer ongoing optimization, monitoring, and enhancements after launch.",
-    },
+    { question: "How much does custom AI software development cost in the UK?", answer: "The cost depends on the complexity of the AI system, integrations required and development timeline. As an offshore AI software development company we are significantly more affordable than UK studios — without any compromise on quality or communication. Contact us for a free consultation and quote." },
+    { question: "How long does it take to build custom AI software?", answer: "A simple AI chatbot or automation tool can be delivered in 4 to 8 weeks. A complex multi-system AI automation platform typically takes 3 to 5 months. We provide a clear timeline and milestones before any work begins." },
+    { question: "Can you build AI chatbots for UK businesses?", answer: "Yes. AI chatbot development is one of our most popular services for UK and USA businesses. We build custom chatbots trained on your specific business data — integrated into your website, CRM or internal tools." },
+    { question: "Can you integrate GPT into my existing software?", answer: "Yes. GPT and LLM integration is a core part of what we do. We integrate OpenAI GPT, Claude and other models into existing business software — adding intelligent content generation, smart search, automated responses and AI-driven workflows." },
+    { question: "Is custom AI software secure?", answer: "Yes. Security is built into every stage of our development process — including data handling, access control, API security and deployment configuration. We follow best practices for AI system security and data privacy compliance." },
+    { question: "Do you offer AI automation for small businesses?", answer: "Yes. We specialise in making custom AI automation accessible and affordable for small and medium businesses across the UK and USA — building practical, high-impact solutions that deliver fast ROI without enterprise-level budgets." },
   ];
 
   return (
     <>
-       
       <div className="aiss__wrapper">
         <Navbar />
         <Breadcrumb />
@@ -123,158 +80,117 @@ const AISoftwareServices = () => {
         <section className="aiss__hero">
           <div className="aiss__hero_gradient"></div>
           <div className="aiss__hero_container">
-            <div className="aiss__hero_label">
-              <span className="aiss__label_icon">🤖</span>
-              AI Software Development Services
-            </div>
             <h1 className="aiss__hero_title">
-              Custom AI Software Development That Automates, Scales, and
-              Delivers Results
+              AI Software Development Company UK — Custom Automation Tools, Chatbots and AI Systems Built for Your Business
             </h1>
             <p className="aiss__hero_text">
-              We provide AI software development services that help businesses
-              automate operations, improve decision-making, and build
-              intelligent systems tailored to their unique workflows. From
-              internal AI tools to advanced automation platforms, we develop
-              reliable, secure, and scalable AI-powered software solutions.
+              ZonzocTech builds custom AI software for businesses across the UK and USA — from intelligent chatbots and GPT-powered tools to business process automation systems and workflow integrations. We replace manual, time-consuming operations with smart AI software that works around the clock and scales with your business.
             </p>
-            <a href="#contact" className="aiss__hero_btn">
-              Get a Free AI Software Consultation
-            </a>
+            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "24px" }}>
+              <a href="/contact" className="aiss__hero_btn">Get Free AI Consultation →</a>
+              <a href="#aiss-work" className="aiss__hero_btn" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work ↓</a>
+            </div>
+            <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>
         </section>
 
-        {/* What Is Section */}
-        <section className="aiss__what_section">
+        {/* Stats Bar */}
+        <section className="aiss__what_section" id="aiss-work">
           <div className="aiss__container">
-            <h2 className="aiss__heading">What Is AI Software Development?</h2>
-            <p className="aiss__description">
-              AI software development involves creating custom software
-              solutions powered by artificial intelligence to analyze data,
-              automate processes, and enhance business efficiency. Unlike
-              off-the-shelf tools, custom AI software is designed around your
-              specific data, systems, and goals.
-            </p>
-            <div className="aiss__highlight_banner">
-              Our AI software solutions are built for real-world business use,
-              not experiments.
+            <div className="aiss__problems_grid">
+              {stats.map((stat, i) => (
+                <div key={i} className="aiss__problem_item">
+                  <strong>{stat.number}</strong>
+                  <p className="aiss__problem_text">{stat.label}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Who Needs Section */}
+        {/* Section 1 — What Is */}
         <section className="aiss__audience_section">
           <div className="aiss__container">
-            <h2 className="aiss__heading2">
-              Who Needs AI Software Development?
-            </h2>
-            <p className="aiss__subtitle">This service is ideal for:</p>
-            <div className="aiss__audience_grid">
-              {targetAudience.map((item, index) => (
-                <div key={index} className="aiss__audience_card">
-                  <div className="aiss__audience_icon">✓</div>
-                  <p>{item}</p>
+            <h2 className="aiss__heading">What Is Custom AI Software Development?</h2>
+            <p className="aiss__description">
+              Custom AI software development is the process of building bespoke software solutions that use artificial intelligence to automate tasks, make decisions, process information and interact with users — all tailored specifically to your business workflows, data and goals.
+            </p>
+            <p className="aiss__description">
+              Unlike off-the-shelf AI tools that force you to adapt your business to their limitations, custom AI software is built around how your business actually works — integrating with your existing systems and solving your specific operational challenges.
+            </p>
+            <h3 style={{ margin: "32px 0 16px" }}>The Business Case for Custom AI Software</h3>
+            <div className="aiss__faq_list">
+              {businessCase.map((item, i) => (
+                <div key={i} className="aiss__faq_item">
+                  <h4 className="aiss__faq_question">{item.title}</h4>
+                  <p className="aiss__faq_answer">{item.description}</p>
                 </div>
               ))}
             </div>
-            <p className="aiss__audience_footer">
-              If your business relies on repetitive tasks, disconnected systems,
-              or slow decision-making, AI software development can transform how
-              you operate.
-            </p>
           </div>
         </section>
 
-        {/* Problems Section */}
-        <section className="aiss__problems_section">
-          <div className="aiss__container">
-            <h2 className="aiss__heading3">
-              Problems We Solve with AI Software
-            </h2>
-            <div className="aiss__problems_grid">
-              {problems.map((problem, index) => (
-                <div key={index} className="aiss__problem_item">
-                  <div className="aiss__problem_icon">{problem.icon}</div>
-                  <p className="aiss__problem_text">{problem.text}</p>
-                </div>
-              ))}
-            </div>
-            <p className="aiss__problems_note">
-              We build AI-powered software that works quietly in the background
-              to improve efficiency and accuracy.
-            </p>
-          </div>
-        </section>
-
-        {/* Services Section */}
+        {/* Section 2 — Services */}
         <section className="aiss__services_section">
           <div className="aiss__container">
-            <h2 className="aiss__heading">
-              Our AI Software Development Services
-            </h2>
+            <h2 className="aiss__heading">Our AI Software Development Services for UK & USA Businesses</h2>
             <p className="aiss__subtitle">
-              We deliver end-to-end AI software development solutions,
-              including:
+              We build a wide range of custom AI software solutions — each designed around your specific business needs, workflows and growth objectives.
             </p>
             <div className="aiss__services_grid">
-              {services.map((service, index) => (
-                <div key={index} className="aiss__service_card">
-                  <div className="aiss__service_icon">{service.icon}</div>
+              {services.map((service, i) => (
+                <div key={i} className="aiss__service_card">
                   <h3 className="aiss__service_title">{service.title}</h3>
+                  <p>{service.description}</p>
                 </div>
               ))}
             </div>
-            <p className="aiss__services_footer">
-              Each solution is engineered for stability, performance, and
-              long-term value.
-            </p>
           </div>
         </section>
 
-        {/* Comparison Section */}
-        <section className="aiss__comparison_section">
+        {/* Section 3 — Why Choose */}
+        <section className="aiss__why_section">
           <div className="aiss__container">
-            <h2 className="aiss__heading">
-              AI Software vs Traditional Software
-            </h2>
-            <p className="aiss__comparison_intro">
-              AI-powered software goes beyond fixed rules.
-            </p>
-            <div className="aiss__comparison_table">
-              <div className="aiss__comparison_col aiss__col_traditional">
-                <h3>Traditional Software</h3>
-                {comparison.map((item, index) => (
-                  <div key={index} className="aiss__comparison_row">
-                    {item.traditional}
+            <h2 className="aiss__heading">Why UK & USA Businesses Choose ZonzocTech for AI Software Development</h2>
+            <div className="aiss__why_grid">
+              {whyChoose.map((reason, i) => (
+                <div key={i} className="aiss__why_card">
+                  <div className="aiss__why_number">{i + 1}</div>
+                  <div>
+                    <strong>{reason.title}</strong>
+                    <p>{reason.description}</p>
                   </div>
-                ))}
-              </div>
-              <div className="aiss__comparison_arrow">→</div>
-              <div className="aiss__comparison_col aiss__col_ai">
-                <h3>AI Software</h3>
-                {comparison.map((item, index) => (
-                  <div key={index} className="aiss__comparison_row">
-                    {item.ai}
-                  </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-            <p className="aiss__comparison_note">
-              This is why businesses are moving toward custom AI software
-              development.
-            </p>
           </div>
         </section>
 
-        {/* Process Section */}
+        {/* Section 4 — Technologies */}
+        <section className="aiss__tech_section">
+          <div className="aiss__container">
+            <h2 className="aiss__heading">Technologies We Use</h2>
+            <div className="aiss__tech_list">
+              {technologies.map((group, i) => (
+                <div key={i} className="aiss__tech_item">
+                  <div className="aiss__tech_marker"></div>
+                  <div>
+                    <strong>{group.category}</strong>
+                    <span> — {group.items.join(", ")}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Section 5 — Process */}
         <section className="aiss__process_section">
           <div className="aiss__container">
-            <h2 className="aiss__heading">
-              Our AI Software Development Process
-            </h2>
+            <h2 className="aiss__heading">Our AI Software Development Process</h2>
             <div className="aiss__process_grid">
-              {processSteps.map((step, index) => (
-                <div key={index} className="aiss__process_card">
+              {processSteps.map((step, i) => (
+                <div key={i} className="aiss__process_card">
                   <div className="aiss__process_number">{step.number}</div>
                   <h3 className="aiss__process_title">{step.title}</h3>
                   <p className="aiss__process_desc">{step.description}</p>
@@ -284,52 +200,31 @@ const AISoftwareServices = () => {
           </div>
         </section>
 
-        {/* Technologies Section */}
-        <section className="aiss__tech_section">
+        {/* Section 6 — Who For */}
+        <section className="aiss__problems_section">
           <div className="aiss__container">
-            <h2 className="aiss__heading">Technologies We Use</h2>
-            <div className="aiss__tech_list">
-              {technologies.map((tech, index) => (
-                <div key={index} className="aiss__tech_item">
-                  <div className="aiss__tech_marker"></div>
-                  <span>{tech}</span>
+            <h2 className="aiss__heading3">Who Our AI Software Development Service Is For</h2>
+            <div className="aiss__audience_grid">
+              {whoFor.map((item, i) => (
+                <div key={i} className="aiss__audience_card">
+                  <div className="aiss__audience_icon">✓</div>
+                  <div>
+                    <strong>{item.title}</strong>
+                    <p>{item.description}</p>
+                  </div>
                 </div>
               ))}
-            </div>
-            <p className="aiss__tech_note">
-              (Technology choices depend on your business needs — not trends.)
-            </p>
-          </div>
-        </section>
-
-        {/* Why Choose Section */}
-        <section className="aiss__why_section">
-          <div className="aiss__container">
-            <h2 className="aiss__heading">
-              Why Choose ZonzocTech for AI Software Development?
-            </h2>
-            <div className="aiss__why_grid">
-              {whyChoose.map((reason, index) => (
-                <div key={index} className="aiss__why_card">
-                  <div className="aiss__why_number">{index + 1}</div>
-                  <p>{reason}</p>
-                </div>
-              ))}
-            </div>
-            <div className="aiss__why_statement">
-              We build AI software that solves real business problems, not
-              buzzword-driven projects.
             </div>
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* Section 7 — FAQ */}
         <section className="aiss__faq_section">
           <div className="aiss__container">
-            <h2 className="aiss__heading">Frequently Asked Questions</h2>
+            <h2 className="aiss__heading">AI Software Development — Frequently Asked Questions</h2>
             <div className="aiss__faq_list">
-              {faqs.map((faq, index) => (
-                <div key={index} className="aiss__faq_item">
+              {faqs.map((faq, i) => (
+                <div key={i} className="aiss__faq_item">
                   <h4 className="aiss__faq_question">{faq.question}</h4>
                   <p className="aiss__faq_answer">{faq.answer}</p>
                 </div>
@@ -342,17 +237,15 @@ const AISoftwareServices = () => {
         <section className="aiss__cta_section">
           <div className="aiss__container">
             <div className="aiss__cta_content">
-              <h2 className="aiss__cta_title">
-                Ready to Build Intelligent AI Software?
-              </h2>
+              <h2 className="aiss__cta_title">Ready to Automate and Scale Your Business with AI?</h2>
               <p className="aiss__cta_text">
-                If you're planning to build custom AI software or upgrade your
-                existing systems with artificial intelligence, let's discuss
-                your goals.
+                Tell us about your business processes and we will put together a free AI software consultation — showing you exactly where AI can save time, reduce costs and help you grow.
               </p>
-              <a href="#contact" className="aiss__cta_button">
-                Get a Free AI Software Consultation
-              </a>
+              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center", marginTop: "24px" }}>
+                <a href="/contact" className="aiss__cta_button">Get Free AI Consultation →</a>
+                <a href="/#portfolio" className="aiss__cta_button" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work</a>
+              </div>
+              <p style={{ marginTop: "12px", fontSize: "0.85rem", opacity: 0.7 }}>No commitment. No spam. Just results.</p>
             </div>
           </div>
         </section>

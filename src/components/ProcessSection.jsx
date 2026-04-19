@@ -6,37 +6,37 @@ const ProcessSection = () => {
   const steps = [
     {
       number: "1",
-      title: "Discovery",
+      title: "01 — Discovery",
       description:
-        "We listen to your goals and gather key requirements",
+        "We dig deep into your business goals, audience, and competitors before writing a single line of code.",
       icon: "/images/discover.svg",
     },
     {
       number: "2",
-      title: "Design",
+      title: "02 — Strategy & Design",
       description:
-        "UI/UX designs and system architecture tailored to your needs.",
+        "Wireframes, UI/UX design and system architecture built specifically around your users and goals.",
       icon: "/images/strategy.svg",
     },
     {
       number: "3",
-      title: "Development",
+      title: "03 — Development",
       description:
-        "Agile development of web, mobile, and desktop solutions.",
+        "Agile, sprint-based development across web, mobile and AI — with full transparency at each step.",
       icon: "/images/launch.svg",
     },
     {
       number: "4",
-      title: "Launch",
+      title: "04 — Launch",
       description:
-        "Final testing, deployment, and go-live across platforms.",
+        "Thorough QA testing, performance checks and a smooth go-live across all platforms.",
       icon: "/images/launch4.svg",
     },
     {
       number: "5",
-      title: "Support",
+      title: "05 — Ongoing Support",
       description:
-        "Continuous maintenance and updates to ensure success.",
+        "We don't disappear after launch. Continuous updates, monitoring and growth support included.",
       icon: "/images/support.svg",
     },
   ];
@@ -44,8 +44,8 @@ const ProcessSection = () => {
   return (
     <section className="process-section">
       <div className="process-container">
-        <h2 className="process-title">Proven Process – How It Works</h2>
-        <p className="process-subtitle">Our 5-Step Success Blueprint</p>
+        <h2 className="process-title">How We Work — Our 5-Step Process</h2>
+        <p className="process-subtitle">Every project follows a proven blueprint designed to deliver results on time, every time.</p>
 
         <div className="steps-grid">
           {steps.map((step, index) => (

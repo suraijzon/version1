@@ -14,11 +14,9 @@ const SolutionSection = () => {
   };
 
   const tabs = [
-    { id: 'seo', label: 'SEO Services' },
-    { id: 'ux', label: ' High-Converting Websites' },
+    { id: 'seo', label: 'SEO & Lead Generation' },
+    { id: 'ux', label: 'High-Converting Websites' },
     { id: 'ai', label: 'AI Automation Systems' },
-    
-    
   ];
 
   const services = {
@@ -121,21 +119,19 @@ const SolutionSection = () => {
   };
 
   const tabDescriptions = {
-  seo: "We help you attract and convert high-quality leads consistently.",
-  ux: "We design and develop websites that turn visitors into customers.",
-  ai: "We automate your business processes to save time and increase efficiency."
-};
+    seo: "Rank higher, attract the right audience, and turn search traffic into consistent paying customers.",
+    ux: "We build fast, beautiful, conversion-focused websites that turn visitors into leads — not just impressions.",
+    ai: "Automate repetitive tasks, qualify leads instantly, and scale your operations with custom AI tools.",
+  };
 
   return (
     <section className="solution-section" style={sectionStyle}>
       <div className="solution-hero">
         <h1 className="solution-title">
-          Solutions Designed to Grow Your Business
+          Everything You Need to Grow Online
         </h1>
         <p className="solution-subtitle">
-          From generating leads and building high-converting websites to automating workflows with AI,
-          <br />
-           our services are focused on delivering real, measurable results.
+          From search visibility to custom AI systems — we deliver end-to-end digital solutions that generate real, measurable business results for UK & USA businesses.
         </p>
 
         {/* Tab Navigation */}

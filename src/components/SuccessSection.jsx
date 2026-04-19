@@ -134,10 +134,7 @@ const SuccessSection = () => {
 
                 <div className="project-extra">
                   {project.extra.map((item, idx) => (
-                    <span
-                      key={idx}
-                      style={{ background: item.Background }}
-                    >
+                    <span key={idx}>
                       {item.text}
                     </span>
                   ))}

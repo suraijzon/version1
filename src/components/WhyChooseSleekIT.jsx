@@ -113,12 +113,6 @@ const WhyChooseSection = () => {
             </div>
           </div>
 
-          {/* Main Hero Image */}
-          <img
-            src="/images/future-empower.png"
-            alt="Future Empower"
-            className="hero-main-image"
-          />
         </div>
 
       </div>

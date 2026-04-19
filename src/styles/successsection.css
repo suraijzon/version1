@@ -113,11 +113,11 @@
 }
 
 .project-card {
-  border: 1.5px solid #00448f;
-  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
   overflow: hidden;
   text-align: left;
-  background: #fff;
+  background: #ffffff;
   padding-bottom: 10px;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   will-change: transform;
@@ -178,9 +178,13 @@
   gap: 6px 8px;  
 }
 .project-extra span {
-  padding: 3px 7px;
-  border-radius: 4px;
+  padding: 4px 12px;
+  border-radius: 100px;
   white-space: nowrap;
+  background: #e8f0fb;
+  color: #00448f;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 

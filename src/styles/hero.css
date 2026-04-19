@@ -30,7 +30,7 @@
 
 .hero-main-title {
   font-family: 'Inter', sans-serif;
-  font-size: 56px;
+  font-size: 58px;
   font-weight: 800;
   line-height: 1.15;
   color: #ffffff;
@@ -52,11 +52,11 @@
   padding: 16px 40px;
   background: #ffffff;
   color: #00448f;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   font-family: 'Inter', sans-serif;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
   display: inline-block;

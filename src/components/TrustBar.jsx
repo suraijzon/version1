@@ -3,10 +3,10 @@ import React from 'react';
 import '../styles/trustbar.css';
 
 const stats = [
-  { icon: '🏆', text: '150+ Projects Delivered' },
-  { icon: '⭐', text: '4.9 Rated Agency' },
-  { icon: '📈', text: '35% Avg Client Growth' },
-  { icon: '🌍', text: 'UK & USA Focused' },
+  { number: '150+', label: 'Projects Delivered' },
+  { number: '4.9★', label: 'Rated Agency' },
+  { number: '35%', label: 'Avg Client Growth' },
+  { number: 'UK & USA', label: 'Focused' },
 ];
 
 const TrustBar = () => {
@@ -18,8 +18,8 @@ const TrustBar = () => {
       <div className="trust-bar-stats">
         {stats.map((stat, i) => (
           <div key={i} className="trust-bar-item">
-            <span className="trust-bar-icon">{stat.icon}</span>
-            <span className="trust-bar-text">{stat.text}</span>
+            <span className="trust-bar-number">{stat.number}</span>
+            <span className="trust-bar-label-text">{stat.label}</span>
           </div>
         ))}
       </div>

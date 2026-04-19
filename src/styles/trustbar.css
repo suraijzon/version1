@@ -2,7 +2,7 @@
   background: #ffffff;
   border-top: 1px solid #e2e8f0;
   border-bottom: 1px solid #e2e8f0;
-  padding: 28px 24px;
+  padding: 36px 24px;
 }
 
 .trust-bar-label {
@@ -10,7 +10,7 @@
   font-weight: 600;
   color: #6b7280;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -20,7 +20,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 56px;
+  gap: 64px;
   flex-wrap: wrap;
 }
 
@@ -31,23 +31,27 @@
   gap: 4px;
 }
 
-.trust-bar-icon {
-  font-size: 20px;
-}
-
-.trust-bar-text {
-  font-size: 14px;
-  font-weight: 700;
+.trust-bar-number {
+  font-size: 36px;
+  font-weight: 800;
   color: #00448f;
   font-family: 'Inter', sans-serif;
+  line-height: 1;
+}
+
+.trust-bar-label-text {
+  font-size: 14px;
+  color: #6b7280;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
 }
 
 @media (max-width: 600px) {
   .trust-bar-stats {
-    gap: 28px;
+    gap: 32px;
   }
 
-  .trust-bar-text {
-    font-size: 13px;
+  .trust-bar-number {
+    font-size: 28px;
   }
 }

@@ -10,6 +10,11 @@ const nextConfig = {
         destination: '/seo-services',
         permanent: true,
       },
+      {
+        source: '/ai-seo',
+        destination: '/seo-ai-search-optimization',
+        permanent: true,
+      },
     ];
   },
 };

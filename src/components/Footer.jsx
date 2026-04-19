@@ -56,7 +56,7 @@ const Footer = () => {
 
   const companyLinks = [
     { label: "Website Growth Guides", path: "/seo-services" },
-    { label: "AI for Business", path: "/ai-seo" },
+    { label: "AI for Business", path: "/seo-ai-search-optimization" },
     { label: "Technical SEO Knowledgebase", path: "/seo-services" },
     { label: "Case Studies & Results", path: "/case-studies" },
     { label: "AI SEO & Answer Engine Optimization", path: "/ai-seo" },

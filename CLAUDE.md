@@ -20,10 +20,10 @@
 - ✅ Navigation
 - ✅ Hero Section
 - ✅ Trust Bar
-- ⏳ Services Section (in progress)
-- ⬜ Portfolio
-- ⬜ Process
-- ⬜ Why Us
-- ⬜ Testimonials
+- ✅ Services Section
+- ✅ Portfolio Section (heading only)
+- ✅ Process Section
+- ✅ Why Us Section
+- ⏳ Testimonials (in progress)
 - ⬜ Contact CTA
 - ⬜ Footer

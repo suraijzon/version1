@@ -110,33 +110,24 @@ const Navbar = () => {
     <header className="navbar">
       <div className="top-badge">
         <div className="top-badge-left">
-          <span>PROJECTS COMPLETED</span>
-          <span className="highlight">150+</span>
+          <span>🌍 Serving Businesses in UK & USA | 150+ Projects Delivered</span>
         </div>
-        
-        <div className="top-badge-right">
 
-          <button 
-             className="client-login-btn"
-             onClick={handleClientLogin}
-          >
-             Client Login
-          </button>
+        <div className="top-badge-right">
+          <div className="contact-proposal">
+            <img src="/images/navmail.png" alt="phone" />
+            <a href="mailto:Info@zonzoctech.com?subject=New Project Inquiry&body=Hi ZonzocTech Team,%0D%0A%0D%0AI would like to discuss a project with you.%0D%0A%0D%0AThanks," className="email-link">
+              info@zonzoctech.com
+            </a>
+          </div>
           <a
               href="https://wa.me/94740309534"
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-banner"
           >
-     
+            +94 74 030 9534
           </a>
-          
-          <div className="contact-proposal">
-            <img src="/images/navmail.png" alt="phone" />
-            <a href="mailto:Info@zonzoctech.com?subject=New Project Inquiry&body=Hi ZonzocTech Team,%0D%0A%0D%0AI would like to discuss a project with you.%0D%0A%0D%0AThanks," className="email-link">
-              info@zonzoctech.com
-            </a> 
-          </div>
         </div>
       </div>
 

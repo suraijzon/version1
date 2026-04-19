@@ -105,25 +105,23 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="topbar">
-        <div className="topbar-left">
-          <span>🌍 Serving Businesses in UK & USA | 150+ Projects Delivered</span>
-        </div>
-
-        <div className="topbar-right">
-          <div className="contact-proposal">
-            <img src="/images/navmail.png" alt="phone" />
-            <a href="mailto:Info@zonzoctech.com?subject=New Project Inquiry&body=Hi ZonzocTech Team,%0D%0A%0D%0AI would like to discuss a project with you.%0D%0A%0D%0AThanks," className="email-link">
+        <div className="topbar-inner">
+          <div className="topbar-left">
+            <span>🌍 Serving Businesses in UK & USA | 150+ Projects Delivered</span>
+          </div>
+          <div className="topbar-right">
+            <a href="mailto:info@zonzoctech.com?subject=New Project Inquiry&body=Hi ZonzocTech Team,%0D%0A%0D%0AI would like to discuss a project with you.%0D%0A%0D%0AThanks," className="email-link">
               info@zonzoctech.com
             </a>
-          </div>
-          <a
+            <a
               href="https://wa.me/94740309534"
               target="_blank"
               rel="noopener noreferrer"
               className="whatsapp-banner"
-          >
-            +94 74 030 9534
-          </a>
+            >
+              +94 74 030 9534
+            </a>
+          </div>
         </div>
       </div>
 
@@ -138,11 +136,6 @@ const Navbar = () => {
             <img src="/images/logo.png" alt="Zonzoctech Logo" className="logo-mobile" />
           </div>
 
-          <div className="nav-tagline">
-            <div>Web Intelligences</div>
-            <div>That Drives</div>
-            <div>Revenue®</div>
-          </div>
         </div>
           
 

@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/navbar.css";
+import "../styles/topbar.css";
 import { useAuth } from "../context/AuthContext";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -103,12 +104,12 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <div className="top-badge">
-        <div className="top-badge-left">
+      <div className="topbar">
+        <div className="topbar-left">
           <span>🌍 Serving Businesses in UK & USA | 150+ Projects Delivered</span>
         </div>
 
-        <div className="top-badge-right">
+        <div className="topbar-right">
           <div className="contact-proposal">
             <img src="/images/navmail.png" alt="phone" />
             <a href="mailto:Info@zonzoctech.com?subject=New Project Inquiry&body=Hi ZonzocTech Team,%0D%0A%0D%0AI would like to discuss a project with you.%0D%0A%0D%0AThanks," className="email-link">

@@ -18,7 +18,7 @@ const Navbar = () => {
   const navRef = useRef(null);
   const closeTimerRef = useRef(null);
 
-  const { logout } = useAuth();
+  useAuth();
   const router = useRouter();
 
     const isDesktop = () => window.innerWidth > DESKTOP_BREAKPOINT;
@@ -56,11 +56,6 @@ const Navbar = () => {
     } else {
       toggleMobileDropdown(id);
     }
-  };
-
-  const handleClientLogin = () => {
-    logout();
-    router.push("/login");
   };
 
   const handleLogoClick = () => {
@@ -151,9 +146,9 @@ const Navbar = () => {
           
 
         <nav className={`nav-links ${open ? "open" : ""}`}>
-          {/* Dropdown: SEO & Lead Generation (id: 1) */}
+          {/* Dropdown: Services (id: 1) */}
           <div
-             className={`dropdown ${mobileDropdown === 1 ? "open" : ""} ${
+            className={`dropdown ${mobileDropdown === 1 ? "open" : ""} ${
               activeDropdown === 1 ? "active" : ""
             }`}
             {...dropdownHoverProps(1)}
@@ -163,227 +158,50 @@ const Navbar = () => {
               onClick={() => handleDropdownButtonClick(1)}
               aria-expanded={activeDropdown === 1 || mobileDropdown === 1}
             >
-              SEO & LEAD GENERATION ▾
+              Services ▾
             </button>
 
             <div className="dropdown-content" {...dropdownContentHoverProps}>
               <div className="dropdown-column">
-                <h4>Get More Traffic</h4>
-                <Link href="/seo-services">Seo Strategy</Link>    
-                <Link href="/seo-services">Keyword Research</Link><br /> 
-                <Link href="/seo-services">Competitor Analysis</Link>  
-                    
+                <h4>WEB & AI DEVELOPMENT</h4>
+                <Link href="/ai-web-application-development">AI Web Development</Link>
+                <Link href="/full-stack-web-development">Full-Stack Web Development</Link>
+                <Link href="/ai-website-design-development">AI Website Design</Link>
+                <Link href="/ai-software-development">AI Software Development</Link>
               </div>
 
               <div className="dropdown-column">
-                <h4>Convert Traffic into Leads</h4>
-                <Link href="/seo-services">Funnel Optimization</Link> 
-                <Link href="/seo-services">Landing Page <br /> Optimization</Link>     
-                <Link href="/seo-services">CRO (Conversion Rate Optimization)</Link>  
-         
+                <h4>SEO & GROWTH</h4>
+                <Link href="/seo-services">SEO Services</Link>
+                <Link href="/seo-ai-search-optimization">AI SEO & Search Optimization</Link>
+                <Link href="/ecommerce-development-optimization">E-commerce Development</Link>
               </div>
 
               <div className="dropdown-column">
-                <h4>E-commerce Growth</h4>   
-                <Link href="/website-maintenance-performance-security">Product SEO</Link>  
-                <Link href="/seo-services">Shopping Feed Optimization</Link>  
-                <Link href="/seo-services">SEO for Shopify /WooCommerce</Link>  
-   
+                <h4>SUPPORT</h4>
+                <Link href="/website-maintenance-performance-security">Website Maintenance & Security</Link>
               </div>
-
-              <div className="dropdown-column">
-                <h4> Tracking & Analytics</h4>
-                <Link href="/ecommerce-development-optimization">Search Console Setup</Link>   
-                <Link href="/ecommerce-development-optimization">Google Analytics & GA4</Link><br /> 
-                <Link href="/seo-services">Performance Tracking</Link>  
- 
-              </div>
-
-              {/*<div className="dropdown-column highlight-column">
-                <h4>Proof & Insights</h4><br />
-                <Link href="/ecommerce-development-optimization">SEO Case Studies & Results</Link>   
-                <Link href="/ecommerce-development-optimization">SEO Growth Experiments & Learnings</Link>  
-                <Link href="/seo-services">AI SEO vs Traditional SEO</Link><br />  
-                <Link href="/seo-services">Client Success Stories</Link><br /> 
-                <Link href="/ecommerce-development-optimization">GEO</Link>  
-              </div>*/}
-            </div>
-          </div>
-         
-
-          {/* Dropdown: UX & Interactive (id: 2) */}
-          <div
-            className={`dropdown ${mobileDropdown === 2 ? "open" : ""} ${
-              activeDropdown === 2 ? "active" : ""
-            }`}
-            {...dropdownHoverProps(2)}
-          >
-            <button
-              className="drop-btn"
-              onClick={() => handleDropdownButtonClick(2)}
-              aria-expanded={activeDropdown === 2 || mobileDropdown === 2}
-            >
-              UX & INTERACTIVE ▾
-            </button>
-
-            <div className="dropdown-content" {...dropdownContentHoverProps}>
-              <div className="dropdown-column">
-                <h4>Website Strategy</h4>   
-                <Link href="/full-stack-web-development">UX Planning</Link>  
-                <Link href="/full-stack-web-development">Website Audit</Link>  
-                <Link href="/ai-web-application-development">Growth Strategy</Link>  
-  
-              </div>
-
-              <div className="dropdown-column">
-                <h4>Design That Converts</h4>
-                <Link href="/ai-website-design-development">UI/UX Design</Link>  
-                <Link href="/ecommerce-development-optimization">Landing Pages</Link>  
-                <Link href="/full-stack-web-development">Funnel Design</Link>  
-  
-              </div>
-
-              <div className="dropdown-column">
-                <h4>Development</h4>
-                <Link href="/ai-web-application-development">Custom Web Apps</Link>  
-                <Link href="/full-stack-web-development">WordPress Development</Link>  
-                <Link href="/ecommerce-development-optimization">E-commerce Development</Link>  
-                 
-              </div>
-
-              <div className="dropdown-column">
-                <h4>Optimization</h4>
-                <Link href="/website-maintenance-performance-security">Speed Optimization</Link>  
-                <Link href="/seo-services">Core Web Vitals</Link>  
-                <Link href="/website-maintenance-performance-security">Security & Maintenance</Link>  
- 
-              </div>
-
-               {/*<div className="dropdown-column highlight-column">
-                <h4>Problems We Solve</h4><br />
-                <Link href="/website-maintenance-performance-security">My Traffic or Rankings Are Declining</Link>  
-                <Link href="/seo-services">My Website Looks Good but Doesn't Convert</Link>  
-                <Link href="/website-maintenance-performance-security">My Business Isn't Visible on Google or AI Search</Link>  
-                <Link href="/full-stack-web-development">My Marketing or Agency Isn't Delivering ROI</Link>  
-                <Link href="/seo-services">My Website Isn't Generating Leads or Sales</Link>  
-              </div>*/}
             </div>
           </div>
 
-           {/* Dropdown: AI & Technology (id: 3) */}
-          <div
-            className={`dropdown ${mobileDropdown === 3 ? "open" : ""} ${
-              activeDropdown === 3 ? "active" : ""
-            }`}
-            {...dropdownHoverProps(3)}
-          >
-            <button
-              className="drop-btn"
-              onClick={() => handleDropdownButtonClick(3)}
-              aria-expanded={activeDropdown === 3 || mobileDropdown === 3}
-            >
-              AI & TECHNOLOGY ▾
-            </button>
-
-            <div className="dropdown-content" {...dropdownContentHoverProps}>
-              <div className="dropdown-column">
-                <h4>AI for Business Growth</h4>
-                <Link href="/ai-software-development">AI Chatbots</Link>
-                <Link href="/ai-web-application-development">AI Lead Handling</Link>
-                <Link href="/website-maintenance-performance-security">AI Sales Assistants</Link>
-
-              </div>
-
-              <div className="dropdown-column">
-                <h4>Automation Systems</h4>
-                <Link href="/seo-ai-search-optimization">Workflow Automation</Link>
-                <Link href="/seo-services">CRM & Tool Integration</Link>
-                <Link href="/seo-services">Email & WhatsApp Automation</Link>
-
-              </div>
-
-              <div className="dropdown-column">
-                <h4>AI Website Enhancements</h4>
-                <Link href="/ai-website-design-development">AI Personalization</Link>
-                <Link href="/full-stack-web-development">AI Landing Pages</Link> 
-                <Link href="/ai-web-application-development">Smart Forms & Chat</Link>            
-     
-              </div>
-
-              <div className="dropdown-column">
-                <h4>AI Consulting</h4>
-                <Link href="/ai-software-development">AI Strategy</Link>
-                <Link href="/ai-software-development">AI Readiness</Link>
-                <Link href="/ai-software-development">Custom AI Solutions</Link>
-
-              </div>
-
-              {/*<div className="dropdown-column highlight-column">
-                <h4>Insights & Resources</h4><br />
-                <Link href="/ecommerce-development-optimization">AI vs Traditional Development: Cost & ROI</Link>   
-                <Link href="/ecommerce-development-optimization">What Is GPT Integration & When You Need It</Link>  
-                <Link href="/seo-services">How to Identify High-ROI AI Use Cases</Link>  
-                <Link href="/seo-services">AI SEO vs Traditional SEO</Link><br /> 
-                <Link href="/ecommerce-development-optimization">What Is AI Marketing ?</Link>  
-              </div>*/}
-            </div>
-          </div>
-
-          
-
-          {/* Dropdown: Who We Are (id: 4) */}
-          <div
-            className={`dropdown ${mobileDropdown === 4 ? "open" : ""} ${
-              activeDropdown === 4 ? "active" : ""
-            }`}
-            {...dropdownHoverProps(4)}
-          >
-            <button
-              className="drop-btn"
-              onClick={() => handleDropdownButtonClick(4)}
-              aria-expanded={activeDropdown === 4 || mobileDropdown === 4}
-            >
-              WHO WE ARE ▾
-            </button>
-
-            <div className="dropdown-content">
-              <div className="dropdown-column">
-                <h4>Who We Are</h4>
-                <Link href="/about">About Us</Link>   
-                <Link href="/contact">Contact Info</Link>   
-              </div>
-
-            </div>
-          </div>
+          <Link href="/#portfolio" className="drop-btn">Our Work</Link>
+          <Link href="/about" className="drop-btn">About</Link>
+          <Link href="/blog" className="drop-btn">Blog</Link>
+          <Link href="/contact" className="drop-btn">Contact</Link>
 
           <button className="contact-btn desktop-only" onClick={() => setIsPopupOpen(true)}>
-          Get a Proposal
+            Get Free Proposal
           </button>
-
-
-          {open && (
-            <button className="mobile-client-login-inside" onClick={handleClientLogin}>
-              Contact Us
-            </button>
-          )}
         </nav>
-        
-        <ExpertPopup 
-        open={isPopupOpen} onClose={() => setIsPopupOpen(false)}/>
-       <div className="mobile-actions">
-  <button 
-    className="contact-btn mobile-only-btn"
-    onClick={() => setIsPopupOpen(true)}
-  >
-    Get a Proposal
-  </button>
 
-  <div className="hamburger" onClick={() => setOpen((s) => !s)}>
-    <span className={open ? "bar rotate1" : "bar"}></span>
-    <span className={open ? "bar hide" : "bar"}></span>
-    <span className={open ? "bar rotate2" : "bar"}></span>
-  </div>
-</div>
+        <ExpertPopup open={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+        <div className="mobile-actions">
+          <div className="hamburger" onClick={() => setOpen((s) => !s)}>
+            <span className={open ? "bar rotate1" : "bar"}></span>
+            <span className={open ? "bar hide" : "bar"}></span>
+            <span className={open ? "bar rotate2" : "bar"}></span>
+          </div>
+        </div>
       </div>
     </header>
   );

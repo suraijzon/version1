@@ -10,7 +10,8 @@
       "Bash(node *)",
       "Bash(git *)",
       "Bash(python -c \"import json,sys; data=json.load\\(sys.stdin\\); print\\(data[0]['text']\\)\")",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(vercel --version)"
     ]
   }
 }

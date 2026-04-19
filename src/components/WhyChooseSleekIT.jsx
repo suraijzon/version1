@@ -81,12 +81,6 @@ const WhyChooseSection = () => {
           
           {/* Stats Card */}
           <div className="stats-card">
-            <div className="stats-header">
-              <h3>Client Growth Stats Last Year</h3>
-            </div>
-            <div className="stats-chart">
-              <img src="/images/earning-line.png" alt="Growth Chart" className="growth-line" />
-            </div>
             <div className="stats-info">
               <h2 className="stats-number">120+ Clients Served</h2>
               <div className="stats-growth">

@@ -6,12 +6,6 @@ import '../styles/solution.css';
 const SolutionSection = () => {
   const [activeTab, setActiveTab] = useState('seo');
 
-  const sectionStyle = {
-    backgroundImage: `linear-gradient(135deg, rgba(10, 22, 40, 0.5) 0%, rgba(26, 41, 66, 0.55) 100%), url(/images/bg.jpeg)`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundAttachment: 'fixed'
-  };
 
   const tabs = [
     { id: 'seo', label: 'SEO & Lead Generation' },
@@ -119,7 +113,7 @@ const SolutionSection = () => {
   };
 
   return (
-    <section className="solution-section" style={sectionStyle}>
+    <section className="solution-section">
       <div className="solution-hero">
         <h1 className="solution-title">
           Everything You Need to Grow Online

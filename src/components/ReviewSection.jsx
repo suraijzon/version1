@@ -65,7 +65,6 @@ const ReviewsSection = () => {
             <div
               key={review.id}
               className="review-card"
-              style={{ backgroundColor: review.bgColor }}
             >
               <div className="quote">"</div>
 

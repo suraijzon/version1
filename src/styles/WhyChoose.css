@@ -1,212 +1,155 @@
-/* Why Choose Section */
 .why-choose-section {
-  background: #f5f5f5;
-  padding: 80px 20px;
-  margin-bottom: 150px;
-  position: relative;
-  overflow: hidden;
+  background: #ffffff;
+  padding: 100px 24px;
 }
 
 .why-choose-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 80px;
   align-items: center;
 }
 
-/* Left Content */
 .why-choose-left {
-  padding-right: 40px;
-  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .section-subtitle {
-  color: #004480;
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #00448f;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  font-family: 'Inter', sans-serif;
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 40px;
   font-weight: 800;
-  color: #1a1d3a;
+  color: #0a0a0a;
   line-height: 1.2;
   margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .highlight-text {
-  color: #004480;
-  font-weight: 800;
+  color: #00448f;
 }
 
 .section-description {
-  font-size: 1.05rem;
-  color: #4a5568;
+  font-size: 16px;
+  color: #6b7280;
   line-height: 1.8;
-  margin-bottom: 60px;
-  font-family: 'Poppins', sans-serif;
+  margin-bottom: 40px;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Benefits List */
 .benefits-list {
   list-style: none;
   padding: 0;
-  margin-top: 25px;
-  margin-bottom: 10px;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Reduced gap for tighter spacing */
+  gap: 20px;
 }
 
 .benefit-item {
   display: flex;
-  align-items: center;
-  gap: 10px; /* Increased gap between icon and text */
-  font-size: 1.05rem;
-  color: #2d3748;
-  font-family: 'Poppins', sans-serif;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 15px;
+  color: #0a0a0a;
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
-  line-height: 0.9;
+  line-height: 1.6;
 }
 
 .benefit-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px; /* Slightly larger */
+  width: 28px;
   height: 28px;
-  color: #0066ff;
+  color: #00448f;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .benefit-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 
-/* Make sure the text aligns properly */
 .benefit-item span {
   display: inline-block;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
-
-/* Right Content - Cards Container */
 .why-choose-right {
   position: relative;
-  height: 600px;
+  height: 560px;
 }
 
-/* Notification Card - Top Right */
 .notification-card {
   position: absolute;
   top: 0;
   right: 0;
-  background: white;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 20px 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   z-index: 3;
-  min-width: 260px;
-  animation: slideInRight 0.6s ease-out;
-}
-
-.notification-header {
-  margin-bottom: 12px;
+  min-width: 240px;
 }
 
 .notification-badge {
   background: #fff3e0;
   color: #f57c00;
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 12px;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-}
-
-.notification-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  font-family: 'Inter', sans-serif;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .notification-title {
-  font-size: 0.95rem;
+  font-size: 14px;
   font-weight: 600;
-  color: #1a1d3a;
+  color: #0a0a0a;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-.notification-time {
-  font-size: 0.85rem;
-  color: #718096;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* New Client Button */
-.new-client-btn {
-  position: absolute;
-  top: 140px;
-  right: 20px;
-  background: linear-gradient(135deg, #9dff00 0%, #7de000 100%);
-  color: #1a1d3a;
-  border: none;
-  border-radius: 30px;
-  padding: 14px 28px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 20px rgba(157, 255, 0, 0.3);
-  transition: all 0.3s ease;
-  animation: slideInRight 0.6s ease-out 0.2s both;
-}
-
-.new-client-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(157, 255, 0, 0.4);
-}
-
-.bell-icon {
-  font-size: 1.1rem;
-}
-
-/* Stats Card - Bottom Left */
 .stats-card {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: white;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 16px;
   padding: 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   z-index: 3;
-  min-width: 300px;
-  animation: slideInLeft 0.6s ease-out 0.3s both;
+  min-width: 280px;
 }
 
 .stats-header h3 {
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 600;
-  color: #1a1d3a;
-  margin: 0 0 20px 0;
-  font-family: 'Poppins', sans-serif;
+  color: #0a0a0a;
+  margin: 0 0 16px;
+  font-family: 'Inter', sans-serif;
 }
 
 .stats-chart {
-  margin-bottom: 20px;
-  height: 80px;
+  margin-bottom: 16px;
+  height: 72px;
   display: flex;
   align-items: flex-end;
 }
@@ -219,15 +162,16 @@
 .stats-info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+  margin-bottom: 12px;
 }
 
 .stats-number {
-  font-size: 1.4rem;
+  font-size: 16px;
   font-weight: 700;
-  color: #1a1d3a;
+  color: #0a0a0a;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .stats-growth {
@@ -238,317 +182,69 @@
 
 .growth-arrow {
   color: #10b981;
-  font-size: 1.2rem;
+  font-size: 14px;
   font-weight: 700;
 }
 
 .growth-text {
-  font-size: 0.9rem;
+  font-size: 13px;
   color: #10b981;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Hero Card - Main Black Card */
-.hero-card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(135deg, #1a1d3a 0%, #0f111f 100%);
-  border-radius: 20px;
-  padding: 40px;
-  width: 450px;
-  height: 420px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  z-index: 2;
-  animation: fadeInScale 0.6s ease-out 0.1s both;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: white;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.hero-description {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-.hero-image {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 280px;
-  height: 280px;
-  z-index: 1;
-}
 .hero-main-image {
   width: 100%;
-  max-width: 450px; /* same width as old hero card */
-  height: auto;     /* auto height to maintain aspect ratio */
+  max-width: 440px;
+  height: auto;
   display: block;
-  margin: 0 auto;   /* center it in the right section */
-  border-radius: 16px; /* optional rounded corners */
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* optional shadow like old card */
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0, 68, 143, 0.12);
 }
 
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Decorative Elements */
-.deco-circle {
-  position: absolute;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  background: transparent;
-}
-
-.deco-1 {
-  width: 40px;
-  height: 40px;
-  top: 30px;
-  left: 30px;
-}
-
-.deco-2 {
-  width: 60px;
-  height: 60px;
-  top: 80px;
-  right: 40px;
-}
-
-.deco-3 {
-  width: 30px;
-  height: 30px;
-  bottom: 80px;
-  left: 40px;
-}
-
-.deco-4 {
-  width: 50px;
-  height: 50px;
-  bottom: 40px;
-  right: 60px;
-}
-
-.deco-line {
-  position: absolute;
-  width: 80px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.deco-line-1 {
-  top: 50px;
-  right: 100px;
-  transform: rotate(45deg);
-}
-
-.deco-line-2 {
-  bottom: 100px;
-  left: 80px;
-  transform: rotate(-45deg);
-}
-
-/* Animations */
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .why-choose-container {
-    gap: 60px;
-  }
-
-  .hero-card {
-    width: 400px;
-    height: 380px;
-  }
-
-  .hero-title {
-    font-size: 1.75rem;
-  }
-
-  .hero-image {
-    width: 240px;
-    height: 240px;
-  }
-}
-@media (min-width: 1200px) {
-  .why-choose-container {
-    gap: 30px;            
-  }
-
-  .why-choose-left {
-    padding-right: 15px;   /* reduce extra push */
-  }
-}
-
-
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .why-choose-container {
     grid-template-columns: 1fr;
-    gap: 80px;
+    gap: 60px;
   }
 
   .why-choose-left {
     padding-right: 0;
-    text-align: center;
-  }
-
-  .benefits-list {
-    align-items: center;
-  }
-
-  .why-choose-right {
-    height: 500px;
-    margin: 0 auto;
-    max-width: 600px;
-  }
-}
-
-@media (max-width: 768px) {
-   .why-choose-section {
-    margin-bottom: 0px;
-    padding: 60px 20px;
-  }
-
-  .why-choose-container {
-    gap: 60px;
-  }
-
-  .why-choose-left {
-    padding: 0 20px;
-    text-align: center;
-  }
-
-  .section-subtitle {
-    text-align: center;
-  }
-
-  .section-title {
-    font-size: 2.2rem;
-    text-align: center;
-  }
-
-  .section-description {
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto 40px;
-  }
-
-  .benefits-list {
-    align-items: center;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .benefit-item {
-    justify-content: center;
-    text-align: left;
-    width: 100%;
   }
 
   .why-choose-right {
     height: auto;
-  }
-
-  .hero-main-image {
-    max-width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .notification-card,
-  .stats-card,
-  .new-client-btn {
+  .stats-card {
     display: none;
   }
 }
-@media (max-width: 576px) {
+
+@media (max-width: 768px) {
   .why-choose-section {
-    padding: 60px 15px;
-    align-items: center;
-    text-align: center;
+    padding: 80px 20px;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 28px;
   }
 
-  .why-choose-right {
-    height: 450px;
+  .why-choose-left {
+    text-align: center;
   }
 
-  .hero-card {
-    width: 320px;
-    height: 320px;
-    padding: 24px;
+  .benefits-list {
+    align-items: flex-start;
   }
+}
 
-  .hero-title {
-    font-size: 1.3rem;
-  }
-
-  .notification-card {
-    top: -40px;
-    right: 10px;
-  }
-
-  .new-client-btn {
-    top: 100px;
-    right: 10px;
-    padding: 12px 20px;
-    font-size: 0.85rem;
-  }
-
-  .stats-card {
-    bottom: -40px;
-    left: 10px;
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
   }
 }

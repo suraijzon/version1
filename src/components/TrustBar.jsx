@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import '../styles/trustbar.css';
 
 const stats = [
   { icon: '🏆', text: '150+ Projects Delivered' },
@@ -11,20 +12,10 @@ const stats = [
 const TrustBar = () => {
   return (
     <section className="trust-bar">
-      <p className="trust-bar-label" style={{ textAlign: 'center' }}>
+      <p className="trust-bar-label">
         Trusted by 120+ businesses across UK, USA & Europe
       </p>
-      <div
-        className="trust-bar-stats"
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: '40px',
-          textAlign: 'center',
-        }}
-      >
+      <div className="trust-bar-stats">
         {stats.map((stat, i) => (
           <div key={i} className="trust-bar-item">
             <span className="trust-bar-icon">{stat.icon}</span>

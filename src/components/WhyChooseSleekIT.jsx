@@ -10,54 +10,70 @@ const WhyChooseSection = () => {
         
         {/* Left Content */}
         <div className="why-choose-left">
-          <p className="section-subtitle">Building Future-Ready IT Systems</p>
           <h1 className="section-title">
-            Why Choose <span className="highlight-text">Zonzoctech?</span>
+            Why Businesses in the UK & USA Choose <span className="highlight-text">ZonzocTech</span>
           </h1>
           <p className="section-description">
-            At Zonzoctech, we don't just build solutions — we predict tomorrow's 
-            success with AI-powered innovation
+            We combine Silicon Valley-level technical expertise with offshore efficiency — delivering premium quality at a fraction of agency prices in the UK or USA.
           </p>
+
+          <p className="section-subtitle">What Makes Us Different</p>
 
           {/* Benefits List */}
           <ul className="benefits-list">
-  <li className="benefit-item">
-    <div className="benefit-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-        <path d="M8 12l3 3 5-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    </div>
-    <span>Free Project Consultation</span>
-  </li>
-  <li className="benefit-item">
-    <div className="benefit-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-        <path d="M8 12l3 3 5-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    </div>
-    <span>Fast Project Delivery</span>
-  </li>
-  <li className="benefit-item">
-    <div className="benefit-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-        <path d="M8 12l3 3 5-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    </div>
-    <span>Affordable Packages</span>
-  </li>
-  <li className="benefit-item">
-    <div className="benefit-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-        <path d="M8 12l3 3 5-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    </div>
-    <span>No Hidden Charges</span>
-  </li>
-</ul>
+            <li className="benefit-item">
+              <div className="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M8 12l3 3 5-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span>
+                <strong>AI-First Approach</strong>
+                <br />
+                Every solution we build leverages AI where it matters — faster delivery, smarter automation, better results.
+              </span>
+            </li>
+            <li className="benefit-item">
+              <div className="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M8 12l3 3 5-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span>
+                <strong>Full-Stack Expertise</strong>
+                <br />
+                One team covering design, development, SEO and AI — no outsourcing, no handoffs, no excuses.
+              </span>
+            </li>
+            <li className="benefit-item">
+              <div className="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M8 12l3 3 5-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span>
+                <strong>Transparent Pricing</strong>
+                <br />
+                No hidden fees. No surprise invoices. Just honest, upfront pricing for every project.
+              </span>
+            </li>
+            <li className="benefit-item">
+              <div className="benefit-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M8 12l3 3 5-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <span>
+                <strong>Dedicated Communication</strong>
+                <br />
+                Direct access to your project team via WhatsApp, email or video call — across UK & USA time zones.
+              </span>
+            </li>
+          </ul>
         </div>
 
         {/* Right Content */}
@@ -70,7 +86,6 @@ const WhyChooseSection = () => {
             </div>
             <div className="notification-content">
               <p className="notification-title">Web Development completed</p>
-            
             </div>
           </div>
 
@@ -83,10 +98,17 @@ const WhyChooseSection = () => {
               <img src="/images/earning-line.png" alt="Growth Chart" className="growth-line" />
             </div>
             <div className="stats-info">
-              <h2 className="stats-number">Clients Served: 120</h2>
+              <h2 className="stats-number">120+ Clients Served</h2>
               <div className="stats-growth">
                 <span className="growth-arrow">↑</span>
-                <span className="growth-text">35% Growth Last Year</span>
+                <span className="growth-text">35% Average Client Growth</span>
+              </div>
+            </div>
+            <div className="stats-info">
+              <h2 className="stats-number">150+ Projects Delivered</h2>
+              <div className="stats-growth">
+                <span className="growth-arrow">★</span>
+                <span className="growth-text">4.9★ Client Rating</span>
               </div>
             </div>
           </div>

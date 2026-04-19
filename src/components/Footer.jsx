@@ -95,6 +95,9 @@ const Footer = () => {
               <img src="/images/logo.png" alt="techco" className="logo-text-img" />
             </div>
 
+            <p className="footer-tagline">AI Web Development Agency</p>
+            <p className="footer-description">We build high-converting websites, drive organic traffic and automate businesses with AI — serving clients across the UK, USA & Europe.</p>
+
             <div className="footer-contact-box">
               <h4 className="contact-heading">
                 Ready to speak with a marketing expert? Give us a ring
@@ -114,7 +117,7 @@ const Footer = () => {
 
           {/* Columns */}
           <div className="footer-column">
-            <h4 className="footer-column-title">Core Services</h4>
+            <h6 className="footer-column-title">Core Services</h6>
             <ul className="footer-links">
               {servicesLinks.map((link, index) => (
                 <li key={index}>
@@ -125,7 +128,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h4 className="footer-column-title">Solutions by Need</h4>
+            <h6 className="footer-column-title">Solutions by Need</h6>
             <ul className="footer-links">
               {knowledgebaseLinks.map((link, index) => (
                 <li key={index}>
@@ -136,7 +139,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h4 className="footer-column-title">Insights & Resources</h4>
+            <h6 className="footer-column-title">Resources & Insights</h6>
             <ul className="footer-links">
               {companyLinks.map((link, index) => (
                 <li key={index}>
@@ -147,7 +150,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h4 className="footer-column-title">Company</h4>
+            <h6 className="footer-column-title">Company</h6>
             <ul className="footer-links">
               {exploreLinks.map((link, index) => (
                 <li key={index}>
@@ -174,7 +177,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p className="copyright">Zonzoctech© {new Date().getFullYear()}</p>
+          <p className="copyright">© 2026 ZonzocTech. All rights reserved. Registered in Sri Lanka | Serving UK & USA</p>
           <div className="social-icons">
             <a href="#" className="social-icon">
               <i className="fa-brands fa-twitter"></i>

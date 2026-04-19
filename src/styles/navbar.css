@@ -55,6 +55,24 @@
   color: var(--color-primary);
 }
 
+.drop-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-black);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  font-family: var(--font-family);
+}
+
+.drop-btn:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
 .navbar-dropdown {
   position: relative;
 }
@@ -68,7 +86,7 @@
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
   padding: 24px;
-  min-width: 680px;
+  min-width: 780px;
   display: none;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;

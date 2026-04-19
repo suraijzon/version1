@@ -177,7 +177,7 @@ const Footer = () => {
       {/* Footer Bottom */}
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p className="copyright">© 2026 ZonzocTech. All rights reserved. Registered in Sri Lanka | Serving UK & USA</p>
+          <p className="copyright">© 2026 ZonzocTech. All rights reserved.</p>
           <div className="social-icons">
             <a href="#" className="social-icon">
               <i className="fa-brands fa-twitter"></i>

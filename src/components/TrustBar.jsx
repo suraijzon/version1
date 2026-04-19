@@ -11,8 +11,20 @@ const stats = [
 const TrustBar = () => {
   return (
     <section className="trust-bar">
-      <p className="trust-bar-label">Trusted by 120+ businesses across UK, USA & Europe</p>
-      <div className="trust-bar-stats">
+      <p className="trust-bar-label" style={{ textAlign: 'center' }}>
+        Trusted by 120+ businesses across UK, USA & Europe
+      </p>
+      <div
+        className="trust-bar-stats"
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '40px',
+          textAlign: 'center',
+        }}
+      >
         {stats.map((stat, i) => (
           <div key={i} className="trust-bar-item">
             <span className="trust-bar-icon">{stat.icon}</span>

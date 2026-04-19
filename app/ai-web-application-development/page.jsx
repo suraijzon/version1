@@ -1,14 +1,14 @@
 import AIWebAppPage from '@/src/views/AIWebAppPage';
 
 export const metadata = {
-  title: 'AI Web Application Development Company | Zonzoctech',
+  title: 'AI Web Application Development Company UK & USA | ZonzocTech',
   description:
-    'Custom AI web applications built for automation, scalability, and intelligent user experiences. Future-ready development powered by data and innovation.',
+    'ZonzocTech is a custom AI web application development company serving businesses in the UK and USA. We build intelligent web apps, SaaS platforms and GPT-powered tools that automate and scale your business.',
   alternates: { canonical: 'https://zonzoctech.com/ai-web-application-development' },
   openGraph: {
-    title: 'AI Web Application Development Company | Zonzoctech',
+    title: 'AI Web Application Development Company UK & USA | ZonzocTech',
     description:
-      'Custom AI web applications built for automation, scalability, and intelligent user experiences.',
+      'ZonzocTech is a custom AI web application development company serving businesses in the UK and USA. We build intelligent web apps, SaaS platforms and GPT-powered tools that automate and scale your business.',
     url: 'https://zonzoctech.com/ai-web-application-development',
   },
 };

@@ -6,203 +6,103 @@ import "../styles/AboutUs.css";
 import Breadcrumb from "../components/Breadcrumb";
 
 const AboutUs = () => {
+  const beliefs = [
+    {
+      title: "Technology Should Serve Business Goals",
+      description: "We don't build technology for the sake of it. Every line of code, every SEO decision, every AI integration is driven by one question — will this help our client grow?",
+    },
+    {
+      title: "Offshore Doesn't Mean Lower Quality",
+      description: "Being based in Sri Lanka gives our clients a significant cost advantage — without compromising on quality, communication or delivery speed.",
+    },
+    {
+      title: "Long-Term Partnerships Over Quick Projects",
+      description: "We're not interested in one-off projects. We want to be the agency our clients call every time they need to grow digitally.",
+    },
+  ];
+
+  const services = [
+    { number: "01", title: "AI Web Application Development", description: "Custom AI-powered web applications built for performance, scalability and business growth." },
+    { number: "02", title: "Full-Stack Web Development", description: "End-to-end web development using modern frameworks — React, Next.js, Node.js, Spring Boot and more." },
+    { number: "03", title: "AI Website Design & Development", description: "High-converting website designs built with AI tools and data-driven UX principles." },
+    { number: "04", title: "SEO & AI Search Optimization", description: "Organic growth strategies that work for both traditional Google search and AI-powered search engines." },
+    { number: "05", title: "E-commerce Development", description: "Shopify, WooCommerce and custom e-commerce platforms built to convert visitors into customers." },
+    { number: "06", title: "AI Software Development", description: "Custom AI solutions — chatbots, automation systems, workflow tools and GPT integrations." },
+    { number: "07", title: "Website Maintenance & Security", description: "Ongoing performance monitoring, security updates and technical support — so your site never lets you down." },
+  ];
+
   const whoWeWorkWith = [
     "Startups launching new products",
     "E-commerce brands scaling sales",
     "Service businesses generating leads",
     "Agencies needing technical execution",
-    "Companies modernizing legacy systems",
-  ];
-
-  const whatWeWant = [
-    { icon: "🎯", text: "Better online visibility" },
-    { icon: "🤖", text: "Smarter automation" },
-    { icon: "⚡", text: "High-performing websites" },
-    { icon: "📈", text: "Measurable ROI from digital investments" },
-  ];
-
-  const advantages = [
-    "AI + Engineering + SEO under one roof",
-    "Strong technical foundation",
-    "Strategy-first execution",
-    "Built for both Google and AI-driven search engines",
-  ];
-
-  const solutions = [
-    { icon: "⚡", text: "Faster" },
-    { icon: "🔒", text: "Secure" },
-    { icon: "📈", text: "Scalable" },
-    { icon: "🔍", text: "Search-optimized" },
-    { icon: "💰", text: "Conversion-focused" },
-  ];
-
-  const services = [
-    "AI Web Application Development",
-    "AI Software Development",
-    "Full-Stack Web Development",
-    "AI Website Design & Development",
-    "SEO Services",
-    "AI Search Optimization (GEO)",
-    "E-commerce Development & Optimization",
-    "AI Automation & Integrations",
-    "Website Performance, Security & Maintenance",
-  ];
-
-  const approach = [
-    {
-      number: "1",
-      title: "Understand the Business",
-      description:
-        "We start by understanding your goals, challenges, and market.",
-    },
-    {
-      number: "2",
-      title: "Design the Right Solution",
-      description:
-        "We choose the right technologies, AI models, and strategies — not overengineering.",
-    },
-    {
-      number: "3",
-      title: "Build & Optimize",
-      description:
-        "We develop, test, and optimize for performance, SEO, and scalability.",
-    },
-    {
-      number: "4",
-      title: "Measure & Improve",
-      description: "We track results and continuously improve based on data.",
-    },
-  ];
-
-  const futurePrep = [
-    "Google Search evolution",
-    "AI Overviews",
-    "Generative Engine Optimization (GEO)",
-    "AI-powered customer journeys",
+    "Companies modernising legacy systems",
   ];
 
   const values = [
-    {
-      title: "Transparency",
-      description: "Clear communication, no hidden tactics",
-      icon: "👁️",
-    },
-    {
-      title: "Quality",
-      description: "Clean code, ethical SEO, scalable systems",
-      icon: "⭐",
-    },
-    {
-      title: "Results",
-      description: "Traffic, leads, conversions, and ROI",
-      icon: "🎯",
-    },
-    {
-      title: "Innovation",
-      description: "AI where it adds value, not buzzwords",
-      icon: "💡",
-    },
+    { title: "Transparency", description: "Clear communication at every step. No hidden costs, no technical jargon, no surprises.", icon: "👁️" },
+    { title: "Quality", description: "Clean code, ethical SEO and scalable systems — built to last, not just to launch.", icon: "⭐" },
+    { title: "Results", description: "Traffic, leads, conversions and ROI. We measure success by your business outcomes — not our deliverables.", icon: "🎯" },
+    { title: "Innovation", description: "We stay ahead of AI and search evolution so our clients never fall behind their competition.", icon: "💡" },
   ];
 
-  const whyChoose = [
-    "Technical expertise + marketing strategy",
-    "AI-ready development approach",
-    "SEO built into everything",
-    "Business-focused solutions",
-    "Long-term partnerships, not one-off projects",
+  const stats = [
+    { number: "120+", label: "Clients Served" },
+    { number: "150+", label: "Projects Delivered" },
+    { number: "35%", label: "Average Client Growth" },
+    { number: "4.9★", label: "Client Rating" },
   ];
 
   return (
     <>
-      
       <div className="abt__wrapper">
         <Navbar />
-        <Breadcrumb/>
+        <Breadcrumb />
 
         {/* Hero Section */}
         <section className="abt__hero">
           <div className="abt__hero_bg"></div>
           <div className="abt__hero_container">
-            <h1 className="abt__hero_title">About ZonzocTech</h1>
-            <p className="abt__hero_subtitle">
-              Building Intelligent Digital Solutions That Drive Real Growth
-            </p>
+            <h1 className="abt__hero_title">
+              We Build Digital Systems That Generate Real Business Growth
+            </h1>
             <p className="abt__hero_description">
-              ZonzocTech is a technology-driven digital solutions company
-              specializing in AI-powered web applications, software development,
-              full-stack development, SEO, and AI search optimization.
-            </p>
-            <p className="abt__hero_mission">
-              We help businesses move beyond outdated websites and disconnected
-              tools by building scalable, intelligent, and performance-focused
-              digital systems that generate traffic, leads, and revenue.
+              ZonzocTech is an AI-powered web development and digital growth agency. We help businesses across the UK and USA build high-converting websites, rank higher on Google, and automate operations with AI — at a fraction of local agency prices.
             </p>
           </div>
         </section>
 
-        {/* Who We Are */}
+        {/* Our Story */}
         <section className="abt__who_section">
           <div className="abt__container">
-            <h2 className="abt__heading">Who We Are</h2>
+            <h2 className="abt__heading">Our Story</h2>
             <div className="abt__who_content">
               <p className="abt__who_text">
-                ZonzocTech was founded with a clear mission:{" "}
-                <strong>
-                  to help businesses grow using modern technology, AI, and
-                  data-driven strategies — not hype or shortcuts.
-                </strong>
+                ZonzocTech started with one simple observation — too many businesses were paying too much for websites that did nothing. Pretty designs with no traffic. No leads. No results.
               </p>
-              <div className="abt__who_box">
-                <h3>
-                  We work with startups, growing companies, and established
-                  brands that want:
-                </h3>
-                <div className="abt__wants_grid">
-                  {whatWeWant.map((item, index) => (
-                    <div key={index} className="abt__want_item">
-                      <span className="abt__want_icon">{item.icon}</span>
-                      <span className="abt__want_text">{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <p className="abt__who_footer">
-                We don't just "build websites" or "do SEO" — we solve business
-                problems with technology.
+              <p className="abt__who_text">
+                We built ZonzocTech to change that. Based in Sri Lanka with a team of engineers, designers and SEO specialists — we combine world-class technical expertise with a deep understanding of what UK and USA businesses actually need to grow online.
+              </p>
+              <p className="abt__who_text">
+                Today we work with startups, e-commerce brands, service businesses and agencies across the UK, USA and Europe — delivering websites, SEO and AI systems that generate measurable, real-world results.
               </p>
             </div>
           </div>
         </section>
 
-        {/* What Makes Us Different */}
+        {/* What We Believe */}
         <section className="abt__different_section">
           <div className="abt__container">
-            <h2 className="abt__heading">What Makes Us Different</h2>
-            <p className="abt__different_intro">
-              Most agencies focus on either marketing or development.{" "}
-              <strong>We bridge both.</strong>
-            </p>
-            <div className="abt__advantage_box">
-              <h3>Our advantage:</h3>
-              <div className="abt__advantages_list">
-                {advantages.map((advantage, index) => (
-                  <div key={index} className="abt__advantage_item">
-                    <span className="abt__advantage_dot"></span>
-                    <span>{advantage}</span>
+            <h2 className="abt__heading">What We Believe</h2>
+            <div className="abt__approach_timeline">
+              {beliefs.map((belief, index) => (
+                <div key={index} className="abt__approach_step">
+                  <div className="abt__step_content">
+                    <h3>{belief.title}</h3>
+                    <p>{belief.description}</p>
                   </div>
-                ))}
-              </div>
-            </div>
-            <div className="abt__solutions_banner">
-              <h3>Every solution we deliver is designed to be:</h3>
-              <div className="abt__solutions_grid">
-                {solutions.map((solution, index) => (
-                  <div key={index} className="abt__solution_badge">
-                    <span className="abt__solution_icon">{solution.icon}</span>
-                    <span className="abt__solution_text">{solution.text}</span>
-                  </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -211,65 +111,20 @@ const AboutUs = () => {
         <section className="abt__services_section">
           <div className="abt__container">
             <h2 className="abt__heading">What We Do</h2>
-            <h3 className="abt__subheading">Our Core Services</h3>
+            <p className="abt__services_note">
+              We offer end-to-end digital services — from strategy and design through to development, SEO and AI automation.
+            </p>
             <div className="abt__services_grid">
               {services.map((service, index) => (
                 <div key={index} className="abt__service_card">
-                  <div className="abt__service_number">
-                    {String(index + 1).padStart(2, "0")}
-                  </div>
-                  <p>{service}</p>
-                </div>
-              ))}
-            </div>
-            <p className="abt__services_note">
-              Each service is built around real-world business outcomes, not
-              just technical delivery.
-            </p>
-          </div>
-        </section>
-
-        {/* Our Approach */}
-        <section className="abt__approach_section">
-          <div className="abt__container">
-            <h2 className="abt__heading">Our Approach</h2>
-            <div className="abt__approach_timeline">
-              {approach.map((step, index) => (
-                <div key={index} className="abt__approach_step">
-                  <div className="abt__step_number">{step.number}</div>
-                  <div className="abt__step_content">
-                    <h3>{step.title}</h3>
-                    <p>{step.description}</p>
+                  <div className="abt__service_number">{service.number}</div>
+                  <div>
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Future Ready */}
-        <section className="abt__future_section">
-          <div className="abt__container">
-            <h2 className="abt__heading">
-              Built for the Future of Search & AI
-            </h2>
-            <p className="abt__future_intro">
-              Search is changing. AI-generated answers, voice search, and
-              generative engines are redefining visibility.
-            </p>
-            <div className="abt__future_box">
-              <h3>ZonzocTech helps businesses prepare for:</h3>
-              <div className="abt__future_list">
-                {futurePrep.map((item, index) => (
-                  <div key={index} className="abt__future_item">
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-            <p className="abt__future_footer">
-              We don't chase trends — we build future-ready digital foundations.
-            </p>
           </div>
         </section>
 
@@ -277,6 +132,9 @@ const AboutUs = () => {
         <section className="abt__clients_section">
           <div className="abt__container">
             <h2 className="abt__heading">Who We Work With</h2>
+            <p className="abt__clients_footer">
+              We work best with businesses that are serious about digital growth — not just looking for the cheapest option.
+            </p>
             <div className="abt__clients_grid">
               {whoWeWorkWith.map((client, index) => (
                 <div key={index} className="abt__client_card">
@@ -285,9 +143,6 @@ const AboutUs = () => {
                 </div>
               ))}
             </div>
-            <p className="abt__clients_footer">
-              If your growth depends on your digital presence, we can help.
-            </p>
           </div>
         </section>
 
@@ -307,15 +162,17 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* Why Choose */}
-        <section className="abt__why_section">
+        {/* By The Numbers */}
+        <section className="abt__approach_section">
           <div className="abt__container">
-            <h2 className="abt__heading">Why ZonzocTech?</h2>
-            <div className="abt__why_list">
-              {whyChoose.map((reason, index) => (
-                <div key={index} className="abt__why_item">
-                  <span className="abt__why_check">✔</span>
-                  <span>{reason}</span>
+            <h2 className="abt__heading">By The Numbers</h2>
+            <div className="abt__approach_timeline">
+              {stats.map((stat, index) => (
+                <div key={index} className="abt__approach_step">
+                  <div className="abt__step_number">{stat.number}</div>
+                  <div className="abt__step_content">
+                    <h3>{stat.label}</h3>
+                  </div>
                 </div>
               ))}
             </div>
@@ -325,18 +182,16 @@ const AboutUs = () => {
         {/* Final CTA */}
         <section className="abt__cta_section">
           <div className="abt__container">
-            <h2 className="abt__cta_title">Let's Build Something That Works</h2>
+            <h2 className="abt__cta_title">Ready to Work Together?</h2>
             <p className="abt__cta_text">
-              Whether you need an AI-powered application, a high-performing
-              website, or sustainable growth through search, ZonzocTech is ready
-              to help.
+              Tell us about your project and we'll put together a free growth plan — no commitment required.
             </p>
             <div className="abt__cta_buttons">
-              <a href="/contact-us" className="abt__cta_btn abt__cta_primary">
-                Get in Touch
+              <a href="/contact" className="abt__cta_btn abt__cta_primary">
+                Get Free Proposal →
               </a>
-              <a href="#contact" className="abt__cta_btn abt__cta_secondary">
-                Request a Free Audit
+              <a href="/#portfolio" className="abt__cta_btn abt__cta_secondary">
+                See Our Work
               </a>
             </div>
           </div>

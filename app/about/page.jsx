@@ -1,14 +1,14 @@
 import AboutUs from '@/src/views/AboutUs';
 
 export const metadata = {
-  title: 'About Zonzoctech | AI & Digital Growth Experts',
+  title: 'About ZonzocTech | AI Web Development Agency Serving UK & USA',
   description:
-    'Discover how Zonzoctech combines AI, SEO, and web engineering to build high-performance digital ecosystems.',
+    'ZonzocTech is an AI-powered web development agency based in Sri Lanka, serving businesses across the UK and USA. We build websites, drive traffic and automate growth.',
   alternates: { canonical: 'https://zonzoctech.com/about' },
   openGraph: {
-    title: 'About Zonzoctech | AI & Digital Growth Experts',
+    title: 'About ZonzocTech | AI Web Development Agency Serving UK & USA',
     description:
-      'Discover how Zonzoctech combines AI, SEO, and web engineering to build high-performance digital ecosystems.',
+      'ZonzocTech is an AI-powered web development agency based in Sri Lanka, serving businesses across the UK and USA. We build websites, drive traffic and automate growth.',
     url: 'https://zonzoctech.com/about',
   },
 };

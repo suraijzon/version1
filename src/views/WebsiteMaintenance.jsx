@@ -6,322 +6,235 @@ import '../styles/WebsiteMaintenance.css';
 import Breadcrumb from "../components/Breadcrumb";
 
 const WebsiteMaintenance = () => {
-  const whyMatters = [
-    "Lose visitors and leads",
-    "Damage trust and credibility",
-    "Become a security risk",
-    "Negatively impact SEO and rankings",
-    "Cost revenue through downtime"
+  const stats = [
+    { number: "150+", label: "Websites Maintained" },
+    { number: "120+", label: "Clients Served" },
+    { number: "99.9%", label: "Average Uptime Delivered" },
+    { number: "4.9★", label: "Client Rating" },
   ];
 
-  const whoNeeds = [
-    "Business websites and corporate sites",
-    "E-commerce stores",
-    "SaaS and web applications",
-    "High-traffic websites",
-    "Companies relying on online leads"
-  ];
-
-  const problems = [
-    { icon: "🐌", text: "Slow page load times" },
-    { icon: "⚠️", text: "Website downtime" },
-    { icon: "🔓", text: "Security vulnerabilities & malware" },
-    { icon: "📦", text: "Outdated plugins and software" },
-    { icon: "🔧", text: "Broken features or forms" },
-    { icon: "📉", text: "Performance drops after updates" }
+  const noMaintenanceProblems = [
+    { title: "Performance Degrades", description: "Websites naturally slow down over time without optimisation. Slow sites lose visitors, damage conversions and drop in Google rankings — costing you leads and revenue every day." },
+    { title: "Security Vulnerabilities Grow", description: "Outdated plugins, themes and software create security gaps that hackers actively exploit. A single breach can take your site offline, compromise customer data and destroy your reputation overnight." },
+    { title: "SEO Rankings Decline", description: "Google rewards fast, technically sound websites. Without ongoing maintenance, Core Web Vitals degrade, crawl errors accumulate and your rankings gradually slip — giving ground to competitors." },
+    { title: "Downtime Costs Real Money", description: "Every minute your website is down, you are losing potential leads and revenue. Proactive monitoring and maintenance prevents unplanned downtime before it impacts your business." },
   ];
 
   const services = [
-    "Website Speed & Performance Optimization",
-    "Security Monitoring & Threat Prevention",
-    "Core, Plugin & System Updates",
-    "Uptime Monitoring & Error Fixes",
-    "Backup & Recovery Management",
-    "SSL & Secure Configuration",
-    "Performance Monitoring & Reporting",
-    "Technical SEO Health Checks"
+    { title: "Website Speed Optimisation", description: "We optimise your website for maximum speed and performance — improving Core Web Vitals, Google PageSpeed scores and overall load times. Faster websites rank better, convert better and retain visitors longer. Our speed optimisation service covers image compression, caching, code minification, server response times and CDN configuration." },
+    { title: "Website Security Monitoring", description: "We provide ongoing website security monitoring and protection for businesses across the UK and USA — scanning for malware, blocking suspicious activity, hardening configurations and responding to threats before they cause damage. Your website is protected 24 hours a day, 7 days a week." },
+    { title: "WordPress Maintenance Service UK", description: "WordPress powers over 40% of all websites — and requires regular, expert maintenance to stay secure and performant. Our WordPress maintenance service covers core updates, plugin updates, theme updates, security hardening, backup management and performance optimisation — keeping your WordPress site running at its best." },
+    { title: "Uptime Monitoring & Emergency Support", description: "We monitor your website uptime around the clock and respond immediately when issues arise. If your website goes down or experiences critical errors, our team acts fast to restore it — minimising downtime and protecting your business from lost leads and revenue." },
+    { title: "Backup & Disaster Recovery", description: "We implement automated backup systems that create regular copies of your website files and database — stored securely off-site. In the event of a hack, server failure or accidental data loss, we can restore your website quickly and completely." },
+    { title: "Technical SEO Health Checks", description: "We perform regular technical SEO audits of your website — checking for crawl errors, broken links, indexation issues, Core Web Vitals and structured data problems. We fix issues as they arise to protect your search rankings and organic traffic." },
+    { title: "Plugin, Theme & Software Updates", description: "Outdated software is the most common cause of website security vulnerabilities. We manage all plugin, theme and platform updates — testing each one before applying to ensure nothing breaks on your live website." },
   ];
 
-  const comparison = [
-    { reactive: "Fix after damage", proactive: "Prevent issues early" },
-    { reactive: "Unplanned downtime", proactive: "Consistent uptime" },
-    { reactive: "Higher costs", proactive: "Predictable maintenance" },
-    { reactive: "SEO impact", proactive: "SEO stability" }
+  const carePlanIncludes = [
+    "Monthly performance monitoring & reporting",
+    "Security scanning & threat prevention",
+    "Plugin, theme & software updates",
+    "Uptime monitoring & alert response",
+    "Regular backups & secure storage",
+    "Technical SEO health checks",
+    "Priority support & emergency response",
+    "Monthly performance report",
   ];
 
   const processSteps = [
-    {
-      number: "1",
-      title: "Website Health Audit",
-      description: "We assess performance, security, and stability."
-    },
-    {
-      number: "2",
-      title: "Optimization & Protection",
-      description: "We implement speed improvements and security hardening."
-    },
-    {
-      number: "3",
-      title: "Monitoring & Updates",
-      description: "We continuously monitor uptime, threats, and performance."
-    },
-    {
-      number: "4",
-      title: "Fixes & Improvements",
-      description: "We resolve issues and apply improvements proactively."
-    },
-    {
-      number: "5",
-      title: "Reporting & Support",
-      description: "You receive regular reports and support."
-    }
+    { number: "01", title: "Free Website Health Audit", description: "We start with a comprehensive audit of your website — assessing speed, security, uptime, technical SEO and any existing issues that need immediate attention." },
+    { number: "02", title: "Optimisation & Hardening", description: "We implement speed improvements, security hardening, software updates and technical fixes — bringing your website up to a strong, healthy baseline." },
+    { number: "03", title: "Ongoing Monitoring", description: "We monitor your website continuously for uptime, performance, security threats and technical errors — responding immediately when issues are detected." },
+    { number: "04", title: "Regular Updates & Fixes", description: "We apply all necessary updates, fix emerging issues and implement performance improvements proactively — before they impact your visitors or rankings." },
+    { number: "05", title: "Monthly Reporting", description: "Every month you receive a clear report showing your website health, actions taken, performance metrics and recommendations for ongoing improvement." },
   ];
 
-  const tools = [
-    "Performance monitoring tools",
-    "Security scanning & firewalls",
-    "Backup & recovery systems",
-    "Uptime & error monitoring",
-    "Technical SEO diagnostics"
-  ];
-
-  const whyChoose = [
-    "Proactive, not reactive support",
-    "Security-first approach",
-    "Performance-focused optimization",
-    "Transparent reporting",
-    "Long-term reliability mindset"
+  const whoFor = [
+    { title: "✓ Small Businesses in the UK & USA", description: "Who need their website maintained professionally without the cost of an in-house developer — at an affordable monthly rate." },
+    { title: "✓ WordPress Website Owners", description: "Who need expert WordPress maintenance to keep their site secure, updated and performing at full speed." },
+    { title: "✓ E-commerce Store Owners", description: "Who cannot afford downtime, security breaches or slow performance — because every minute offline costs real revenue." },
+    { title: "✓ Businesses With No In-House IT", description: "Who need a reliable technical partner to handle all website maintenance, security and performance — giving them complete peace of mind." },
+    { title: "✓ Companies That Experienced Hacks or Downtime", description: "Who have already suffered the consequences of poor maintenance and need a proactive partner to ensure it never happens again." },
   ];
 
   const faqs = [
-    {
-      question: "How often should website maintenance be done?",
-      answer: "Maintenance should be ongoing, with regular updates and monitoring."
-    },
-    {
-      question: "Do you support different platforms?",
-      answer: "Yes. We maintain custom websites, CMS-based sites, e-commerce stores, and web apps."
-    },
-    {
-      question: "Is security monitoring included?",
-      answer: "Yes. We continuously monitor and protect against threats."
-    },
-    {
-      question: "Do you offer emergency support?",
-      answer: "Yes. Emergency fixes and rapid response are available."
-    }
+    { question: "How much does website maintenance cost in the UK?", answer: "Our website maintenance plans are priced to be affordable for small businesses across the UK and USA. As an offshore maintenance agency we offer significantly better value than UK-based agencies — with the same quality, responsiveness and technical expertise. Contact us for a free health check and custom quote." },
+    { question: "How often should a website be maintained?", answer: "Website maintenance should be ongoing — not a one-off task. Security monitoring and uptime checks run continuously. Software updates are applied monthly. Performance audits are conducted quarterly. This consistent approach prevents problems before they impact your business." },
+    { question: "Do you maintain WordPress websites?", answer: "Yes. WordPress maintenance is one of our core services. We handle all WordPress core updates, plugin updates, theme updates, security hardening, backup management and performance optimisation — keeping your site secure and fast." },
+    { question: "What happens if my website gets hacked?", answer: "If your website is covered by one of our care plans, we respond immediately to any security incident — cleaning malware, restoring from backup, identifying the vulnerability and hardening your site to prevent recurrence. We aim to restore hacked sites within hours, not days." },
+    { question: "Do you provide emergency website support?", answer: "Yes. Emergency support is included in all our care plans. If your website goes down or experiences a critical issue outside business hours, our team is available to respond and restore it as quickly as possible." },
+    { question: "Do you maintain non-WordPress websites?", answer: "Yes. We maintain custom websites, React and Next.js applications, e-commerce stores and any other web platform — not just WordPress." },
   ];
 
   return (
     <>
-      
-    <div className="wm__wrapper">
-      <Navbar />
-      <Breadcrumb />
+      <div className="wm__wrapper">
+        <Navbar />
+        <Breadcrumb />
 
-      {/* Hero Section */}
-      <section className="wm__hero">
-        <div className="wm__hero_pattern"></div>
-        <div className="wm__hero_container">
-          <div className="wm__hero_badge">
-            <span className="wm__badge_icon">🛡️</span>
-            Website Performance, Security & Maintenance
-          </div>
-          <h1 className="wm__hero_title">
-            Website Performance, Security & Maintenance That Keeps Your Business Online, Fast & Protected
-          </h1>
-          <p className="wm__hero_text">
-            We provide website performance, security, and maintenance services that ensure your website 
-            stays fast, secure, and reliable at all times. From speed optimization to proactive security 
-            and ongoing updates, we protect your digital presence so you can focus on growing your business.
-          </p>
-          <a href="#contact" className="wm__hero_btn">
-             Get a Free Website Health Check
-          </a>
-        </div>
-      </section>
-
-      {/* Why It Matters */}
-      <section className="wm__why_section">
-        <div className="wm__container">
-          <h2 className="wm__heading2">Why Website Performance, Security & Maintenance Matter</h2>
-          <p className="wm__intro">A slow, outdated, or vulnerable website can:</p>
-          <div className="wm__why_grid">
-            {whyMatters.map((item, index) => (
-              <div key={index} className="wm__why_card">
-                <span className="wm__why_icon">✗</span>
-                <p>{item}</p>
-              </div>
-            ))}
-          </div>
-          <div className="wm__why_footer">
-            Regular maintenance is not optional — it's essential.
-          </div>
-        </div>
-      </section>
-
-      {/* Who Needs */}
-      <section className="wm__audience_section">
-        <div className="wm__container">
-          <h2 className="wm__heading2">Who Needs Website Maintenance & Security?</h2>
-          <p className="wm__subtitle">This service is ideal for:</p>
-          <div className="wm__audience_list">
-            {whoNeeds.map((item, index) => (
-              <div key={index} className="wm__audience_item">
-                <span className="wm__audience_check">✓</span>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-          <p className="wm__audience_footer">
-            If your website is important to your business, it needs ongoing care.
-          </p>
-        </div>
-      </section>
-
-      {/* Problems */}
-      <section className="wm__problems_section">
-        <div className="wm__container">
-          <h2 className="wm__heading3">Problems We Prevent & Fix</h2>
-          <div className="wm__problems_grid">
-            {problems.map((problem, index) => (
-              <div key={index} className="wm__problem_card">
-                <div className="wm__problem_icon">{problem.icon}</div>
-                <p className="wm__problem_text">{problem.text}</p>
-              </div>
-            ))}
-          </div>
-          <p className="wm__problems_note">
-            We prevent problems before they impact your business.
-          </p>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="wm__services_section">
-        <div className="wm__container">
-          <h2 className="wm__heading2">Our Website Performance, Security & Maintenance Services</h2>
-          <p className="wm__subtitle">
-            We offer comprehensive website performance, security, and maintenance solutions, including:
-          </p>
-          <div className="wm__services_grid">
-            {services.map((service, index) => (
-              <div key={index} className="wm__service_item">
-                <div className="wm__service_number">{String(index + 1).padStart(2, '0')}</div>
-                <span>{service}</span>
-              </div>
-            ))}
-          </div>
-          <p className="wm__services_footer">
-            Your website stays fast, secure, and stable.
-          </p>
-        </div>
-      </section>
-
-      {/* Comparison */}
-      <section className="wm__comparison_section">
-        <div className="wm__container">
-          <h2 className="wm__heading">Performance & Security vs Reactive Fixes</h2>
-          <div className="wm__comparison_wrapper">
-            <div className="wm__comparison_col wm__col_reactive">
-              <h3>Reactive Fixes</h3>
-              {comparison.map((item, index) => (
-                <div key={index} className="wm__comparison_row">{item.reactive}</div>
-              ))}
+        {/* Hero Section */}
+        <section className="wm__hero">
+          <div className="wm__hero_pattern"></div>
+          <div className="wm__hero_container">
+            <h1 className="wm__hero_title">
+              Website Maintenance Services UK — Keep Your Website Fast, Secure and Always Online
+            </h1>
+            <p className="wm__hero_text">
+              ZonzocTech provides professional website maintenance, performance and security services for businesses across the UK and USA. We monitor, protect and optimise your website around the clock — so you can focus on running your business while we make sure your website never lets you down.
+            </p>
+            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "24px" }}>
+              <a href="/contact" className="wm__hero_btn">Get Free Website Health Check →</a>
+              <a href="#wm-services" className="wm__hero_btn" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Services ↓</a>
             </div>
-            <div className="wm__comparison_arrow">→</div>
-            <div className="wm__comparison_col wm__col_proactive">
-              <h3>Proactive Maintenance</h3>
-              {comparison.map((item, index) => (
-                <div key={index} className="wm__comparison_row">{item.proactive}</div>
+            <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
+          </div>
+        </section>
+
+        {/* Stats Bar */}
+        <section className="wm__why_section" id="wm-services">
+          <div className="wm__container">
+            <div className="wm__why_grid">
+              {stats.map((stat, i) => (
+                <div key={i} className="wm__why_card">
+                  <strong>{stat.number}</strong>
+                  <p>{stat.label}</p>
+                </div>
               ))}
             </div>
           </div>
-          <p className="wm__comparison_note">
-            Prevention always costs less than recovery.
-          </p>
-        </div>
-      </section>
+        </section>
 
-      {/* Process */}
-      <section className="wm__process_section">
-        <div className="wm__container">
-          <h2 className="wm__heading2">Our Maintenance Process</h2>
-          <div className="wm__process_grid">
-            {processSteps.map((step, index) => (
-              <div key={index} className="wm__process_card">
-                <div className="wm__process_badge">{step.number}</div>
-                <h3 className="wm__process_title">{step.title}</h3>
-                <p className="wm__process_desc">{step.description}</p>
-              </div>
-            ))}
+        {/* Section 1 — Why Maintenance Is Not Optional */}
+        <section className="wm__audience_section">
+          <div className="wm__container">
+            <h2 className="wm__heading2">Why Website Maintenance Is Not Optional for UK & USA Businesses</h2>
+            <p className="wm__intro">
+              Your website is your most important business asset. It generates leads, builds credibility and represents your brand 24 hours a day, 7 days a week. Yet most businesses treat it as a one-time project — building it and walking away.
+            </p>
+            <p className="wm__intro">
+              Without regular maintenance, websites slow down, become vulnerable to security attacks, fall behind on technical updates and gradually lose their search rankings. The cost of neglecting maintenance is always higher than the cost of preventing problems in the first place.
+            </p>
+            <h3 className="wm__subtitle">What Happens Without Proper Maintenance</h3>
+            <div className="wm__faq_list">
+              {noMaintenanceProblems.map((problem, i) => (
+                <div key={i} className="wm__faq_item">
+                  <h4 className="wm__faq_question">{problem.title}</h4>
+                  <p className="wm__faq_answer">{problem.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Tools */}
-      <section className="wm__tools_section">
-        <div className="wm__container">
-          <h2 className="wm__heading2">Technologies & Tools We Use</h2>
-          <div className="wm__tools_grid">
-            {tools.map((tool, index) => (
-              <div key={index} className="wm__tool_card">{tool}</div>
-            ))}
+        {/* Section 2 — Services */}
+        <section className="wm__services_section">
+          <div className="wm__container">
+            <h2 className="wm__heading2">Our Website Maintenance Services for UK & USA Businesses</h2>
+            <p className="wm__subtitle">
+              We offer comprehensive website maintenance, performance and security services — covering everything your website needs to stay fast, safe and competitive.
+            </p>
+            <div className="wm__services_grid">
+              {services.map((service, i) => (
+                <div key={i} className="wm__service_item">
+                  <div className="wm__service_number">{String(i + 1).padStart(2, '0')}</div>
+                  <div>
+                    <strong>{service.title}</strong>
+                    <p style={{ marginTop: "6px" }}>{service.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <p className="wm__tools_note">
-            (Tools depend on your platform and requirements.)
-          </p>
-        </div>
-      </section>
+        </section>
 
-      {/* Why Choose */}
-      <section className="wm__why_choose_section">
-        <div className="wm__container">
-          <h2 className="wm__heading2">Why Choose ZonzocTech for Website Maintenance?</h2>
-          <div className="wm__choose_list">
-            {whyChoose.map((reason, index) => (
-              <div key={index} className="wm__choose_item">
-                <span className="wm__choose_icon">★</span>
-                <span>{reason}</span>
-              </div>
-            ))}
+        {/* Section 3 — Care Plans */}
+        <section className="wm__comparison_section">
+          <div className="wm__container">
+            <h2 className="wm__heading">Website Care Plans for UK & USA Businesses</h2>
+            <p className="wm__comparison_note">
+              We offer flexible monthly website care plans tailored to the needs and budget of small businesses across the UK and USA — giving you complete peace of mind that your website is in expert hands.
+            </p>
+            <h3 style={{ margin: "24px 0 16px" }}>What Every Care Plan Includes:</h3>
+            <div className="wm__audience_list">
+              {carePlanIncludes.map((item, i) => (
+                <div key={i} className="wm__audience_item">
+                  <span className="wm__audience_check">✓</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="wm__audience_footer" style={{ marginTop: "24px" }}>
+              Contact us for a free website health check and we will recommend the right care plan for your specific website, platform and business needs.
+            </p>
           </div>
-          <p className="wm__choose_footer">
-            We keep your website running smoothly, securely, and efficiently.
-          </p>
-        </div>
-      </section>
+        </section>
 
-      {/* FAQ */}
-      <section className="wm__faq_section">
-        <div className="wm__container">
-          <h2 className="wm__heading2">Frequently Asked Questions</h2>
-          <div className="wm__faq_list">
-            {faqs.map((faq, index) => (
-              <div key={index} className="wm__faq_item">
-                <h4 className="wm__faq_question">{faq.question}</h4>
-                <p className="wm__faq_answer">{faq.answer}</p>
-              </div>
-            ))}
+        {/* Section 4 — Process */}
+        <section className="wm__process_section">
+          <div className="wm__container">
+            <h2 className="wm__heading2">Our Website Maintenance Process</h2>
+            <div className="wm__process_grid">
+              {processSteps.map((step, i) => (
+                <div key={i} className="wm__process_card">
+                  <div className="wm__process_badge">{step.number}</div>
+                  <h3 className="wm__process_title">{step.title}</h3>
+                  <p className="wm__process_desc">{step.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA */}
-      <section className="wm__cta_section">
-        <div className="wm__container">
-          <h2 className="wm__cta_title">Keep Your Website Fast, Secure & Reliable</h2>
-          <p className="wm__cta_text">
-            If your website is live, it needs continuous performance and security care.
-          </p>
-          <a href="#contact" className="wm__cta_btn">
-             Get a Free Website Health Check
-          </a>
-        </div>
-      </section>
+        {/* Section 5 — Who For */}
+        <section className="wm__why_choose_section">
+          <div className="wm__container">
+            <h2 className="wm__heading2">Who Our Website Maintenance Service Is For</h2>
+            <div className="wm__choose_list">
+              {whoFor.map((item, i) => (
+                <div key={i} className="wm__choose_item">
+                  <span className="wm__choose_icon">✓</span>
+                  <div>
+                    <strong>{item.title}</strong>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      <Footer />
-    </div>
+        {/* Section 6 — FAQ */}
+        <section className="wm__faq_section">
+          <div className="wm__container">
+            <h2 className="wm__heading2">Website Maintenance — Frequently Asked Questions</h2>
+            <div className="wm__faq_list">
+              {faqs.map((faq, i) => (
+                <div key={i} className="wm__faq_item">
+                  <h4 className="wm__faq_question">{faq.question}</h4>
+                  <p className="wm__faq_answer">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="wm__cta_section">
+          <div className="wm__container">
+            <h2 className="wm__cta_title">Ready to Protect and Optimise Your Website?</h2>
+            <p className="wm__cta_text">
+              Get a free website health check and find out exactly what needs attention — no commitment required.
+            </p>
+            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center", marginTop: "24px" }}>
+              <a href="/contact" className="wm__cta_btn">Get Free Health Check →</a>
+              <a href="/#services" className="wm__cta_btn" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Services</a>
+            </div>
+            <p style={{ marginTop: "12px", fontSize: "0.85rem", opacity: 0.7 }}>No commitment. No spam. Just results.</p>
+          </div>
+        </section>
+
+        <Footer />
+      </div>
     </>
   );
 };

@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import ExpertPopup from "./ExpertPopup";
 
-
 const DESKTOP_BREAKPOINT = 1024;
 const CLOSE_DELAY_MS = 180;
 
@@ -22,7 +21,7 @@ const Navbar = () => {
   useAuth();
   const router = useRouter();
 
-    const isDesktop = () => window.innerWidth > DESKTOP_BREAKPOINT;
+  const isDesktop = () => window.innerWidth > DESKTOP_BREAKPOINT;
 
   const clearCloseTimer = () => {
     if (closeTimerRef.current) {
@@ -31,7 +30,7 @@ const Navbar = () => {
     }
   };
 
-   const openDropdown = (id) => {
+  const openDropdown = (id) => {
     if (!isDesktop()) return;
     clearCloseTimer();
     setActiveDropdown(id);
@@ -46,12 +45,12 @@ const Navbar = () => {
   };
 
   const toggleMobileDropdown = (id) => {
-     if (isDesktop()) return;
+    if (isDesktop()) return;
     setMobileDropdown((prev) => (prev === id ? null : id));
   };
 
   const handleDropdownButtonClick = (id) => {
-   if (isDesktop()) {
+    if (isDesktop()) {
       clearCloseTimer();
       setActiveDropdown((prev) => (prev === id ? null : id));
     } else {
@@ -66,7 +65,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutside = (e) => {
-   if (!isDesktop()) return;
+      if (!isDesktop()) return;
       if (navRef.current && !navRef.current.contains(e.target)) {
         setActiveDropdown(null);
       }
@@ -80,16 +79,25 @@ const Navbar = () => {
       }
     };
 
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        document.querySelector('.navbar')?.classList.add('scrolled');
+      } else {
+        document.querySelector('.navbar')?.classList.remove('scrolled');
+      }
+    };
+
     document.addEventListener("mousedown", handleClickOutside);
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
       clearCloseTimer();
     };
   }, []);
-
 
   const dropdownHoverProps = (id) => ({
     onMouseEnter: () => openDropdown(id),
@@ -101,9 +109,8 @@ const Navbar = () => {
     onMouseLeave: scheduleCloseDropdown,
   };
 
-
   return (
-    <header className="navbar">
+    <>
       <div className="topbar">
         <div className="topbar-inner">
           <div className="topbar-left">
@@ -125,79 +132,68 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className="nav-container" ref={navRef}>
-         <div style={{ display: "flex", alignItems: "center" }}>
-          <div
-            className="nav-logo"
-            onClick={handleLogoClick}
-            style={{ cursor: "pointer" }}
-          >
-            <img src="/images/logo.png" alt="Zonzoctech Logo" className="logo-desktop" />
-            <img src="/images/logo.png" alt="Zonzoctech Logo" className="logo-mobile" />
+      <header className="navbar" ref={navRef}>
+        <div className="navbar-inner">
+          <div className="navbar-logo" onClick={handleLogoClick} style={{ cursor: "pointer" }}>
+            <img src="/images/logo.png" alt="Zonzoctech Logo" />
           </div>
 
-        </div>
-          
-
-        <nav className={`nav-links ${open ? "open" : ""}`}>
-          {/* Dropdown: Services (id: 1) */}
-          <div
-            className={`dropdown ${mobileDropdown === 1 ? "open" : ""} ${
-              activeDropdown === 1 ? "active" : ""
-            }`}
-            {...dropdownHoverProps(1)}
-          >
-            <button
-              className="drop-btn"
-              onClick={() => handleDropdownButtonClick(1)}
-              aria-expanded={activeDropdown === 1 || mobileDropdown === 1}
+          <nav className={`navbar-links ${open ? "open" : ""}`}>
+            <div
+              className={`navbar-dropdown ${mobileDropdown === 1 ? "open" : ""} ${activeDropdown === 1 ? "active" : ""}`}
+              {...dropdownHoverProps(1)}
             >
-              Services ▾
-            </button>
+              <button
+                className="drop-btn"
+                onClick={() => handleDropdownButtonClick(1)}
+                aria-expanded={activeDropdown === 1 || mobileDropdown === 1}
+              >
+                Services ▾
+              </button>
 
-            <div className="dropdown-content" {...dropdownContentHoverProps}>
-              <div className="dropdown-column">
-                <h4>WEB & AI DEVELOPMENT</h4>
-                <Link href="/ai-web-application-development">AI Web Development</Link>
-                <Link href="/full-stack-web-development">Full-Stack Web Development</Link>
-                <Link href="/ai-website-design-development">AI Website Design</Link>
-                <Link href="/ai-software-development">AI Software Development</Link>
-              </div>
+              <div className="navbar-dropdown-menu" {...dropdownContentHoverProps}>
+                <div className="dropdown-section">
+                  <h6>WEB & AI DEVELOPMENT</h6>
+                  <Link href="/ai-web-application-development">AI Web Development</Link>
+                  <Link href="/full-stack-web-development">Full-Stack Web Development</Link>
+                  <Link href="/ai-website-design-development">AI Website Design</Link>
+                  <Link href="/ai-software-development">AI Software Development</Link>
+                </div>
 
-              <div className="dropdown-column">
-                <h4>SEO & GROWTH</h4>
-                <Link href="/seo-services">SEO Services</Link>
-                <Link href="/seo-ai-search-optimization">AI SEO & Search Optimization</Link>
-                <Link href="/ecommerce-development-optimization">E-commerce Development</Link>
-              </div>
+                <div className="dropdown-section">
+                  <h6>SEO & GROWTH</h6>
+                  <Link href="/seo-services">SEO Services</Link>
+                  <Link href="/seo-ai-search-optimization">AI SEO & Search Optimization</Link>
+                  <Link href="/ecommerce-development-optimization">E-commerce Development</Link>
+                </div>
 
-              <div className="dropdown-column">
-                <h4>SUPPORT</h4>
-                <Link href="/website-maintenance-performance-security">Website Maintenance & Security</Link>
+                <div className="dropdown-section">
+                  <h6>SUPPORT</h6>
+                  <Link href="/website-maintenance-performance-security">Website Maintenance & Security</Link>
+                </div>
               </div>
             </div>
-          </div>
 
-          <Link href="/#portfolio" className="drop-btn">Our Work</Link>
-          <Link href="/about" className="drop-btn">About</Link>
-          <Link href="/blog" className="drop-btn">Blog</Link>
-          <Link href="/contact" className="drop-btn">Contact</Link>
+            <Link href="/#portfolio" className="drop-btn">Our Work</Link>
+            <Link href="/about" className="drop-btn">About</Link>
+            <Link href="/blog" className="drop-btn">Blog</Link>
+            <Link href="/contact" className="drop-btn">Contact</Link>
 
-          <button className="contact-btn desktop-only" onClick={() => setIsPopupOpen(true)}>
-            Get Free Proposal
-          </button>
-        </nav>
+            <button className="navbar-cta" onClick={() => setIsPopupOpen(true)}>
+              Get Free Proposal
+            </button>
+          </nav>
 
-        <ExpertPopup open={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-        <div className="mobile-actions">
-          <div className="hamburger" onClick={() => setOpen((s) => !s)}>
+          <ExpertPopup open={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+
+          <button className="navbar-mobile-toggle" onClick={() => setOpen((s) => !s)} aria-label="Toggle menu">
             <span className={open ? "bar rotate1" : "bar"}></span>
             <span className={open ? "bar hide" : "bar"}></span>
             <span className={open ? "bar rotate2" : "bar"}></span>
-          </div>
+          </button>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 

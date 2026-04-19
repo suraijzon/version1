@@ -1,36 +1,28 @@
 'use client';
 import React from 'react';
-import CountUp from 'react-countup';
 import '../styles/Review.css';
 
 const ReviewsSection = () => {
   const reviews = [
     {
       id: 1,
-      text: "Our e-commerce platform transformed our business. The team's expertise in custom web solutions helped us scale faster and reach a global audience.",
+      text: "Working with ZonzocTech transformed our online store completely. Traffic doubled and conversions improved significantly within 3 months.",
       name: "Sarah Thompson",
-      username: "@sarah_thompson",
+      username: "E-commerce Business Owner, UK",
       bgColor: "#ffe4e1"
     },
     {
       id: 2,
-      text: "The mobile app they developed for us has been a game-changer. It's fast, intuitive, and perfectly aligned with our brand vision. Highly recommend!",
+      text: "The mobile app they built for us is fast, intuitive and perfectly aligned with our brand. Highly recommend their team.",
       name: "David Martinez",
-      username: "@david_martinez",
+      username: "SaaS Founder, USA",
       bgColor: "#e8f5e9"
     },
     {
-      id: 3,
-      text: "Excellent IT resource outsourcing service. They provided highly skilled developers who integrated seamlessly with our team.",
-      name: "zonzoc",
-      username: "@zonzoc",
-      bgColor: "#b2ebf2"
-    },
-    {
       id: 4,
-      text: "Great experience working with the team. Delivery was fast and communication was excellent throughout the project.",
+      text: "Excellent communication throughout the project. Fast delivery, no surprises, and the results speak for themselves.",
       name: "Emily Carter",
-      username: "@emily_carter",
+      username: "Marketing Director, UK",
       bgColor: "#f3e5f5"
     }
   ];
@@ -53,15 +45,16 @@ const ReviewsSection = () => {
             </div>
 
             <div className="reviews-count">
-              <CountUp start={0} end={115} duration={2} />+ Reviews
+              50+ Client Reviews
             </div>
           </div>
 
           {/* RIGHT - HEADING */}
           <div className="reviews-heading-wrap">
             <h2 className="reviews-heading">
-              Our Customers <br /> love us
+              What Our Clients Say
             </h2>
+            <p>Don't take our word for it. Here's what businesses we've worked with across the UK and USA have to say.</p>
           </div>
 
         </div>

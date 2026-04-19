@@ -54,7 +54,7 @@ const SolutionSection = () => {
     ],
     ux: [
       {
-        title: 'UI/UX Strategy & Design',
+        title: 'UI/UX Design',
         items: [
           'User Interface (UI) Design',
           'User Experience (UX) Design',
@@ -64,7 +64,7 @@ const SolutionSection = () => {
         ]
       },
       {
-        title: 'Web Development Services',
+        title: 'Design That Converts',
         items: [
           'Frontend Development',
           'Backend Development',
@@ -74,7 +74,7 @@ const SolutionSection = () => {
         ]
       },
       {
-        title: 'Interactive & Experience Design',
+        title: 'Development',
         items: [
           'Animation & Motion Design',
           'Micro-Interactions',
@@ -86,33 +86,27 @@ const SolutionSection = () => {
     ],
     ai: [
       {
-        title: 'AI Development Services',
+        title: 'AI for Business Growth',
         items: [
-          'Machine Learning Solutions',
-          'Custom AI Model Development',
-          'Computer Vision',
-          'Predictive & Smart Analytics',
-          'Natural Language Processing (NLP)',
+          'AI Chatbots & Assistants',
+          'AI Lead Handling',
+          'AI Sales Assistants',
         ]
       },
       {
-        title: 'AI Integration & Systems',
+        title: 'Automation Systems',
         items: [
-          'LLM & AI API Integration',
-          'AI Agents & Autonomous Systems',
-          'AI-Powered Search',
-          'Recommendation Systems',
-          'Chatbot & Virtual Assistant Development',
+          'Workflow Automation',
+          'CRM & Tool Integration',
+          'Email & WhatsApp Automation',
         ]
       },
       {
-        title: 'Automation Solutions',
+        title: 'AI Consulting',
         items: [
-          'Business Process Automation',
-          'Marketing Automation',
-          'Data Processing Automation',
-          'Workflow Optimization',
-          'Smart Scheduling & Reporting',
+          'AI Strategy',
+          'AI Readiness Assessment',
+          'Custom AI Solutions',
         ]
       }
     ]

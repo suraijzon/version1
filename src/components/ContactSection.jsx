@@ -69,12 +69,7 @@ const handleSubmit = async (e) => {
       <div className="contact-container">
         {/* Left Side */}
         <div className="contact-left">
-          <div className="you-are-here">
-            <span className="here-text">YOU ARE HERE</span>
-            <div className="here-line"></div>
-          </div>
-
-          <h2 className="contact-title">Ready to Grow Your Business?</h2>
+<h2 className="contact-title">Ready to Grow Your Business?</h2>
           <p className="contact-subtitle">
             Tell us about your project and we'll put together a free, no-obligation growth plan within 24 hours.
           </p>

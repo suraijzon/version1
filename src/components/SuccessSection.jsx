@@ -116,7 +116,7 @@ const SuccessSection = () => {
 
       <div className="projects-slider">
         <div className="projects-track">
-          {[...projects, ...projects].map((project, index) => (
+          {projects.map((project, index) => (
             <div
                 key={index}
                 className="project-card"

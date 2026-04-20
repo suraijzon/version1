@@ -59,7 +59,7 @@ const Footer = () => {
     { label: "AI for Business", path: "/seo-ai-search-optimization" },
     { label: "Technical SEO Knowledgebase", path: "/seo-services" },
     { label: "Case Studies & Results", path: "/case-studies" },
-    { label: "AI SEO & Answer Engine Optimization", path: "/ai-seo" },
+    { label: "AI SEO & Answer Engine Optimization", path: "/seo-ai-search-optimization" },
   ];
 
   const exploreLinks = [

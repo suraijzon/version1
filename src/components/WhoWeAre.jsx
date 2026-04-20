@@ -114,12 +114,10 @@ const WhoWeAreSection = () => {
         {/* SINGLE ROW */}
         <div className="tech-rows-container">
           {rows.map((row, rowIndex) => {
-            const duplicatedRow = Array(2).fill(row).flat(); // 2x for seamless marquee loop
-
             return (
               <div key={rowIndex} className="tech-scroll-row">
                 <div className={`tech-cards-track tech-cards-track-1`}>
-                  {duplicatedRow.map((category, categoryIndex) => (
+                  {row.map((category, categoryIndex) => (
                     <div key={categoryIndex} className="tech-category-card">
                       <h3 className="category-title">{category.title}</h3>
 

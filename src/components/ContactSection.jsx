@@ -97,14 +97,7 @@ const handleSubmit = async (e) => {
 
         {/* Right Side - Form */}
         <div className="contact-right">
-          <div className="form-header">
-            <i className="fa-solid fa-handshake"></i>
-            <span className="form-header-text">LET'S CONNECT!</span>
-          </div>
-
-          <h3 className="form-title">
-            Send us a message, and we'll promptly discuss your project with you.
-          </h3>
+          <h3 className="form-title">Send Us a Message</h3>
 
           {/* Success/Error Messages */}
           {submitStatus === 'success' && (

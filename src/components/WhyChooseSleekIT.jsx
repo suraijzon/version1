@@ -81,18 +81,22 @@ const WhyChooseSection = () => {
           
           {/* Stats Card */}
           <div className="stats-card">
-            <div className="stats-info">
-              <h2 className="stats-number">120+ Clients Served</h2>
-              <div className="stats-growth">
-                <span className="growth-arrow">↑</span>
-                <span className="growth-text">35% Average Client Growth</span>
+            <div className="stats-grid">
+              <div className="stat-item">
+                <p className="stat-number">120+</p>
+                <p className="stat-label">Clients Served</p>
               </div>
-            </div>
-            <div className="stats-info">
-              <h2 className="stats-number">150+ Projects Delivered</h2>
-              <div className="stats-growth">
-                <span className="growth-arrow">★</span>
-                <span className="growth-text">4.9★ Client Rating</span>
+              <div className="stat-item">
+                <p className="stat-number">150+</p>
+                <p className="stat-label">Projects Delivered</p>
+              </div>
+              <div className="stat-item">
+                <p className="stat-number">35%</p>
+                <p className="stat-label">Avg Client Growth</p>
+              </div>
+              <div className="stat-item">
+                <p className="stat-number">4.9★</p>
+                <p className="stat-label">Client Rating</p>
               </div>
             </div>
           </div>

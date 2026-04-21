@@ -62,7 +62,7 @@ const ProcessSection = () => {
                 </div>
 
                 {/* Step number */}
-                <div className="step-number" style={{color:"white", borderColor:"rgba(255, 255, 255, 0.15)"}}>{step.number}</div>
+                <div className="step-number">{step.number}</div>
               </div>
 
               <h3 className="step-title">{step.title}</h3>

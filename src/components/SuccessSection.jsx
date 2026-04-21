@@ -114,35 +114,29 @@ const SuccessSection = () => {
         </p>
       </div>
 
-      <div className="projects-slider">
-        <div className="projects-track">
-          {projects.map((project, index) => (
-            <div
-                key={index}
-                className="project-card"
-                onClick={() => router.push(`/project/${project.id}`)}
-            >
-              <img
-                src={project.img}
-                alt={project.name}
-                className="project-img"
-              />
-
-              <div className="project-info">
-                <h3>{project.name}</h3>
-                <p>{project.desc}</p>
-
-                <div className="project-extra">
-                  {project.extra.map((item, idx) => (
-                    <span key={idx}>
-                      {item.text}
-                    </span>
-                  ))}
-                </div>
+      <div className="projects-grid">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="project-card"
+            onClick={() => router.push(`/project/${project.id}`)}
+          >
+            <img
+              src={project.img}
+              alt={project.name}
+              className="project-img"
+            />
+            <div className="project-info">
+              <h3 className="project-title">{project.name}</h3>
+              <p className="project-desc">{project.desc}</p>
+              <div className="project-extra">
+                {project.extra.map((item, idx) => (
+                  <span key={idx}>{item.text}</span>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

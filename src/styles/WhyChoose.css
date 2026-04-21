@@ -65,6 +65,9 @@
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   line-height: 1.6;
+  border-left: 4px solid #00448f;
+  padding-left: 20px;
+  margin-bottom: 24px;
 }
 
 .benefit-icon {
@@ -137,6 +140,35 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   z-index: 3;
   min-width: 280px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: #00448f;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #6b7280;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  margin: 0;
 }
 
 .stats-header h3 {

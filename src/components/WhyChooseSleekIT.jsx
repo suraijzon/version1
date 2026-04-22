@@ -102,7 +102,7 @@ const WhyChooseSection = () => {
           </div>
 
           <img
-            src="/images/growth-illustration.png"
+            src="/images/growth-illustration.jpg"
             alt="Digital Growth Analytics Illustration"
             style={{
               width: '100%',

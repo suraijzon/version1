@@ -7,6 +7,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  overflow: visible;
   transition: box-shadow var(--transition);
 }
 
@@ -22,6 +23,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: visible;
+  position: relative;
 }
 
 .navbar-logo img {
@@ -89,7 +92,8 @@
 
 .navbar-dropdown-menu {
   position: absolute;
-  top: calc(100% + 0px);
+  top: 100%;
+  bottom: auto;
   left: 0;
   background: var(--color-white);
   border: 1px solid var(--color-border);
@@ -97,7 +101,7 @@
   box-shadow: var(--shadow-lg);
   padding: 24px;
   padding-top: 16px;
-  margin-top: -8px;
+  margin-top: 0;
   min-width: 780px;
   display: none;
   grid-template-columns: repeat(3, 1fr);

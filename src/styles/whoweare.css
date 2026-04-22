@@ -82,7 +82,7 @@
 }
 
 .tech-cards-track-1 {
-  animation: scroll-cards 115s linear infinite;
+  animation: scroll-cards 20s linear infinite;
 }
 
 .tech-cards-track-2 {
@@ -138,8 +138,8 @@
 
 .tech-items-wrapper {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
   align-items: center;
 }
 

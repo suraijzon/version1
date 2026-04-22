@@ -2,11 +2,9 @@
 import React, { useEffect } from 'react';
 import '../styles/whoweare.css';
 
-const importIcon = (iconName) => `/images/${iconName}.svg`;
-
 const WhoWeAreSection = () => {
 
-  // Drag scroll (KEEP SAME)
+  // Drag scroll
   useEffect(() => {
     const sliders = document.querySelectorAll('.tech-scroll-row');
 
@@ -42,54 +40,63 @@ const WhoWeAreSection = () => {
     });
   }, []);
 
-  // ✅ ONLY ONE ROW WITH SELECTED CARDS
   const rows = [
     [
       {
         title: 'Programming Languages',
+        cols: 6,
         items: [
-          { name: 'Java', icon: 'java' },
-          { name: 'JavaScript', icon: 'javascript' },
-          { name: 'TypeScript', icon: 'typescript' },
-          { name: 'Python', icon: 'python' },
-          { name: 'C#' , icon: 'cpp'},
-          { name: 'Php' , icon: 'php'},
+          { name: 'Java',       icon: '/images/java.svg' },
+          { name: 'JavaScript', icon: '/images/javascript.svg' },
+          { name: 'TypeScript', icon: '/images/typescript.svg' },
+          { name: 'Python',     icon: '/images/python.svg' },
+          { name: 'C#',         icon: '/images/cpp.svg' },
+          { name: 'PHP',        icon: '/images/php.svg' },
         ]
       },
       {
         title: 'Frameworks & Development',
+        cols: 6,
         items: [
-          { name: 'React', icon: 'react' },
-          { name: 'Next.js', icon: 'next' },
-          { name: '.Net', icon: 'vue' },
-          { name: 'Node.js', icon: 'node' },
-          { name: 'SpringBoot', icon: 'springboot' }
+          { name: 'React',       icon: '/images/react.svg' },
+          { name: 'Next.js',     icon: '/images/next.svg' },
+          { name: 'Angular',     icon: '/images/angular.svg' },
+          { name: 'Node.js',     icon: '/images/node.svg' },
+          { name: 'Spring Boot', icon: '/images/springboot.svg' },
+          { name: 'Vue.js',      icon: '/images/vue.svg' },
         ]
       },
       {
-        title: 'CMS & E-commerce',
+        title: 'CMS & E-Commerce',
+        cols: 5,
         items: [
-          { name: 'WordPress', icon: 'wordpress' },
-          { name: 'Shopify', icon: 'shopify' },
-          { name: 'WooCommerce', icon: 'woocommerce' }
+          { name: 'WordPress',   icon: '/images/wordpress.svg' },
+          { name: 'Shopify',     icon: '/images/shopify.svg' },
+          { name: 'WooCommerce', icon: '/images/woocommerce.svg' },
+          { name: 'Webflow',     icon: '/images/webflow.svg' },
+          { name: 'Magento',     icon: '/images/magento.svg' },
         ]
       },
       {
         title: 'Cloud & Infrastructure',
+        cols: 4,
         items: [
-          { name: 'AWS', icon: 'aws' },
-          { name: 'Docker', icon: 'docker' },
-          { name: 'Google Cloud', icon: 'googlecloud' }
+          { name: 'AWS',         icon: '/images/aws.svg' },
+          { name: 'Docker',      icon: '/images/docker.svg' },
+          { name: 'Google Cloud',icon: '/images/googlecloud.svg' },
+          { name: 'Kubernetes',  icon: '/images/kubernetes.svg' },
         ]
       },
       {
         title: 'AI & Automation',
+        cols: 4,
         items: [
-          { name: '.NET', icon: 'NET' },
-          { name: 'Chatbots', icon: 'chatbots' },
-          { name :'OpenAI', icon:'chatgpt'}
+          { name: 'OpenAI',      icon: '/images/chatgpt.svg' },
+          { name: 'Chatbots',    icon: '/images/chatbots.svg' },
+          { name: 'TensorFlow',  icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
+          { name: 'LangChain',   icon: '/images/chatgpt.svg' },
         ]
-      }
+      },
     ]
   ];
 
@@ -103,9 +110,9 @@ const WhoWeAreSection = () => {
             Who We Are & Why Choose <span className="highlight">Zonzoctech</span>
           </h2>
           <p className="whoweare-description">
-            At Zonzoctech, we're more than just a digital agency—we're your growth partner. 
-            With over a decade of experience, we specialize in building modern websites, 
-            boosting visibility through smart SEO, and integrating cutting-edge AI technologies 
+            At Zonzoctech, we're more than just a digital agency—we're your growth partner.
+            With over a decade of experience, we specialize in building modern websites,
+            boosting visibility through smart SEO, and integrating cutting-edge AI technologies
             to future-proof your business.
           </p>
           <h3 className='technologystack'>OUR TECHNOLOGY STACK</h3>
@@ -113,35 +120,36 @@ const WhoWeAreSection = () => {
 
         {/* SINGLE ROW */}
         <div className="tech-rows-container">
-          {rows.map((row, rowIndex) => {
-            return (
-              <div key={rowIndex} className="tech-scroll-row">
-                <div className={`tech-cards-track tech-cards-track-1`}>
-                  {row.map((category, categoryIndex) => (
-                    <div key={categoryIndex} className="tech-category-card">
-                      <h3 className="category-title">{category.title}</h3>
+          {rows.map((row, rowIndex) => (
+            <div key={rowIndex} className="tech-scroll-row">
+              <div className="tech-cards-track tech-cards-track-1">
+                {row.map((category, categoryIndex) => (
+                  <div key={categoryIndex} className="tech-category-card">
+                    <h3 className="category-title">{category.title}</h3>
 
-                      <div className="tech-items-wrapper">
-                        {category.items.map((tech, index) => (
-                          <div key={index} className="tech-item">
-                            <div className="tech-icon-circle">
-                              <img
-                                src={importIcon(tech.icon)}
-                                alt={tech.name}
-                                className="tech-svg-icon"
-                              />
-                            </div>
-                            <p className="tech-label">{tech.name}</p>
+                    <div
+                      className="tech-items-wrapper"
+                      style={{ gridTemplateColumns: `repeat(${category.cols}, 1fr)` }}
+                    >
+                      {category.items.map((tech, index) => (
+                        <div key={index} className="tech-item">
+                          <div className="tech-icon-circle">
+                            <img
+                              src={tech.icon}
+                              alt={tech.name}
+                              className="tech-svg-icon"
+                            />
                           </div>
-                        ))}
-                      </div>
-
+                          <p className="tech-label">{tech.name}</p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+
+                  </div>
+                ))}
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
       </div>

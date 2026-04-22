@@ -77,41 +77,33 @@ const WhyChooseSection = () => {
         </div>
 
         {/* Right Content */}
-        <div className="why-choose-right">
-          
-          {/* Stats Card */}
-          <div className="stats-card">
-            <div className="stats-grid">
-              <div className="stat-item">
-                <p className="stat-number">120+</p>
-                <p className="stat-label">Clients Served</p>
-              </div>
-              <div className="stat-item">
-                <p className="stat-number">150+</p>
-                <p className="stat-label">Projects Delivered</p>
-              </div>
-              <div className="stat-item">
-                <p className="stat-number">35%</p>
-                <p className="stat-label">Avg Client Growth</p>
-              </div>
-              <div className="stat-item">
-                <p className="stat-number">4.9★</p>
-                <p className="stat-label">Client Rating</p>
-              </div>
-            </div>
-          </div>
+        <div className="whyus-right">
 
           <img
             src="/images/growth-illustration.jpg"
             alt="Digital Growth Analytics Illustration"
-            style={{
-              width: '100%',
-              maxWidth: '500px',
-              height: 'auto',
-              display: 'block',
-              margin: '0 auto'
-            }}
+            className="whyus-illustration"
           />
+
+          {/* Stats Card */}
+          <div className="whyus-stats-card">
+            <div className="stat-item">
+              <p className="stat-number">120+</p>
+              <p className="stat-label">Clients Served</p>
+            </div>
+            <div className="stat-item">
+              <p className="stat-number">150+</p>
+              <p className="stat-label">Projects Delivered</p>
+            </div>
+            <div className="stat-item">
+              <p className="stat-number">35%</p>
+              <p className="stat-label">Avg Client Growth</p>
+            </div>
+            <div className="stat-item">
+              <p className="stat-number">4.9★</p>
+              <p className="stat-label">Client Rating</p>
+            </div>
+          </div>
 
         </div>
 

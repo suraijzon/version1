@@ -131,8 +131,8 @@
 
 .stats-card {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 40px;
+  left: -20px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 16px;

@@ -3,7 +3,7 @@ import '@/src/styles/CaseStudyPage.css';
 
 export const metadata = {
   title: 'Basildon ACR Case Study | ZonzocTech',
-  description: 'How ZonzocTech helped Basildon ACR establish a strong online presence and generate consistent leads through a full website redesign and local SEO.',
+  description: 'How ZonzocTech took Basildon ACR from poor SEO and weak design to page 1 Google rankings — full website redesign, WooCommerce, and ongoing SEO management.',
   alternates: { canonical: 'https://zonzoctech.com/case-studies/basildon-acr' },
 };
 
@@ -15,15 +15,17 @@ export default function BasildonACRCaseStudy() {
       <section className="cs__hero">
         <div className="cs__hero_inner">
           <span className="cs__eyebrow">Case Study</span>
-          <h1 className="cs__hero_title">Basildon ACR</h1>
+          <h1 className="cs__hero_title">
+            How We Took Basildon ACR from Poor SEO to Page 1 Rankings — and Built Their Entire Digital Presence from Scratch
+          </h1>
           <p className="cs__hero_sub">
-            Full website redesign and local SEO for a UK-based air conditioning &amp; refrigeration specialist — turning zero online presence into a consistent lead pipeline.
+            Full website redesign + ongoing SEO management for a UK air conditioning specialist — from struggling online to dominating local search.
           </p>
           <div className="cs__tags">
-            <span className="cs__tag">Website Design</span>
+            <span className="cs__tag">WordPress</span>
+            <span className="cs__tag">WooCommerce</span>
             <span className="cs__tag">Local SEO</span>
-            <span className="cs__tag">Lead Generation</span>
-            <span className="cs__tag">Performance Optimisation</span>
+            <span className="cs__tag">Ongoing Management</span>
           </div>
           <div className="cs__hero_links">
             <a href="https://basildonacr.co.uk" target="_blank" rel="noopener noreferrer" className="cs__live_btn">
@@ -38,9 +40,9 @@ export default function BasildonACRCaseStudy() {
       <section className="cs__section">
         <div className="cs__container">
           <div className="cs__gallery">
-            <img src="/images/projects/basildon-acr-1.png" alt="Basildon ACR homepage" className="cs__gallery_img" />
-            <img src="/images/projects/basildon-acr-2.png" alt="Basildon ACR services page" className="cs__gallery_img" />
-            <img src="/images/projects/basildon-acr-3.png" alt="Basildon ACR contact page" className="cs__gallery_img" />
+            <img src="/images/projects/basildon-acr-1.png" alt="Basildon ACR homepage redesign" className="cs__gallery_img" />
+            <img src="/images/projects/basildon-acr-2.png" alt="Basildon ACR product catalogue" className="cs__gallery_img" />
+            <img src="/images/projects/basildon-acr-3.png" alt="Basildon ACR location pages" className="cs__gallery_img" />
           </div>
         </div>
       </section>
@@ -50,71 +52,92 @@ export default function BasildonACRCaseStudy() {
         <div className="cs__container">
           <h2 className="cs__heading">The Challenge</h2>
           <p className="cs__subtext">
-            Basildon ACR had years of expertise but no digital footprint. Every new customer came through word of mouth, and competitors with modern websites were winning the jobs.
+            When Basildon ACR came to us in 2024, they had a website that wasn't working. Poor SEO, weak design, no local visibility and competitors outranking them for every important search term in their market.
           </p>
           <div className="cs__challenge_grid">
             <div className="cs__challenge_box">
               <h3>Problems We Found</h3>
               <ul>
-                <li>No website — completely invisible online</li>
-                <li>Zero Google Business presence or local rankings</li>
-                <li>Losing enquiries to competitors with basic web presence</li>
-                <li>No way for potential customers to verify credibility</li>
-                <li>No structured way to capture and respond to leads</li>
+                <li>Poor SEO across all key pages</li>
+                <li>Weak website design losing customers</li>
+                <li>Zero page 1 rankings for local terms</li>
+                <li>No trade account system</li>
+                <li>Losing enquiries to competitors daily</li>
               </ul>
             </div>
             <div className="cs__challenge_box">
-              <h3>Our Goals</h3>
+              <h3>What Needed to Change</h3>
               <ul>
-                <li>Build a fast, professional website from scratch</li>
-                <li>Rank on Google for local HVAC and ACR searches</li>
-                <li>Create a clear service structure with easy quote requests</li>
-                <li>Establish trust through credentials, reviews, and imagery</li>
-                <li>Generate consistent inbound enquiries within 90 days</li>
+                <li>Complete website redesign from the ground up</li>
+                <li>Full product catalogue with brand and category pages</li>
+                <li>Local SEO to rank across their service areas</li>
+                <li>Trade login and account system for B2B customers</li>
+                <li>A long-term SEO management plan to stay on top</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* WHAT WE BUILT */}
+      {/* WHAT WE DID */}
       <section className="cs__section">
         <div className="cs__container">
-          <h2 className="cs__heading">What We Built</h2>
+          <h2 className="cs__heading">What We Did</h2>
           <p className="cs__subtext">
-            A complete digital foundation — designed to rank, convert, and scale.
+            A complete rebuild — website, catalogue, SEO, and ongoing management — all under one roof.
           </p>
           <div className="cs__built_grid">
             <div className="cs__built_item">
               <div className="cs__built_icon">🌐</div>
-              <h4>Modern Responsive Website</h4>
-              <p>Fast-loading, mobile-first website built with clean code and structured service pages covering installation, maintenance, and emergency callouts.</p>
+              <h4>Complete Website Redesign</h4>
+              <p>Full WordPress + WooCommerce rebuild from scratch — mobile-first responsive design, SSL, security, and hosting setup included.</p>
+            </div>
+            <div className="cs__built_item">
+              <div className="cs__built_icon">🗂️</div>
+              <h4>Multi-Category Product Catalogue</h4>
+              <p>Structured product catalogue covering Wall Mount, Floor Mount, Ceiling Cassette, Multi Split, Ducted, and VRF systems — easy to browse and buy.</p>
+            </div>
+            <div className="cs__built_item">
+              <div className="cs__built_icon">🏷️</div>
+              <h4>10+ Brand Pages</h4>
+              <p>Dedicated brand pages for Daikin, Mitsubishi, Samsung, Toshiba, Fujitsu and more — each optimised to rank for brand-specific search terms.</p>
+            </div>
+            <div className="cs__built_item">
+              <div className="cs__built_icon">🔐</div>
+              <h4>Trade Login &amp; Account System</h4>
+              <p>Trade portal with account creation, login, and trade-specific pricing — giving B2B customers a dedicated experience.</p>
             </div>
             <div className="cs__built_item">
               <div className="cs__built_icon">📍</div>
-              <h4>Local SEO Setup</h4>
-              <p>Google Business Profile optimisation, local keyword targeting, structured data markup, and location-specific landing pages to dominate Essex search results.</p>
+              <h4>Location Pages</h4>
+              <p>Dedicated location pages built for London, Peterborough, and Kent — each targeting local search terms to capture customers across their service areas.</p>
+            </div>
+            <div className="cs__built_item">
+              <div className="cs__built_icon">🔍</div>
+              <h4>Full SEO Overhaul</h4>
+              <p>Complete on-page SEO for all pages, local keyword targeting, Google Business Profile optimisation, and technical SEO fixes throughout the site.</p>
             </div>
             <div className="cs__built_item">
               <div className="cs__built_icon">📋</div>
-              <h4>Quote Request System</h4>
-              <p>Integrated contact and quote forms with service selection, direct email delivery, and clear calls-to-action on every page.</p>
+              <h4>Enquiry &amp; Quote Forms</h4>
+              <p>Custom enquiry and quote request forms across key product and service pages — capturing leads 24/7 and routing them directly to the team.</p>
             </div>
             <div className="cs__built_item">
-              <div className="cs__built_icon">⚡</div>
-              <h4>Performance Optimisation</h4>
-              <p>Image compression, lazy loading, and caching strategies delivering 95+ Lighthouse scores for speed and accessibility.</p>
+              <div className="cs__built_icon">🔄</div>
+              <h4>Ongoing Monthly Management</h4>
+              <p>Product updates and additions, security and plugin updates, SEO monitoring and improvements, and performance optimisation — every month, without fail.</p>
             </div>
-            <div className="cs__built_item">
-              <div className="cs__built_icon">🔒</div>
-              <h4>SSL &amp; Security</h4>
-              <p>Full SSL certificate setup, secure hosting configuration, and automated uptime monitoring to keep the site always online.</p>
-            </div>
-            <div className="cs__built_item">
-              <div className="cs__built_icon">📸</div>
-              <h4>Portfolio &amp; Credentials</h4>
-              <p>Project gallery, certifications display, and client testimonial section to build immediate trust with new visitors.</p>
-            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* EXTRA GALLERY */}
+      <section className="cs__section cs__section--alt">
+        <div className="cs__container">
+          <div className="cs__gallery">
+            <img src="/images/projects/basildon-acr-4.png" alt="Basildon ACR brand pages" className="cs__gallery_img" />
+            <img src="/images/projects/basildon-acr-5.png" alt="Basildon ACR trade portal" className="cs__gallery_img" />
+            <img src="/images/projects/basildon-acr-6.png" alt="Basildon ACR mobile view" className="cs__gallery_img" />
           </div>
         </div>
       </section>
@@ -124,37 +147,34 @@ export default function BasildonACRCaseStudy() {
         <div className="cs__container">
           <h2 className="cs__heading cs__heading--white">The Results</h2>
           <p className="cs__subtext cs__subtext--white">
-            Within 90 days of launch, Basildon ACR went from invisible to consistently booked.
+            From struggling online to dominating local search — with an ongoing partnership that keeps growing.
           </p>
           <div className="cs__results_grid">
             <div className="cs__result_card">
-              <div className="cs__result_number">3×</div>
-              <div className="cs__result_label">More monthly enquiries vs word-of-mouth alone</div>
-            </div>
-            <div className="cs__result_card">
               <div className="cs__result_number">Page 1</div>
-              <div className="cs__result_label">Google ranking for key local HVAC searches</div>
+              <div className="cs__result_label">Google rankings for all major keywords</div>
             </div>
             <div className="cs__result_card">
-              <div className="cs__result_number">95+</div>
-              <div className="cs__result_label">Lighthouse performance score at launch</div>
+              <div className="cs__result_number">10+</div>
+              <div className="cs__result_label">Brand category pages ranking in search</div>
             </div>
             <div className="cs__result_card">
-              <div className="cs__result_number">90</div>
-              <div className="cs__result_label">Days from zero presence to first organic leads</div>
+              <div className="cs__result_number">3</div>
+              <div className="cs__result_label">Location pages live and indexed (London, Peterborough, Kent)</div>
+            </div>
+            <div className="cs__result_card">
+              <div className="cs__result_number">2024</div>
+              <div className="cs__result_label">Ongoing retainer client — still managing today</div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* EXTRA GALLERY */}
-      <section className="cs__section cs__section--alt">
-        <div className="cs__container">
-          <h2 className="cs__heading">More Screens</h2>
-          <div className="cs__gallery">
-            <img src="/images/projects/basildon-acr-4.png" alt="Basildon ACR mobile view" className="cs__gallery_img" />
-            <img src="/images/projects/basildon-acr-5.png" alt="Basildon ACR services detail" className="cs__gallery_img" />
-            <img src="/images/projects/basildon-acr-6.png" alt="Basildon ACR about page" className="cs__gallery_img" />
+          <div className="cs__results_checklist">
+            <div className="cs__check_item">✅ All major keywords now on Page 1 Google</div>
+            <div className="cs__check_item">✅ Complete website built from zero</div>
+            <div className="cs__check_item">✅ Trade portal live and operational</div>
+            <div className="cs__check_item">✅ 10+ brand category pages ranking</div>
+            <div className="cs__check_item">✅ Multiple location pages indexed</div>
+            <div className="cs__check_item">✅ Ongoing client since 2024</div>
           </div>
         </div>
       </section>
@@ -162,9 +182,9 @@ export default function BasildonACRCaseStudy() {
       {/* CTA */}
       <section className="cs__cta_section">
         <div className="cs__container">
-          <h2 className="cs__cta_heading">Ready to Build Your Online Presence?</h2>
+          <h2 className="cs__cta_heading">Need a website built from scratch with SEO that actually works?</h2>
           <p className="cs__cta_text">
-            Whether you're starting from scratch or need a complete redesign, we'll get you ranking and converting in months, not years.
+            We did it for Basildon ACR — we can do it for you.
           </p>
           <Link href="/contact" className="cs__cta_btn">Start Your Project →</Link>
         </div>

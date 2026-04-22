@@ -7,56 +7,46 @@ const SuccessSection = () => {
   const router = useRouter();
   const projects = [
     {
-      id: 2,
-      name: "Aviation Management System",
-      desc: "Comprehensive aviation management platform with real-time flight tracking, task management, and crew scheduling.",
-      extra: [
-        { text: "Angular", Background: "#0047ab" },
-        { text: "Firebase", Background: "#ff6b91" },
-        { text: "Flightaware APIs", Background: "#1e8449" },
-        { text: "MongoDB", Background: "#00bfc1" },
-        { text: "Node.js", Background: "#ff7300ff" },
-      ],
-      img: "/images/aviation.png",
+      slug: "basildon-acr",
+      name: "Basildon ACR",
+      desc: "Full website redesign and local SEO for a UK air conditioning & refrigeration specialist — from zero online presence to page 1 rankings.",
+      extra: ["Website Design", "Local SEO", "Lead Generation"],
+      img: "/images/projects/basildon-acr-1.png",
     },
     {
-      id: 3,
-      name: "Fleet Management System",
-      desc: "Comprehensive platform for real-time fleet tracking, rider management, and performance analytics.",
-      extra: [
-        { text: "React", Background: "#0047ab" },
-        { text: "Java", Background: "#ff6b91" },
-        { text: "Spring Boot", Background: "#00bfc1" },
-        { text: "Next.js", Background: "#ff7300ff" },
-        { text: "Google Maps APIs", Background: "#1e8449" },
-      ],
-      img: "/images/fleet-management.png",
+      slug: "asj-hardscapes",
+      name: "ASJ Hardscapes",
+      desc: "Professional website and local SEO for a UK hardscaping company — turning word-of-mouth reliance into 5× more online enquiries.",
+      extra: ["Website Design", "Local SEO", "Portfolio Gallery"],
+      img: "/images/projects/asj-hardscapes-1.png",
     },
     {
-      id: 4,
-      name: "E-Commerce System",
-      desc: "Developed the admin portal, vendor portal, user mobile app, and vendor mobile app to manage the system.",
-      extra: [
-        { text: "Angular", Background: "#0047ab" },
-        { text: "Java(Android Studio)", Background: "#ff7300ff" },
-        { text: "Swift", Background: "#ff6b91" },
-        { text: "Node.js", Background: "#00bfc1" },
-        { text: "MongoDB", Background: "#1e8449" },
-        { text: "Firebase", Background: "#d90e0eff" },
-      ],
-      img: "/images/lvita.jpg",
+      slug: "frau-rauchfrei",
+      name: "Frau Rauchfrei",
+      desc: "End-to-end website security, performance optimisation, and ongoing maintenance for a German health platform — 99.9% uptime, zero incidents.",
+      extra: ["Web Security", "Maintenance", "Performance"],
+      img: "/images/projects/frau-rauchfrei-1.png",
     },
-     {
-      id: 6,
-      name: "Website Maintenance and Web Security",
-      desc: "We executed end-to-end website development for frau-rauchfrei.de, implementing strong security protocols, performance optimization, and ongoing protection against vulnerabilities.",
-      extra: [
-        { text: "React", Background: "#0047ab" },
-        { text: "Java", Background: "#ff6b91" },
-        { text: "Spring Boot", Background: "#00bfc1" },
-        { text: "Next.js", Background: "#ff7300ff" },
-      ],
-      img: "/images/websitemaintence.jpeg",
+    {
+      slug: "vitamina-project",
+      name: "Vitamina Project",
+      desc: "Complete multi-vendor e-commerce ecosystem — admin portal, vendor portal, iOS and Android apps — built to handle a marketplace at scale.",
+      extra: ["E-Commerce", "Mobile Apps", "Angular", "Node.js"],
+      img: "/images/projects/vitamina-project-1.png",
+    },
+    {
+      slug: "koning-bamboe",
+      name: "Koning Bamboe",
+      desc: "Full website rebuild for a Dutch bamboo brand — 60% more organic traffic, 40% faster load times, and a clean new product catalogue.",
+      extra: ["Website Development", "SEO", "Performance"],
+      img: "/images/projects/koning-bamboe-1.png",
+    },
+    {
+      slug: "best-life-nl",
+      name: "Best Life NL",
+      desc: "Brand-first website and SEO content strategy for a Dutch lifestyle brand — doubling session duration and growing a loyal subscriber base.",
+      extra: ["Website Design", "Content Strategy", "SEO"],
+      img: "/images/projects/best-life-nl-1.png",
     },
   ];
 
@@ -71,7 +61,7 @@ const SuccessSection = () => {
         </h2>
 
         <p className="success-subtitle">
-          See how we’ve helped businesses increase traffic, generate leads and
+          See how we've helped businesses increase traffic, generate leads and
           <br />
           boost conversions through SEO, high-performing websites, and smart automation.
         </p>
@@ -80,9 +70,9 @@ const SuccessSection = () => {
       <div className="projects-grid">
         {projects.map((project) => (
           <div
-            key={project.id}
+            key={project.slug}
             className="project-card"
-            onClick={() => router.push(`/project/${project.id}`)}
+            onClick={() => router.push(`/case-studies/${project.slug}`)}
           >
             <img
               src={project.img}
@@ -93,8 +83,8 @@ const SuccessSection = () => {
               <h3 className="project-title">{project.name}</h3>
               <p className="project-desc">{project.desc}</p>
               <div className="project-extra">
-                {project.extra.map((item, idx) => (
-                  <span key={idx}>{item.text}</span>
+                {project.extra.map((tag, idx) => (
+                  <span key={idx}>{tag}</span>
                 ))}
               </div>
             </div>

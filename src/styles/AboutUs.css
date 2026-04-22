@@ -5,20 +5,19 @@
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  font-family: Poppins;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Hero Section */
 .abt__hero {
   position: relative;
-  background: linear-gradient(135deg, #0666d4 0%, #0891b2 50%, #0e1290 100%);
+  background: linear-gradient(135deg, #003070 0%, #00448f 100%);
   min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 100px 24px;
   overflow: hidden;
-  
 }
 
 .abt__hero_bg {
@@ -27,9 +26,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.2) 0%, transparent 50%);
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
 }
 
 .abt__hero_container {
@@ -42,29 +41,30 @@
 }
 
 .abt__hero_title {
-  font-size: 4rem;
-  font-weight: 900;
+  font-size: 52px;
+  font-weight: 800;
   margin-bottom: 1rem;
+  line-height: 1.15;
 }
 
 .abt__hero_subtitle {
-  font-size: 2rem;
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 2rem;
-  opacity: 0.95;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .abt__hero_description {
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .abt__hero_mission {
-  font-size: 1.15rem;
+  font-size: 18px;
   line-height: 1.7;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.85);
   max-width: 900px;
   margin: 0 auto;
 }
@@ -73,56 +73,58 @@
 .abt__container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 24px;
 }
 
 /* Common Styles */
 .abt__heading {
-  font-size: 2.8rem;
+  font-size: 40px;
+  font-weight: 800;
+  color: #0a0a0a;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.abt__subheading {
+  font-size: 24px;
   font-weight: 700;
-  color: #004880;
+  color: #00448f;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.abt__subheading {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #0891b2;
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
 /* Who We Are Section */
 .abt__who_section {
-  padding: 3rem 0;
-  background: linear-gradient(180deg, #ffffff 0%, #ecfeff 100%);
+  padding: 100px 0;
+  background: #f8faff;
 }
 
 .abt__who_content {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .abt__who_text {
-  font-size: 1.2rem;
-  color: #334155;
-  line-height: 1.8;
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.7;
   text-align: center;
   margin-bottom: 3rem;
 }
 
 .abt__who_box {
   background: #ffffff;
-  border: 3px solid #06b6d4;
-  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
   padding: 3rem;
   margin-bottom: 3rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 .abt__who_box h3 {
-  font-size: 1.5rem;
-  color: #0e7490;
+  font-size: 24px;
+  color: #0a0a0a;
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 700;
@@ -139,53 +141,54 @@
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+  background: #f8faff;
   border-radius: 12px;
-  border-left: 4px solid #06b6d4;
+  border: 1px solid #e2e8f0;
 }
 
 .abt__want_icon {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .abt__want_text {
-  font-size: 1.05rem;
-  color: #334155;
+  font-size: 15px;
+  color: #0a0a0a;
   font-weight: 500;
 }
 
 .abt__who_footer {
-  font-size: 1.3rem;
-  color: #06b6d4;
+  font-size: 16px;
+  color: #00448f;
   text-align: center;
   font-weight: 700;
 }
 
 /* What Makes Us Different */
 .abt__different_section {
-  padding: 3rem 0;
+  padding: 100px 0;
   background: #ffffff;
 }
 
 .abt__different_intro {
-  font-size: 1.3rem;
-  color: #334155;
+  font-size: 16px;
+  color: #6b7280;
   text-align: center;
   margin-bottom: 3rem;
-  
+  line-height: 1.7;
 }
 
 .abt__advantage_box {
-  background: linear-gradient(135deg, #ecfeff 0%, #ffffff 100%);
-  border: 2px solid #06b6d4;
-  border-radius: 20px;
+  background: #f8faff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
   padding: 3rem;
   margin-bottom: 3rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 .abt__advantage_box h3 {
-  font-size: 1.5rem;
-  color: #0e7490;
+  font-size: 24px;
+  color: #0a0a0a;
   margin-bottom: 2rem;
   text-align: center;
   font-weight: 700;
@@ -203,34 +206,34 @@
   gap: 1rem;
   padding: 1.2rem;
   background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(6, 182, 212, 0.1);
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .abt__advantage_dot {
   width: 12px;
   height: 12px;
-  background: #06b6d4;
+  background: #00448f;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
 .abt__advantage_item span:last-child {
-  font-size: 1.05rem;
-  color: #334155;
+  font-size: 15px;
+  color: #0a0a0a;
   font-weight: 500;
 }
 
 .abt__solutions_banner {
-  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  background: linear-gradient(135deg, #003070 0%, #00448f 100%);
   color: #ffffff;
   padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+  border-radius: 16px;
 }
 
 .abt__solutions_banner h3 {
-  font-size: 1.5rem;
+  font-size: 24px;
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 700;
@@ -239,7 +242,7 @@
 .abt__solutions_grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -247,84 +250,84 @@
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 0.8rem 1.5rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .abt__solution_icon {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .abt__solution_text {
-  font-size: 1.1rem;
+  font-size: 15px;
   font-weight: 600;
 }
 
 /* Services Section */
 .abt__services_section {
-  padding: 3rem 0;
-  background: linear-gradient(180deg, #ecfeff 0%, #ffffff 100%);
+  padding: 100px 0;
+  background: #f8faff;
 }
 
 .abt__services_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  gap: 24px;
   margin: 3rem 0;
 }
 
 .abt__service_card {
   background: #ffffff;
-  border: 2px solid #a5f3fc;
-  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
   padding: 2rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  transition: all 0.3s;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 .abt__service_card:hover {
-  border-color: #06b6d4;
+  border-color: #00448f;
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 68, 143, 0.12);
 }
 
 .abt__service_number {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #003070 0%, #00448f 100%);
   color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   flex-shrink: 0;
-  box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
 }
 
 .abt__service_card p {
-  font-size: 1.05rem;
-  color: #334155;
+  font-size: 16px;
+  color: #0a0a0a;
   font-weight: 500;
 }
 
 .abt__services_note {
   text-align: center;
-  font-size: 1.2rem;
-  color: #06b6d4;
+  font-size: 16px;
+  color: #00448f;
   font-weight: 600;
   margin-top: 3rem;
 }
 
 /* Approach Section */
 .abt__approach_section {
-  padding: 3rem 0;
+  padding: 100px 0;
   background: #ffffff;
 }
 
@@ -341,7 +344,7 @@
   top: 0;
   bottom: 0;
   width: 3px;
-  background: linear-gradient(180deg, #06b6d4 0%, #0891b2 100%);
+  background: linear-gradient(180deg, #003070 0%, #00448f 100%);
 }
 
 .abt__approach_step {
@@ -354,46 +357,45 @@
 .abt__step_number {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  background: linear-gradient(135deg, #003070 0%, #00448f 100%);
   color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
   flex-shrink: 0;
-  box-shadow: 0 5px 20px rgba(6, 182, 212, 0.3);
   z-index: 1;
 }
 
 .abt__step_content {
   flex: 1;
-  background: linear-gradient(135deg, #ecfeff 0%, #ffffff 100%);
+  background: #ffffff;
   padding: 2rem;
-  border-radius: 12px;
-  border-left: 4px solid #06b6d4 !important;
-  border: 1px solid #06b6d4;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #00448f;
 }
 
 .abt__step_content h3 {
-  font-size: 1.5rem;
-  color: #0e7490;
+  font-size: 20px;
+  color: #0a0a0a;
   margin-bottom: 0.8rem;
   font-weight: 700;
 }
 
 .abt__step_content p {
-  font-size: 1.05rem;
-  color: #64748b;
+  font-size: 16px;
+  color: #6b7280;
   line-height: 1.7;
 }
 
 /* Future Section */
 .abt__future_section {
-  padding: 3rem 0;
-  background: linear-gradient(135deg, #164e63 0%, #0e7490 100%);
+  padding: 100px 0;
+  background: linear-gradient(135deg, #003070 0%, #00448f 100%);
   color: #ffffff;
 }
 
@@ -402,23 +404,24 @@
 }
 
 .abt__future_intro {
-  font-size: 1.2rem;
+  font-size: 16px;
   text-align: center;
   margin-bottom: 3rem;
-  opacity: 0.95;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
 }
 
 .abt__future_box {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
   padding: 3rem;
   margin-bottom: 3rem;
 }
 
 .abt__future_box h3 {
-  font-size: 1.5rem;
+  font-size: 24px;
   text-align: center;
   margin-bottom: 2rem;
   font-weight: 700;
@@ -435,125 +438,127 @@
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 15px;
   font-weight: 600;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .abt__future_footer {
-  font-size: 1.3rem;
+  font-size: 18px;
   text-align: center;
   font-weight: 700;
 }
 
 /* Clients Section */
 .abt__clients_section {
-  padding: 3rem 0;
-  background: linear-gradient(180deg, #ffffff 0%, #ecfeff 100%);
+  padding: 100px 0;
+  background: #f8faff;
 }
 
 .abt__clients_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 24px;
   margin: 3rem 0;
 }
 
 .abt__client_card {
   background: #ffffff;
-  border: 2px solid #a5f3fc;
-  border-radius: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
   padding: 2rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  transition: all 0.3s;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 .abt__client_card:hover {
-  border-color: #06b6d4;
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.2);
+  border-color: #00448f;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 68, 143, 0.12);
 }
 
 .abt__client_icon {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  background: linear-gradient(135deg, #003070 0%, #00448f 100%);
   color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .abt__client_card p {
-  font-size: 1.05rem;
-  color: #334155;
+  font-size: 15px;
+  color: #0a0a0a;
   font-weight: 500;
 }
 
 .abt__clients_footer {
   text-align: center;
-  font-size: 1.3rem;
-  color: #06b6d4;
+  font-size: 16px;
+  color: #00448f;
   font-weight: 700;
   margin-top: 3rem;
 }
 
 /* Values Section */
 .abt__values_section {
-  padding: 3rem 0;
+  padding: 100px 0;
   background: #ffffff;
 }
 
 .abt__values_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 24px;
   margin-top: 3rem;
 }
 
 .abt__value_card {
-  background: linear-gradient(135deg, #ecfeff 0%, #ffffff 100%);
-  border: 2px solid #a5f3fc;
-  border-radius: 15px;
-  padding: 2.5rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 2rem;
   text-align: center;
-  transition: all 0.3s;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 .abt__value_card:hover {
-  border-color: #06b6d4;
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(6, 182, 212, 0.2);
+  border-color: #00448f;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0, 68, 143, 0.12);
 }
 
 .abt__value_icon {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
 }
 
 .abt__value_title {
-  font-size: 1.5rem;
-  color: #0e7490;
+  font-size: 20px;
+  color: #0a0a0a;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .abt__value_desc {
-  font-size: 1.05rem;
-  color: #64748b;
-  line-height: 1.6;
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.7;
 }
 
 /* Why Section */
 .abt__why_section {
-  padding: 3rem 0;
-  background: linear-gradient(180deg, #ecfeff 0%, #ffffff 100%);
+  padding: 100px 0;
+  background: #f8faff;
 }
 
 .abt__why_list {
@@ -568,49 +573,49 @@
   padding: 1.8rem;
   margin-bottom: 1.5rem;
   background: #ffffff;
-  border-left: 5px solid #06b6d4 !important;
-  border-right: 5px solid #06b6d4 !important;
-  border: 1px solid #06b6d4;
-  border-radius: 12px;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
 }
 
 .abt__why_item:hover {
-  transform: translateX(15px);
-  box-shadow: 0 8px 25px rgba(6, 182, 212, 0.2);
+  transform: translateX(8px);
+  box-shadow: 0 8px 32px rgba(0, 68, 143, 0.12);
+  border-color: #00448f;
 }
 
 .abt__why_check {
-  font-size: 1.5rem;
-  color: #06b6d4;
+  font-size: 1.3rem;
+  color: #00448f;
   font-weight: 700;
 }
 
 .abt__why_item span:last-child {
-  font-size: 1.1rem;
-  color: #334155;
+  font-size: 16px;
+  color: #0a0a0a;
   font-weight: 500;
 }
 
 /* CTA Section */
 .abt__cta_section {
-  padding: 3rem 2rem;
-  background: linear-gradient(135deg, #0651d4 0%, #0891b2 100%);
+  padding: 100px 24px;
+  background: linear-gradient(135deg, #003070 0%, #00448f 100%);
   text-align: center;
   color: #ffffff;
 }
 
 .abt__cta_title {
-  font-size: 3.5rem;
+  font-size: 48px;
   font-weight: 800;
   margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 .abt__cta_text {
-  font-size: 1.25rem;
+  font-size: 18px;
   margin-bottom: 3rem;
-  opacity: 0.95;
+  color: rgba(255, 255, 255, 0.85);
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -619,58 +624,60 @@
 
 .abt__cta_buttons {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .abt__cta_btn {
   display: inline-block;
-  padding: 1.3rem 3rem;
-  border-radius: 50px;
+  padding: 14px 32px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.15rem;
-  transition: all 0.3s;
+  font-size: 16px;
+  transition: all 0.2s ease;
 }
 
 .abt__cta_primary {
   background: #ffffff;
-  color: #004880;
-  border: 2px solid #004880;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: #00448f;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .abt__cta_primary:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
 }
 
 .abt__cta_secondary {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  border: 2px solid #ffffff;
-  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .abt__cta_secondary:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.25);
   transform: translateY(-3px);
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 768px) {
+  .abt__hero {
+    padding: 60px 20px;
+  }
+
   .abt__hero_title {
-    font-size: 2.5rem;
+    font-size: 36px;
     margin-top: 1rem;
   }
 
   .abt__hero_subtitle {
-    font-size: 1.5rem;
+    font-size: 20px;
   }
 
   .abt__heading {
-    font-size: 2.2rem;
+    font-size: 28px;
   }
 
   .abt__wants_grid,
@@ -690,32 +697,36 @@
     left: 30px;
   }
 
+  .abt__cta_section {
+    padding: 60px 20px;
+  }
+
   .abt__cta_title {
-    font-size: 2.5rem;
+    font-size: 32px;
   }
 
   .abt__cta_buttons {
     flex-direction: column;
     align-items: stretch;
   }
+
   .abt__cta_btn {
-    font-size: 14px !important;
+    text-align: center;
+  }
+
+  .abt__who_section,
+  .abt__different_section,
+  .abt__services_section,
+  .abt__approach_section,
+  .abt__future_section,
+  .abt__clients_section,
+  .abt__values_section,
+  .abt__why_section {
+    padding: 60px 0;
   }
 }
 
 @media (max-width: 480px) {
-  .abt__hero {
-    padding: 4rem 1rem;
-  }
-
-  .abt__hero_title {
-    font-size: 2rem;
-  }
-
-  .abt__container {
-    padding: 0 1rem;
-  }
-
   .abt__who_box,
   .abt__advantage_box,
   .abt__future_box {

@@ -151,7 +151,7 @@ const Navbar = () => {
                 Services ▾
               </button>
 
-              <div className="navbar-dropdown-menu" {...dropdownContentHoverProps}>
+              <div className={`navbar-dropdown-menu${activeDropdown === 1 ? ' open' : ''}`} {...dropdownContentHoverProps}>
                 <div className="dropdown-section">
                   <h6>WEB & AI DEVELOPMENT</h6>
                   <Link href="/ai-web-application-development">AI Web Development</Link>

@@ -101,6 +101,18 @@ const WhyChooseSection = () => {
             </div>
           </div>
 
+          <img
+            src="/images/growth-illustration.png"
+            alt="Digital Growth Analytics Illustration"
+            style={{
+              width: '100%',
+              maxWidth: '500px',
+              height: 'auto',
+              display: 'block',
+              margin: '0 auto'
+            }}
+          />
+
         </div>
 
       </div>

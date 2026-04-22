@@ -7,18 +7,6 @@ const SuccessSection = () => {
   const router = useRouter();
   const projects = [
     {
-      id: 1,
-      name: "E-Commerce Website",
-      desc: "Shopify-based platform for healthy products with seamless API integration.",
-      extra: [
-        { text: "Shopify", Background: "#0047ab" },
-        { text: "Shopify APIs", Background: "#ff6b91" },
-        { text: "Laravel", Background: "#00bfc1" },
-        { text: "Boostrap", Background: "#ff7300ff" },
-      ],
-      img: "/images/healthyfit.png",
-    },
-    {
       id: 2,
       name: "Aviation Management System",
       desc: "Comprehensive aviation management platform with real-time flight tracking, task management, and crew scheduling.",
@@ -59,19 +47,6 @@ const SuccessSection = () => {
       img: "/images/lvita.jpg",
     },
      {
-      id: 5,
-      name: "Search Engine Optimization",
-      desc: "Through comprehensive on-page, technical, and content SEO, we enhanced CookerAndLooker’s search presence and authority, driving sustainable organic growth.",
-      extra: [
-        { text: "React", Background: "#0047ab" },
-        { text: "Java", Background: "#ff6b91" },
-        { text: "Spring Boot", Background: "#00bfc1" },
-        { text: "Next.js", Background: "#ff7300ff" },
-        { text: "MongoDB", Background: "#1e8449" },
-      ],
-      img: "/images/searchengine.jpeg",
-    },
-     {
       id: 6,
       name: "Website Maintenance and Web Security",
       desc: "We executed end-to-end website development for frau-rauchfrei.de, implementing strong security protocols, performance optimization, and ongoing protection against vulnerabilities.",
@@ -82,18 +57,6 @@ const SuccessSection = () => {
         { text: "Next.js", Background: "#ff7300ff" },
       ],
       img: "/images/websitemaintence.jpeg",
-    },
-     {
-      id: 7,
-      name: "Website Development",
-      desc: "We completely redesigned and developed koningbamboe.nl with advanced features, enhanced functionality, and significantly improved performance—delivering a faster, smarter, and more scalable digital experience.",
-      extra: [
-        { text: "React", Background: "#0047ab" },
-        { text: "Java", Background: "#ff6b91" },
-        { text: "Spring Boot", Background: "#00bfc1" },
-        { text: "Next.js", Background: "#ff7300ff" },
-      ],
-      img: "/images/webdevelopment.jpeg",
     },
   ];
 

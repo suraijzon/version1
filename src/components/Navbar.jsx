@@ -11,7 +11,7 @@ const DESKTOP_BREAKPOINT = 1024;
 const CLOSE_DELAY_MS = 180;
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState(null);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -138,7 +138,7 @@ const Navbar = () => {
             <img src="/images/logo.png" alt="Zonzoctech Logo" />
           </div>
 
-          <nav className={`navbar-links ${open ? "open" : ""}`}>
+          <nav className={`navbar-links ${mobileOpen ? "mobile-open" : ""}`}>
             <div
               className={`navbar-dropdown ${mobileDropdown === 1 ? "open" : ""} ${activeDropdown === 1 ? "active" : ""}`}
               {...dropdownHoverProps(1)}
@@ -186,10 +186,14 @@ const Navbar = () => {
 
           <ExpertPopup open={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
 
-          <button className="navbar-mobile-toggle" onClick={() => setOpen((s) => !s)} aria-label="Toggle menu">
-            <span className={open ? "bar rotate1" : "bar"}></span>
-            <span className={open ? "bar hide" : "bar"}></span>
-            <span className={open ? "bar rotate2" : "bar"}></span>
+          <button
+            className="navbar-mobile-toggle"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
       </header>

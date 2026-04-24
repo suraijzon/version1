@@ -2,6 +2,7 @@ import { AuthProvider } from '@/src/context/AuthContext';
 import WhatsappFloat from '@/src/components/WhatsappFloat';
 import '@/src/index.css';
 import '@/src/App.css';
+import '@/src/styles/service-shared.css';
 
 export const metadata = {
   title: {

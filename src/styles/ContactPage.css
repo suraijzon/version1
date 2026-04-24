@@ -337,6 +337,20 @@
 }
 
 /* RESPONSIVE */
+@media (max-width: 1024px) {
+  .cp__hero_title {
+    font-size: 42px;
+  }
+
+  .cp__services_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cp__steps_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .cp__hero {
     padding: 60px 20px;

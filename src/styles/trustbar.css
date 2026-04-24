@@ -55,6 +55,16 @@
   font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+  .trust-bar-item {
+    padding: 0 32px;
+  }
+
+  .trust-bar-number {
+    font-size: 36px;
+  }
+}
+
 @media (max-width: 768px) {
   .trust-bar-stats {
     display: grid;
@@ -75,5 +85,19 @@
 
   .trust-bar-number {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-bar {
+    padding: 36px 16px;
+  }
+
+  .trust-bar-number {
+    font-size: 28px;
+  }
+
+  .trust-bar-label-text {
+    font-size: 12px;
   }
 }

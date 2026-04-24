@@ -262,6 +262,26 @@
   transform: scale(0.96);
 }
 
+@media (max-width: 1024px) {
+  .seo-hero {
+    padding: 80px 24px;
+  }
+
+  .seo-hero h1 {
+    font-size: 42px;
+  }
+
+  .seo-container h2 {
+    font-size: 32px;
+  }
+
+  .seo-grid,
+  .seo-why-grid,
+  .seo-results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .seo-hero {
     padding: 60px 20px;

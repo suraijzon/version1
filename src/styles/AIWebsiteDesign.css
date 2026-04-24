@@ -644,6 +644,27 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .aiwd__hero {
+    padding: 80px 24px;
+  }
+
+  .aiwd__hero_heading {
+    font-size: 42px;
+  }
+
+  .aiwd__title {
+    font-size: 32px;
+  }
+
+  .aiwd__audience_grid,
+  .aiwd__problems_grid,
+  .aiwd__process_grid,
+  .aiwd__why_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 968px) {
   .aiwd__hero_container {
     grid-template-columns: 1fr;

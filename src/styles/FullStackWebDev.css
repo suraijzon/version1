@@ -584,6 +584,25 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .fswd__hero_section {
+    padding: 80px 24px;
+  }
+
+  .fswd__hero_title {
+    font-size: 42px;
+  }
+
+  .fswd__section_heading {
+    font-size: 32px;
+  }
+
+  .fswd__services_grid,
+  .fswd__why_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 968px) {
   .fswd__split_grid {
     grid-template-columns: 1fr;

@@ -660,6 +660,28 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .wm__hero {
+    padding: 80px 24px;
+  }
+
+  .wm__hero_title {
+    font-size: 42px;
+  }
+
+  .wm__heading {
+    font-size: 32px;
+  }
+
+  .wm__why_grid,
+  .wm__problems_grid,
+  .wm__services_grid,
+  .wm__process_grid,
+  .wm__tools_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 968px) {
   .wm__comparison_wrapper {
     grid-template-columns: 1fr;

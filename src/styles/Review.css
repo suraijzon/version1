@@ -172,3 +172,25 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .reviews-section {
+    padding: 60px 16px;
+  }
+
+  .rating-number {
+    font-size: 48px;
+  }
+
+  .reviews-heading {
+    font-size: 24px;
+  }
+
+  .review-card {
+    padding: 24px 18px;
+  }
+
+  .quote {
+    font-size: 36px;
+  }
+}

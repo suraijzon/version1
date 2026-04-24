@@ -714,6 +714,27 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .aiso__hero {
+    padding: 80px 24px;
+  }
+
+  .aiso__hero_title {
+    font-size: 42px;
+  }
+
+  .aiso__heading {
+    font-size: 32px;
+  }
+
+  .aiso__focus_grid,
+  .aiso__problems_wrapper,
+  .aiso__services_grid,
+  .aiso__tools_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .aiso__hero {
     padding: 60px 20px;

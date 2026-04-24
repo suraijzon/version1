@@ -364,6 +364,28 @@
 }
 
 /* RESPONSIVE */
+@media (max-width: 1024px) {
+  .cs__hero_title {
+    font-size: 42px;
+  }
+
+  .cs__hero_sub {
+    font-size: 18px;
+  }
+
+  .cs__heading {
+    font-size: 32px;
+  }
+
+  .cs__built_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cs__results_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .cs__hero {
     padding: 60px 20px;

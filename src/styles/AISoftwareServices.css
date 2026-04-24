@@ -674,6 +674,28 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .aiss__hero {
+    padding: 80px 24px;
+  }
+
+  .aiss__hero_title {
+    font-size: 42px;
+  }
+
+  .aiss__heading {
+    font-size: 32px;
+  }
+
+  .aiss__audience_grid,
+  .aiss__problems_grid,
+  .aiss__services_grid,
+  .aiss__process_grid,
+  .aiss__why_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 968px) {
   .aiss__comparison_table {
     grid-template-columns: 1fr;

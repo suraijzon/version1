@@ -663,6 +663,28 @@
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .aiwa__hero {
+    padding: 80px 24px;
+  }
+
+  .aiwa__hero_title {
+    font-size: 42px;
+  }
+
+  .aiwa__heading {
+    font-size: 32px;
+  }
+
+  .aiwa__audience_cards,
+  .aiwa__problems_grid,
+  .aiwa__diff_grid,
+  .aiwa__process_container,
+  .aiwa__why_boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .aiwa__hero {
     padding: 60px 20px;

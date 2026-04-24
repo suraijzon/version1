@@ -71,7 +71,35 @@
   .smm-feature-desc { font-size: 13px; }
 }
 
-@media (max-width: 600px) {
-  .so-much-more-section { padding: 60px 15px; }
-  .smm-features-grid { gap: 20px; }
+@media (max-width: 768px) {
+  .so-much-more-section {
+    padding: 60px 16px;
+  }
+
+  .smm-section-title {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .smm-features-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .so-much-more-section {
+    padding: 40px 16px;
+  }
+
+  .smm-section-title {
+    font-size: 24px;
+  }
+
+  .smm-features-grid {
+    gap: 16px;
+  }
+
+  .smm-feature-card {
+    padding: 20px 16px;
+  }
 }

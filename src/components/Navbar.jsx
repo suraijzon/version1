@@ -12,6 +12,7 @@ const CLOSE_DELAY_MS = 180;
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState(null);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -141,14 +142,15 @@ const Navbar = () => {
           <nav className={`navbar-links ${mobileOpen ? "mobile-open" : ""}`}>
             <button className="mobile-close" onClick={() => setMobileOpen(false)}>✕</button>
 
+            {/* Desktop dropdown */}
             <div
-              className={`navbar-dropdown ${mobileDropdown === 1 ? "open" : ""} ${activeDropdown === 1 ? "active" : ""}`}
+              className={`navbar-dropdown ${activeDropdown === 1 ? "active" : ""}`}
               {...dropdownHoverProps(1)}
             >
               <button
                 className="drop-btn"
                 onClick={() => handleDropdownButtonClick(1)}
-                aria-expanded={activeDropdown === 1 || mobileDropdown === 1}
+                aria-expanded={activeDropdown === 1}
               >
                 Services ▾
               </button>
@@ -156,24 +158,53 @@ const Navbar = () => {
               <div className={`navbar-dropdown-menu${activeDropdown === 1 ? ' open' : ''}`} {...dropdownContentHoverProps}>
                 <div className="dropdown-section">
                   <h6>WEB & AI DEVELOPMENT</h6>
-                  <Link href="/ai-web-application-development" onClick={() => setMobileOpen(false)}>AI Web Development</Link>
-                  <Link href="/full-stack-web-development" onClick={() => setMobileOpen(false)}>Full-Stack Web Development</Link>
-                  <Link href="/ai-website-design-development" onClick={() => setMobileOpen(false)}>AI Website Design</Link>
-                  <Link href="/ai-software-development" onClick={() => setMobileOpen(false)}>AI Software Development</Link>
+                  <Link href="/ai-web-application-development">AI Web Development</Link>
+                  <Link href="/full-stack-web-development">Full-Stack Web Development</Link>
+                  <Link href="/ai-website-design-development">AI Website Design</Link>
+                  <Link href="/ai-software-development">AI Software Development</Link>
                 </div>
 
                 <div className="dropdown-section">
                   <h6>SEO & GROWTH</h6>
-                  <Link href="/seo-services" onClick={() => setMobileOpen(false)}>SEO Services</Link>
-                  <Link href="/seo-ai-search-optimization" onClick={() => setMobileOpen(false)}>AI SEO & Search Optimization</Link>
-                  <Link href="/ecommerce-development-optimization" onClick={() => setMobileOpen(false)}>E-commerce Development</Link>
+                  <Link href="/seo-services">SEO Services</Link>
+                  <Link href="/seo-ai-search-optimization">AI SEO & Search Optimization</Link>
+                  <Link href="/ecommerce-development-optimization">E-commerce Development</Link>
                 </div>
 
                 <div className="dropdown-section">
                   <h6>SUPPORT</h6>
-                  <Link href="/website-maintenance-performance-security" onClick={() => setMobileOpen(false)}>Website Maintenance & Security</Link>
+                  <Link href="/website-maintenance-performance-security">Website Maintenance & Security</Link>
                 </div>
               </div>
+            </div>
+
+            {/* Mobile services accordion */}
+            <div className="mobile-services">
+              <button
+                className="mobile-services-toggle"
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              >
+                Services
+                <span className={mobileServicesOpen ? 'arrow-up' : 'arrow-down'}>▾</span>
+              </button>
+
+              {mobileServicesOpen && (
+                <div className="mobile-services-dropdown">
+                  <p className="mobile-dropdown-label">WEB & AI DEVELOPMENT</p>
+                  <a href="/ai-web-application-development" onClick={() => setMobileOpen(false)}>AI Web Development</a>
+                  <a href="/full-stack-web-development" onClick={() => setMobileOpen(false)}>Full-Stack Web Development</a>
+                  <a href="/ai-website-design-development" onClick={() => setMobileOpen(false)}>AI Website Design</a>
+                  <a href="/ai-software-development" onClick={() => setMobileOpen(false)}>AI Software Development</a>
+
+                  <p className="mobile-dropdown-label">SEO & GROWTH</p>
+                  <a href="/seo-services" onClick={() => setMobileOpen(false)}>SEO Services</a>
+                  <a href="/seo-ai-search-optimization" onClick={() => setMobileOpen(false)}>AI SEO & Search Optimization</a>
+                  <a href="/ecommerce-development-optimization" onClick={() => setMobileOpen(false)}>E-commerce Development</a>
+
+                  <p className="mobile-dropdown-label">SUPPORT</p>
+                  <a href="/website-maintenance-performance-security" onClick={() => setMobileOpen(false)}>Website Maintenance & Security</a>
+                </div>
+              )}
             </div>
 
             <Link href="/#portfolio" className="drop-btn" onClick={() => setMobileOpen(false)}>Our Work</Link>

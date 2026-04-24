@@ -139,6 +139,8 @@ const Navbar = () => {
           </div>
 
           <nav className={`navbar-links ${mobileOpen ? "mobile-open" : ""}`}>
+            <button className="mobile-close" onClick={() => setMobileOpen(false)}>✕</button>
+
             <div
               className={`navbar-dropdown ${mobileDropdown === 1 ? "open" : ""} ${activeDropdown === 1 ? "active" : ""}`}
               {...dropdownHoverProps(1)}
@@ -154,35 +156,40 @@ const Navbar = () => {
               <div className={`navbar-dropdown-menu${activeDropdown === 1 ? ' open' : ''}`} {...dropdownContentHoverProps}>
                 <div className="dropdown-section">
                   <h6>WEB & AI DEVELOPMENT</h6>
-                  <Link href="/ai-web-application-development">AI Web Development</Link>
-                  <Link href="/full-stack-web-development">Full-Stack Web Development</Link>
-                  <Link href="/ai-website-design-development">AI Website Design</Link>
-                  <Link href="/ai-software-development">AI Software Development</Link>
+                  <Link href="/ai-web-application-development" onClick={() => setMobileOpen(false)}>AI Web Development</Link>
+                  <Link href="/full-stack-web-development" onClick={() => setMobileOpen(false)}>Full-Stack Web Development</Link>
+                  <Link href="/ai-website-design-development" onClick={() => setMobileOpen(false)}>AI Website Design</Link>
+                  <Link href="/ai-software-development" onClick={() => setMobileOpen(false)}>AI Software Development</Link>
                 </div>
 
                 <div className="dropdown-section">
                   <h6>SEO & GROWTH</h6>
-                  <Link href="/seo-services">SEO Services</Link>
-                  <Link href="/seo-ai-search-optimization">AI SEO & Search Optimization</Link>
-                  <Link href="/ecommerce-development-optimization">E-commerce Development</Link>
+                  <Link href="/seo-services" onClick={() => setMobileOpen(false)}>SEO Services</Link>
+                  <Link href="/seo-ai-search-optimization" onClick={() => setMobileOpen(false)}>AI SEO & Search Optimization</Link>
+                  <Link href="/ecommerce-development-optimization" onClick={() => setMobileOpen(false)}>E-commerce Development</Link>
                 </div>
 
                 <div className="dropdown-section">
                   <h6>SUPPORT</h6>
-                  <Link href="/website-maintenance-performance-security">Website Maintenance & Security</Link>
+                  <Link href="/website-maintenance-performance-security" onClick={() => setMobileOpen(false)}>Website Maintenance & Security</Link>
                 </div>
               </div>
             </div>
 
-            <Link href="/#portfolio" className="drop-btn">Our Work</Link>
-            <Link href="/about" className="drop-btn">About</Link>
-            <Link href="/blog" className="drop-btn">Blog</Link>
-            <Link href="/contact" className="drop-btn">Contact</Link>
+            <Link href="/#portfolio" className="drop-btn" onClick={() => setMobileOpen(false)}>Our Work</Link>
+            <Link href="/about" className="drop-btn" onClick={() => setMobileOpen(false)}>About</Link>
+            <Link href="/blog" className="drop-btn" onClick={() => setMobileOpen(false)}>Blog</Link>
+            <Link href="/contact" className="drop-btn" onClick={() => setMobileOpen(false)}>Contact</Link>
 
-            <button className="navbar-cta" onClick={() => setIsPopupOpen(true)}>
+            <button className="navbar-cta" onClick={() => { setIsPopupOpen(true); setMobileOpen(false); }}>
               Get Free Proposal
             </button>
           </nav>
+
+          <div
+            className={`mobile-backdrop ${mobileOpen ? "active" : ""}`}
+            onClick={() => setMobileOpen(false)}
+          />
 
           <ExpertPopup open={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
 

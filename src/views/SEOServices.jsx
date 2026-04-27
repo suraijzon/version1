@@ -157,9 +157,9 @@ const SEOServices = () => {
             <p className="seo-desc">
               ZonzocTech is an AI SEO agency helping small businesses and startups across the UK and USA grow their organic traffic, attract qualified leads and turn search visibility into real revenue — without the price tag of a big London agency.
             </p>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "24px" }}>
-              <a href="/contact" className="seoaudit-btn">Get Your Free SEO Audit →</a>
-              <a href="#seo-results" className="seoaudit-btn" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Results ↓</a>
+            <div className="hero-btn-wrap">
+              <a href="/contact" className="hero-btn-primary">Get Your Free SEO Audit →</a>
+              <a href="#seo-results" className="hero-btn-secondary">See Our Results ↓</a>
             </div>
             <p className="seo-sub" style={{ marginTop: "24px" }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>

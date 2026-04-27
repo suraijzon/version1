@@ -280,49 +280,67 @@
 }
 
 /* Technology Stack */
-.fswd__tech_section {
+.tech-stack-section {
+  background: #f8faff;
   padding: 100px 0;
-  background: linear-gradient(135deg, #003070 0%, #00448f 100%);
-  color: #ffffff;
 }
 
-.fswd__tech_section .fswd__section_heading {
-  color: #ffffff;
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
 }
 
-.fswd__tech_section .fswd__section_description {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.fswd__tech_grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin: 3rem 0;
-}
-
-.fswd__tech_badge {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 10px 20px;
-  border-radius: 100px;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 15px;
+.tech-category-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   transition: all 0.2s ease;
 }
 
-.fswd__tech_badge:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: scale(1.05);
+.tech-category-card:hover {
+  border-color: #00448f;
+  box-shadow: 0 12px 40px rgba(0, 68, 143, 0.12);
+  transform: translateY(-4px);
 }
 
-.fswd__tech_note {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 16px;
-  margin-top: 2rem;
+.tech-category-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #00448f;
+  margin-bottom: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.tech-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-pill {
+  background: #e8f0fb;
+  color: #00448f;
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 1024px) {
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .tech-stack-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* AI Enhancement Section */
@@ -648,7 +666,7 @@
   .fswd__what_section,
   .fswd__split_section,
   .fswd__services_section,
-  .fswd__tech_section,
+  .tech-stack-section,
   .fswd__ai_section,
   .fswd__process_section,
   .fswd__why_section,

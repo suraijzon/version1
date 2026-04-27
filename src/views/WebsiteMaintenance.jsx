@@ -82,9 +82,9 @@ const WebsiteMaintenance = () => {
             <p className="wm__hero_text">
               ZonzocTech provides professional website maintenance, performance and security services for businesses across the UK and USA. We monitor, protect and optimise your website around the clock — so you can focus on running your business while we make sure your website never lets you down.
             </p>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "24px" }}>
-              <a href="/contact" className="wm__hero_btn">Get Free Website Health Check →</a>
-              <a href="#wm-services" className="wm__hero_btn" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Services ↓</a>
+            <div className="hero-btn-wrap">
+              <a href="/contact" className="hero-btn-primary">Get Free Website Health Check →</a>
+              <a href="#wm-services" className="hero-btn-secondary">See Our Services ↓</a>
             </div>
             <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>

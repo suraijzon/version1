@@ -86,9 +86,9 @@ const AISoftwareServices = () => {
             <p className="aiss__hero_text">
               ZonzocTech builds custom AI software for businesses across the UK and USA — from intelligent chatbots and GPT-powered tools to business process automation systems and workflow integrations. We replace manual, time-consuming operations with smart AI software that works around the clock and scales with your business.
             </p>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "24px" }}>
-              <a href="/contact" className="aiss__hero_btn">Get Free AI Consultation →</a>
-              <a href="#aiss-work" className="aiss__hero_btn" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work ↓</a>
+            <div className="hero-btn-wrap">
+              <a href="/contact" className="hero-btn-primary">Get Free AI Consultation →</a>
+              <a href="#aiss-work" className="hero-btn-secondary">See Our Work ↓</a>
             </div>
             <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>

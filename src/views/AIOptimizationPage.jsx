@@ -86,9 +86,9 @@ const AISearchOptimization = () => {
             <p className="aiso__hero_text">
               Search has changed forever. Your customers are no longer just searching on Google — they are asking ChatGPT, Perplexity, Google AI Overviews and voice assistants for answers. ZonzocTech helps businesses across the UK and USA stay visible across every search platform — traditional and AI-powered.
             </p>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "24px" }}>
-              <a href="/contact" className="aiso__hero_cta">Get Free AI Search Audit →</a>
-              <a href="#aiso-how" className="aiso__hero_cta" style={{ background: "transparent", border: "1px solid currentColor" }}>See How It Works ↓</a>
+            <div className="hero-btn-wrap">
+              <a href="/contact" className="hero-btn-primary">Get Free AI Search Audit →</a>
+              <a href="#aiso-how" className="hero-btn-secondary">See How It Works ↓</a>
             </div>
             <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>

@@ -130,9 +130,9 @@ const FullStackWebDev = () => {
             <p className="fswd__hero_description">
               ZonzocTech is a full stack web development agency helping businesses across the UK and USA build high-performance custom web applications, MVPs and SaaS platforms. From pixel-perfect frontends to robust backend systems — we deliver complete, production-ready solutions on time and on budget.
             </p>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "24px" }}>
-              <a href="/contact" className="fswd__cta_primary">Get Free Consultation →</a>
-              <a href="#fswd-work" className="fswd__cta_primary" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work ↓</a>
+            <div className="hero-btn-wrap">
+              <a href="/contact" className="hero-btn-primary">Get Free Consultation →</a>
+              <a href="#fswd-work" className="hero-btn-secondary">See Our Work ↓</a>
             </div>
             <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>
@@ -212,21 +212,21 @@ const FullStackWebDev = () => {
           </section>
 
           {/* Section 4 — Tech Stack */}
-          <section className="fswd__tech_section">
+          <section className="tech-stack-section">
             <div className="fswd__container">
               <h2 className="fswd__section_heading">Our Full Stack Development Tech Stack</h2>
               <p className="fswd__section_description">
                 We use modern, proven technologies selected based on your project requirements — not the latest trend.
               </p>
-              <div className="fswd__tech_grid">
+              <div className="tech-stack-grid">
                 {techStack.map((group, i) => (
-                  <div key={i} className="fswd__tech_badge">
-                    <strong>{group.category}</strong>
-                    <ul className="fswd__check_list" style={{ marginTop: "8px" }}>
+                  <div key={i} className="tech-category-card">
+                    <h3 className="tech-category-title">{group.category}</h3>
+                    <div className="tech-items">
                       {group.items.map((item, j) => (
-                        <li key={j}>{item}</li>
+                        <span key={j} className="tech-pill">{item}</span>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 ))}
               </div>

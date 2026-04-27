@@ -79,9 +79,9 @@ const AIWebsiteDesign = () => {
               <p className="aiwd__hero_description">
                 ZonzocTech designs and builds high-converting websites for small businesses and growing companies across the UK and USA. We combine modern AI-powered design with conversion-focused UX — creating websites that look great, load fast and turn visitors into leads from day one.
               </p>
-              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "24px" }}>
-                <a href="/contact" className="aiwd__hero_btn">Get Free Design Consultation →</a>
-                <a href="#aiwd-work" className="aiwd__hero_btn" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work ↓</a>
+              <div className="hero-btn-wrap">
+                <a href="/contact" className="hero-btn-primary">Get Free Design Consultation →</a>
+                <a href="#aiwd-work" className="hero-btn-secondary">See Our Work ↓</a>
               </div>
               <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
             </div>

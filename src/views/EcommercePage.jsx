@@ -79,9 +79,9 @@ const EcommerceDev = () => {
             <p className="ecd__hero_text">
               ZonzocTech builds high-converting ecommerce websites for businesses across the UK and USA. Whether you need a Shopify store, WooCommerce site or fully custom ecommerce platform — we design, develop and optimise online stores that turn browsers into buyers and grow your revenue consistently.
             </p>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "24px" }}>
-              <a href="/contact" className="ecd__hero_cta">Get Free Ecommerce Audit →</a>
-              <a href="#ecd-work" className="ecd__hero_cta" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work ↓</a>
+            <div className="hero-btn-wrap">
+              <a href="/contact" className="hero-btn-primary">Get Free Ecommerce Audit →</a>
+              <a href="#ecd-work" className="hero-btn-secondary">See Our Work ↓</a>
             </div>
             <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>

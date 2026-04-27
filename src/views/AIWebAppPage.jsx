@@ -154,9 +154,9 @@ const AIWebAppDev = () => {
               <p className="aiwa__hero_description">
                 ZonzocTech builds custom AI-powered web applications for businesses across the UK and USA. From intelligent dashboards and SaaS platforms to GPT-powered tools and business automation systems — we turn your ideas into secure, scalable, production-ready applications.
               </p>
-              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", marginTop: "24px" }}>
-                <a href="/contact" className="aiwa__hero_btn">Get Free Consultation →</a>
-                <a href="#aiwa-work" className="aiwa__hero_btn" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work ↓</a>
+              <div className="hero-btn-wrap">
+                <a href="/contact" className="hero-btn-primary">Get Free Consultation →</a>
+                <a href="#aiwa-work" className="hero-btn-secondary">See Our Work ↓</a>
               </div>
               <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
             </div>

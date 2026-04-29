@@ -109,3 +109,9 @@ code {
   h1 { font-size: 28px; }
   h2 { font-size: 24px; }
 }
+
+/* Global hero heading color — ensures no H1 is ever black on a dark hero background */
+.hero h1 { color: #ffffff; }
+.service-hero h1 { color: #ffffff; }
+.hero-content h1 { color: #ffffff; }
+.hero-text h1 { color: #ffffff; }

@@ -51,6 +51,10 @@
   font-family: 'Inter', sans-serif;
 }
 
+h1.cp__heading {
+  color: #ffffff;
+}
+
 .cp__subtitle,
 .cp__text {
   text-align: center;

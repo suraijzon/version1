@@ -34,12 +34,6 @@ const breadcrumbMap = {
     { name: "SEO Strategy" }
   ],
 
-  "/google-search-console": [
-    { name: "Home", link: "/" },
-    { name: "SEO & Lead Generation", link: "#" },
-    { name: "Search Console Setup" }
-  ],
-
   "/full-stack-web-development": [
     { name: "Home", link: "/" },
     { name: "UX & Interactive", link: "#" },

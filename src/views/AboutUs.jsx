@@ -162,38 +162,26 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* By The Numbers */}
-        <section className="abt__approach_section">
-          <div className="abt__container">
-            <h2 className="abt__heading">By The Numbers</h2>
-            <div className="abt__approach_timeline">
-              {stats.map((stat, index) => (
-                <div key={index} className="abt__approach_step">
-                  <div className="abt__step_number">{stat.number}</div>
-                  <div className="abt__step_content">
-                    <h3>{stat.label}</h3>
-                  </div>
-                </div>
-              ))}
+        {/* Stats Bar */}
+        <section className="stats-bar">
+          {stats.map((stat, index) => (
+            <div key={index} className="stat-item">
+              <span className="stat-number">{stat.number}</span>
+              <span className="stat-label">{stat.label}</span>
             </div>
-          </div>
+          ))}
         </section>
 
         {/* Final CTA */}
-        <section className="abt__cta_section">
+        <section className="cta-section">
           <div className="abt__container">
-            <h2 className="abt__cta_title">Ready to Work Together?</h2>
-            <p className="abt__cta_text">
-              Tell us about your project and we'll put together a free growth plan — no commitment required.
-            </p>
-            <div className="abt__cta_buttons">
-              <a href="/contact" className="abt__cta_btn abt__cta_primary">
-                Get Free Proposal →
-              </a>
-              <a href="/#portfolio" className="abt__cta_btn abt__cta_secondary">
-                See Our Work
-              </a>
+            <h2>Ready to Work Together?</h2>
+            <p>Tell us about your project and we'll put together a free growth plan — no commitment required.</p>
+            <div className="cta-buttons">
+              <a href="/contact" className="btn-primary">Get Free Proposal →</a>
+              <a href="/#portfolio" className="btn-secondary">See Our Work</a>
             </div>
+            <p className="cta-small-text">No commitment. No spam. Just results.</p>
           </div>
         </section>
 

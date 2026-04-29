@@ -227,7 +227,7 @@ const PrivacyPolicy = () => {
                 you have any concerns or questions about how we handle your
                 information, please don't hesitate to contact us.
               </p>
-              <a href="/contact-us" className="pp__summary_btn">
+              <a href="/contact" className="pp__summary_btn">
                 Contact Us
               </a>
             </div>

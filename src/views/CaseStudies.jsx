@@ -281,10 +281,10 @@ const CaseStudies = () => {
               AI, SEO, or full-stack development.
             </p>
             <div className="cs__cta_buttons">
-              <a href="/contact-us" className="cs__cta_btn cs__cta_primary">
+              <a href="/contact" className="cs__cta_btn cs__cta_primary">
                 Start Your Project
               </a>
-              <a href="#contact" className="cs__cta_btn cs__cta_secondary">
+              <a href="/contact" className="cs__cta_btn cs__cta_secondary">
                 Schedule a Consultation
               </a>
             </div>

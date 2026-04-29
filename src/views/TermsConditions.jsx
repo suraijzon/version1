@@ -244,7 +244,7 @@ const TermsConditions = () => {
                 & Conditions. If you have any questions or concerns, please
                 contact us before proceeding.
               </p>
-              <a href="/contact-us" className="tc__agreement_btn">
+              <a href="/contact" className="tc__agreement_btn">
                 Contact Us
               </a>
             </div>

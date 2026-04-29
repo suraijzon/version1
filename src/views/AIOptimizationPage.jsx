@@ -86,26 +86,22 @@ const AISearchOptimization = () => {
             <p className="aiso__hero_text">
               Search has changed forever. Your customers are no longer just searching on Google — they are asking ChatGPT, Perplexity, Google AI Overviews and voice assistants for answers. ZonzocTech helps businesses across the UK and USA stay visible across every search platform — traditional and AI-powered.
             </p>
-            <div className="hero-btn-wrap">
-              <a href="/contact" className="hero-btn-primary">Get Free AI Search Audit →</a>
-              <a href="#aiso-how" className="hero-btn-secondary">See How It Works ↓</a>
+            <div className="hero-buttons">
+              <a href="/contact" className="btn-primary">Get Free AI Search Audit →</a>
+              <a href="#aiso-how" className="btn-secondary">See How It Works ↓</a>
             </div>
             <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>
         </section>
 
         {/* Stats Bar */}
-        <section className="aiso__what_section" id="aiso-how">
-          <div className="aiso__container">
-            <div className="aiso__focus_grid">
-              {stats.map((stat, i) => (
-                <div key={i} className="aiso__focus_item">
-                  <strong>{stat.number}</strong>
-                  <span>{stat.label}</span>
-                </div>
-              ))}
+        <section className="stats-bar" id="aiso-how">
+          {stats.map((stat, i) => (
+            <div key={i} className="stat-item">
+              <span className="stat-number">{stat.number}</span>
+              <span className="stat-label">{stat.label}</span>
             </div>
-          </div>
+          ))}
         </section>
 
         {/* Section 1 — New Reality of Search */}
@@ -144,10 +140,10 @@ const AISearchOptimization = () => {
             <p className="aiso__subtitle2">
               We offer a complete range of AI search optimization services — helping UK and USA businesses get found everywhere their customers are searching right now.
             </p>
-            <div className="aiso__services_grid">
+            <div className="service-cards-grid">
               {services.map((service, i) => (
-                <div key={i} className="aiso__service_box">
-                  <h3 className="aiso__service_title">{service.title}</h3>
+                <div key={i} className="service-card">
+                  <h3>{service.title}</h3>
                   <p>{service.description}</p>
                 </div>
               ))}
@@ -159,14 +155,11 @@ const AISearchOptimization = () => {
         <section className="aiso__why_section">
           <div className="aiso__container">
             <h2 className="aiso__heading2">Why UK & USA Businesses Choose ZonzocTech for AI Search Optimization</h2>
-            <div className="aiso__why_container">
+            <div className="why-choose-grid">
               {whyChoose.map((reason, i) => (
-                <div key={i} className="aiso__why_card">
-                  <div className="aiso__why_marker"></div>
-                  <div>
-                    <strong>{reason.title}</strong>
-                    <p>{reason.description}</p>
-                  </div>
+                <div key={i} className="why-choose-card">
+                  <h3>{reason.title}</h3>
+                  <p>{reason.description}</p>
                 </div>
               ))}
             </div>
@@ -174,19 +167,15 @@ const AISearchOptimization = () => {
         </section>
 
         {/* Section 4 — Process */}
-        <section className="aiso__process_section">
+        <section className="process-section">
           <div className="aiso__container">
-            <h2 className="aiso__heading2">Our AI Search Optimization Process</h2>
-            <div className="aiso__process_flow">
+            <h2>Our AI Search Optimization Process</h2>
+            <div className="process-grid">
               {processSteps.map((step, i) => (
-                <div key={i} className="aiso__process_item">
-                  <div className="aiso__process_icon_wrapper">
-                    <span className="aiso__process_number">{step.number}</span>
-                  </div>
-                  <div className="aiso__process_content">
-                    <h3 className="aiso__process_title">{step.title}</h3>
-                    <p className="aiso__process_desc">{step.description}</p>
-                  </div>
+                <div key={i} className="process-card">
+                  <div className="process-number">{step.number}</div>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
                 </div>
               ))}
             </div>
@@ -212,14 +201,14 @@ const AISearchOptimization = () => {
         </section>
 
         {/* Section 6 — FAQ */}
-        <section className="aiso__faq_section">
+        <section className="faq-section">
           <div className="aiso__container">
-            <h2 className="aiso__heading">AI SEO & Search Optimization — Frequently Asked Questions</h2>
-            <div className="aiso__faq_list">
+            <h2>AI SEO & Search Optimization — Frequently Asked Questions</h2>
+            <div className="faq-container">
               {faqs.map((faq, i) => (
-                <div key={i} className="aiso__faq_box">
-                  <h4 className="aiso__faq_q">{faq.question}</h4>
-                  <p className="aiso__faq_a">{faq.answer}</p>
+                <div key={i} className="faq-item">
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -227,19 +216,15 @@ const AISearchOptimization = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="aiso__cta_section">
+        <section className="cta-section">
           <div className="aiso__container">
-            <div className="aiso__cta_box">
-              <h2 className="aiso__cta_title">Ready to Be Found Everywhere Your Customers Search?</h2>
-              <p className="aiso__cta_desc">
-                Get a free AI search visibility audit and find out how your business appears across Google, ChatGPT, Perplexity and AI-powered search — no commitment required.
-              </p>
-              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center", marginTop: "24px" }}>
-                <a href="/contact" className="aiso__cta_btn">Get Free AI Search Audit →</a>
-                <a href="/seo-services" className="aiso__cta_btn" style={{ background: "transparent", border: "1px solid currentColor" }}>View Our SEO Services</a>
-              </div>
-              <p style={{ marginTop: "12px", fontSize: "0.85rem", opacity: 0.7 }}>No commitment. No spam. Just results.</p>
+            <h2>Ready to Be Found Everywhere Your Customers Search?</h2>
+            <p>Get a free AI search visibility audit and find out how your business appears across Google, ChatGPT, Perplexity and AI-powered search — no commitment required.</p>
+            <div className="cta-buttons">
+              <a href="/contact" className="btn-primary">Get Free AI Search Audit →</a>
+              <a href="/seo-services" className="btn-secondary">View Our SEO Services</a>
             </div>
+            <p className="cta-small-text">No commitment. No spam. Just results.</p>
           </div>
         </section>
 

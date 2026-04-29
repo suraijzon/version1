@@ -86,26 +86,22 @@ const AISoftwareServices = () => {
             <p className="aiss__hero_text">
               ZonzocTech builds custom AI software for businesses across the UK and USA — from intelligent chatbots and GPT-powered tools to business process automation systems and workflow integrations. We replace manual, time-consuming operations with smart AI software that works around the clock and scales with your business.
             </p>
-            <div className="hero-btn-wrap">
-              <a href="/contact" className="hero-btn-primary">Get Free AI Consultation →</a>
-              <a href="#aiss-work" className="hero-btn-secondary">See Our Work ↓</a>
+            <div className="hero-buttons">
+              <a href="/contact" className="btn-primary">Get Free AI Consultation →</a>
+              <a href="#aiss-work" className="btn-secondary">See Our Work ↓</a>
             </div>
             <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>
         </section>
 
         {/* Stats Bar */}
-        <section className="aiss__what_section" id="aiss-work">
-          <div className="aiss__container">
-            <div className="aiss__problems_grid">
-              {stats.map((stat, i) => (
-                <div key={i} className="aiss__problem_item">
-                  <strong>{stat.number}</strong>
-                  <p className="aiss__problem_text">{stat.label}</p>
-                </div>
-              ))}
+        <section className="stats-bar" id="aiss-work">
+          {stats.map((stat, i) => (
+            <div key={i} className="stat-item">
+              <span className="stat-number">{stat.number}</span>
+              <span className="stat-label">{stat.label}</span>
             </div>
-          </div>
+          ))}
         </section>
 
         {/* Section 1 — What Is */}
@@ -137,10 +133,10 @@ const AISoftwareServices = () => {
             <p className="aiss__subtitle">
               We build a wide range of custom AI software solutions — each designed around your specific business needs, workflows and growth objectives.
             </p>
-            <div className="aiss__services_grid">
+            <div className="service-cards-grid">
               {services.map((service, i) => (
-                <div key={i} className="aiss__service_card">
-                  <h3 className="aiss__service_title">{service.title}</h3>
+                <div key={i} className="service-card">
+                  <h3>{service.title}</h3>
                   <p>{service.description}</p>
                 </div>
               ))}
@@ -152,14 +148,11 @@ const AISoftwareServices = () => {
         <section className="aiss__why_section">
           <div className="aiss__container">
             <h2 className="aiss__heading">Why UK & USA Businesses Choose ZonzocTech for AI Software Development</h2>
-            <div className="aiss__why_grid">
+            <div className="why-choose-grid">
               {whyChoose.map((reason, i) => (
-                <div key={i} className="aiss__why_card">
-                  <div className="aiss__why_number">{i + 1}</div>
-                  <div>
-                    <strong>{reason.title}</strong>
-                    <p>{reason.description}</p>
-                  </div>
+                <div key={i} className="why-choose-card">
+                  <h3>{reason.title}</h3>
+                  <p>{reason.description}</p>
                 </div>
               ))}
             </div>
@@ -167,16 +160,17 @@ const AISoftwareServices = () => {
         </section>
 
         {/* Section 4 — Technologies */}
-        <section className="aiss__tech_section">
+        <section className="tech-stack-section">
           <div className="aiss__container">
             <h2 className="aiss__heading">Technologies We Use</h2>
-            <div className="aiss__tech_list">
+            <div className="tech-stack-grid">
               {technologies.map((group, i) => (
-                <div key={i} className="aiss__tech_item">
-                  <div className="aiss__tech_marker"></div>
-                  <div>
-                    <strong>{group.category}</strong>
-                    <span> — {group.items.join(", ")}</span>
+                <div key={i} className="tech-category-card">
+                  <div className="tech-category-title">{group.category}</div>
+                  <div className="tech-items">
+                    {group.items.map((item, j) => (
+                      <span key={j} className="tech-pill">{item}</span>
+                    ))}
                   </div>
                 </div>
               ))}
@@ -185,15 +179,15 @@ const AISoftwareServices = () => {
         </section>
 
         {/* Section 5 — Process */}
-        <section className="aiss__process_section">
+        <section className="process-section">
           <div className="aiss__container">
-            <h2 className="aiss__heading">Our AI Software Development Process</h2>
-            <div className="aiss__process_grid">
+            <h2>Our AI Software Development Process</h2>
+            <div className="process-grid">
               {processSteps.map((step, i) => (
-                <div key={i} className="aiss__process_card">
-                  <div className="aiss__process_number">{step.number}</div>
-                  <h3 className="aiss__process_title">{step.title}</h3>
-                  <p className="aiss__process_desc">{step.description}</p>
+                <div key={i} className="process-card">
+                  <div className="process-number">{step.number}</div>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
                 </div>
               ))}
             </div>
@@ -219,14 +213,14 @@ const AISoftwareServices = () => {
         </section>
 
         {/* Section 7 — FAQ */}
-        <section className="aiss__faq_section">
+        <section className="faq-section">
           <div className="aiss__container">
-            <h2 className="aiss__heading">AI Software Development — Frequently Asked Questions</h2>
-            <div className="aiss__faq_list">
+            <h2>AI Software Development — Frequently Asked Questions</h2>
+            <div className="faq-container">
               {faqs.map((faq, i) => (
-                <div key={i} className="aiss__faq_item">
-                  <h4 className="aiss__faq_question">{faq.question}</h4>
-                  <p className="aiss__faq_answer">{faq.answer}</p>
+                <div key={i} className="faq-item">
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -234,19 +228,15 @@ const AISoftwareServices = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="aiss__cta_section">
+        <section className="cta-section">
           <div className="aiss__container">
-            <div className="aiss__cta_content">
-              <h2 className="aiss__cta_title">Ready to Automate and Scale Your Business with AI?</h2>
-              <p className="aiss__cta_text">
-                Tell us about your business processes and we will put together a free AI software consultation — showing you exactly where AI can save time, reduce costs and help you grow.
-              </p>
-              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center", marginTop: "24px" }}>
-                <a href="/contact" className="aiss__cta_button">Get Free AI Consultation →</a>
-                <a href="/#portfolio" className="aiss__cta_button" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work</a>
-              </div>
-              <p style={{ marginTop: "12px", fontSize: "0.85rem", opacity: 0.7 }}>No commitment. No spam. Just results.</p>
+            <h2>Ready to Automate and Scale Your Business with AI?</h2>
+            <p>Tell us about your business processes and we will put together a free AI software consultation — showing you exactly where AI can save time, reduce costs and help you grow.</p>
+            <div className="cta-buttons">
+              <a href="/contact" className="btn-primary">Get Free AI Consultation →</a>
+              <a href="/#portfolio" className="btn-secondary">See Our Work</a>
             </div>
+            <p className="cta-small-text">No commitment. No spam. Just results.</p>
           </div>
         </section>
 

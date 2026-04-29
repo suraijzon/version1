@@ -154,9 +154,9 @@ const AIWebAppDev = () => {
               <p className="aiwa__hero_description">
                 ZonzocTech builds custom AI-powered web applications for businesses across the UK and USA. From intelligent dashboards and SaaS platforms to GPT-powered tools and business automation systems — we turn your ideas into secure, scalable, production-ready applications.
               </p>
-              <div className="hero-btn-wrap">
-                <a href="/contact" className="hero-btn-primary">Get Free Consultation →</a>
-                <a href="#aiwa-work" className="hero-btn-secondary">See Our Work ↓</a>
+              <div className="hero-buttons">
+                <a href="/contact" className="btn-primary">Get Free Consultation →</a>
+                <a href="#aiwa-work" className="btn-secondary">See Our Work ↓</a>
               </div>
               <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
             </div>
@@ -164,17 +164,13 @@ const AIWebAppDev = () => {
         </section>
 
         {/* Stats Bar */}
-        <section className="aiwa__audience_section" id="aiwa-work">
-          <div className="aiwa__container">
-            <div className="aiwa__audience_cards">
-              {stats.map((stat, index) => (
-                <div key={index} className="aiwa__audience_card">
-                  <div className="aiwa__audience_number">{stat.number}</div>
-                  <p>{stat.label}</p>
-                </div>
-              ))}
+        <section className="stats-bar" id="aiwa-work">
+          {stats.map((stat, index) => (
+            <div key={index} className="stat-item">
+              <span className="stat-number">{stat.number}</span>
+              <span className="stat-label">{stat.label}</span>
             </div>
-          </div>
+          ))}
         </section>
 
         {/* Section 1 — What Is AI Web App Dev */}
@@ -205,13 +201,11 @@ const AIWebAppDev = () => {
             <p className="aiwa__subtitle">
               We build a wide range of AI-powered web applications — each one custom designed around your specific business goals, users and workflows.
             </p>
-            <div className="aiwa__process_container">
+            <div className="service-cards-grid">
               {services.map((service, index) => (
-                <div key={index} className="aiwa__process_card">
-                  <div className="aiwa__process_header">
-                    <h3 className="aiwa__process_title">{service.title}</h3>
-                  </div>
-                  <p className="aiwa__process_desc">{service.description}</p>
+                <div key={index} className="service-card">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
                 </div>
               ))}
             </div>
@@ -225,9 +219,9 @@ const AIWebAppDev = () => {
             <p className="aiwa__why_footer">
               There are hundreds of web development agencies. Here is why businesses across the UK and USA specifically choose us for AI web application development.
             </p>
-            <div className="aiwa__why_boxes">
+            <div className="why-choose-grid">
               {whyChoose.map((reason, index) => (
-                <div key={index} className="aiwa__why_box">
+                <div key={index} className="why-choose-card">
                   <h3>{reason.title}</h3>
                   <p>{reason.description}</p>
                 </div>
@@ -237,20 +231,18 @@ const AIWebAppDev = () => {
         </section>
 
         {/* Section 4 — Process */}
-        <section className="aiwa__process_section">
+        <section className="process-section">
           <div className="aiwa__container">
-            <h2 className="aiwa__heading3">Our AI Web Application Development Process</h2>
-            <p className="aiwa__process_desc">
+            <h2>Our AI Web Application Development Process</h2>
+            <p className="process-section-desc">
               Every project follows our proven 5-step process — transparent, collaborative and focused on delivering working software on time.
             </p>
-            <div className="aiwa__process_container">
+            <div className="process-grid">
               {processSteps.map((item, index) => (
-                <div key={index} className="aiwa__process_card">
-                  <div className="aiwa__process_header">
-                    <span className="aiwa__process_step">{item.step}</span>
-                    <h3 className="aiwa__process_title">{item.title}</h3>
-                  </div>
-                  <p className="aiwa__process_desc">{item.description}</p>
+                <div key={index} className="process-card">
+                  <div className="process-number">{item.step}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                 </div>
               ))}
             </div>
@@ -258,19 +250,20 @@ const AIWebAppDev = () => {
         </section>
 
         {/* Section 5 — Technologies */}
-        <section className="aiwa__tech_section">
+        <section className="tech-stack-section">
           <div className="aiwa__container">
             <h2 className="aiwa__heading3">Technologies We Use</h2>
             <p className="aiwa__tech_note">
               We choose the right technology for each project — not the trendiest stack. Here is what we typically work with.
             </p>
-            <div className="aiwa__tech_list">
+            <div className="tech-stack-grid">
               {technologies.map((group, index) => (
-                <div key={index} className="aiwa__tech_item">
-                  <div className="aiwa__tech_bullet"></div>
-                  <div>
-                    <strong>{group.category}</strong>
-                    <span> — {group.items.join(", ")}</span>
+                <div key={index} className="tech-category-card">
+                  <div className="tech-category-title">{group.category}</div>
+                  <div className="tech-items">
+                    {group.items.map((item, j) => (
+                      <span key={j} className="tech-pill">{item}</span>
+                    ))}
                   </div>
                 </div>
               ))}
@@ -279,14 +272,14 @@ const AIWebAppDev = () => {
         </section>
 
         {/* Section 6 — FAQ */}
-        <section className="aiwa__faq_section">
+        <section className="faq-section">
           <div className="aiwa__container">
-            <h2 className="aiwa__heading3">AI Web Application Development — Frequently Asked Questions</h2>
-            <div className="aiwa__faq_accordion">
+            <h2>AI Web Application Development — Frequently Asked Questions</h2>
+            <div className="faq-container">
               {faqs.map((faq, index) => (
-                <div key={index} className="aiwa__faq_item">
-                  <h4 className="aiwa__faq_question">{faq.question}</h4>
-                  <p className="aiwa__faq_answer">{faq.answer}</p>
+                <div key={index} className="faq-item">
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -294,19 +287,15 @@ const AIWebAppDev = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="aiwa__cta_section">
+        <section className="cta-section">
           <div className="aiwa__container">
-            <div className="aiwa__cta_content">
-              <h2 className="aiwa__cta_title">Ready to Build Your AI Web Application?</h2>
-              <p className="aiwa__cta_text">
-                Tell us about your project and we will put together a free technical consultation and development roadmap — no commitment required.
-              </p>
-              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center", marginTop: "24px" }}>
-                <a href="/contact" className="aiwa__cta_button">Get Free Consultation →</a>
-                <a href="/#portfolio" className="aiwa__cta_button" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work</a>
-              </div>
-              <p style={{ marginTop: "12px", fontSize: "0.85rem", opacity: 0.7 }}>No commitment. No spam. Just honest advice.</p>
+            <h2>Ready to Build Your AI Web Application?</h2>
+            <p>Tell us about your project and we will put together a free technical consultation and development roadmap — no commitment required.</p>
+            <div className="cta-buttons">
+              <a href="/contact" className="btn-primary">Get Free Consultation →</a>
+              <a href="/#portfolio" className="btn-secondary">See Our Work</a>
             </div>
+            <p className="cta-small-text">No commitment. No spam. Just honest advice.</p>
           </div>
         </section>
 

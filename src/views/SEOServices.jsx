@@ -157,26 +157,22 @@ const SEOServices = () => {
             <p className="seo-desc">
               ZonzocTech is an AI SEO agency helping small businesses and startups across the UK and USA grow their organic traffic, attract qualified leads and turn search visibility into real revenue — without the price tag of a big London agency.
             </p>
-            <div className="hero-btn-wrap">
-              <a href="/contact" className="hero-btn-primary">Get Your Free SEO Audit →</a>
-              <a href="#seo-results" className="hero-btn-secondary">See Our Results ↓</a>
+            <div className="hero-buttons">
+              <a href="/contact" className="btn-primary">Get Your Free SEO Audit →</a>
+              <a href="#seo-results" className="btn-secondary">See Our Results ↓</a>
             </div>
             <p className="seo-sub" style={{ marginTop: "24px" }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>
         </section>
 
         {/* STATS BAR */}
-        <section className="seo-results" id="seo-results">
-          <div className="seo-container">
-            <div className="seo-results-grid">
-              {stats.map((stat, i) => (
-                <div key={i}>
-                  <strong>{stat.number}</strong>
-                  <span>{stat.label}</span>
-                </div>
-              ))}
+        <section className="stats-bar" id="seo-results">
+          {stats.map((stat, i) => (
+            <div key={i} className="stat-item">
+              <span className="stat-number">{stat.number}</span>
+              <span className="stat-label">{stat.label}</span>
             </div>
-          </div>
+          ))}
         </section>
 
         {/* SECTION 1 — WHY CHOOSE */}
@@ -218,12 +214,12 @@ const SEOServices = () => {
             <h2>Our <span>SEO</span> Services for UK &amp; USA Businesses</h2>
             <p className="seo-sub">From technical fixes to content strategy — we cover every aspect of SEO that impacts your rankings, traffic and leads.</p>
 
-            <div className="seo-grid">
+            <div className="service-cards-grid">
               {seoServices.map((service, i) => (
-                <div key={i} className={`seo-card ${i % 2 === 0 ? "left" : "right"}`}>
+                <div key={i} className="service-card">
                   <h3>{service.title}</h3>
                   <p>{service.description}</p>
-                  <ul>
+                  <ul style={{ marginTop: "12px", paddingLeft: "16px", color: "#6b7280", fontSize: "14px", lineHeight: "1.8" }}>
                     {service.items.map((item, j) => (
                       <li key={j}>{item}</li>
                     ))}
@@ -256,14 +252,15 @@ const SEOServices = () => {
         </section>
 
         {/* SECTION 4 — PROCESS */}
-        <section className="seo-why">
+        <section className="process-section">
           <div className="seo-container">
             <h2>Our SEO Process — Transparent From Day One</h2>
-            <p>No black boxes. No mystery. Every step of our SEO process is clear, documented and tied to your business goals.</p>
-            <div className="seo-why-grid">
+            <p className="process-section-desc">No black boxes. No mystery. Every step of our SEO process is clear, documented and tied to your business goals.</p>
+            <div className="process-grid">
               {process.map((step, i) => (
-                <div key={i}>
-                  <h3>{step.number} — {step.title}</h3>
+                <div key={i} className="process-card">
+                  <div className="process-number">{step.number}</div>
+                  <h3>{step.title}</h3>
                   <p>{step.description}</p>
                 </div>
               ))}
@@ -287,12 +284,12 @@ const SEOServices = () => {
         </section>
 
         {/* SECTION 6 — FAQ */}
-        <section className="seo-ai">
+        <section className="faq-section">
           <div className="seo-container">
-            <h2>SEO Services — <span>Frequently Asked Questions</span></h2>
-            <div className="seo-ai-grid">
+            <h2>SEO Services — Frequently Asked Questions</h2>
+            <div className="faq-container">
               {faqs.map((faq, i) => (
-                <div key={i}>
+                <div key={i} className="faq-item">
                   <h3>{faq.q}</h3>
                   <p>{faq.a}</p>
                 </div>
@@ -302,11 +299,16 @@ const SEOServices = () => {
         </section>
 
         {/* CTA */}
-        <section className="seo-cta">
-          <h2>Ready to Grow Your Organic Traffic and Generate More Leads?</h2>
-          <p>Get a free SEO audit from our AI SEO agency and find out exactly what is holding your website back — no commitment, no spam, just clear answers.</p>
-          <a href="/contact" className="seoaudit-btn">Get My Free SEO Audit →</a>
-          <p style={{ marginTop: "12px", fontSize: "0.85rem", opacity: 0.75 }}>Free audit. No commitment. Results-focused.</p>
+        <section className="cta-section">
+          <div className="seo-container">
+            <h2>Ready to Grow Your Organic Traffic and Generate More Leads?</h2>
+            <p>Get a free SEO audit from our AI SEO agency and find out exactly what is holding your website back — no commitment, no spam, just clear answers.</p>
+            <div className="cta-buttons">
+              <a href="/contact" className="btn-primary">Get My Free SEO Audit →</a>
+              <a href="#seo-results" className="btn-secondary">See Our Results</a>
+            </div>
+            <p className="cta-small-text">Free audit. No commitment. Results-focused.</p>
+          </div>
         </section>
 
         <Footer />

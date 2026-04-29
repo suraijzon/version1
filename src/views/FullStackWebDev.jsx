@@ -130,9 +130,9 @@ const FullStackWebDev = () => {
             <p className="fswd__hero_description">
               ZonzocTech is a full stack web development agency helping businesses across the UK and USA build high-performance custom web applications, MVPs and SaaS platforms. From pixel-perfect frontends to robust backend systems — we deliver complete, production-ready solutions on time and on budget.
             </p>
-            <div className="hero-btn-wrap">
-              <a href="/contact" className="hero-btn-primary">Get Free Consultation →</a>
-              <a href="#fswd-work" className="hero-btn-secondary">See Our Work ↓</a>
+            <div className="hero-buttons">
+              <a href="/contact" className="btn-primary">Get Free Consultation →</a>
+              <a href="#fswd-work" className="btn-secondary">See Our Work ↓</a>
             </div>
             <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>
@@ -141,17 +141,13 @@ const FullStackWebDev = () => {
         <div className="fswd__content_wrapper">
 
           {/* Stats Bar */}
-          <section className="fswd__what_section" id="fswd-work">
-            <div className="fswd__container">
-              <div className="fswd__services_grid">
-                {stats.map((stat, i) => (
-                  <div key={i} className="fswd__service_item">
-                    <div className="fswd__service_icon">{stat.number}</div>
-                    <h4 className="fswd__service_name">{stat.label}</h4>
-                  </div>
-                ))}
+          <section className="stats-bar" id="fswd-work">
+            {stats.map((stat, i) => (
+              <div key={i} className="stat-item">
+                <span className="stat-number">{stat.number}</span>
+                <span className="stat-label">{stat.label}</span>
               </div>
-            </div>
+            ))}
           </section>
 
           {/* Section 1 — What Is */}
@@ -182,11 +178,11 @@ const FullStackWebDev = () => {
               <p className="fswd__section_description">
                 We build custom web solutions for businesses of all sizes — from startups launching their first product to established companies modernising legacy systems.
               </p>
-              <div className="fswd__faq_list">
+              <div className="service-cards-grid">
                 {services.map((service, i) => (
-                  <div key={i} className="fswd__faq_card">
-                    <h4 className="fswd__faq_q">{service.title}</h4>
-                    <p className="fswd__faq_a">{service.description}</p>
+                  <div key={i} className="service-card">
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
                   </div>
                 ))}
               </div>
@@ -200,10 +196,10 @@ const FullStackWebDev = () => {
               <p className="fswd__section_description">
                 Choosing the right development partner is one of the most important decisions a business can make. Here is why growing businesses across the UK and USA choose ZonzocTech.
               </p>
-              <div className="fswd__why_grid">
+              <div className="why-choose-grid">
                 {whyChoose.map((reason, i) => (
-                  <div key={i} className="fswd__why_card">
-                    <strong>{reason.title}</strong>
+                  <div key={i} className="why-choose-card">
+                    <h3>{reason.title}</h3>
                     <p>{reason.description}</p>
                   </div>
                 ))}
@@ -234,20 +230,18 @@ const FullStackWebDev = () => {
           </section>
 
           {/* Section 5 — Process */}
-          <section className="fswd__process_section">
+          <section className="process-section">
             <div className="fswd__container">
-              <h2 className="fswd__section_heading">Our Full Stack Development Process</h2>
-              <p className="fswd__section_description">
+              <h2>Our Full Stack Development Process</h2>
+              <p className="process-section-desc">
                 Clear, structured and collaborative — every project follows our proven process from discovery to deployment.
               </p>
-              <div className="fswd__timeline">
+              <div className="process-grid">
                 {processSteps.map((step, i) => (
-                  <div key={i} className="fswd__timeline_item">
-                    <div className="fswd__timeline_marker">{step.number}</div>
-                    <div className="fswd__timeline_content">
-                      <h3 className="fswd__timeline_title">{step.title}</h3>
-                      <p className="fswd__timeline_text">{step.description}</p>
-                    </div>
+                  <div key={i} className="process-card">
+                    <div className="process-number">{step.number}</div>
+                    <h3>{step.title}</h3>
+                    <p>{step.description}</p>
                   </div>
                 ))}
               </div>
@@ -255,14 +249,14 @@ const FullStackWebDev = () => {
           </section>
 
           {/* Section 6 — FAQ */}
-          <section className="fswd__faq_section">
+          <section className="faq-section">
             <div className="fswd__container">
               <h2 className="fswd__section_heading">Full Stack Web Development — Frequently Asked Questions</h2>
-              <div className="fswd__faq_list">
+              <div className="faq-container">
                 {faqs.map((faq, i) => (
-                  <div key={i} className="fswd__faq_card">
-                    <h4 className="fswd__faq_q">{faq.question}</h4>
-                    <p className="fswd__faq_a">{faq.answer}</p>
+                  <div key={i} className="faq-item">
+                    <h3>{faq.question}</h3>
+                    <p>{faq.answer}</p>
                   </div>
                 ))}
               </div>
@@ -270,19 +264,15 @@ const FullStackWebDev = () => {
           </section>
 
           {/* Final CTA */}
-          <section className="fswd__cta_section">
+          <section className="cta-section">
             <div className="fswd__container">
-              <div className="fswd__cta_content">
-                <h2 className="fswd__cta_heading">Ready to Build Your Web Application?</h2>
-                <p className="fswd__cta_text">
-                  Whether you need an MVP, a SaaS platform or a custom web application — tell us about your project and we will put together a free technical consultation and development proposal.
-                </p>
-                <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center", marginTop: "24px" }}>
-                  <a href="/contact" className="fswd__cta_button">Get Free Consultation →</a>
-                  <a href="/#portfolio" className="fswd__cta_button" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work</a>
-                </div>
-                <p style={{ marginTop: "12px", fontSize: "0.85rem", opacity: 0.7 }}>No commitment. No spam. Just honest advice.</p>
+              <h2>Ready to Build Your Web Application?</h2>
+              <p>Whether you need an MVP, a SaaS platform or a custom web application — tell us about your project and we will put together a free technical consultation and development proposal.</p>
+              <div className="cta-buttons">
+                <a href="/contact" className="btn-primary">Get Free Consultation →</a>
+                <a href="/#portfolio" className="btn-secondary">See Our Work</a>
               </div>
+              <p className="cta-small-text">No commitment. No spam. Just honest advice.</p>
             </div>
           </section>
 

@@ -79,9 +79,9 @@ const AIWebsiteDesign = () => {
               <p className="aiwd__hero_description">
                 ZonzocTech designs and builds high-converting websites for small businesses and growing companies across the UK and USA. We combine modern AI-powered design with conversion-focused UX — creating websites that look great, load fast and turn visitors into leads from day one.
               </p>
-              <div className="hero-btn-wrap">
-                <a href="/contact" className="hero-btn-primary">Get Free Design Consultation →</a>
-                <a href="#aiwd-work" className="hero-btn-secondary">See Our Work ↓</a>
+              <div className="hero-buttons">
+                <a href="/contact" className="btn-primary">Get Free Design Consultation →</a>
+                <a href="#aiwd-work" className="btn-secondary">See Our Work ↓</a>
               </div>
               <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
             </div>
@@ -94,17 +94,13 @@ const AIWebsiteDesign = () => {
         </section>
 
         {/* Stats Bar */}
-        <section className="aiwd__audience_section" id="aiwd-work">
-          <div className="aiwd__container">
-            <div className="aiwd__audience_grid">
-              {stats.map((stat, i) => (
-                <div key={i} className="aiwd__audience_card">
-                  <div className="aiwd__audience_icon">{stat.number}</div>
-                  <p>{stat.label}</p>
-                </div>
-              ))}
+        <section className="stats-bar" id="aiwd-work">
+          {stats.map((stat, i) => (
+            <div key={i} className="stat-item">
+              <span className="stat-number">{stat.number}</span>
+              <span className="stat-label">{stat.label}</span>
             </div>
-          </div>
+          ))}
         </section>
 
         {/* Section 1 — Why Most Websites Fail */}
@@ -135,11 +131,11 @@ const AIWebsiteDesign = () => {
             <p className="aiwd__subtitle">
               We offer complete website design and development — from strategy and design through to development, launch and ongoing optimisation.
             </p>
-            <div className="aiwd__faq_container">
+            <div className="service-cards-grid">
               {services.map((service, i) => (
-                <div key={i} className="aiwd__faq_item">
-                  <h3 className="aiwd__faq_question">{service.title}</h3>
-                  <p className="aiwd__faq_answer">{service.description}</p>
+                <div key={i} className="service-card">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
                 </div>
               ))}
             </div>
@@ -150,13 +146,11 @@ const AIWebsiteDesign = () => {
         <section className="aiwd__why_section">
           <div className="aiwd__container">
             <h2 className="aiwd__title">Why UK & USA Businesses Choose ZonzocTech for Website Design</h2>
-            <div className="aiwd__why_grid">
+            <div className="why-choose-grid">
               {whyChoose.map((reason, i) => (
-                <div key={i} className="aiwd__why_item">
-                  <div className="aiwd__why_check">
-                    <strong>{reason.title}</strong>
-                  </div>
-                  <span>{reason.description}</span>
+                <div key={i} className="why-choose-card">
+                  <h3>{reason.title}</h3>
+                  <p>{reason.description}</p>
                 </div>
               ))}
             </div>
@@ -164,15 +158,15 @@ const AIWebsiteDesign = () => {
         </section>
 
         {/* Section 4 — Process */}
-        <section className="aiwd__process_section">
+        <section className="process-section">
           <div className="aiwd__container">
-            <h2 className="aiwd__title2">Our Website Design Process</h2>
-            <div className="aiwd__process_grid">
+            <h2>Our Website Design Process</h2>
+            <div className="process-grid">
               {processSteps.map((item, i) => (
-                <div key={i} className="aiwd__process_card">
-                  <div className="aiwd__process_number">{item.step}</div>
-                  <h3 className="aiwd__process_title">{item.title}</h3>
-                  <p className="aiwd__process_desc">{item.description}</p>
+                <div key={i} className="process-card">
+                  <div className="process-number">{item.step}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                 </div>
               ))}
             </div>
@@ -198,14 +192,14 @@ const AIWebsiteDesign = () => {
         </section>
 
         {/* Section 6 — FAQ */}
-        <section className="aiwd__faq_section">
+        <section className="faq-section">
           <div className="aiwd__container">
-            <h2 className="aiwd__title">Website Design — Frequently Asked Questions</h2>
-            <div className="aiwd__faq_container">
+            <h2>Website Design — Frequently Asked Questions</h2>
+            <div className="faq-container">
               {faqs.map((faq, i) => (
-                <div key={i} className="aiwd__faq_item">
-                  <h3 className="aiwd__faq_question">{faq.question}</h3>
-                  <p className="aiwd__faq_answer">{faq.answer}</p>
+                <div key={i} className="faq-item">
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -213,17 +207,15 @@ const AIWebsiteDesign = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="aiwd__final_cta">
+        <section className="cta-section">
           <div className="aiwd__container">
-            <h2 className="aiwd__cta_heading">Ready for a Website That Actually Generates Leads?</h2>
-            <p className="aiwd__cta_text">
-              Tell us about your business and we will put together a free website design consultation and growth proposal — no commitment required.
-            </p>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center", marginTop: "24px" }}>
-              <a href="/contact" className="aiwd__cta_button">Get Free Design Consultation →</a>
-              <a href="/#portfolio" className="aiwd__cta_button" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work</a>
+            <h2>Ready for a Website That Actually Generates Leads?</h2>
+            <p>Tell us about your business and we will put together a free website design consultation and growth proposal — no commitment required.</p>
+            <div className="cta-buttons">
+              <a href="/contact" className="btn-primary">Get Free Design Consultation →</a>
+              <a href="/#portfolio" className="btn-secondary">See Our Work</a>
             </div>
-            <p style={{ marginTop: "12px", fontSize: "0.85rem", opacity: 0.7 }}>No commitment. No spam. Just results.</p>
+            <p className="cta-small-text">No commitment. No spam. Just results.</p>
           </div>
         </section>
 

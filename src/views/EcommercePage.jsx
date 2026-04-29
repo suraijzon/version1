@@ -79,26 +79,22 @@ const EcommerceDev = () => {
             <p className="ecd__hero_text">
               ZonzocTech builds high-converting ecommerce websites for businesses across the UK and USA. Whether you need a Shopify store, WooCommerce site or fully custom ecommerce platform — we design, develop and optimise online stores that turn browsers into buyers and grow your revenue consistently.
             </p>
-            <div className="hero-btn-wrap">
-              <a href="/contact" className="hero-btn-primary">Get Free Ecommerce Audit →</a>
-              <a href="#ecd-work" className="hero-btn-secondary">See Our Work ↓</a>
+            <div className="hero-buttons">
+              <a href="/contact" className="btn-primary">Get Free Ecommerce Audit →</a>
+              <a href="#ecd-work" className="btn-secondary">See Our Work ↓</a>
             </div>
             <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>
         </section>
 
         {/* Stats Bar */}
-        <section className="ecd__what_section" id="ecd-work">
-          <div className="ecd__container">
-            <div className="ecd__problems_grid">
-              {stats.map((stat, i) => (
-                <div key={i} className="ecd__problem_card">
-                  <div className="ecd__problem_icon">{stat.number}</div>
-                  <p className="ecd__problem_text">{stat.label}</p>
-                </div>
-              ))}
+        <section className="stats-bar" id="ecd-work">
+          {stats.map((stat, i) => (
+            <div key={i} className="stat-item">
+              <span className="stat-number">{stat.number}</span>
+              <span className="stat-label">{stat.label}</span>
             </div>
-          </div>
+          ))}
         </section>
 
         {/* Section 1 — Why Most Stores Underperform */}
@@ -130,14 +126,11 @@ const EcommerceDev = () => {
             <p className="ecd__subtitle">
               From new store builds to performance optimisation — we offer complete ecommerce development services tailored to your platform and growth goals.
             </p>
-            <div className="ecd__services_grid">
+            <div className="service-cards-grid">
               {services.map((service, i) => (
-                <div key={i} className="ecd__service_card">
-                  <div className="ecd__service_number">{String(i + 1).padStart(2, "0")}</div>
-                  <div>
-                    <h3 style={{ marginBottom: "8px" }}>{service.title}</h3>
-                    <p className="ecd__service_text">{service.description}</p>
-                  </div>
+                <div key={i} className="service-card">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
                 </div>
               ))}
             </div>
@@ -163,19 +156,15 @@ const EcommerceDev = () => {
         </section>
 
         {/* Section 4 — Process */}
-        <section className="ecd__process_section">
+        <section className="process-section">
           <div className="ecd__container">
-            <h2 className="ecd__heading">Our Ecommerce Development Process</h2>
-            <div className="ecd__process_timeline">
+            <h2>Our Ecommerce Development Process</h2>
+            <div className="process-grid">
               {processSteps.map((step, i) => (
-                <div key={i} className="ecd__process_step">
-                  <div className="ecd__step_marker">
-                    <span className="ecd__step_number">{step.number}</span>
-                  </div>
-                  <div className="ecd__step_content">
-                    <h3 className="ecd__step_title">{step.title}</h3>
-                    <p className="ecd__step_desc">{step.description}</p>
-                  </div>
+                <div key={i} className="process-card">
+                  <div className="process-number">{step.number}</div>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
                 </div>
               ))}
             </div>
@@ -201,14 +190,14 @@ const EcommerceDev = () => {
         </section>
 
         {/* Section 6 — FAQ */}
-        <section className="ecd__faq_section">
+        <section className="faq-section">
           <div className="ecd__container">
-            <h2 className="ecd__heading2">Ecommerce Development — Frequently Asked Questions</h2>
-            <div className="ecd__faq_container">
+            <h2>Ecommerce Development — Frequently Asked Questions</h2>
+            <div className="faq-container">
               {faqs.map((faq, i) => (
-                <div key={i} className="ecd__faq_card">
-                  <h4 className="ecd__faq_q">{faq.question}</h4>
-                  <p className="ecd__faq_a">{faq.answer}</p>
+                <div key={i} className="faq-item">
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -216,19 +205,15 @@ const EcommerceDev = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="ecd__cta_section">
+        <section className="cta-section">
           <div className="ecd__container">
-            <div className="ecd__cta_box">
-              <h2 className="ecd__cta_title">Ready to Build an Ecommerce Store That Actually Sells?</h2>
-              <p className="ecd__cta_text">
-                Tell us about your store and we will put together a free ecommerce audit and growth proposal — no commitment required.
-              </p>
-              <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center", marginTop: "24px" }}>
-                <a href="/contact" className="ecd__cta_btn">Get Free Ecommerce Audit →</a>
-                <a href="/#portfolio" className="ecd__cta_btn" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Work</a>
-              </div>
-              <p style={{ marginTop: "12px", fontSize: "0.85rem", opacity: 0.7 }}>No commitment. No spam. Just results.</p>
+            <h2>Ready to Build an Ecommerce Store That Actually Sells?</h2>
+            <p>Tell us about your store and we will put together a free ecommerce audit and growth proposal — no commitment required.</p>
+            <div className="cta-buttons">
+              <a href="/contact" className="btn-primary">Get Free Ecommerce Audit →</a>
+              <a href="/#portfolio" className="btn-secondary">See Our Work</a>
             </div>
+            <p className="cta-small-text">No commitment. No spam. Just results.</p>
           </div>
         </section>
 

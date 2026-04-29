@@ -82,26 +82,22 @@ const WebsiteMaintenance = () => {
             <p className="wm__hero_text">
               ZonzocTech provides professional website maintenance, performance and security services for businesses across the UK and USA. We monitor, protect and optimise your website around the clock — so you can focus on running your business while we make sure your website never lets you down.
             </p>
-            <div className="hero-btn-wrap">
-              <a href="/contact" className="hero-btn-primary">Get Free Website Health Check →</a>
-              <a href="#wm-services" className="hero-btn-secondary">See Our Services ↓</a>
+            <div className="hero-buttons">
+              <a href="/contact" className="btn-primary">Get Free Website Health Check →</a>
+              <a href="#wm-services" className="btn-secondary">See Our Services ↓</a>
             </div>
             <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>
         </section>
 
         {/* Stats Bar */}
-        <section className="wm__why_section" id="wm-services">
-          <div className="wm__container">
-            <div className="wm__why_grid">
-              {stats.map((stat, i) => (
-                <div key={i} className="wm__why_card">
-                  <strong>{stat.number}</strong>
-                  <p>{stat.label}</p>
-                </div>
-              ))}
+        <section className="stats-bar" id="wm-services">
+          {stats.map((stat, i) => (
+            <div key={i} className="stat-item">
+              <span className="stat-number">{stat.number}</span>
+              <span className="stat-label">{stat.label}</span>
             </div>
-          </div>
+          ))}
         </section>
 
         {/* Section 1 — Why Maintenance Is Not Optional */}
@@ -133,14 +129,11 @@ const WebsiteMaintenance = () => {
             <p className="wm__subtitle">
               We offer comprehensive website maintenance, performance and security services — covering everything your website needs to stay fast, safe and competitive.
             </p>
-            <div className="wm__services_grid">
+            <div className="service-cards-grid">
               {services.map((service, i) => (
-                <div key={i} className="wm__service_item">
-                  <div className="wm__service_number">{String(i + 1).padStart(2, '0')}</div>
-                  <div>
-                    <strong>{service.title}</strong>
-                    <p style={{ marginTop: "6px" }}>{service.description}</p>
-                  </div>
+                <div key={i} className="service-card">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
                 </div>
               ))}
             </div>
@@ -170,15 +163,15 @@ const WebsiteMaintenance = () => {
         </section>
 
         {/* Section 4 — Process */}
-        <section className="wm__process_section">
+        <section className="process-section">
           <div className="wm__container">
-            <h2 className="wm__heading2">Our Website Maintenance Process</h2>
-            <div className="wm__process_grid">
+            <h2>Our Website Maintenance Process</h2>
+            <div className="process-grid">
               {processSteps.map((step, i) => (
-                <div key={i} className="wm__process_card">
-                  <div className="wm__process_badge">{step.number}</div>
-                  <h3 className="wm__process_title">{step.title}</h3>
-                  <p className="wm__process_desc">{step.description}</p>
+                <div key={i} className="process-card">
+                  <div className="process-number">{step.number}</div>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
                 </div>
               ))}
             </div>
@@ -204,14 +197,14 @@ const WebsiteMaintenance = () => {
         </section>
 
         {/* Section 6 — FAQ */}
-        <section className="wm__faq_section">
+        <section className="faq-section">
           <div className="wm__container">
-            <h2 className="wm__heading2">Website Maintenance — Frequently Asked Questions</h2>
-            <div className="wm__faq_list">
+            <h2>Website Maintenance — Frequently Asked Questions</h2>
+            <div className="faq-container">
               {faqs.map((faq, i) => (
-                <div key={i} className="wm__faq_item">
-                  <h4 className="wm__faq_question">{faq.question}</h4>
-                  <p className="wm__faq_answer">{faq.answer}</p>
+                <div key={i} className="faq-item">
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -219,17 +212,15 @@ const WebsiteMaintenance = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="wm__cta_section">
+        <section className="cta-section">
           <div className="wm__container">
-            <h2 className="wm__cta_title">Ready to Protect and Optimise Your Website?</h2>
-            <p className="wm__cta_text">
-              Get a free website health check and find out exactly what needs attention — no commitment required.
-            </p>
-            <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center", marginTop: "24px" }}>
-              <a href="/contact" className="wm__cta_btn">Get Free Health Check →</a>
-              <a href="/#services" className="wm__cta_btn" style={{ background: "transparent", border: "1px solid currentColor" }}>See Our Services</a>
+            <h2>Ready to Protect and Optimise Your Website?</h2>
+            <p>Get a free website health check and find out exactly what needs attention — no commitment required.</p>
+            <div className="cta-buttons">
+              <a href="/contact" className="btn-primary">Get Free Health Check →</a>
+              <a href="/#services" className="btn-secondary">See Our Services</a>
             </div>
-            <p style={{ marginTop: "12px", fontSize: "0.85rem", opacity: 0.7 }}>No commitment. No spam. Just results.</p>
+            <p className="cta-small-text">No commitment. No spam. Just results.</p>
           </div>
         </section>
 

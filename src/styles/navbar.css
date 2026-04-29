@@ -234,16 +234,21 @@
 
 /* Close button inside menu */
 .mobile-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #0a0a0a;
-  padding: 8px;
-  line-height: 1;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .mobile-close {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #0a0a0a;
+  }
 }
 
 /* Mobile services accordion — hidden on desktop */

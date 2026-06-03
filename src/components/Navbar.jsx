@@ -1,240 +1,316 @@
 'use client';
-import React, { useEffect, useRef, useState } from "react";
-import "../styles/navbar.css";
-import "../styles/topbar.css";
-import { useAuth } from "../context/AuthContext";
-import { useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 import ExpertPopup from "./ExpertPopup";
 
-const DESKTOP_BREAKPOINT = 1024;
-const CLOSE_DELAY_MS = 180;
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faEarthAmericas,
+  faEnvelope,
+  faBars,
+  faXmark,
+  faHome,
+  faChevronDown
+} from "@fortawesome/free-solid-svg-icons";
+
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
+config.autoAddCss = false;
+
+import "../styles/navbar.css";
+import "../styles/topbar.css";
 
 const Navbar = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [mobileDropdown, setMobileDropdown] = useState(null);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const navRef = useRef(null);
-  const closeTimerRef = useRef(null);
 
-  useAuth();
-  const router = useRouter();
-
-  const isDesktop = () => window.innerWidth > DESKTOP_BREAKPOINT;
-
-  const clearCloseTimer = () => {
-    if (closeTimerRef.current) {
-      clearTimeout(closeTimerRef.current);
-      closeTimerRef.current = null;
-    }
-  };
-
-  const openDropdown = (id) => {
-    if (!isDesktop()) return;
-    clearCloseTimer();
-    setActiveDropdown(id);
-  };
-
-  const scheduleCloseDropdown = () => {
-    if (!isDesktop()) return;
-    clearCloseTimer();
-    closeTimerRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, CLOSE_DELAY_MS);
-  };
-
-  const toggleMobileDropdown = (id) => {
-    if (isDesktop()) return;
-    setMobileDropdown((prev) => (prev === id ? null : id));
-  };
-
-  const handleDropdownButtonClick = (id) => {
-    if (isDesktop()) {
-      clearCloseTimer();
-      setActiveDropdown((prev) => (prev === id ? null : id));
-    } else {
-      toggleMobileDropdown(id);
-    }
-  };
-
-  const handleLogoClick = () => {
-    router.push("/");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (!isDesktop()) return;
-      if (navRef.current && !navRef.current.contains(e.target)) {
-        setActiveDropdown(null);
-      }
-    };
-
-    const handleResize = () => {
-      if (isDesktop()) {
-        setMobileDropdown(null);
-      } else {
-        setActiveDropdown(null);
-      }
-    };
-
     const handleScroll = () => {
+      const nav = document.querySelector('.navbar');
       if (window.scrollY > 10) {
-        document.querySelector('.navbar')?.classList.add('scrolled');
+        nav?.classList.add('scrolled');
       } else {
-        document.querySelector('.navbar')?.classList.remove('scrolled');
+        nav?.classList.remove('scrolled');
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-    window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("scroll", handleScroll);
-      clearCloseTimer();
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const dropdownHoverProps = (id) => ({
-    onMouseEnter: () => openDropdown(id),
-    onMouseLeave: scheduleCloseDropdown,
-  });
+  useEffect(() => {
+    setMobileOpen(false);
+    setMobileServicesOpen(false);
+  }, [pathname]);
 
-  const dropdownContentHoverProps = {
-    onMouseEnter: clearCloseTimer,
-    onMouseLeave: scheduleCloseDropdown,
+  const closeMobile = () => {
+    setMobileOpen(false);
+    setMobileServicesOpen(false);
   };
 
   return (
     <>
+      {/* TOPBAR */}
       <div className="topbar">
         <div className="topbar-inner">
           <div className="topbar-left">
-            <span>🌍 Serving Businesses in UK & USA | 150+ Projects Delivered</span>
+            <span>
+              <FontAwesomeIcon
+                icon={faEarthAmericas}
+                fixedWidth
+                style={{ marginRight: "6px" }}
+              />
+              Serving Businesses in
+              <span className="sky-blue"> UK & USA </span>
+              | 150+ Projects Delivered
+            </span>
           </div>
+
           <div className="topbar-right">
-            <a href="mailto:info@zonzoctech.com?subject=New Project Inquiry&body=Hi ZonzocTech Team,%0D%0A%0D%0AI would like to discuss a project with you.%0D%0A%0D%0AThanks," className="email-link">
-              info@zonzoctech.com
+            <a
+              href="mailto:info@zonzoctech.com"
+              className="topbar-link"
+              title="Email Us"
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
             </a>
+
             <a
               href="https://wa.me/94740309534"
               target="_blank"
               rel="noopener noreferrer"
-              className="whatsapp-banner"
+              className="topbar-link wa-btn"
             >
-              +94 74 030 9534
+              <FontAwesomeIcon icon={faWhatsapp} className="wa-icon" />
             </a>
           </div>
         </div>
       </div>
 
-      <header className="navbar" ref={navRef}>
+      {/* NAVBAR CONTAINER */}
+      <nav className="navbar">
         <div className="navbar-inner">
-          <div className="navbar-logo" onClick={handleLogoClick} style={{ cursor: "pointer" }}>
-            <img src="/images/logo.png" alt="Zonzoctech Logo" />
+          
+          {/* BRAND LOGO: Only links if NOT on homepage */}
+          {isHomePage ? (
+            <div className="navbar-logo" style={{ cursor: 'default' }}>
+              <Image
+                src="/logo/logo2.png"
+                alt="Zonzoctech"
+                width={200}
+                height={60}
+                priority
+              />
+            </div>
+          ) : (
+            <Link
+              href="/"
+              className="navbar-logo"
+              onClick={closeMobile}
+            >
+              <Image
+  src="/logo/logo2.png"
+  alt="Zonzoctech"
+  width={200}
+  height={60}
+  priority
+  style={{
+    width: "200px",
+    height: "auto",
+    display: "block"
+  }}
+/>
+            </Link>
+          )}
+
+          {/* COMPACT MOBILE ACTIONS HEADER ROW */}
+          <div className="navbar-mobile-controls">
+            {/* REMOVED HOME BUTTON FROM HERE TO CLEAN UP THE ROW VIEW */}
+
+            {!mobileOpen && (
+              <button
+                className="get-proposal-button mobile-nav-cta"
+                onClick={() => setIsPopupOpen(true)}
+              >
+                Get Free Proposal
+              </button>
+            )}
+
+            <button
+              className="hamburger"
+              aria-label="Toggle menu"
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
+              <FontAwesomeIcon icon={mobileOpen ? faXmark : faBars} />
+            </button>
           </div>
 
-          <nav className={`navbar-links ${mobileOpen ? "mobile-open" : ""}`}>
-            <button className="mobile-close" onClick={() => setMobileOpen(false)}>✕</button>
+          {/* 1. DESKTOP ONLY NAVIGATION */}
+          <div className="nav-container desktop-nav-only">
+            <ul className="nav-links-list">
+              <li className="nav-link desktop-only-home-link">
+                {isHomePage ? (
+                  <div style={{ color: '#00448f', cursor: 'default', display: 'flex', alignItems: 'center' }}>
+                    <FontAwesomeIcon
+                      icon={faHome}
+                      style={{ marginRight: "6px" }}
+                    />
+                    Home
+                  </div>
+                ) : (
+                  <Link href="/" onClick={closeMobile}>
+                    <FontAwesomeIcon
+                      icon={faHome}
+                      style={{ marginRight: "6px" }}
+                    />
+                    Home
+                  </Link>
+                )}
+              </li>
 
-            {/* Desktop dropdown */}
-            <div
-              className={`navbar-dropdown ${activeDropdown === 1 ? "active" : ""}`}
-              {...dropdownHoverProps(1)}
-            >
-              <button
-                className="drop-btn"
-                onClick={() => handleDropdownButtonClick(1)}
-                aria-expanded={activeDropdown === 1}
-              >
-                Services ▾
-              </button>
-
-              <div className={`navbar-dropdown-menu${activeDropdown === 1 ? ' open' : ''}`} {...dropdownContentHoverProps}>
-                <div className="dropdown-section">
-                  <h6>WEB & AI DEVELOPMENT</h6>
-                  <Link href="/ai-web-application-development">AI Web Development</Link>
-                  <Link href="/full-stack-web-development">Full-Stack Web Development</Link>
-                  <Link href="/ai-website-design-development">AI Website Design</Link>
-                  <Link href="/ai-software-development">AI Software Development</Link>
+              {/* SERVICES DROPDOWN */}
+              <li className="nav-link dropdown-parent">
+                <div className="dropdown-trigger-wrapper">
+                  <span>Services</span>
+                  <FontAwesomeIcon icon={faChevronDown} className="arrow" />
                 </div>
 
-                <div className="dropdown-section">
-                  <h6>SEO & GROWTH</h6>
-                  <Link href="/seo-services">SEO Services</Link>
-                  <Link href="/seo-ai-search-optimization">AI SEO & Search Optimization</Link>
-                  <Link href="/ecommerce-development-optimization">E-commerce Development</Link>
-                </div>
+                <div className="mega-menu-rect">
+                  <div className="mega-col">
+                    <h4 className="mega-heading">Web & AI Development</h4>
+                    <Link href="/ai-website-design-development">AI Website Design & Development</Link>
+                    <Link href="/ai-web-application-development">AI Web Application Development</Link>
+                    <Link href="/full-stack-web-development">Full-Stack Web Development</Link>
+                    <Link href="/ai-software-development">AI Software Development</Link>
+                    <Link href="/ecommerce-development-optimization">E-commerce Development</Link>
+                  </div>
 
-                <div className="dropdown-section">
-                  <h6>SUPPORT</h6>
-                  <Link href="/website-maintenance-performance-security">Website Maintenance & Security</Link>
-                </div>
-              </div>
-            </div>
+                  <div className="mega-col">
+                    <h4 className="mega-heading">SEO & Growth</h4>
+                    <Link href="/seo-services">SEO Services</Link>
+                    <Link href="/seo-ai-search-optimization">SEO & AI Search Optimization</Link>
+                    <Link href="/seo-services">Website Speed Optimization</Link>
+                    <Link href="/seo-ai-search-optimization">Technical SEO</Link>
+                  </div>
 
-            {/* Mobile services accordion */}
-            <div className="mobile-services">
-              <button
-                className="mobile-services-toggle"
+                  <div className="mega-col">
+                    <h4 className="mega-heading">Support & Maintenance</h4>
+                    <Link href="/website-maintenance-performance-security">Website Maintenance</Link>
+                    <Link href="/website-maintenance-performance-security">Performance Optimization</Link>
+                    <Link href="/website-maintenance-performance-security">Security Monitoring</Link>
+                    <Link href="/website-maintenance-performance-security">Ongoing Support</Link>
+                  </div>
+                </div>
+              </li>
+
+              <li className="nav-link">
+                <Link href="/case-studies">Our Work</Link>
+              </li>
+              <li className="nav-link">
+                <Link href="/about">About</Link>
+              </li>
+              <li className="nav-link">
+                <Link href="/blog">Blog</Link>
+              </li>
+              <li className="nav-link">
+                <Link href="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* DESKTOP EXCLUSIVE ACTION BUTTON */}
+          <button
+            className="get-proposal-button desktop-cta"
+            onClick={() => setIsPopupOpen(true)}
+          >
+            Get Free Proposal
+          </button>
+
+          {/* 2. MOBILE EXCLUSIVE DRAWER PANEL LAYOUT */}
+          <div className={`mobile-nav-drawer ${mobileOpen ? "active" : ""}`}>
+            <div className="mobile-drawer-scroll-box">
+              
+              {/* HOME LINK ADDED INSIDE THE MOBILE DRAWER MENU */}
+              {isHomePage ? (
+                <div className="mobile-drawer-item-row link-redirect" style={{ cursor: 'default', opacity: 0.7 }}>
+                  <FontAwesomeIcon icon={faHome} style={{ marginRight: "10px" }} />
+                  Home
+                </div>
+              ) : (
+                <Link href="/" className="mobile-drawer-item-row link-redirect" onClick={closeMobile}>
+                  <FontAwesomeIcon icon={faHome} style={{ marginRight: "10px" }} />
+                  Home
+                </Link>
+              )}
+              
+              <div 
+                className="mobile-drawer-item-row" 
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
               >
-                Services
-                <span className={mobileServicesOpen ? 'arrow-up' : 'arrow-down'}>▾</span>
-              </button>
+                <span>Services</span>
+                <FontAwesomeIcon 
+                  icon={faChevronDown} 
+                  className={`mobile-arrow-icon ${mobileServicesOpen ? "rotated" : ""}`} 
+                />
+              </div>
 
-              {mobileServicesOpen && (
-                <div className="mobile-services-dropdown">
-                  <p className="mobile-dropdown-label">WEB & AI DEVELOPMENT</p>
-                  <a href="/ai-web-application-development" onClick={() => setMobileOpen(false)}>AI Web Development</a>
-                  <a href="/full-stack-web-development" onClick={() => setMobileOpen(false)}>Full-Stack Web Development</a>
-                  <a href="/ai-website-design-development" onClick={() => setMobileOpen(false)}>AI Website Design</a>
-                  <a href="/ai-software-development" onClick={() => setMobileOpen(false)}>AI Software Development</a>
-
-                  <p className="mobile-dropdown-label">SEO & GROWTH</p>
-                  <a href="/seo-services" onClick={() => setMobileOpen(false)}>SEO Services</a>
-                  <a href="/seo-ai-search-optimization" onClick={() => setMobileOpen(false)}>AI SEO & Search Optimization</a>
-                  <a href="/ecommerce-development-optimization" onClick={() => setMobileOpen(false)}>E-commerce Development</a>
-
-                  <p className="mobile-dropdown-label">SUPPORT</p>
-                  <a href="/website-maintenance-performance-security" onClick={() => setMobileOpen(false)}>Website Maintenance & Security</a>
+              {/* ACCORDION CONTAINER DROPS DOWN NATURAL FLOW */}
+              <div className={`mobile-accordion-body ${mobileServicesOpen ? "expanded" : ""}`}>
+                <div className="mobile-accordion-section">
+                  <h5>Web & AI Development</h5>
+                  <Link href="/ai-website-design-development" onClick={closeMobile}>AI Website Design & Development</Link>
+                  <Link href="/ai-web-application-development" onClick={closeMobile}>AI Web Application Development</Link>
+                  <Link href="/full-stack-web-development" onClick={closeMobile}>Full-Stack Web Development</Link>
+                  <Link href="/ai-software-development" onClick={closeMobile}>AI Software Development</Link>
+                  <Link href="/ecommerce-development-optimization" onClick={closeMobile}>E-commerce Development</Link>
                 </div>
-              )}
+
+                <div className="mobile-accordion-section">
+                  <h5>SEO & Growth</h5>
+                  <Link href="/seo-services" onClick={closeMobile}>SEO Services</Link>
+                  <Link href="/seo-ai-search-optimization" onClick={closeMobile}>SEO & AI Search Optimization</Link>
+                  <Link href="/seo-services" onClick={closeMobile}>Website Speed Optimization</Link>
+                  <Link href="/seo-ai-search-optimization" onClick={closeMobile}>Technical SEO</Link>
+                </div>
+
+                <div className="mobile-accordion-section">
+                  <h5>Support & Maintenance</h5>
+                  <Link href="/website-maintenance-performance-security" onClick={closeMobile}>Website Maintenance</Link>
+                  <Link href="/website-maintenance-performance-security" onClick={closeMobile}>Performance Optimization</Link>
+                  <Link href="/website-maintenance-performance-security" onClick={closeMobile}>Security Monitoring</Link>
+                  <Link href="/website-maintenance-performance-security" onClick={closeMobile}>Ongoing Support</Link>
+                </div>
+              </div>
+
+              {/* PRIMARY LINKS LIST */}
+              <Link href="/case-studies" className="mobile-drawer-item-row link-redirect" onClick={closeMobile}>Our Work</Link>
+              <Link href="/about" className="mobile-drawer-item-row link-redirect" onClick={closeMobile}>About</Link>
+              <Link href="/blog" className="mobile-drawer-item-row link-redirect" onClick={closeMobile}>Blog</Link>
+              <Link href="/contact" className="mobile-drawer-item-row link-redirect" onClick={closeMobile}>Contact</Link>
+              
+              <a href="mailto:info@zonzoctech.com" className="mobile-drawer-footer-email">
+                <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: "10px" }} />
+                info@zonzoctech.com
+              </a>
             </div>
+          </div>
 
-            <Link href="/#portfolio" className="drop-btn" onClick={() => setMobileOpen(false)}>Our Work</Link>
-            <Link href="/about" className="drop-btn" onClick={() => setMobileOpen(false)}>About</Link>
-            <Link href="/blog" className="drop-btn" onClick={() => setMobileOpen(false)}>Blog</Link>
-            <Link href="/contact" className="drop-btn" onClick={() => setMobileOpen(false)}>Contact</Link>
-
-            <button className="navbar-cta" onClick={() => { setIsPopupOpen(true); setMobileOpen(false); }}>
-              Get Free Proposal
-            </button>
-          </nav>
-
-          <div
-            className={`mobile-backdrop ${mobileOpen ? "active" : ""}`}
-            onClick={() => setMobileOpen(false)}
-          />
-
-          <ExpertPopup open={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
-
-          <button
-            className="navbar-mobile-toggle"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
         </div>
-      </header>
+      </nav>
+
+      <ExpertPopup
+        open={isPopupOpen}
+        onClose={() => setIsPopupOpen(false)}
+      />
     </>
   );
 };

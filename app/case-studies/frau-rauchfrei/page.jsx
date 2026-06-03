@@ -16,28 +16,37 @@ export default function FrauRauchfreiCaseStudy() {
       <div className="cs__wrapper">
 
         {/* HERO */}
-        <section className="cs__hero">
-          <div className="cs__hero_inner">
-            <span className="cs__eyebrow">Case Study</span>
-            <h1 className="cs__hero_title">Frau Rauchfrei</h1>
-            <p className="cs__hero_sub">
-              End-to-end website security, performance optimisation, and ongoing maintenance for a German health &amp; wellbeing platform — zero downtime, zero breaches.
-            </p>
-            <div className="cs__tags">
-              <span className="cs__tag">Website Maintenance</span>
-              <span className="cs__tag">Web Security</span>
-              <span className="cs__tag">Performance Optimisation</span>
-              <span className="cs__tag">Ongoing Support</span>
-            </div>
-            <div className="cs__hero_links">
-              <a href="https://frau-rauchfrei.de" target="_blank" rel="noopener noreferrer" className="cs__live_btn">
-                View Live Site ↗
-              </a>
-              <Link href="/contact" className="cs__outline_btn">Start Your Project</Link>
-            </div>
-          </div>
-        </section>
+    
 
+<section className="cs__hero">
+  <div className="cs__hero_inner">
+    {/* Centered Breadcrumb */}
+    <nav className="cs__breadcrumb">
+      <Link href="/">HOME</Link>
+      <span className="cs__breadcrumb_separator">&gt;</span>
+      <Link href="/case-studies">CASE STUDIES</Link>
+      <span className="cs__breadcrumb_separator">&gt;</span>
+      <span className="cs__breadcrumb_active">FRAU RAUCHFREI</span>
+    </nav>
+
+    <h1 className="cs__hero_title">Frau Rauchfrei</h1>
+    <p className="cs__hero_sub">
+      End-to-end website security, performance optimisation, and ongoing maintenance for a German health &amp; wellbeing platform — zero downtime, zero breaches.
+    </p>
+    <div className="cs__tags">
+      <span className="cs__tag">Website Maintenance</span>
+      <span className="cs__tag">Web Security</span>
+      <span className="cs__tag">Performance Optimisation</span>
+      <span className="cs__tag">Ongoing Support</span>
+    </div>
+    <div className="cs__hero_links">
+      <a href="https://frau-rauchfrei.de" target="_blank" rel="noopener noreferrer" className="cs__live_btn">
+        View Live Site ↗
+      </a>
+      <Link href="/contact" className="cs__outline_btn">Start Your Project</Link>
+    </div>
+  </div>
+</section>
         {/* GALLERY */}
         <section className="cs__section">
           <div className="cs__container">

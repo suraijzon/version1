@@ -13,7 +13,7 @@ const TrustBar = () => {
   return (
     <section className="trust-bar">
       <p className="trust-bar-label">
-        Trusted by 120+ businesses across UK, USA & Europe
+        Trusted by 120+ businesses across  <span className="sky-blue">UK,USA</span>  & Europe
       </p>
       <div className="trust-bar-stats">
         {stats.map((stat, i) => (

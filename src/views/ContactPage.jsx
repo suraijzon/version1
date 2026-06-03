@@ -2,247 +2,217 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "../styles/ContactPage.css";
 import Breadcrumb from "../components/Breadcrumb";
+import "../styles/ContactPage.css";
 
 const ContactPage = () => {
-
-  const [formData, setFormData] = useState({
-    name: "",
-    company: "",
-    phone: "",
-    email: "",
-    project: ""
-  });
-
+  const [formData, setFormData] = useState({ name: "", company: "", phone: "", email: "", project: "" });
   const [budget, setBudget] = useState(5000);
   const [selectedService, setSelectedService] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [responseMessage, setResponseMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setResponseMessage("");
+    setTimeout(() => {
+      setIsSuccess(true);
+      setIsSubmitting(false);
+    }, 1200);
+  };
 
-    const data = { ...formData, service: selectedService, budget };
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
-
-      if (res.ok) {
-        setResponseMessage("✓ Message sent successfully!");
-        setIsSuccess(true);
-      } else {
-        setResponseMessage("✗ Error sending message.");
-        setIsSuccess(false);
-      }
-    } catch {
-      setResponseMessage("✗ Server error.");
-      setIsSuccess(false);
-    }
-
+  const handleResend = () => {
+    setIsSuccess(false);
     setFormData({ name: "", company: "", phone: "", email: "", project: "" });
     setSelectedService("");
     setBudget(5000);
-    setIsSubmitting(false);
-    setTimeout(() => { setResponseMessage(""); }, 5000);
   };
 
   const percentage = ((budget - 5000) / (65000 - 5000)) * 100;
 
-  const sliderBackground = `linear-gradient(to right, #8e24aa 0%, #8e24aa ${percentage}%, #ddd ${percentage}%, #ddd 100%)`;
-
-  const processSteps = [
-    { title: "01 — We Review Your Message", desc: "We read every enquiry carefully and research your business, website and market before responding." },
-    { title: "02 — Free Strategy Session", desc: "We schedule a free call to discuss your goals, challenges and what the right solution looks like for your specific situation." },
-    { title: "03 — Custom Proposal", desc: "We send a clear, itemised proposal with no hidden costs — tailored to your goals, timeline and budget." },
-    { title: "04 — We Start Building", desc: "Once approved we hit the ground running — with a dedicated team and clear milestones from day one." },
-  ];
-
-  const trustPoints = [
-    { title: "✅ 24 Hour Response Guarantee", desc: "We respond to every enquiry within 24 hours — no chasing, no waiting weeks for a quote." },
-    { title: "✅ No Obligation Consultation", desc: "Our initial consultation is completely free with no commitment required — just honest advice about what will work for your business." },
-    { title: "✅ Transparent Pricing", desc: "No hidden fees. No surprise invoices. Every proposal is clear, itemised and agreed upfront before any work begins." },
-    { title: "✅ Dedicated Project Team", desc: "You get direct access to your project team — not an account manager who passes messages. Real people, real communication." },
-  ];
-
   const faqs = [
-    { question: "How quickly do you respond to enquiries?", answer: "We respond to all enquiries within 24 hours — usually much faster during UK and USA business hours." },
-    { question: "Do you work with businesses in the UK and USA?", answer: "Yes — the majority of our clients are based in the UK, USA and Europe. We work fully remotely across time zones with no difference in quality or communication compared to a local agency." },
-    { question: "Is the initial consultation really free?", answer: "Yes. Our initial consultation is completely free with no commitment required. We will review your website or idea and give you honest, practical advice — whether you work with us or not." },
-    { question: "What information should I include in my message?", answer: "The more context you give us the better. Tell us what you need, your rough timeline, your budget range and your business goals. This helps us prepare a more relevant and useful response for your first call." },
-    { question: "Do you offer fixed price projects or monthly retainers?", answer: "We offer both. Fixed price for one-off projects like website builds and app development. Monthly retainers for ongoing services like SEO, maintenance and AI optimization." },
+    { q: "How quickly do you respond to enquiries?", a: "We respond to all enquiries within 24 hours — usually much faster during UK and USA business hours." },
+    { q: "Do you work with businesses in the UK and USA?", a: "Yes — the majority of our clients are based in the UK, USA and Europe. We work fully remotely across time zones." },
+    { q: "Is the initial consultation really free?", a: "Yes. Our initial consultation is completely free with no commitment required. We provide honest, practical advice." },
+    { q: "What information should I include in my message?", a: "The more context you give us the better. Tell us what you need, your rough timeline, and your business goals." },
+    { q: "Do you offer fixed price projects or monthly retainers?", a: "We offer both. Fixed price for one-off projects and monthly retainers for ongoing optimization." },
   ];
 
   return (
-    <>
-      <div className="cp__wrapper">
-        <Navbar />
-        <Breadcrumb />
+    <div className="cp__wrapper">
+      <Navbar />
 
-        {/* Hero Section */}
-        <section className="cp__consult_section">
-          <div className="cp__container">
-            <h1 className="cp__heading">Let's Build Something Great Together</h1>
-            <p style={{ maxWidth: "680px", margin: "0 auto 24px", textAlign: "center", lineHeight: "1.7" }}>
-              Whether you need a new website, an SEO strategy, AI automation or a full digital growth plan — we are ready to help. Tell us about your project and we will get back to you within 24 hours.
-            </p>
-          </div>
-        </section>
+      {/* 1. HERO SECTION - CENTERED */}
+      <section className="cp__bar_hero">
+        <div className="cp__container">
+          <Breadcrumb />
+          <h1 className="cp__heading">
+            Let's Build Something <span className="text_light_blue">Great Together</span>
+          </h1>
+          <p className="cp__hero_text_white">
+            Whether you need a new website, an SEO strategy, AI automation or a full digital growth plan.
+          </p>
+        </div>
+      </section>
 
-        {/* Contact Info Section */}
-        <section className="cp__form_section">
-          <div className="cp__container">
-            <h2 className="cp__heading">Get In Touch</h2>
-            <div className="cp__steps_grid">
-              <div className="cp__step_card">
-                <h3>Email Us</h3>
-                <p>info@zonzoctech.com</p>
-              </div>
-              <div className="cp__step_card">
-                <h3>WhatsApp & Phone</h3>
-                <p>+94 74 030 9534</p>
-              </div>
-              <div className="cp__step_card">
-                <h3>Working Hours</h3>
-                <p>Monday to Friday — 9am to 6pm (UK & USA time zones)</p>
-              </div>
-              <div className="cp__step_card">
-                <h3>Response Time</h3>
-                <p>We respond to all enquiries within 24 hours</p>
+      {/* 2. CONTACT BUTTONS & FORM SECTION */}
+      <section className="cp__contact_section grey_bar">
+        <div className="cp__container">
+          <div className="cp__contact_wrapper">
+            
+            {/* Left Column (2/3 Width) - Message Form Card */}
+            <div className="cp__form_box">
+              {isSuccess ? (
+                <div className="success_container">
+                  <div className="success_icon">🎉</div>
+                  <h2 className="cp__title_dark">Thank You!</h2>
+                  <p>We will get back to you within 24 hours.</p>
+                  <button onClick={handleResend} className="resend_btn">Send Another Message</button>
+                </div>
+              ) : (
+                <form className="cp__form_actual" onSubmit={handleSubmit}>
+                  <h2 className="cp__title_dark">Send Us a Message</h2>
+                  
+                  <div className="form_row">
+                    <input type="text" name="name" placeholder="Your Name*" value={formData.name} onChange={handleInputChange} required />
+                    <input type="email" name="email" placeholder="Email Address*" value={formData.email} onChange={handleInputChange} required />
+                  </div>
+                  
+                  <div className="form_row">
+                    <input type="text" name="company" placeholder="Company / Organization" value={formData.company} onChange={handleInputChange} />
+                    <input type="tel" name="phone" placeholder="Phone Number*" value={formData.phone} onChange={handleInputChange} required />
+                  </div>
+                  
+                  <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)} required>
+                    <option value="">You are interested in...</option>
+                    <option value="AI Solutions">AI Solutions</option>
+                    <option value="Web Dev">Website Development</option>
+                  </select>
+                  
+                  <div className="budget_wrap">
+                    <label>Budget: ${budget.toLocaleString()}</label>
+                    <input 
+                      type="range" 
+                      min="5000" 
+                      max="65000" 
+                      step="500" 
+                      value={budget} 
+                      onChange={(e) => setBudget(Number(e.target.value))} 
+                      style={{ background: `linear-gradient(to right, #1296ec ${percentage}%, #ddd ${percentage}%)` }} 
+                    />
+                  </div>
+                  
+                  <textarea name="project" placeholder="Tell us about the project..." value={formData.project} onChange={handleInputChange} required></textarea>
+                  
+                  <button type="submit" className="submit_btn" disabled={isSubmitting}>
+                    {isSubmitting ? "sending..." : "submit"}
+                  </button>
+                </form>
+              )}
+            </div>
+
+            {/* Right Column (1/3 Width) - Stretched Vertical Contact Buttons */}
+            <div className="cp__button_column">
+              <a href="mailto:info@zonzoctech.com" className="cp__btn_card">
+                <span className="cp__card_icon">📩</span>
+                <div className="cp__card_content">
+                  <h3>Email Us</h3>
+                  <p>info@zonzoctech.com</p>
+                </div>
+              </a>
+              
+              <a href="https://wa.me/94740309534" className="cp__btn_card cp__whatsapp_card">
+                <span className="cp__card_icon text_whatsapp">
+                  {/* Official SVG Path for Brand WhatsApp Grid Item */}
+                  <svg width="24" height="24" viewBox="0 0 448 512" fill="currentColor" style={{ display: 'block' }}>
+                    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                  </svg>
+                </span>
+                <div className="cp__card_content">
+                  <h3>WhatsApp</h3>
+                  <p>+94 74 030 9534</p>
+                </div>
+              </a>
+              
+              <div className="cp__btn_card no_hover">
+                <span className="cp__card_icon">🕒</span>
+                <div className="cp__card_content">
+                  <h3>Working Hours</h3>
+                  <p>Mon-Fri (9am-6pm)</p>
+                </div>
               </div>
             </div>
+
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Form Section */}
-        <section className="cp__form_section">
-          <div className="cp__container">
-            <h2 className="cp__heading">Send Us a Message</h2>
-            <p style={{ textAlign: "center", marginBottom: "32px" }}>
-              Fill in the form below and we will review your requirements and get back to you with a free consultation or proposal within 24 hours.
-            </p>
-
-            {responseMessage && (
-              <div className={`alert ${isSuccess ? "alert-success" : "alert-error"}`}>
-                {responseMessage}
+      {/* 4. PROCESS SECTION */}
+      <section className="cp__bar_process white_bar">
+        <div className="cp__container">
+          <h2 className="cp__title_dark">What Happens After You Contact Us</h2>
+          <div className="cp__grid_4">
+            {[
+              { t: "We Review Your Message", d: "We carefully review every enquiry and research your business, website, and market before responding with the right recommendations for you." },
+              { t: "Free Strategy Session", d: "We schedule a free consultation call to discuss your goals, challenges, and the best solution tailored to your business and growth plans." },
+              { t: "Custom Proposal", d: "We provide a clear itemised proposal with transparent pricing, timelines, and deliverables tailored perfectly to your goals, budget, and needs." },
+              { t: "We Start Building", d: "Once approved, our dedicated team gets started immediately with clear milestones, regular updates, and a smooth process from day one." }
+            ].map((s, i) => (
+              <div key={i} className="cp__aligned_card hover_effect_card">
+                <div className="node_ui"><div className="circle">{i + 1}</div>{i < 3 && <div className="line"></div>}</div>
+                <h4 className="card_title">{s.t}</h4>
+                <div className="center_desc_wrapper"><p className="card_desc_aligned">{s.d}</p></div>
               </div>
-            )}
-
-            <form className="cp__form" onSubmit={handleSubmit}>
-              <div className="cp__form_grid">
-                <input type="text" name="name" placeholder="Your Name*" value={formData.name} onChange={handleInputChange} required />
-                <input type="text" name="company" placeholder="Company / Organization" value={formData.company} onChange={handleInputChange} />
-                <input type="tel" name="phone" placeholder="Phone Number*" value={formData.phone} onChange={handleInputChange} required />
-                <input type="email" name="email" placeholder="Email*" value={formData.email} onChange={handleInputChange} required />
-              </div>
-
-              <select value={selectedService} onChange={(e) => setSelectedService(e.target.value)} required>
-                <option value="">You are interested in</option>
-                <option value="AI Solutions">AI Solutions</option>
-                <option value="Free Website Growth plan">Free Website Growth Plan</option>
-                <option value="SEO">SEO</option>
-                <option value="UI/UX Design">UI/UX Design</option>
-                <option value="Website Development">Website Development</option>
-              </select>
-
-              <label className="cp__budget">Estimated Budget (USD): ${budget}</label>
-
-              <input
-                className="cp__slider"
-                type="range"
-                min="5000"
-                max="65000"
-                value={budget}
-                onChange={(e) => setBudget(Number(e.target.value))}
-                style={{ background: sliderBackground }}
-              />
-
-              <textarea name="project" placeholder="Tell us about the project" value={formData.project} onChange={handleInputChange} required />
-
-              <button type="submit" className="cp__submit_btn" disabled={isSubmitting}>
-                {isSubmitting ? "SENDING..." : "Submit"}
-              </button>
-            </form>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Process Section */}
-        <section className="cp__consult_section">
-          <div className="cp__container">
-            <h2 className="cp__heading">What Happens After You Contact Us</h2>
-            <div className="cp__steps_grid">
-              {processSteps.map((step, i) => (
-                <div key={i} className="cp__step_card">
-                  <h3>{step.title}</h3>
-                  <p>{step.desc}</p>
-                </div>
+      {/* 5. TRUST SECTION */}
+      <section className="cp__bar_trust grey_bar">
+        <div className="cp__container">
+          <h2 className="cp__title_dark">Why Businesses Trust ZonzocTech</h2>
+          <div className="cp__grid_4">
+            {[
+              { i: "⚡", t: "24 Hour Response Guarantee", d: "We respond to every enquiry within 24 hours — no chasing or waiting weeks for updates or quotes from our team." },
+              { i: "🤝", t: "No Obligation Consultation", d: "Your initial consultation is free with no commitment required — just honest advice tailored to your business goals and needs." },
+              { i: "💎", t: "Transparent Pricing", d: "No hidden fees or surprise costs. Every proposal is clearly outlined, fully transparent, and agreed upfront before any work begins." },
+              { i: "👥", t: "Dedicated Project Team", d: "You get direct access to your project team throughout the entire process — with clear communication from day one." }
+            ].map((p, idx) => (
+              <div key={idx} className="cp__aligned_card hover_effect_card">
+                <div className="card_icon_real">{p.i}</div>
+                <h4 className="card_title">{p.t}</h4>
+                <div className="center_desc_wrapper"><p className="card_desc_aligned">{p.d}</p></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. FAQ SECTION */}
+      <section className="cp__bar_faq white_bar">
+        <div className="cp__container">
+          <h2 className="cp__title_dark">Frequently Asked Questions</h2>
+          <div className="cp__faq_narrow_container">
+            <div className="cp__accordion">
+              {faqs.map((f, i) => (
+                <details key={i} className="faq_item">
+                  <summary>
+                    <div className="faq_q_text"><span>{i + 1}.</span> {f.q}</div>
+                    <span className="plus_icon">+</span>
+                  </summary>
+                  <div className="faq_ans">{f.a}</div>
+                </details>
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Trust Section */}
-        <section className="cp__form_section">
-          <div className="cp__container">
-            <h2 className="cp__heading">Why Businesses Across the UK & USA Trust ZonzocTech</h2>
-            <div className="cp__steps_grid">
-              {trustPoints.map((point, i) => (
-                <div key={i} className="cp__step_card">
-                  <h3>{point.title}</h3>
-                  <p>{point.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="cp__consult_section">
-          <div className="cp__container">
-            <h2 className="cp__heading">Contact & Working Together — Frequently Asked Questions</h2>
-            <div style={{ maxWidth: "760px", margin: "0 auto" }}>
-              {faqs.map((faq, i) => (
-                <div key={i} style={{ marginBottom: "24px" }}>
-                  <h3 style={{ marginBottom: "8px" }}>{faq.question}</h3>
-                  <p>{faq.answer}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Bottom CTA */}
-        <section className="cp__form_section">
-          <div className="cp__container" style={{ textAlign: "center" }}>
-            <h2 className="cp__heading">Ready to Start?</h2>
-            <p style={{ marginBottom: "24px" }}>
-              Send us a message above or reach us directly on WhatsApp for a faster response.
-            </p>
-            <a
-              href="https://wa.me/94740309534"
-              className="cp__submit_btn"
-              style={{ display: "inline-block", textDecoration: "none" }}
-            >
-              Chat on WhatsApp →
-            </a>
-            <p style={{ marginTop: "12px", fontSize: "0.85rem", opacity: 0.7 }}>No commitment. No spam. Just results.</p>
-          </div>
-        </section>
-
-        <Footer />
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

@@ -1,11 +1,48 @@
 'use client';
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/AISoftwareServices.css";
 import Breadcrumb from "../components/Breadcrumb";
+import {
+  Trash2,
+  Users,
+  BarChart3,
+  ShieldCheck,
+  Bot,
+  Brain,
+  Workflow,
+  BarChart4,
+  Database,
+  Cog,
+  CheckCircle,
+  Layers,
+  Plug,
+  Wallet,
+  RefreshCw,
+  Building2,
+  ShoppingCart,
+  Network,
+  Rocket
+} from "lucide-react";
+
+const technologies = [
+  {
+    category: "AI & Machine Learning",
+    items: ["OpenAI GPT-4", "Claude API", "Google Gemini", "LangChain", "PyTorch"]
+  },
+  {
+    category: "Automation & APIs",
+    items: ["Zapier", "Make (Integromat)", "REST APIs", "Webhooks", "GraphQL"]
+  },
+  {
+    category: "Backend & Cloud",
+    items: ["Node.js", "Python FastAPI", "AWS", "Docker", "PostgreSQL"]
+  }
+];
 
 const AISoftwareServices = () => {
+  const [openIndex, setOpenIndex] = useState(null);
   const stats = [
     { number: "150+", label: "Projects Delivered" },
     { number: "120+", label: "Clients Served" },
@@ -39,12 +76,6 @@ const AISoftwareServices = () => {
     { title: "✅ Ongoing Support & Improvement", description: "AI software improves with use and requires ongoing monitoring and refinement. We provide long-term support — updating models, improving accuracy and adding features as your business needs evolve." },
   ];
 
-  const technologies = [
-    { category: "AI & Machine Learning", items: ["OpenAI GPT-4 & API", "Anthropic Claude API", "Google Gemini", "LangChain & LlamaIndex", "TensorFlow & PyTorch"] },
-    { category: "Automation & Integration", items: ["Zapier & Make integrations", "REST & GraphQL APIs", "Webhook systems", "CRM & ERP connectors", "Email & messaging APIs"] },
-    { category: "Backend & Infrastructure", items: ["Python & FastAPI", "Node.js & Express", "AWS & Google Cloud", "Docker & Kubernetes", "PostgreSQL & MongoDB"] },
-  ];
-
   const processSteps = [
     { number: "01", title: "Business Analysis & AI Scoping", description: "We analyse your business workflows, identify the highest-value automation opportunities and define exactly what AI software will and will not do — setting realistic expectations before any development begins." },
     { number: "02", title: "Solution Design & Architecture", description: "We design the AI system architecture — model selection, data flows, integration points, user interfaces and security controls — creating a clear technical blueprint before writing a single line of code." },
@@ -69,28 +100,97 @@ const AISoftwareServices = () => {
     { question: "Is custom AI software secure?", answer: "Yes. Security is built into every stage of our development process — including data handling, access control, API security and deployment configuration. We follow best practices for AI system security and data privacy compliance." },
     { question: "Do you offer AI automation for small businesses?", answer: "Yes. We specialise in making custom AI automation accessible and affordable for small and medium businesses across the UK and USA — building practical, high-impact solutions that deliver fast ROI without enterprise-level budgets." },
   ];
+  const audience = [
+    {
+      icon: Building2,
+      title: "Small & Medium Businesses",
+      desc: "Looking to reduce manual work and scale operations efficiently."
+    },
+    {
+      icon: ShoppingCart,
+      title: "Customer-Facing Companies",
+      desc: "Need AI chatbots and automation for sales and support."
+    },
+    {
+      icon: Database,
+      title: "Data-Heavy Businesses",
+      desc: "Process large volumes of data, documents or transactions."
+    },
+    {
+      icon: Network,
+      title: "Multi-System Businesses",
+      desc: "Need integration across multiple tools and workflows."
+    },
+    {
+      icon: Rocket,
+      title: "AI Product Startups",
+      desc: "Building AI-powered SaaS products and platforms."
+    }
+  ];
+
+  function FAQItem({ item, isOpen, onClick }) {
+    return (
+      <div className="aiss__faq-item">
+        <button className="aiss__faq-question" onClick={onClick}>
+          {item.question}
+          <span>{isOpen ? "−" : "+"}</span>
+        </button>
+
+        {isOpen && (
+          <div className="aiss__faq-answer">
+            {item.answer}
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <>
       <div className="aiss__wrapper">
         <Navbar />
-        <Breadcrumb />
 
-        {/* Hero Section */}
+        {/* ================= HERO SECTION ================= */}
         <section className="aiss__hero">
           <div className="aiss__hero_gradient"></div>
+
           <div className="aiss__hero_container">
+            {/* MOVED BREADCRUMB HERE: Renders inside the dark container above the badge */}
+            <Breadcrumb />
+
+            {/* Top Label / Pill Badge */}
+            <span className="aiss__hero_badge">
+              AI Software Development Company for UK & USA Businesses
+            </span>
+
             <h1 className="aiss__hero_title">
-              AI Software Development Company UK — Custom Automation Tools, Chatbots and AI Systems Built for Your Business
+              Custom AI Software Development That Automates Operations and{" "}
+              <span className="aiss__hero_title_accent">Accelerates Growth</span>
             </h1>
+
+            {/* Supporting Text */}
             <p className="aiss__hero_text">
-              ZonzocTech builds custom AI software for businesses across the UK and USA — from intelligent chatbots and GPT-powered tools to business process automation systems and workflow integrations. We replace manual, time-consuming operations with smart AI software that works around the clock and scales with your business.
+              We design and build intelligent AI software solutions including custom
+              chatbots, workflow automation systems, GPT-powered tools, and business
+              integrations that reduce manual work, improve decision-making, and scale
+              with your business.
             </p>
+
+            {/* CTA Buttons */}
             <div className="hero-buttons">
-              <a href="/contact" className="btn-primary">Get Free AI Consultation →</a>
-              <a href="#aiss-work" className="btn-secondary">See Our Work ↓</a>
+              <a href="/contact" className="btn-primary">
+                Get Free AI Consultation →
+              </a>
+
+             <a href="/case-studies" className="aiwd-btn-secondary">
+    View Our Works →
+  </a>
             </div>
-            <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
+
+            {/* Trust Text */}
+            <p className="aiss__hero_trust">
+              Trusted by 120+ businesses across the UK, USA & Europe
+            </p>
           </div>
         </section>
 
@@ -103,143 +203,355 @@ const AISoftwareServices = () => {
             </div>
           ))}
         </section>
-
-        {/* Section 1 — What Is */}
-        <section className="aiss__audience_section">
+        
+        {/* SECTION 1 - WHAT IS AI SOFTWARE */}
+        <section className="aiss__section aiss__section--features">
           <div className="aiss__container">
-            <h2 className="aiss__heading">What Is Custom AI Software Development?</h2>
-            <p className="aiss__description">
-              Custom AI software development is the process of building bespoke software solutions that use artificial intelligence to automate tasks, make decisions, process information and interact with users — all tailored specifically to your business workflows, data and goals.
-            </p>
-            <p className="aiss__description">
-              Unlike off-the-shelf AI tools that force you to adapt your business to their limitations, custom AI software is built around how your business actually works — integrating with your existing systems and solving your specific operational challenges.
-            </p>
-            <h3 style={{ margin: "32px 0 16px" }}>The Business Case for Custom AI Software</h3>
-            <div className="aiss__faq_list">
-              {businessCase.map((item, i) => (
-                <div key={i} className="aiss__faq_item">
-                  <h4 className="aiss__faq_question">{item.title}</h4>
-                  <p className="aiss__faq_answer">{item.description}</p>
-                </div>
-              ))}
+
+            <div className="aiss__section-header">
+              <h2 className="aiss__heading">
+                What Is Custom AI Software Development?
+              </h2>
+
+              <p className="aiss__text">
+                Custom AI software development is the process of building intelligent systems tailored to your business workflows — automating tasks, improving decisions, and integrating with your existing tools.
+              </p>
             </div>
+
+            <div className="aiss__grid aiss__grid--features">
+
+              <div className="aiss__card aiss__card--feature">
+                <div className="aiss__icon">
+                  <Trash2 size={26} />
+                </div>
+                <h3>Replace Manual Work</h3>
+                <p>Automate repetitive tasks like data entry, emails, reporting and scheduling.</p>
+              </div>
+
+              <div className="aiss__card aiss__card--feature">
+                <div className="aiss__icon">
+                  <Users size={26} />
+                </div>
+                <h3>Scale Without Hiring</h3>
+                <p>Handle growing workloads without increasing headcount or operational cost.</p>
+              </div>
+
+              <div className="aiss__card aiss__card--feature">
+                <div className="aiss__icon">
+                  <BarChart3 size={26} />
+                </div>
+                <h3>Faster Decisions</h3>
+                <p>AI analyzes your data in real time and delivers actionable insights instantly.</p>
+              </div>
+
+              <div className="aiss__card aiss__card--feature">
+                <div className="aiss__icon">
+                  <ShieldCheck size={26} />
+                </div>
+                <h3>Competitive Advantage</h3>
+                <p>Move faster than competitors by automating key business processes.</p>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+        
+        {/* SECTION 2 - SERVICES */}
+        <section className="aiss__section aiss__section--services">
+          <div className="aiss__container">
+
+            <div className="aiss__section-header">
+              <h2 className="aiss__heading">
+                Our AI Software Development Services
+              </h2>
+
+              <p className="aiss__text">
+                We build end-to-end AI systems that automate business processes, improve decision-making and integrate seamlessly into your existing tools.
+              </p>
+            </div>
+
+            <div className="aiss__grid aiss__grid--services">
+
+              <div className="aiss__card aiss__card--service">
+                <div className="aiss__icon">
+                  <Bot size={24} />
+                </div>
+                <h3>AI Chatbot Development</h3>
+                <p>Intelligent chatbots for customer support, lead generation and automation.</p>
+              </div>
+
+              <div className="aiss__card aiss__card--service">
+                <div className="aiss__icon">
+                  <Brain size={24} />
+                </div>
+                <h3>GPT Integration</h3>
+                <p>Integrate GPT, Claude and Gemini into your business workflows and tools.</p>
+              </div>
+
+              <div className="aiss__card aiss__card--service">
+                <div className="aiss__icon">
+                  <Workflow size={24} />
+                </div>
+                <h3>Process Automation</h3>
+                <p>Automate repetitive business operations and reduce manual workload.</p>
+              </div>
+
+              <div className="aiss__card aiss__card--service">
+                <div className="aiss__icon">
+                  <BarChart4 size={24} />
+                </div>
+                <h3>AI Data Analysis</h3>
+                <p>Transform raw data into real-time insights and business intelligence.</p>
+              </div>
+
+              <div className="aiss__card aiss__card--service">
+                <div className="aiss__icon">
+                  <Database size={24} />
+                </div>
+                <h3>CRM AI Integration</h3>
+                <p>Add AI-powered intelligence into your CRM and ERP systems.</p>
+              </div>
+
+              <div className="aiss__card aiss__card--service">
+                <div className="aiss__icon">
+                  <Cog size={24} />
+                </div>
+                <h3>Custom AI Systems</h3>
+                <p>Fully tailored AI platforms built specifically for your business needs.</p>
+              </div>
+
+            </div>
+
           </div>
         </section>
 
-        {/* Section 2 — Services */}
-        <section className="aiss__services_section">
-          <div className="aiss__container">
-            <h2 className="aiss__heading">Our AI Software Development Services for UK & USA Businesses</h2>
-            <p className="aiss__subtitle">
-              We build a wide range of custom AI software solutions — each designed around your specific business needs, workflows and growth objectives.
-            </p>
-            <div className="service-cards-grid">
-              {services.map((service, i) => (
-                <div key={i} className="service-card">
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                </div>
-              ))}
+        {/* SECTION 3 - WHY CHOOSE US */}
+        <section className="aiss__section aiss__section--why">
+          <div className="aiss__container aiss__why-layout">
+
+            {/* LEFT SIDE */}
+            <div className="aiss__why-left">
+              <h2 className="aiss__heading">
+                Why Businesses Choose Us for AI Development
+              </h2>
+
+              <p className="aiss__text">
+                We don’t just build AI software — we design business-driven systems that deliver measurable ROI, integrate seamlessly, and scale with your operations.
+              </p>
+
+              <div className="aiss__why-highlight">
+                Built for real business impact — not experimental AI prototypes.
+              </div>
             </div>
+
+            {/* RIGHT SIDE */}
+            <div className="aiss__why-right">
+
+              <div className="aiss__why-item">
+                <CheckCircle size={20} />
+                <p>Business-first AI strategy focused on ROI</p>
+              </div>
+
+              <div className="aiss__why-item">
+                <Layers size={20} />
+                <p>Full-stack AI engineering from model to UI</p>
+              </div>
+
+              <div className="aiss__why-item">
+                <Plug size={20} />
+                <p>Seamless integration with your existing systems</p>
+              </div>
+
+              <div className="aiss__why-item">
+                <Wallet size={20} />
+                <p>Cost-effective offshore development model</p>
+              </div>
+
+              <div className="aiss__why-item">
+                <RefreshCw size={20} />
+                <p>Ongoing optimization and long-term support</p>
+              </div>
+
+            </div>
+
           </div>
         </section>
 
-        {/* Section 3 — Why Choose */}
-        <section className="aiss__why_section">
+        {/* SECTION 4 - TECHNOLOGIES */}
+        <section className="aiss__section aiss__section--tech">
           <div className="aiss__container">
-            <h2 className="aiss__heading">Why UK & USA Businesses Choose ZonzocTech for AI Software Development</h2>
-            <div className="why-choose-grid">
-              {whyChoose.map((reason, i) => (
-                <div key={i} className="why-choose-card">
-                  <h3>{reason.title}</h3>
-                  <p>{reason.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Section 4 — Technologies */}
-        <section className="tech-stack-section">
-          <div className="aiss__container">
-            <h2 className="aiss__heading">Technologies We Use</h2>
-            <div className="tech-stack-grid">
+            <div className="aiss__section-header">
+              <h2 className="aiss__heading">
+                Technologies We Use
+              </h2>
+
+              <p className="aiss__text">
+                We use modern AI, backend and cloud technologies to build scalable, production-ready systems.
+              </p>
+            </div>
+
+            <div className="aiss__tech-grid">
+
               {technologies.map((group, i) => (
-                <div key={i} className="tech-category-card">
-                  <div className="tech-category-title">{group.category}</div>
-                  <div className="tech-items">
+                <div key={i} className="aiss__tech-card">
+
+                  <h3 className="aiss__tech-title">
+                    {group.category}
+                  </h3>
+
+                  <div className="aiss__tech-pills">
                     {group.items.map((item, j) => (
-                      <span key={j} className="tech-pill">{item}</span>
+                      <span key={j} className="aiss__tech-pill">
+                        {item}
+                      </span>
                     ))}
                   </div>
+
                 </div>
               ))}
+
             </div>
+
           </div>
         </section>
 
-        {/* Section 5 — Process */}
-        <section className="process-section">
+        {/* SECTION 5 - PROCESS */}
+        <section className="aiss__section aiss__section--process">
           <div className="aiss__container">
-            <h2>Our AI Software Development Process</h2>
-            <div className="process-grid">
+
+            <div className="aiss__section-header">
+              <h2 className="aiss__heading">
+                Our AI Development Process
+              </h2>
+
+              <p className="aiss__text">
+                A structured, transparent workflow from idea to deployment.
+              </p>
+            </div>
+
+            <div className="aiss__timeline">
+
               {processSteps.map((step, i) => (
-                <div key={i} className="process-card">
-                  <div className="process-number">{step.number}</div>
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+                <div key={i} className="aiss__timeline-item">
 
-        {/* Section 6 — Who For */}
-        <section className="aiss__problems_section">
-          <div className="aiss__container">
-            <h2 className="aiss__heading3">Who Our AI Software Development Service Is For</h2>
-            <div className="aiss__audience_grid">
-              {whoFor.map((item, i) => (
-                <div key={i} className="aiss__audience_card">
-                  <div className="aiss__audience_icon">✓</div>
-                  <div>
-                    <strong>{item.title}</strong>
-                    <p>{item.description}</p>
+                  <div className="aiss__timeline-left">
+                    <div className="aiss__timeline-number">
+                      {step.number}
+                    </div>
+
+                    {i !== processSteps.length - 1 && (
+                      <div className="aiss__timeline-line"></div>
+                    )}
                   </div>
+
+                  <div className="aiss__timeline-content">
+                    <h3>{step.title}</h3>
+                    <p>{step.description}</p>
+                  </div>
+
                 </div>
+              ))}
+
+            </div>
+
+          </div>
+        </section>
+
+        {/* SECTION 6 - WHO IT’S FOR */}
+        <section className="aiss__section aiss__section--audience">
+          <div className="aiss__container">
+
+            <div className="aiss__section-header">
+              <h2 className="aiss__heading">
+                Who Our AI Solutions Are Built For
+              </h2>
+
+              <p className="aiss__text">
+                We design AI systems for businesses that want to automate operations, reduce costs and scale intelligently.
+              </p>
+            </div>
+
+            <div className="aiss__audience-grid">
+
+              {audience.map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <div key={i} className="aiss__audience-card">
+
+                    <div className="aiss__audience-icon">
+                      <Icon size={22} />
+                    </div>
+
+                    <div>
+                      <h3>{item.title}</h3>
+                      <p>{item.desc}</p>
+                    </div>
+
+                  </div>
+                );
+              })}
+
+            </div>
+
+          </div>
+        </section>
+
+        {/* SECTION 7 - FAQ */}
+        <section className="aiss__section aiss__section--faq">
+          <div className="aiss__container">
+            <div className="aiss__section-header">
+              <h2 className="aiss__heading">
+                Frequently Asked Questions
+              </h2>
+              <p className="aiss__text">
+                Everything you need to know before starting your AI project.
+              </p>
+            </div>
+
+            <div className="aiss__faq-wrapper">
+              {faqs.map((item, i) => (
+                <FAQItem
+                  key={i}
+                  item={item}
+                  isOpen={openIndex === i}
+                  onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                />
               ))}
             </div>
           </div>
         </section>
 
-        {/* Section 7 — FAQ */}
-        <section className="faq-section">
+        {/* FINAL CTA */}
+        <section className="aiss__cta-section">
           <div className="aiss__container">
-            <h2>AI Software Development — Frequently Asked Questions</h2>
-            <div className="faq-container">
-              {faqs.map((faq, i) => (
-                <div key={i} className="faq-item">
-                  <h3>{faq.question}</h3>
-                  <p>{faq.answer}</p>
-                </div>
-              ))}
+            <div className="aiss__cta-card">
+              <h2 className="aiss__cta-title">
+                Ready to Automate and Scale Your Business with AI?
+              </h2>
+
+              <p className="aiss__cta-text">
+                Tell us about your business processes and we will put together a free
+                AI software consultation — showing you exactly where AI can save time,
+                reduce costs and help you grow.
+              </p>
+
+              <div className="cta-buttons">
+                <a href="/contact" className="btn-primary">
+                  Get Free AI Consultation →
+                </a>
+                <a href="/case-studies" className="aiwd-btn-secondary">
+  See Our Works 
+</a>
+              </div>
+
+              <p className="aiss__cta-small-text">
+                No commitment. No spam. Just results.
+              </p>
             </div>
           </div>
         </section>
-
-        {/* Final CTA */}
-        <section className="cta-section">
-          <div className="aiss__container">
-            <h2>Ready to Automate and Scale Your Business with AI?</h2>
-            <p>Tell us about your business processes and we will put together a free AI software consultation — showing you exactly where AI can save time, reduce costs and help you grow.</p>
-            <div className="cta-buttons">
-              <a href="/contact" className="btn-primary">Get Free AI Consultation →</a>
-              <a href="/#portfolio" className="btn-secondary">See Our Work</a>
-            </div>
-            <p className="cta-small-text">No commitment. No spam. Just results.</p>
-          </div>
-        </section>
-
         <Footer />
       </div>
     </>

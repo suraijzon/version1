@@ -38,12 +38,12 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-  const data = {
-    ...formData,
-    message: formData.project,   // 🔥 FIX HERE
-    service: selectedService,
-    budget: budget
-  };
+    const data = {
+      ...formData,
+      message: formData.project,   
+      service: selectedService,
+      budget: budget
+    };
 
     try {
       const res = await fetch("/api/contact", {
@@ -66,16 +66,16 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
         });
         setSelectedService("");
         setBudget(5000);
-          // ✅ ADD HERE
+        
         setTimeout(() => {
-        onClose();
-        setSubmitStatus("");
+          onClose();
+          setSubmitStatus("");
         }, 2500);
       } else {
         setSubmitStatus("error");
       }
-    }catch (error) {
-        setSubmitStatus("error");
+    } catch (error) {
+      setSubmitStatus("error");
     }
 
     setIsSubmitting(false);
@@ -84,13 +84,14 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
   if (!open) return null;
 
   const percentage = ((budget - 5000) / (65000 - 5000)) * 100;
-  const sliderBackground = `linear-gradient(to right, #000 0%, #000 ${percentage}%, #ddd ${percentage}%, #ddd 100%)`;
+  const sliderBackground = `linear-gradient(to right, #38bdf8 0%, #00448f ${percentage}%, #e2e8f0 ${percentage}%, #e2e8f0 100%)`;
 
   return (
     <div className="popup-overlay" onClick={onClose}>
       <div className="popup-container" onClick={(e) => e.stopPropagation()}>
         <button className="popup-close" onClick={onClose}>×</button>
 
+        {/* LEFT PANEL */}
         <div className="popup-left">
           <div className="popup-left-top">
             <h3>Speak to Our Experts</h3>
@@ -105,8 +106,15 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
             </div>
 
             <div className="contactmedia">
-              <i className="fa-brands fa-linkedin"></i>
-              <i className="fa-brands fa-twitter"></i>
+              <a href="https://wa.me/94740309534" target="_blank" rel="noopener noreferrer" title="WhatsApp Us">
+                <i className="fa-brands fa-whatsapp" style={{ color: '#25D366' }}></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <i className="fa-brands fa-linkedin" style={{ color: '#00448f' }}></i>
+              </a>
+              <a href="mailto:info@zonzoctech.com" title="Email Us">
+                <i className="fa-solid fa-envelope" style={{ color: '#ea4335' }}></i>
+              </a>
             </div>
           </div>
 
@@ -120,26 +128,25 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
           </div>
         </div>
 
+        {/* RIGHT PANEL */}
         <div className="popup-right">
           <h2>Let's Build Something Incredible Together</h2>
           <p className="popup-subtext">
             Tell us what you're looking for and our experts will get back to you.
           </p>
 
-            {/* Success / Error Messages */}
-            {submitStatus === "success" && (
-              <div className="alert alert-success">
-                ✓ Message sent successfully! We'll contact you soon.
-              </div>
-            )}
-            {submitStatus === "error" && (
-              <div className="alert alert-error">
-                ✗ Failed to send message. Please try again.
-              </div>
-            )}
+          {submitStatus === "success" && (
+            <div className="alert alert-success">
+              ✓ Message sent successfully! We'll contact you soon.
+            </div>
+          )}
+          {submitStatus === "error" && (
+            <div className="alert alert-error">
+              ✗ Failed to send message. Please try again.
+            </div>
+          )}
 
           <form className="popup-form" onSubmit={handleSubmit}>
-
             <div className="form-grid">
               <input
                 type="text"
@@ -149,7 +156,6 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
                 onChange={handleInputChange}
                 required
               />
-
               <input
                 type="text"
                 name="company"
@@ -157,7 +163,6 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
                 value={formData.company}
                 onChange={handleInputChange}
               />
-
               <input
                 type="tel"
                 name="phone"
@@ -166,7 +171,6 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
                 onChange={handleInputChange}
                 required
               />
-
               <input
                 type="email"
                 name="email"
@@ -184,14 +188,14 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
             >
               <option value="">You are interested in</option>
               <option value="AI Solutions">AI Solutions</option>
-              <option value="Website Growth Audit"> Free Website Growth Plan</option> 
+              <option value="Website Growth Audit">Free Website Growth Plan</option> 
               <option value="SEO">SEO</option>
               <option value="UI/UX Design">UI/UX Design</option>
               <option value="Website Development">Website Development</option>                          
             </select>
 
             <label className="budget-label">
-              Estimated Budget (USD): ${budget.toLocaleString()}
+              Estimated Budget (USD): <span className="budget-value">${budget.toLocaleString()}</span>
             </label>
 
             <input
@@ -215,12 +219,10 @@ const ExpertPopup = ({ open, onClose, preSelectedService }) => {
               <button type="button" className="cancel-btn" onClick={onClose}>
                 Cancel
               </button>
-
               <button type="submit" className="submit-btn">
                 {isSubmitting ? "SENDING..." : "Submit"}
               </button>
             </div>
-
           </form>
         </div>
       </div>

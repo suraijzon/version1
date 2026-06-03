@@ -1,11 +1,32 @@
 'use client';
 import React from "react";
+import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../styles/TermsConditions.css";
 
 const TermsConditions = () => {
   const lastUpdated = "December 20, 2025";
+
+  // Dynamic SEO Structured Schema for Breadcrumbs
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.zonzoctech.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terms & Conditions",
+        "item": "https://www.zonzoctech.com/terms-conditions"
+      }
+    ]
+  };
 
   const sections = [
     {
@@ -132,100 +153,203 @@ const TermsConditions = () => {
 
   return (
     <>
-      
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+      </Head>
+
       <div className="tc__wrapper">
         <Navbar />
 
-        {/* Header */}
-        <section className="tc__header">
-          <div className="tc__container">
-            <h1 className="tc__title">Terms & Conditions</h1>
-            <p className="tc__updated">Last updated: {lastUpdated}</p>
-            <p className="tc__intro">
-              Welcome to ZonzocTech. By accessing or using our website
-              zonzoctech.com and our services, you agree to comply with and be
-              bound by the following Terms & Conditions. Please read them
-              carefully.
-            </p>
-            <div className="tc__warning">
-              <span className="tc__warning_icon">⚠️</span>
-              <p>
-                If you do not agree with these terms, please do not use our
-                website or services.
-              </p>
+        {/* Header Section */}
+        <section className="tc__header_premium">
+          <div className="tc__container_premium">
+            
+            {/* Breadcrumbs path navigation with color overrides for dark layouts */}
+            <nav 
+              className="tc__breadcrumb_nav" 
+              aria-label="Breadcrumb"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                marginBottom: '24px',
+                fontFamily: 'sans-serif',
+                fontSize: '14px',
+                fontWeight: '600',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase'
+              }}
+            >
+              <a 
+                href="/" 
+                className="tc__breadcrumb_link"
+                style={{
+                  color: '#94a3b8', // Bright silver-gray for accessible contrast
+                  textDecoration: 'none',
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.target.style.color = '#38bdf8'}
+                onMouseLeave={(e) => e.target.style.color = '#94a3b8'}
+              >
+                Home
+              </a>
+              <span className="tc__breadcrumb_separator" style={{ color: '#64748b' }}>›</span>
+              <span 
+                className="tc__breadcrumb_current"
+                style={{ color: '#38bdf8' }} // High contrast cyan blue highlight to match image styles
+              >
+                Terms & Conditions
+              </span>
+            </nav>
+
+            {/* Centered Micro badge under breadcrumbs */}
+            <div className="tc__meta_badge">
+              <span className="tc__badge_dot"></span>
+              <span className="tc__badge_text">Legal Framework</span>
             </div>
+
+            {/* Main Headings */}
+            <h1 className="tc__title">Terms & Conditions</h1>
+            <p className="tc__updated">Document Version: {lastUpdated}</p>
+            
+            <div className="tc__intro_grid">
+              <div className="tc__intro_text_wrapper">
+                <p className="tc__intro">
+                  Welcome to ZonzocTech. By accessing or utilizing our platform at{" "}
+                  <span className="tc__domain_highlight">zonzoctech.com</span> and engaging with our specialized services, you enter a legally binding agreement to comply with and be governed by the following operational terms. Please review these directives with due diligence.
+                </p>
+              </div>
+
+              {/* Enhanced Professional Notice Box */}
+              <div className="tc__notice_card">
+                <div className="tc__notice_icon_container">
+                  <svg 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2.5" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                    className="tc__notice_svg"
+                  >
+                    <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+                    <line x1="12" y1="9" x2="12" y2="13"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                  </svg>
+                </div>
+                <div className="tc__notice_content">
+                  <span className="tc__notice_label">Important Notice</span>
+                  <p>
+                    If you do not accept or agree to be fully bound by these terms, you must immediately discontinue your use of our website, interfaces, and technical services.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
-        {/* Content */}
-        <section className="tc__content">
-          <div className="tc__container">
-            <div className="tc__sections">
+        {/* Content Box Loop Section */}
+        <section className="tc__content_premium">
+          <div className="tc__container_content">
+            <div className="tc__sections_stack">
               {sections.map((section, index) => (
-                <div key={index} className="tc__section">
+                <div key={index} className="tc__section_card">
                   <div className="tc__section_header">
                     <span className="tc__section_number">{section.number}</span>
                     <h2 className="tc__section_title">{section.title}</h2>
                   </div>
 
-                  <div className="tc__section_content">
+                  <div className="tc__section_body">
                     {/* Text only */}
-                    {section.text && <p className="tc__text">{section.text}</p>}
+                    {section.text && <p className="tc__body_text">{section.text}</p>}
 
                     {/* Description */}
                     {section.description && (
-                      <p className="tc__description">{section.description}</p>
+                      <p className="tc__body_description">{section.description}</p>
                     )}
 
                     {/* Items list */}
                     {section.items && (
-                      <ul className="tc__list">
+                      <ul className="tc__premium_list">
                         {section.items.map((item, idx) => (
-                          <li key={idx}>{item}</li>
+                          <li key={idx}>
+                            <span className="tc__list_bullet"></span>
+                            <span className="tc__list_content">{item}</span>
+                          </li>
                         ))}
                       </ul>
                     )}
 
                     {/* Subtitle with restrictions */}
                     {section.subtitle && (
-                      <>
-                        <p className="tc__subtitle">{section.subtitle}</p>
-                        <ul className="tc__restrictions">
+                      <div className="tc__restrictions_wrapper">
+                        <p className="tc__subtitle_label">{section.subtitle}</p>
+                        <ul className="tc__premium_list tc__variant_restrictions">
                           {section.restrictions.map((item, idx) => (
-                            <li key={idx}>{item}</li>
+                            <li key={idx}>
+                              <span className="tc__list_bullet tc__bullet_warning"></span>
+                              <span className="tc__list_content">{item}</span>
+                            </li>
                           ))}
                         </ul>
-                      </>
+                      </div>
                     )}
 
                     {/* Important note */}
                     {section.important && (
-                      <div className="tc__important">
-                        <span className="tc__important_icon">⚠️</span>
+                      <div className="tc__inline_important_card">
+                        <div className="tc__inline_icon_wrap">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                          </svg>
+                        </div>
                         <p>{section.important}</p>
                       </div>
                     )}
 
                     {/* Regular note */}
-                    {section.note && <p className="tc__note">{section.note}</p>}
+                    {section.note && <p className="tc__body_note">{section.note}</p>}
 
                     {/* Contact info */}
                     {section.contact && (
-                      <div className="tc__contact_box">
-                        <div className="tc__contact_item">
-                          <span className="tc__contact_icon">📧</span>
-                          <div>
-                            <strong>Email:</strong>
-                            <a href="mailto:info@zonzoctech.com">
+                      <div className="tc__premium_contact_grid">
+                        <div className="tc__premium_contact_item">
+                          <div className="tc__contact_svg_icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <rect width="20" height="16" x="2" y="4" rx="2"/>
+                              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                            </svg>
+                          </div>
+                          <div className="tc__contact_meta">
+                            <span className="tc__contact_label">Corporate Support</span>
+                            <a href="mailto:info@zonzoctech.com" className="tc__contact_anchor">
                               info@zonzoctech.com
                             </a>
                           </div>
                         </div>
-                        <div className="tc__contact_item">
-                          <span className="tc__contact_icon">🌐</span>
-                          <div>
-                            <strong>Website:</strong>
-                            <a href="https://zonzoctech.com">zonzoctech.com</a>
+                        
+                        <div className="tc__premium_contact_item">
+                          <div className="tc__contact_svg_icon">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <circle cx="12" cy="12" r="10"/>
+                              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                              <path d="M2 12h20"/>
+                            </svg>
+                          </div>
+                          <div className="tc__contact_meta">
+                            <span className="tc__contact_label">Official Domain</span>
+                            <a href="https://zonzoctech.com" className="tc__contact_anchor">
+                              zonzoctech.com
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -235,18 +359,19 @@ const TermsConditions = () => {
               ))}
             </div>
 
-            {/* Agreement Box */}
-            <div className="tc__agreement">
-              <h3>Your Agreement</h3>
-              <p>
-                By using ZonzocTech's website and services, you acknowledge that
-                you have read, understood, and agree to be bound by these Terms
-                & Conditions. If you have any questions or concerns, please
-                contact us before proceeding.
-              </p>
-              <a href="/contact" className="tc__agreement_btn">
-                Contact Us
-              </a>
+            {/* Premium Bottom Agreement Callout Box */}
+            <div className="tc__premium_agreement_box">
+              <div className="tc__agreement_content">
+                <h3>Your Acknowledgment & Agreement</h3>
+                <p>
+                  By continuous navigation of ZonzocTech's operational website or deployment of our scaling services, you explicitly affirm that you have read, understood, and accept binding governance under these complete Terms & Conditions. If any parameters require clarification, contact our architecture desk before taking action.
+                </p>
+              </div>
+              <div className="tc__agreement_action">
+                <a href="/contact" className="tc__premium_agreement_btn">
+                  Contact Governance Desk
+                </a>
+              </div>
             </div>
           </div>
         </section>

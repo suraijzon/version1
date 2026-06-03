@@ -13,23 +13,47 @@ import ReviewSection from '../components/ReviewSection';
 import TrustBar from '../components/TrustBar';
 import ExpertPopup from '../components/ExpertPopup';
 
+
 const HomePage = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
     <>
       <Navbar />
-      <Hero />
+      
+      {/* Passing function to open popup */}
+      <Hero onCtaClick={() => setIsPopupOpen(true)} />
+      
       <TrustBar />
-      <Solution />
-      <SuccessSection />
-      <ProcessSection />
-      <WhoWeAre />
-      <WhyChooseSleekIT />
-      <ContactSection />
+      
+      <div id="services">
+        <Solution onCtaClick={() => setIsPopupOpen(true)} />
+      </div>
+      
+      <SuccessSection onCtaClick={() => setIsPopupOpen(true)} />
+      
+      <div id="our-work">
+        <ProcessSection />
+      </div>
+      
+      <div id="about">
+        <WhoWeAre />
+      </div>
+      
+      <WhyChooseSleekIT onCtaClick={() => setIsPopupOpen(true)} />
+      
+      <div id="contact">
+        <ContactSection />
+      </div>
+      
       <ReviewSection />
       <Footer />
-      <ExpertPopup open={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
+      
+      {/* FIXED: Prop name is 'open' */}
+      <ExpertPopup 
+        open={isPopupOpen} 
+        onClose={() => setIsPopupOpen(false)} 
+      />
     </>
   );
 };

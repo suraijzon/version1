@@ -16,26 +16,37 @@ export default function VitaminaProjectCaseStudy() {
       <div className="cs__wrapper">
 
         {/* HERO */}
-        <section className="cs__hero">
-          <div className="cs__hero_inner">
-            <span className="cs__eyebrow">Case Study</span>
-            <h1 className="cs__hero_title">Vitamina Project</h1>
-            <p className="cs__hero_sub">
-              End-to-end e-commerce ecosystem — admin portal, vendor portal, iOS app, and Android app — built to handle a multi-vendor marketplace at scale.
-            </p>
-            <div className="cs__tags">
-              <span className="cs__tag">E-Commerce Development</span>
-              <span className="cs__tag">Mobile Apps</span>
-              <span className="cs__tag">Multi-Vendor System</span>
-              <span className="cs__tag">Angular &amp; Node.js</span>
-            </div>
-            <div className="cs__hero_links">
-              <Link href="/contact" className="cs__live_btn">Discuss a Similar Project</Link>
-              <Link href="/contact" className="cs__outline_btn">Start Your Project</Link>
-            </div>
-          </div>
-        </section>
+      import Link from 'next/link'; // Ensure Link is imported if not already in the file
 
+// ... inside your component:
+
+<section className="cs__hero">
+  <div className="cs__hero_inner">
+    {/* Centered Breadcrumb */}
+    <nav className="cs__breadcrumb">
+      <Link href="/">HOME</Link>
+      <span className="cs__breadcrumb_separator">&gt;</span>
+      <Link href="/case-studies">CASE STUDIES</Link>
+      <span className="cs__breadcrumb_separator">&gt;</span>
+      <span className="cs__breadcrumb_active">VITAMINA PROJECT</span>
+    </nav>
+
+    <h1 className="cs__hero_title">Vitamina Project</h1>
+    <p className="cs__hero_sub">
+      End-to-end e-commerce ecosystem — admin portal, vendor portal, iOS app, and Android app — built to handle a multi-vendor marketplace at scale.
+    </p>
+    <div className="cs__tags">
+      <span className="cs__tag">E-Commerce Development</span>
+      <span className="cs__tag">Mobile Apps</span>
+      <span className="cs__tag">Multi-Vendor System</span>
+      <span className="cs__tag">Angular &amp; Node.js</span>
+    </div>
+    <div className="cs__hero_links">
+      <Link href="/contact" className="cs__live_btn">Discuss a Similar Project</Link>
+      <Link href="/contact" className="cs__outline_btn">Start Your Project</Link>
+    </div>
+  </div>
+</section>
         {/* GALLERY */}
         <section className="cs__section">
           <div className="cs__container">

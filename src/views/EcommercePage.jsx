@@ -67,26 +67,51 @@ const EcommerceDev = () => {
     <>
       <div className="ecd__wrapper">
         <Navbar />
-        <Breadcrumb />
 
         {/* Hero Section */}
         <section className="ecd__hero">
+          {/* Pattern container left in case you need it later, but hidden via CSS */}
           <div className="ecd__hero_pattern"></div>
+
           <div className="ecd__hero_container">
+            {/* MOVED BREADCRUMB HERE: Renders inside the dark container above the badge */}
+            <Breadcrumb />
+
+            {/* Top Label / Pill Badge with Safe inline-span wrapper */}
+            <span className="ecd__hero_badge_wrapper">
+              <span className="ecd__hero_badge_dot"></span>
+              <span className="ecd__hero_badge_text">
+                Ecommerce Design & Development Agency
+              </span>
+            </span>
+
+            {/* Mixed color heading using inline span */}
             <h1 className="ecd__hero_title">
-              Ecommerce Development Agency UK — Online Stores Built to Sell, Scale and Dominate Your Market
+              High-Performance Ecommerce Development Agency <span className="ecd__hero_title_highlight">for UK & USA Brands</span>
             </h1>
+
             <p className="ecd__hero_text">
-              ZonzocTech builds high-converting ecommerce websites for businesses across the UK and USA. Whether you need a Shopify store, WooCommerce site or fully custom ecommerce platform — we design, develop and optimise online stores that turn browsers into buyers and grow your revenue consistently.
+              We design and develop conversion-focused ecommerce stores that turn traffic into revenue.
+              From Shopify and WooCommerce to fully custom platforms — we build scalable, fast, and sales-driven online stores engineered for growth.
             </p>
+
             <div className="hero-buttons">
-              <a href="/contact" className="btn-primary">Get Free Ecommerce Audit →</a>
-              <a href="#ecd-work" className="btn-secondary">See Our Work ↓</a>
+              <a href="/contact" className="btn-primary">
+                Get Free Ecommerce Audit →
+              </a>
+
+              <a href="/case-studies" className="btn-secondary">
+  See Our Works →
+</a>
             </div>
-            <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
+
+            <p className="ecd__hero_trust">
+              Trusted by 120+ businesses across UK, USA & Europe
+            </p>
+
           </div>
         </section>
-
+        
         {/* Stats Bar */}
         <section className="stats-bar" id="ecd-work">
           {stats.map((stat, i) => (
@@ -100,120 +125,319 @@ const EcommerceDev = () => {
         {/* Section 1 — Why Most Stores Underperform */}
         <section className="ecd__audience_section">
           <div className="ecd__container">
-            <h2 className="ecd__heading">Why Most Ecommerce Stores Underperform — And How We Fix It</h2>
+
+            <h2 className="ecd__heading">
+              Why Most Ecommerce Stores Underperform — And How We Fix It
+            </h2>
+
             <p className="ecd__description">
-              Most online stores have a traffic problem or a conversion problem — or both. They either struggle to attract the right visitors or they attract visitors who browse and leave without buying. Both problems cost real money every day.
+              Most online stores struggle with one of two issues: they either fail to
+              attract qualified traffic, or they attract visitors who leave without
+              making a purchase. In both cases, revenue is lost every single day.
             </p>
+
             <p className="ecd__description">
-              At ZonzocTech we build ecommerce stores around revenue — not just aesthetics. Every design decision, every page structure and every checkout flow is optimised to reduce friction, build trust and convert more of your traffic into paying customers.
+              At ZonzocTech, we build ecommerce websites with one objective in mind:
+              revenue growth. Every design decision, product page layout, and checkout
+              experience is engineered to reduce friction, build trust, and convert
+              more visitors into loyal customers.
             </p>
-            <h3 className="ecd__subtitle">Common Ecommerce Problems We Solve</h3>
-            <div className="ecd__faq_container">
+
+            <h3 className="ecd__problem_section_title">
+              Common Ecommerce Problems We Solve
+            </h3>
+
+            {/* CIRCLE ROW */}
+            <div className="ecd__problem_circle_row">
+
               {problems.map((problem, i) => (
-                <div key={i} className="ecd__faq_card">
-                  <h4 className="ecd__faq_q">{problem.title}</h4>
-                  <p className="ecd__faq_a">{problem.description}</p>
-                </div>
+                <React.Fragment key={i}>
+
+                  {/* CIRCLE CARD */}
+                  <div className="ecd__problem_circle_card_scroll">
+
+                    <div className="ecd__problem_circle_number">
+                      {String(i + 1).padStart(2, "0")}
+                    </div>
+
+                    <h4 className="ecd__problem_circle_title">
+                      {problem.title}
+                    </h4>
+
+                    <p className="ecd__problem_circle_description">
+                      {problem.description}
+                    </p>
+
+                  </div>
+
+                  {/* ARROW */}
+                  {i < problems.length - 1 && (
+                    <div className="ecd__problem_circle_arrow">→</div>
+                  )}
+
+                </React.Fragment>
               ))}
+
             </div>
+
           </div>
         </section>
+        
+        <div className="ecd__ticker_wrapper">
+          <div className="ecd__ticker_track">
+            <span className="t1">⚡ Faster Online Stores That Convert</span>
+            <span className="t2">💰 Built for Higher Revenue Growth</span>
+            <span className="t3">🛒 Seamless Checkout Experiences</span>
+            <span className="t4">📱 Mobile First Ecommerce Design</span>
+            <span className="t5">🚀 Shopify & WooCommerce Experts</span>
+            <span className="t6">🔍 SEO Optimized Product Pages</span>
+            <span className="t7">⚙️ Performance & Speed Optimization</span>
+          </div>
+        </div>
 
         {/* Section 2 — Services */}
         <section className="ecd__services_section">
           <div className="ecd__container">
-            <h2 className="ecd__heading2">Our Ecommerce Development Services for UK & USA Businesses</h2>
+            <h2 className="ecd__heading2">
+              Our Ecommerce Development Services for UK & USA Businesses
+            </h2>
+
             <p className="ecd__subtitle">
-              From new store builds to performance optimisation — we offer complete ecommerce development services tailored to your platform and growth goals.
+              From new store builds to performance optimisation — we offer complete
+              ecommerce development services tailored to your platform and growth goals.
             </p>
-            <div className="service-cards-grid">
+
+            {/* Horizontal Scroll Row */}
+            <div className="ecd__services_row">
               {services.map((service, i) => (
-                <div key={i} className="service-card">
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
+                <div key={i} className="ecd__service_row_card">
+
+                  {/* Number Badge */}
+                  <div className="ecd__service_number_badge">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+
+                  {/* Icon */}
+                  <div className="ecd__service_icon">
+                    ⚡
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="ecd__service_title">
+                    {service.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="ecd__service_text">
+                    {service.description}
+                  </p>
+
                 </div>
               ))}
+            </div>
+
+            {/* Footer Banner CTA */}
+            <div className="ecd__services_footer_banner">
+              <h3>Complete Ecommerce Solutions</h3>
+              <p>
+                Strategy • Design • Development • SEO • Optimisation • Scaling
+              </p>
+              <a href="/contact">Start Your Project →</a>
             </div>
           </div>
         </section>
 
-        {/* Section 3 — Platforms */}
         <section className="ecd__platforms_section">
           <div className="ecd__container">
-            <h2 className="ecd__heading">Platforms We Work With</h2>
+
+            <h2 className="ecd__heading">
+              Platforms We Work With
+            </h2>
+
+            <p className="ecd__subtitle">
+              We build scalable ecommerce solutions across leading platforms and custom stacks.
+            </p>
+
             <div className="ecd__platforms_grid">
-              {platforms.map((platform, i) => (
-                <div key={i} className="ecd__platform_box">
-                  <div className="ecd__platform_icon">✓</div>
-                  <div>
-                    <strong>{platform.title}</strong>
-                    <p>{platform.description}</p>
+
+              {platforms.map((platform, i) => {
+                const icons = ["🛍️", "🧩", "⚡", "☁️"];
+                return (
+                  <div key={i} className="ecd__platform_card">
+
+                    <div className="ecd__platform_icon">
+                      {icons[i]}
+                    </div>
+
+                    <h3 className="ecd__platform_title">
+                      {platform.title}
+                    </h3>
+
+                    <p className="ecd__platform_desc">
+                      {platform.description}
+                    </p>
+
                   </div>
-                </div>
-              ))}
+                );
+              })}
+
             </div>
+
           </div>
         </section>
-
+        
         {/* Section 4 — Process */}
-        <section className="process-section">
+        <section className="ecd__process_section">
           <div className="ecd__container">
-            <h2>Our Ecommerce Development Process</h2>
-            <div className="process-grid">
+
+            <h2 className="ecd__heading">
+              Our Ecommerce Development Process
+            </h2>
+
+            <div className="ecd__process_center">
+
               {processSteps.map((step, i) => (
-                <div key={i} className="process-card">
-                  <div className="process-number">{step.number}</div>
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
+                <div key={i} className="ecd__process_item">
+
+                  {/* DOT */}
+                  <div className="ecd__process_dot">
+                    {step.number}
+                  </div>
+
+                  {/* CONTENT */}
+                  <div className="ecd__process_content">
+
+                    <h3 className="ecd__process_title">
+                      {step.title}
+                    </h3>
+
+                    <p className="ecd__process_desc">
+                      {step.description}
+                    </p>
+
+                  </div>
+
                 </div>
               ))}
+
             </div>
+
           </div>
         </section>
 
         {/* Section 5 — Who For */}
         <section className="ecd__why_section">
           <div className="ecd__container">
-            <h2 className="ecd__heading">Who Our Ecommerce Service Is For</h2>
-            <div className="ecd__why_list">
+
+            <h2 className="ecd__heading">
+              Who Our Ecommerce Service Is For
+            </h2>
+
+            <p className="ecd__description">
+              We work with businesses at different stages of growth — from first-time store launches to scaling ecommerce brands.
+            </p>
+
+            <div className="ecd__who_stack">
+
               {whoFor.map((item, i) => (
-                <div key={i} className="ecd__why_item">
-                  <div className="ecd__why_icon">✓</div>
-                  <div>
-                    <strong>{item.title}</strong>
-                    <p>{item.description}</p>
+                <div key={i} className="ecd__who_row">
+
+                  {/* NUMBER */}
+                  <div className="ecd__who_number">
+                    {String(i + 1).padStart(2, "0")}
                   </div>
+
+                  {/* CONTENT */}
+                  <div className="ecd__who_content">
+
+                    <h3 className="ecd__who_title">
+                      {item.title.replace("✓", "").trim()}
+                    </h3>
+
+                    <p className="ecd__who_desc">
+                      {item.description}
+                    </p>
+
+                  </div>
+
                 </div>
               ))}
+
             </div>
+
           </div>
         </section>
 
         {/* Section 6 — FAQ */}
-        <section className="faq-section">
+        <section className="ecd__faq_section">
           <div className="ecd__container">
-            <h2>Ecommerce Development — Frequently Asked Questions</h2>
-            <div className="faq-container">
+
+            <h2 className="ecd__heading">
+              Ecommerce Development — Frequently Asked Questions
+            </h2>
+
+            <div className="ecd__faq_stack">
               {faqs.map((faq, i) => (
-                <div key={i} className="faq-item">
-                  <h3>{faq.question}</h3>
-                  <p>{faq.answer}</p>
-                </div>
+                <details key={i} className="ecd__faq_bar">
+                  <summary className="ecd__faq_question">
+                    <span className="ecd__faq_qtext">
+                      {faq.question}
+                    </span>
+
+                    <span className="ecd__faq_toggle">
+                      +
+                    </span>
+                  </summary>
+
+                  <div className="ecd__faq_answer">
+                    {faq.answer}
+                  </div>
+                </details>
               ))}
             </div>
+
           </div>
         </section>
 
+        {/* Technology Divider Strip */}
+        <div className="ecd__faq_tech_strip">
+          <span>💡 Lovable Technology</span>
+          <span>•</span>
+          <span>Built with Modern React Architecture</span>
+          <span>•</span>
+          <span>Performance Driven Ecommerce Systems</span>
+          <span>•</span>
+          <span>Scalable Digital Solutions</span>
+        </div>
+
         {/* Final CTA */}
-        <section className="cta-section">
-          <div className="ecd__container">
-            <h2>Ready to Build an Ecommerce Store That Actually Sells?</h2>
-            <p>Tell us about your store and we will put together a free ecommerce audit and growth proposal — no commitment required.</p>
-            <div className="cta-buttons">
-              <a href="/contact" className="btn-primary">Get Free Ecommerce Audit →</a>
-              <a href="/#portfolio" className="btn-secondary">See Our Work</a>
+        <section className="ecd__cta_section">
+          <div className="ecd__cta_box">
+
+            <h2 className="ecd__cta_title">
+              Ready to Build an Ecommerce Store That Actually Sells?
+            </h2>
+
+            <p className="ecd__cta_text">
+              We help UK & USA businesses turn underperforming stores into high-converting ecommerce systems.
+              Get a free audit and see exactly what’s stopping your sales growth.
+            </p>
+
+            <div className="ecd__cta_buttons">
+
+              <a href="/contact" className="ecd__cta_primary">
+                Get Free Ecommerce Audit →
+              </a>
+
+              <a href="/case-studies" className="ecd__cta_secondary">
+  View Our Work
+</a>
             </div>
-            <p className="cta-small-text">No commitment. No spam. Just results.</p>
+
+            <p className="ecd__cta_note">
+              No spam. No pressure. Just actionable insights.
+            </p>
+
           </div>
         </section>
 

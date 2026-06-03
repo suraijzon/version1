@@ -16,29 +16,37 @@ export default function BasildonACRCaseStudy() {
       <div className="cs__wrapper">
 
         {/* HERO */}
-        <section className="cs__hero">
-          <div className="cs__hero_inner">
-            <span className="cs__eyebrow">Case Study</span>
-            <h1 className="cs__hero_title">
-              How We Took Basildon ACR from Poor SEO to Page 1 Rankings — and Built Their Entire Digital Presence from Scratch
-            </h1>
-            <p className="cs__hero_sub">
-              Full website redesign + ongoing SEO management for a UK air conditioning specialist — from struggling online to dominating local search.
-            </p>
-            <div className="cs__tags">
-              <span className="cs__tag">WordPress</span>
-              <span className="cs__tag">WooCommerce</span>
-              <span className="cs__tag">Local SEO</span>
-              <span className="cs__tag">Ongoing Management</span>
-            </div>
-            <div className="cs__hero_links">
-              <a href="https://basildonacr.co.uk" target="_blank" rel="noopener noreferrer" className="cs__live_btn">
-                View Live Site ↗
-              </a>
-              <Link href="/contact" className="cs__outline_btn">Start Your Project</Link>
-            </div>
-          </div>
-        </section>
+<section className="cs__hero">
+  <div className="cs__hero_inner">
+    {/* Centered Breadcrumb */}
+    <nav className="cs__breadcrumb">
+      <Link href="/">HOME</Link>
+      <span className="cs__breadcrumb_separator">&gt;</span>
+      <Link href="/case-studies">CASE STUDIES</Link>
+      <span className="cs__breadcrumb_separator">&gt;</span>
+      <span className="cs__breadcrumb_active">BASILDON ACR</span>
+    </nav>
+
+    <h1 className="cs__hero_title">
+      How We Took Basildon ACR from Poor SEO to Page 1 Rankings — and Built Their Entire Digital Presence from Scratch
+    </h1>
+    <p className="cs__hero_sub">
+      Full website redesign + ongoing SEO management for a UK air conditioning specialist — from struggling online to dominating local search.
+    </p>
+    <div className="cs__tags">
+      <span className="cs__tag">WordPress</span>
+      <span className="cs__tag">WooCommerce</span>
+      <span className="cs__tag">Local SEO</span>
+      <span className="cs__tag">Ongoing Management</span>
+    </div>
+    <div className="cs__hero_links">
+      <a href="https://basildonacr.co.uk" target="_blank" rel="noopener noreferrer" className="cs__live_btn">
+        View Live Site ↗
+      </a>
+      <Link href="/contact" className="cs__outline_btn">Start Your Project</Link>
+    </div>
+  </div>
+</section>
 
         {/* GALLERY */}
         <section className="cs__section">

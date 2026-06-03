@@ -1,5 +1,6 @@
 import HomePage from '@/src/views/Home';
 
+
 export const metadata = {
   title: 'ZonzocTech | AI Web Development, SEO & Digital Growth Agency',
   description:

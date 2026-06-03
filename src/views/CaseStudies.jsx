@@ -49,20 +49,48 @@ const CaseStudies = () => {
     <>
       <div className="cs__wrapper">
         <Navbar />
-        <Breadcrumb />
 
-        {/* Hero Section */}
-        <section className="cs__hero">
-          <div className="cs__hero_bg"></div>
+        {/* Integrated Premium Hero Section */}
+        <section className="cs__hero_merged">
           <div className="cs__hero_container">
-            <h1 className="cs__hero_title">Real Projects. Real Results.</h1>
+            {/* Breadcrumb path */}
+            <Breadcrumb />
+
+            {/* Pill Badge */}
+            <span className="cs__hero_badge_wrapper">
+              <span className="cs__hero_badge_dot"></span>
+              <span className="cs__hero_badge_text">
+                ZonzocTech Case Studies
+              </span>
+            </span>
+
+            {/* Main Split Heading */}
+            <h1 className="cs__hero_title">
+              Real Projects. <span className="cs__hero_title_highlight">Real Results.</span>
+            </h1>
+            
             <p className="cs__hero_description">
               Case studies from our work with businesses across the UK, USA and Europe.
+            </p>
+            
+            {/* Interactive Brand Actions */}
+            <div className="cs__hero_buttons">
+              <a href="/contact" className="cs__btn_filled">
+                Get Free Consultation
+              </a>
+              <a href="/portfolio" className="cs__btn_outlined">
+                View Portfolio <span className="cs__btn_arrow">→</span>
+              </a>
+            </div>
+            
+            {/* Bottom Trust Subtext */}
+            <p className="cs__hero_trust_text">
+              Trusted by 120+ businesses across the UK, USA & Europe
             </p>
           </div>
         </section>
 
-        {/* Projects Grid */}
+        {/* Projects Grid Section */}
         <section className="cs__studies_section">
           <div className="cs__container">
             <div className="cs__projects_grid">
@@ -82,18 +110,6 @@ const CaseStudies = () => {
                 </a>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="cta-section">
-          <div className="cs__container">
-            <h2>Ready to Become Our Next Success Story?</h2>
-            <p>Tell us about your project and we'll put together a free growth plan — no commitment required.</p>
-            <div className="cta-buttons">
-              <a href="/contact" className="btn-primary">Start Your Project →</a>
-            </div>
-            <p className="cta-small-text">No commitment. No spam. Just results.</p>
           </div>
         </section>
 

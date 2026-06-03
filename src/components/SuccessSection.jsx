@@ -51,7 +51,8 @@ const SuccessSection = () => {
   ];
 
   return (
-    <section className="success-section">
+    // ADDED: id="our-work" to connect with the Navbar and Hero "See Our Work" buttons
+    <section id="our-work" className="success-section">
       <div className="success-header">
         <span className="success-tag">See </span>
         <span className="tag2"> Our Success in Action</span>

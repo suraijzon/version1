@@ -1,340 +1,415 @@
-/* Overlay */
+/* ==========================================================================
+   PREMIUM LIGHT VERSION POPUP MODULE
+   ========================================================================== */
+
 .popup-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 15, 40, 0.4) !important; 
+  z-index: 99999 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  backdrop-filter: blur(8px) !important;
+  padding: 16px !important;
+  box-sizing: border-box !important;
 }
 
-/* Container */
+/* RESTORED original container height and scrolling behavior for desktop */
 .popup-container {
-  width: 100%;
-  max-width: 980px;
-  background: white;
-  border-radius: 18px;
-  display: grid;
-  grid-template-columns: 1fr 1.4fr;
-  position: relative;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-  animation: popupFade 0.35s ease;
+  width: 100% !important;
+  max-width: 980px !important;
+  background: #ffffff !important; 
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  border-radius: 20px !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1.35fr !important;
+  position: relative !important;
+  box-shadow: 0 25px 70px rgba(0, 44, 143, 0.08) !important;
+  overflow: hidden !important; 
+  animation: popupFade 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 @keyframes popupFade {
-  from {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+  from { transform: scale(0.97); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
-/* Close */
 .popup-close {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  background: none;
-  border: none;
-  font-size: 22px;
-  cursor: pointer;
-  color: #777;
-  z-index: 10;
+  position: absolute !important;
+  top: 16px !important;
+  right: 18px !important;
+  background: none !important;
+  border: none !important;
+  font-size: 24px !important;
+  cursor: pointer !important;
+  color: #94a3b8 !important;
+  z-index: 10 !important;
+  transition: color 0.2s ease !important;
+}
+
+.popup-close:hover {
+  color: #00448f !important;
 }
 
 /* LEFT PANEL */
 .popup-left {
-  background: linear-gradient(135deg, #020024, #090979, #020024);
-  color: white;
-  padding: 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background: linear-gradient(145deg, rgba(56, 189, 248, 0.08) 0%, rgba(255, 255, 255, 1) 100%) !important;
+  padding: 40px 36px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  border-right: 1px solid rgba(56, 189, 248, 0.2) !important;
 }
 
 .popup-left-top {
-  flex: 1;
+  flex: 1 !important;
 }
 
 .popup-left h3 {
-  font-size: 22px;
-  margin-bottom: 8px;
+  font-size: 24px !important;
+  margin-bottom: 8px !important;
+  color: #00448f !important;
+  font-weight: 700 !important;
 }
 
 .popup-left p {
-  font-size: 14px;
-  opacity: 0.9;
+  font-size: 14.5px !important;
+  color: #475569 !important;
 }
 
 .popup-review {
-  margin: 28px 0;
-  background: rgba(255, 255, 255, 0.08);
-  padding: 16px;
-  border-radius: 10px;
-  font-size: 13px;
+  margin: 32px 0 !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  border-left: 4px solid #38bdf8 !important; 
+  padding: 18px !important;
+  border-radius: 12px;
+  font-size: 13.5px !important;
+  color: #475569 !important;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.03) !important;
 }
 
 .popup-review strong {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 14px;
+  display: block !important;
+  margin-bottom: 6px !important;
+  font-size: 14px !important;
+  color: #00448f !important;
 }
 
 .contactmedia {
-  margin-bottom: 20px;
+  margin: 24px 0 !important;
+  display: flex !important;
+  gap: 16px !important;
 }
 
 .contactmedia i {
-  margin-right: 12px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all 0.3s;
+  font-size: 20px !important;
+  transition: transform 0.2s ease !important;
 }
 
 .contactmedia i:hover {
-  transform: scale(1.15);
-  opacity: 0.8;
+  transform: scale(1.15) !important;
 }
 
-/* Contact info at bottom */
 .popup-contact {
-  margin-top: auto;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: auto !important;
+  padding-top: 24px !important;
+  border-top: 1px solid rgba(56, 189, 248, 0.2) !important;
 }
 
 .popup-contact span {
-  display: flex;
-  align-items: center;
-  font-size: 13px;
-  margin-bottom: 10px;
-  opacity: 0.95;
+  display: flex !important;
+  align-items: center !important;
+  font-size: 13.5px !important;
+  margin-bottom: 12px !important;
+  color: #475569 !important;
 }
 
 .popup-contact span i {
-  margin-right: 10px;
-  font-size: 16px;
-  min-width: 18px;
+  margin-right: 12px !important;
+  font-size: 15px !important;
+  color: #00448f !important; 
 }
 
-/* RIGHT PANEL */
+/* RIGHT PANEL - Full desktop paddings preserved */
 .popup-right {
-  padding: 36px;
+  padding: 40px !important;
+  background: #ffffff !important; 
 }
 
 .popup-right h2 {
-  font-size: 26px;
-  margin-bottom: 8px;
-  color: #111;
+  font-size: 26px !important;
+  margin-bottom: 8px !important;
+  color: #00448f !important;
+  font-weight: 700 !important;
 }
 
 .popup-subtext {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 22px;
+  font-size: 14.5px !important;
+  color: #475569 !important;
+  margin-bottom: 28px !important;
 }
 
-/* Form */
+/* RESTORED standard dimensions for your input layout on desktop screens */
 .popup-form input,
 .popup-form select,
 .popup-form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-  margin-bottom: 14px;
+  width: 100% !important;
+  padding: 13px 16px !important;
+  border-radius: 10px !important;
+  background: #f8fafc !important; 
+  border: 1px solid rgba(0, 68, 143, 0.12) !important;
+  color: #0f172a !important; 
+  font-size: 14.5px !important;
+  margin-bottom: 16px !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s ease-in-out !important;
 }
 
-.popup-form textarea {
-  min-height: 100px;
-  resize: none;
+.popup-form input::placeholder,
+.popup-form textarea::placeholder {
+  color: #94a3b8 !important; 
+}
+
+.popup-form input:focus,
+.popup-form select:focus,
+.popup-form textarea:focus {
+  border-color: #38bdf8 !important;
+  background: #ffffff !important; 
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.12) !important;
 }
 
 .form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 14px !important;
+}
+
+.popup-form textarea {
+  min-height: 110px !important;
+  resize: none !important;
 }
 
 .budget-label {
-  font-size: 13px;
-  margin: 10px 0 6px;
-  display: block;
+  font-size: 14px !important;
+  margin: 12px 0 8px !important;
+  display: block !important;
+  color: #475569 !important;
+  font-weight: 600 !important;
 }
 
-/* Slider */
+.budget-value {
+  color: #00448f !important;
+  font-weight: 700 !important;
+}
+
 input[type="range"] {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 7px;
-  border-radius: 5px;
-  background: #ddd;
-  outline: none;
-  margin-bottom: 16px;
-  transition: background 0.3s;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 100% !important;
+  height: 6px !important;
+  border-radius: 10px !important;
+  outline: none !important;
+  margin-bottom: 24px !important;
 }
 
-/* Webkit (Chrome, Safari) */
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 22px;
-  height: 22px;
-  border-radius: 100%;
-  background: black;
-  cursor: pointer;
-  border: 2px solid #fff;
-  margin-top: 0px;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 50% !important;
+  background: #00448f !important; 
+  cursor: pointer !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 3px 10px rgba(0, 68, 143, 0.3) !important;
+  transition: transform 0.15s ease !important;
 }
 
-/* Firefox */
-input[type="range"]::-moz-range-thumb {
-  width: 22px;
-  height: 22px;
-  border-radius: 100%;
-  background: black;
-  cursor: pointer;
-  border: 2px solid #fff;
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2) !important;
 }
 
-/* ACTION BUTTONS*/
+/* ACTIONS FOOTER SYSTEM - Exact original sizing preserved */
 .popup-actions {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-top: 22px;
-}
-.popup-actions::before {
-  content: "";
-  flex: 1;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 14px !important;
+  margin-top: 24px !important;
+  width: 100% !important;
 }
 
-/* Base button (DESKTOP) */
 .popup-actions button {
-  width: 150px;
-  height: 48px;
-  padding: 0;
-  border-radius: 40px;
-
-  font-weight: 600;
-  font-family: Poppins, sans-serif;
-  font-size: 15px;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-sizing: border-box;
-  transition: all 0.3s ease;
+  padding: 13px 28px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease-in-out !important;
+  box-sizing: border-box !important;
 }
 
 .popup-actions .submit-btn {
-  background-color: #0047ab;
-  color: #fff;
-  border: none;
+  background: linear-gradient(135deg, #00448f 0%, #002d62 100%) !important;
+  color: #ffffff !important; 
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(0, 68, 143, 0.2) !important;
 }
 
 .popup-actions .submit-btn:hover {
-  background-color: #003380;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 71, 171, 0.3);
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3) !important;
 }
 
 .popup-actions .cancel-btn {
-  background-color: #fff;
-  margin-top: 11px;
-  color: #111;
-  border: 1.5px solid #111;
+  background: transparent !important;
+  color: #475569 !important;
+  border: 1px solid rgba(71, 85, 105, 0.2) !important;
 }
 
 .popup-actions .cancel-btn:hover {
-  background-color: #f5f5f5;
-  transform: translateY(-2px);
+  background: rgba(0, 68, 143, 0.03) !important;
+  color: #00448f !important;
+  border-color: #00448f !important;
 }
 
-/* Alert Messages for Expert Popup */
 .popup-right .alert {
-  padding: 15px 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  font-weight: 500;
-  animation: slideIn 0.3s ease;
+  padding: 14px 18px !important;
+  border-radius: 8px !important;
+  margin-bottom: 20px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
 }
 
 .popup-right .alert-success {
-  background-color: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
+  background: rgba(16, 185, 129, 0.08) !important;
+  color: #059669 !important; 
+  border: 1px solid rgba(16, 185, 129, 0.2) !important;
 }
 
-.popup-right .alert-error {
-  background-color: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Disabled state for popup form */
-.popup-form input:disabled,
-.popup-form select:disabled,
-.popup-form textarea:disabled,
-.popup-actions button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-/* MOBILE */
+/* RESPONSIVE MEDIA BREAKPOINTS - Keeps your original button sizing intact on small screens */
 @media (max-width: 768px) {
   .popup-container {
-    grid-template-columns: 1fr;
-    max-width: 92%;
-    max-height: 90vh;
-    overflow-y: auto;
+    grid-template-columns: 1fr !important;
+    overflow-y: auto !important;
+    max-height: 95vh !important;
   }
-
   .popup-left {
-    padding: 24px;
-    min-height: auto;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2) !important;
+    padding: 30px 24px !important;
   }
-
   .popup-right {
-    padding: 24px;
+    padding: 30px 24px !important;
   }
-
   .form-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
   }
-
+  
+  /* Restores the side-by-side horizontal actions container without breaking widths */
   .popup-actions {
-    flex-direction: column-reverse;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    gap: 12px !important;
+    width: 100% !important;
   }
-  .popup-actions .cancel-btn {
-    text-align: center !important;
-    margin-top: 0px;
-  }
+  
   .popup-actions button {
-    width: 100%;
-    min-width: unset;
-    height: 50px;
-    justify-content: center;
-    text-align: center;
+    width: auto !important;
+    flex: none !important;
   }
+}
+
+
+
+
+
+
+
+
+
+
+/* Container holding the buttons */
+.popup-actions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 14px !important; /* Space between buttons */
+  margin-top: 24px !important;
+  width: 100% !important;
+}
+
+/* Unified Button Base Styles */
+.popup-actions button {
+  padding: 13px 40px !important; /* Forces identical internal size */
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease-in-out !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 140px !important; /* Prevents text length from changing width */
+  border: 1px solid transparent !important; /* Ensures border thickness matches */
+}
+
+/* Cancel Button: Specific styling */
+.popup-actions .cancel-btn {
+  background: transparent !important;
+  color: #475569 !important;
+  border-color: rgba(71, 85, 105, 0.2) !important;
+}
+
+/* Submit Button: Specific styling (Now matched to Cancel size) */
+.popup-actions .submit-btn {
+  background: linear-gradient(135deg, #00448f 0%, #002d62 100%) !important;
+  color: #ffffff !important; 
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(0, 68, 143, 0.2) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Force override button sizes */
+.popup-actions .cancel-btn, 
+.popup-actions .submit-btn {
+  padding: 13px 40px !important;
+  width: auto !important;
+  min-width: 140px !important;
+  height: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure the Submit button specifically follows the size defined above */
+.popup-form .popup-actions .submit-btn {
+  background: linear-gradient(135deg, #00448f 0%, #002d62 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
 }

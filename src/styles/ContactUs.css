@@ -181,3 +181,48 @@
     flex-direction: column;
   }
 }
+
+
+
+/* Ensure the input container acts as the absolute baseline context */
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+/* Absolute positioning for the SVG input icons */
+.form-group .input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8; /* Modern neutral gray color */
+  pointer-events: none; /* Allows user clicks to pass right through the icon into the input */
+  z-index: 5;
+  transition: color 0.2s ease;
+}
+
+/* Specific vertical offset alignment for the textarea icon */
+.form-group.textarea-group .textarea-icon {
+  top: 18px; /* Places the icon near the top of the message box instead of the center */
+  transform: none;
+}
+
+/* Indent input text so that it doesn't overlap the icon */
+.form-group input {
+  padding-left: 44px !important; /* Forces standard padding on the left side of text */
+  box-sizing: border-box;
+}
+
+/* Indent textarea message text so that it doesn't overlap the icon */
+.form-group textarea {
+  padding-left: 44px !important;
+  padding-top: 16px !important;
+  box-sizing: border-box;
+}
+
+/* Highlight icon color on focus */
+.form-group input:focus + .input-icon,
+.form-group textarea:focus + .input-icon {
+  color: #2563eb; /* Matches your active brand blue color on input focus */
+}

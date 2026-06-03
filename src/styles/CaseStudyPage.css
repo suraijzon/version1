@@ -421,3 +421,437 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+
+
+/* ========================================================
+   CASE STUDY HERO (PREMIUM NIGHT NAVY STYLING)
+   ======================================================== */
+.cs__hero {
+  position: relative !important;
+  /* Glowing deep night navy blue gradient matching reference */
+  background: radial-gradient(circle at 50% 90%, #003d73 0%, #001b3a 60%, #000f21 100%) !important;
+  color: #ffffff !important;
+  padding: 100px 24px 90px 24px !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  width: 100% !important;
+  display: block !important;
+}
+
+.cs__hero_container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+/* ================= PILL BADGE LABEL ================= */
+.cs__eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  padding: 6px 14px !important;
+  background-color: rgba(56, 189, 248, 0.08) !important; /* Soft sky-blue tint */
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  border-radius: 9999px !important;
+  margin-bottom: 28px !important;
+  color: #38bdf8 !important;
+  font-size: 0.825rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  line-height: 1 !important;
+}
+
+.cs__eyebrow_dot {
+  width: 8px !important;
+  height: 8px !important;
+  background-color: #38bdf8 !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+  position: relative !important;
+}
+
+.cs__eyebrow_dot::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50% !important;
+  background-color: #38bdf8;
+  animation: csBadgePulse 2s infinite ease-in-out !important;
+}
+
+@keyframes csBadgePulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* ================= TYPOGRAPHY ================= */
+.cs__hero_title {
+  font-size: 56px !important;
+  font-weight: 800 !important;
+  line-height: 1.18 !important;
+  color: #ffffff !important;
+  margin-bottom: 24px !important;
+  letter-spacing: -0.02em !important;
+  max-width: 950px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 0 !important;
+}
+
+/* Sky-Blue Highlight text */
+.cs__hero_title_highlight {
+  color: #38bdf8 !important;
+  background: transparent !important;
+  display: inline !important;
+}
+
+.cs__hero_sub {
+  font-size: 1.125rem !important;
+  line-height: 1.65 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  max-width: 780px !important;
+  margin: 0 auto 32px auto !important;
+  display: block !important;
+}
+
+/* ================= SUB-PILLS TAGS ================= */
+.cs__tags {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  margin-bottom: 40px !important;
+  flex-wrap: wrap !important;
+}
+
+.cs__tag {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 100px !important;
+  padding: 8px 18px !important;
+  font-size: 0.85rem !important;
+  color: #cbd5e1 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* ================= HERO BUTTONS ================= */
+.cs__hero_links {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+}
+
+/* Primary Live button (Solid Sky Blue, Dark Navy text) */
+.cs__live_btn {
+  display: inline-block !important;
+  background-color: #38bdf8 !important;
+  color: #001f3f !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2) !important;
+}
+
+.cs__live_btn:hover {
+  background-color: #25aff2 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Secondary Button (Outlined, Transparent background) */
+.cs__outline_btn {
+  display: inline-block !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border: 1.5px solid rgba(73, 188, 244, 0.5) !important; /* Semi-transparent blue border */
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.cs__outline_btn:hover {
+  border-color: #38bdf8 !important;
+  background-color: rgba(56, 189, 248, 0.08) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* ================= RESPONSIVE VIEWPORT QUERIES ================= */
+
+/* --- Tablets & Large Screens (Up to 1024px) --- */
+@media (max-width: 1024px) {
+  .cs__hero {
+    padding: 80px 24px 70px 24px !important;
+  }
+  .cs__hero_title {
+    font-size: 44px !important;
+  }
+}
+
+/* --- Mobiles & Narrow screens (Up to 768px) --- */
+@media (max-width: 768px) {
+  .cs__hero {
+    padding: 60px 16px 50px 16px !important;
+  }
+  .cs__hero_title {
+    font-size: 32px !important;
+    line-height: 1.25 !important;
+  }
+  .cs__hero_sub {
+    font-size: 0.95rem !important;
+    margin-bottom: 24px !important;
+  }
+  .cs__tags {
+    gap: 10px !important;
+    margin-bottom: 32px !important;
+  }
+  .cs__tag {
+    font-size: 0.8rem !important;
+    padding: 6px 14px !important;
+  }
+}
+
+/* --- Extra Small Devices (Up to 360px) --- */
+@media (max-width: 360px) {
+  .cs__hero_title {
+    font-size: 26px !important;
+  }
+}
+
+
+
+
+
+
+
+/* ========================================================
+   CALL TO ACTION BLOCK (PREMIUM CARD DESIGN)
+   ======================================================== */
+.cs__cta_section {
+  position: relative !important;
+  background-color: #030f26 !important; /* Base Deep Night Navy background */
+  padding: 80px 24px !important;
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+}
+
+/* Inner Card Container styling as shown in your reference image */
+.cs__cta_container {
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  /* Lighter glowing blue/navy center gradient */
+  background: radial-gradient(circle at 50% 90%, #003d73 0%, #001b3a 100%) !important;
+  border: 1px solid rgba(56, 189, 248, 0.15) !important; /* Subtle blue glow outline */
+  border-radius: 24px !important;
+  padding: 64px 32px !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Typography rules */
+.cs__cta_heading {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  margin-bottom: 16px !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.25 !important;
+}
+
+.cs__cta_text {
+  font-size: 1.1rem !important;
+  line-height: 1.65 !important;
+  color: #cbd5e1 !important; /* Soft Slate-White */
+  max-width: 650px !important;
+  margin: 0 auto 32px auto !important;
+}
+
+/* Buttons Container */
+.cs__cta_buttons {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  margin-bottom: 24px !important;
+  flex-wrap: wrap !important;
+}
+
+/* Primary Action (Solid White Button, Night Navy Text) */
+.cs__cta_btn_primary {
+  display: inline-block !important;
+  background-color: #ffffff !important;
+  color: #001f3f !important; /* Matching premium dark-navy text */
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1) !important;
+}
+
+.cs__cta_btn_primary:hover {
+  background-color: #f1f5f9 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Secondary Action (Outlined Button, Transparent background) */
+.cs__cta_btn_secondary {
+  display: inline-block !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  padding: 14px 28px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.cs__cta_btn_secondary:hover {
+  border-color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Trust checklist footer text */
+.cs__cta_footer_text {
+  font-size: 0.825rem !important;
+  color: #94a3b8 !important; /* Soft Slate-Gray */
+  margin: 0 !important;
+  display: block !important;
+}
+
+/* ================= RESPONSIVE VIEWPORT QUERIES ================= */
+
+/* --- Tablets & iPads (Up to 1024px) --- */
+@media (max-width: 1024px) {
+  .cs__cta_container {
+    padding: 56px 24px !important;
+    border-radius: 20px !important;
+  }
+  .cs__cta_heading {
+    font-size: 1.85rem !important;
+  }
+}
+
+/* --- Mobiles & Narrow screens (Up to 768px) --- */
+@media (max-width: 768px) {
+  .cs__cta_section {
+    padding: 60px 16px !important;
+  }
+  .cs__cta_container {
+    padding: 40px 16px !important;
+  }
+  .cs__cta_heading {
+    font-size: 1.65rem !important;
+  }
+  .cs__cta_text {
+    font-size: 0.95rem !important;
+    margin-bottom: 24px !important;
+  }
+  .cs__cta_buttons {
+    gap: 12px !important;
+    margin-bottom: 20px !important;
+  }
+  .cs__cta_btn_primary,
+  .cs__cta_btn_secondary {
+    width: 100% !important; /* Full width stacking for clean mobile tap targets */
+    box-sizing: border-box !important;
+  }
+}
+
+
+
+
+
+
+/* Breadcrumb Container */
+.cs__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;                 /* Adjust spacing between elements */
+  margin-bottom: 20px;      /* Space between breadcrumb and H1 */
+  font-size: 0.8rem;        /* Small, readable size */
+  font-weight: 700;         /* Bold weight matching the image */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;   /* Slight spacing between letters */
+  text-align:center;
+  justify-content: center;
+}
+
+/* Inactive Links (HOME, CASE STUDIES) */
+.cs__breadcrumb a {
+  color: #8fa0b0;           /* Grayish-blue color */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cs__breadcrumb a:hover {
+  color: #00bcff;           /* Bright blue on hover */
+}
+
+/* Separator ( > ) */
+.cs__breadcrumb_separator {
+  color: #4b6175;           /* Muted divider color */
+  user-select: none;
+}
+
+/* Active Page (ASJ HARDSCAPES) */
+.cs__breadcrumb_active {
+  color: #00bcff;           /* Vibrant light blue matching your screenshot */
+}
+
+
+
+
+.cs__breadcrumb {
+  display: flex;
+  justify-content: center;  /* Centers the breadcrumb elements */
+  align-items: center;
+  gap: 8px;                 
+  margin-bottom: 20px;      
+  font-size: 0.8rem;        
+  font-weight: 700;         
+  text-transform: uppercase;
+  letter-spacing: 0.05em;   
+}
+
+.cs__breadcrumb a {
+  color: #8fa0b0;           
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cs__breadcrumb a:hover {
+  color: #00bcff;           
+}
+
+.cs__breadcrumb_separator {
+  color: #4b6175;           
+  user-select: none;
+}
+
+.cs__breadcrumb_active {
+  color: #00bcff;           
+}

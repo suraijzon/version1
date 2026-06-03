@@ -1,227 +1,341 @@
 'use client';
-import React from "react";
+
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { 
+  faEarthAmericas, 
+  faUsers, 
+  faBolt, 
+  faChartLine,
+  faBrain 
+} from "@fortawesome/free-solid-svg-icons";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Monitor, Rocket, Zap, Search, Layout, Smartphone, 
+  BarChart3, ShieldCheck, Globe, ArrowRight, CheckCircle2,
+  Users, Star, MousePointer2, RefreshCw, Lightbulb, Code, 
+  Palette, Microscope, Plus, Minus, Cpu, Activity, Sparkles, 
+  Bot, Settings, BarChart, Layers, HelpCircle
+} from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "../styles/AIWebsiteDesign.css";
 import Breadcrumb from "../components/Breadcrumb";
+import "../styles/AIWebsiteDesign.css";
 
 const AIWebsiteDesign = () => {
-  const stats = [
-    { number: "150+", label: "Websites Delivered" },
-    { number: "120+", label: "Clients Served" },
-    { number: "35%", label: "Average Conversion Improvement" },
-    { number: "4.9★", label: "Client Rating" },
-  ];
+  const [activeFaq, setActiveFaq] = useState(null);
 
-  const whatItNeeds = [
-    { title: "Clear Messaging", description: "Visitors decide within 3 seconds whether to stay or leave. Your website must immediately communicate what you do, who you help and why you are the right choice." },
-    { title: "Fast Load Speed", description: "Every second of delay costs conversions. We build websites that score 90+ on Google PageSpeed — keeping visitors engaged and search rankings strong." },
-    { title: "Conversion-Focused Design", description: "Beautiful design means nothing without strategic layout. We design every section to guide visitors naturally toward taking action — enquiry, purchase or booking." },
-    { title: "Mobile-First Experience", description: "Over 60% of UK web traffic comes from mobile devices. Every website we build is designed mobile-first — looking and performing perfectly on every screen size." },
-    { title: "SEO Built In", description: "A website nobody finds is worthless. We build technical SEO into every website from the start — proper structure, fast loading, schema markup and AI search optimisation included." },
+  const stats = [
+    { number: "150+", label: "Websites Delivered", icon: <Globe color="#38bdf8" /> },
+    { number: "120+", label: "Clients Served", icon: <Users color="#a855f7" /> },
+    { number: "35%", label: "Conversion Lift", icon: <BarChart3 color="#10b981" /> },
+    { number: "4.9★", label: "Client Rating", icon: <Star color="#fbbf24" /> },
   ];
 
   const services = [
-    { title: "Business Website Design", description: "Clean, professional and conversion-focused website design for service businesses, consultancies and professional firms across the UK and USA. Built to establish credibility, generate enquiries and support your sales process." },
-    { title: "Landing Page Design", description: "High-converting landing pages designed around a single goal — whether that is generating leads, selling a product or promoting a specific service. Every element is designed to remove friction and drive action." },
-    { title: "E-commerce Website Design", description: "Beautifully designed online stores built to convert browsers into buyers. We design product pages, category layouts and checkout flows that reduce abandonment and increase average order value." },
-    { title: "AI-Enhanced Website Design", description: "We integrate AI capabilities into website design — including smart chatbots, personalised content sections, AI lead capture forms and automated user journeys that adapt to visitor behaviour." },
-    { title: "Website Redesign", description: "Is your current website outdated, slow or simply not generating results? We redesign existing websites with a focus on performance, conversion and modern design — without losing your existing SEO value." },
-    { title: "WordPress Website Design", description: "Custom WordPress website design and development for businesses that need a flexible, easy-to-manage website. Built with premium performance, security and full SEO optimisation included." },
+    { title: "Business Design", icon: <Monitor color="#3b82f6" />, description: "Clean, professional website design for service businesses across the UK and USA." },
+    { title: "Landing Pages", icon: <Rocket color="#f97316" />, description: "High-converting pages designed to remove friction and drive lead generation." },
+    { title: "E-commerce", icon: <Zap color="#eab308" />, description: "Online stores built to turn browsers into buyers and increase order value." },
+    { title: "AI-Enhanced", icon: <RefreshCw color="#10b981" />, description: "Smart chatbots and personalised content that adapt to visitor behaviour." },
+    { title: "Redesign", icon: <ShieldCheck color="#6366f1" />, description: "Modernising existing sites for performance without losing SEO value." },
+    { title: "WordPress", icon: <Globe color="#06b6d4" />, description: "Custom WordPress sites with premium security and full optimisation." },
   ];
 
   const whyChoose = [
-    { title: "✅ Conversion-First Design Philosophy", description: "We don't design websites to win design awards. We design them to win customers. Every decision we make is driven by what converts — not what looks impressive in a portfolio." },
-    { title: "✅ AI-Powered Design Tools", description: "We use AI design tools to accelerate the design process, test layout variations and identify the highest-converting structures — giving our clients better results faster." },
-    { title: "✅ Affordable for UK Small Businesses", description: "Premium website design at offshore pricing. You get the quality and strategic thinking of a top UK design agency at a fraction of the cost — with no compromise on delivery or communication." },
-    { title: "✅ Full-Stack Delivery", description: "We handle everything in-house — strategy, design, development, copywriting guidance and SEO. No juggling multiple agencies or freelancers. One team, full accountability." },
-    { title: "✅ Fast Turnaround", description: "Most business websites are delivered within 4 to 6 weeks. Landing pages within 1 to 2 weeks. We work fast without cutting corners — because we know time is money for small businesses." },
+    { title: "Conversion-First", description: "Every decision is driven by what converts — not just what looks impressive." },
+    { title: "AI-Powered Tools", description: "We use AI to identify the highest-converting structures for our clients." },
+    { title: "Affordable UK Scale", description: "Premium UK quality at offshore pricing. No compromise on communication." },
+    { title: "Full-Stack Team", description: "One team handles strategy, design, development, copywriting and SEO." },
+    { title: "Fast Turnaround", description: "Websites delivered in 4-6 weeks. Landing pages within 1-2 weeks." },
   ];
 
   const processSteps = [
-    { step: "01", title: "Discovery & Strategy", description: "We learn about your business, target audience, competitors and conversion goals before designing a single page." },
-    { step: "02", title: "Wireframes & Layout Planning", description: "We create wireframes showing the structure and layout of every key page — so you can review and approve the blueprint before design begins." },
-    { step: "03", title: "Visual Design", description: "We create the full visual design — colours, typography, imagery, icons and all UI elements — aligned with your brand and optimised for conversion." },
-    { step: "04", title: "Development & Testing", description: "We build the website with clean, performant code — testing across all devices, browsers and screen sizes before launch." },
-    { step: "05", title: "Launch & Optimisation", description: "We deploy your website, set up analytics and provide ongoing support and conversion optimisation as your traffic grows." },
-  ];
-
-  const whoFor = [
-    { title: "✓ Small Businesses in the UK & USA", description: "Who need a professional website that actually generates enquiries — not just an online brochure." },
-    { title: "✓ Startups", description: "Launching their first website and needing it to make the right first impression and generate early leads on a startup budget." },
-    { title: "✓ Service Businesses", description: "Consultants, agencies, clinics, law firms and tradespeople who rely on their website to generate enquiries and bookings." },
-    { title: "✓ E-commerce Brands", description: "Looking for a high-converting online store design that turns browsers into buyers more consistently." },
-    { title: "✓ Businesses Needing a Redesign", description: "Whose current website is outdated, slow or simply not generating the results their business deserves." },
+    { step: "01", icon: <Microscope color="#3b82f6" />, title: "Discovery", description: "Learning your audience and conversion goals." },
+    { step: "02", icon: <Layout color="#a855f7" />, title: "Planning", description: "Wireframing the blueprint before design begins." },
+    { step: "03", icon: <Palette color="#f43f5e" />, title: "Visual Design", description: "UI aligned with your brand and optimized for leads." },
+    { step: "04", icon: <Code color="#10b981" />, title: "Development", description: "Clean code testing across all devices and browsers." },
+    { step: "05", icon: <Rocket color="#f97316" />, title: "Launch & SEO", description: "Deployment with analytics and ongoing optimization." },
   ];
 
   const faqs = [
-    { question: "How much does website design cost in the UK?", answer: "Our website design packages are priced specifically to be affordable for small businesses in the UK and USA. As an offshore design agency we offer significantly better value than UK studios — without compromising on quality. Contact us for a free consultation and transparent quote." },
-    { question: "How long does it take to design a website?", answer: "A standard business website typically takes 4 to 6 weeks from start to launch. Landing pages can be delivered in 1 to 2 weeks. We provide a clear timeline before any work begins." },
-    { question: "Do you design mobile-friendly websites?", answer: "Yes — every website we design is mobile-first. We design and test on all screen sizes to ensure a perfect experience on mobile, tablet and desktop." },
-    { question: "Is SEO included in your website design?", answer: "Yes. Technical SEO is built into every website we design — including proper heading structure, fast loading, schema markup, sitemap generation and AI search optimisation." },
-    { question: "Can you redesign my existing website?", answer: "Yes. Website redesign is one of our most popular services. We modernise existing websites for performance, conversion and design — while preserving your existing SEO rankings." },
-    { question: "Do you design WordPress websites?", answer: "Yes. We design and build custom WordPress websites with premium performance, security hardening and full SEO optimisation included as standard." },
+    { question: "How much does website design cost in the UK?", answer: "Our packages are priced specifically to be affordable for small businesses. As an offshore agency we offer significantly better value than UK studios." },
+    { question: "How long does it take to design a website?", answer: "A standard business website takes 4 to 6 weeks. Landing pages can be delivered in 1 to 2 weeks." },
+    { question: "Do you design mobile-friendly websites?", answer: "Yes — every website we design is mobile-first, ensuring a perfect experience on all screen sizes." },
+    { question: "Is SEO included in your website design?", answer: "Yes. Technical SEO is built-in — including heading structure, speed, and schema markup." },
+  ];
+
+  const marqueeVariants = {
+    animate: {
+      x: [0, -1200],
+      transition: { x: { repeat: Infinity, repeatType: "loop", duration: 40, ease: "linear" } },
+    },
+  };
+
+  // Structured array replacing the basic string examples with unique icons and context
+  const aiSolutions = [
+    { title: "Intelligent Dashboards", description: "Real-time analytics pipelines and visually interactive reporting systems.", icon: <BarChart size={22} className="ai-sol-icon-cyan" /> },
+    { title: "AI-Powered SaaS", description: "Scalable product foundations integrated with modern machine learning logic.", icon: <Layers size={22} className="ai-sol-icon-purple" /> },
+    { title: "GPT Customer Tools", description: "Tailored text generation models assisting users throughout workflows.", icon: <Sparkles size={22} className="ai-sol-icon-rose" /> },
+    { title: "Lead Qualification", description: "Automated scoring funnels that accurately isolate ready-to-buy profiles.", icon: <CheckCircle2 size={22} className="ai-sol-icon-emerald" /> },
+    { title: "Recommendation Engines", description: "Dynamic content delivery systems matched directly to visitor profiles.", icon: <Cpu size={22} className="ai-sol-icon-blue" /> },
+    { title: "Workflow Automation", description: "Background processing and scripts eliminating repetitive administrative actions.", icon: <Settings size={22} className="ai-sol-icon-amber" /> },
+    { title: "Predictive Analytics", description: "Forecasting layouts translating raw interaction data into clear strategies.", icon: <Activity size={22} className="ai-sol-icon-indigo" /> },
+    { title: "Virtual Assistants", description: "Context-aware AI conversational models managing support 24/7.", icon: <Bot size={22} className="ai-sol-icon-teal" /> },
   ];
 
   return (
-    <>
-      <div className="aiwd__wrapper">
-        <Navbar />
-        <Breadcrumb />
+    <div className="aiwd-master-wrapper">
+      <Navbar />
 
-        {/* Hero Section */}
-        <section className="aiwd__hero">
-          <div className="aiwd__hero_container">
-            <div className="aiwd__hero_content">
-              <h1 className="aiwd__hero_heading">
-                AI Website Design Agency UK — Websites Built to Convert Visitors into Paying Customers
-              </h1>
-              <p className="aiwd__hero_description">
-                ZonzocTech designs and builds high-converting websites for small businesses and growing companies across the UK and USA. We combine modern AI-powered design with conversion-focused UX — creating websites that look great, load fast and turn visitors into leads from day one.
-              </p>
-              <div className="hero-buttons">
-                <a href="/contact" className="btn-primary">Get Free Design Consultation →</a>
-                <a href="#aiwd-work" className="btn-secondary">See Our Work ↓</a>
-              </div>
-              <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
+      {/* --- HERO --- */}
+      <section className="aiwd-hero">
+        <div className="aiwd-container">
+          <div className="aiwd-hero-content">
+            <Breadcrumb />
+
+            <span className="aiwd-hero-badge">
+              AI Web Design & Development Agency
+            </span>
+
+            <h1 className="aiwd-hero-title">
+              AI Website Design That Turns <span className="aiwd-hero-title-accent">Visitors Into Customers</span>
+            </h1>
+
+            <p className="aiwd-hero-subtext">
+              We build high-converting AI-powered websites for UK & USA businesses —
+              combining modern UI, conversion psychology, and performance engineering.
+            </p>
+
+            <div className="aiwd-hero-actions">
+              <a href="/contact" className="aiwd-btn-primary">
+                Get Free Consultation
+              </a>
+             <a href="/case-studies" className="aiwd-btn-secondary">
+  View Our Works →
+</a>
             </div>
-            <div className="aiwd__hero_visual">
-              <div className="aiwd__hero_card">🎨</div>
-              <div className="aiwd__hero_card">🤖</div>
-              <div className="aiwd__hero_card">📈</div>
-            </div>
+
+            <p className="aiwd-hero-trust">
+              Trusted by 120+ businesses across the UK, USA & Europe
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Stats Bar */}
-        <section className="stats-bar" id="aiwd-work">
+      {/* --- STATS --- */}
+      <section className="aiwd-stats-bar" id="work">
+        <div className="aiwd-container aiwd-stats-row">
           {stats.map((stat, i) => (
-            <div key={i} className="stat-item">
-              <span className="stat-number">{stat.number}</span>
-              <span className="stat-label">{stat.label}</span>
+            <div key={i} className="aiwd-stat-item">
+              <div className="aiwd-stat-icon-circle">{stat.icon}</div>
+              <div className="aiwd-stat-txt">
+                <span className="aiwd-stat-num">{stat.number}</span>
+                <span className="aiwd-stat-lab">{stat.label}</span>
+              </div>
             </div>
           ))}
-        </section>
+        </div>
+      </section>
 
-        {/* Section 1 — Why Most Websites Fail */}
-        <section className="aiwd__what_section">
-          <div className="aiwd__container">
-            <h2 className="aiwd__title">Why Most Websites Fail to Generate Leads — And How We Fix It</h2>
-            <p className="aiwd__text">
-              Most business websites look acceptable but perform poorly. They load slowly, confuse visitors with unclear messaging and have no clear path to conversion. The result is traffic that bounces and leads that never materialise.
+      {/* SECTION 3 - INTRO / REDESIGNED EXPERT AI EXPLANATION */}
+      <section className="aiwd-intro-section">
+        <div className="aiwd-container">
+
+          <div className="aiwd-section-head">
+            <span className="aiwd-section-pill">Core Framework</span>
+            <h2 className="aiwd-section-title">
+              What Is AI Web Application Development?
+            </h2>
+            <p className="aiwd-section-subtext">
+              AI web applications combine modern web systems with machine learning and LLMs to automate tasks, improve decisions, and deliver smarter user experiences.
             </p>
-            <p className="aiwd__text">
-              At ZonzocTech we design every website around one primary goal — converting visitors into leads or customers. Every layout decision, every headline and every call to action is backed by conversion principles and real user behaviour data.
-            </p>
-            <h3 className="aiwd__tagline">What a High-Converting Website Actually Needs</h3>
-            <div className="aiwd__problems_grid">
-              {whatItNeeds.map((item, i) => (
-                <div key={i} className="aiwd__problem_item">
-                  <span className="aiwd__problem_text"><strong>{item.title}</strong> — {item.description}</span>
-                </div>
-              ))}
+          </div>
+
+          <div className="aiwd-ai-explainer">
+            <div className="aiwd-ai-badge">
+              <span className="aiwd-ai-badge-pulse"></span>
+              <span>AI</span>
+            </div>
+
+            <div className="aiwd-ai-text">
+              <h3>Smarter Than Traditional Web Apps</h3>
+              <p>
+                Unlike static applications, AI-powered systems learn from user behavior,
+                adapt in real-time, and continuously improve performance without manual updates.
+              </p>
+              <p>
+                This gives UK & USA businesses a major competitive advantage in automation,
+                customer experience, and data-driven decision making.
+              </p>
             </div>
           </div>
-        </section>
 
-        {/* Section 2 — Services */}
-        <section className="aiwd__services_section">
-          <div className="aiwd__container">
-            <h2 className="aiwd__title2">Our Website Design & Development Services</h2>
-            <p className="aiwd__subtitle">
-              We offer complete website design and development — from strategy and design through to development, launch and ongoing optimisation.
-            </p>
-            <div className="service-cards-grid">
-              {services.map((service, i) => (
-                <div key={i} className="service-card">
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                </div>
-              ))}
+          {/* Fully Responsive & Redesigned Grid Section */}
+          <div className="aiwd-solutions-container">
+            <div className="aiwd-solutions-header">
+              <h4>Advanced Capabilities & Functional Implementations</h4>
+              <p>Explore the functional building blocks we deploy within our premium AI web integrations.</p>
             </div>
-          </div>
-        </section>
-
-        {/* Section 3 — Why Choose */}
-        <section className="aiwd__why_section">
-          <div className="aiwd__container">
-            <h2 className="aiwd__title">Why UK & USA Businesses Choose ZonzocTech for Website Design</h2>
-            <div className="why-choose-grid">
-              {whyChoose.map((reason, i) => (
-                <div key={i} className="why-choose-card">
-                  <h3>{reason.title}</h3>
-                  <p>{reason.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Section 4 — Process */}
-        <section className="process-section">
-          <div className="aiwd__container">
-            <h2>Our Website Design Process</h2>
-            <div className="process-grid">
-              {processSteps.map((item, i) => (
-                <div key={i} className="process-card">
-                  <div className="process-number">{item.step}</div>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Section 5 — Who For */}
-        <section className="aiwd__comparison_section">
-          <div className="aiwd__container">
-            <h2 className="aiwd__title2">Who Our Website Design Service Is For</h2>
-            <div className="aiwd__audience_grid">
-              {whoFor.map((item, i) => (
-                <div key={i} className="aiwd__audience_card">
-                  <div className="aiwd__audience_icon">✓</div>
-                  <div>
-                    <strong>{item.title}</strong>
+            
+            <div className="aiwd-solutions-grid">
+              {aiSolutions.map((item, index) => (
+                <div key={index} className="aiwd-solution-card">
+                  <div className="aiwd-solution-card-top">
+                    <div className="aiwd-solution-icon-wrapper">
+                      {item.icon}
+                    </div>
+                    <span className="aiwd-solution-arrow">→</span>
+                  </div>
+                  <div className="aiwd-solution-card-body">
+                    <h5>{item.title}</h5>
                     <p>{item.description}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </section>
 
-        {/* Section 6 — FAQ */}
-        <section className="faq-section">
-          <div className="aiwd__container">
-            <h2>Website Design — Frequently Asked Questions</h2>
-            <div className="faq-container">
-              {faqs.map((faq, i) => (
-                <div key={i} className="faq-item">
-                  <h3>{faq.question}</h3>
-                  <p>{faq.answer}</p>
+        </div>
+      </section>
+
+      {/* --- MOVING SERVICES --- */}
+      <section className="aiwd-section">
+        <div className="aiwd-container">
+          <h2 className="aiwd-section-title aiwd-moving-gradient-navy">Our Design & Development Services</h2>
+        </div>
+        <div className="aiwd-marquee-container">
+          <motion.div className="aiwd-marquee-track" variants={marqueeVariants} animate="animate">
+            {[...services, ...services].map((service, i) => (
+              <div key={i} className="aiwd-row-card">
+                <div className="aiwd-card-icon-circle">{service.icon}</div>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* --- HORIZONTAL SCROLLABLE TIMELINE WHY CHOOSE SECTION --- */}
+      <section className="aiwd-section aiwd-navy-bg">
+        <div className="aiwd-container">
+          <h2 className="aiwd-section-title aiwd-moving-gradient-white">
+            Why Businesses Choose Us
+          </h2>
+          
+          <div className="aiwd-horizontal-container">
+            <div className="aiwd-horizontal-track">
+              {whyChoose.map((item, i) => (
+                <div key={i} className="aiwd-horizontal-item">
+                  <div className="aiwd-node-wrapper">
+                    <div className={`aiwd-icon-node node-color-${i}`}>
+                      {i === 0 && <FontAwesomeIcon icon={faChartLine} style={{ color: "#ffffff" }} />}
+                      {i === 1 && <FontAwesomeIcon icon={faBrain} style={{ color: "#ffffff" }} />}
+                      {i === 2 && <FontAwesomeIcon icon={faEarthAmericas} style={{ color: "#ffffff" }} />}
+                      {i === 3 && <FontAwesomeIcon icon={faUsers} style={{ color: "#ffffff" }} />}
+                      {i === 4 && <FontAwesomeIcon icon={faBolt} style={{ color: "#ffffff" }} />}
+                    </div>
+                  </div>
+                  
+                  <div className="aiwd-row-card">
+                    <h3 className="white-txt">{item.title}</h3>
+                    <p className="white-txt-muted">{item.description}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Final CTA */}
-        <section className="cta-section">
-          <div className="aiwd__container">
-            <h2>Ready for a Website That Actually Generates Leads?</h2>
-            <p>Tell us about your business and we will put together a free website design consultation and growth proposal — no commitment required.</p>
-            <div className="cta-buttons">
-              <a href="/contact" className="btn-primary">Get Free Design Consultation →</a>
-              <a href="/#portfolio" className="btn-secondary">See Our Work</a>
-            </div>
-            <p className="cta-small-text">No commitment. No spam. Just results.</p>
+      {/* --- PROCESS (HORIZONTAL) --- */}
+      <section className="aiwd-section fswd-soft-bg">
+        <div className="aiwd-container">
+          <h2 className="aiwd-section-title aiwd-moving-gradient-navy">Our Website Design Process</h2>
+          <div className="aiwd-process-horizontal">
+            {processSteps.map((item, i) => (
+              <div key={i} className="aiwd-process-step-col">
+                <div className="aiwd-step-circle">
+                  {item.icon}
+                  <span className="aiwd-step-num-badge">{item.step}</span>
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                {i < processSteps.length - 1 && <div className="aiwd-process-line"></div>}
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <Footer />
-      </div>
-    </>
+      {/* --- FAQ --- */}
+      <section className="aiwd-faq-section">
+        <div className="aiwd-container">
+          <h2 className="aiwd-section-title">Frequently Asked Questions</h2>
+          <div className="aiwd-faq-wrap">
+            {faqs.map((faq, i) => (
+              <div
+                key={i}
+                className={`aiwd-faq-item ${activeFaq === i ? "active" : ""}`}
+                onClick={() =>
+                  setActiveFaq(activeFaq === i ? null : i)
+                }
+              >
+                <div className="aiwd-faq-q">
+                  <span>{faq.question}</span>
+                  {activeFaq === i ? (
+                    <Minus size={20} />
+                  ) : (
+                    <Plus size={20} />
+                  )}
+                </div>
+
+                <AnimatePresence>
+                  {activeFaq === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="aiwd-faq-a"
+                    >
+                      <p>{faq.answer}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* --- MID CTA --- */}
+      <section className="aiwd-cta-section">
+        <div className="aiwd-container">
+          <div className="aiwd-cta-card">
+            <h2 className="aiwd-cta-title">
+              Ready to Build an AI-Powered Website?
+            </h2>
+
+            <p className="aiwd-cta-text">
+              Let’s design a high-converting, AI-driven website tailored for your
+              business — optimized for performance, UX, and conversions.
+            </p>
+
+            <div className="aiwd-hero-actions">
+              <a href="/contact" className="aiwd-btn-primary">
+                Get Free Consultation
+              </a>
+
+              <a href="/case-studies" className="aiwd-btn-secondary">
+  View Our Works →
+</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
   );
 };
 

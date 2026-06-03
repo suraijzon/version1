@@ -2,8 +2,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "../styles/FullStackWebDev.css";
 import Breadcrumb from "../components/Breadcrumb";
+import "../styles/FullStackWebDev.css";
 
 const FullStackWebDev = () => {
   const stats = [
@@ -14,273 +14,261 @@ const FullStackWebDev = () => {
   ];
 
   const whatIsItems = [
-    { title: "Frontend Development", description: "Everything the user sees — designed for speed, clarity and conversion." },
-    { title: "Backend Development", description: "The logic, data and APIs that power your application — built for reliability and scale." },
-    { title: "Database Architecture", description: "Structured, optimised data systems that keep your application fast as it grows." },
-    { title: "API & Integrations", description: "Seamless connections between your app and third-party tools, payment systems and data sources." },
-    { title: "Cloud Deployment", description: "Secure, scalable hosting and deployment on AWS or Google Cloud with full CI/CD setup." },
+    { i: "🎨", title: "Frontend Development", description: "Everything the user sees — designed for speed, clarity and conversion." },
+    { i: "⚙️", title: "Backend Development", description: "The logic, data and APIs that power your application — built for reliability and scale." },
+    { i: "🗄️", title: "Database Architecture", description: "Structured, optimised data systems that keep your application fast as it grows." },
+    { i: "🔌", title: "API & Integrations", description: "Seamless connections between your app and third-party tools, payment systems and data sources." },
+    { i: "☁️", title: "Cloud Deployment", description: "Secure, scalable hosting and deployment on AWS or Google Cloud with full CI/CD setup." },
+    { i: "🖌️", title: "UI/UX Design", description: "User-centric design systems that ensure your product is intuitive, beautiful, and highly engaging." },
   ];
 
   const services = [
-    {
-      title: "Custom Web Application Development",
-      description: "We build bespoke web applications tailored to your exact business requirements — designed for your users, your workflows and your growth goals. No templates. No shortcuts. Just clean, maintainable code built to last.",
-    },
-    {
-      title: "MVP Development for Startups UK",
-      description: "Got an idea but need to validate it fast? We specialise in building lean, functional MVPs for startups across the UK and USA — giving you a working product to test with real users without burning your entire budget on a full build.",
-    },
-    {
-      title: "SaaS Platform Development",
-      description: "We build multi-tenant SaaS platforms from scratch — covering user management, subscription billing, role-based access, analytics dashboards and all the technical infrastructure needed to launch and scale a software business.",
-    },
-    {
-      title: "React & Next.js Development",
-      description: "We are a specialist React and Next.js development agency — building fast, SEO-friendly web applications with server-side rendering, static generation and modern component architecture that performs at scale.",
-    },
-    {
-      title: "Backend & API Development",
-      description: "We build secure, scalable backend systems using Node.js, Java Spring Boot and Python — with RESTful and GraphQL APIs designed for performance, reliability and easy integration with any frontend or third-party service.",
-    },
-    {
-      title: "Legacy System Modernisation",
-      description: "Is your current web application slow, outdated or hard to maintain? We help UK and USA businesses migrate from legacy systems to modern full stack architectures — with minimal disruption and maximum performance improvement.",
-    },
-  ];
-
-  const whyChoose = [
-    {
-      title: "✅ Affordable Without Cutting Corners",
-      description: "As an offshore full stack development agency we offer the technical quality of a premium UK studio at significantly lower cost. You get senior developers, clean code and reliable delivery — without the London agency price tag.",
-    },
-    {
-      title: "✅ React & Next.js Specialists",
-      description: "We are not generalists who dabble in everything. Our core expertise is React, Next.js, Node.js and Java Spring Boot — the most in-demand full stack technologies for building modern, scalable web applications.",
-    },
-    {
-      title: "✅ One Team, Full Ownership",
-      description: "No outsourcing. No fragmented teams. One dedicated team owns your entire project from discovery through to deployment and ongoing support — giving you clear accountability at every stage.",
-    },
-    {
-      title: "✅ Built for Small Business & Startups",
-      description: "We understand the budget constraints and speed requirements of small businesses and startups. We build lean, scalable solutions that grow with you — without overengineering from day one.",
-    },
-    {
-      title: "✅ SEO Built Into Development",
-      description: "Every web application we build is optimised for search engines from the start — with proper server-side rendering, Core Web Vitals optimisation, structured data and technical SEO built into the development process.",
-    },
+    { i: "💻", t: "Custom Web Application Development", points: ["Bespoke architectures.", "User-focused workflows.", "Scalable codebases.", "Performance-first design."] },
+    { i: "🚀", t: "MVP Development for Startups", points: ["Lean feature sets.", "Fast-track timeline.", "User validation ready.", "Cost-efficient build."] },
+    { i: "☁️", t: "SaaS Platform Development", points: ["Multi-tenant architecture.", "Subscription billing engines.", "Role-based access control.", "Advanced analytics suites."] },
+    { i: "⚛️", t: "React & Next.js Specialists", points: ["Server-side rendering.", "SEO-optimized builds.", "Fast component architecture.", "Scalable frontend logic."] },
+    { i: "⚙️", t: "Backend & API Development", points: ["Secure REST & GraphQL APIs.", "High-concurrency logic.", "Robust database design.", "Third-party integrations."] },
+    { i: "🔄", t: "Legacy System Modernisation", points: ["Refactoring legacy code.", "Performance bottlenecks fix.", "Seamless data migration.", "Cloud-native transformation."] },
   ];
 
   const techStack = [
-    { category: "Frontend", items: ["React & Next.js", "TypeScript", "Tailwind CSS", "Redux & Context API"] },
-    { category: "Backend", items: ["Node.js & Express", "Java & Spring Boot", "Python & Django", "REST & GraphQL APIs"] },
-    { category: "Databases", items: ["PostgreSQL & MySQL", "MongoDB", "Firebase & Firestore", "Redis"] },
-    { category: "Cloud & DevOps", items: ["AWS & Google Cloud", "Docker & Kubernetes", "GitHub CI/CD", "Vercel & Netlify"] },
-    { category: "CMS & E-commerce", items: ["WordPress & Headless CMS", "Shopify & WooCommerce", "Strapi & Contentful"] },
+    { c: "Frontend", icon: "https://img.icons8.com/color/96/react-native.png", items: ["React & Next.js", "TypeScript", "Tailwind CSS", "Redux"] },
+    { c: "Backend", icon: "https://img.icons8.com/color/96/nodejs.png", items: ["Node.js & Express", "Java Spring Boot", "Python Django", "GraphQL"] },
+    { c: "Databases", icon: "https://img.icons8.com/color/96/database.png", items: ["PostgreSQL & MySQL", "MongoDB", "Firebase", "Redis"] },
+    { c: "Cloud & DevOps", icon: "https://img.icons8.com/color/96/amazon-web-services.png", items: ["AWS & Google Cloud", "Docker & Kubernetes", "CI/CD Pipelines", "Vercel"] },
+  ];
+
+  const whyChoose = [
+    { i: "✅", t: "Affordable Without Cutting Corners", points: ["Premium UK quality.", "Senior developer talent.", "Clean, maintainable code.", "Transparent cost model."] },
+    { i: "⚛️", t: "React & Next.js Specialists", points: ["Deep stack expertise.", "High-performance builds.", "Scalable architecture.", "SEO-ready logic."] },
+    { i: "🤝", t: "One Team, Full Ownership", points: ["Zero outsourcing.", "Dedicated project teams.", "Direct communication.", "End-to-end accountability."] },
+    { i: "🚀", t: "Built for Growth", points: ["Scalable infrastructure.", "Start-up friendly budget.", "Fast MVP timelines.", "Growth-aligned support."] },
+    { i: "🔍", t: "SEO & Performance First", points: ["Server-side rendering.", "Core Web Vitals optimized.", "Structured data implementation.", "Technical SEO foundation."] },
+    { i: "🛠️", t: "24/7 Support & Maintenance", points: ["Continuous monitoring.", "Rapid bug resolution.", "Ongoing security patches.", "Growth-oriented scaling."] }
   ];
 
   const processSteps = [
-    { number: "01", title: "Discovery & Requirements", description: "We start by understanding your business goals, target users, existing systems and technical requirements — building a clear project scope before any development begins." },
-    { number: "02", title: "Architecture & UI Design", description: "We design the system architecture, database structure, API design and UI/UX wireframes — giving you a complete technical blueprint to review and approve." },
-    { number: "03", title: "Agile Development", description: "We build in two-week sprints with regular demos and check-ins — so you always see progress, can provide feedback early and avoid costly late changes." },
-    { number: "04", title: "Testing & QA", description: "Every feature is tested for functionality, performance, security and cross-browser compatibility before release — with automated and manual testing at every stage." },
-    { number: "05", title: "Deployment & Support", description: "We deploy to production, set up monitoring, provide full documentation and offer ongoing maintenance and feature development as your business grows." },
+    { n: "01", t: "Discovery & Requirements", d: "We define your business goals, identify target users, and establish the complete technical requirements for the project." },
+    { n: "02", t: "Architecture & UI Design", d: "We design the system architecture, database structure, API blueprints, and UI/UX wireframes for a robust system build." },
+    { n: "03", t: "Agile Development", d: "We build in two-week sprints with regular demos and check-ins to ensure total transparency and early user feedback." },
+    { n: "04", t: "Testing & QA", d: "Every feature undergoes rigorous functionality, performance, security, and cross-browser compatibility validation." },
+    { n: "05", t: "Deployment & Support", d: "We manage production deployment, system monitoring, documentation, and ongoing maintenance to ensure success." },
   ];
 
   const faqs = [
-    {
-      question: "How much does full stack web development cost in the UK?",
-      answer: "The cost depends on the complexity, features and timeline of your project. As an offshore full stack agency we are significantly more affordable than UK-based studios — without any compromise on quality. Contact us for a free consultation and transparent quote.",
-    },
-    {
-      question: "How long does it take to build a web application?",
-      answer: "A simple web application or MVP typically takes 6 to 10 weeks. A complex SaaS platform or enterprise application can take 3 to 6 months. We provide a clear timeline before any work begins.",
-    },
-    {
-      question: "Can I hire a full stack developer from ZonzocTech for my UK company?",
-      answer: "Yes. We offer dedicated developer engagement models for UK and USA companies who need skilled full stack developers embedded in their team — on a project or ongoing retainer basis.",
-    },
-    {
-      question: "Do you build MVPs for startups?",
-      answer: "Yes. MVP development is one of our most popular services for UK and USA startups. We build lean, functional products fast — designed to test your idea with real users and attract early investment.",
-    },
-    {
-      question: "Do you work with React and Next.js?",
-      answer: "Yes. React and Next.js are our primary frontend technologies. We are a specialist React and Next.js development agency with deep expertise in building fast, SEO-friendly and scalable web applications.",
-    },
-    {
-      question: "Can you upgrade my existing website or web application?",
-      answer: "Yes. We regularly work with businesses that need to modernise existing systems — refactoring legacy code, improving performance, adding new features or migrating to a modern tech stack.",
-    },
+    { q: "How much does full stack development cost in the UK?", a: "The cost depends on complexity and features. We offer offshore pricing with UK-level quality. Contact us for a transparent quote." },
+    { q: "How long does it take to build a web application?", a: "A simple MVP takes 6 to 10 weeks. Complex SaaS platforms take 3 to 6 months. We provide clear timelines before we start." },
+    { q: "Can I hire a full stack developer for my UK company?", a: "Yes. We offer dedicated developer engagement models." },
+    { q: "Do you build MVPs for startups?", a: "Yes. We build lean, functional products fast to help startups test ideas and attract early investment." },
+    { q: "Can you upgrade my existing application?", a: "Yes. We modernise legacy systems, refactor code, and improve performance for existing applications." },
   ];
 
   return (
-    <>
-      <div className="fswd__page_wrapper">
-        <Navbar />
-        <Breadcrumb />
+    <div className="fswd__wrapper">
+      <Navbar />
 
-        {/* Hero Section */}
-        <section className="fswd__hero_section">
-          <div className="fswd__hero_overlay"></div>
+      {/* HERO SECTION */}
+      <section className="fswd__bar_hero">
+        <div className="fswd__container">
           <div className="fswd__hero_content">
-            <h1 className="fswd__hero_title">
-              Full Stack Web Development Agency UK — Custom Web Apps Built to Perform and Scale
+            {/* MOVED BREADCRUMB HERE: Renders inside the dark container above the badge */}
+            <Breadcrumb />
+
+            <span className="fswd__hero_label">
+              Full Stack Web Development Agency
+            </span>
+
+            <h1 className="fswd__heading">
+              Full Stack Web Development Agency for{" "}
+              <span className="text_light_blue">UK & USA Businesses</span>
             </h1>
-            <p className="fswd__hero_description">
-              ZonzocTech is a full stack web development agency helping businesses across the UK and USA build high-performance custom web applications, MVPs and SaaS platforms. From pixel-perfect frontends to robust backend systems — we deliver complete, production-ready solutions on time and on budget.
+
+            <p className="fswd__hero_text_white">
+              Bespoke, high-performance web applications, MVPs and SaaS platforms
+              built to scale. We combine senior engineering talent with clean,
+              maintainable code and conversion-focused UI/UX.
             </p>
-            <div className="hero-buttons">
-              <a href="/contact" className="btn-primary">Get Free Consultation →</a>
-              <a href="#fswd-work" className="btn-secondary">See Our Work ↓</a>
+
+            {/* CTA BUTTONS */}
+            <div className="fswd__hero_actions">
+              <a
+                href="/contact"
+                className="fswd__hero_btn fswd__hero_btn--primary"
+              >
+                Get Free Consultation
+              </a>
+
+              {/* Updated Portfolio Button */}
+              <a
+                href="https://zonzoc-tech.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fswd__hero_btn fswd__hero_btn--secondary"
+              >
+                View Portfolio→
+              </a>
             </div>
-            <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
+
+            {/* TRUST TEXT */}
+            <p className="fswd__hero_trust">
+              Trusted by 120+ businesses across the UK, USA & Europe
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <div className="fswd__content_wrapper">
-
-          {/* Stats Bar */}
-          <section className="stats-bar" id="fswd-work">
-            {stats.map((stat, i) => (
-              <div key={i} className="stat-item">
-                <span className="stat-number">{stat.number}</span>
-                <span className="stat-label">{stat.label}</span>
+      <section className="fswd__stats_section">
+        <div className="fswd__container">
+          <div className="fswd__stats_border_box">
+            {stats.map((s, i) => (
+              <div key={i} className="stat_item">
+                <span className="stat_num">{s.number}</span>
+                <span className="stat_lbl">{s.label}</span>
               </div>
             ))}
-          </section>
-
-          {/* Section 1 — What Is */}
-          <section className="fswd__split_section">
-            <div className="fswd__container">
-              <h2 className="fswd__section_heading">What Is Full Stack Web Development?</h2>
-              <p className="fswd__section_description">
-                Full stack web development covers both sides of a web application — the frontend that users see and interact with, and the backend that powers the logic, data and integrations behind the scenes.
-              </p>
-              <p className="fswd__section_description">
-                For businesses in the UK and USA, working with a full stack development agency means one team handles everything — from database architecture and API development to user interface design and cloud deployment. No handoffs between vendors. No communication gaps. Just faster, cleaner, more reliable delivery.
-              </p>
-              <div className="fswd__split_grid">
-                {whatIsItems.map((item, i) => (
-                  <div key={i} className="fswd__split_card">
-                    <h3 className="fswd__split_title">{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Section 2 — Services */}
-          <section className="fswd__services_section">
-            <div className="fswd__container">
-              <h2 className="fswd__section_heading">Our Full Stack Web Development Services</h2>
-              <p className="fswd__section_description">
-                We build custom web solutions for businesses of all sizes — from startups launching their first product to established companies modernising legacy systems.
-              </p>
-              <div className="service-cards-grid">
-                {services.map((service, i) => (
-                  <div key={i} className="service-card">
-                    <h3>{service.title}</h3>
-                    <p>{service.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Section 3 — Why Choose */}
-          <section className="fswd__why_section">
-            <div className="fswd__container">
-              <h2 className="fswd__section_heading">Why UK & USA Businesses Hire ZonzocTech as Their Full Stack Development Agency</h2>
-              <p className="fswd__section_description">
-                Choosing the right development partner is one of the most important decisions a business can make. Here is why growing businesses across the UK and USA choose ZonzocTech.
-              </p>
-              <div className="why-choose-grid">
-                {whyChoose.map((reason, i) => (
-                  <div key={i} className="why-choose-card">
-                    <h3>{reason.title}</h3>
-                    <p>{reason.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Section 4 — Tech Stack */}
-          <section className="tech-stack-section">
-            <div className="fswd__container">
-              <h2 className="fswd__section_heading">Our Full Stack Development Tech Stack</h2>
-              <p className="fswd__section_description">
-                We use modern, proven technologies selected based on your project requirements — not the latest trend.
-              </p>
-              <div className="tech-stack-grid">
-                {techStack.map((group, i) => (
-                  <div key={i} className="tech-category-card">
-                    <h3 className="tech-category-title">{group.category}</h3>
-                    <div className="tech-items">
-                      {group.items.map((item, j) => (
-                        <span key={j} className="tech-pill">{item}</span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Section 5 — Process */}
-          <section className="process-section">
-            <div className="fswd__container">
-              <h2>Our Full Stack Development Process</h2>
-              <p className="process-section-desc">
-                Clear, structured and collaborative — every project follows our proven process from discovery to deployment.
-              </p>
-              <div className="process-grid">
-                {processSteps.map((step, i) => (
-                  <div key={i} className="process-card">
-                    <div className="process-number">{step.number}</div>
-                    <h3>{step.title}</h3>
-                    <p>{step.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Section 6 — FAQ */}
-          <section className="faq-section">
-            <div className="fswd__container">
-              <h2 className="fswd__section_heading">Full Stack Web Development — Frequently Asked Questions</h2>
-              <div className="faq-container">
-                {faqs.map((faq, i) => (
-                  <div key={i} className="faq-item">
-                    <h3>{faq.question}</h3>
-                    <p>{faq.answer}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Final CTA */}
-          <section className="cta-section">
-            <div className="fswd__container">
-              <h2>Ready to Build Your Web Application?</h2>
-              <p>Whether you need an MVP, a SaaS platform or a custom web application — tell us about your project and we will put together a free technical consultation and development proposal.</p>
-              <div className="cta-buttons">
-                <a href="/contact" className="btn-primary">Get Free Consultation →</a>
-                <a href="/#portfolio" className="btn-secondary">See Our Work</a>
-              </div>
-              <p className="cta-small-text">No commitment. No spam. Just honest advice.</p>
-            </div>
-          </section>
-
+          </div>
         </div>
+      </section>
 
-        <Footer />
-      </div>
-    </>
+      <section className="fswd__section white_bar">
+        <div className="fswd__container">
+          <h2 className="fswd__title_dark">What Is Full Stack Web Development?</h2>
+          <div className="fswd__intro_content">
+            <p>Full stack web development covers both sides of a web application — the frontend that users see and interact with, and the backend that powers the logic, data and integrations behind the scenes.</p>
+            <p>For businesses in the UK and USA, working with a full stack development agency means one team handles everything — from database architecture and API development to user interface design and cloud deployment.</p>
+          </div>
+          <div className="fswd__grid_3">
+            {whatIsItems.map((item, i) => (
+              <div key={i} className="fswd__service_box hover_lift">
+                <div className="fswd__box_icon_circle">{item.i}</div>
+                <h4 className="fswd__box_title">{item.title}</h4>
+                <p className="fswd__justify_text">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="fswd__section grey_bar">
+        <div className="fswd__container">
+          <h2 className="fswd__title_dark">Our Full Stack Web Development Services</h2>
+          <div className="fswd__grid_3">
+            {services.map((s, i) => (
+              <div key={i} className="fswd__service_box hover_lift">
+                <div className="fswd__box_icon">{s.i}</div>
+                <h4 className="fswd__box_title">{s.t}</h4>
+                <ul className="fswd__card_bullets">
+                  {s.points.map((p, idx) => <li key={idx}><span>›</span> {p}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="fswd__section white_bar">
+        <div className="fswd__container">
+          <h2 className="fswd__title_dark">Technologies We Use</h2>
+          <div className="fswd__grid_4">
+            {techStack.map((t, i) => (
+              <div key={i} className="tech_box_full hover_lift">
+                <div className="tech_box_head">
+                  <img src={t.icon} alt={t.c} style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
+                  {t.c}
+                </div>
+                <div className="tech_pills_wrap">
+                  {t.items.map((item, j) => <span key={j} className="tech_pill">{item}</span>)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="fswd__section grey_bar">
+        <div className="fswd__container">
+          <h2 className="fswd__title_dark">Why UK & USA Businesses Hire ZonzocTech</h2>
+          <div className="fswd__grid_3">
+            {whyChoose.map((w, i) => (
+              <div key={i} className="fswd__service_box hover_lift">
+                <div className="fswd__box_icon">{w.i}</div>
+                <h4 className="fswd__box_title">{w.t}</h4>
+                <ul className="fswd__card_bullets">
+                  {w.points.map((p, idx) => <li key={idx}><span>›</span> {p}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="fswd__section white_bar">
+        <div className="fswd__container">
+          <h2 className="fswd__title_dark">Development Process</h2>
+          <div className="fswd__roadmap_grid">
+            {processSteps.map((step, i) => (
+              <div key={i} className="fswd__roadmap_card">
+                <div className="roadmap_node">
+                  <div className="roadmap_circle">{step.n}</div>
+                </div>
+                <div className="roadmap_content_box hover_lift">
+                  <h4>{step.t}</h4>
+                  <p className="fswd__justify_text">{step.d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="fswd__section grey_bar">
+        <div className="fswd__container">
+          <h2 className="fswd__title_dark">Frequently Asked Questions</h2>
+          <div className="fswd__faq_narrow">
+            {faqs.map((f, i) => (
+              <details key={i} className="faq_item">
+                <summary><div><span>{i + 1}.</span> {f.q}</div> <span className="faq_plus">+</span></summary>
+                <div className="faq_ans fswd__justify_text">{f.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MID CTA SECTION */}
+      <section className="fswd__section fswd__cta_section">
+        <div className="fswd__container">
+          <div className="fswd__cta_card">
+            <h2 className="fswd__cta_heading">
+              Ready to Build a High-Performance Web Application?
+            </h2>
+
+            <p className="fswd__cta_text">
+              Let’s turn your idea into a scalable full-stack system with clean architecture,
+              modern UI/UX, and production-ready performance.
+            </p>
+
+            <div className="fswd__hero_actions">
+              <a href="/contact" className="fswd__hero_btn fswd__hero_btn--primary">
+                Get Free Consultation →
+              </a>
+
+              {/* Updated Portfolio Button in Mid CTA */}
+              <a 
+                href="https://zonzoc-tech.netlify.app/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="fswd__hero_btn fswd__hero_btn--secondary"
+              >
+                View Work →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 };
 

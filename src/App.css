@@ -1,3 +1,40 @@
+/* ==========================================================================
+   GLOBAL TYPOGRAPHY OVERRIDES (Fixes font shifts on click/visited/focus states)
+   ========================================================================== */
+html, 
+body, 
+#__next,
+main,
+div, 
+span, 
+p, 
+a, 
+button {
+  font-family: var(--font-b), sans-serif !important;
+}
+
+/* Explicitly lock headers to your headings font variable (Syne) */
+h1, h2, h3, h4, h5, h6, .mega-heading {
+  font-family: var(--font-h), sans-serif !important;
+}
+
+/* Force state persistence on click, focus, active navigation, and selection */
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus,
+button:hover,
+button:active,
+button:focus,
+.navbar *,
+.mobile-nav-drawer * {
+  font-family: inherit !important;
+}
+
+/* ==========================================================================
+   BOILERPLATE STYLES
+   ========================================================================== */
 .App {
   text-align: center;
 }
@@ -37,8 +74,18 @@
   }
 }
 
-.dropdown { position: relative; }
-.navbar, .nav-container, .nav-links { overflow: visible; }
+/* ==========================================================================
+   NAVBAR & DROPDOWN STRUCTURES
+   ========================================================================== */
+.dropdown { 
+  position: relative; 
+}
+
+.navbar, 
+.nav-container, 
+.nav-links { 
+  overflow: visible; 
+}
 
 .dropdown-content {
   position: absolute;
@@ -48,28 +95,12 @@
   z-index: 9999;
 }
 
-/* optional hover bridge */
-.dropdown-content::before{
-  content:"";
-  position:absolute;
-  top:-12px; left:0; right:0;
-  height:12px;
-}
-.dropdown { position: relative; }
-.navbar, .nav-container, .nav-links { overflow: visible; }
-
-.dropdown-content {
+/* Hover bridge wrapper */
+.dropdown-content::before {
+  content: "";
   position: absolute;
-  top: 100%;
-  left: 0;
-  margin-top: 0;
-  z-index: 9999;
-}
-
-/* optional hover bridge */
-.dropdown-content::before{
-  content:"";
-  position:absolute;
-  top:-12px; left:0; right:0;
-  height:12px;
+  top: -12px; 
+  left: 0; 
+  right: 0;
+  height: 12px;
 }

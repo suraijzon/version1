@@ -65,28 +65,80 @@ const WebsiteMaintenance = () => {
     { question: "Do you provide emergency website support?", answer: "Yes. Emergency support is included in all our care plans. If your website goes down or experiences a critical issue outside business hours, our team is available to respond and restore it as quickly as possible." },
     { question: "Do you maintain non-WordPress websites?", answer: "Yes. We maintain custom websites, React and Next.js applications, e-commerce stores and any other web platform — not just WordPress." },
   ];
+  const getServiceIcon = (i) => {
+  const icons = ["⚡", "🛡️", "🧩", "📡", "💾", "📊", "🔄"];
+  return icons[i] || "⚙️";
+};
+
+const getIcon = (i) => {
+  const icons = [
+    "⚡", "🛡️", "🔄", "📡", "💾", "🔍", "🚨", "📊"
+  ];
+  return icons[i] || "✔";
+};
+const getProcessIcon = (i) => {
+  const icons = [
+    "🔍", // audit
+    "⚙️", // optimize
+    "📡", // monitoring
+    "🔄", // updates
+    "📊"  // reporting
+  ];
+  return icons[i] || "⚡";
+};
+
+const getBadge = (i) => {
+  const badges = [
+    "Performance",
+    "Security",
+    "Updates",
+    "Monitoring",
+    "Backup",
+    "SEO",
+    "Alerts",
+    "Analytics"
+  ];
+  return badges[i] || "Core";
+};
 
   return (
     <>
       <div className="wm__wrapper">
         <Navbar />
-        <Breadcrumb />
 
         {/* Hero Section */}
         <section className="wm__hero">
+          {/* Pattern container left in case you need it later, but hidden via CSS */}
           <div className="wm__hero_pattern"></div>
+          
           <div className="wm__hero_container">
+            {/* RENDER THE BREADCRUMB HERE INSIDE THE HERO WRAPPER */}
+            <Breadcrumb />
+
+            {/* Top Label / Pill Badge with Safe inline-span wrapper */}
+            <span className="wm-hero-badge-wrapper">
+              <span className="wm-hero-badge-dot"></span>
+              <span className="wm-hero-badge-text">
+                Website Maintenance & Security Agency
+              </span>
+            </span>
+
+            {/* Heading split into White and Sky-Blue */}
             <h1 className="wm__hero_title">
-              Website Maintenance Services UK — Keep Your Website Fast, Secure and Always Online
+              Website Maintenance Services UK <span className="wm__hero_title_highlight">— Keep Your Website Fast, Secure and Always Online</span>
             </h1>
+            
             <p className="wm__hero_text">
               ZonzocTech provides professional website maintenance, performance and security services for businesses across the UK and USA. We monitor, protect and optimise your website around the clock — so you can focus on running your business while we make sure your website never lets you down.
             </p>
+            
             <div className="hero-buttons">
               <a href="/contact" className="btn-primary">Get Free Website Health Check →</a>
               <a href="#wm-services" className="btn-secondary">See Our Services ↓</a>
             </div>
-            <p style={{ marginTop: "20px", opacity: 0.75 }}>Trusted by 120+ businesses across UK, USA & Europe</p>
+            
+            {/* Muted trust subtext styled cleanly via CSS class */}
+            <p className="wm__hero_trust">Trusted by 120+ businesses across UK, USA & Europe</p>
           </div>
         </section>
 
@@ -101,112 +153,267 @@ const WebsiteMaintenance = () => {
         </section>
 
         {/* Section 1 — Why Maintenance Is Not Optional */}
-        <section className="wm__audience_section">
+        <section className="wm__audience_section wm__sec1_light">
           <div className="wm__container">
-            <h2 className="wm__heading2">Why Website Maintenance Is Not Optional for UK & USA Businesses</h2>
-            <p className="wm__intro">
-              Your website is your most important business asset. It generates leads, builds credibility and represents your brand 24 hours a day, 7 days a week. Yet most businesses treat it as a one-time project — building it and walking away.
+
+            <h2 className="wm__heading2">
+              Why Website Maintenance Is Not Optional for UK & USA Businesses
+            </h2>
+
+            <p className="wm__intro wm__compact_text">
+              Your website is your most important business asset. It generates leads, builds credibility and represents your brand 24/7.
             </p>
-            <p className="wm__intro">
-              Without regular maintenance, websites slow down, become vulnerable to security attacks, fall behind on technical updates and gradually lose their search rankings. The cost of neglecting maintenance is always higher than the cost of preventing problems in the first place.
+
+            <p className="wm__intro wm__compact_text">
+              Without ongoing maintenance, websites slowly lose speed, security, and rankings — impacting revenue and trust.
             </p>
-            <h3 className="wm__subtitle">What Happens Without Proper Maintenance</h3>
-            <div className="wm__faq_list">
+
+            <h3 className="wm__subtitle wm__compact_subtitle">
+              What Happens Without Proper Maintenance
+            </h3>
+
+            <div className="wm__problem_grid">
+
               {noMaintenanceProblems.map((problem, i) => (
-                <div key={i} className="wm__faq_item">
-                  <h4 className="wm__faq_question">{problem.title}</h4>
-                  <p className="wm__faq_answer">{problem.description}</p>
+                <div key={i} className="wm__problem_card_clean">
+                  <div className="wm__problem_bar"></div>
+
+                  <div>
+                    <h4>{problem.title}</h4>
+                    <p>{problem.description}</p>
+                  </div>
                 </div>
               ))}
+
             </div>
+
           </div>
         </section>
 
         {/* Section 2 — Services */}
-        <section className="wm__services_section">
+        <section className="wm__services_section wm__sec2_clean">
           <div className="wm__container">
-            <h2 className="wm__heading2">Our Website Maintenance Services for UK & USA Businesses</h2>
-            <p className="wm__subtitle">
-              We offer comprehensive website maintenance, performance and security services — covering everything your website needs to stay fast, safe and competitive.
-            </p>
-            <div className="service-cards-grid">
-              {services.map((service, i) => (
-                <div key={i} className="service-card">
-                  <h3>{service.title}</h3>
-                  <p>{service.description}</p>
-                </div>
-              ))}
+
+            <div className="wm__services_box">
+
+              <h2 className="wm__heading2">
+                Our Website Maintenance Services for UK & USA Businesses
+              </h2>
+
+              <p className="wm__subtitle wm__compact_subtitle">
+                Complete website care covering performance, security, updates and monitoring — everything your website needs to stay fast and stable.
+              </p>
+
+              <div className="wm__services_timeline">
+
+                {services.map((service, i) => (
+                  <div key={i} className="wm__service_flow_item">
+
+                    <div className="wm__service_icon">
+                      {getServiceIcon(i)}
+                    </div>
+
+                    {i !== services.length - 1 && <div className="wm__service_line"></div>}
+
+                    <div className="wm__service_content">
+                      <h3>{service.title}</h3>
+                      <p>{service.description}</p>
+                    </div>
+
+                  </div>
+                ))}
+
+              </div>
+
             </div>
+
           </div>
         </section>
 
         {/* Section 3 — Care Plans */}
-        <section className="wm__comparison_section">
+        <section className="wm__care_section wm__grid_sec">
           <div className="wm__container">
-            <h2 className="wm__heading">Website Care Plans for UK & USA Businesses</h2>
-            <p className="wm__comparison_note">
-              We offer flexible monthly website care plans tailored to the needs and budget of small businesses across the UK and USA — giving you complete peace of mind that your website is in expert hands.
+
+            <h2 className="wm__heading2">
+              Website Care Plans for UK & USA Businesses
+            </h2>
+
+            <p className="wm__subtitle">
+              Everything your website needs — structured into a complete maintenance system.
             </p>
-            <h3 style={{ margin: "24px 0 16px" }}>What Every Care Plan Includes:</h3>
-            <div className="wm__audience_list">
+
+            <div className="wm__grid">
+
               {carePlanIncludes.map((item, i) => (
-                <div key={i} className="wm__audience_item">
-                  <span className="wm__audience_check">✓</span>
-                  <span>{item}</span>
+                <div key={i} className="wm__grid_card">
+
+                  <div className="wm__grid_badge">
+                    {getBadge(i)}
+                  </div>
+
+                  <div className="wm__grid_icon">
+                    {getIcon(i)}
+                  </div>
+
+                  <div className="wm__grid_text">
+                    {item}
+                  </div>
+
                 </div>
               ))}
+
             </div>
-            <p className="wm__audience_footer" style={{ marginTop: "24px" }}>
-              Contact us for a free website health check and we will recommend the right care plan for your specific website, platform and business needs.
-            </p>
+
+            <div className="wm__grid_footer">
+              Get a free website health check — we’ll recommend the right plan for you.
+            </div>
+
           </div>
         </section>
 
         {/* Section 4 — Process */}
-        <section className="process-section">
-          <div className="wm__container">
-            <h2>Our Website Maintenance Process</h2>
-            <div className="process-grid">
+        <section className="wm__process_section wm__circle_sec">
+
+          <div className="wm__circle_wrapper">
+
+            <h2 className="wm__heading2">
+              Our Website Maintenance Process
+            </h2>
+
+            <p className="wm__subtitle">
+              A structured workflow that keeps your website secure, fast and continuously optimized.
+            </p>
+
+            <div className="wm__circle_row">
+
               {processSteps.map((step, i) => (
-                <div key={i} className="process-card">
-                  <div className="process-number">{step.number}</div>
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
+                <div key={i} className="wm__circle_block">
+
+                  <div className="wm__circle_node">
+
+                    <div className="wm__circle_icon">
+                      {getProcessIcon(i)}
+                    </div>
+
+                    <div className="wm__circle_number">
+                      {step.number}
+                    </div>
+
+                  </div>
+
+                  <h3 className="wm__circle_title">{step.title}</h3>
+                  <p className="wm__circle_desc">{step.description}</p>
+
                 </div>
               ))}
+
             </div>
+
           </div>
+
         </section>
 
         {/* Section 5 — Who For */}
-        <section className="wm__why_choose_section">
+        <section className="wm__who_section">
           <div className="wm__container">
-            <h2 className="wm__heading2">Who Our Website Maintenance Service Is For</h2>
-            <div className="wm__choose_list">
-              {whoFor.map((item, i) => (
-                <div key={i} className="wm__choose_item">
-                  <span className="wm__choose_icon">✓</span>
-                  <div>
-                    <strong>{item.title}</strong>
-                    <p>{item.description}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="wm__who_wrapper">
+              {/* Section Label */}
+              <div className="wm__section_label">
+                <span className="wm__section_label_dot"></span>
+                Ideal For
+              </div>
+
+              <h2 className="wm__heading2">
+                Who Our Website Maintenance Service Is For
+              </h2>
+
+              <p className="wm__subtitle">
+                Designed for businesses that rely on their website for leads, sales and
+                customer trust.
+              </p>
+
+              <div className="wm__who_grid">
+                {whoFor.map((item, i) => {
+                  const icons = ["🏢", "⚙️", "🛒", "🧑‍💻", "🚨"];
+                  const badges = [
+                    "Business",
+                    "WordPress",
+                    "E-commerce",
+                    "Technical Support",
+                    "Recovery"
+                  ];
+
+                  return (
+                    <div key={i} className="wm__who_card">
+                      <div className="wm__who_card_top">
+                        <div className="wm__who_icon">
+                          {icons[i] || "✓"}
+                        </div>
+
+                        <span className="wm__who_badge">
+                          {badges[i] || "Business"}
+                        </span>
+                      </div>
+
+                      <h3 className="wm__who_title">
+                        {item.title.replace("✓", "").trim()}
+                      </h3>
+
+                      <p className="wm__who_description">
+                        {item.description}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <p className="wm__who_footer">
+                If your website is critical to your business, our proactive maintenance
+                plans are designed to protect it.
+              </p>
             </div>
           </div>
         </section>
 
         {/* Section 6 — FAQ */}
-        <section className="faq-section">
+        <section className="wm__faq_modern_section">
           <div className="wm__container">
-            <h2>Website Maintenance — Frequently Asked Questions</h2>
-            <div className="faq-container">
-              {faqs.map((faq, i) => (
-                <div key={i} className="faq-item">
-                  <h3>{faq.question}</h3>
-                  <p>{faq.answer}</p>
-                </div>
-              ))}
+            <div className="wm__faq_modern_wrapper">
+              {/* Section Label */}
+              <div className="wm__section_label">
+                <span className="wm__section_label_dot"></span>
+                FAQs
+              </div>
+
+              <h2 className="wm__heading2">
+                Website Maintenance — Frequently Asked Questions
+              </h2>
+
+              <p className="wm__subtitle">
+                Clear answers to the most common questions about our website maintenance,
+                security and support services.
+              </p>
+
+              <div className="wm__faq_modern_list">
+                {faqs.map((faq, i) => (
+                  <div key={i} className="wm__faq_modern_item">
+                    <div className="wm__faq_modern_icon">?</div>
+
+                    <div className="wm__faq_modern_content">
+                      <h3 className="wm__faq_modern_question">
+                        {faq.question}
+                      </h3>
+                      <p className="wm__faq_modern_answer">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="wm__faq_modern_footer">
+                Still have questions? Contact us for a free website health consultation.
+              </p>
             </div>
           </div>
         </section>

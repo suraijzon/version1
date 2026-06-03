@@ -16,27 +16,36 @@ export default function ASJHardscapesCaseStudy() {
       <div className="cs__wrapper">
 
         {/* HERO */}
-        <section className="cs__hero">
-          <div className="cs__hero_inner">
-            <span className="cs__eyebrow">Case Study</span>
-            <h1 className="cs__hero_title">ASJ Hardscapes</h1>
-            <p className="cs__hero_sub">
-              Professional website and local SEO strategy for a UK landscaping and hardscaping specialist — turning word-of-mouth reliance into a steady online lead pipeline.
-            </p>
-            <div className="cs__tags">
-              <span className="cs__tag">Website Design</span>
-              <span className="cs__tag">Local SEO</span>
-              <span className="cs__tag">Lead Generation</span>
-              <span className="cs__tag">Portfolio Gallery</span>
-            </div>
-            <div className="cs__hero_links">
-              <a href="https://asjhardscapes.co.uk" target="_blank" rel="noopener noreferrer" className="cs__live_btn">
-                View Live Site ↗
-              </a>
-              <Link href="/contact" className="cs__outline_btn">Start Your Project</Link>
-            </div>
-          </div>
-        </section>
+   
+<section className="cs__hero">
+  <div className="cs__hero_inner">
+    {/* Breadcrumb section */}
+    <nav className="cs__breadcrumb">
+      <Link href="/">HOME</Link>
+      <span className="cs__breadcrumb_separator">&gt;</span>
+      <Link href="/case-studies">CASE STUDIES</Link>
+      <span className="cs__breadcrumb_separator">&gt;</span>
+      <span className="cs__breadcrumb_active">ASJ HARDSCAPES</span>
+    </nav>
+
+    <h1 className="cs__hero_title">ASJ Hardscapes</h1>
+    <p className="cs__hero_sub">
+      Professional website and local SEO strategy for a UK landscaping and hardscaping specialist — turning word-of-mouth reliance into a steady online lead pipeline.
+    </p>
+    <div className="cs__tags">
+      <span className="cs__tag">Website Design</span>
+      <span className="cs__tag">Local SEO</span>
+      <span className="cs__tag">Lead Generation</span>
+      <span className="cs__tag">Portfolio Gallery</span>
+    </div>
+    <div className="cs__hero_links">
+      <a href="https://asjhardscapes.co.uk" target="_blank" rel="noopener noreferrer" className="cs__live_btn">
+        View Live Site ↗
+      </a>
+      <Link href="/contact" className="cs__outline_btn">Start Your Project</Link>
+    </div>
+  </div>
+</section>
 
         {/* GALLERY */}
         <section className="cs__section">

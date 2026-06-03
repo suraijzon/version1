@@ -4,7 +4,7 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Breadcrumb from "../components/Breadcrumb";
-import "../styles/ServicesPage.css";
+import "../styles/Servicespage.css";
 
 const ServicesPage = () => {
   const stats = [

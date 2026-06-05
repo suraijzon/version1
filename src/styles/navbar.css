@@ -852,3 +852,91 @@
   opacity: 1;
   visibility: visible;
 }
+
+
+
+
+
+/* Ensure the email link looks like a single unit */
+.topbar-link {
+  display: flex;
+  align-items: center;
+  font-size: 14px; /* Adjust based on your design */
+}
+
+/* Optional: Hide the email text on very small screens if it overlaps */
+@media (max-width: 480px) {
+  .topbar-email-label {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+
+
+
+/* 1. Ensure the main container has a consistent height and vertical centering */
+.topbar {
+  width: 100%;
+  background-color: #003366; /* Your background color */
+  color: #ffffff;
+  padding: 8px 0; /* Gives it some vertical breathing room */
+  display: flex;
+  align-items: center;
+}
+
+/* 2. Layout for the inner container */
+.topbar-inner {
+  width: 100%;
+  max-width: 1200px; /* Or your site's max width */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Pushes text to left, icons to right */
+  align-items: center;
+  padding: 0 20px; /* Prevents icons from touching the very edge of the screen */
+}
+
+/* 3. Left text styling */
+.topbar-left {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+/* 4. Right icons styling */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adds perfect space between the Email and WhatsApp icons */
+}
+
+/* 5. Mobile Specific Fixes */
+@media (max-width: 600px) {
+  .topbar-inner {
+    padding: 0 15px; /* Slightly less padding on small mobile */
+  }
+
+  .topbar-left {
+    font-size: 11px; /* Slightly smaller text so it doesn't wrap onto two lines */
+    white-space: nowrap;
+  }
+
+  .topbar-email-label {
+    display: none !important; /* Ensures email text is hidden on mobile */
+  }
+  
+  .topbar-link {
+    font-size: 16px; /* Makes the icons slightly larger and easier to tap */
+  }
+}
+
+
+
+

@@ -17,7 +17,7 @@
   box-sizing: border-box !important;
 }
 
-/* RESTORED original container height and scrolling behavior for desktop */
+/* Base Desktop Layout (Widescreens > 1024px) */
 .popup-container {
   width: 100% !important;
   max-width: 980px !important;
@@ -105,19 +105,25 @@
   gap: 16px !important;
 }
 
-.contactmedia i {
-  font-size: 20px !important;
+.contactmedia i,
+.contactmedia svg {
   transition: transform 0.2s ease !important;
 }
 
-.contactmedia i:hover {
+.contactmedia i:hover,
+.contactmedia svg:hover {
   transform: scale(1.15) !important;
 }
 
+/* Left panel bottom contact info edge-to-edge alignment with margin adjustments */
 .popup-contact {
   margin-top: auto !important;
   padding-top: 24px !important;
   border-top: 1px solid rgba(56, 189, 248, 0.2) !important;
+  margin-left: -36px !important;
+  margin-right: -36px !important;
+  padding-left: 36px !important;
+  padding-right: 36px !important;
 }
 
 .popup-contact span {
@@ -128,13 +134,12 @@
   color: #475569 !important;
 }
 
-.popup-contact span i {
+.popup-contact span i,
+.popup-contact span svg {
   margin-right: 12px !important;
-  font-size: 15px !important;
-  color: #00448f !important; 
 }
 
-/* RIGHT PANEL - Full desktop paddings preserved */
+/* RIGHT PANEL */
 .popup-right {
   padding: 40px !important;
   background: #ffffff !important; 
@@ -153,7 +158,7 @@
   margin-bottom: 28px !important;
 }
 
-/* RESTORED standard dimensions for your input layout on desktop screens */
+/* Form layout styles */
 .popup-form input,
 .popup-form select,
 .popup-form textarea {
@@ -183,15 +188,64 @@
   box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.12) !important;
 }
 
+/* Input Wrappers & Icon styling */
+.popup-input-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  margin-bottom: 16px !important;
+}
+
+.popup-input-wrapper .input-icon {
+  position: absolute !important;
+  left: 14px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: #94a3b8 !important;
+  pointer-events: none !important;
+  z-index: 5 !important;
+}
+
+.popup-input-wrapper.textarea-wrapper .input-icon {
+  top: 16px !important;
+  transform: none !important;
+}
+
+.popup-form input,
+.popup-form select {
+  width: 100% !important;
+  padding: 13px 16px 13px 44px !important;
+  border-radius: 10px !important;
+  background: #f8fafc !important; 
+  border: 1px solid rgba(0, 68, 143, 0.12) !important;
+  color: #0f172a !important; 
+  font-size: 14.5px !important;
+  margin-bottom: 0px !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.popup-form textarea {
+  width: 100% !important;
+  padding: 14px 16px 14px 44px !important;
+  border-radius: 10px !important;
+  background: #f8fafc !important; 
+  border: 1px solid rgba(0, 68, 143, 0.12) !important;
+  color: #0f172a !important; 
+  font-size: 14.5px !important;
+  margin-bottom: 0px !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s ease-in-out !important;
+  min-height: 110px !important;
+  resize: none !important;
+}
+
 .form-grid {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
   gap: 14px !important;
-}
-
-.popup-form textarea {
-  min-height: 110px !important;
-  resize: none !important;
+  margin-bottom: 16px !important;
 }
 
 .budget-label {
@@ -234,7 +288,6 @@ input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.2) !important;
 }
 
-/* ACTIONS FOOTER SYSTEM - Exact original sizing preserved */
 .popup-actions {
   display: flex !important;
   align-items: center !important;
@@ -251,6 +304,22 @@ input[type="range"]::-webkit-slider-thumb:hover {
   font-size: 15px !important;
   cursor: pointer !important;
   transition: all 0.25s ease-in-out !important;
+  box-sizing: border-box !important;
+}
+
+/* Primary actions buttons sizes */
+.popup-actions .cancel-btn, 
+.popup-actions .submit-btn {
+  padding: 13px 40px !important;
+  width: auto !important;
+  min-width: 140px !important;
+  height: auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
   box-sizing: border-box !important;
 }
 
@@ -292,18 +361,81 @@ input[type="range"]::-webkit-slider-thumb:hover {
   border: 1px solid rgba(16, 185, 129, 0.2) !important;
 }
 
-/* RESPONSIVE MEDIA BREAKPOINTS - Keeps your original button sizing intact on small screens */
+
+/* ==========================================================================
+   COMPREHENSIVE ALL-SCREEN RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* --- 1. Small Laptops (Up to 1024px) --- */
+@media (max-width: 1024px) {
+  .popup-container {
+    max-width: 900px !important;
+  }
+  .popup-left {
+    padding: 36px 28px !important;
+  }
+  .popup-right {
+    padding: 36px !important;
+  }
+  .popup-contact {
+    margin-left: -28px !important;
+    margin-right: -28px !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+}
+
+/* --- 2. Landscape Tablets & Medium Viewports (Up to 991px) --- */
+@media (max-width: 991px) {
+  .popup-container {
+    max-width: 740px !important;
+  }
+  .popup-left h3 {
+    font-size: 20px !important;
+  }
+  .popup-right h2 {
+    font-size: 22px !important;
+  }
+  .popup-left {
+    padding: 24px 20px !important;
+  }
+  .popup-right {
+    padding: 24px !important;
+  }
+  .popup-contact {
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .popup-review {
+    margin: 20px 0 !important;
+    padding: 14px !important;
+  }
+}
+
+/* --- 3. Portrait Tablets & Large Mobile Viewports (Up to 768px) --- */
 @media (max-width: 768px) {
   .popup-container {
     grid-template-columns: 1fr !important;
     overflow-y: auto !important;
-    max-height: 95vh !important;
+    max-height: 90vh !important;
+    width: 92% !important;
   }
   .popup-left {
     border-right: none !important;
     border-bottom: 1px solid rgba(56, 189, 248, 0.2) !important;
     padding: 30px 24px !important;
   }
+  
+  /* Adjusted mobile padding to match narrower width layout */
+  .popup-contact {
+    margin-left: -24px !important;
+    margin-right: -24px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  
   .popup-right {
     padding: 30px 24px !important;
   }
@@ -327,89 +459,57 @@ input[type="range"]::-webkit-slider-thumb:hover {
   }
 }
 
-
-
-
-
-
-
-
-
-
-/* Container holding the buttons */
-.popup-actions {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  gap: 14px !important; /* Space between buttons */
-  margin-top: 24px !important;
-  width: 100% !important;
+/* --- 4. Portrait Mobile Phones & Small Screens (Up to 480px) --- */
+@media (max-width: 480px) {
+  .popup-overlay {
+    padding: 8px !important;
+  }
+  .popup-container {
+    width: 100% !important;
+    border-radius: 16px !important;
+    max-height: 95vh !important;
+  }
+  .popup-left {
+    padding: 20px 16px !important;
+  }
+  .popup-contact {
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .popup-right {
+    padding: 24px 16px !important;
+  }
+  .popup-left h3 {
+    font-size: 18px !important;
+  }
+  .popup-right h2 {
+    font-size: 18px !important;
+  }
+  .popup-review {
+    margin: 16px 0 !important;
+    padding: 12px !important;
+  }
+  
+  /* Stacks buttons vertically on ultra-small screens for comfortable tap targets */
+  .popup-actions {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .popup-actions button,
+  .popup-actions .cancel-btn, 
+  .popup-actions .submit-btn {
+    width: 100% !important; /* Forces buttons to span full width */
+    padding: 12px 16px !important;
+    min-width: unset !important;
+  }
 }
 
-/* Unified Button Base Styles */
-.popup-actions button {
-  padding: 13px 40px !important; /* Forces identical internal size */
-  border-radius: 10px !important;
-  font-weight: 600 !important;
-  font-size: 15px !important;
-  cursor: pointer !important;
-  transition: all 0.25s ease-in-out !important;
-  box-sizing: border-box !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-width: 140px !important; /* Prevents text length from changing width */
-  border: 1px solid transparent !important; /* Ensures border thickness matches */
-}
-
-/* Cancel Button: Specific styling */
-.popup-actions .cancel-btn {
-  background: transparent !important;
-  color: #475569 !important;
-  border-color: rgba(71, 85, 105, 0.2) !important;
-}
-
-/* Submit Button: Specific styling (Now matched to Cancel size) */
-.popup-actions .submit-btn {
-  background: linear-gradient(135deg, #00448f 0%, #002d62 100%) !important;
-  color: #ffffff !important; 
-  border: none !important;
-  box-shadow: 0 4px 14px rgba(0, 68, 143, 0.2) !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Force override button sizes */
-.popup-actions .cancel-btn, 
-.popup-actions .submit-btn {
-  padding: 13px 40px !important;
-  width: auto !important;
-  min-width: 140px !important;
-  height: auto !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 10px !important;
-  font-weight: 600 !important;
-  font-size: 15px !important;
-  box-sizing: border-box !important;
-}
-
-/* Ensure the Submit button specifically follows the size defined above */
-.popup-form .popup-actions .submit-btn {
-  background: linear-gradient(135deg, #00448f 0%, #002d62 100%) !important;
-  border: none !important;
-  color: #ffffff !important;
+/* --- 5. Short Heights Safety Query (For Desktop Screen Heights < 750px) --- */
+@media (max-height: 750px) {
+  .popup-container {
+    max-height: 90vh !important;
+    overflow-y: auto !important; /* Enables scrollbar internally inside modal wrapper */
+  }
 }

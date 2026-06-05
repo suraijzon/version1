@@ -59,42 +59,43 @@ const Navbar = () => {
 
   return (
     <>
-      {/* TOPBAR */}
-      <div className="topbar">
-        <div className="topbar-inner">
-          <div className="topbar-left">
-            <span>
-              <FontAwesomeIcon
-                icon={faEarthAmericas}
-                fixedWidth
-                style={{ marginRight: "6px" }}
-              />
-              Serving Businesses in
-              <span className="sky-blue"> UK & USA </span>
-              | 150+ Projects Delivered
-            </span>
-          </div>
+{/* TOPBAR */}
+<div className="topbar">
+  <div className="topbar-inner">
+    {/* LEFT SIDE */}
+    <div className="topbar-left">
+      <span>
+        <FontAwesomeIcon
+          icon={faEarthAmericas}
+          style={{ marginRight: "5px", fontSize: "12px" }}
+        />
+        Serving Businesses in <span className="sky-blue" style={{fontWeight: 'bold'}}>UK & USA</span> | 150+ Projects
+      </span>
+    </div>
 
-          <div className="topbar-right">
-            <a
-              href="mailto:info@zonzoctech.com"
-              className="topbar-link"
-              title="Email Us"
-            >
-              <FontAwesomeIcon icon={faEnvelope} />
-            </a>
+    {/* RIGHT SIDE */}
+    <div className="topbar-right">
+      <a
+        href="mailto:info@zonzoctech.com"
+        className="topbar-link"
+        title="Email Us"
+      >
+        {/* This label will be hidden by CSS on mobile */}
+        <span className="topbar-email-label">info@zonzoctech.com</span>
+        <FontAwesomeIcon icon={faEnvelope} />
+      </a>
 
-            <a
-              href="https://wa.me/94740309534"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="topbar-link wa-btn"
-            >
-              <FontAwesomeIcon icon={faWhatsapp} className="wa-icon" />
-            </a>
-          </div>
-        </div>
-      </div>
+      <a
+        href="https://wa.me/94740309534"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="topbar-link wa-btn"
+      >
+        <FontAwesomeIcon icon={faWhatsapp} />
+      </a>
+    </div>
+  </div>
+</div>
 
       {/* NAVBAR CONTAINER */}
       <nav className="navbar">

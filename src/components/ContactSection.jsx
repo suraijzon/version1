@@ -96,7 +96,7 @@ const ContactSection = () => {
 
         {/* Right Side Card Container - 50% Width & Auto-Stretched */}
         <div className="contact-right" style={{ display: 'flex', flexDirection: 'column' }}>
-          <div className="form-card" style={{ display: 'flex', flexDirection: 'column', height: '100%', flexGrow: 1 }}>
+          <div className="form-card" style={{ display: 'flex', flexDirection: 'column', height: '100%', flexGrow: 1, paddingBottom: '24px', boxSizing: 'border-box' }}>
             <h3 className="form-title">Send Us a Message</h3>
 
             {submitStatus === 'success' && (
@@ -106,7 +106,7 @@ const ContactSection = () => {
               <div className="alert alert-error">✗ Error. Please try again.</div>
             )}
 
-            <form onSubmit={handleSubmit} className="contact-form" style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+            <form onSubmit={handleSubmit} className="contact-form" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <div className="form-grid">
                 
                 {/* Name Input */}
@@ -179,9 +179,9 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              {/* Message Textarea stretched to absorb space */}
-              <div className="form-group textarea-group" style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                <svg className="input-icon textarea-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              {/* Textarea container keeps outline and standard border */}
+              <div className="form-group textarea-group" style={{ display: 'flex', flexDirection: 'column', height: '150px', position: 'relative', border: '1px solid #cbd5e1', borderRadius: '8px', backgroundColor: '#ffffff' }}>
+                <svg className="input-icon textarea-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ position: 'absolute', top: '16px', left: '16px' }}>
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                 </svg>
                 <textarea
@@ -189,10 +189,22 @@ const ContactSection = () => {
                   placeholder="How can we help you?"
                   value={formData.message}
                   onChange={handleChange}
-                  rows="6"
                   required
                   disabled={isSubmitting}
-                  style={{ flexGrow: 1, resize: 'none', minHeight: '120px' }}
+                  style={{ 
+                    flexGrow: 1, 
+                    width: '100%',
+                    height: '100%',
+                    resize: 'none', 
+                    border: 'none', 
+                    background: 'transparent',
+                    outline: 'none',
+                    padding: '12px 16px 12px 42px',
+                    boxSizing: 'border-box',
+                    fontFamily: 'inherit',
+                    fontSize: 'inherit',
+                    color: 'inherit'
+                  }}
                 ></textarea>
               </div>
 
@@ -205,7 +217,49 @@ const ContactSection = () => {
               </button>
             </form>
 
-            <p className="submit-note" style={{ marginTop: 'auto', paddingTop: '16px' }}>No commitment. No spam. Just results.</p>
+            {/* Combined Card Footer wrapper absorbs the remaining space of the card 
+                and distributes the 3 components with balanced spacing */}
+            <div className="contact-card-footer" style={{ marginTop: 'auto', paddingTop: '28px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px', width: '100%' }}>
+              
+              {/* 1. "(or chat directly)" label */}
+              <span style={{ fontSize: '13px', color: '#64748b', fontWeight: '500' }}>
+                (or chat directly)
+              </span>
+
+              {/* 2. WhatsApp Button */}
+              <a 
+                href="https://wa.me/94763286116" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ 
+                  display: 'inline-flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  gap: '8px', 
+                  fontSize: '14px', 
+                  fontWeight: '600', 
+                  color: '#ffffff', 
+                  backgroundColor: '#25D366', 
+                  padding: '11px 32px', 
+                  borderRadius: '24px', 
+                  textDecoration: 'none',
+                  boxShadow: '0 4px 12px rgba(37, 211, 102, 0.2)',
+                  transition: 'all 0.2s ease',
+                  width: '100%',
+                  maxWidth: '240px'
+                }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.62.962 3.21 1.48 4.815 1.481 5.426 0 9.843-4.414 9.846-9.843.001-2.63-1.012-5.101-2.855-6.946C16.611 1.998 14.135 1.01 11.51 1.01c-5.43 0-9.848 4.416-9.851 9.847-.001 1.73.475 3.42 1.378 4.895l-.994 3.63 3.731-.978c1.455.85 3.014 1.29 4.603 1.29zm9.522-6.83c-.263-.131-1.554-.767-1.795-.853-.24-.087-.416-.13-.591.132-.175.263-.679.853-.831 1.029-.153.175-.306.197-.569.066-.263-.131-1.112-.41-2.119-1.31-.783-.698-1.31-1.562-1.464-1.825-.153-.263-.016-.405.115-.536.118-.118.263-.306.394-.46.131-.153.175-.263.263-.438.088-.175.044-.328-.022-.46-.066-.131-.591-1.424-.81-1.95-.213-.514-.429-.444-.591-.452-.153-.007-.328-.008-.503-.008-.175 0-.46.066-.7.328-.24.263-.92.898-.92 2.193s.941 2.544 1.072 2.72c.131.175 1.851 2.827 4.485 3.968.627.272 1.115.434 1.496.555.63.201 1.203.172 1.657.104.506-.076 1.554-.634 1.774-1.246.22-.612.22-1.138.153-1.246-.066-.109-.24-.153-.503-.284z"/>
+                </svg>
+                WhatsApp
+              </a>
+
+              {/* 3. No commitment subtext placed perfectly at the card bottom */}
+              <p className="submit-note" style={{ margin: 0, fontSize: '13px', color: '#64748b' }}>
+                No commitment. No spam. Just results.
+              </p>
+            </div>
           </div>
         </div>
 

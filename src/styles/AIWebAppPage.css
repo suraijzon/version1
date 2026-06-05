@@ -2124,3 +2124,152 @@ h1.aiwa__heading span.text_light_blue,
 .aiwa__wrapper .aiwa__hero_section * {
   font-family: var(--b--), sans-serif !important;
 }
+
+
+
+
+/* Container holding the buttons */
+.aiwa__hero_actions,
+.aiwd-hero-actions {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  margin-top: 32px !important;
+}
+
+/* Common base styles to guarantee uniform alignment and dimensions */
+.aiwa__btn_primary,
+.aiwa__btn_secondary,
+.aiwd-btn-primary,
+.aiwd-btn-secondary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 52px !important;            /* Enforces identical height */
+  padding: 0 28px !important;          /* Horizontal padding only */
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  border-radius: 10px !important;
+  white-space: nowrap !important;      /* Prevents text from wrapping to two lines */
+  box-sizing: border-box !important;   /* Standardizes height calculation */
+  transition: all 0.2s ease !important;
+}
+
+/* Primary Button Specifics */
+.aiwa__btn_primary,
+.aiwd-btn-primary {
+  background-color: #38bdf8 !important;
+  color: #001f3f !important;
+  border: 1.5px solid transparent !important; /* Transparent border matches outlined height exactly */
+}
+
+.aiwa__btn_primary:hover,
+.aiwd-btn-primary:hover {
+  background-color: #25aff2 !important;
+}
+
+/* Secondary Button Specifics */
+.aiwa__btn_secondary,
+.aiwd-btn-secondary {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.5) !important;
+}
+
+.aiwa__btn_secondary:hover,
+.aiwd-btn-secondary:hover {
+  border-color: #38bdf8 !important;
+  background-color: rgba(56, 189, 248, 0.08) !important;
+}
+
+/* Mobile responsive layout */
+@media (max-width: 480px) {
+  .aiwa__hero_actions,
+  .aiwd-hero-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 24px auto 0 auto !important;
+    padding: 0 16px;
+  }
+  
+  .aiwa__btn_primary,
+  .aiwa__btn_secondary,
+  .aiwd-btn-primary,
+  .aiwd-btn-secondary {
+    width: 100% !important;
+  }
+}
+
+
+
+
+/* ==========================================================================
+   STATS BAR RESPONSIVENESS — AI WEB APP PAGE (STRUCTURE ONLY)
+   ========================================================================== */
+
+/* --- Laptops & Landscape Tablets (Up to 1024px) --- */
+@media (max-width: 1024px) {
+  .aiwa__stats_border_box {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Balanced 2x2 layout */
+    gap: 32px 24px !important;
+    justify-content: center !important;
+  }
+
+  .stat_item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+/* --- Portrait Tablets & Large Mobiles (Up to 768px) --- */
+@media (max-width: 768px) {
+  .aiwa__stats_border_box {
+    gap: 24px 16px !important;
+  }
+
+  .stat_num {
+    font-size: 28px !important;
+  }
+
+  .stat_lbl {
+    font-size: 13px !important;
+  }
+}
+
+/* --- Mobile Viewports (Up to 480px) --- */
+@media (max-width: 480px) {
+  .aiwa__stats_section {
+    padding: 24px 0 !important;
+  }
+
+  .aiwa__stats_border_box {
+    grid-template-columns: 1fr !important; /* Neat single-column vertical stack */
+    gap: 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .stat_item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .stat_num {
+    font-size: 24px !important;
+  }
+
+  .stat_lbl {
+    font-size: 13px !important;
+  }
+}

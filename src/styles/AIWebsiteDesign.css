@@ -1568,3 +1568,145 @@ section.aiwd-hero .aiwd-hero-actions a {
     font-size: 19px;
   }
 }
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+  .aiwd-stats-bar {
+    padding: 24px 0 !important;
+  }
+
+  /* Centers the items vertically and horizontally inside the white card */
+  .aiwd-stats-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; 
+    gap: 24px !important;
+    padding: 32px 24px !important; /* Balanced padding inside the card */
+  }
+
+  /* Constraining the max-width allows the entire list to center while keeping icons aligned */
+  .aiwd-stat-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 16px !important;
+    width: 100% !important;
+    max-width: 210px !important; /* Keeps the icons and text in a straight vertical line */
+    margin: 0 auto !important;
+  }
+
+  .aiwd-stat-txt {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .aiwd-stat-num {
+    font-size: 24px !important;
+  }
+
+  .aiwd-stat-lab {
+    font-size: 13px !important;
+  }
+}
+
+
+/* Container holding the buttons */
+.aiwd-hero-actions {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  margin-top: 32px !important;
+}
+
+/* Base styles for both buttons to guarantee matching layouts */
+.aiwd-btn-primary,
+.aiwd-btn-secondary {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 52px !important;            /* Enforces matching vertical height */
+  padding: 0 28px !important;          /* Consistent horizontal padding */
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;      /* Forces text to stay on a single line */
+  box-sizing: border-box !important;   /* Standardizes box model height calculations */
+  transition: all 0.2s ease !important;
+}
+
+/* Primary Button Specific Styles */
+.aiwd-btn-primary {
+  background-color: #38bdf8 !important; /* Keep your exact light blue background */
+  color: #001f3f !important;
+  border: 1.5px solid transparent !important; /* Invisible border to match the secondary button's thickness */
+}
+
+.aiwd-btn-primary:hover {
+  background-color: #25aff2 !important;
+}
+
+/* Secondary Button Specific Styles */
+.aiwd-btn-secondary {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(56, 189, 248, 0.5) !important; /* Matches standard border sizing */
+}
+
+.aiwd-btn-secondary:hover {
+  border-color: #38bdf8 !important;
+  background-color: rgba(56, 189, 248, 0.08) !important;
+}
+
+/* Responsive adjustment for small mobile viewports */
+@media (max-width: 480px) {
+  .aiwd-hero-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 24px auto 0 auto !important;
+    padding: 0 16px;
+  }
+  
+  .aiwd-btn-primary,
+  .aiwd-btn-secondary {
+    width: 100% !important;
+  }
+}
+
+
+
+.aiwd-solutions-header {
+  text-align: center;
+  margin-bottom: 2rem; /* Optional: adds space between the header and the grid */
+}
+
+
+
+
+
+.aiwd-solutions-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-left: 0;
+  border-left: none; /* Removes the vertical line */
+}
+
+/* Ensure the text and subtext are centered */
+.aiwd-solutions-header h4, 
+.aiwd-solutions-header p {
+  margin-left: auto;
+  margin-right: auto;
+}

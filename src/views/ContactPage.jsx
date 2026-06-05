@@ -7,7 +7,8 @@ import "../styles/ContactPage.css";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({ name: "", company: "", phone: "", email: "", project: "" });
-  const [budget, setBudget] = useState(5000);
+  // Updated initial budget state to 500
+  const [budget, setBudget] = useState(500);
   const [selectedService, setSelectedService] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -27,10 +28,11 @@ const ContactPage = () => {
     setIsSuccess(false);
     setFormData({ name: "", company: "", phone: "", email: "", project: "" });
     setSelectedService("");
-    setBudget(5000);
+    setBudget(500); // Updated reset value to 500
   };
 
-  const percentage = ((budget - 5000) / (65000 - 5000)) * 100;
+  // Updated percentage formula to track from 500 to 65000
+  const percentage = ((budget - 500) / (65000 - 500)) * 100;
 
   const faqs = [
     { q: "How quickly do you respond to enquiries?", a: "We respond to all enquiries within 24 hours — usually much faster during UK and USA business hours." },
@@ -95,7 +97,7 @@ const ContactPage = () => {
                     <label>Budget: ${budget.toLocaleString()}</label>
                     <input 
                       type="range" 
-                      min="5000" 
+                      min="500" // Updated min range bound from 5000 to 500
                       max="65000" 
                       step="500" 
                       value={budget} 

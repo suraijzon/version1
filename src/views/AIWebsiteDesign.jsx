@@ -25,13 +25,6 @@ import "../styles/AIWebsiteDesign.css";
 const AIWebsiteDesign = () => {
   const [activeFaq, setActiveFaq] = useState(null);
 
-  const stats = [
-    { number: "150+", label: "Websites Delivered", icon: <Globe color="#38bdf8" /> },
-    { number: "120+", label: "Clients Served", icon: <Users color="#a855f7" /> },
-    { number: "35%", label: "Conversion Lift", icon: <BarChart3 color="#10b981" /> },
-    { number: "4.9★", label: "Client Rating", icon: <Star color="#fbbf24" /> },
-  ];
-
   const services = [
     { title: "Business Design", icon: <Monitor color="#3b82f6" />, description: "Clean, professional website design for service businesses across the UK and USA." },
     { title: "Landing Pages", icon: <Rocket color="#f97316" />, description: "High-converting pages designed to remove friction and drive lead generation." },
@@ -71,7 +64,6 @@ const AIWebsiteDesign = () => {
     },
   };
 
-  // Structured array replacing the basic string examples with unique icons and context
   const aiSolutions = [
     { title: "Intelligent Dashboards", description: "Real-time analytics pipelines and visually interactive reporting systems.", icon: <BarChart size={22} className="ai-sol-icon-cyan" /> },
     { title: "AI-Powered SaaS", description: "Scalable product foundations integrated with modern machine learning logic.", icon: <Layers size={22} className="ai-sol-icon-purple" /> },
@@ -111,29 +103,14 @@ const AIWebsiteDesign = () => {
                 Get Free Consultation
               </a>
              <a href="/case-studies" className="aiwd-btn-secondary">
-  View Our Works →
-</a>
+                View Our Works →
+              </a>
             </div>
 
             <p className="aiwd-hero-trust">
               Trusted by 120+ businesses across the UK, USA & Europe
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* --- STATS --- */}
-      <section className="aiwd-stats-bar" id="work">
-        <div className="aiwd-container aiwd-stats-row">
-          {stats.map((stat, i) => (
-            <div key={i} className="aiwd-stat-item">
-              <div className="aiwd-stat-icon-circle">{stat.icon}</div>
-              <div className="aiwd-stat-txt">
-                <span className="aiwd-stat-num">{stat.number}</span>
-                <span className="aiwd-stat-lab">{stat.label}</span>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -170,7 +147,6 @@ const AIWebsiteDesign = () => {
             </div>
           </div>
 
-          {/* Fully Responsive & Redesigned Grid Section */}
           <div className="aiwd-solutions-container">
             <div className="aiwd-solutions-header">
               <h4>Advanced Capabilities & Functional Implementations</h4>
@@ -327,8 +303,8 @@ const AIWebsiteDesign = () => {
               </a>
 
               <a href="/case-studies" className="aiwd-btn-secondary">
-  View Our Works →
-</a>
+                View Our Works →
+              </a>
             </div>
           </div>
         </div>

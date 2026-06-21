@@ -1,0 +1,205 @@
+/* Shared service page CTA — matches AI Website Design */
+
+.aiwd-cta-section {
+  padding: 60px 0;
+  background: linear-gradient(145deg, #001b3a 0%, #003070 55%, #001b3a 100%);
+}
+
+.aiwd-cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.aiwd-cta-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.aiwd-cta-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #38bdf8;
+  margin-bottom: 16px;
+}
+
+.aiwd-cta-big-title {
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.18;
+  margin: 0 0 18px;
+}
+
+.service-cta-text-white {
+  color: #ffffff;
+}
+
+.service-cta-text-blue {
+  color: #38bdf8;
+}
+
+/* Beat global heading overrides on dark CTA background */
+html body section.aiwd-cta-section .aiwd-cta-big-title,
+html body section.aiwd-cta-section h6.aiwd-cta-big-title {
+  color: #ffffff !important;
+  font-size: clamp(28px, 3.2vw, 40px) !important;
+  font-weight: 800 !important;
+  line-height: 1.18 !important;
+  margin: 0 0 18px !important;
+}
+
+html body section.aiwd-cta-section .service-cta-text-white {
+  color: #ffffff !important;
+}
+
+html body section.aiwd-cta-section .service-cta-text-blue {
+  color: #38bdf8 !important;
+}
+
+.aiwd-cta-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.68);
+  margin: 0 0 28px;
+}
+
+.aiwd-cta-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aiwd-cta-check-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.aiwd-cta-bullet-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+}
+
+.aiwd-check-icon {
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+.aiwd-cta-right {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.service-cta-form-card.form-card,
+html body section.aiwd-cta-section .service-cta-form-card.contact-form-card--compact.form-card {
+  width: 100%;
+  height: auto;
+  padding: 36px 32px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+html body section.aiwd-cta-section .service-cta-form-card .form-title {
+  color: #003070 !important;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 14px;
+  text-align: left;
+}
+
+html body section.aiwd-cta-section .service-cta-form-card .contact-form {
+  gap: 14px;
+}
+
+html body section.aiwd-cta-section .service-cta-form-card .form-grid {
+  gap: 14px;
+  margin-bottom: 0;
+}
+
+html body section.aiwd-cta-section .service-cta-form-card .contact-form input {
+  padding: 13px 12px 13px 42px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+html body section.aiwd-cta-section .service-cta-form-card .form-group.textarea-group {
+  height: 72px;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+
+html body section.aiwd-cta-section .service-cta-form-card .form-group.textarea-group textarea {
+  padding: 10px 12px 10px 42px;
+  font-size: 14px;
+}
+
+html body section.aiwd-cta-section .service-cta-form-card .textarea-icon {
+  top: 12px !important;
+}
+
+html body section.aiwd-cta-section .service-cta-form-card .submit-btn {
+  padding: 15px 24px;
+  font-size: 16px;
+  margin-top: 0;
+}
+
+html body section.aiwd-cta-section .service-cta-form-card .contact-form input,
+html body section.aiwd-cta-section .service-cta-form-card .contact-form textarea {
+  color: #003070;
+}
+
+.service-cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .aiwd-cta-section {
+    padding: 48px 0;
+  }
+
+  .aiwd-cta-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .aiwd-cta-left {
+    align-items: center;
+  }
+
+  .aiwd-cta-checks {
+    align-items: flex-start;
+    display: inline-flex;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  .aiwd-cta-right {
+    width: 100%;
+  }
+
+  html body section.aiwd-cta-section .service-cta-form-card.form-card {
+    padding: 28px 20px;
+  }
+
+  html body section.aiwd-cta-section .service-cta-form-card .form-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,85 @@
+/* CTA overrides for service pages */
+
+html body section.aiwd-cta-section .aiwd-cta-big-title,
+html body section.aiwd-cta-section .service-cta-text-white {
+  color: #ffffff !important;
+}
+
+html body section.aiwd-cta-section .service-cta-text-blue {
+  color: #38bdf8 !important;
+}
+
+html body section.aiwd-cta-section .aiwd-cta-check-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+html body section.aiwd-cta-section .aiwd-cta-bullet-icon {
+  flex-shrink: 0 !important;
+}
+
+@media (max-width: 768px) {
+  html body section.aiwd-cta-section {
+    padding: 48px 0 !important;
+  }
+
+  html body section.aiwd-cta-section .service-cta-container {
+    padding: 0 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  html body section.aiwd-cta-section .aiwd-cta-inner {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  html body section.aiwd-cta-section .aiwd-cta-left {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  html body section.aiwd-cta-section .aiwd-cta-big-title,
+  html body section.aiwd-cta-section .aiwd-cta-desc,
+  html body section.aiwd-cta-section .aiwd-cta-label {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  html body section.aiwd-cta-section .aiwd-cta-checks {
+    align-items: flex-start !important;
+    display: inline-flex !important;
+    flex-direction: column !important;
+    text-align: left !important;
+    margin: 0 auto !important;
+  }
+
+  html body section.aiwd-cta-section .aiwd-cta-right {
+    width: 100% !important;
+  }
+
+  html body section.aiwd-cta-section .service-cta-form-card.form-card {
+    padding: 28px 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  html body section.aiwd-cta-section .service-cta-form-card .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  html body section.aiwd-cta-section .service-cta-container {
+    padding: 0 12px !important;
+  }
+}

@@ -27,3 +27,4 @@ User-agent: cohere-ai
 Allow: /
 
 Sitemap: https://zonzoctech.com/sitemap.xml
+//suraij 

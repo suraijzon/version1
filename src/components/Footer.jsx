@@ -108,9 +108,9 @@ const Footer = () => {
                 <span className="contact-icon-circle"><WhatsAppIcon /></span>
                 <span className="contact-text">WhatsApp Us</span>
               </WhatsAppLink>
-              <a href="mailto:info@zonzoctech.com" className="footer-contact-link">
+              <a href="mailto:suraij@zonzoctech.com" className="footer-contact-link">
                 <span className="contact-icon-circle"><MailIcon /></span>
-                <span className="contact-text">info@zonzoctech.com</span>
+                <span className="contact-text">suraij@zonzoctech.com</span>
               </a>
             </div>
 

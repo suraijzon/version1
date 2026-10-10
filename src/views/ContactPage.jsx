@@ -8,27 +8,50 @@ import "../styles/ContactPage.css";
 
 const ContactPage = () => {
   const whatsappUrl = useWhatsAppUrl();
-  const [formData, setFormData] = useState({ name: "", company: "", phone: "", email: "", project: "" });
+  const [formData, setFormData] = useState({ name: "", company: "", phone: "", email: "", project: "", website: "" });
   // Updated initial budget state to 500
   const [budget, setBudget] = useState(500);
   const [selectedService, setSelectedService] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSuccess(true);
-      setIsSubmitting(false);
-    }, 1200);
+    setIsError(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.project,
+          service: selectedService,
+          budget,
+          website: formData.website,
+        }),
+      });
+      if (res.ok) {
+        setIsSuccess(true);
+      } else {
+        setIsError(true);
+      }
+    } catch {
+      setIsError(true);
+    }
+    setIsSubmitting(false);
   };
 
   const handleResend = () => {
     setIsSuccess(false);
-    setFormData({ name: "", company: "", phone: "", email: "", project: "" });
+    setIsError(false);
+    setFormData({ name: "", company: "", phone: "", email: "", project: "", website: "" });
     setSelectedService("");
     setBudget(500); // Updated reset value to 500
   };
@@ -78,7 +101,15 @@ const ContactPage = () => {
               ) : (
                 <form className="cp__form_actual" onSubmit={handleSubmit}>
                   <h2 className="cp__title_dark">Send Us a Message</h2>
-                  
+
+                  {isError && (
+                    <div className="alert alert-error">✗ Failed to send. Please try again.</div>
+                  )}
+
+                  <div aria-hidden="true" style={{ position: "absolute", left: "-10000px", width: "1px", height: "1px", overflow: "hidden" }}>
+                    <input type="text" name="website" tabIndex={-1} autoComplete="off" value={formData.website} onChange={handleInputChange} />
+                  </div>
+
                   <div className="form_row">
                     <input type="text" name="name" placeholder="Your Name*" value={formData.name} onChange={handleInputChange} required />
                     <input type="email" name="email" placeholder="Email Address*" value={formData.email} onChange={handleInputChange} required />
@@ -119,11 +150,11 @@ const ContactPage = () => {
 
             {/* Right Column (1/3 Width) - Stretched Vertical Contact Buttons */}
             <div className="cp__button_column">
-              <a href="mailto:info@zonzoctech.com" className="cp__btn_card">
+              <a href="mailto:suraij@zonzoctech.com" className="cp__btn_card">
                 <span className="cp__card_icon">📩</span>
                 <div className="cp__card_content">
                   <h3>Email Us</h3>
-                  <p>info@zonzoctech.com</p>
+                  <p>suraij@zonzoctech.com</p>
                 </div>
               </a>
               

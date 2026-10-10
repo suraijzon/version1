@@ -331,8 +331,8 @@ const TermsConditions = () => {
                           </div>
                           <div className="tc__contact_meta">
                             <span className="tc__contact_label">Corporate Support</span>
-                            <a href="mailto:info@zonzoctech.com" className="tc__contact_anchor">
-                              info@zonzoctech.com
+                            <a href="mailto:suraij@zonzoctech.com" className="tc__contact_anchor">
+                              suraij@zonzoctech.com
                             </a>
                           </div>
                         </div>

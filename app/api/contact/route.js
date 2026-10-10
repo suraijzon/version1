@@ -1,10 +1,42 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-export async function POST(req) {
-  try {
-    const { name, email, phone, company, message, service, project, budget } = await req.json();
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+const escapeHtml = (value) =>
+  String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
+export async function POST(req) {
+  let body;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid request body' }, { status: 400 });
+  }
+
+  const { name, email, phone, company, message, service, project, budget, website } = body || {};
+
+  // Honeypot: real users never see the "website" field, so a filled value means a bot.
+  // Pretend success so the bot gets no signal, but don't send anything.
+  if (typeof website === 'string' && website.trim() !== '') {
+    return NextResponse.json({ success: true });
+  }
+
+  const cleanName = typeof name === 'string' ? name.trim() : '';
+  const cleanEmail = typeof email === 'string' ? email.trim() : '';
+  if (!cleanName) {
+    return NextResponse.json({ error: 'Name is required' }, { status: 400 });
+  }
+  if (!cleanEmail || !EMAIL_RE.test(cleanEmail)) {
+    return NextResponse.json({ error: 'A valid email is required' }, { status: 400 });
+  }
+
+  try {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -15,21 +47,21 @@ export async function POST(req) {
 
     const emailBody = `
       <h3>New Message from Website</h3>
-      <p><b>Name:</b> ${name}</p>
-      <p><b>Email:</b> ${email}</p>
-      ${phone ? `<p><b>Phone:</b> ${phone}</p>` : ''}
-      ${company ? `<p><b>Company:</b> ${company}</p>` : ''}
-      ${service ? `<p><b>Service:</b> ${service}</p>` : ''}
-      ${budget ? `<p><b>Budget:</b> $${budget}</p>` : ''}
-      ${project ? `<p><b>Project:</b> ${project}</p>` : ''}
-      ${message ? `<p><b>Message:</b> ${message}</p>` : ''}
+      <p><b>Name:</b> ${escapeHtml(cleanName)}</p>
+      <p><b>Email:</b> ${escapeHtml(cleanEmail)}</p>
+      ${phone ? `<p><b>Phone:</b> ${escapeHtml(phone)}</p>` : ''}
+      ${company ? `<p><b>Company:</b> ${escapeHtml(company)}</p>` : ''}
+      ${service ? `<p><b>Service:</b> ${escapeHtml(service)}</p>` : ''}
+      ${budget ? `<p><b>Budget:</b> $${escapeHtml(budget)}</p>` : ''}
+      ${project ? `<p><b>Project:</b> ${escapeHtml(project)}</p>` : ''}
+      ${message ? `<p><b>Message:</b> ${escapeHtml(message)}</p>` : ''}
     `;
 
     await transporter.sendMail({
       from: `"Zonzoctech Website" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER,
-      replyTo: email,
-      subject: `New message from ${name}`,
+      to: process.env.CONTACT_TO || process.env.EMAIL_USER,
+      replyTo: cleanEmail,
+      subject: `New message from ${cleanName.replace(/[\r\n]+/g, ' ')}`,
       html: emailBody,
     });
 

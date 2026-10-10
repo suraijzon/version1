@@ -138,12 +138,12 @@ const Navbar = () => {
           {/* RIGHT SIDE CONTENT */}
           <div className="topbar-right">
             <a
-              href="mailto:info@zonzoctech.com"
+              href="mailto:suraij@zonzoctech.com"
               className="topbar-link"
               title="Email Us"
             >
               <FontAwesomeIcon icon={faEnvelope} style={{ marginRight: "6px" }} />
-              <span className="topbar-email-label">info@zonzoctech.com</span>
+              <span className="topbar-email-label">suraij@zonzoctech.com</span>
             </a>
             
             <span className="topbar-right-divider" style={{ margin: "0 10px", opacity: 0.5 }}>|</span>
@@ -527,9 +527,9 @@ const Navbar = () => {
               
               {/* CONTACT INFO CARD */}
               <div className="mobile-drawer-info-card">
-                <a href="mailto:info@zonzoctech.com" className="info-card-row">
+                <a href="mailto:suraij@zonzoctech.com" className="info-card-row">
                   <FontAwesomeIcon icon={faEnvelope} className="info-card-icon" />
-                  <span>info@zonzoctech.com</span>
+                  <span>suraij@zonzoctech.com</span>
                 </a>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="info-card-row">
                   <FontAwesomeIcon icon={faWhatsapp} className="info-card-icon" />

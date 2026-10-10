@@ -266,8 +266,8 @@ const PrivacyPolicy = () => {
                           </div>
                           <div className="pp__contact_meta">
                             <span className="pp__contact_label">Governance Office</span>
-                            <a href="mailto:info@zonzoctech.com" className="pp__contact_anchor">
-                              info@zonzoctech.com
+                            <a href="mailto:suraij@zonzoctech.com" className="pp__contact_anchor">
+                              suraij@zonzoctech.com
                             </a>
                           </div>
                         </div>

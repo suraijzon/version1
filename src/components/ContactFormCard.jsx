@@ -12,6 +12,7 @@ const ContactFormCard = ({ className = '', defaultMessage = '', compact = false 
     phone: '',
     company: '',
     message: defaultMessage,
+    website: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,7 +39,7 @@ const ContactFormCard = ({ className = '', defaultMessage = '', compact = false 
 
       if (res.ok) {
         setSubmitStatus('success');
-        setFormData({ name: '', email: '', phone: '', company: '', message: defaultMessage });
+        setFormData({ name: '', email: '', phone: '', company: '', message: defaultMessage, website: '' });
       } else {
         setSubmitStatus('error');
       }
@@ -61,6 +62,10 @@ const ContactFormCard = ({ className = '', defaultMessage = '', compact = false 
       )}
 
       <form onSubmit={handleSubmit} className="contact-form">
+        <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: '1px', height: '1px', overflow: 'hidden' }}>
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" value={formData.website} onChange={handleChange} />
+        </div>
+
         <div className="form-grid">
           <div className="form-group">
             <svg className="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
